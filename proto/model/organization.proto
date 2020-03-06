@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package model;
+package toit.model;
 
 option go_package = "github.com/toitware/api.git/model";
 

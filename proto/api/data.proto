@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package api;
+package toit.api;
 
 import "google/protobuf/timestamp.proto";
 

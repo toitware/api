@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package api;
+package toit.api;
 
 option go_package = "github.com/toitware/api.git/api";
 
