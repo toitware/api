@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package api;
+
+import "proto/model/device.proto";
+
+option go_package = "github.com/toitware/api.git/api";
+
+service SimulatorService {
+  rpc CreateSimulator(CreateSimulatorRequest)
+      returns (CreateSimulatorResponse) {}
+  rpc RemoveSimulator(RemoveSimulatorRequest)
+      returns (RemoveSimulatorResponse) {}
+  rpc ListSimulators(ListSimulatorsRequest) returns (ListSimulatorsResponse) {}
+  rpc CreateHardwareIdentity(CreateHardwareIdentityRequest)
+      returns (CreateHardwareIdentityResponse) {}
+}
+
+message CreateSimulatorRequest {
+  string sdk_name = 1;
+  model.HardwareIdentity identity = 2;
+  string device_name = 3;
+}
+
+message CreateSimulatorResponse {
+  bytes simulator_id = 1;
+  bytes hardware_id = 2;
+  bytes device_id = 3;
+  string device_name = 4;
+}
+
+message RemoveSimulatorRequest {
+    bytes simulator_id = 1;
+    bytes device_id = 3;
+}
+
+message RemoveSimulatorResponse {}
+
+message ListSimulatorsRequest {}
+message ListSimulatorsResponse { repeated bytes simulator_ids = 1; }
+
+message CreateHardwareIdentityRequest {}
+message CreateHardwareIdentityResponse { model.HardwareIdentity identity = 1; }

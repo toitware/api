@@ -1,0 +1,123 @@
+syntax = "proto3";
+
+package api;
+
+import "proto/model/program.proto";
+
+option go_package = "github.com/toitware/api.git/api";
+
+service ProgramService {
+  rpc Run(stream RunRequest) returns (stream RunResponse) {}
+  rpc RunStart(RunStartRequest) returns (stream RunResponse) {}
+
+  rpc Compile(CompileRequest) returns (CompileResponse) {}
+
+  rpc Analyze(AnalyzeRequest) returns (AnalyzeResponse) {}
+
+  rpc LspAnalyze(stream LspRequest) returns (stream LspResponse) {}
+
+  rpc GetProgram(GetProgramRequest) returns (GetProgramResponse) {}
+
+  rpc GetCompilation(GetCompilationRequest) returns (GetCompilationResponse) {}
+
+  rpc LookupPrograms(LookupProgramsRequest) returns (LookupProgramsResponse) {}
+
+  rpc DeviceRun(DeviceRunRequest) returns (stream DeviceRunResponse) {}
+
+  rpc DecodeSystemMessage(DecodeSystemMessageRequest) returns (DecodeSystemMessageResponse) {}
+}
+
+message CompileRequest {
+  string program_name = 1;
+  string sdk_name = 2;
+  string entry_filename = 3;
+  map<string, bytes> sources = 4;
+  repeated string args = 5;
+}
+
+message CompileResponse {
+  model.Compilation compilation = 1;
+}
+
+message AnalyzeRequest {
+  string entry_file = 1;
+  string sdk_name = 2;
+  map<string, bytes> sources = 3;
+}
+
+message AnalyzeResponse { bytes response = 1; }
+
+message LspRequest { bytes input = 1; }
+
+message LspResponse { bytes output = 1; }
+
+message GetProgramRequest { bytes program_id = 1; }
+
+message GetProgramResponse { model.Program program = 1; }
+
+message GetCompilationRequest { bytes compilation_id = 1; }
+
+message GetCompilationResponse { model.Compilation compilation = 1; }
+
+message LookupProgramsRequest { string program_name = 1; }
+
+message LookupProgramsResponse { repeated bytes program_ids = 1; }
+
+message RunRequest {
+  oneof payload {
+    RunStart start = 1;
+    RunInput input = 2;
+  }
+}
+
+message RunStart {
+  string sdk_name = 1;
+  string entry_filename = 2;
+  map<string, bytes> sources = 3;
+  repeated string args = 4;
+}
+
+message RunInput {
+  bytes input = 1;
+}
+
+message RunStartRequest {
+  string sdk_name = 1;
+  string entry_filename = 2;
+  map<string, bytes> sources = 3;
+  repeated string args = 4;
+}
+
+message RunResponse {
+  oneof response {
+    bytes out = 1;
+    bytes err = 2;
+    int64 exit = 3;
+  }
+}
+
+message DeviceRunRequest {
+  bytes device_id = 1;
+  string entry_filename = 3;
+  map<string, bytes> sources = 4;
+  repeated string args = 5;
+  bool install = 6;
+}
+
+message DeviceRunResponse {
+  oneof response {
+    bytes out = 1;
+    bytes err = 2;
+    int64 exit = 3;
+  }
+}
+
+
+message DecodeSystemMessageRequest {
+  bytes message = 1;
+  string model = 2;
+}
+
+message DecodeSystemMessageResponse {
+  string message = 1;
+}

@@ -1,0 +1,116 @@
+syntax = "proto3";
+
+package model;
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/duration.proto";
+
+option go_package = "github.com/toitware/api.git/model";
+
+enum JobGoalState {
+  JOB_GOAL_STATE_UNKNOWN = 0;
+  JOB_GOAL_STATE_INSTALL = 1;
+  JOB_GOAL_STATE_UNINSTALL = 2;
+}
+
+message JobConfig {
+  bytes job_id = 8;
+  string name = 1;
+  bytes compilation_id = 2;
+
+  JobGoalState goal_state = 3;
+
+  JobResources resources = 4;
+
+  JobTriggers triggers = 5;
+
+  google.protobuf.Timestamp created = 6;
+  google.protobuf.Timestamp updated = 7;
+
+  CompilationInfo compilation_info = 10;
+}
+
+message CompilationInfo {
+  bytes program_id = 1;
+  string sdk = 2;
+  bytes creator_id = 3;
+}
+
+message JobResources {
+  MemoryResource memory = 1;
+  JobFeatures features = 2;
+}
+
+message JobFeatures {
+  GPSFeature gps = 1;
+}
+
+message GPSFeature { bool enabled = 1; }
+
+message MemoryResource { int64 memory = 1; }
+
+message JobTriggers {
+  OnInstallTrigger on_install = 1;
+  OnBootTrigger on_boot = 2;
+  IntervalTrigger interval = 3;
+  CronTrigger cron = 4;
+  MovementTrigger movement = 5;
+  ButtonTrigger button = 6;
+  InternetTrigger internet = 7;
+}
+
+message OnInstallTrigger { bool enabled = 1; }
+
+message OnBootTrigger { bool enabled = 1; }
+
+message IntervalTrigger { google.protobuf.Duration interval = 1; }
+
+message CronTrigger { repeated CronSpec specs = 1; }
+
+message MovementTrigger { bool enabled = 1; }
+
+message ButtonTrigger { repeated string buttons = 1; }
+
+message InternetTrigger { bool enabled = 1; }
+
+message CronSpec {
+  string cron_string = 1;
+  repeated CronSchedule schedules = 2;
+}
+
+message CronSchedule {
+  sfixed64 second = 1;
+  sfixed64 minute = 2;
+  sfixed64 hour = 3;
+  sfixed64 day_of_month = 4;
+  sfixed64 month = 5;
+  sfixed64 day_of_week = 6;
+  google.protobuf.Timestamp valid_from = 7;
+  google.protobuf.Timestamp valid_to = 8;
+}
+
+enum JobState {
+  JOB_STATE_UNKNOWN = 0;
+  JOB_STATE_UNINSTALLED = 1;
+  JOB_STATE_INSTALLING = 2;
+  JOB_STATE_INSTALLED = 3;
+  JOB_STATE_FAILED = 4;
+}
+
+message JobStatus {
+  bytes job_id = 3;
+  JobState state = 1;
+  google.protobuf.Timestamp updated = 2;
+}
+
+message JobInfo {
+  JobConfig config = 1;
+  JobStatus status = 2;
+}
+
+enum JobChangeType {
+  JOB_CHANGE_UNKNOWN = 0;
+  JOB_CHANGE_ADDED = 1;
+  JOB_CHANGE_DELETED = 2;
+  JOB_CHANGE_CHANGED = 3;
+}

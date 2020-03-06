@@ -1,0 +1,113 @@
+syntax = "proto3";
+
+package model;
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/duration.proto";
+
+option go_package = "github.com/toitware/api.git/model";
+
+message DeviceConfig {
+  string name = 1;
+  google.protobuf.Timestamp started_after = 2;
+  string sdk = 3;
+  DeviceBrokerSettings broker = 4;
+  DeviceConnectionSettings connection = 5;
+  string model = 6;
+}
+
+message DeviceConnectionSettings {
+  google.protobuf.Duration max_offline = 1;
+  repeated ConnectionSetting connections = 2;
+}
+
+message ConnectionSetting {
+  // This is essentially a one-of but that is not supported when using ubjson
+  // encoding as done between the device and the console.
+  WifiSetting wifi = 1;
+  NBIoTSetting nbiot = 2;
+}
+
+message WifiSetting {
+  string ssid = 1;
+  string password = 2;
+}
+
+message NBIoTSetting {}
+
+enum DeviceConnectionType {
+  DEVICE_CONNECTION_TYPE_UNKNOWN = 0;
+  DEVICE_CONNECTION_TYPE_WIFI = 1;
+  DEVICE_CONNECTION_TYPE_NBIOT = 2;
+}
+
+message DeviceBrokerSettings {
+  string host = 1;
+  int64 port = 2;
+  string cn = 3;
+  string protocol = 4;
+}
+
+message DeviceStatus {
+  int64 revision = 1; // Deprecated
+  bytes epoch = 6;
+  int64 state_revision = 5;
+  google.protobuf.Timestamp updated = 2;
+  int64 config_revision = 3;
+  string sdk = 4;
+  string model = 7;
+  DeviceConfig config = 8;
+  bool connected = 9;
+}
+
+message HardwareIdentity {
+  bytes hardware_id = 1;
+  int64 sequence_number = 2;
+  string batch = 3;
+  bytes private_key = 4;
+  bytes certificate = 5;
+}
+
+message HardwareIdentityInfo {
+  string factory_sdk_version = 1;
+  bytes flashed_by = 2;
+  string iccid = 3;
+  string chip_id = 4;
+  string factory_device_model = 5;
+}
+
+message HardwareInfo {
+  bytes hardware_id = 1;
+  string hardware_fqdn = 2;
+  bytes organization_id = 4;
+}
+
+message DeviceInfo {
+  bytes device_id = 1;
+  DeviceConfig config = 2;
+  DeviceStatus status = 3;
+  HardwareInfo hardware = 4;
+}
+
+message HardwareToDeviceInfo {
+  bytes hardware_id = 1;
+  bytes device_id = 2;
+  google.protobuf.Timestamp bound = 3;
+  google.protobuf.Timestamp unbound = 4;
+}
+
+enum DeviceChangeType {
+  DEVICE_CHANGE_UNKNOWN = 0;
+  DEVICE_CHANGE_ADDED = 1;
+  DEVICE_CHANGE_DELETED = 2;
+  DEVICE_CHANGE_CHANGED = 3;
+  DEVICE_CHANGE_HEARTBEAT = 4; // Deprecated
+  DEVICE_CHANGE_CONNECTED = 5;
+  DEVICE_CHANGE_DISCONNECTED = 6;
+};
+
+enum DeviceSessionChangeType {
+  UNKNOWN_TYPE = 0;
+  CONNECTED = 1;
+  DISCONNECTED = 2;
+};

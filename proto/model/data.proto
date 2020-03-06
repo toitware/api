@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package model;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/toitware/api.git/model";
+
+message MetricsData {
+    repeated bytes names = 1;
+    repeated GuageMetricData gauges = 2;
+    repeated CounterMetricData counters = 3;
+    repeated PlotMetricData plots = 4;
+}
+
+message GuageMetricData {
+    double value = 1;
+    // name_index references the name in the names list in MetricsData.
+    uint32 name_index = 2;
+    google.protobuf.Timestamp created = 3;
+}
+
+message CounterMetricData {
+    // name_index references the name in the names list in MetricsData.
+    uint32 name_index = 1;
+    int64 count = 2;
+    double mean = 3;
+    double stdev = 4;
+}
+
+message PlotMetricData {
+    double value = 1;
+    // name_index references the name in the names list in MetricsData.
+    uint32 name_index = 2;
+    google.protobuf.Timestamp created = 3;
+}
+
+
+message TopicData {
+    string topic = 1;
+    bytes data = 2;
+}

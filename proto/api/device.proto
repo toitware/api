@@ -1,0 +1,281 @@
+syntax = "proto3";
+
+package api;
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/duration.proto";
+import "proto/model/job.proto";
+import "proto/model/device.proto";
+
+option go_package = "github.com/toitware/api.git/api";
+
+enum ProcessStatus {
+  PROCESS_STATUS_UNKNOWN = 0;
+  PROCESS_STATUS_RUNNING = 1;
+  PROCESS_STATUS_TERMINATED = 2;
+}
+
+enum ProcessGoalStatus {
+  PROCESS_GOAL_STATUS_UNKNOWN = 0;
+  PROCESS_GOAL_STATUS_RUNNING = 1;
+  PROCESS_GOAL_STATUS_TERMINATED = 2;
+}
+
+message Device {
+  bytes id = 1;
+  bytes hardware_id = 5;
+  string hardware_fqdn = 6;
+  model.DeviceConfig config = 7;
+  model.DeviceStatus status = 8;
+  bool is_simulator = 9;
+}
+
+message Job {
+  bytes id = 1;
+  model.JobConfig config = 2;
+  model.JobStatus status = 3;
+}
+
+message DeviceLog {
+  enum Type {
+    UNKNOWN = 0;
+    MESSAGE = 1;
+    PROCESS_START = 2;
+    PROCESS_STOP = 3;
+    STACK_TRACE = 4;
+    BOOT = 5;
+    SHUTDOWN = 6;
+  };
+
+  bytes device_id = 1;
+  // Together with the device_id, it globally identifies the event. Events
+  // can be sorted, and will always be returned in increasing order.
+  bytes event_id = 2;
+
+  bytes job_id = 3;
+  google.protobuf.Timestamp received = 4;
+  Type type = 5;
+  string msg = 6;
+  bytes data = 7;
+  google.protobuf.Timestamp created = 8;
+}
+
+service DeviceService {
+  rpc GetDevice(GetDeviceRequest) returns (GetDeviceResponse) {}
+
+  rpc ConfigureDevice(ConfigureDeviceRequest)
+      returns (ConfigureDeviceResponse) {}
+
+  rpc LookupDevices(LookupDevicesRequest) returns (LookupDevicesResponse) {}
+
+  rpc ListDevices(ListDevicesRequest) returns (ListDevicesResponse) {}
+
+  rpc ListJobs(ListJobsRequest) returns (ListJobsResponse) {}
+
+  rpc InstallJob(InstallJobRequest) returns (InstallJobResponse) {}
+
+  rpc ConfigureJob(ConfigureJobRequest) returns (ConfigureJobResponse) {}
+
+  rpc RebootDevice(RebootDeviceRequest) returns (RebootDeviceResponse) {}
+
+  rpc ReadDeviceLogs(ReadDeviceLogsRequest)
+      returns (ReadDeviceLogsResponse) {}
+
+  rpc GetDevicePartitions(GetDevicePartitionsRequest)
+      returns (GetDevicePartitionsResponse) {}
+
+  rpc WatchDeviceChanges(WatchDeviceChangesRequest)
+      returns (stream WatchDeviceChangesResponse) {}
+  rpc WatchJobChanges(WatchJobChangesRequest)
+      returns (stream WatchJobChangesResponse) {}
+
+  rpc WatchSessionChanges(WatchSessionChangesRequest)
+      returns (stream WatchSessionChangesResponse) {}
+
+  rpc GetCurrentTime(GetCurrentTimeRequest) returns (GetCurrentTimeResponse) {}
+
+  rpc UnclaimDevice(UnclaimDeviceRequest) returns (UnclaimDeviceResponse) {}
+}
+
+message GetDeviceRequest {
+  bytes device_id = 1;
+  bytes hardware_id = 2;
+}
+
+message GetDeviceResponse {
+  Device device = 1;
+  repeated Job jobs = 2;
+}
+
+message ConfigureDeviceRequest {
+  bytes device_id = 1;
+  string name = 2;
+  string sdk = 3;
+  model.DeviceBrokerSettings broker_settings = 4;
+  google.protobuf.Duration max_offline = 5;
+  string model = 6;
+  ConnectionSettings connection_settings = 7;
+}
+
+message ConfigureDeviceResponse {}
+
+message ConnectionSettings {
+  repeated model.ConnectionSetting connections = 1;
+}
+
+message LookupDevicesRequest { string device_name = 1; }
+
+message LookupDevicesResponse { repeated bytes device_ids = 1; }
+
+message ListDevicesRequest {
+  bytes offset = 1;
+  int64 limit = 2;
+  string order_by = 3;
+  bool order_desc = 4;
+  ListDevicesFilter filter = 5;
+}
+
+message ListDevicesFilter {
+  google.protobuf.Duration last_updated = 1;
+  bool only_simulators = 2;
+}
+
+message ListDevicesResponse {
+  repeated Device devices = 1;
+  bytes offset = 2;
+}
+
+message ListJobsRequest {
+  bytes offset = 1;
+  int64 limit = 2;
+  string order_by = 3;
+  bool order_desc = 4;
+  ListJobsFilter filter = 5;
+}
+
+message ListJobsFilter {
+  bytes device_id = 1;
+  repeated model.JobState states = 2;
+  repeated model.JobGoalState goalstates = 3;
+  bytes job_id = 4;
+}
+
+message ListJobsResponse {
+  repeated Job jobs = 1;
+  bytes offset = 2;
+}
+
+message InstallJobRequest {
+  bytes device_id = 1;
+
+  model.JobConfig config = 2;
+}
+
+message InstallJobResponse { bytes job_id = 1; }
+
+message ConfigureJobRequest {
+  bytes device_id = 1;
+  bytes job_id = 2;
+
+  model.JobGoalState goal_state = 3;
+}
+
+message ConfigureJobResponse {}
+
+message RebootDeviceRequest { bytes device_id = 1; }
+
+message RebootDeviceResponse {}
+
+message ReadDeviceLogsRequest {
+  bytes device_id = 1;
+
+  // Where to stream from, exclusive. Empty returns all historic logs.
+  oneof offset {
+    bytes id = 2;
+    google.protobuf.Timestamp ts = 3;
+  }
+
+  uint64 limit = 4;
+  bool reverse = 5;
+
+  repeated bytes filter_job_ids = 6;
+}
+
+message ReadDeviceLogsResponse { repeated DeviceLog logs = 1; }
+
+message GetDevicePartitionsRequest {
+  enum Mode {
+    UNKNOWN = 0;
+    SYSTEM = 2;
+    INITIAL = 3;
+  }
+
+  string sdk_name = 1;
+  Mode mode = 2;
+  map<string, string> properties = 3;
+  model.HardwareIdentity hardware_identity = 4;
+  string model = 5;
+  bytes qrcode = 6;
+}
+
+message GetDevicePartitionsResponse {
+  message Partition {
+    string name = 1;
+    int64 offset = 2;
+    bytes data = 3;
+  }
+
+  repeated Partition partitions = 1;
+  bytes device_id = 2;
+}
+
+message WatchDeviceChangesRequest {
+  // Optional to listen on changes for a single device.
+  bytes device_id = 1;
+  int64 watch_revision = 2;
+}
+
+message WatchDeviceChangesResponse {
+  model.DeviceChangeType type = 1;
+  bytes device_id = 2;
+  int64 watch_revision = 3;
+  google.protobuf.Timestamp last_connected = 4;
+}
+
+message WatchJobChangesRequest {
+  bytes device_id = 1;
+  // Optional to listen on changes for a single job.
+  bytes job_id = 2;
+  int64 watch_revision = 3;
+}
+
+message WatchJobChangesResponse {
+  model.JobChangeType type = 1;
+  bytes job_id = 2;
+  int64 watch_revision = 3;
+}
+
+message WatchSessionChangesRequest {
+  // Optional to listen on session changes for a single device.
+  bytes device_id = 1;
+  int64 watch_revision = 2;
+}
+
+message WatchSessionChangesResponse {
+  model.DeviceSessionChangeType type = 1;
+  bytes device_id = 2;
+  int64 watch_revision = 3;
+  // Will be set if the type is DeviceSessionChangeTypeConnected
+  google.protobuf.Timestamp last_connected = 4;
+}
+
+message GetCurrentTimeRequest {}
+
+message GetCurrentTimeResponse { google.protobuf.Timestamp current_time = 1; }
+
+
+message UnclaimDeviceRequest {
+  bytes device_id = 1;
+}
+
+message UnclaimDeviceResponse {}

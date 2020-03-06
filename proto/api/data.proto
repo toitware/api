@@ -1,0 +1,95 @@
+syntax = "proto3";
+
+package api;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/toitware/api.git/api";
+
+
+enum DataType {
+  UNKNOWN  = 0;
+
+  LOGS           = 1; // data is encoded as ?
+  METRICS        = 2; // data is encoded protobuf as model.MetricsData
+  TOPIC_DATA     = 3; // data is encoded protobuf as model.TopicData
+};
+
+service DataService {
+  rpc CreateSubscription(CreateSubscriptionRequest) returns (CreateSubscriptionResponse) {}
+  rpc DeleteSubscription(DeleteSubscriptionRequest) returns (DeleteSubscriptionResponse) {}
+  rpc ListSubscriptions(ListSubscriptionsRequest) returns (ListSubscriptionsResponse) {}
+
+  rpc Fetch(FetchRequest) returns (FetchResponse) {}
+  rpc Stream(StreamRequest) returns (stream StreamResponse) {}
+  rpc Acknowledge(AcknowledgeRequest) returns (AcknowledgeResponse) {}
+}
+
+// A subscription must be unique pair of type and name where the name is choosen on creation.
+// Name must be letters, numbers, dashes (-), periods (.), underscores (_), tildes (~), percents (%) or plus signs (+).
+message Subscription {
+  DataType type = 1;
+  string name = 2;
+}
+
+message Message {
+  bytes id = 1;
+  Data message = 2;
+}
+
+message CreateSubscriptionRequest {
+  Subscription subscription = 1;
+}
+message CreateSubscriptionResponse {}
+
+message DeleteSubscriptionRequest {
+  Subscription subscription = 1;
+}
+message DeleteSubscriptionResponse {}
+
+message ListSubscriptionsRequest {
+  DataType type = 1;
+  int32 limit = 2;
+  bytes offset = 3;
+}
+message ListSubscriptionsResponse {
+  repeated Subscription subscriptions = 1;
+  bytes next_offset = 2;
+}
+
+message FetchRequest {
+  Subscription subscription = 1;
+  int32 limit = 2;
+}
+message FetchResponse {
+  repeated Message messages = 1;
+}
+
+message StreamRequest {
+  Subscription subscription = 1;
+}
+message StreamResponse {
+  repeated Message messages = 1;
+}
+
+message AcknowledgeRequest {
+  Subscription subscription = 1;
+  repeated bytes message_ids = 2;
+}
+message AcknowledgeResponse {}
+
+
+message Data {
+    DataType type = 1;
+
+    bytes hardware_id = 2;
+    bytes device_id = 3;
+    bytes event_id = 4;
+    bytes job_id = 5;
+
+    google.protobuf.Timestamp received = 6;
+    google.protobuf.Timestamp created = 7;
+
+    // Depending on the type.
+    bytes data = 8;
+}

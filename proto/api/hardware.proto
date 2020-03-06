@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+package api;
+
+import "proto/model/device.proto";
+
+option go_package = "github.com/toitware/api.git/api";
+
+service HardwareService {
+  rpc Claim(ClaimRequest) returns (ClaimResponse) {}
+  rpc GetActiveDeviceID(GetActiveDeviceIDRequest) returns (GetActiveDeviceIDResponse) {}
+}
+
+message ClaimRequest {
+  bytes hardware_id = 1;
+  string init_device_name = 2;
+}
+
+message ClaimResponse {
+  model.HardwareInfo hardware_info = 1;
+  bytes device_id = 2;
+  string device_name = 3;
+}
+
+message GetActiveDeviceIDRequest { bytes hardware_id = 1; }
+
+message GetActiveDeviceIDResponse { bytes device_id = 1; }
+
+service FlashStation {
+  rpc ClaimHardwareIdentity(ClaimHardwareIdentityRequest) returns (ClaimHardwareIdentityResponse) {}
+  rpc SetHardwareIdentityInfo(SetHardwareIdentityInfoRequest) returns (SetHardwareIdentityInfoResponse) {}
+}
+
+message ClaimHardwareIdentityRequest {
+  string flash_station_secret = 1;
+}
+
+message ClaimHardwareIdentityResponse {
+  model.HardwareIdentity hardware_identity = 1;
+}
+
+message SetHardwareIdentityInfoRequest {
+  string flash_station_secret = 1;
+  bytes id = 2;
+  model.HardwareIdentityInfo info = 3;
+}
+
+message SetHardwareIdentityInfoResponse {}
+
+

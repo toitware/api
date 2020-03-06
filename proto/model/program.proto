@@ -1,0 +1,64 @@
+syntax = "proto3";
+
+package model;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/toitware/api.git/model";
+
+message Source {
+  bytes id = 1;
+  string entry_filename = 2;
+  google.protobuf.Timestamp created_at = 3;
+
+  bytes organization_id = 4;
+  bytes creator_id = 5;
+}
+
+message Program {
+  bytes id = 1;
+  string name = 2;
+  bool temporary = 3;
+  google.protobuf.Timestamp created_at = 4;
+
+  bytes source_id = 5;
+  Source source = 6;
+
+  bytes organization_id = 7;
+  bytes creator_id = 8;
+}
+
+message Compilation {
+  bytes id = 1;
+  string sdk = 2;
+  repeated string arguments = 3;
+
+  bytes program_id = 4;
+  Program program = 5;
+
+  CompilationResult result = 6;
+  google.protobuf.Timestamp created_at = 7;
+
+  bytes organization_id = 8;
+  bytes creator_id = 9;
+}
+
+message CompilationResult {
+  string error = 1;
+  bytes snapshot_out = 2;
+  bytes snapshot_err = 3;
+  int32 snapshot_exitcode = 4;
+
+  bytes image_out = 5;
+  bytes image_err = 6;
+  int32 image_exitcode = 7;
+}
+
+message SDK {
+  string name = 1;
+  string version = 2;
+  google.protobuf.Timestamp created_at = 3;
+  string created_by = 4;
+  map<string, string> settings = 5;
+  repeated string models = 6;
+}

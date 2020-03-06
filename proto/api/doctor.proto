@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package api;
+
+option go_package = "github.com/toitware/api.git/api";
+
+service DoctorService {
+  rpc HealthCheck(HealthRequest) returns (HealthResponse) {}
+}
+
+message HealthRequest {
+}
+
+message HealthResponse {
+  bool beaver = 2;
+  bool grass = 3;
+  bool oak = 4;
+}
