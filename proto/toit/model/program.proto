@@ -4,7 +4,7 @@ package toit.model;
 
 import "google/protobuf/timestamp.proto";
 
-option go_package = "github.com/toitware/api.git/model";
+option go_package = "github.com/toitware/api.git/toit/model";
 
 message Source {
   bytes id = 1;

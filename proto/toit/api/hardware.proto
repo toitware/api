@@ -2,9 +2,9 @@ syntax = "proto3";
 
 package toit.api;
 
-import "proto/model/device.proto";
+import "toit/model/device.proto";
 
-option go_package = "github.com/toitware/api.git/api";
+option go_package = "github.com/toitware/api.git/toit/api";
 
 service HardwareService {
   rpc Claim(ClaimRequest) returns (ClaimResponse) {}

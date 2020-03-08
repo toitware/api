@@ -4,7 +4,7 @@ package toit.api;
 
 import "google/protobuf/timestamp.proto";
 
-option go_package = "github.com/toitware/api.git/api";
+option go_package = "github.com/toitware/api.git/toit/api";
 
 
 enum DataType {

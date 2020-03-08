@@ -2,9 +2,9 @@ syntax = "proto3";
 
 package toit.api;
 
-import "proto/model/organization.proto";
+import "toit/model/organization.proto";
 
-option go_package = "github.com/toitware/api.git/api";
+option go_package = "github.com/toitware/api.git/toit/api";
 
 service User {
     rpc SetPassword(SetPasswordRequest) returns (SetPasswordResponse) {}

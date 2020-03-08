@@ -4,10 +4,10 @@ package toit.api;
 
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/duration.proto";
-import "proto/model/job.proto";
-import "proto/model/device.proto";
+import "toit/model/job.proto";
+import "toit/model/device.proto";
 
-option go_package = "github.com/toitware/api.git/api";
+option go_package = "github.com/toitware/api.git/toit/api";
 
 enum ProcessStatus {
   PROCESS_STATUS_UNKNOWN = 0;

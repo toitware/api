@@ -2,10 +2,10 @@ syntax = "proto3";
 
 package toit.api;
 
-import "proto/model/program.proto";
+import "toit/model/program.proto";
 import "google/protobuf/timestamp.proto";
 
-option go_package = "github.com/toitware/api.git/api";
+option go_package = "github.com/toitware/api.git/toit/api";
 
 service SDKService {
   rpc RegisterSDK(RegisterSDKRequest) returns (RegisterSDKResponse) {}

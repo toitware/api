@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package toit.model;
 
-option go_package = "github.com/toitware/api.git/model";
+option go_package = "github.com/toitware/api.git/toit/model";
 
 message Organization {
     bytes id = 1;

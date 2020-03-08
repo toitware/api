@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package toit.api;
 
-option go_package = "github.com/toitware/api.git/api";
+option go_package = "github.com/toitware/api.git/toit/api";
 
 service DoctorService {
   rpc HealthCheck(HealthRequest) returns (HealthResponse) {}

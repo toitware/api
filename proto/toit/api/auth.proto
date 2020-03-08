@@ -4,7 +4,7 @@ package toit.api;
 
 import "google/protobuf/duration.proto";
 
-option go_package = "github.com/toitware/api.git/api";
+option go_package = "github.com/toitware/api.git/toit/api";
 
 service Auth {
   rpc Login(LoginRequest) returns (AuthResponse) {}
