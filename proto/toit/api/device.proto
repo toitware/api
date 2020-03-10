@@ -8,6 +8,8 @@ import "toit/model/job.proto";
 import "toit/model/device.proto";
 
 option go_package = "github.com/toitware/api.git/toit/api";
+option java_package = "io.toit.proto.toit.api";
+option java_outer_classname = "DeviceProto";
 
 enum ProcessStatus {
   PROCESS_STATUS_UNKNOWN = 0;

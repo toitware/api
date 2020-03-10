@@ -6,6 +6,8 @@ import "google/protobuf/timestamp.proto";
 import "google/protobuf/duration.proto";
 
 option go_package = "github.com/toitware/api.git/toit/model";
+option java_package = "io.toit.proto.toit.model";
+option java_outer_classname = "JobProto";
 
 enum JobGoalState {
   JOB_GOAL_STATE_UNKNOWN = 0;

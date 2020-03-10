@@ -3,6 +3,8 @@ syntax = "proto3";
 package toit.model;
 
 option go_package = "github.com/toitware/api.git/toit/model";
+option java_package = "io.toit.proto.toit.model";
+option java_outer_classname = "OrganizationProto";
 
 message Organization {
     bytes id = 1;
