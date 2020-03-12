@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package toit.api;
+
+option go_package = "github.com/toitware/api.git/toit/api";
+option java_package = "io.toit.proto.toit.api";
+option java_outer_classname = "OrgProto";
+
+service Organization {
+  rpc RegisterSDK(RegisterSDKRequest) returns (RegisterSDKResponse) {} 	
+  rpc DeregisterSDK(DeregisterSDKRequest) returns (DeregisterSDKResponse) {} 	
+  rpc DefaultSDK(DefaultSDKRequest) returns (DefaultSDKResponse) {} 
+}
+
+message RegisterSDKRequest { bytes sdk = 1; }
+
+message RegisterSDKResponse { string name = 1; }
+
+message DeregisterSDKRequest {
+  string name = 1;
+  bool check_exists = 2;
+}
+
+message DeregisterSDKResponse {}
+
+message DefaultSDKRequest {} 
+
+message DefaultSDKResponse { string name = 1; } 

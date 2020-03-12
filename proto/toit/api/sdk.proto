@@ -10,25 +10,25 @@ option java_package = "io.toit.proto.toit.api";
 option java_outer_classname = "SDKProto";
 
 service SDKService {
-  rpc RegisterSDK(RegisterSDKRequest) returns (RegisterSDKResponse) {}
-  rpc LookupSDK(LookupSDKRequest) returns (LookupSDKResponse) {}
-  rpc DeregisterSDK(DeregisterSDKRequest) returns (DeregisterSDKResponse) {}
-  rpc DefaultSDK(DefaultSDKRequest) returns (DefaultSDKResponse) {}
+  rpc RegisterSDK(RegisterSDKRequest) returns (RegisterSDKResponse) {} 	// deprecated
+  rpc LookupSDK(LookupSDKRequest) returns (LookupSDKResponse) {} 
+  rpc DeregisterSDK(DeregisterSDKRequest) returns (DeregisterSDKResponse) {} 	// deprecated
+  rpc DefaultSDK(DefaultSDKRequest) returns (DefaultSDKResponse) {} 	// deprecated
   rpc GetFirmware(GetFirmwareRequest) returns (GetFirmwareResponse) {}
   rpc ListSDKs(ListSDKsRequest) returns (ListSDKsResponse) {}
   rpc ValidateModel(ValidateModelRequest) returns (ValidateModelResponse) {}
 }
 
-message RegisterSDKRequest { bytes sdk = 1; }
+message RegisterSDKRequest { bytes sdk = 1; } // deprecated
 
-message RegisterSDKResponse { string name = 1; }
+message RegisterSDKResponse { string name = 1; } // deprecated
 
-message DeregisterSDKRequest {
+message DeregisterSDKRequest { // deprecated
   string name = 1;
   bool check_exists = 2;
 }
 
-message DeregisterSDKResponse {}
+message DeregisterSDKResponse {} // deprecated
 
 message LookupSDKRequest { string name = 1; }
 
@@ -43,9 +43,9 @@ message LookupSDKResponse {
   toit.model.SDK sdk = 7;
 }
 
-message DefaultSDKRequest {}
+message DefaultSDKRequest {} // deprecated
 
-message DefaultSDKResponse { string name = 1; }
+message DefaultSDKResponse { string name = 1; } // deprecated
 
 message GetFirmwareRequest {
   string name = 1;
