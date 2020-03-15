@@ -6,7 +6,7 @@ option go_package = "github.com/toitware/api.git/toit/api";
 option java_package = "io.toit.proto.toit.api";
 option java_outer_classname = "OrgProto";
 
-service Organization {
+service OrganizationService {
   rpc RegisterSDK(RegisterSDKRequest) returns (RegisterSDKResponse) {} 	
   rpc DeregisterSDK(DeregisterSDKRequest) returns (DeregisterSDKResponse) {} 	
   rpc DefaultSDK(DefaultSDKRequest) returns (DefaultSDKResponse) {} 
