@@ -19,7 +19,10 @@ service SDKService {
   rpc ValidateModel(ValidateModelRequest) returns (ValidateModelResponse) {}
 }
 
-message RegisterSDKRequest { bytes sdk = 1; } 
+message RegisterSDKRequest { 
+  bytes sdk = 1; 
+  bool keep_default = 2;
+} 
 
 message RegisterSDKResponse { string name = 1; } 
 
