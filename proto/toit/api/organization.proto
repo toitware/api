@@ -10,9 +10,9 @@ option java_outer_classname = "OrgProto";
 
 service OrganizationService {
   rpc SetDefaultSDK(SetDefaultSDKRequest) returns (SetDefaultSDKResponse) {} 
-  rpc DefaultSDK(DefaultSDKRequest) returns (DefaultSDKResponse) {} 
-  rpc ListUsers(ListUsersRequest) returns (ListUsersResponse) {}
-  rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {}
+  rpc GetDefaultSDK(GetDefaultSDKRequest) returns (GetDefaultSDKResponse) {} 
+  rpc ListUsersInOrg(ListUsersInOrgRequest) returns (ListUsersInOrgResponse) {}
+  rpc AddUser(AddUserRequest) returns (AddUserResponse) {}
   rpc DeleteUser(DeleteUserRequest) returns (DeleteUserResponse) {}
 }
 
@@ -20,25 +20,25 @@ message SetDefaultSDKRequest { string name = 1; }
 
 message SetDefaultSDKResponse {}  
 
-message DefaultSDKRequest {} 
+message GetDefaultSDKRequest {} 
 
-message DefaultSDKResponse { string name = 1; } 
+message GetDefaultSDKResponse { string name = 1; } 
 
-message ListUsersRequest {
+message ListUsersInOrgRequest {
   bytes offset = 1;
   int64 limit = 2;
   string order_by = 3;
   bool order_desc = 4;
 }
 
-message ListUsersResponse {
+message ListUsersInOrgResponse {
   repeated model.User users = 1;
   bytes offset = 2;
 }
 
-message CreateUserRequest { string email = 1; }
+message AddUserRequest { string email = 1; }
 
-message CreateUserResponse { model.User user = 1; }
+message AddUserResponse { model.User user = 1; }
 
 message DeleteUserRequest { string email = 1; }
 
