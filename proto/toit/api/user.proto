@@ -3,6 +3,7 @@ syntax = "proto3";
 package toit.api;
 
 import "toit/model/organization.proto";
+import "toit/api/organization.proto";
 
 option go_package = "github.com/toitware/api.git/toit/api";
 option java_package = "io.toit.proto.toit.api";
@@ -13,8 +14,8 @@ service User {
     rpc InitiateResetPassword(InitiateResetPasswordRequest) returns (InitiateResetPasswordResponse) {}
     rpc ChangePasswordWithRPToken(ChangePasswordWithRPTokenRequest) returns (ChangePasswordWithRPTokenResponse) {}
     rpc GetCurrentUser(GetCurrentUserRequest) returns (GetCurrentUserResponse) {}
-    rpc ListUsers(ListUsersRequest) returns (ListUsersResponse) {}
-    rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {}
+    rpc ListUsers(ListUsersRequest) returns (ListUsersResponse) {} 	// deprecated
+    rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {} // deprecated
 }
 
 message SetPasswordRequest {
@@ -44,19 +45,3 @@ message GetCurrentUserResponse {
     model.User user = 1;
     model.Organization organization = 2;
 }
-
-message ListUsersRequest {
-  bytes offset = 1;
-  int64 limit = 2;
-  string order_by = 3;
-  bool order_desc = 4;
-}
-
-message ListUsersResponse {
-  repeated model.User users = 1;
-  bytes offset = 2;
-}
-
-message CreateUserRequest { string email = 1; }
-
-message CreateUserResponse { model.User user = 1; }
