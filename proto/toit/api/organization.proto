@@ -2,27 +2,45 @@ syntax = "proto3";
 
 package toit.api;
 
+import "toit/model/organization.proto";
+
 option go_package = "github.com/toitware/api.git/toit/api";
 option java_package = "io.toit.proto.toit.api";
 option java_outer_classname = "OrgProto";
 
 service OrganizationService {
-  rpc RegisterSDK(RegisterSDKRequest) returns (RegisterSDKResponse) {} 	
-  rpc DeregisterSDK(DeregisterSDKRequest) returns (DeregisterSDKResponse) {} 	
+  rpc SetDefaultSDK(SetDefaultSDKRequest) returns (SetDefaultSDKResponse) {} 
   rpc DefaultSDK(DefaultSDKRequest) returns (DefaultSDKResponse) {} 
+  rpc ListUsers(ListUsersRequest) returns (ListUsersResponse) {}
+  rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {}
+  rpc DeleteUser(DeleteUserRequest) returns (DeleteUserResponse) {}
 }
 
-message RegisterSDKRequest { bytes sdk = 1; }
+message SetDefaultSDKRequest { string name = 1; } 
 
-message RegisterSDKResponse { string name = 1; }
-
-message DeregisterSDKRequest {
-  string name = 1;
-  bool check_exists = 2;
-}
-
-message DeregisterSDKResponse {}
+message SetDefaultSDKResponse {}  
 
 message DefaultSDKRequest {} 
 
 message DefaultSDKResponse { string name = 1; } 
+
+message ListUsersRequest {
+  bytes offset = 1;
+  int64 limit = 2;
+  string order_by = 3;
+  bool order_desc = 4;
+}
+
+message ListUsersResponse {
+  repeated model.User users = 1;
+  bytes offset = 2;
+}
+
+message CreateUserRequest { string email = 1; }
+
+message CreateUserResponse { model.User user = 1; }
+
+message DeleteUserRequest { string email = 1; }
+
+message DeleteUserResponse {}
+

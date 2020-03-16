@@ -10,36 +10,35 @@ option java_package = "io.toit.proto.toit.api";
 option java_outer_classname = "SDKProto";
 
 service SDKService {
-  rpc RegisterSDK(RegisterSDKRequest) returns (RegisterSDKResponse) {} 	// deprecated
+  rpc RegisterSDK(RegisterSDKRequest) returns (RegisterSDKResponse) {} 	
   rpc LookupSDK(LookupSDKRequest) returns (LookupSDKResponse) {} 
-  rpc DeregisterSDK(DeregisterSDKRequest) returns (DeregisterSDKResponse) {} 	// deprecated
+  rpc DeregisterSDK(DeregisterSDKRequest) returns (DeregisterSDKResponse) {} 
   rpc DefaultSDK(DefaultSDKRequest) returns (DefaultSDKResponse) {} 	// deprecated
   rpc GetFirmware(GetFirmwareRequest) returns (GetFirmwareResponse) {}
   rpc ListSDKs(ListSDKsRequest) returns (ListSDKsResponse) {}
   rpc ValidateModel(ValidateModelRequest) returns (ValidateModelResponse) {}
 }
 
-message RegisterSDKRequest { bytes sdk = 1; } // deprecated
+message RegisterSDKRequest { bytes sdk = 1; } 
 
-message RegisterSDKResponse { string name = 1; } // deprecated
+message RegisterSDKResponse { string name = 1; } 
 
-message DeregisterSDKRequest { // deprecated
+message DeregisterSDKRequest { 
   string name = 1;
   bool check_exists = 2;
 }
 
-message DeregisterSDKResponse {} // deprecated
+message DeregisterSDKResponse {}
 
 message LookupSDKRequest { string name = 1; }
 
 message LookupSDKResponse {
-  string name = 1;	// deprecated
-  string version = 2;	// deprecated
-  google.protobuf.Timestamp created_at = 3;	// deprecated
-  string created_by = 4;	// deprecated
-  map<string, string> settings = 5; // deprecated
-  repeated string models = 6; // deprecated
-
+  string name = 1;	
+  string version = 2;
+  google.protobuf.Timestamp created_at = 3;
+  string created_by = 4;
+  map<string, string> settings = 5;
+  repeated string models = 6; 
   toit.model.SDK sdk = 7;
 }
 
@@ -57,7 +56,7 @@ message GetFirmwareResponse { bytes partition = 1; }
 message ListSDKsRequest {}
 
 message ListSDKsResponse {
-  repeated string names = 1; // deprecated
+  repeated string names = 1; 
 
   repeated toit.model.SDK sdks = 2;
 }
