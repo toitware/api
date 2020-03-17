@@ -103,7 +103,7 @@ message DeviceRunRequest {
   string entry_filename = 3;
   map<string, bytes> sources = 4;
   repeated string args = 5;
-  bool install = 6;
+  // bool install = 6; - DEPRECATED
 }
 
 message DeviceRunResponse {
