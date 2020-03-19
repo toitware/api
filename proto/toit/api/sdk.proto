@@ -4,7 +4,6 @@ package toit.api;
 
 import "toit/model/program.proto";
 import "google/protobuf/timestamp.proto";
-import "toit/api/organization.proto";
 
 option go_package = "github.com/toitware/api.git/toit/api";
 option java_package = "io.toit.proto.toit.api";
@@ -45,6 +44,10 @@ message LookupSDKResponse {
   repeated string models = 6; 
   toit.model.SDK sdk = 7;
 }
+message DefaultSDKRequest {} 
+
+message DefaultSDKResponse { string name = 1; } 
+
 
 message GetFirmwareRequest {
   string name = 1;

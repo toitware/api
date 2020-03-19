@@ -3,6 +3,7 @@ syntax = "proto3";
 package toit.api;
 
 import "toit/model/organization.proto";
+import "toit/api/sdk.proto";
 
 option go_package = "github.com/toitware/api.git/toit/api";
 option java_package = "io.toit.proto.toit.api";
@@ -19,10 +20,6 @@ service OrganizationService {
 message SetDefaultSDKRequest { string name = 1; } 
 
 message SetDefaultSDKResponse {}  
-
-message DefaultSDKRequest {} 
-
-message DefaultSDKResponse { string name = 1; } 
 
 message ListUsersRequest {
   bytes offset = 1;
