@@ -17,6 +17,7 @@ service SDKService {
   rpc GetFirmware(GetFirmwareRequest) returns (GetFirmwareResponse) {}
   rpc ListSDKs(ListSDKsRequest) returns (ListSDKsResponse) {}
   rpc ValidateModel(ValidateModelRequest) returns (ValidateModelResponse) {}
+  rpc SetDefaultSDK(SetDefaultSDKRequest) returns (SetDefaultSDKResponse) {} 
 }
 
 message RegisterSDKRequest { 
@@ -70,3 +71,7 @@ message ValidateModelRequest {
 }
 
 message ValidateModelResponse {}
+
+message SetDefaultSDKRequest { string name = 1; } 
+
+message SetDefaultSDKResponse {}  
