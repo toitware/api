@@ -4,7 +4,6 @@ package toit.api;
 
 import "toit/model/program.proto";
 import "google/protobuf/timestamp.proto";
-import "toit/api/organization.proto";
 
 option go_package = "github.com/toitware/api.git/toit/api";
 option java_package = "io.toit.proto.toit.api";
@@ -14,10 +13,11 @@ service SDKService {
   rpc RegisterSDK(RegisterSDKRequest) returns (RegisterSDKResponse) {} 	
   rpc LookupSDK(LookupSDKRequest) returns (LookupSDKResponse) {} 
   rpc DeregisterSDK(DeregisterSDKRequest) returns (DeregisterSDKResponse) {} 
-  rpc DefaultSDK(DefaultSDKRequest) returns (DefaultSDKResponse) {} 	// deprecated
+  rpc DefaultSDK(DefaultSDKRequest) returns (DefaultSDKResponse) {}
   rpc GetFirmware(GetFirmwareRequest) returns (GetFirmwareResponse) {}
   rpc ListSDKs(ListSDKsRequest) returns (ListSDKsResponse) {}
   rpc ValidateModel(ValidateModelRequest) returns (ValidateModelResponse) {}
+  rpc SetDefaultSDK(SetDefaultSDKRequest) returns (SetDefaultSDKResponse) {} 
 }
 
 message RegisterSDKRequest { 
@@ -45,6 +45,10 @@ message LookupSDKResponse {
   repeated string models = 6; 
   toit.model.SDK sdk = 7;
 }
+message DefaultSDKRequest {} 
+
+message DefaultSDKResponse { string name = 1; } 
+
 
 message GetFirmwareRequest {
   string name = 1;
@@ -67,3 +71,7 @@ message ValidateModelRequest {
 }
 
 message ValidateModelResponse {}
+
+message SetDefaultSDKRequest { string name = 1; } 
+
+message SetDefaultSDKResponse {}  
