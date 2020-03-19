@@ -10,8 +10,8 @@ option java_package = "io.toit.proto.toit.api";
 option java_outer_classname = "OrgProto";
 
 service OrganizationService {
-  rpc SetDefaultSDK(SetDefaultSDKRequest) returns (SetDefaultSDKResponse) {} 
-  rpc DefaultSDK(DefaultSDKRequest) returns (DefaultSDKResponse) {} 
+  rpc SetDefaultSDK(SetDefaultSDKRequest) returns (SetDefaultSDKResponse) {}
+  rpc DefaultSDK(DefaultSDKRequest) returns (DefaultSDKResponse) {}
   rpc ListUsers(ListUsersRequest) returns (ListUsersResponse) {}
   rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {}
   rpc DeleteUser(DeleteUserRequest) returns (DeleteUserResponse) {}

@@ -14,8 +14,12 @@ service User {
     rpc InitiateResetPassword(InitiateResetPasswordRequest) returns (InitiateResetPasswordResponse) {}
     rpc ChangePasswordWithRPToken(ChangePasswordWithRPTokenRequest) returns (ChangePasswordWithRPTokenResponse) {}
     rpc GetCurrentUser(GetCurrentUserRequest) returns (GetCurrentUserResponse) {}
-    rpc ListUsers(ListUsersRequest) returns (ListUsersResponse) {} 	// deprecated
-    rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {} // deprecated
+    rpc ListUsers(ListUsersRequest) returns (ListUsersResponse) {
+        option deprecated = true;
+    }
+    rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {
+        option deprecated = true;
+    }
 }
 
 message SetPasswordRequest {
