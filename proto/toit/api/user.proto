@@ -16,10 +16,10 @@ service User {
     rpc GetCurrentUser(GetCurrentUserRequest) returns (GetCurrentUserResponse) {}
     rpc ListUsers(ListUsersRequest) returns (ListUsersResponse) {
         option deprecated = true;
-    } 	// deprecated
+    }
     rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {
         option deprecated = true;
-    } // deprecated
+    }
 }
 
 message SetPasswordRequest {
