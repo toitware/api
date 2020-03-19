@@ -15,7 +15,7 @@ message DeviceConfig {
   string sdk = 3;
   DeviceBrokerSettings broker = 4;
   DeviceConnectionSettings connection = 5;
-  string model = 6;
+  string model = 6 [deprecated=true];
 }
 
 message DeviceConnectionSettings {
@@ -47,11 +47,11 @@ message DeviceBrokerSettings {
   string host = 1;
   int64 port = 2;
   string cn = 3;
-  string protocol = 4;
+  string protocol = 4 [deprecated=true];
 }
 
 message DeviceStatus {
-  int64 revision = 1; // Deprecated
+  int64 revision = 1 [deprecated=true];
   bytes epoch = 6;
   int64 state_revision = 5;
   google.protobuf.Timestamp updated = 2;
@@ -103,7 +103,7 @@ enum DeviceChangeType {
   DEVICE_CHANGE_ADDED = 1;
   DEVICE_CHANGE_DELETED = 2;
   DEVICE_CHANGE_CHANGED = 3;
-  DEVICE_CHANGE_HEARTBEAT = 4; // Deprecated
+  DEVICE_CHANGE_HEARTBEAT = 4 [deprecated=true];
   DEVICE_CHANGE_CONNECTED = 5;
   DEVICE_CHANGE_DISCONNECTED = 6;
 };
