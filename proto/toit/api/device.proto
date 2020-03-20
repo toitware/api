@@ -139,7 +139,7 @@ message ConfigChange {
     Name name = 2;
     SDKModel sdk_model = 3;
     Broker broker = 4;
-    MaxOffline connectivity = 5;
+    MaxOffline max_offline = 5;
     Connections connections = 6;
   }
 }
