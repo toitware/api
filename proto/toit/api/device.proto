@@ -115,7 +115,7 @@ message ConfigureDeviceRequest {
   string sdk = 3;
   model.DeviceBrokerSettings broker_settings = 4;
   google.protobuf.Duration max_offline = 5;
-  string model = 6 [deprecated=true];
+  string model = 6;
   ConnectionSettings connection_settings = 7;
 }
 

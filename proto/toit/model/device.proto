@@ -15,7 +15,7 @@ message DeviceConfig {
   string sdk = 3;
   DeviceBrokerSettings broker = 4;
   DeviceConnectionSettings connection = 5;
-  string model = 6 [deprecated=true];
+  string model = 6;
 }
 
 message DeviceConnectionSettings {
