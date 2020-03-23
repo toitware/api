@@ -131,14 +131,50 @@ message GetDeviceResponse {
   repeated Job jobs = 2;
 }
 
+message ConfigChange {
+  message SDK {
+    string version = 1;
+  }
+
+  message Name {
+    string name = 1;
+  }
+
+  message SDKModel {
+    string model = 1;
+  }
+
+  message Broker {
+    model.DeviceBrokerSettings broker_settings = 1;
+  }
+
+  message MaxOffline {
+    google.protobuf.Duration max_offline = 1;
+  }
+
+  message Connections {
+    repeated model.ConnectionSetting connections = 1;
+  }
+
+  oneof config {
+    SDK sdk = 1;
+    Name name = 2;
+    SDKModel sdk_model = 3;
+    Broker broker = 4;
+    MaxOffline max_offline = 5;
+    Connections connections = 6;
+  }
+}
+
 message ConfigureDeviceRequest {
   bytes device_id = 1;
-  string name = 2;
-  string sdk = 3;
-  model.DeviceBrokerSettings broker_settings = 4;
-  google.protobuf.Duration max_offline = 5;
+  string name = 2 [deprecated=true];
+  string sdk = 3 [deprecated=true];
+  model.DeviceBrokerSettings broker_settings = 4 [deprecated=true];
+  google.protobuf.Duration max_offline = 5 [deprecated=true];
   string model = 6 [deprecated=true];
-  ConnectionSettings connection_settings = 7;
+  ConnectionSettings connection_settings = 7 [deprecated=true];
+  repeated ConfigChange config_changes = 8;
 }
 
 message ConfigureDeviceResponse {}
