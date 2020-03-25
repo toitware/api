@@ -62,6 +62,25 @@ message DeviceLog {
   google.protobuf.Timestamp created = 8;
 }
 
+message DeviceEvent {
+  enum Type {
+    UNKNOWN = 0;
+    CONFIG_CHANGE = 1;
+    STATUS_CHANGE = 2;
+    NEXT_ACTION = 3;
+  };
+
+  bytes device_id = 1;
+  // Together with the device_id, it globally identifies the event. Device events
+  // can be sorted, and will always be returned in increasing order.
+  bytes event_id = 2;
+
+  google.protobuf.Timestamp created = 3;
+  Type type = 4;
+  string msg = 5;
+  bytes data = 6;
+}
+
 service DeviceService {
   rpc GetDevice(GetDeviceRequest) returns (GetDeviceResponse) {}
 
@@ -82,6 +101,9 @@ service DeviceService {
 
   rpc ReadDeviceLogs(ReadDeviceLogsRequest)
       returns (ReadDeviceLogsResponse) {}
+
+  rpc ReadDeviceEvents(ReadDeviceEventsRequest)
+      returns (ReadDeviceEventsResponse) {}
 
   rpc GetDevicePartitions(GetDevicePartitionsRequest)
       returns (GetDevicePartitionsResponse) {}
@@ -240,6 +262,21 @@ message ReadDeviceLogsRequest {
 }
 
 message ReadDeviceLogsResponse { repeated DeviceLog logs = 1; }
+
+message ReadDeviceEventsRequest {
+  bytes device_id = 1;
+
+  // Where to stream from, exclusive. Empty returns all historic logs.
+  oneof offset {
+    bytes id = 2;
+    google.protobuf.Timestamp ts = 3;
+  }
+
+  uint64 limit = 4;
+  bool reverse = 5;
+}
+
+message ReadDeviceEventsResponse { repeated DeviceEvent events = 1; }
 
 message GetDevicePartitionsRequest {
   enum Mode {
