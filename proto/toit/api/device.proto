@@ -283,6 +283,7 @@ message GetDevicePartitionsRequest {
     UNKNOWN = 0;
     SYSTEM = 2;
     INITIAL = 3;
+    REPARTITION = 4;
   }
 
   string sdk_name = 1;
