@@ -4,6 +4,7 @@ package toit.api;
 
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/duration.proto";
+import "google/protobuf/empty.proto";
 import "toit/model/job.proto";
 import "toit/model/device.proto";
 
