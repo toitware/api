@@ -4,7 +4,6 @@ package toit.api;
 
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/duration.proto";
-import "google/protobuf/empty.proto";
 import "toit/model/job.proto";
 import "toit/model/device.proto";
 
@@ -96,10 +95,9 @@ message Initiater {
   }
 
   oneof initiater {
-    google.protobuf.Empty unknown = 1;
-    Device device = 2;
-    Console console = 3;
-    User user = 4;
+    Device device = 1;
+    Console console = 2;
+    User user = 3;
   };
 }
 
