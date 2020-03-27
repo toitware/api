@@ -3,15 +3,13 @@ syntax = "proto3";
 package toit.api;
 
 import "toit/model/organization.proto";
-import "toit/api/sdk.proto";
 
 option go_package = "github.com/toitware/api.git/toit/api";
 option java_package = "io.toit.proto.toit.api";
 option java_outer_classname = "OrgProto";
 
 service OrganizationService {
-  rpc SetDefaultSDK(SetDefaultSDKRequest) returns (SetDefaultSDKResponse) {}
-  rpc DefaultSDK(DefaultSDKRequest) returns (DefaultSDKResponse) {}
+  rpc GetUser(GetUserRequest) returns (GetUserResponse) {}
   rpc ListUsers(ListUsersRequest) returns (ListUsersResponse) {}
   rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {}
   rpc DeleteUser(DeleteUserRequest) returns (DeleteUserResponse) {}
@@ -36,4 +34,11 @@ message CreateUserResponse { model.User user = 1; }
 message DeleteUserRequest { string email = 1; }
 
 message DeleteUserResponse {}
+
+message GetUserRequest {
+  bytes id = 1;
+  string email = 2;
+}
+
+message GetUserResponse { model.User user = 1; }
 
