@@ -79,6 +79,27 @@ message DeviceEvent {
   Type type = 4;
   string msg = 5;
   bytes data = 6;
+  Initiater initiater = 7;
+}
+
+message Initiater {
+
+  message Device {
+    bytes device_id = 1;
+  }
+
+  message Console {}
+
+  message User {
+    bytes user_id = 1;
+  }
+
+  oneof initiater {
+    google.protobuf.Empty unknown = 1;
+    Device device = 2;
+    Console console = 3;
+    User user = 4;
+  };
 }
 
 service DeviceService {
