@@ -10,6 +10,7 @@ message Organization {
     bytes id = 1;
     string name = 2;
     string default_sdk = 3;
+    string email = 4;
 }
 
 message User {
