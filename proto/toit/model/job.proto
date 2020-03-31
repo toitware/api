@@ -58,7 +58,7 @@ message JobTriggers {
   CronTrigger cron = 4;
   MovementTrigger movement = 5;
   ButtonTrigger button = 6;
-  InternetTrigger internet = 7;
+  NetworkTrigger network = 7;
 }
 
 message OnInstallTrigger { bool enabled = 1; }
@@ -69,11 +69,11 @@ message IntervalTrigger { google.protobuf.Duration interval = 1; }
 
 message CronTrigger { repeated CronSpec specs = 1; }
 
-message MovementTrigger { bool enabled = 1; }
+message MovementTrigger { bool shaken = 1; }
 
 message ButtonTrigger { repeated string buttons = 1; }
 
-message InternetTrigger { bool enabled = 1; }
+message NetworkTrigger { bool connected = 1; }
 
 message CronSpec {
   string cron_string = 1;
