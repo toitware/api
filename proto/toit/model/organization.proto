@@ -11,6 +11,7 @@ message Organization {
     string name = 2;
     string default_sdk = 3;
     string email = 4;
+    string sdk_release_tag = 5;
 }
 
 message User {
