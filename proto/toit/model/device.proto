@@ -60,6 +60,12 @@ message DeviceStatus {
   string model = 7;
   DeviceConfig config = 8;
   bool connected = 9;
+  DeviceBootStatus boot = 10;
+}
+
+message DeviceBootStatus {
+  google.protobuf.Timestamp last_boot = 1;
+  bool in_factory = 2;
 }
 
 message HardwareIdentity {
