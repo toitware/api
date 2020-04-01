@@ -117,7 +117,9 @@ service DeviceService {
 
   rpc ConfigureJob(ConfigureJobRequest) returns (ConfigureJobResponse) {}
 
-  rpc RebootDevice(RebootDeviceRequest) returns (RebootDeviceResponse) {}
+  rpc RebootDevice(RebootDeviceRequest) returns (RebootDeviceResponse) {
+    option deprecated = true;
+  }
 
   rpc ReadDeviceLogs(ReadDeviceLogsRequest)
       returns (ReadDeviceLogsResponse) {}
@@ -176,6 +178,8 @@ message ConfigChange {
     repeated model.ConnectionSetting connections = 1;
   }
 
+  message Reboot {}
+
   oneof config {
     SDK sdk = 1;
     Name name = 2;
@@ -183,6 +187,7 @@ message ConfigChange {
     Broker broker = 4;
     MaxOffline max_offline = 5;
     Connections connections = 6;
+    Reboot reboot = 9;
   }
 }
 
