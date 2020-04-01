@@ -180,6 +180,8 @@ message ConfigChange {
 
   message Reboot {}
 
+  message FactoryReset {}
+
   oneof config {
     SDK sdk = 1;
     Name name = 2;
@@ -188,6 +190,7 @@ message ConfigChange {
     MaxOffline max_offline = 5;
     Connections connections = 6;
     Reboot reboot = 9;
+    FactoryReset factory_reset = 10;
   }
 }
 
