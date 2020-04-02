@@ -16,6 +16,7 @@ message DeviceConfig {
   DeviceBrokerSettings broker = 4;
   DeviceConnectionSettings connection = 5;
   string model = 6;
+  google.protobuf.Timestamp factory_after = 7;
 }
 
 message DeviceConnectionSettings {
@@ -66,6 +67,7 @@ message DeviceStatus {
 message DeviceBootStatus {
   google.protobuf.Timestamp last_boot = 1;
   bool in_factory = 2;
+  google.protobuf.Timestamp last_factory_boot = 3;
 }
 
 message HardwareIdentity {
