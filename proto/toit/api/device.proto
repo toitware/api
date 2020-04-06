@@ -150,7 +150,7 @@ message GetDeviceRequest {
 
 message GetDeviceResponse {
   Device device = 1;
-  repeated Job jobs = 2;
+  repeated Job jobs = 2 [deprecated=true];
 }
 
 message ConfigChange {
