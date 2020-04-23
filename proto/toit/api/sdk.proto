@@ -62,9 +62,7 @@ message GetFirmwareResponse { bytes partition = 1; }
 message ListSDKsRequest {}
 
 message ListSDKsResponse {
-  repeated string names = 1;
-
-  repeated toit.model.SDK sdks = 2;
+  repeated toit.model.SDK sdks = 1;
 }
 
 message ValidateModelRequest {
