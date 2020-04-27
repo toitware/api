@@ -185,7 +185,7 @@ message DeviceEvent {
       }
 
       oneof value {
-        Primitive simple = 1;
+        Primitive primitive = 1;
         Diff diff = 2;
       }
     }
