@@ -39,12 +39,12 @@ message DeregisterSDKResponse {}
 message LookupSDKRequest { string name = 1; }
 
 message LookupSDKResponse {
-  string name = 1;
-  string version = 2;
-  google.protobuf.Timestamp created_at = 3;
-  string created_by = 4;
-  map<string, string> settings = 5;
-  repeated string models = 6;
+  string name = 1; [deprecated=true];
+  string version = 2; [deprecated=true];
+  google.protobuf.Timestamp created_at = 3; [deprecated=true];
+  string created_by = 4; [deprecated=true];
+  map<string, string> settings = 5; [deprecated=true];
+  repeated string models = 6; [deprecated=true];
   toit.model.SDK sdk = 7;
 }
 message DefaultSDKRequest {}
