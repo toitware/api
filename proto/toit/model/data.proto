@@ -19,15 +19,15 @@ message GuageMetricData {
     double value = 1;
     // name_index references the name in the names list in MetricsData.
     uint32 name_index = 2;
-    google.protobuf.Timestamp created = 3;
+    google.protobuf.Timestamp created = 3 [deprecated=true];
 }
 
 message CounterMetricData {
     // name_index references the name in the names list in MetricsData.
     uint32 name_index = 1;
     int64 count = 2;
-    double mean = 3;
-    double stdev = 4;
+    double mean = 3 [deprecated=true];
+    double stdev = 4 [deprecated=true];
 }
 
 message PlotMetricData {
