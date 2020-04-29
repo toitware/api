@@ -121,3 +121,73 @@ enum DeviceSessionChangeType {
   CONNECTED = 1;
   DISCONNECTED = 2;
 };
+
+message DeviceEvent {
+  enum Type {
+    UNKNOWN = 0;
+    CONFIG_CHANGE = 1;
+    STATUS_CHANGE = 2;
+    NEXT_ACTION = 3;
+  };
+
+  bytes device_id = 1;
+  // Together with the device_id, it globally identifies the event. Device events
+  // can be sorted, and will always be returned in increasing order.
+  bytes event_id = 2;
+
+  google.protobuf.Timestamp created = 3;
+  Type type = 4;
+  string msg = 5;
+  bytes data = 6;
+  Initiater initiater = 7;
+
+  repeated Info information = 8;
+
+  message Initiater {
+
+    message Device {
+      bytes device_id = 1;
+    }
+
+    message Console {}
+
+    message User {
+      bytes user_id = 1;
+    }
+
+    oneof initiater {
+      Device device = 1;
+      Console console = 2;
+      User user = 3;
+    };
+  }
+
+  message Info {
+    string key = 1;
+    Value value = 2;
+
+    message Value {
+
+      message Primitive {
+        enum Type {
+          JSON = 0;
+          STRING = 1;
+          UBJSON = 2;
+        }
+
+        Type type = 1;
+        bytes value = 2;
+      }
+
+      message Diff {
+        Primitive from = 1;
+        Primitive to = 2;
+      }
+
+      oneof value {
+        Primitive primitive = 1;
+        Diff diff = 2;
+      }
+    }
+  }
+}
