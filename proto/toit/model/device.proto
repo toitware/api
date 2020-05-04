@@ -170,10 +170,9 @@ message DeviceEvent {
 
       message Primitive {
         enum Type {
-          JSON = 0;
-          STRING = 1;
-          UBJSON = 2;
-          INVALID = 3;
+          INVALID = 0;
+          JSON = 1;
+          STRING = 2;
         }
 
         Type type = 1;
