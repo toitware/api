@@ -173,6 +173,7 @@ message DeviceEvent {
           JSON = 0;
           STRING = 1;
           UBJSON = 2;
+          INVALID = 3;
         }
 
         Type type = 1;
