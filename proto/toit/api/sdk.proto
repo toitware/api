@@ -14,7 +14,6 @@ service SDKService {
   rpc DeregisterSDK(DeregisterSDKRequest) returns (DeregisterSDKResponse) {}
   rpc LookupSDK(LookupSDKRequest) returns (LookupSDKResponse) {}
 
-  rpc GetFirmware(GetFirmwareRequest) returns (GetFirmwareResponse) {}
   rpc ValidateModel(ValidateModelRequest) returns (ValidateModelResponse) {}
 
   rpc SetDefaultSDK(SetDefaultSDKRequest) returns (SetDefaultSDKResponse) {}
@@ -50,14 +49,6 @@ message LookupSDKResponse {
 message DefaultSDKRequest {}
 
 message DefaultSDKResponse { string name = 1; }
-
-
-message GetFirmwareRequest {
-  string name = 1;
-  string model = 2;
-}
-
-message GetFirmwareResponse { bytes partition = 1; }
 
 message ListSDKsRequest {}
 
