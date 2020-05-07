@@ -2,6 +2,7 @@ syntax = "proto3";
 
 package toit.model;
 
+import "google/protobuf/struct.proto";
 import "google/protobuf/timestamp.proto";
 
 option go_package = "github.com/toitware/api.git/toit/model";
@@ -37,8 +38,35 @@ message PlotMetricData {
     google.protobuf.Timestamp created = 3;
 }
 
-
 message TopicData {
     string topic = 1;
     bytes data = 2;
+}
+
+message LogData {
+  enum Type {
+      UNKNOWN = 0;
+      PRINT = 1;
+      PROCESS_START = 2;
+      PROCESS_STOP  = 3;
+      STACK_TRACE   = 4;
+      BOOT = 5;
+      SHUTDOWN = 6;
+  }
+
+  enum Level {
+    PRINT_LEVEL = 0;
+    DEBUG_LEVEL = 1;
+    INFO_LEVEL = 2;
+    WARN_LEVEL = 3;
+    ERROR_LEVEL = 4;
+    FATAL_LEVEL = 5;
+  }
+
+  Type type = 1;
+  bytes data = 2;
+  string message = 3;
+  Level level = 4;
+  repeated string names = 5;
+  map<string,google.protobuf.Value> tags = 6;
 }
