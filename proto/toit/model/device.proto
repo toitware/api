@@ -62,12 +62,21 @@ message DeviceStatus {
   DeviceConfig config = 8;
   bool connected = 9;
   DeviceBootStatus boot = 10;
+  DeviceHealth health = 11;
 }
 
 message DeviceBootStatus {
   google.protobuf.Timestamp last_boot = 1;
   bool in_factory = 2;
   google.protobuf.Timestamp last_factory_boot = 3;
+}
+
+message DeviceHealth {
+  DeviceBattery battery = 1;
+}
+
+message DeviceBattery {
+  double level = 1;
 }
 
 message HardwareIdentity {
