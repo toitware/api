@@ -4,6 +4,7 @@ package toit.model;
 
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/duration.proto";
+import "google/protobuf/empty.proto";
 
 option go_package = "github.com/toitware/api.git/toit/model";
 option java_package = "io.toit.proto.toit.model";
@@ -73,12 +74,17 @@ message DeviceBootStatus {
 
 message DeviceHealth {
   Power power = 1;
-  google.protobuf.Timestamp power_last_updated = 1;
 
   message Power {
-    oneof power {
-      double battery = 1;
-      bool pluggedin = 2;
+    Value value = 1;
+    google.protobuf.Timestamp last_updated = 2;
+
+    message Value {
+      oneof power {
+        google.protobuf.Empty empty = 1;
+        double battery = 2;
+        bool pluggedin = 3;
+      }
     }
   }
 }
