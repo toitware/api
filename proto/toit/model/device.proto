@@ -82,7 +82,7 @@ message DeviceHealth {
     message Value {
       oneof power {
         double battery = 1;
-        google.protobuf.empty pluggedin = 2;
+        google.protobuf.Empty pluggedin = 2;
       }
     }
   }
