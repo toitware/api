@@ -72,11 +72,14 @@ message DeviceBootStatus {
 }
 
 message DeviceHealth {
-  DeviceBattery battery = 1;
-}
+  Power power = 1;
 
-message DeviceBattery {
-  double level = 1;
+  message Power {
+    oneof power {
+      double battery = 1;
+      bool pluggedin = 2;
+    }
+  }
 }
 
 message HardwareIdentity {
