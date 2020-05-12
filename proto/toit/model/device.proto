@@ -81,9 +81,8 @@ message DeviceHealth {
 
     message Value {
       oneof power {
-        google.protobuf.Empty empty = 1;
-        double battery = 2;
-        bool pluggedin = 3;
+        double battery = 1;
+        google.protobuf.empty pluggedin = 2;
       }
     }
   }
