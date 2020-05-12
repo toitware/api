@@ -73,6 +73,7 @@ message DeviceBootStatus {
 
 message DeviceHealth {
   Power power = 1;
+  google.protobuf.Timestamp power_last_updated = 1;
 
   message Power {
     oneof power {
