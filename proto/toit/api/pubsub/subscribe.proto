@@ -1,0 +1,63 @@
+
+syntax = "proto3";
+
+package toit.api.pubsub;
+
+import "toit/model/pubsub/message.proto";
+
+option go_package = "github.com/toitware/api.git/toit/api/pubsub";
+option java_package = "io.toit.proto.toit.api.pubsub";
+option java_outer_classname = "PubSubProto";
+
+service Subscribe {
+  rpc CreateSubscription(CreateSubscriptionRequest)
+      returns (CreateSubscriptionResponse) {}
+  rpc DeleteSubscription(DeleteSubscriptionRequest)
+      returns (DeleteSubscriptionResponse) {}
+  rpc ListSubscriptions(ListSubscriptionsRequest)
+      returns (ListSubscriptionsResponse) {}
+
+  rpc Fetch(FetchRequest) returns (FetchResponse) {}
+  rpc Stream(StreamRequest) returns (stream StreamResponse) {}
+  rpc Acknowledge(AcknowledgeRequest) returns (AcknowledgeResponse) {}
+}
+
+// A subscription must be unique pair of type and name where the name is choosen
+// on creation. Name must be letters, numbers, dashes (-), periods (.),
+// underscores (_), tildes (~), percents (%) or plus signs (+).
+message Subscription {
+  string topic = 1;
+  string name = 2;
+}
+
+message CreateSubscriptionRequest { Subscription subscription = 1; }
+message CreateSubscriptionResponse {}
+
+message DeleteSubscriptionRequest { Subscription subscription = 1; }
+message DeleteSubscriptionResponse {}
+
+message ListSubscriptionsRequest {
+  string topic = 1;
+  int32 limit = 2;
+  bytes offset = 3;
+}
+
+message ListSubscriptionsResponse {
+  repeated Subscription subscriptions = 1;
+  bytes next_offset = 2;
+}
+
+message FetchRequest {
+  Subscription subscription = 1;
+  int32 limit = 2;
+}
+message FetchResponse { repeated toit.model.pubsub.Envelope messages = 1; }
+
+message StreamRequest { Subscription subscription = 1; }
+message StreamResponse { repeated toit.model.pubsub.Envelope messages = 1; }
+
+message AcknowledgeRequest {
+  Subscription subscription = 1;
+  repeated bytes envelope_ids = 2;
+}
+message AcknowledgeResponse {}
