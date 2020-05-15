@@ -12,7 +12,7 @@ service Publish {
 
 message PublishRequest {
   string topic = 1;
-  string sender_name = 2;
+  string publisher_name = 2;
   repeated bytes data = 3;
 }
 

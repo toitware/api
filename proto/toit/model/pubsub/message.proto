@@ -13,8 +13,8 @@ message Envelope {
   Message message = 2;
 }
 
-message Sender {
-  message ExternalSystem { string name = 1; }
+message Publisher {
+  message External { string name = 1; }
 
   message Device {
     bytes hardware_id = 1;
@@ -23,15 +23,15 @@ message Sender {
     bytes job_id = 4;
   }
 
-  oneof sender {
+  oneof publisher {
     Device device = 1;
-    ExternalSystem system = 2;
+    External external = 2;
   }
 }
 
 message Message {
   string topic = 1;
-  Sender sender = 2;
+  Publisher publisher = 2;
   google.protobuf.Timestamp created = 3;
   bytes data = 4;
 }

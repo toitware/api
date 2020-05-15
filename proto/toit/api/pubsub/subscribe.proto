@@ -27,6 +27,7 @@ service Subscribe {
 // underscores (_), tildes (~), percents (%) or plus signs (+).
 message Subscription {
   string topic = 1;
+  // Subscription name must be unique
   string name = 2;
 }
 
