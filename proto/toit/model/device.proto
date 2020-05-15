@@ -110,13 +110,6 @@ message HardwareInfo {
   bytes organization_id = 4;
 }
 
-message DeviceInfo {
-  bytes device_id = 1;
-  DeviceConfig config = 2;
-  DeviceStatus status = 3;
-  HardwareInfo hardware = 4;
-}
-
 message HardwareToDeviceInfo {
   bytes hardware_id = 1;
   bytes device_id = 2;
