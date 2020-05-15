@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package toit.model.pubsub;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/toitware/api.git/toit/model/pubsub";
+option java_package = "io.toit.proto.toit.model.pubsub";
+option java_outer_classname = "PubSubProto";
+
+message Envelope {
+  bytes id = 1;
+  Message message = 2;
+}
+
+message Publisher {
+  message External { string name = 1; }
+
+  message Device {
+    bytes hardware_id = 1;
+    bytes device_id = 2;
+    bytes event_id = 3;
+    bytes job_id = 4;
+  }
+
+  oneof publisher {
+    Device device = 1;
+    External external = 2;
+  }
+}
+
+message Message {
+  string topic = 1;
+  Publisher publisher = 2;
+  google.protobuf.Timestamp created = 3;
+  bytes data = 4;
+}

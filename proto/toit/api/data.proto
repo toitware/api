@@ -12,7 +12,7 @@ option java_outer_classname = "DataProto";
 enum DataType {
   UNKNOWN  = 0;
 
-  LOGS           = 1; // data is encoded as ?
+  LOGS           = 1; // data is encoded protobuf as model.LogData
   METRICS        = 2; // data is encoded protobuf as model.MetricsData
   TOPIC_DATA     = 3; // data is encoded protobuf as model.TopicData
 };
