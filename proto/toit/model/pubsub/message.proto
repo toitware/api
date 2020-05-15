@@ -17,10 +17,10 @@ message Sender {
   message ExternalSystem { string name = 1; }
 
   message Device {
-    bytes hardware_id = 2;
-    bytes device_id = 3;
-    bytes event_id = 4;
-    bytes job_id = 5;
+    bytes hardware_id = 1;
+    bytes device_id = 2;
+    bytes event_id = 3;
+    bytes job_id = 4;
   }
 
   oneof sender {
