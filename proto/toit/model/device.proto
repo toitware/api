@@ -185,7 +185,6 @@ message DeviceEvent {
           INVALID = 0;
           JSON = 1;
           STRING = 2;
-          ERROR = 3;
         }
 
         Type type = 1;
@@ -197,9 +196,14 @@ message DeviceEvent {
         Primitive to = 2;
       }
 
+      message Error {
+        string error = 1;
+      }
+
       oneof value {
         Primitive primitive = 1;
         Diff diff = 2;
+        Error error = 3;
       }
     }
   }
