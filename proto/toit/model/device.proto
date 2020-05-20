@@ -139,6 +139,7 @@ message DeviceEvent {
     CONFIG_CHANGE = 1;
     STATUS_CHANGE = 2;
     NEXT_ACTION = 3;
+    DEVICE_ACTION = 4;
   };
 
   bytes device_id = 1;
@@ -184,6 +185,7 @@ message DeviceEvent {
           INVALID = 0;
           JSON = 1;
           STRING = 2;
+          ERROR = 3;
         }
 
         Type type = 1;
