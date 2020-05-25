@@ -91,6 +91,10 @@ message CronSchedule {
   google.protobuf.Timestamp valid_to = 8;
 }
 
+message JobPubSub {
+  repeated string subscriptions = 1;
+}
+
 enum JobState {
   JOB_STATE_UNKNOWN = 0;
   JOB_STATE_UNINSTALLED = 1;
