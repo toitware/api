@@ -98,7 +98,7 @@ message JobPubSub {
     string topic = 1;
     bytes id = 2;
   }
-  repeated subscription subscriptions = 1;
+  repeated Subscription subscriptions = 1;
 }
 
 enum JobState {
