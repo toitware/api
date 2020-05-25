@@ -94,7 +94,11 @@ message CronSchedule {
 }
 
 message JobPubSub {
-  repeated string subscriptions = 1;
+  message Subscription {
+    string topic = 1;
+    bytes id = 2;
+  }
+  repeated subscription subscriptions = 1;
 }
 
 enum JobState {
