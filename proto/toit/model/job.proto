@@ -95,7 +95,11 @@ message CronSchedule {
 }
 
 message JobPubSub {
-  repeated toit.model.pubsub.Topic subscriptions = 1;
+  message Subscription {
+    toit.model.pubsub.Topic topic = 1;
+    bytes id = 2;
+  }
+  repeated Subscription subscriptions = 1;
 }
 
 enum JobState {
