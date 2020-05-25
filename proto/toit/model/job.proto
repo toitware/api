@@ -4,6 +4,7 @@ package toit.model;
 
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/duration.proto";
+import "toit/model/pubsub/topic.proto";
 
 option go_package = "github.com/toitware/api.git/toit/model";
 option java_package = "io.toit.proto.toit.model";
@@ -30,6 +31,8 @@ message JobConfig {
   google.protobuf.Timestamp updated = 7;
 
   CompilationInfo compilation_info = 10;
+
+  JobPubSub pubsub = 11;
 }
 
 message CompilationInfo {
@@ -89,6 +92,14 @@ message CronSchedule {
   sfixed64 day_of_week = 6;
   google.protobuf.Timestamp valid_from = 7;
   google.protobuf.Timestamp valid_to = 8;
+}
+
+message JobPubSub {
+  message Subscription {
+    toit.model.pubsub.Topic topic = 1;
+    bytes id = 2;
+  }
+  repeated Subscription subscriptions = 1;
 }
 
 enum JobState {
