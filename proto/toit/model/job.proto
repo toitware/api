@@ -30,6 +30,8 @@ message JobConfig {
   google.protobuf.Timestamp updated = 7;
 
   CompilationInfo compilation_info = 10;
+
+  JobPubSub pubsub = 11;
 }
 
 message CompilationInfo {
