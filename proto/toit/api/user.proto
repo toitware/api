@@ -14,7 +14,7 @@ service User {
     rpc InitiateResetPassword(InitiateResetPasswordRequest) returns (InitiateResetPasswordResponse) {}
     rpc ChangePasswordWithRPToken(ChangePasswordWithRPTokenRequest) returns (ChangePasswordWithRPTokenResponse) {}
     rpc GetCurrentUser(GetCurrentUserRequest) returns (GetCurrentUserResponse) {}
-    rpc ListOrganizations(ListOrganizationsRequest) returns (ListOrganizationsResponse) {
+    rpc ListOrganizations(ListOrganizationsRequest) returns (ListOrganizationsResponse) {}
     rpc ListUsers(ListUsersRequest) returns (ListUsersResponse) {
         option deprecated = true;
     }
