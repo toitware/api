@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package toit.model.pubsub;
+
+option go_package = "github.com/toitware/api.git/toit/model/pubsub";
+option java_package = "io.toit.proto.toit.model.pubsub";
+option java_outer_classname = "PubSubProto";
+
+enum TopicType {
+  TOPIC_TYPE_UNKOWN = 0;
+  TOPIC_TYPE_CLOUD = 1;
+  TOPIC_TYPE_DEVICE = 2;
+}
+
+message Topic {
+  TopicType type = 1;
+  string name = 2;
+}
