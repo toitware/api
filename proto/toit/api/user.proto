@@ -44,7 +44,9 @@ message ChangePasswordWithRPTokenRequest {
 
 message ChangePasswordWithRPTokenResponse {}
 
-message GetCurrentUserRequest {}
+message GetCurrentUserRequest {
+    bytes organization_id = 1;
+}
 
 message GetCurrentUserResponse {
     model.User user = 1;
