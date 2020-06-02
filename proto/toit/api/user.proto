@@ -45,7 +45,7 @@ message ChangePasswordWithRPTokenRequest {
 message ChangePasswordWithRPTokenResponse {}
 
 message GetCurrentUserRequest {
-    bytes organization_id = 1;
+    bytes organization_id = 1; // optional
 }
 
 message GetCurrentUserResponse {
