@@ -21,6 +21,7 @@ message Publisher {
     bytes device_id = 2;
     bytes event_id = 3;
     bytes job_id = 4;
+    google.protobuf.Timestamp written_at = 5;
   }
 
   oneof publisher {
@@ -32,7 +33,6 @@ message Publisher {
 message Message {
   string topic = 1;
   Publisher publisher = 2;
-  google.protobuf.Timestamp created = 3;
+  google.protobuf.Timestamp created_at = 3;
   bytes data = 4;
-  google.protobuf.Timestamp queued_at = 5;
 }
