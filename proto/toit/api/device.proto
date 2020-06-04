@@ -187,7 +187,7 @@ message ListDevicesRequest {
 message ListDevicesFilter {
   google.protobuf.Duration last_updated = 1;
   bool only_simulators = 2;
-  string namePrefix = 3;
+  string name_prefix = 3;
 }
 
 message ListDevicesResponse {
