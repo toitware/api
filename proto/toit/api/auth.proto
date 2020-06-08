@@ -11,6 +11,7 @@ option java_outer_classname = "AuthProto";
 service Auth {
   rpc Login(LoginRequest) returns (AuthResponse) {}
   rpc Refresh(RefreshRequest) returns (AuthResponse) {}
+  rpc ChangeOrganization(ChangeOrganizationRequest) returns (ChangeOrganizationResponse) {}
   rpc Logout(LogoutRequest) returns (LogoutResponse) {}
 }
 
@@ -35,3 +36,10 @@ message AuthResponse {
 message LogoutRequest {}
 
 message LogoutResponse {}
+
+message ChangeOrganizationRequest {
+  bytes organization_id = 1;
+  bytes refresh_token = 2; // optional
+}
+
+message ChangeOrganizationResponse {}
