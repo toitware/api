@@ -16,6 +16,8 @@ service ProgramService {
 
   rpc Analyze(AnalyzeRequest) returns (AnalyzeResponse) {}
 
+  rpc SyntaxAnalyze(SyntaxAnalyzeRequest) returns (SyntaxAnalyzeResponse) {}
+
   rpc LspAnalyze(stream LspRequest) returns (stream LspResponse) {}
 
   rpc GetProgram(GetProgramRequest) returns (GetProgramResponse) {}
@@ -41,13 +43,36 @@ message CompileResponse {
   model.Compilation compilation = 1;
 }
 
-message AnalyzeRequest {
+message SyntaxAnalyzeRequest {
   string entry_file = 1;
   string sdk_name = 2;
   map<string, bytes> sources = 3;
 }
 
-message AnalyzeResponse { bytes response = 1; }
+message SyntaxAnalyzeResponse { bytes response = 1; }
+
+message AnalyzeRequest {
+  message Source {
+    string sdk_name = 1;
+    string entry_filename = 2;
+    map<string, bytes> sources = 3;
+    repeated string args = 4;
+  }
+  oneof program {
+    Source source = 1;
+    bytes  compilation_id = 2;
+  }
+}
+
+message AnalyzeResponse {
+  message Features {
+    bool gps = 1;
+    repeated string pubsub_subscriptions = 2;
+  }
+
+  bytes stderr = 1;
+  Features features = 2;
+}
 
 message LspRequest { bytes input = 1; }
 
