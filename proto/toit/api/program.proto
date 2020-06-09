@@ -65,9 +65,13 @@ message AnalyzeRequest {
 }
 
 message AnalyzeResponse {
+  message Features {
+    bool gps = 1;
+    repeated string pubsub_subscriptions = 2;
+  }
+
   bytes stderr = 1;
-  bool gps = 2;
-  repeated string pubsub_subscriptions = 3;
+  Features features = 2;
 }
 
 message LspRequest { bytes input = 1; }
