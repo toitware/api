@@ -30,6 +30,7 @@ message Device {
   model.DeviceConfig config = 7;
   model.DeviceStatus status = 8;
   bool is_simulator = 9;
+  model.DeviceAction next_action = 10;
 }
 
 message Job {
@@ -82,8 +83,7 @@ service DeviceService {
     option deprecated = true;
   }
 
-  rpc ReadDeviceLogs(ReadDeviceLogsRequest)
-      returns (ReadDeviceLogsResponse) {}
+  rpc ReadDeviceLogs(ReadDeviceLogsRequest) returns (ReadDeviceLogsResponse) {}
 
   rpc ReadDeviceEvents(ReadDeviceEventsRequest)
       returns (ReadDeviceEventsResponse) {}
@@ -111,33 +111,21 @@ message GetDeviceRequest {
 
 message GetDeviceResponse {
   Device device = 1;
-  repeated Job jobs = 2 [deprecated=true];
+  repeated Job jobs = 2 [ deprecated = true ];
 }
 
 message ConfigChange {
-  message SDK {
-    string version = 1;
-  }
+  message SDK { string version = 1; }
 
-  message Name {
-    string name = 1;
-  }
+  message Name { string name = 1; }
 
-  message SDKModel {
-    string model = 1;
-  }
+  message SDKModel { string model = 1; }
 
-  message Broker {
-    model.DeviceBrokerSettings broker_settings = 1;
-  }
+  message Broker { model.DeviceBrokerSettings broker_settings = 1; }
 
-  message MaxOffline {
-    google.protobuf.Duration max_offline = 1;
-  }
+  message MaxOffline { google.protobuf.Duration max_offline = 1; }
 
-  message Connections {
-    repeated model.ConnectionSetting connections = 1;
-  }
+  message Connections { repeated model.ConnectionSetting connections = 1; }
 
   message Reboot {}
 
@@ -157,20 +145,18 @@ message ConfigChange {
 
 message ConfigureDeviceRequest {
   bytes device_id = 1;
-  string name = 2 [deprecated=true];
-  string sdk = 3 [deprecated=true];
-  model.DeviceBrokerSettings broker_settings = 4 [deprecated=true];
-  google.protobuf.Duration max_offline = 5 [deprecated=true];
-  string model = 6 [deprecated=true];
-  ConnectionSettings connection_settings = 7 [deprecated=true];
+  string name = 2 [ deprecated = true ];
+  string sdk = 3 [ deprecated = true ];
+  model.DeviceBrokerSettings broker_settings = 4 [ deprecated = true ];
+  google.protobuf.Duration max_offline = 5 [ deprecated = true ];
+  string model = 6 [ deprecated = true ];
+  ConnectionSettings connection_settings = 7 [ deprecated = true ];
   repeated ConfigChange config_changes = 8;
 }
 
 message ConfigureDeviceResponse {}
 
-message ConnectionSettings {
-  repeated model.ConnectionSetting connections = 1;
-}
+message ConnectionSettings { repeated model.ConnectionSetting connections = 1; }
 
 message LookupDevicesRequest { string device_name = 1; }
 
@@ -338,9 +324,6 @@ message GetCurrentTimeRequest {}
 
 message GetCurrentTimeResponse { google.protobuf.Timestamp current_time = 1; }
 
-
-message UnclaimDeviceRequest {
-  bytes device_id = 1;
-}
+message UnclaimDeviceRequest { bytes device_id = 1; }
 
 message UnclaimDeviceResponse {}
