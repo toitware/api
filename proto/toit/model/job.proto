@@ -62,6 +62,7 @@ message JobTriggers {
   MovementTrigger movement = 5;
   ButtonTrigger button = 6;
   NetworkTrigger network = 7;
+  PubSubTrigger pubsub = 8;
 }
 
 message OnInstallTrigger { bool enabled = 1; }
@@ -77,6 +78,8 @@ message MovementTrigger { bool shaken = 1; }
 message ButtonTrigger { repeated string buttons = 1; }
 
 message NetworkTrigger { bool connected = 1; }
+
+message PubSubTrigger { repeated toit.model.pubsub.Topic topics = 1; }
 
 message CronSpec {
   string cron_string = 1;
