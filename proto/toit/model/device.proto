@@ -145,6 +145,7 @@ message DeviceEvent {
     STATUS_CHANGE = 2;
     NEXT_ACTION = 3;
     DEVICE_ACTION = 4;
+    QUEUE_OVERFLOW = 5;
   };
 
   bytes device_id = 1;
