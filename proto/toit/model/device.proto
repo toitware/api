@@ -146,6 +146,7 @@ message DeviceEvent {
     NEXT_ACTION = 3;
     DEVICE_ACTION = 4;
     QUEUE_OVERFLOW = 5;
+    REQUEST_FILE = 6;
   };
 
   bytes device_id = 1;
