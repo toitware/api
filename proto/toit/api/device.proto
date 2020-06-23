@@ -295,6 +295,7 @@ message WatchDeviceChangesResponse {
 }
 
 message WatchJobChangesRequest {
+   // Optional to listen on changes for a single device.
   bytes device_id = 1;
   // Optional to listen on changes for a single job.
   bytes job_id = 2;
@@ -305,6 +306,7 @@ message WatchJobChangesResponse {
   model.JobChangeType type = 1;
   bytes job_id = 2;
   int64 watch_revision = 3;
+  bytes device_id = 4;
 }
 
 message WatchSessionChangesRequest {
