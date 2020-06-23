@@ -69,6 +69,12 @@ message DeviceStatus {
   bool connected = 9;
   DeviceBootStatus boot = 10;
   DeviceHealth health = 11;
+  DeviceConnectionStatus connection = 12;
+}
+
+message DeviceConnectionStatus {
+  int64 index = 1;
+  DeviceConnectionType type = 2;
 }
 
 message DeviceBootStatus {
