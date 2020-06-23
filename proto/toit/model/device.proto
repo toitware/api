@@ -48,6 +48,7 @@ enum DeviceConnectionType {
   DEVICE_CONNECTION_TYPE_UNKNOWN = 0;
   DEVICE_CONNECTION_TYPE_WIFI = 1;
   DEVICE_CONNECTION_TYPE_NBIOT = 2;
+  DEVICE_CONNECTION_TYPE_OS = 3;
 }
 
 message DeviceBrokerSettings {
@@ -69,6 +70,12 @@ message DeviceStatus {
   bool connected = 9;
   DeviceBootStatus boot = 10;
   DeviceHealth health = 11;
+  DeviceConnectionStatus connection = 12;
+}
+
+message DeviceConnectionStatus {
+  int64 index = 1;
+  DeviceConnectionType type = 2;
 }
 
 message DeviceBootStatus {
