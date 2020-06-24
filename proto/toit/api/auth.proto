@@ -24,7 +24,7 @@ message LoginRequest {
 
 message RefreshRequest {
   bytes refresh_token = 1;
-  bytes organization_id = 2;
+  bytes organization_id = 2; // optional
 }
 
 message AuthResponse {
