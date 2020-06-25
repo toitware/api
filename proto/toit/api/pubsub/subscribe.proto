@@ -39,7 +39,6 @@ message DeleteSubscriptionResponse {}
 
 message ListSubscriptionsRequest {
   string topic = 1;
-  int32 limit = 2;
   bytes offset = 3;
 }
 
