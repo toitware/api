@@ -51,7 +51,6 @@ message DeleteSubscriptionResponse {}
 
 message ListSubscriptionsRequest {
   DataType type = 1;
-  int32 limit = 2;
   bytes offset = 3;
 }
 message ListSubscriptionsResponse {
