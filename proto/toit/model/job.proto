@@ -58,7 +58,7 @@ enum JobFileType {
 
 message JobFile {
   JobFileType type = 1;
-  string file = 2;
+  string path = 2;
 }
 
 message GPSFeature { bool enabled = 1; }
