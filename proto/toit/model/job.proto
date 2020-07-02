@@ -33,6 +33,7 @@ message JobConfig {
   CompilationInfo compilation_info = 10;
 
   JobPubSub pubsub = 11;
+  repeated JobFile files = 12;
 }
 
 message CompilationInfo {
@@ -48,6 +49,16 @@ message JobResources {
 
 message JobFeatures {
   GPSFeature gps = 1;
+}
+
+enum JobFileType {
+  JOB_FILE_TYPE_UNKNOWN = 0;
+  JOB_FILE_TYPE_SYSTEM = 1;
+}
+
+message JobFile {
+  JobFileType type = 1;
+  string path = 2;
 }
 
 message GPSFeature { bool enabled = 1; }
