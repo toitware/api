@@ -21,6 +21,7 @@ message GuageMetricData {
     // name_index references the name in the names list in MetricsData.
     uint32 name_index = 2;
     google.protobuf.Timestamp created = 3 [deprecated=true];
+    map<uint32,uint32> tags = 4;
 }
 
 message CounterMetricData {
@@ -29,6 +30,7 @@ message CounterMetricData {
     int64 count = 2;
     double mean = 3 [deprecated=true];
     double stdev = 4 [deprecated=true];
+    map<uint32,uint32> tags = 5;
 }
 
 message PlotMetricData {
@@ -36,6 +38,7 @@ message PlotMetricData {
     // name_index references the name in the names list in MetricsData.
     uint32 name_index = 2;
     google.protobuf.Timestamp created = 3;
+    map<uint32,uint32> tags = 5;
 }
 
 message TopicData {
