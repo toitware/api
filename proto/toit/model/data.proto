@@ -38,7 +38,7 @@ message PlotMetricData {
     // name_index references the name in the names list in MetricsData.
     uint32 name_index = 2;
     google.protobuf.Timestamp created = 3;
-    map<uint32,uint32> tags = 5;
+    map<uint32,uint32> tags = 4;
 }
 
 message TopicData {
