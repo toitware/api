@@ -10,51 +10,61 @@ option java_package = "io.toit.proto.toit.model";
 option java_outer_classname = "DataProto";
 
 message MetricsData {
-    repeated bytes names = 1;
-    repeated GuageMetricData gauges = 2;
-    repeated CounterMetricData counters = 3;
-    repeated PlotMetricData plots = 4;
+  repeated bytes names = 1;
+  repeated GuageMetricData gauges = 2;
+  repeated CounterMetricData counters = 3;
+  repeated PlotMetricData plots = 4 [ deprecated = true ];
+  repeated HistogramMetricData histograms = 5;
 }
 
 message GuageMetricData {
-    double value = 1;
-    // name_index references the name in the names list in MetricsData.
-    uint32 name_index = 2;
-    google.protobuf.Timestamp created = 3 [deprecated=true];
-    map<uint32,uint32> tags = 4;
+  double value = 1;
+  // name_index references the name in the names list in MetricsData.
+  uint32 name_index = 2;
+  google.protobuf.Timestamp created = 3 [ deprecated = true ];
+  map<uint32, uint32> tags = 4;
 }
 
 message CounterMetricData {
-    // name_index references the name in the names list in MetricsData.
-    uint32 name_index = 1;
-    int64 count = 2;
-    double mean = 3 [deprecated=true];
-    double stdev = 4 [deprecated=true];
-    map<uint32,uint32> tags = 5;
+  // name_index references the name in the names list in MetricsData.
+  uint32 name_index = 1;
+  int64 count = 2;
+  double mean = 3 [ deprecated = true ];
+  double stdev = 4 [ deprecated = true ];
+  map<uint32, uint32> tags = 5;
 }
 
 message PlotMetricData {
-    double value = 1;
-    // name_index references the name in the names list in MetricsData.
-    uint32 name_index = 2;
-    google.protobuf.Timestamp created = 3;
-    map<uint32,uint32> tags = 4;
+  // Deprecated - use unsampled gauges instead.
+  option deprecated = true;
+  double value = 1;
+  // name_index references the name in the names list in MetricsData.
+  uint32 name_index = 2;
+  google.protobuf.Timestamp created = 3;
+  map<uint32, uint32> tags = 4;
+}
+
+message HistogramMetricData {
+  // name_index references the name in the names list in MetricsData.
+  uint32 name_index = 1;
+  map<uint32, double> values = 2;
+  map<uint32, uint32> tags = 3;
 }
 
 message TopicData {
-    string topic = 1;
-    bytes data = 2;
+  string topic = 1;
+  bytes data = 2;
 }
 
 message LogData {
   enum Type {
-      UNKNOWN = 0;
-      PRINT = 1;
-      PROCESS_START = 2;
-      PROCESS_STOP  = 3;
-      STACK_TRACE   = 4;
-      BOOT = 5;
-      SHUTDOWN = 6;
+    UNKNOWN = 0;
+    PRINT = 1;
+    PROCESS_START = 2;
+    PROCESS_STOP = 3;
+    STACK_TRACE = 4;
+    BOOT = 5;
+    SHUTDOWN = 6;
   }
 
   enum Level {
@@ -71,5 +81,5 @@ message LogData {
   string message = 3;
   Level level = 4;
   repeated string names = 5;
-  map<string,google.protobuf.Value> tags = 6;
+  map<string, google.protobuf.Value> tags = 6;
 }
