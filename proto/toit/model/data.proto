@@ -45,6 +45,7 @@ message PlotMetricData {
 }
 
 message HistogramMetricData {
+  // name_index references the name in the names list in MetricsData.
   uint32 name_index = 1;
   map<uint32, double> values = 2;
   map<uint32, uint32> tags = 3;
