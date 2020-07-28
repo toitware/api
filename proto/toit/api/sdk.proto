@@ -19,6 +19,9 @@ service SDKService {
   rpc SetDefaultSDK(SetDefaultSDKRequest) returns (SetDefaultSDKResponse) {}
   rpc DefaultSDK(DefaultSDKRequest) returns (DefaultSDKResponse) {}
   rpc ListSDKs(ListSDKsRequest) returns (ListSDKsResponse) {}
+
+  // Only available on local consoles for debug purposes.
+  rpc GetFirmwareElf(GetFirmwareElfRequest) returns (GetFirmwareElfResponse) {}
 }
 
 message RegisterSDKRequest {
