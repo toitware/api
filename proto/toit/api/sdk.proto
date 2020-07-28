@@ -69,3 +69,13 @@ message ValidateModelResponse {}
 message SetDefaultSDKRequest { string name = 1; }
 
 message SetDefaultSDKResponse {}
+
+message GetFirmwareElfRequest {
+  string name = 1;
+  string model = 2;
+}
+
+message GetFirmwareElfResponse {
+  bytes checksum = 1;
+  bytes file = 2;
+}
