@@ -63,4 +63,18 @@ message SDK {
   string created_by = 4;
   map<string, string> settings = 5;
   repeated string models = 6;
+  ReleaseLevel.Type release_level = 7;
+  bool deprecated = 8;
+}
+
+message ReleaseLevel {
+  enum Type {
+    UNKNOWN   = 0;
+    RELEASED  = 10;
+    BETA      = 20;
+    ALPHA     = 30;
+    EDGE     = 40;
+    LATEST    = 50;
+    ALL       = 255;
+  };
 }
