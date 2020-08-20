@@ -16,12 +16,14 @@ service HardwareService {
 message ClaimRequest {
   bytes hardware_id = 1;
   string init_device_name = 2;
+  bytes organization_id = 3;
 }
 
 message ClaimResponse {
   model.HardwareInfo hardware_info = 1;
   bytes device_id = 2;
   string device_name = 3;
+  bytes organization_id = 4;
 }
 
 message GetActiveDeviceIDRequest { bytes hardware_id = 1; }
