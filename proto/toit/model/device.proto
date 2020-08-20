@@ -86,6 +86,7 @@ message DeviceBootStatus {
 
 message DeviceHealth {
   Power power = 1;
+  BatteryCurve battery_curve = 2;
 
   message Power {
     Value value = 1;
@@ -97,6 +98,11 @@ message DeviceHealth {
         google.protobuf.Empty pluggedin = 2;
       }
     }
+  }
+
+  message BatteryCurve {
+    double slope = 1;
+    google.protobuf.Timestamp last_updated = 2;
   }
 }
 
