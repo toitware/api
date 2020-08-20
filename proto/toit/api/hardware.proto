@@ -16,6 +16,7 @@ service HardwareService {
 message ClaimRequest {
   bytes hardware_id = 1;
   string init_device_name = 2;
+  // Optional to set. Default is the current org for the user.
   bytes organization_id = 3;
 }
 
