@@ -123,10 +123,11 @@ message RunResponse {
 
 message DeviceRunRequest {
   bytes device_id = 1;
-  string entry_filename = 3;
-  map<string, bytes> sources = 4;
+  string entry_filename = 3 [ deprecated = true ];
+  map<string, bytes> sources = 4 [ deprecated = true ];
   repeated string args = 5;
   bool install = 6 [ deprecated = true ];
+  bytes bundle = 7;
 }
 
 message DeviceRunResponse {
