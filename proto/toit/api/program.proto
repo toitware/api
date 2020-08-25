@@ -98,9 +98,10 @@ message RunRequest {
 
 message RunStart {
   string sdk_name = 1;
-  string entry_filename = 2;
-  map<string, bytes> sources = 3;
+  string entry_filename = 2 [ deprecated = true ];
+  map<string, bytes> sources = 3 [ deprecated = true ];
   repeated string args = 4;
+  bytes bundle = 5;
 }
 
 message RunInput { bytes input = 1; }
