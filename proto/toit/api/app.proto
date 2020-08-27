@@ -1,0 +1,61 @@
+syntax = "proto3";
+
+package toit.api;
+
+import "google/protobuf/timestamp.proto";
+import "toit/model/app.proto";
+
+option go_package = "github.com/toitware/api.git/toit/api";
+option java_package = "io.toit.proto.toit.api";
+option java_outer_classname = "AppProto";
+
+service AppService {
+  rpc CreateApp(CreateAppRequest) returns (CreateAppResponse) {}
+  rpc GetApp(GetAppRequest) returns (GetAppResponse) {}
+  rpc ListApps(ListAppsRequest) returns (stream ListAppsResponse) {}
+}
+
+message CreateAppRequest {
+  message Files {
+    map<string, bytes> files = 1;
+  }
+
+  string name = 1;
+  string namespace = 2;
+  string version = 3;
+  map<string, toit.model.JobSpec> jobs = 5;
+
+  oneof source {
+    Files files = 6;
+    bytes bundle = 7;
+  }
+}
+
+message CreateAppResponse {
+  bytes app_id = 1;
+}
+
+message GetAppRequest {
+  bytes app_id = 1;
+}
+
+message GetAppResponse {
+  model.App app = 1;
+}
+
+message ListAppsRequest {
+  bytes offset = 1;
+  int64 limit = 2;
+  string order_by = 3;
+  bool order_desc = 4;
+  ListAppsFilter filter = 5;
+}
+
+message ListAppsFilter {
+  string name_prefix = 1;
+}
+
+message ListAppsResponse {
+  model.App app = 1;
+  bytes offset = 2;
+}
