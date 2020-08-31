@@ -32,16 +32,31 @@ service ProgramService {
       returns (DecodeSystemMessageResponse) {}
 }
 
+message ProgramSource {
+  message Files {
+    string entry_filename = 1;
+    map<string, bytes> files = 2;
+  }
+  message Bundle {
+    bytes bundle = 1;
+  }
+
+  oneof source {
+    Files files = 1;
+    Bundle bundle = 2;
+  }
+}
+
 message CompileRequest {
   string program_name = 1;
   string sdk_name = 2;
   string entry_filename = 3 [ deprecated = true ];
   map<string, bytes> sources = 4 [ deprecated = true ];
   repeated string args = 5;
-  bytes bundle = 6;
+  ProgramSource source = 6;
 }
 
-message CompileResponse { model.Compilation compilation = 1; }
+message CompileResponse { toit.model.Compilation compilation = 1; }
 
 message SyntaxAnalyzeRequest {
   string entry_file = 1;
@@ -80,11 +95,11 @@ message LspResponse { bytes output = 1; }
 
 message GetProgramRequest { bytes program_id = 1; }
 
-message GetProgramResponse { model.Program program = 1; }
+message GetProgramResponse { toit.model.Program program = 1; }
 
 message GetCompilationRequest { bytes compilation_id = 1; }
 
-message GetCompilationResponse { model.Compilation compilation = 1; }
+message GetCompilationResponse { toit.model.Compilation compilation = 1; }
 
 message LookupProgramsRequest { string program_name = 1; }
 
@@ -99,18 +114,20 @@ message RunRequest {
 
 message RunStart {
   string sdk_name = 1;
-  string entry_filename = 2;
-  map<string, bytes> sources = 3;
+  string entry_filename = 2 [ deprecated = true ];
+  map<string, bytes> sources = 3 [ deprecated = true ];
   repeated string args = 4;
+  ProgramSource source = 5;
 }
 
 message RunInput { bytes input = 1; }
 
 message RunStartRequest {
   string sdk_name = 1;
-  string entry_filename = 2;
-  map<string, bytes> sources = 3;
+  string entry_filename = 2 [ deprecated = true ];
+  map<string, bytes> sources = 3 [ deprecated = true ];
   repeated string args = 4;
+  ProgramSource source = 5;
 }
 
 message RunResponse {
@@ -123,11 +140,11 @@ message RunResponse {
 
 message DeviceRunRequest {
   bytes device_id = 1;
-  string entry_filename = 3;
+  string entry_filename = 3 [ deprecated = true ];
   map<string, bytes> sources = 4 [ deprecated = true ];
   repeated string args = 5;
   bool install = 6 [ deprecated = true ];
-  bytes bundle = 7;
+  ProgramSource source = 7;
 }
 
 message DeviceRunResponse {
