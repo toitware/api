@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package toit.model;
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/duration.proto";
+import "toit/model/pubsub/topic.proto";
+import "toit/model/job.proto";
+
+option go_package = "github.com/toitware/api.git/toit/model";
+option java_package = "io.toit.proto.toit.model";
+option java_outer_classname = "AppProto";
+
+message App {
+  bytes app_id = 1;
+  string name = 2;
+  string namespace = 3;
+  string version = 4;
+  bytes source_id = 5;
+  map<string, JobSpec> jobs = 6;
+  google.protobuf.Timestamp created_at = 7;
+  bytes created_by = 8;
+}
+
+message JobSpec {
+  message PubSub {
+    repeated toit.model.pubsub.Topic subscriptions = 1;
+  }
+
+  string name = 1;
+  string entrypoint = 2;
+  toit.model.JobResources resources = 3;
+  toit.model.JobTriggers triggers = 4;
+  PubSub pubsub = 5;
+  repeated toit.model.JobFile files = 6;
+}
