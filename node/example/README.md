@@ -4,5 +4,6 @@ Will list all devices in the user's organization.
 
 To run use:
 ```
-$ ts-node example/main.ts <username> <password>
+$ npm install
+$ ./node_modules/.bin/ts-node main.ts <username> <password>
 ``

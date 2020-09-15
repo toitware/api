@@ -1,10 +1,10 @@
 
 // Copyright (C) 2020 Toitware ApS. All rights reserved.
 
-import { LoginRequest, AuthResponse } from "../src/toit/api/auth_pb"
-import { AuthClient } from "../src/toit/api/auth_grpc_pb"
-import { ListDevicesRequest, ListDevicesResponse, Device } from "../src/toit/api/device_pb"
-import { DeviceServiceClient } from "../src/toit/api/device_grpc_pb"
+import { LoginRequest, AuthResponse } from "@toitware/api/src/toit/api/auth_pb"
+import { AuthClient } from "@toitware/api/src/toit/api/auth_grpc_pb"
+import { ListDevicesRequest, ListDevicesResponse, Device } from "@toitware/api/src/toit/api/device_pb"
+import { DeviceServiceClient } from "@toitware/api/src/toit/api/device_grpc_pb"
 import * as grpc from "grpc"
 
 async function main() {
