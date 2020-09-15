@@ -5,6 +5,7 @@ package toit.model;
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/duration.proto";
 import "google/protobuf/empty.proto";
+import "toit/model/data.proto";
 
 option go_package = "github.com/toitware/api.git/toit/model";
 option java_package = "io.toit.proto.toit.model";
@@ -18,11 +19,22 @@ message DeviceConfig {
   DeviceConnectionSettings connection = 5;
   string model = 6;
   google.protobuf.Timestamp factory_after = 7;
+  DeviceRuntimeSettings runtime = 8;
+}
+
+message DeviceRuntimeSettings {
+  LoggingSettings logging = 1;
+}
+
+message LoggingSettings {
+  toit.model.LogData.Level level = 1;
 }
 
 message DeviceConnectionSettings {
   google.protobuf.Duration max_offline = 1;
   repeated ConnectionSetting connections = 2;
+  // Must be between 0-100
+  uint32 queue_threshold = 3;
 }
 
 message ConnectionSetting {
