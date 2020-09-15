@@ -34,7 +34,7 @@ message DeviceConnectionSettings {
   google.protobuf.Duration max_offline = 1;
   repeated ConnectionSetting connections = 2;
   // Must be between 0-100
-  uint32 queue_threshold = 3;
+  uint32 event_queue_threshold = 3;
 }
 
 message ConnectionSetting {
