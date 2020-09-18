@@ -10,6 +10,12 @@ option java_package = "io.toit.proto.toit.model";
 option java_outer_classname = "DataProto";
 
 message MetricsData {
+  enum Level {
+    DEBUG_LEVEL = 0;
+    INFO_LEVEL = 5;
+    CRITICAL_LEVEL = 10;
+  }
+
   repeated bytes names = 1;
   repeated GuageMetricData gauges = 2;
   repeated CounterMetricData counters = 3;
@@ -23,6 +29,7 @@ message GuageMetricData {
   uint32 name_index = 2;
   google.protobuf.Timestamp created = 3 [ deprecated = true ];
   map<uint32, uint32> tags = 4;
+  MetricsData.Level level = 5;
 }
 
 message CounterMetricData {
@@ -32,6 +39,7 @@ message CounterMetricData {
   double mean = 3 [ deprecated = true ];
   double stdev = 4 [ deprecated = true ];
   map<uint32, uint32> tags = 5;
+  MetricsData.Level level = 6;
 }
 
 message PlotMetricData {
@@ -49,6 +57,7 @@ message HistogramMetricData {
   uint32 name_index = 1;
   map<uint32, double> values = 2;
   map<uint32, uint32> tags = 3;
+  MetricsData.Level level = 4;
 }
 
 message TopicData {

@@ -51,6 +51,14 @@ export namespace MetricsData {
     plotsList: Array<PlotMetricData.AsObject>,
     histogramsList: Array<HistogramMetricData.AsObject>,
   }
+
+  export interface LevelMap {
+    DEBUG_LEVEL: 0;
+    INFO_LEVEL: 5;
+    CRITICAL_LEVEL: 10;
+  }
+
+  export const Level: LevelMap;
 }
 
 export class GuageMetricData extends jspb.Message {
@@ -67,6 +75,9 @@ export class GuageMetricData extends jspb.Message {
 
   getTagsMap(): jspb.Map<number, number>;
   clearTagsMap(): void;
+  getLevel(): MetricsData.LevelMap[keyof MetricsData.LevelMap];
+  setLevel(value: MetricsData.LevelMap[keyof MetricsData.LevelMap]): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GuageMetricData.AsObject;
   static toObject(includeInstance: boolean, msg: GuageMetricData): GuageMetricData.AsObject;
@@ -83,6 +94,7 @@ export namespace GuageMetricData {
     nameIndex: number,
     created?: google_protobuf_timestamp_pb.Timestamp.AsObject,
     tagsMap: Array<[number, number]>,
+    level: MetricsData.LevelMap[keyof MetricsData.LevelMap],
   }
 }
 
@@ -101,6 +113,9 @@ export class CounterMetricData extends jspb.Message {
 
   getTagsMap(): jspb.Map<number, number>;
   clearTagsMap(): void;
+  getLevel(): MetricsData.LevelMap[keyof MetricsData.LevelMap];
+  setLevel(value: MetricsData.LevelMap[keyof MetricsData.LevelMap]): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CounterMetricData.AsObject;
   static toObject(includeInstance: boolean, msg: CounterMetricData): CounterMetricData.AsObject;
@@ -118,6 +133,7 @@ export namespace CounterMetricData {
     mean: number,
     stdev: number,
     tagsMap: Array<[number, number]>,
+    level: MetricsData.LevelMap[keyof MetricsData.LevelMap],
   }
 }
 
@@ -162,6 +178,9 @@ export class HistogramMetricData extends jspb.Message {
   clearValuesMap(): void;
   getTagsMap(): jspb.Map<number, number>;
   clearTagsMap(): void;
+  getLevel(): MetricsData.LevelMap[keyof MetricsData.LevelMap];
+  setLevel(value: MetricsData.LevelMap[keyof MetricsData.LevelMap]): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): HistogramMetricData.AsObject;
   static toObject(includeInstance: boolean, msg: HistogramMetricData): HistogramMetricData.AsObject;
@@ -177,6 +196,7 @@ export namespace HistogramMetricData {
     nameIndex: number,
     valuesMap: Array<[number, number]>,
     tagsMap: Array<[number, number]>,
+    level: MetricsData.LevelMap[keyof MetricsData.LevelMap],
   }
 }
 

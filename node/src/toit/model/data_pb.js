@@ -23,6 +23,7 @@ goog.exportSymbol('proto.toit.model.LogData', null, global);
 goog.exportSymbol('proto.toit.model.LogData.Level', null, global);
 goog.exportSymbol('proto.toit.model.LogData.Type', null, global);
 goog.exportSymbol('proto.toit.model.MetricsData', null, global);
+goog.exportSymbol('proto.toit.model.MetricsData.Level', null, global);
 goog.exportSymbol('proto.toit.model.PlotMetricData', null, global);
 goog.exportSymbol('proto.toit.model.TopicData', null, global);
 /**
@@ -352,6 +353,15 @@ proto.toit.model.MetricsData.serializeBinaryToWriter = function(message, writer)
 
 
 /**
+ * @enum {number}
+ */
+proto.toit.model.MetricsData.Level = {
+  DEBUG_LEVEL: 0,
+  INFO_LEVEL: 5,
+  CRITICAL_LEVEL: 10
+};
+
+/**
  * repeated bytes names = 1;
  * @return {!(Array<!Uint8Array>|Array<string>)}
  */
@@ -599,7 +609,8 @@ proto.toit.model.GuageMetricData.toObject = function(includeInstance, msg) {
     value: jspb.Message.getFloatingPointFieldWithDefault(msg, 1, 0.0),
     nameIndex: jspb.Message.getFieldWithDefault(msg, 2, 0),
     created: (f = msg.getCreated()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
-    tagsMap: (f = msg.getTagsMap()) ? f.toObject(includeInstance, undefined) : []
+    tagsMap: (f = msg.getTagsMap()) ? f.toObject(includeInstance, undefined) : [],
+    level: jspb.Message.getFieldWithDefault(msg, 5, 0)
   };
 
   if (includeInstance) {
@@ -655,6 +666,10 @@ proto.toit.model.GuageMetricData.deserializeBinaryFromReader = function(msg, rea
         jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readUint32, jspb.BinaryReader.prototype.readUint32, null, 0, 0);
          });
       break;
+    case 5:
+      var value = /** @type {!proto.toit.model.MetricsData.Level} */ (reader.readEnum());
+      msg.setLevel(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -709,6 +724,13 @@ proto.toit.model.GuageMetricData.serializeBinaryToWriter = function(message, wri
   f = message.getTagsMap(true);
   if (f && f.getLength() > 0) {
     f.serializeBinary(4, writer, jspb.BinaryWriter.prototype.writeUint32, jspb.BinaryWriter.prototype.writeUint32);
+  }
+  f = message.getLevel();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      5,
+      f
+    );
   }
 };
 
@@ -808,6 +830,24 @@ proto.toit.model.GuageMetricData.prototype.clearTagsMap = function() {
   return this;};
 
 
+/**
+ * optional MetricsData.Level level = 5;
+ * @return {!proto.toit.model.MetricsData.Level}
+ */
+proto.toit.model.GuageMetricData.prototype.getLevel = function() {
+  return /** @type {!proto.toit.model.MetricsData.Level} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/**
+ * @param {!proto.toit.model.MetricsData.Level} value
+ * @return {!proto.toit.model.GuageMetricData} returns this
+ */
+proto.toit.model.GuageMetricData.prototype.setLevel = function(value) {
+  return jspb.Message.setProto3EnumField(this, 5, value);
+};
+
+
 
 
 
@@ -844,7 +884,8 @@ proto.toit.model.CounterMetricData.toObject = function(includeInstance, msg) {
     count: jspb.Message.getFieldWithDefault(msg, 2, 0),
     mean: jspb.Message.getFloatingPointFieldWithDefault(msg, 3, 0.0),
     stdev: jspb.Message.getFloatingPointFieldWithDefault(msg, 4, 0.0),
-    tagsMap: (f = msg.getTagsMap()) ? f.toObject(includeInstance, undefined) : []
+    tagsMap: (f = msg.getTagsMap()) ? f.toObject(includeInstance, undefined) : [],
+    level: jspb.Message.getFieldWithDefault(msg, 6, 0)
   };
 
   if (includeInstance) {
@@ -902,6 +943,10 @@ proto.toit.model.CounterMetricData.deserializeBinaryFromReader = function(msg, r
       reader.readMessage(value, function(message, reader) {
         jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readUint32, jspb.BinaryReader.prototype.readUint32, null, 0, 0);
          });
+      break;
+    case 6:
+      var value = /** @type {!proto.toit.model.MetricsData.Level} */ (reader.readEnum());
+      msg.setLevel(value);
       break;
     default:
       reader.skipField();
@@ -963,6 +1008,13 @@ proto.toit.model.CounterMetricData.serializeBinaryToWriter = function(message, w
   f = message.getTagsMap(true);
   if (f && f.getLength() > 0) {
     f.serializeBinary(5, writer, jspb.BinaryWriter.prototype.writeUint32, jspb.BinaryWriter.prototype.writeUint32);
+  }
+  f = message.getLevel();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      6,
+      f
+    );
   }
 };
 
@@ -1059,6 +1111,24 @@ proto.toit.model.CounterMetricData.prototype.getTagsMap = function(opt_noLazyCre
 proto.toit.model.CounterMetricData.prototype.clearTagsMap = function() {
   this.getTagsMap().clear();
   return this;};
+
+
+/**
+ * optional MetricsData.Level level = 6;
+ * @return {!proto.toit.model.MetricsData.Level}
+ */
+proto.toit.model.CounterMetricData.prototype.getLevel = function() {
+  return /** @type {!proto.toit.model.MetricsData.Level} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
+
+
+/**
+ * @param {!proto.toit.model.MetricsData.Level} value
+ * @return {!proto.toit.model.CounterMetricData} returns this
+ */
+proto.toit.model.CounterMetricData.prototype.setLevel = function(value) {
+  return jspb.Message.setProto3EnumField(this, 6, value);
+};
 
 
 
@@ -1339,7 +1409,8 @@ proto.toit.model.HistogramMetricData.toObject = function(includeInstance, msg) {
   var f, obj = {
     nameIndex: jspb.Message.getFieldWithDefault(msg, 1, 0),
     valuesMap: (f = msg.getValuesMap()) ? f.toObject(includeInstance, undefined) : [],
-    tagsMap: (f = msg.getTagsMap()) ? f.toObject(includeInstance, undefined) : []
+    tagsMap: (f = msg.getTagsMap()) ? f.toObject(includeInstance, undefined) : [],
+    level: jspb.Message.getFieldWithDefault(msg, 4, 0)
   };
 
   if (includeInstance) {
@@ -1392,6 +1463,10 @@ proto.toit.model.HistogramMetricData.deserializeBinaryFromReader = function(msg,
         jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readUint32, jspb.BinaryReader.prototype.readUint32, null, 0, 0);
          });
       break;
+    case 4:
+      var value = /** @type {!proto.toit.model.MetricsData.Level} */ (reader.readEnum());
+      msg.setLevel(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -1435,6 +1510,13 @@ proto.toit.model.HistogramMetricData.serializeBinaryToWriter = function(message,
   f = message.getTagsMap(true);
   if (f && f.getLength() > 0) {
     f.serializeBinary(3, writer, jspb.BinaryWriter.prototype.writeUint32, jspb.BinaryWriter.prototype.writeUint32);
+  }
+  f = message.getLevel();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      4,
+      f
+    );
   }
 };
 
@@ -1499,6 +1581,24 @@ proto.toit.model.HistogramMetricData.prototype.getTagsMap = function(opt_noLazyC
 proto.toit.model.HistogramMetricData.prototype.clearTagsMap = function() {
   this.getTagsMap().clear();
   return this;};
+
+
+/**
+ * optional MetricsData.Level level = 4;
+ * @return {!proto.toit.model.MetricsData.Level}
+ */
+proto.toit.model.HistogramMetricData.prototype.getLevel = function() {
+  return /** @type {!proto.toit.model.MetricsData.Level} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+};
+
+
+/**
+ * @param {!proto.toit.model.MetricsData.Level} value
+ * @return {!proto.toit.model.HistogramMetricData} returns this
+ */
+proto.toit.model.HistogramMetricData.prototype.setLevel = function(value) {
+  return jspb.Message.setProto3EnumField(this, 4, value);
+};
 
 
 
