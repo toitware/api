@@ -273,6 +273,11 @@ export class ConfigChange extends jspb.Message {
   getLoggingLevel(): ConfigChange.LoggingLevel | undefined;
   setLoggingLevel(value?: ConfigChange.LoggingLevel): void;
 
+  hasMetricsLevel(): boolean;
+  clearMetricsLevel(): void;
+  getMetricsLevel(): ConfigChange.MetricsLevel | undefined;
+  setMetricsLevel(value?: ConfigChange.MetricsLevel): void;
+
   getConfigCase(): ConfigChange.ConfigCase;
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ConfigChange.AsObject;
@@ -296,6 +301,7 @@ export namespace ConfigChange {
     factoryReset?: ConfigChange.FactoryReset.AsObject,
     eventQueueThreshold?: ConfigChange.EventQueueThreshold.AsObject,
     loggingLevel?: ConfigChange.LoggingLevel.AsObject,
+    metricsLevel?: ConfigChange.MetricsLevel.AsObject,
   }
 
   export class SDK extends jspb.Message {
@@ -496,6 +502,26 @@ export namespace ConfigChange {
     }
   }
 
+  export class MetricsLevel extends jspb.Message {
+    getLevel(): toit_model_data_pb.MetricsData.LevelMap[keyof toit_model_data_pb.MetricsData.LevelMap];
+    setLevel(value: toit_model_data_pb.MetricsData.LevelMap[keyof toit_model_data_pb.MetricsData.LevelMap]): void;
+
+    serializeBinary(): Uint8Array;
+    toObject(includeInstance?: boolean): MetricsLevel.AsObject;
+    static toObject(includeInstance: boolean, msg: MetricsLevel): MetricsLevel.AsObject;
+    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+    static serializeBinaryToWriter(message: MetricsLevel, writer: jspb.BinaryWriter): void;
+    static deserializeBinary(bytes: Uint8Array): MetricsLevel;
+    static deserializeBinaryFromReader(message: MetricsLevel, reader: jspb.BinaryReader): MetricsLevel;
+  }
+
+  export namespace MetricsLevel {
+    export type AsObject = {
+      level: toit_model_data_pb.MetricsData.LevelMap[keyof toit_model_data_pb.MetricsData.LevelMap],
+    }
+  }
+
   export enum ConfigCase {
     CONFIG_NOT_SET = 0,
     SDK = 1,
@@ -508,6 +534,7 @@ export namespace ConfigChange {
     FACTORY_RESET = 10,
     EVENT_QUEUE_THRESHOLD = 11,
     LOGGING_LEVEL = 12,
+    METRICS_LEVEL = 13,
   }
 }
 

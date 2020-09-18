@@ -71,6 +71,11 @@ export class DeviceRuntimeSettings extends jspb.Message {
   getLogging(): LoggingSettings | undefined;
   setLogging(value?: LoggingSettings): void;
 
+  hasMetrics(): boolean;
+  clearMetrics(): void;
+  getMetrics(): MetricsSettings | undefined;
+  setMetrics(value?: MetricsSettings): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeviceRuntimeSettings.AsObject;
   static toObject(includeInstance: boolean, msg: DeviceRuntimeSettings): DeviceRuntimeSettings.AsObject;
@@ -84,6 +89,7 @@ export class DeviceRuntimeSettings extends jspb.Message {
 export namespace DeviceRuntimeSettings {
   export type AsObject = {
     logging?: LoggingSettings.AsObject,
+    metrics?: MetricsSettings.AsObject,
   }
 }
 
@@ -104,6 +110,26 @@ export class LoggingSettings extends jspb.Message {
 export namespace LoggingSettings {
   export type AsObject = {
     level: toit_model_data_pb.LogData.LevelMap[keyof toit_model_data_pb.LogData.LevelMap],
+  }
+}
+
+export class MetricsSettings extends jspb.Message {
+  getLevel(): toit_model_data_pb.MetricsData.LevelMap[keyof toit_model_data_pb.MetricsData.LevelMap];
+  setLevel(value: toit_model_data_pb.MetricsData.LevelMap[keyof toit_model_data_pb.MetricsData.LevelMap]): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): MetricsSettings.AsObject;
+  static toObject(includeInstance: boolean, msg: MetricsSettings): MetricsSettings.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: MetricsSettings, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): MetricsSettings;
+  static deserializeBinaryFromReader(message: MetricsSettings, reader: jspb.BinaryReader): MetricsSettings;
+}
+
+export namespace MetricsSettings {
+  export type AsObject = {
+    level: toit_model_data_pb.MetricsData.LevelMap[keyof toit_model_data_pb.MetricsData.LevelMap],
   }
 }
 

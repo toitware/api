@@ -24,10 +24,15 @@ message DeviceConfig {
 
 message DeviceRuntimeSettings {
   LoggingSettings logging = 1;
+  MetricsSettings metrics = 2;
 }
 
 message LoggingSettings {
   toit.model.LogData.Level level = 1;
+}
+
+message MetricsSettings {
+  toit.model.MetricsData.Level level = 1;
 }
 
 message DeviceConnectionSettings {
