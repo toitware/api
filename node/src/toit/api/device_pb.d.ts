@@ -6,6 +6,7 @@ import * as google_protobuf_timestamp_pb from "google-protobuf/google/protobuf/t
 import * as google_protobuf_duration_pb from "google-protobuf/google/protobuf/duration_pb";
 import * as toit_model_job_pb from "../../toit/model/job_pb";
 import * as toit_model_device_pb from "../../toit/model/device_pb";
+import * as toit_model_data_pb from "../../toit/model/data_pb";
 
 export class Device extends jspb.Message {
   getId(): Uint8Array | string;
@@ -262,6 +263,16 @@ export class ConfigChange extends jspb.Message {
   getFactoryReset(): ConfigChange.FactoryReset | undefined;
   setFactoryReset(value?: ConfigChange.FactoryReset): void;
 
+  hasEventQueueThreshold(): boolean;
+  clearEventQueueThreshold(): void;
+  getEventQueueThreshold(): ConfigChange.EventQueueThreshold | undefined;
+  setEventQueueThreshold(value?: ConfigChange.EventQueueThreshold): void;
+
+  hasLoggingLevel(): boolean;
+  clearLoggingLevel(): void;
+  getLoggingLevel(): ConfigChange.LoggingLevel | undefined;
+  setLoggingLevel(value?: ConfigChange.LoggingLevel): void;
+
   getConfigCase(): ConfigChange.ConfigCase;
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ConfigChange.AsObject;
@@ -283,6 +294,8 @@ export namespace ConfigChange {
     connections?: ConfigChange.Connections.AsObject,
     reboot?: ConfigChange.Reboot.AsObject,
     factoryReset?: ConfigChange.FactoryReset.AsObject,
+    eventQueueThreshold?: ConfigChange.EventQueueThreshold.AsObject,
+    loggingLevel?: ConfigChange.LoggingLevel.AsObject,
   }
 
   export class SDK extends jspb.Message {
@@ -443,6 +456,46 @@ export namespace ConfigChange {
     }
   }
 
+  export class EventQueueThreshold extends jspb.Message {
+    getThreshold(): number;
+    setThreshold(value: number): void;
+
+    serializeBinary(): Uint8Array;
+    toObject(includeInstance?: boolean): EventQueueThreshold.AsObject;
+    static toObject(includeInstance: boolean, msg: EventQueueThreshold): EventQueueThreshold.AsObject;
+    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+    static serializeBinaryToWriter(message: EventQueueThreshold, writer: jspb.BinaryWriter): void;
+    static deserializeBinary(bytes: Uint8Array): EventQueueThreshold;
+    static deserializeBinaryFromReader(message: EventQueueThreshold, reader: jspb.BinaryReader): EventQueueThreshold;
+  }
+
+  export namespace EventQueueThreshold {
+    export type AsObject = {
+      threshold: number,
+    }
+  }
+
+  export class LoggingLevel extends jspb.Message {
+    getLevel(): toit_model_data_pb.LogData.LevelMap[keyof toit_model_data_pb.LogData.LevelMap];
+    setLevel(value: toit_model_data_pb.LogData.LevelMap[keyof toit_model_data_pb.LogData.LevelMap]): void;
+
+    serializeBinary(): Uint8Array;
+    toObject(includeInstance?: boolean): LoggingLevel.AsObject;
+    static toObject(includeInstance: boolean, msg: LoggingLevel): LoggingLevel.AsObject;
+    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+    static serializeBinaryToWriter(message: LoggingLevel, writer: jspb.BinaryWriter): void;
+    static deserializeBinary(bytes: Uint8Array): LoggingLevel;
+    static deserializeBinaryFromReader(message: LoggingLevel, reader: jspb.BinaryReader): LoggingLevel;
+  }
+
+  export namespace LoggingLevel {
+    export type AsObject = {
+      level: toit_model_data_pb.LogData.LevelMap[keyof toit_model_data_pb.LogData.LevelMap],
+    }
+  }
+
   export enum ConfigCase {
     CONFIG_NOT_SET = 0,
     SDK = 1,
@@ -453,6 +506,8 @@ export namespace ConfigChange {
     CONNECTIONS = 6,
     REBOOT = 9,
     FACTORY_RESET = 10,
+    EVENT_QUEUE_THRESHOLD = 11,
+    LOGGING_LEVEL = 12,
   }
 }
 

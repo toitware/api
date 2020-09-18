@@ -118,8 +118,8 @@ export class DeviceConnectionSettings extends jspb.Message {
   setConnectionsList(value: Array<ConnectionSetting>): void;
   addConnections(value?: ConnectionSetting, index?: number): ConnectionSetting;
 
-  getQueueThreshold(): number;
-  setQueueThreshold(value: number): void;
+  getEventQueueThreshold(): number;
+  setEventQueueThreshold(value: number): void;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeviceConnectionSettings.AsObject;
@@ -135,7 +135,7 @@ export namespace DeviceConnectionSettings {
   export type AsObject = {
     maxOffline?: google_protobuf_duration_pb.Duration.AsObject,
     connectionsList: Array<ConnectionSetting.AsObject>,
-    queueThreshold: number,
+    eventQueueThreshold: number,
   }
 }
 

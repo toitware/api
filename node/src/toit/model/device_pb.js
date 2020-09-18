@@ -1435,7 +1435,7 @@ proto.toit.model.DeviceConnectionSettings.toObject = function(includeInstance, m
     maxOffline: (f = msg.getMaxOffline()) && google_protobuf_duration_pb.Duration.toObject(includeInstance, f),
     connectionsList: jspb.Message.toObjectList(msg.getConnectionsList(),
     proto.toit.model.ConnectionSetting.toObject, includeInstance),
-    queueThreshold: jspb.Message.getFieldWithDefault(msg, 3, 0)
+    eventQueueThreshold: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
 
   if (includeInstance) {
@@ -1484,7 +1484,7 @@ proto.toit.model.DeviceConnectionSettings.deserializeBinaryFromReader = function
       break;
     case 3:
       var value = /** @type {number} */ (reader.readUint32());
-      msg.setQueueThreshold(value);
+      msg.setEventQueueThreshold(value);
       break;
     default:
       reader.skipField();
@@ -1531,7 +1531,7 @@ proto.toit.model.DeviceConnectionSettings.serializeBinaryToWriter = function(mes
       proto.toit.model.ConnectionSetting.serializeBinaryToWriter
     );
   }
-  f = message.getQueueThreshold();
+  f = message.getEventQueueThreshold();
   if (f !== 0) {
     writer.writeUint32(
       3,
@@ -1617,10 +1617,10 @@ proto.toit.model.DeviceConnectionSettings.prototype.clearConnectionsList = funct
 
 
 /**
- * optional uint32 queue_threshold = 3;
+ * optional uint32 event_queue_threshold = 3;
  * @return {number}
  */
-proto.toit.model.DeviceConnectionSettings.prototype.getQueueThreshold = function() {
+proto.toit.model.DeviceConnectionSettings.prototype.getEventQueueThreshold = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
@@ -1629,7 +1629,7 @@ proto.toit.model.DeviceConnectionSettings.prototype.getQueueThreshold = function
  * @param {number} value
  * @return {!proto.toit.model.DeviceConnectionSettings} returns this
  */
-proto.toit.model.DeviceConnectionSettings.prototype.setQueueThreshold = function(value) {
+proto.toit.model.DeviceConnectionSettings.prototype.setEventQueueThreshold = function(value) {
   return jspb.Message.setProto3IntField(this, 3, value);
 };
 
