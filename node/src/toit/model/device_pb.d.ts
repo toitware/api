@@ -5,6 +5,7 @@ import * as jspb from "google-protobuf";
 import * as google_protobuf_timestamp_pb from "google-protobuf/google/protobuf/timestamp_pb";
 import * as google_protobuf_duration_pb from "google-protobuf/google/protobuf/duration_pb";
 import * as google_protobuf_empty_pb from "google-protobuf/google/protobuf/empty_pb";
+import * as toit_model_data_pb from "../../toit/model/data_pb";
 
 export class DeviceConfig extends jspb.Message {
   getName(): string;
@@ -36,6 +37,11 @@ export class DeviceConfig extends jspb.Message {
   getFactoryAfter(): google_protobuf_timestamp_pb.Timestamp | undefined;
   setFactoryAfter(value?: google_protobuf_timestamp_pb.Timestamp): void;
 
+  hasRuntime(): boolean;
+  clearRuntime(): void;
+  getRuntime(): DeviceRuntimeSettings | undefined;
+  setRuntime(value?: DeviceRuntimeSettings): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeviceConfig.AsObject;
   static toObject(includeInstance: boolean, msg: DeviceConfig): DeviceConfig.AsObject;
@@ -55,6 +61,49 @@ export namespace DeviceConfig {
     connection?: DeviceConnectionSettings.AsObject,
     model: string,
     factoryAfter?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+    runtime?: DeviceRuntimeSettings.AsObject,
+  }
+}
+
+export class DeviceRuntimeSettings extends jspb.Message {
+  hasLogging(): boolean;
+  clearLogging(): void;
+  getLogging(): LoggingSettings | undefined;
+  setLogging(value?: LoggingSettings): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): DeviceRuntimeSettings.AsObject;
+  static toObject(includeInstance: boolean, msg: DeviceRuntimeSettings): DeviceRuntimeSettings.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: DeviceRuntimeSettings, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): DeviceRuntimeSettings;
+  static deserializeBinaryFromReader(message: DeviceRuntimeSettings, reader: jspb.BinaryReader): DeviceRuntimeSettings;
+}
+
+export namespace DeviceRuntimeSettings {
+  export type AsObject = {
+    logging?: LoggingSettings.AsObject,
+  }
+}
+
+export class LoggingSettings extends jspb.Message {
+  getLevel(): toit_model_data_pb.LogData.LevelMap[keyof toit_model_data_pb.LogData.LevelMap];
+  setLevel(value: toit_model_data_pb.LogData.LevelMap[keyof toit_model_data_pb.LogData.LevelMap]): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): LoggingSettings.AsObject;
+  static toObject(includeInstance: boolean, msg: LoggingSettings): LoggingSettings.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: LoggingSettings, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): LoggingSettings;
+  static deserializeBinaryFromReader(message: LoggingSettings, reader: jspb.BinaryReader): LoggingSettings;
+}
+
+export namespace LoggingSettings {
+  export type AsObject = {
+    level: toit_model_data_pb.LogData.LevelMap[keyof toit_model_data_pb.LogData.LevelMap],
   }
 }
 
@@ -68,6 +117,9 @@ export class DeviceConnectionSettings extends jspb.Message {
   getConnectionsList(): Array<ConnectionSetting>;
   setConnectionsList(value: Array<ConnectionSetting>): void;
   addConnections(value?: ConnectionSetting, index?: number): ConnectionSetting;
+
+  getEventQueueThreshold(): number;
+  setEventQueueThreshold(value: number): void;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeviceConnectionSettings.AsObject;
@@ -83,6 +135,7 @@ export namespace DeviceConnectionSettings {
   export type AsObject = {
     maxOffline?: google_protobuf_duration_pb.Duration.AsObject,
     connectionsList: Array<ConnectionSetting.AsObject>,
+    eventQueueThreshold: number,
   }
 }
 

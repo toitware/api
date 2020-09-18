@@ -7,6 +7,7 @@ var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/time
 var google_protobuf_duration_pb = require('google-protobuf/google/protobuf/duration_pb.js');
 var toit_model_job_pb = require('../../toit/model/job_pb.js');
 var toit_model_device_pb = require('../../toit/model/device_pb.js');
+var toit_model_data_pb = require('../../toit/model/data_pb.js');
 
 function serialize_toit_api_ConfigureDeviceRequest(arg) {
   if (!(arg instanceof toit_api_device_pb.ConfigureDeviceRequest)) {

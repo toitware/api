@@ -6,6 +6,7 @@ import "google/protobuf/timestamp.proto";
 import "google/protobuf/duration.proto";
 import "toit/model/job.proto";
 import "toit/model/device.proto";
+import "toit/model/data.proto";
 
 option go_package = "github.com/toitware/api.git/toit/api";
 option java_package = "io.toit.proto.toit.api";
@@ -27,16 +28,16 @@ message Device {
   bytes id = 1;
   bytes hardware_id = 5;
   string hardware_fqdn = 6;
-  model.DeviceConfig config = 7;
-  model.DeviceStatus status = 8;
+  toit.model.DeviceConfig config = 7;
+  toit.model.DeviceStatus status = 8;
   bool is_simulator = 9;
-  model.DeviceAction next_action = 10;
+  toit.model.DeviceAction next_action = 10;
 }
 
 message Job {
   bytes id = 1;
-  model.JobConfig config = 2;
-  model.JobStatus status = 3;
+  toit.model.JobConfig config = 2;
+  toit.model.JobStatus status = 3;
 }
 
 message DeviceLog {
@@ -121,15 +122,19 @@ message ConfigChange {
 
   message SDKModel { string model = 1; }
 
-  message Broker { model.DeviceBrokerSettings broker_settings = 1; }
+  message Broker { toit.model.DeviceBrokerSettings broker_settings = 1; }
 
   message MaxOffline { google.protobuf.Duration max_offline = 1; }
 
-  message Connections { repeated model.ConnectionSetting connections = 1; }
+  message Connections { repeated toit.model.ConnectionSetting connections = 1; }
 
   message Reboot {}
 
   message FactoryReset {}
+
+  message EventQueueThreshold { uint32 threshold = 1; }
+
+  message LoggingLevel { toit.model.LogData.Level level = 1; }
 
   oneof config {
     SDK sdk = 1;
@@ -140,6 +145,8 @@ message ConfigChange {
     Connections connections = 6;
     Reboot reboot = 9;
     FactoryReset factory_reset = 10;
+    EventQueueThreshold event_queue_threshold = 11;
+    LoggingLevel logging_level = 12;
   }
 }
 
@@ -147,7 +154,7 @@ message ConfigureDeviceRequest {
   bytes device_id = 1;
   string name = 2 [ deprecated = true ];
   string sdk = 3 [ deprecated = true ];
-  model.DeviceBrokerSettings broker_settings = 4 [ deprecated = true ];
+  toit.model.DeviceBrokerSettings broker_settings = 4 [ deprecated = true ];
   google.protobuf.Duration max_offline = 5 [ deprecated = true ];
   string model = 6 [ deprecated = true ];
   ConnectionSettings connection_settings = 7 [ deprecated = true ];
@@ -156,7 +163,7 @@ message ConfigureDeviceRequest {
 
 message ConfigureDeviceResponse {}
 
-message ConnectionSettings { repeated model.ConnectionSetting connections = 1; }
+message ConnectionSettings { repeated toit.model.ConnectionSetting connections = 1; }
 
 message LookupDevicesRequest { string device_name = 1; }
 
@@ -191,8 +198,8 @@ message ListJobsRequest {
 
 message ListJobsFilter {
   bytes device_id = 1;
-  repeated model.JobState states = 2;
-  repeated model.JobGoalState goalstates = 3;
+  repeated toit.model.JobState states = 2;
+  repeated toit.model.JobGoalState goalstates = 3;
   bytes job_id = 4;
 }
 
@@ -204,7 +211,7 @@ message ListJobsResponse {
 message InstallJobRequest {
   bytes device_id = 1;
 
-  model.JobConfig config = 2;
+  toit.model.JobConfig config = 2;
 }
 
 message InstallJobResponse { bytes job_id = 1; }
@@ -213,7 +220,7 @@ message ConfigureJobRequest {
   bytes device_id = 1;
   bytes job_id = 2;
 
-  model.JobGoalState goal_state = 3;
+  toit.model.JobGoalState goal_state = 3;
 }
 
 message ConfigureJobResponse {}
@@ -252,7 +259,7 @@ message ReadDeviceEventsRequest {
   bool reverse = 5;
 }
 
-message ReadDeviceEventsResponse { repeated model.DeviceEvent events = 1; }
+message ReadDeviceEventsResponse { repeated toit.model.DeviceEvent events = 1; }
 
 message GetDevicePartitionsRequest {
   enum Mode {
@@ -265,7 +272,7 @@ message GetDevicePartitionsRequest {
   string sdk_name = 1;
   Mode mode = 2;
   map<string, string> properties = 3;
-  model.HardwareIdentity hardware_identity = 4;
+  toit.model.HardwareIdentity hardware_identity = 4;
   string model = 5;
   bytes qrcode = 6;
 }
@@ -288,7 +295,7 @@ message WatchDeviceChangesRequest {
 }
 
 message WatchDeviceChangesResponse {
-  model.DeviceChangeType type = 1;
+  toit.model.DeviceChangeType type = 1;
   bytes device_id = 2;
   int64 watch_revision = 3;
   google.protobuf.Timestamp last_connected = 4;
@@ -303,7 +310,7 @@ message WatchJobChangesRequest {
 }
 
 message WatchJobChangesResponse {
-  model.JobChangeType type = 1;
+  toit.model.JobChangeType type = 1;
   bytes job_id = 2;
   int64 watch_revision = 3;
   bytes device_id = 4;
@@ -316,7 +323,7 @@ message WatchSessionChangesRequest {
 }
 
 message WatchSessionChangesResponse {
-  model.DeviceSessionChangeType type = 1;
+  toit.model.DeviceSessionChangeType type = 1;
   bytes device_id = 2;
   int64 watch_revision = 3;
   // Will be set if the type is DeviceSessionChangeTypeConnected
