@@ -2,7 +2,6 @@
 // file: toit/api/app.proto
 
 import * as jspb from "google-protobuf";
-import * as google_protobuf_timestamp_pb from "google-protobuf/google/protobuf/timestamp_pb";
 import * as toit_model_app_pb from "../../toit/model/app_pb";
 
 export class CreateAppRequest extends jspb.Message {

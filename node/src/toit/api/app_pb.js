@@ -12,8 +12,6 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
-var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
-goog.object.extend(proto, google_protobuf_timestamp_pb);
 var toit_model_app_pb = require('../../toit/model/app_pb.js');
 goog.object.extend(proto, toit_model_app_pb);
 goog.exportSymbol('proto.toit.api.CreateAppRequest', null, global);

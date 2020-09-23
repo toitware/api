@@ -14,8 +14,6 @@ var global = Function('return this')();
 
 var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
 goog.object.extend(proto, google_protobuf_timestamp_pb);
-var google_protobuf_duration_pb = require('google-protobuf/google/protobuf/duration_pb.js');
-goog.object.extend(proto, google_protobuf_duration_pb);
 var toit_model_pubsub_topic_pb = require('../../toit/model/pubsub/topic_pb.js');
 goog.object.extend(proto, toit_model_pubsub_topic_pb);
 var toit_model_job_pb = require('../../toit/model/job_pb.js');
