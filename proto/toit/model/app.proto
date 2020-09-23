@@ -3,7 +3,6 @@ syntax = "proto3";
 package toit.model;
 
 import "google/protobuf/timestamp.proto";
-import "google/protobuf/duration.proto";
 import "toit/model/pubsub/topic.proto";
 import "toit/model/job.proto";
 

@@ -2,7 +2,6 @@ syntax = "proto3";
 
 package toit.api;
 
-import "google/protobuf/timestamp.proto";
 import "toit/model/app.proto";
 
 option go_package = "github.com/toitware/api.git/toit/api";

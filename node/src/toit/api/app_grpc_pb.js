@@ -3,7 +3,6 @@
 'use strict';
 var grpc = require('grpc');
 var toit_api_app_pb = require('../../toit/api/app_pb.js');
-var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
 var toit_model_app_pb = require('../../toit/model/app_pb.js');
 
 function serialize_toit_api_CreateAppRequest(arg) {
