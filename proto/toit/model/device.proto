@@ -109,7 +109,7 @@ message DeviceHealth {
   message Connectivity {
     google.protobuf.Timestamp lastSeen = 1;
     bool connected = 2;
-    int64 max_offline = 3;
+    google.protobuf.Duration max_offline = 3;
     int64 checkins = 4;
   }
 }
