@@ -87,6 +87,7 @@ message DeviceBootStatus {
 message DeviceHealth {
   Power power = 1;
   BatteryCurve battery_curve = 2;
+  Connectivity connectivity = 3;
 
   message Power {
     Value value = 1;
@@ -103,6 +104,13 @@ message DeviceHealth {
   message BatteryCurve {
     double slope = 1;
     google.protobuf.Timestamp last_updated = 2;
+  }
+
+  message Connectivity {
+    google.protobuf.Timestamp lastSeen = 1;
+    bool connected = 2;
+    int64 max_offline = 3;
+    int64 checkins = 4;
   }
 }
 
