@@ -125,17 +125,9 @@ message DeviceHealth {
 
   message Connectivity {
     google.protobuf.Timestamp last_seen = 1;
-    Connected connected = 2;
+    bool connected = 2;
     google.protobuf.Duration max_offline = 3;
-    Checkins checkins = 4;
-
-    message Connected {
-      bool connected = 1;
-    }
-
-    message Checkins {
-      int64 checkins = 1;
-    }
+    int64 checkins = 4;
   }
 }
 
