@@ -126,7 +126,7 @@ message DeviceHealth {
   message Connectivity {
     google.protobuf.Timestamp last_seen = 1;
     bool connected = 2;
-    repeated bool checkins = 3;
+    string checkins = 3;
   }
 }
 
