@@ -204,6 +204,7 @@ message ListJobsFilter {
   repeated toit.model.JobState states = 2;
   repeated toit.model.JobGoalState goalstates = 3;
   bytes job_id = 4;
+  string job_name = 5;
 }
 
 message ListJobsResponse {
