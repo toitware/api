@@ -20,6 +20,7 @@ message DeviceConfig {
   string model = 6;
   google.protobuf.Timestamp factory_after = 7;
   DeviceRuntimeSettings runtime = 8;
+  google.protobuf.Timestamp modules_sync = 9;
 }
 
 message DeviceRuntimeSettings {
@@ -88,6 +89,21 @@ message DeviceStatus {
   DeviceBootStatus boot = 10;
   DeviceHealth health = 11;
   DeviceConnectionStatus connection = 12;
+  DeviceModulesStatus modules = 13;
+}
+
+message DeviceModulesStatus {
+  google.protobuf.Timestamp last_updated = 1;
+  DeviceModules modules = 2;
+}
+
+message DeviceModules {
+  DeviceModule cellular = 1;
+}
+
+message DeviceModule {
+  string model = 1;
+  string version = 2;
 }
 
 message DeviceConnectionStatus {

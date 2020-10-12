@@ -103,6 +103,8 @@ service DeviceService {
   rpc GetCurrentTime(GetCurrentTimeRequest) returns (GetCurrentTimeResponse) {}
 
   rpc UnclaimDevice(UnclaimDeviceRequest) returns (UnclaimDeviceResponse) {}
+
+  rpc DeviceModulesStatus(DeviceModulesStatusRequest) returns (DeviceModulesStatusResponse) {}
 }
 
 message GetDeviceRequest {
@@ -340,3 +342,9 @@ message GetCurrentTimeResponse { google.protobuf.Timestamp current_time = 1; }
 message UnclaimDeviceRequest { bytes device_id = 1; }
 
 message UnclaimDeviceResponse {}
+
+message DeviceModulesStatusRequest {}
+
+message DeviceModulesStatusResponse {
+  DeviceModules modules = 1;
+}
