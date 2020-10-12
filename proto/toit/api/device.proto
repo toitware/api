@@ -346,5 +346,5 @@ message UnclaimDeviceResponse {}
 message DeviceModulesStatusRequest {}
 
 message DeviceModulesStatusResponse {
-  DeviceModules modules = 1;
+  toit.model.DeviceModules modules = 1;
 }
