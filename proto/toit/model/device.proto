@@ -20,7 +20,12 @@ message DeviceConfig {
   string model = 6;
   google.protobuf.Timestamp factory_after = 7;
   DeviceRuntimeSettings runtime = 8;
-  google.protobuf.Timestamp modules_sync = 9;
+  DeviceModulesConfig modules = 9;
+}
+
+message DeviceModulesConfig {
+  google.protobuf.Timestamp sync_requested = 1;
+  DeviceModules modules = 2;
 }
 
 message DeviceRuntimeSettings {
@@ -280,4 +285,5 @@ enum DeviceAction {
   DEVICE_ACTION_RECONCILE = 9;
   DEVICE_ACTION_UPDATE_PARTIAL_FIRMWARE = 10;
   DEVICE_ACTION_REPORT_MODULES = 11;
+  DEVICE_ACTION_UPDATE_MODULE_CELLULAR = 12;
 }
