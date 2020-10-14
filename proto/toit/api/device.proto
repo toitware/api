@@ -138,6 +138,8 @@ message ConfigChange {
 
   message MetricsLevel { toit.model.MetricsData.Level level = 1; }
 
+  message ReportModules {}
+
   oneof config {
     SDK sdk = 1;
     Name name = 2;
@@ -150,6 +152,7 @@ message ConfigChange {
     EventQueueThreshold event_queue_threshold = 11;
     LoggingLevel logging_level = 12;
     MetricsLevel metrics_level = 13;
+    ReportModules report_modules = 14;
   }
 }
 
