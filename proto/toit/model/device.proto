@@ -287,3 +287,8 @@ enum DeviceAction {
   DEVICE_ACTION_REPORT_MODULES = 11;
   DEVICE_ACTION_UPDATE_MODULE_CELLULAR = 12;
 }
+
+enum DeviceModuleType {
+  Unknown = 0;
+  Cellular = 1;
+}
