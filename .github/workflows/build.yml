@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ ci-test ]
+    branches: [ ci-testing ]
 
 jobs:
   # This workflow contains a single job called "build"
