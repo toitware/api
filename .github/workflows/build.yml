@@ -10,8 +10,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-        env:
-          node-directory: ./node
       
       - name: Setup protoc
         uses: arduino/setup-protoc@v1.1.0
@@ -20,12 +18,14 @@ jobs:
         run: echo Hello, world!
       
       - name: yarn install
-        run: yarn install
-        working-directory: ${{node-directory}}
+        run: |
+          cd node
+          yarn install
         
       - name: Run protoc
-        run: make protobuf
-        working-directory: ${{node-directory}}
+        run: |
+          cd node
+          make protobuf
   
       - name: Add & Commit
         uses: EndBug/add-and-commit@v5.1.0
