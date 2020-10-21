@@ -16,9 +16,15 @@ jobs:
 
       - name: Run a one-line script
         run: echo Hello, world!
+      
+      - name: Run protoc
+        run: |
+          cd node
+          make protobuf
   
       - name: Add & Commit
         uses: EndBug/add-and-commit@v5.1.0
         with:
           message: ci commit
+          branch: ci-testing
 
