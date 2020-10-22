@@ -5,28 +5,45 @@ on:
     branches: [ ci-testing ]
 
 jobs:
-  build:
+  setup:
     runs-on: ubuntu-latest
-
+    
     steps:
       - uses: actions/checkout@v2
       
       - name: Setup protoc
         uses: arduino/setup-protoc@v1.1.0
+        
+  node:
+    needs: setup
+    runs-on: ubuntu-latest
 
-      - name: Run a one-line script
-        run: echo Hello, world!
-      
+    steps:      
+
       - name: yarn install
         run: |
           cd node
           yarn install
         
-      - name: Run protoc
+      - name: Build protobuf
         run: |
           cd node
           make protobuf
   
+  python:
+    needs: setup
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: pip install
+        run: |
+          cd python
+          pip -r requirements.txt
+          
+  commit:
+    needs: [setup, node]
+    runs-on: ubuntu-latest
+    steps:
       - name: Add & Commit
         uses: EndBug/add-and-commit@v5.1.0
         with:
