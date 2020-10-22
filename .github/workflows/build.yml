@@ -29,16 +29,6 @@ jobs:
         run: |
           cd node
           make protobuf
-  
-  python:
-    needs: setup
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: pip install
-        run: |
-          cd python
-          pip -r requirements.txt
           
   commit:
     needs: [setup, node]
