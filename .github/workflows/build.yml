@@ -29,3 +29,5 @@ jobs:
         with:
           message: ci commit
           branch: master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
