@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ ci-testing ]
+    branches: [ ci-testing, master ]
 
 jobs:
         
