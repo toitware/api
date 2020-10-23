@@ -28,4 +28,4 @@ jobs:
         uses: EndBug/add-and-commit@v5.1.0
         with:
           message: ci commit
-          branch: ci-testing
+          branch: master
