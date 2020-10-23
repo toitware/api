@@ -42,6 +42,11 @@ export class DeviceConfig extends jspb.Message {
   getRuntime(): DeviceRuntimeSettings | undefined;
   setRuntime(value?: DeviceRuntimeSettings): void;
 
+  hasModules(): boolean;
+  clearModules(): void;
+  getModules(): DeviceModulesConfig | undefined;
+  setModules(value?: DeviceModulesConfig): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeviceConfig.AsObject;
   static toObject(includeInstance: boolean, msg: DeviceConfig): DeviceConfig.AsObject;
@@ -62,6 +67,35 @@ export namespace DeviceConfig {
     model: string,
     factoryAfter?: google_protobuf_timestamp_pb.Timestamp.AsObject,
     runtime?: DeviceRuntimeSettings.AsObject,
+    modules?: DeviceModulesConfig.AsObject,
+  }
+}
+
+export class DeviceModulesConfig extends jspb.Message {
+  hasSyncRequested(): boolean;
+  clearSyncRequested(): void;
+  getSyncRequested(): google_protobuf_timestamp_pb.Timestamp | undefined;
+  setSyncRequested(value?: google_protobuf_timestamp_pb.Timestamp): void;
+
+  hasModules(): boolean;
+  clearModules(): void;
+  getModules(): DeviceModules | undefined;
+  setModules(value?: DeviceModules): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): DeviceModulesConfig.AsObject;
+  static toObject(includeInstance: boolean, msg: DeviceModulesConfig): DeviceModulesConfig.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: DeviceModulesConfig, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): DeviceModulesConfig;
+  static deserializeBinaryFromReader(message: DeviceModulesConfig, reader: jspb.BinaryReader): DeviceModulesConfig;
+}
+
+export namespace DeviceModulesConfig {
+  export type AsObject = {
+    syncRequested?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+    modules?: DeviceModules.AsObject,
   }
 }
 
@@ -332,6 +366,11 @@ export class DeviceStatus extends jspb.Message {
   getConnection(): DeviceConnectionStatus | undefined;
   setConnection(value?: DeviceConnectionStatus): void;
 
+  hasModules(): boolean;
+  clearModules(): void;
+  getModules(): DeviceModulesStatus | undefined;
+  setModules(value?: DeviceModulesStatus): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeviceStatus.AsObject;
   static toObject(includeInstance: boolean, msg: DeviceStatus): DeviceStatus.AsObject;
@@ -356,6 +395,81 @@ export namespace DeviceStatus {
     boot?: DeviceBootStatus.AsObject,
     health?: DeviceHealth.AsObject,
     connection?: DeviceConnectionStatus.AsObject,
+    modules?: DeviceModulesStatus.AsObject,
+  }
+}
+
+export class DeviceModulesStatus extends jspb.Message {
+  hasLastUpdated(): boolean;
+  clearLastUpdated(): void;
+  getLastUpdated(): google_protobuf_timestamp_pb.Timestamp | undefined;
+  setLastUpdated(value?: google_protobuf_timestamp_pb.Timestamp): void;
+
+  hasModules(): boolean;
+  clearModules(): void;
+  getModules(): DeviceModules | undefined;
+  setModules(value?: DeviceModules): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): DeviceModulesStatus.AsObject;
+  static toObject(includeInstance: boolean, msg: DeviceModulesStatus): DeviceModulesStatus.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: DeviceModulesStatus, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): DeviceModulesStatus;
+  static deserializeBinaryFromReader(message: DeviceModulesStatus, reader: jspb.BinaryReader): DeviceModulesStatus;
+}
+
+export namespace DeviceModulesStatus {
+  export type AsObject = {
+    lastUpdated?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+    modules?: DeviceModules.AsObject,
+  }
+}
+
+export class DeviceModules extends jspb.Message {
+  hasCellular(): boolean;
+  clearCellular(): void;
+  getCellular(): DeviceModule | undefined;
+  setCellular(value?: DeviceModule): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): DeviceModules.AsObject;
+  static toObject(includeInstance: boolean, msg: DeviceModules): DeviceModules.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: DeviceModules, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): DeviceModules;
+  static deserializeBinaryFromReader(message: DeviceModules, reader: jspb.BinaryReader): DeviceModules;
+}
+
+export namespace DeviceModules {
+  export type AsObject = {
+    cellular?: DeviceModule.AsObject,
+  }
+}
+
+export class DeviceModule extends jspb.Message {
+  getModel(): string;
+  setModel(value: string): void;
+
+  getVersion(): string;
+  setVersion(value: string): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): DeviceModule.AsObject;
+  static toObject(includeInstance: boolean, msg: DeviceModule): DeviceModule.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: DeviceModule, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): DeviceModule;
+  static deserializeBinaryFromReader(message: DeviceModule, reader: jspb.BinaryReader): DeviceModule;
+}
+
+export namespace DeviceModule {
+  export type AsObject = {
+    model: string,
+    version: string,
   }
 }
 
@@ -426,6 +540,11 @@ export class DeviceHealth extends jspb.Message {
   getBatteryCurve(): DeviceHealth.BatteryCurve | undefined;
   setBatteryCurve(value?: DeviceHealth.BatteryCurve): void;
 
+  hasConnectivity(): boolean;
+  clearConnectivity(): void;
+  getConnectivity(): DeviceHealth.Connectivity | undefined;
+  setConnectivity(value?: DeviceHealth.Connectivity): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeviceHealth.AsObject;
   static toObject(includeInstance: boolean, msg: DeviceHealth): DeviceHealth.AsObject;
@@ -440,6 +559,7 @@ export namespace DeviceHealth {
   export type AsObject = {
     power?: DeviceHealth.Power.AsObject,
     batteryCurve?: DeviceHealth.BatteryCurve.AsObject,
+    connectivity?: DeviceHealth.Connectivity.AsObject,
   }
 
   export class Power extends jspb.Message {
@@ -528,6 +648,58 @@ export namespace DeviceHealth {
     export type AsObject = {
       slope: number,
       lastUpdated?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+    }
+  }
+
+  export class Connectivity extends jspb.Message {
+    hasLastSeen(): boolean;
+    clearLastSeen(): void;
+    getLastSeen(): google_protobuf_timestamp_pb.Timestamp | undefined;
+    setLastSeen(value?: google_protobuf_timestamp_pb.Timestamp): void;
+
+    getConnected(): boolean;
+    setConnected(value: boolean): void;
+
+    clearCheckinsList(): void;
+    getCheckinsList(): Array<DeviceHealth.Connectivity.Checkin>;
+    setCheckinsList(value: Array<DeviceHealth.Connectivity.Checkin>): void;
+    addCheckins(value?: DeviceHealth.Connectivity.Checkin, index?: number): DeviceHealth.Connectivity.Checkin;
+
+    serializeBinary(): Uint8Array;
+    toObject(includeInstance?: boolean): Connectivity.AsObject;
+    static toObject(includeInstance: boolean, msg: Connectivity): Connectivity.AsObject;
+    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+    static serializeBinaryToWriter(message: Connectivity, writer: jspb.BinaryWriter): void;
+    static deserializeBinary(bytes: Uint8Array): Connectivity;
+    static deserializeBinaryFromReader(message: Connectivity, reader: jspb.BinaryReader): Connectivity;
+  }
+
+  export namespace Connectivity {
+    export type AsObject = {
+      lastSeen?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+      connected: boolean,
+      checkinsList: Array<DeviceHealth.Connectivity.Checkin.AsObject>,
+    }
+
+    export class Checkin extends jspb.Message {
+      getMissed(): boolean;
+      setMissed(value: boolean): void;
+
+      serializeBinary(): Uint8Array;
+      toObject(includeInstance?: boolean): Checkin.AsObject;
+      static toObject(includeInstance: boolean, msg: Checkin): Checkin.AsObject;
+      static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+      static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+      static serializeBinaryToWriter(message: Checkin, writer: jspb.BinaryWriter): void;
+      static deserializeBinary(bytes: Uint8Array): Checkin;
+      static deserializeBinaryFromReader(message: Checkin, reader: jspb.BinaryReader): Checkin;
+    }
+
+    export namespace Checkin {
+      export type AsObject = {
+        missed: boolean,
+      }
     }
   }
 }
@@ -1049,7 +1221,16 @@ export interface DeviceActionMap {
   DEVICE_ACTION_FACTORY_RESET: 8;
   DEVICE_ACTION_RECONCILE: 9;
   DEVICE_ACTION_UPDATE_PARTIAL_FIRMWARE: 10;
+  DEVICE_ACTION_REPORT_MODULES: 11;
+  DEVICE_ACTION_UPDATE_MODULE_CELLULAR: 12;
 }
 
 export const DeviceAction: DeviceActionMap;
+
+export interface DeviceModuleTypeMap {
+  UNKNOWN: 0;
+  CELLULAR: 1;
+}
+
+export const DeviceModuleType: DeviceModuleTypeMap;
 

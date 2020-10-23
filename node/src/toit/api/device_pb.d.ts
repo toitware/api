@@ -278,6 +278,16 @@ export class ConfigChange extends jspb.Message {
   getMetricsLevel(): ConfigChange.MetricsLevel | undefined;
   setMetricsLevel(value?: ConfigChange.MetricsLevel): void;
 
+  hasReportModules(): boolean;
+  clearReportModules(): void;
+  getReportModules(): ConfigChange.ReportModules | undefined;
+  setReportModules(value?: ConfigChange.ReportModules): void;
+
+  hasUpdateModule(): boolean;
+  clearUpdateModule(): void;
+  getUpdateModule(): ConfigChange.UpdateModule | undefined;
+  setUpdateModule(value?: ConfigChange.UpdateModule): void;
+
   getConfigCase(): ConfigChange.ConfigCase;
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ConfigChange.AsObject;
@@ -302,6 +312,8 @@ export namespace ConfigChange {
     eventQueueThreshold?: ConfigChange.EventQueueThreshold.AsObject,
     loggingLevel?: ConfigChange.LoggingLevel.AsObject,
     metricsLevel?: ConfigChange.MetricsLevel.AsObject,
+    reportModules?: ConfigChange.ReportModules.AsObject,
+    updateModule?: ConfigChange.UpdateModule.AsObject,
   }
 
   export class SDK extends jspb.Message {
@@ -522,6 +534,50 @@ export namespace ConfigChange {
     }
   }
 
+  export class ReportModules extends jspb.Message {
+    serializeBinary(): Uint8Array;
+    toObject(includeInstance?: boolean): ReportModules.AsObject;
+    static toObject(includeInstance: boolean, msg: ReportModules): ReportModules.AsObject;
+    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+    static serializeBinaryToWriter(message: ReportModules, writer: jspb.BinaryWriter): void;
+    static deserializeBinary(bytes: Uint8Array): ReportModules;
+    static deserializeBinaryFromReader(message: ReportModules, reader: jspb.BinaryReader): ReportModules;
+  }
+
+  export namespace ReportModules {
+    export type AsObject = {
+    }
+  }
+
+  export class UpdateModule extends jspb.Message {
+    getType(): toit_model_device_pb.DeviceModuleTypeMap[keyof toit_model_device_pb.DeviceModuleTypeMap];
+    setType(value: toit_model_device_pb.DeviceModuleTypeMap[keyof toit_model_device_pb.DeviceModuleTypeMap]): void;
+
+    getModel(): string;
+    setModel(value: string): void;
+
+    getVersion(): string;
+    setVersion(value: string): void;
+
+    serializeBinary(): Uint8Array;
+    toObject(includeInstance?: boolean): UpdateModule.AsObject;
+    static toObject(includeInstance: boolean, msg: UpdateModule): UpdateModule.AsObject;
+    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+    static serializeBinaryToWriter(message: UpdateModule, writer: jspb.BinaryWriter): void;
+    static deserializeBinary(bytes: Uint8Array): UpdateModule;
+    static deserializeBinaryFromReader(message: UpdateModule, reader: jspb.BinaryReader): UpdateModule;
+  }
+
+  export namespace UpdateModule {
+    export type AsObject = {
+      type: toit_model_device_pb.DeviceModuleTypeMap[keyof toit_model_device_pb.DeviceModuleTypeMap],
+      model: string,
+      version: string,
+    }
+  }
+
   export enum ConfigCase {
     CONFIG_NOT_SET = 0,
     SDK = 1,
@@ -535,6 +591,8 @@ export namespace ConfigChange {
     EVENT_QUEUE_THRESHOLD = 11,
     LOGGING_LEVEL = 12,
     METRICS_LEVEL = 13,
+    REPORT_MODULES = 14,
+    UPDATE_MODULE = 15,
   }
 }
 
