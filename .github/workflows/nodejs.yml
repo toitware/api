@@ -1,29 +1,29 @@
-name: CI
+name: NodeJS
 
 on:
   push:
-    branches: [ ci-testing, master ]
+    branches: [ ci-nodejs, master ]
 
 jobs:
-        
+
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout      
+      - name: Checkout
         uses: actions/checkout@v2
-        
+
       - name: Setup protoc
         uses: arduino/setup-protoc@v1.1.0
-        
+
       - name: Yarn install
         working-directory: ./node
         run: yarn install
-        
+
       - name: Build protobuf
         working-directory: ./node
         run: make protobuf
-          
+
       - name: Add & Commit
         uses: EndBug/add-and-commit@v5.1.0
         with:
