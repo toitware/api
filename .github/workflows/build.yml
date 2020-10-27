@@ -15,15 +15,29 @@ jobs:
         
       - name: Setup protoc
         uses: arduino/setup-protoc@v1.1.0
+
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
         
       - name: Yarn install
         working-directory: ./node
         run: yarn install
         
-      - name: Build protobuf
+      - name: Build protobuf for javascript
         working-directory: ./node
         run: make protobuf
-          
+
+      - name: Pip install
+        working-directory: ./python
+        run: | 
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Build protobuf for python
+        working-directory: ./python
+        run: make protobuf
+
       - name: Add & Commit
         uses: EndBug/add-and-commit@v5.1.0
         with:
