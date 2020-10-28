@@ -9,6 +9,7 @@ on:
 jobs:
 
   nodejs:
+    name: Build NodeJS
     runs-on: ubuntu-latest
 
     steps:

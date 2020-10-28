@@ -9,6 +9,7 @@ on:
 jobs:
 
   python:
+    name: Build python
     runs-on: ubuntu-latest
 
     steps:
@@ -18,7 +19,8 @@ jobs:
       - name: Setup protoc
         uses: arduino/setup-protoc@v1.1.0
 
-      - uses: actions/setup-python@v2
+      - Name: Setup python
+        uses: actions/setup-python@v2
         with:
           python-version: '3.9.0'
 
