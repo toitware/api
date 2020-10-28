@@ -7,7 +7,7 @@ setuptools.setup(
     name="api",
     version="0.0.1",
     author="Toitware",
-    author_email="leon@toitware.com",
+    author_email="developers@toitware.com",
     description="Toitware",
     long_description=long_description,
     long_description_content_type="text/markdown",
