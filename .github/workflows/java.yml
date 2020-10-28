@@ -2,27 +2,28 @@ name: Java
 
 on:
   push:
-    branches: [ ci-java, master ]
+    branches: [ ci-testing, ci-java, master ]
 
 jobs:
 
-  build:
+  java:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Install Java and Maven
+        uses: actions/setup-java@v1.4.3
+        with:
+          java-version: 11
+
       - name: Setup protoc
         uses: arduino/setup-protoc@v1.1.0
 
-      - name: Yarn install
-        working-directory: ./node
-        run: yarn install
-
-      - name: Build protobuf
-        working-directory: ./node
-        run: make protobuf
+      - name: Build
+        working-directory: ./java
+        run: mvn -B package --file pom.xml
 
       - name: Add & Commit
         uses: EndBug/add-and-commit@v5.1.0

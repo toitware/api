@@ -1,12 +1,12 @@
-name: nodejs
+name: NodeJS
 
 on:
   push:
-    branches: [ ci-testing, ci-nodejs, master ]
+    branches: [ ci-testing, ci-python, master ]
 
 jobs:
 
-  nodejs:
+  python:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,12 +16,19 @@ jobs:
       - name: Setup protoc
         uses: arduino/setup-protoc@v1.1.0
 
-      - name: Yarn install
-        working-directory: ./node
-        run: yarn install
+
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.9.0'
+
+      - name: Pip install
+        working-directory: ./python
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Build protobuf
-        working-directory: ./node
+        working-directory: ./python
         run: make protobuf
 
       - name: Add & Commit
