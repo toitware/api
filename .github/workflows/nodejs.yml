@@ -2,7 +2,9 @@ name: nodejs
 
 on:
   push:
-    branches: [ ci-testing, ci-nodejs, master ]
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
 
@@ -25,6 +27,7 @@ jobs:
         run: make protobuf
 
       - name: Add & Commit
+        if: github.event_name == 'push'
         uses: EndBug/add-and-commit@v5.1.0
         with:
           message: ci commit
