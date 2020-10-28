@@ -5,7 +5,7 @@ on:
     types: [ published ]
   push:
     branches: [ master ]
-  pull_requeset:
+  pull_request:
     branches: [ master ]
 
 jobs:
@@ -32,7 +32,9 @@ jobs:
         if: github.event_name == 'push'
         uses: EndBug/add-and-commit@v5.1.0
         with:
-          message: ci commit
+          author_name: Leon Gungadin Mogensen
+          author_email: leon@toitware.com
+          message: built java source files
           branch: master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
