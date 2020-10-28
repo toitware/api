@@ -1,16 +1,17 @@
 name: Java
 
 on:
+  release:
+    types: [ published ]
   push:
     branches: [ master ]
-  pull_request:
+  pull_requeset:
     branches: [ master ]
 
 jobs:
-
   java:
+    name: Build Java
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -27,21 +28,21 @@ jobs:
         working-directory: ./java
         run: mvn -B package --file pom.xml
 
-      - name: Add & Commit
+      - name: Add & commit
         if: github.event_name == 'push'
         uses: EndBug/add-and-commit@v5.1.0
         with:
-          author_name: Leon Gungadin Mogensen
-          author_email: leon@toitware.com
-          message: built java source files
+          message: ci commit
           branch: master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 'Upload Artifact'
-        if: github.event_name == 'push'
-        uses: actions/upload-artifact@v2
+      - name: Upload jar to release
+        if: github.event_name == 'release'
+        uses: svenstaro/upload-release-action@v2
         with:
-          name: jar
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
           path: java/target/*.jar
-          retention-days: 30
+          tag: ${{ github.ref }}
+          overwrite: true
+          file_glob: true
