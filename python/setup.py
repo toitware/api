@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="api", # Replace with your own username
+    name="api",
     version="0.0.1",
     author="Toitware",
     author_email="leon@toitware.com",
