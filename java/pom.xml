@@ -7,13 +7,26 @@
 	<packaging>jar</packaging>
 	<version>0.1.0-SNAPSHOT</version>
 	<name>toit-api</name>
-	<url>http://maven.apache.org</url>
+	<description>Toit Java API</description>
+	<url>http://github.com/toitware/api</url>
 
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>http://www.opensource.org/licenses/mit-license.php</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<scm>
+		<url>https://github.com/toitware/api</url>
+		<connection>scm:git:git://github.com/toitware/api.git</connection>
+		<developerConnection>scm:git:git@github.com:toitware/api.git</developerConnection>
+	</scm>
 
 	<properties>
 		<compileSource>1.8</compileSource>
 	</properties>
-
 
 	<dependencies>
 		<dependency>
@@ -106,50 +119,32 @@
 		</plugins>
 		<pluginManagement>
 			<plugins>
-				<!--This plugin's configuration is used to store Eclipse m2e settings
-					only. It has no influence on the Maven build itself. -->
 				<plugin>
-					<groupId>org.eclipse.m2e</groupId>
-					<artifactId>lifecycle-mapping</artifactId>
-					<version>1.0.0</version>
-					<configuration>
-						<lifecycleMappingMetadata>
-							<pluginExecutions>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											com.google.protobuf.tools
-										</groupId>
-										<artifactId>
-											maven-protoc-plugin
-										</artifactId>
-										<versionRange>
-											[0.4.2,)
-										</versionRange>
-										<goals>
-											<goal>compile-custom</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore></ignore>
-									</action>
-								</pluginExecution>
-							</pluginExecutions>
-						</lifecycleMappingMetadata>
-					</configuration>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-gpg-plugin</artifactId>
+					<version>1.5</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>2.4.2</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
-
-		 <resources>
-      <resource>
-        <directory>src/resources</directory>
-        <includes>
-          <include>**/*.yaml</include>
-        </includes>
-      </resource>
-    </resources>
 	</build>
+
+	<distributionManagement>
+		<snapshotRepository>
+      <id>ossrh</id>
+      <name>Central Repository OSSRH</name>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+      <id>ossrh</id>
+      <name>Central Repository OSSRH</name>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
 
 
 </project>
