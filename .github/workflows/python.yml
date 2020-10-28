@@ -19,7 +19,7 @@ jobs:
       - name: Setup protoc
         uses: arduino/setup-protoc@v1.1.0
 
-      - Name: Setup python
+      - name: Setup python
         uses: actions/setup-python@v2
         with:
           python-version: '3.9.0'
