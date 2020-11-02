@@ -31,11 +31,7 @@ jobs:
 
       - name: Build
         working-directory: ./java
-        run: mvn -B deploy --file pom.xml
-        env:
-          SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
-          SONATYPE_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
-          DEVELOPERS_GPG_PASSPHRASE: ${{ secrets.DEVELOPERS_SIGN_SECRET }}
+        run: mvn -B package --file pom.xml
 
       - name: Add & commit
         if: github.event_name == 'push'
@@ -57,3 +53,12 @@ jobs:
           tag: ${{ github.ref }}
           overwrite: true
           file_glob: true
+
+      - name: Deploy jar
+        working-directory: ./java
+        if: github.event_name == 'release'
+        run: mvn -B deploy --file pom.xml
+        env:
+          SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
+          SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
+          DEVELOPERS_GPG_PASSPHRASE: ${{ secrets.DEVELOPERS_SIGN_SECRET }}
