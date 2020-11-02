@@ -18,7 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.25.0)",
+    value = "by gRPC proto compiler (version 1.32.2)",
     comments = "Source: toit/api/auth.proto")
 public final class AuthGrpc {
 
@@ -155,7 +155,14 @@ public final class AuthGrpc {
    * Creates a new async stub that supports all call types for the service
    */
   public static AuthStub newStub(io.grpc.Channel channel) {
-    return new AuthStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AuthStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AuthStub>() {
+        @java.lang.Override
+        public AuthStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AuthStub(channel, callOptions);
+        }
+      };
+    return AuthStub.newStub(factory, channel);
   }
 
   /**
@@ -163,7 +170,14 @@ public final class AuthGrpc {
    */
   public static AuthBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new AuthBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AuthBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AuthBlockingStub>() {
+        @java.lang.Override
+        public AuthBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AuthBlockingStub(channel, callOptions);
+        }
+      };
+    return AuthBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -171,7 +185,14 @@ public final class AuthGrpc {
    */
   public static AuthFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new AuthFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AuthFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AuthFutureStub>() {
+        @java.lang.Override
+        public AuthFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AuthFutureStub(channel, callOptions);
+        }
+      };
+    return AuthFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -242,19 +263,15 @@ public final class AuthGrpc {
 
   /**
    */
-  public static final class AuthStub extends io.grpc.stub.AbstractStub<AuthStub> {
-    private AuthStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AuthStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AuthStub extends io.grpc.stub.AbstractAsyncStub<AuthStub> {
+    private AuthStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AuthStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AuthStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AuthStub(channel, callOptions);
     }
 
@@ -293,19 +310,15 @@ public final class AuthGrpc {
 
   /**
    */
-  public static final class AuthBlockingStub extends io.grpc.stub.AbstractStub<AuthBlockingStub> {
-    private AuthBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AuthBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AuthBlockingStub extends io.grpc.stub.AbstractBlockingStub<AuthBlockingStub> {
+    private AuthBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AuthBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AuthBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AuthBlockingStub(channel, callOptions);
     }
 
@@ -340,19 +353,15 @@ public final class AuthGrpc {
 
   /**
    */
-  public static final class AuthFutureStub extends io.grpc.stub.AbstractStub<AuthFutureStub> {
-    private AuthFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AuthFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AuthFutureStub extends io.grpc.stub.AbstractFutureStub<AuthFutureStub> {
+    private AuthFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AuthFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AuthFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AuthFutureStub(channel, callOptions);
     }
 

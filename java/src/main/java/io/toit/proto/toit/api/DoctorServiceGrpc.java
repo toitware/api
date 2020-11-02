@@ -18,7 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.25.0)",
+    value = "by gRPC proto compiler (version 1.32.2)",
     comments = "Source: toit/api/doctor.proto")
 public final class DoctorServiceGrpc {
 
@@ -62,7 +62,14 @@ public final class DoctorServiceGrpc {
    * Creates a new async stub that supports all call types for the service
    */
   public static DoctorServiceStub newStub(io.grpc.Channel channel) {
-    return new DoctorServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DoctorServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DoctorServiceStub>() {
+        @java.lang.Override
+        public DoctorServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DoctorServiceStub(channel, callOptions);
+        }
+      };
+    return DoctorServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -70,7 +77,14 @@ public final class DoctorServiceGrpc {
    */
   public static DoctorServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new DoctorServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DoctorServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DoctorServiceBlockingStub>() {
+        @java.lang.Override
+        public DoctorServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DoctorServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return DoctorServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -78,7 +92,14 @@ public final class DoctorServiceGrpc {
    */
   public static DoctorServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new DoctorServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DoctorServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DoctorServiceFutureStub>() {
+        @java.lang.Override
+        public DoctorServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DoctorServiceFutureStub(channel, callOptions);
+        }
+      };
+    return DoctorServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -107,19 +128,15 @@ public final class DoctorServiceGrpc {
 
   /**
    */
-  public static final class DoctorServiceStub extends io.grpc.stub.AbstractStub<DoctorServiceStub> {
-    private DoctorServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DoctorServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DoctorServiceStub extends io.grpc.stub.AbstractAsyncStub<DoctorServiceStub> {
+    private DoctorServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DoctorServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DoctorServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DoctorServiceStub(channel, callOptions);
     }
 
@@ -134,19 +151,15 @@ public final class DoctorServiceGrpc {
 
   /**
    */
-  public static final class DoctorServiceBlockingStub extends io.grpc.stub.AbstractStub<DoctorServiceBlockingStub> {
-    private DoctorServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DoctorServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DoctorServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<DoctorServiceBlockingStub> {
+    private DoctorServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DoctorServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DoctorServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DoctorServiceBlockingStub(channel, callOptions);
     }
 
@@ -160,19 +173,15 @@ public final class DoctorServiceGrpc {
 
   /**
    */
-  public static final class DoctorServiceFutureStub extends io.grpc.stub.AbstractStub<DoctorServiceFutureStub> {
-    private DoctorServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DoctorServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DoctorServiceFutureStub extends io.grpc.stub.AbstractFutureStub<DoctorServiceFutureStub> {
+    private DoctorServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DoctorServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DoctorServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DoctorServiceFutureStub(channel, callOptions);
     }
 

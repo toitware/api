@@ -18,7 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.25.0)",
+    value = "by gRPC proto compiler (version 1.32.2)",
     comments = "Source: toit/api/program.proto")
 public final class ProgramServiceGrpc {
 
@@ -372,7 +372,14 @@ public final class ProgramServiceGrpc {
    * Creates a new async stub that supports all call types for the service
    */
   public static ProgramServiceStub newStub(io.grpc.Channel channel) {
-    return new ProgramServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ProgramServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ProgramServiceStub>() {
+        @java.lang.Override
+        public ProgramServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ProgramServiceStub(channel, callOptions);
+        }
+      };
+    return ProgramServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -380,7 +387,14 @@ public final class ProgramServiceGrpc {
    */
   public static ProgramServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new ProgramServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ProgramServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ProgramServiceBlockingStub>() {
+        @java.lang.Override
+        public ProgramServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ProgramServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return ProgramServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -388,7 +402,14 @@ public final class ProgramServiceGrpc {
    */
   public static ProgramServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new ProgramServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ProgramServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ProgramServiceFutureStub>() {
+        @java.lang.Override
+        public ProgramServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ProgramServiceFutureStub(channel, callOptions);
+        }
+      };
+    return ProgramServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -557,19 +578,15 @@ public final class ProgramServiceGrpc {
 
   /**
    */
-  public static final class ProgramServiceStub extends io.grpc.stub.AbstractStub<ProgramServiceStub> {
-    private ProgramServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ProgramServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ProgramServiceStub extends io.grpc.stub.AbstractAsyncStub<ProgramServiceStub> {
+    private ProgramServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ProgramServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ProgramServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ProgramServiceStub(channel, callOptions);
     }
 
@@ -664,19 +681,15 @@ public final class ProgramServiceGrpc {
 
   /**
    */
-  public static final class ProgramServiceBlockingStub extends io.grpc.stub.AbstractStub<ProgramServiceBlockingStub> {
-    private ProgramServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ProgramServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ProgramServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ProgramServiceBlockingStub> {
+    private ProgramServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ProgramServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ProgramServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ProgramServiceBlockingStub(channel, callOptions);
     }
 
@@ -748,19 +761,15 @@ public final class ProgramServiceGrpc {
 
   /**
    */
-  public static final class ProgramServiceFutureStub extends io.grpc.stub.AbstractStub<ProgramServiceFutureStub> {
-    private ProgramServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ProgramServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ProgramServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ProgramServiceFutureStub> {
+    private ProgramServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ProgramServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ProgramServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ProgramServiceFutureStub(channel, callOptions);
     }
 

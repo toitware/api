@@ -18,7 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.25.0)",
+    value = "by gRPC proto compiler (version 1.32.2)",
     comments = "Source: toit/api/pubsub/publish.proto")
 public final class PublishGrpc {
 
@@ -62,7 +62,14 @@ public final class PublishGrpc {
    * Creates a new async stub that supports all call types for the service
    */
   public static PublishStub newStub(io.grpc.Channel channel) {
-    return new PublishStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<PublishStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<PublishStub>() {
+        @java.lang.Override
+        public PublishStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new PublishStub(channel, callOptions);
+        }
+      };
+    return PublishStub.newStub(factory, channel);
   }
 
   /**
@@ -70,7 +77,14 @@ public final class PublishGrpc {
    */
   public static PublishBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new PublishBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<PublishBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<PublishBlockingStub>() {
+        @java.lang.Override
+        public PublishBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new PublishBlockingStub(channel, callOptions);
+        }
+      };
+    return PublishBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -78,7 +92,14 @@ public final class PublishGrpc {
    */
   public static PublishFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new PublishFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<PublishFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<PublishFutureStub>() {
+        @java.lang.Override
+        public PublishFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new PublishFutureStub(channel, callOptions);
+        }
+      };
+    return PublishFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -107,19 +128,15 @@ public final class PublishGrpc {
 
   /**
    */
-  public static final class PublishStub extends io.grpc.stub.AbstractStub<PublishStub> {
-    private PublishStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private PublishStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class PublishStub extends io.grpc.stub.AbstractAsyncStub<PublishStub> {
+    private PublishStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected PublishStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected PublishStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new PublishStub(channel, callOptions);
     }
 
@@ -134,19 +151,15 @@ public final class PublishGrpc {
 
   /**
    */
-  public static final class PublishBlockingStub extends io.grpc.stub.AbstractStub<PublishBlockingStub> {
-    private PublishBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private PublishBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class PublishBlockingStub extends io.grpc.stub.AbstractBlockingStub<PublishBlockingStub> {
+    private PublishBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected PublishBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected PublishBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new PublishBlockingStub(channel, callOptions);
     }
 
@@ -160,19 +173,15 @@ public final class PublishGrpc {
 
   /**
    */
-  public static final class PublishFutureStub extends io.grpc.stub.AbstractStub<PublishFutureStub> {
-    private PublishFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private PublishFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class PublishFutureStub extends io.grpc.stub.AbstractFutureStub<PublishFutureStub> {
+    private PublishFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected PublishFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected PublishFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new PublishFutureStub(channel, callOptions);
     }
 

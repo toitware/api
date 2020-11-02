@@ -18,7 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.25.0)",
+    value = "by gRPC proto compiler (version 1.32.2)",
     comments = "Source: toit/api/pubsub/subscribe.proto")
 public final class SubscribeGrpc {
 
@@ -217,7 +217,14 @@ public final class SubscribeGrpc {
    * Creates a new async stub that supports all call types for the service
    */
   public static SubscribeStub newStub(io.grpc.Channel channel) {
-    return new SubscribeStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SubscribeStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SubscribeStub>() {
+        @java.lang.Override
+        public SubscribeStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SubscribeStub(channel, callOptions);
+        }
+      };
+    return SubscribeStub.newStub(factory, channel);
   }
 
   /**
@@ -225,7 +232,14 @@ public final class SubscribeGrpc {
    */
   public static SubscribeBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new SubscribeBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SubscribeBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SubscribeBlockingStub>() {
+        @java.lang.Override
+        public SubscribeBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SubscribeBlockingStub(channel, callOptions);
+        }
+      };
+    return SubscribeBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -233,7 +247,14 @@ public final class SubscribeGrpc {
    */
   public static SubscribeFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new SubscribeFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SubscribeFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SubscribeFutureStub>() {
+        @java.lang.Override
+        public SubscribeFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SubscribeFutureStub(channel, callOptions);
+        }
+      };
+    return SubscribeFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -332,19 +353,15 @@ public final class SubscribeGrpc {
 
   /**
    */
-  public static final class SubscribeStub extends io.grpc.stub.AbstractStub<SubscribeStub> {
-    private SubscribeStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SubscribeStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SubscribeStub extends io.grpc.stub.AbstractAsyncStub<SubscribeStub> {
+    private SubscribeStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SubscribeStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SubscribeStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SubscribeStub(channel, callOptions);
     }
 
@@ -399,19 +416,15 @@ public final class SubscribeGrpc {
 
   /**
    */
-  public static final class SubscribeBlockingStub extends io.grpc.stub.AbstractStub<SubscribeBlockingStub> {
-    private SubscribeBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SubscribeBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SubscribeBlockingStub extends io.grpc.stub.AbstractBlockingStub<SubscribeBlockingStub> {
+    private SubscribeBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SubscribeBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SubscribeBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SubscribeBlockingStub(channel, callOptions);
     }
 
@@ -461,19 +474,15 @@ public final class SubscribeGrpc {
 
   /**
    */
-  public static final class SubscribeFutureStub extends io.grpc.stub.AbstractStub<SubscribeFutureStub> {
-    private SubscribeFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SubscribeFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SubscribeFutureStub extends io.grpc.stub.AbstractFutureStub<SubscribeFutureStub> {
+    private SubscribeFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SubscribeFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SubscribeFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SubscribeFutureStub(channel, callOptions);
     }
 

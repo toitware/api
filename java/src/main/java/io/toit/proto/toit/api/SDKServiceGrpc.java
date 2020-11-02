@@ -18,7 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.25.0)",
+    value = "by gRPC proto compiler (version 1.32.2)",
     comments = "Source: toit/api/sdk.proto")
 public final class SDKServiceGrpc {
 
@@ -279,7 +279,14 @@ public final class SDKServiceGrpc {
    * Creates a new async stub that supports all call types for the service
    */
   public static SDKServiceStub newStub(io.grpc.Channel channel) {
-    return new SDKServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SDKServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SDKServiceStub>() {
+        @java.lang.Override
+        public SDKServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SDKServiceStub(channel, callOptions);
+        }
+      };
+    return SDKServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -287,7 +294,14 @@ public final class SDKServiceGrpc {
    */
   public static SDKServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new SDKServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SDKServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SDKServiceBlockingStub>() {
+        @java.lang.Override
+        public SDKServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SDKServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return SDKServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -295,7 +309,14 @@ public final class SDKServiceGrpc {
    */
   public static SDKServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new SDKServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SDKServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SDKServiceFutureStub>() {
+        @java.lang.Override
+        public SDKServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SDKServiceFutureStub(channel, callOptions);
+        }
+      };
+    return SDKServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -425,19 +446,15 @@ public final class SDKServiceGrpc {
 
   /**
    */
-  public static final class SDKServiceStub extends io.grpc.stub.AbstractStub<SDKServiceStub> {
-    private SDKServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SDKServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SDKServiceStub extends io.grpc.stub.AbstractAsyncStub<SDKServiceStub> {
+    private SDKServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SDKServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SDKServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SDKServiceStub(channel, callOptions);
     }
 
@@ -511,19 +528,15 @@ public final class SDKServiceGrpc {
 
   /**
    */
-  public static final class SDKServiceBlockingStub extends io.grpc.stub.AbstractStub<SDKServiceBlockingStub> {
-    private SDKServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SDKServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SDKServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<SDKServiceBlockingStub> {
+    private SDKServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SDKServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SDKServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SDKServiceBlockingStub(channel, callOptions);
     }
 
@@ -589,19 +602,15 @@ public final class SDKServiceGrpc {
 
   /**
    */
-  public static final class SDKServiceFutureStub extends io.grpc.stub.AbstractStub<SDKServiceFutureStub> {
-    private SDKServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SDKServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SDKServiceFutureStub extends io.grpc.stub.AbstractFutureStub<SDKServiceFutureStub> {
+    private SDKServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SDKServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SDKServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SDKServiceFutureStub(channel, callOptions);
     }
 

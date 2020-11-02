@@ -18,7 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.25.0)",
+    value = "by gRPC proto compiler (version 1.32.2)",
     comments = "Source: toit/api/app.proto")
 public final class AppServiceGrpc {
 
@@ -124,7 +124,14 @@ public final class AppServiceGrpc {
    * Creates a new async stub that supports all call types for the service
    */
   public static AppServiceStub newStub(io.grpc.Channel channel) {
-    return new AppServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AppServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AppServiceStub>() {
+        @java.lang.Override
+        public AppServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AppServiceStub(channel, callOptions);
+        }
+      };
+    return AppServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -132,7 +139,14 @@ public final class AppServiceGrpc {
    */
   public static AppServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new AppServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AppServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AppServiceBlockingStub>() {
+        @java.lang.Override
+        public AppServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AppServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return AppServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -140,7 +154,14 @@ public final class AppServiceGrpc {
    */
   public static AppServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new AppServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AppServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AppServiceFutureStub>() {
+        @java.lang.Override
+        public AppServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AppServiceFutureStub(channel, callOptions);
+        }
+      };
+    return AppServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -197,19 +218,15 @@ public final class AppServiceGrpc {
 
   /**
    */
-  public static final class AppServiceStub extends io.grpc.stub.AbstractStub<AppServiceStub> {
-    private AppServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AppServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AppServiceStub extends io.grpc.stub.AbstractAsyncStub<AppServiceStub> {
+    private AppServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AppServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AppServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AppServiceStub(channel, callOptions);
     }
 
@@ -240,19 +257,15 @@ public final class AppServiceGrpc {
 
   /**
    */
-  public static final class AppServiceBlockingStub extends io.grpc.stub.AbstractStub<AppServiceBlockingStub> {
-    private AppServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AppServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AppServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AppServiceBlockingStub> {
+    private AppServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AppServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AppServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AppServiceBlockingStub(channel, callOptions);
     }
 
@@ -281,19 +294,15 @@ public final class AppServiceGrpc {
 
   /**
    */
-  public static final class AppServiceFutureStub extends io.grpc.stub.AbstractStub<AppServiceFutureStub> {
-    private AppServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AppServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AppServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AppServiceFutureStub> {
+    private AppServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AppServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AppServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AppServiceFutureStub(channel, callOptions);
     }
 

@@ -18,7 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.25.0)",
+    value = "by gRPC proto compiler (version 1.32.2)",
     comments = "Source: toit/api/organization.proto")
 public final class OrganizationServiceGrpc {
 
@@ -155,7 +155,14 @@ public final class OrganizationServiceGrpc {
    * Creates a new async stub that supports all call types for the service
    */
   public static OrganizationServiceStub newStub(io.grpc.Channel channel) {
-    return new OrganizationServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<OrganizationServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<OrganizationServiceStub>() {
+        @java.lang.Override
+        public OrganizationServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new OrganizationServiceStub(channel, callOptions);
+        }
+      };
+    return OrganizationServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -163,7 +170,14 @@ public final class OrganizationServiceGrpc {
    */
   public static OrganizationServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new OrganizationServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<OrganizationServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<OrganizationServiceBlockingStub>() {
+        @java.lang.Override
+        public OrganizationServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new OrganizationServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return OrganizationServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -171,7 +185,14 @@ public final class OrganizationServiceGrpc {
    */
   public static OrganizationServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new OrganizationServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<OrganizationServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<OrganizationServiceFutureStub>() {
+        @java.lang.Override
+        public OrganizationServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new OrganizationServiceFutureStub(channel, callOptions);
+        }
+      };
+    return OrganizationServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -242,19 +263,15 @@ public final class OrganizationServiceGrpc {
 
   /**
    */
-  public static final class OrganizationServiceStub extends io.grpc.stub.AbstractStub<OrganizationServiceStub> {
-    private OrganizationServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private OrganizationServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class OrganizationServiceStub extends io.grpc.stub.AbstractAsyncStub<OrganizationServiceStub> {
+    private OrganizationServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected OrganizationServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected OrganizationServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new OrganizationServiceStub(channel, callOptions);
     }
 
@@ -293,19 +310,15 @@ public final class OrganizationServiceGrpc {
 
   /**
    */
-  public static final class OrganizationServiceBlockingStub extends io.grpc.stub.AbstractStub<OrganizationServiceBlockingStub> {
-    private OrganizationServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private OrganizationServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class OrganizationServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<OrganizationServiceBlockingStub> {
+    private OrganizationServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected OrganizationServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected OrganizationServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new OrganizationServiceBlockingStub(channel, callOptions);
     }
 
@@ -340,19 +353,15 @@ public final class OrganizationServiceGrpc {
 
   /**
    */
-  public static final class OrganizationServiceFutureStub extends io.grpc.stub.AbstractStub<OrganizationServiceFutureStub> {
-    private OrganizationServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private OrganizationServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class OrganizationServiceFutureStub extends io.grpc.stub.AbstractFutureStub<OrganizationServiceFutureStub> {
+    private OrganizationServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected OrganizationServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected OrganizationServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new OrganizationServiceFutureStub(channel, callOptions);
     }
 

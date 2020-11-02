@@ -18,7 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.25.0)",
+    value = "by gRPC proto compiler (version 1.32.2)",
     comments = "Source: toit/api/device.proto")
 public final class DeviceServiceGrpc {
 
@@ -527,7 +527,14 @@ public final class DeviceServiceGrpc {
    * Creates a new async stub that supports all call types for the service
    */
   public static DeviceServiceStub newStub(io.grpc.Channel channel) {
-    return new DeviceServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DeviceServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DeviceServiceStub>() {
+        @java.lang.Override
+        public DeviceServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DeviceServiceStub(channel, callOptions);
+        }
+      };
+    return DeviceServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -535,7 +542,14 @@ public final class DeviceServiceGrpc {
    */
   public static DeviceServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new DeviceServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DeviceServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DeviceServiceBlockingStub>() {
+        @java.lang.Override
+        public DeviceServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DeviceServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return DeviceServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -543,7 +557,14 @@ public final class DeviceServiceGrpc {
    */
   public static DeviceServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new DeviceServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DeviceServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DeviceServiceFutureStub>() {
+        @java.lang.Override
+        public DeviceServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DeviceServiceFutureStub(channel, callOptions);
+        }
+      };
+    return DeviceServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -783,19 +804,15 @@ public final class DeviceServiceGrpc {
 
   /**
    */
-  public static final class DeviceServiceStub extends io.grpc.stub.AbstractStub<DeviceServiceStub> {
-    private DeviceServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DeviceServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DeviceServiceStub extends io.grpc.stub.AbstractAsyncStub<DeviceServiceStub> {
+    private DeviceServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DeviceServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DeviceServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DeviceServiceStub(channel, callOptions);
     }
 
@@ -931,19 +948,15 @@ public final class DeviceServiceGrpc {
 
   /**
    */
-  public static final class DeviceServiceBlockingStub extends io.grpc.stub.AbstractStub<DeviceServiceBlockingStub> {
-    private DeviceServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DeviceServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DeviceServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<DeviceServiceBlockingStub> {
+    private DeviceServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DeviceServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DeviceServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DeviceServiceBlockingStub(channel, callOptions);
     }
 
@@ -1066,19 +1079,15 @@ public final class DeviceServiceGrpc {
 
   /**
    */
-  public static final class DeviceServiceFutureStub extends io.grpc.stub.AbstractStub<DeviceServiceFutureStub> {
-    private DeviceServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DeviceServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DeviceServiceFutureStub extends io.grpc.stub.AbstractFutureStub<DeviceServiceFutureStub> {
+    private DeviceServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DeviceServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DeviceServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DeviceServiceFutureStub(channel, callOptions);
     }
 

@@ -18,7 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.25.0)",
+    value = "by gRPC proto compiler (version 1.32.2)",
     comments = "Source: toit/api/hardware.proto")
 public final class HardwareServiceGrpc {
 
@@ -93,7 +93,14 @@ public final class HardwareServiceGrpc {
    * Creates a new async stub that supports all call types for the service
    */
   public static HardwareServiceStub newStub(io.grpc.Channel channel) {
-    return new HardwareServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<HardwareServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<HardwareServiceStub>() {
+        @java.lang.Override
+        public HardwareServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new HardwareServiceStub(channel, callOptions);
+        }
+      };
+    return HardwareServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -101,7 +108,14 @@ public final class HardwareServiceGrpc {
    */
   public static HardwareServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new HardwareServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<HardwareServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<HardwareServiceBlockingStub>() {
+        @java.lang.Override
+        public HardwareServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new HardwareServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return HardwareServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -109,7 +123,14 @@ public final class HardwareServiceGrpc {
    */
   public static HardwareServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new HardwareServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<HardwareServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<HardwareServiceFutureStub>() {
+        @java.lang.Override
+        public HardwareServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new HardwareServiceFutureStub(channel, callOptions);
+        }
+      };
+    return HardwareServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -152,19 +173,15 @@ public final class HardwareServiceGrpc {
 
   /**
    */
-  public static final class HardwareServiceStub extends io.grpc.stub.AbstractStub<HardwareServiceStub> {
-    private HardwareServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private HardwareServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class HardwareServiceStub extends io.grpc.stub.AbstractAsyncStub<HardwareServiceStub> {
+    private HardwareServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected HardwareServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected HardwareServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new HardwareServiceStub(channel, callOptions);
     }
 
@@ -187,19 +204,15 @@ public final class HardwareServiceGrpc {
 
   /**
    */
-  public static final class HardwareServiceBlockingStub extends io.grpc.stub.AbstractStub<HardwareServiceBlockingStub> {
-    private HardwareServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private HardwareServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class HardwareServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<HardwareServiceBlockingStub> {
+    private HardwareServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected HardwareServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected HardwareServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new HardwareServiceBlockingStub(channel, callOptions);
     }
 
@@ -220,19 +233,15 @@ public final class HardwareServiceGrpc {
 
   /**
    */
-  public static final class HardwareServiceFutureStub extends io.grpc.stub.AbstractStub<HardwareServiceFutureStub> {
-    private HardwareServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private HardwareServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class HardwareServiceFutureStub extends io.grpc.stub.AbstractFutureStub<HardwareServiceFutureStub> {
+    private HardwareServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected HardwareServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected HardwareServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new HardwareServiceFutureStub(channel, callOptions);
     }
 

@@ -18,7 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.25.0)",
+    value = "by gRPC proto compiler (version 1.32.2)",
     comments = "Source: toit/api/data.proto")
 public final class DataServiceGrpc {
 
@@ -217,7 +217,14 @@ public final class DataServiceGrpc {
    * Creates a new async stub that supports all call types for the service
    */
   public static DataServiceStub newStub(io.grpc.Channel channel) {
-    return new DataServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DataServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DataServiceStub>() {
+        @java.lang.Override
+        public DataServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DataServiceStub(channel, callOptions);
+        }
+      };
+    return DataServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -225,7 +232,14 @@ public final class DataServiceGrpc {
    */
   public static DataServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new DataServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DataServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DataServiceBlockingStub>() {
+        @java.lang.Override
+        public DataServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DataServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return DataServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -233,7 +247,14 @@ public final class DataServiceGrpc {
    */
   public static DataServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new DataServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DataServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DataServiceFutureStub>() {
+        @java.lang.Override
+        public DataServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DataServiceFutureStub(channel, callOptions);
+        }
+      };
+    return DataServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -332,19 +353,15 @@ public final class DataServiceGrpc {
 
   /**
    */
-  public static final class DataServiceStub extends io.grpc.stub.AbstractStub<DataServiceStub> {
-    private DataServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DataServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DataServiceStub extends io.grpc.stub.AbstractAsyncStub<DataServiceStub> {
+    private DataServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DataServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DataServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DataServiceStub(channel, callOptions);
     }
 
@@ -399,19 +416,15 @@ public final class DataServiceGrpc {
 
   /**
    */
-  public static final class DataServiceBlockingStub extends io.grpc.stub.AbstractStub<DataServiceBlockingStub> {
-    private DataServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DataServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DataServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<DataServiceBlockingStub> {
+    private DataServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DataServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DataServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DataServiceBlockingStub(channel, callOptions);
     }
 
@@ -461,19 +474,15 @@ public final class DataServiceGrpc {
 
   /**
    */
-  public static final class DataServiceFutureStub extends io.grpc.stub.AbstractStub<DataServiceFutureStub> {
-    private DataServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DataServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DataServiceFutureStub extends io.grpc.stub.AbstractFutureStub<DataServiceFutureStub> {
+    private DataServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DataServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DataServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DataServiceFutureStub(channel, callOptions);
     }
 

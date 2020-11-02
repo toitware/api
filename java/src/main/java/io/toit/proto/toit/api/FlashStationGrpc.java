@@ -18,7 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.25.0)",
+    value = "by gRPC proto compiler (version 1.32.2)",
     comments = "Source: toit/api/hardware.proto")
 public final class FlashStationGrpc {
 
@@ -93,7 +93,14 @@ public final class FlashStationGrpc {
    * Creates a new async stub that supports all call types for the service
    */
   public static FlashStationStub newStub(io.grpc.Channel channel) {
-    return new FlashStationStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<FlashStationStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FlashStationStub>() {
+        @java.lang.Override
+        public FlashStationStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FlashStationStub(channel, callOptions);
+        }
+      };
+    return FlashStationStub.newStub(factory, channel);
   }
 
   /**
@@ -101,7 +108,14 @@ public final class FlashStationGrpc {
    */
   public static FlashStationBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new FlashStationBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<FlashStationBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FlashStationBlockingStub>() {
+        @java.lang.Override
+        public FlashStationBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FlashStationBlockingStub(channel, callOptions);
+        }
+      };
+    return FlashStationBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -109,7 +123,14 @@ public final class FlashStationGrpc {
    */
   public static FlashStationFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new FlashStationFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<FlashStationFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FlashStationFutureStub>() {
+        @java.lang.Override
+        public FlashStationFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FlashStationFutureStub(channel, callOptions);
+        }
+      };
+    return FlashStationFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -152,19 +173,15 @@ public final class FlashStationGrpc {
 
   /**
    */
-  public static final class FlashStationStub extends io.grpc.stub.AbstractStub<FlashStationStub> {
-    private FlashStationStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private FlashStationStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class FlashStationStub extends io.grpc.stub.AbstractAsyncStub<FlashStationStub> {
+    private FlashStationStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FlashStationStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected FlashStationStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new FlashStationStub(channel, callOptions);
     }
 
@@ -187,19 +204,15 @@ public final class FlashStationGrpc {
 
   /**
    */
-  public static final class FlashStationBlockingStub extends io.grpc.stub.AbstractStub<FlashStationBlockingStub> {
-    private FlashStationBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private FlashStationBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class FlashStationBlockingStub extends io.grpc.stub.AbstractBlockingStub<FlashStationBlockingStub> {
+    private FlashStationBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FlashStationBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected FlashStationBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new FlashStationBlockingStub(channel, callOptions);
     }
 
@@ -220,19 +233,15 @@ public final class FlashStationGrpc {
 
   /**
    */
-  public static final class FlashStationFutureStub extends io.grpc.stub.AbstractStub<FlashStationFutureStub> {
-    private FlashStationFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private FlashStationFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class FlashStationFutureStub extends io.grpc.stub.AbstractFutureStub<FlashStationFutureStub> {
+    private FlashStationFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FlashStationFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected FlashStationFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new FlashStationFutureStub(channel, callOptions);
     }
 

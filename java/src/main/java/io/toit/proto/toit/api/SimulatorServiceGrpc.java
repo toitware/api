@@ -18,7 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.25.0)",
+    value = "by gRPC proto compiler (version 1.32.2)",
     comments = "Source: toit/api/simulator.proto")
 public final class SimulatorServiceGrpc {
 
@@ -155,7 +155,14 @@ public final class SimulatorServiceGrpc {
    * Creates a new async stub that supports all call types for the service
    */
   public static SimulatorServiceStub newStub(io.grpc.Channel channel) {
-    return new SimulatorServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SimulatorServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SimulatorServiceStub>() {
+        @java.lang.Override
+        public SimulatorServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SimulatorServiceStub(channel, callOptions);
+        }
+      };
+    return SimulatorServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -163,7 +170,14 @@ public final class SimulatorServiceGrpc {
    */
   public static SimulatorServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new SimulatorServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SimulatorServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SimulatorServiceBlockingStub>() {
+        @java.lang.Override
+        public SimulatorServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SimulatorServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return SimulatorServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -171,7 +185,14 @@ public final class SimulatorServiceGrpc {
    */
   public static SimulatorServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new SimulatorServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SimulatorServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SimulatorServiceFutureStub>() {
+        @java.lang.Override
+        public SimulatorServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SimulatorServiceFutureStub(channel, callOptions);
+        }
+      };
+    return SimulatorServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -242,19 +263,15 @@ public final class SimulatorServiceGrpc {
 
   /**
    */
-  public static final class SimulatorServiceStub extends io.grpc.stub.AbstractStub<SimulatorServiceStub> {
-    private SimulatorServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SimulatorServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SimulatorServiceStub extends io.grpc.stub.AbstractAsyncStub<SimulatorServiceStub> {
+    private SimulatorServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SimulatorServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SimulatorServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SimulatorServiceStub(channel, callOptions);
     }
 
@@ -293,19 +310,15 @@ public final class SimulatorServiceGrpc {
 
   /**
    */
-  public static final class SimulatorServiceBlockingStub extends io.grpc.stub.AbstractStub<SimulatorServiceBlockingStub> {
-    private SimulatorServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SimulatorServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SimulatorServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<SimulatorServiceBlockingStub> {
+    private SimulatorServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SimulatorServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SimulatorServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SimulatorServiceBlockingStub(channel, callOptions);
     }
 
@@ -340,19 +353,15 @@ public final class SimulatorServiceGrpc {
 
   /**
    */
-  public static final class SimulatorServiceFutureStub extends io.grpc.stub.AbstractStub<SimulatorServiceFutureStub> {
-    private SimulatorServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SimulatorServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SimulatorServiceFutureStub extends io.grpc.stub.AbstractFutureStub<SimulatorServiceFutureStub> {
+    private SimulatorServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SimulatorServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SimulatorServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SimulatorServiceFutureStub(channel, callOptions);
     }
 
