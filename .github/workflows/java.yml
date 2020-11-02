@@ -20,6 +20,11 @@ jobs:
         uses: actions/setup-java@v1.4.3
         with:
           java-version: 11
+          server-id: ossrh
+          server-username: SONATYPE_USERNAME
+          server-password: SONATYPE_PASSWORD
+          gpg-private-key: ${{ secrets.DEVELOPERS_SIGN_KEY }}
+          gpg-passphrase: DEVELOPERS_GPG_PASSPHRASE
 
       - name: Setup protoc
         uses: arduino/setup-protoc@v1.1.0
@@ -48,3 +53,12 @@ jobs:
           tag: ${{ github.ref }}
           overwrite: true
           file_glob: true
+
+      - name: Deploy jar
+        working-directory: ./java
+        if: github.event_name == 'release'
+        run: mvn -B deploy --file pom.xml
+        env:
+          SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
+          SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
+          DEVELOPERS_GPG_PASSPHRASE: ${{ secrets.DEVELOPERS_SIGN_SECRET }}
