@@ -20,7 +20,7 @@ jobs:
         uses: actions/setup-java@v1.4.3
         with:
           java-version: 11
-          server-id: ossrh
+          server-id: sonatype-nexus-staging
           server-username: SONATYPE_USERNAME
           server-password: SONATYPE_PASSWORD
           gpg-private-key: ${{ secrets.DEVELOPERS_SIGN_KEY }}
