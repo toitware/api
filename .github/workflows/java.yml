@@ -29,6 +29,10 @@ jobs:
       - name: Setup protoc
         uses: arduino/setup-protoc@v1.1.0
 
+      - name: Update version in pom.xml (Release only)
+        if: github.event_name == 'release'
+        run: mvn -B versions:set -DnewVersion=${{ github.event.release.tag_name }} -DgenerateBackupPoms=false
+
       - name: Build
         working-directory: ./java
         run: mvn -B package --file pom.xml
@@ -44,7 +48,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Upload jar to release
+      - name: Upload jar to release (Release only)
         if: github.event_name == 'release'
         uses: svenstaro/upload-release-action@v2
         with:
@@ -54,7 +58,7 @@ jobs:
           overwrite: true
           file_glob: true
 
-      - name: Deploy jar
+      - name: Deploy jar (Release only)
         working-directory: ./java
         if: github.event_name == 'release'
         run: mvn -B deploy --file pom.xml
