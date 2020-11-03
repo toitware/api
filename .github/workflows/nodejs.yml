@@ -50,5 +50,4 @@ jobs:
         uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_LEON_ACCESS_TOKEN }}
-          access: restricted
           package: ./node/package.json
