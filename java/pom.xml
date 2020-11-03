@@ -194,6 +194,13 @@
 									<goal>sign</goal>
 								</goals>
 							</execution>
+							<configuration>
+                <!-- Prevent `gpg` from using pinentry programs -->
+                <gpgArguments>
+                    <arg>--pinentry-mode</arg>
+                    <arg>loopback</arg>
+                </gpgArguments>
+            </configuration>
 						</executions>
 					</plugin>
 					<plugin>
