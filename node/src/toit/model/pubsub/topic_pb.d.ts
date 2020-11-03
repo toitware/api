@@ -28,7 +28,7 @@ export namespace Topic {
 }
 
 export interface TopicTypeMap {
-  TOPIC_TYPE_UNKOWN: 0;
+  TOPIC_TYPE_UNKNOWN: 0;
   TOPIC_TYPE_CLOUD: 1;
   TOPIC_TYPE_DEVICE: 2;
   TOPIC_TYPE_DEVICE_MEMORY: 3;

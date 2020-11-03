@@ -199,7 +199,7 @@ proto.toit.model.pubsub.Topic.prototype.setName = function(value) {
  * @enum {number}
  */
 proto.toit.model.pubsub.TopicType = {
-  TOPIC_TYPE_UNKOWN: 0,
+  TOPIC_TYPE_UNKNOWN: 0,
   TOPIC_TYPE_CLOUD: 1,
   TOPIC_TYPE_DEVICE: 2,
   TOPIC_TYPE_DEVICE_MEMORY: 3
