@@ -47,6 +47,7 @@ jobs:
 
       - name: Publish to npmjs.org (Release only)
         if: github.event_name == 'release'
+        working-directory: ./node
         uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_LEON_ACCESS_TOKEN }}
