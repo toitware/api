@@ -22,7 +22,7 @@ service Subscribe {
   rpc Acknowledge(AcknowledgeRequest) returns (AcknowledgeResponse) {}
 }
 
-// A subscription must be unique pair of type and name where the name is choosen
+// A subscription must be unique pair of type and name where the name is chosen
 // on creation. Name must be letters, numbers, dashes (-), periods (.),
 // underscores (_), tildes (~), percents (%) or plus signs (+).
 message Subscription {

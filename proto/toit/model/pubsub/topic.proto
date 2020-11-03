@@ -7,7 +7,7 @@ option java_package = "io.toit.proto.toit.model.pubsub";
 option java_outer_classname = "TopicProto";
 
 enum TopicType {
-  TOPIC_TYPE_UNKOWN = 0;
+  TOPIC_TYPE_UNKNOWN = 0;
   TOPIC_TYPE_CLOUD = 1;
   TOPIC_TYPE_DEVICE = 2;
   TOPIC_TYPE_DEVICE_MEMORY = 3;
