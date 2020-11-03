@@ -4,7 +4,7 @@
 // file: toit/api/organization.proto
 
 import * as toit_api_organization_pb from "../../toit/api/organization_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface IOrganizationServiceService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   getUser: grpc.MethodDefinition<toit_api_organization_pb.GetUserRequest, toit_api_organization_pb.GetUserResponse>;

@@ -4,7 +4,7 @@
 // file: toit/api/pubsub/subscribe.proto
 
 import * as toit_api_pubsub_subscribe_pb from "../../../toit/api/pubsub/subscribe_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface ISubscribeService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   createSubscription: grpc.MethodDefinition<toit_api_pubsub_subscribe_pb.CreateSubscriptionRequest, toit_api_pubsub_subscribe_pb.CreateSubscriptionResponse>;

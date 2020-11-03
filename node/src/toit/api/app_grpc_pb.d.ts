@@ -4,7 +4,7 @@
 // file: toit/api/app.proto
 
 import * as toit_api_app_pb from "../../toit/api/app_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface IAppServiceService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   createApp: grpc.MethodDefinition<toit_api_app_pb.CreateAppRequest, toit_api_app_pb.CreateAppResponse>;

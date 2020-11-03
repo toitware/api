@@ -4,7 +4,7 @@
 // file: toit/api/data.proto
 
 import * as toit_api_data_pb from "../../toit/api/data_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface IDataServiceService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   createSubscription: grpc.MethodDefinition<toit_api_data_pb.CreateSubscriptionRequest, toit_api_data_pb.CreateSubscriptionResponse>;

@@ -1,7 +1,7 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 'use strict';
-var grpc = require('grpc');
+var grpc = require('@grpc/grpc-js');
 var toit_api_doctor_pb = require('../../toit/api/doctor_pb.js');
 
 function serialize_toit_api_HealthRequest(arg) {

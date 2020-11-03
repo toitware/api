@@ -4,7 +4,7 @@
 // file: toit/api/sdk.proto
 
 import * as toit_api_sdk_pb from "../../toit/api/sdk_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface ISDKServiceService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   registerSDK: grpc.MethodDefinition<toit_api_sdk_pb.RegisterSDKRequest, toit_api_sdk_pb.RegisterSDKResponse>;

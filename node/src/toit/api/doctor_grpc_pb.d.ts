@@ -4,7 +4,7 @@
 // file: toit/api/doctor.proto
 
 import * as toit_api_doctor_pb from "../../toit/api/doctor_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface IDoctorServiceService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   healthCheck: grpc.MethodDefinition<toit_api_doctor_pb.HealthRequest, toit_api_doctor_pb.HealthResponse>;

@@ -4,7 +4,7 @@
 // file: toit/api/device.proto
 
 import * as toit_api_device_pb from "../../toit/api/device_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface IDeviceServiceService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   getDevice: grpc.MethodDefinition<toit_api_device_pb.GetDeviceRequest, toit_api_device_pb.GetDeviceResponse>;

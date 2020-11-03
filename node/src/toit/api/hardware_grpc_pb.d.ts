@@ -4,7 +4,7 @@
 // file: toit/api/hardware.proto
 
 import * as toit_api_hardware_pb from "../../toit/api/hardware_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface IHardwareServiceService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   claim: grpc.MethodDefinition<toit_api_hardware_pb.ClaimRequest, toit_api_hardware_pb.ClaimResponse>;

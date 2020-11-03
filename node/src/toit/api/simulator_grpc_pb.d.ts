@@ -4,7 +4,7 @@
 // file: toit/api/simulator.proto
 
 import * as toit_api_simulator_pb from "../../toit/api/simulator_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface ISimulatorServiceService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   createSimulator: grpc.MethodDefinition<toit_api_simulator_pb.CreateSimulatorRequest, toit_api_simulator_pb.CreateSimulatorResponse>;

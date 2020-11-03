@@ -4,7 +4,7 @@
 // file: toit/api/auth.proto
 
 import * as toit_api_auth_pb from "../../toit/api/auth_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface IAuthService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   login: grpc.MethodDefinition<toit_api_auth_pb.LoginRequest, toit_api_auth_pb.AuthResponse>;

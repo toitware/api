@@ -1,7 +1,7 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 'use strict';
-var grpc = require('grpc');
+var grpc = require('@grpc/grpc-js');
 var toit_api_pubsub_publish_pb = require('../../../toit/api/pubsub/publish_pb.js');
 
 function serialize_toit_api_pubsub_PublishRequest(arg) {

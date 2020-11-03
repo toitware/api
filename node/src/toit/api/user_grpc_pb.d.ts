@@ -5,7 +5,7 @@
 
 import * as toit_api_user_pb from "../../toit/api/user_pb";
 import * as toit_api_organization_pb from "../../toit/api/organization_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface IUserService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   setPassword: grpc.MethodDefinition<toit_api_user_pb.SetPasswordRequest, toit_api_user_pb.SetPasswordResponse>;

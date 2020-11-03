@@ -4,7 +4,7 @@
 // file: toit/api/program.proto
 
 import * as toit_api_program_pb from "../../toit/api/program_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface IProgramServiceService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   run: grpc.MethodDefinition<toit_api_program_pb.RunRequest, toit_api_program_pb.RunResponse>;

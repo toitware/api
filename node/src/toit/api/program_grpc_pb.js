@@ -1,7 +1,7 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 'use strict';
-var grpc = require('grpc');
+var grpc = require('@grpc/grpc-js');
 var toit_api_program_pb = require('../../toit/api/program_pb.js');
 var toit_model_program_pb = require('../../toit/model/program_pb.js');
 
