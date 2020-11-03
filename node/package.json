@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "github.com/toitware/api"
+    "url": "https://github.com/toitware/api"
   },
   "files": [
     "src"
