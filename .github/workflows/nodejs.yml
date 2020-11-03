@@ -23,6 +23,11 @@ jobs:
         working-directory: ./node
         run: yarn install
 
+      - name: Update version in pom.xml (Release only)
+        if: github.event_name == 'release'
+        working-directory: ./node
+        run: yarn version --new-version $(echo ${{ github.event.release.tag_name }} | sed -e "s/v//gI") --no-git-tag-version
+
       - name: Build protobuf
         working-directory: ./node
         run: make protobuf
@@ -37,3 +42,10 @@ jobs:
           branch: master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish to npmjs.org (Release only)
+        if: github.event_name == 'release'
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_LEON_ACCESS_TOKEN }}
+          access: restricted

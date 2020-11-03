@@ -15,6 +15,9 @@ PROTOC_GEN_GRPC := $(BINS)/grpc_tools_node_protoc_plugin
 PROTOC_GEN_TS := $(BINS)/protoc-gen-ts
 
 src/%.js: $(PROTO_DIR)/%.proto
-	$(PROTOC) $< --js_out=import_style=commonjs,binary:$(BUILD_DIR) --grpc_out=$(BUILD_DIR) --ts_out="service=grpc-node:$(BUILD_DIR)" --plugin=protoc-gen-grpc=$(PROTOC_GEN_GRPC) --plugin=protoc-gen-ts=$(PROTOC_GEN_TS)  $(PROTO_FLAGS)
+	$(PROTOC) $< --js_out=import_style=commonjs,binary:$(BUILD_DIR) --grpc_out=grpc_js:$(BUILD_DIR) --ts_out="service=grpc-node,mode=grpc-js:$(BUILD_DIR)" --plugin=protoc-gen-grpc=$(PROTOC_GEN_GRPC) --plugin=protoc-gen-ts=$(PROTOC_GEN_TS)  $(PROTO_FLAGS)
 
 protobuf: $(BUILD_DIR) $(PROTO_FILES)
+
+clean:
+	rm -rf src/*.js
