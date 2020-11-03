@@ -20,9 +20,9 @@ public final class TopicProto {
   public enum TopicType
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>TOPIC_TYPE_UNKOWN = 0;</code>
+     * <code>TOPIC_TYPE_UNKNOWN = 0;</code>
      */
-    TOPIC_TYPE_UNKOWN(0),
+    TOPIC_TYPE_UNKNOWN(0),
     /**
      * <code>TOPIC_TYPE_CLOUD = 1;</code>
      */
@@ -39,9 +39,9 @@ public final class TopicProto {
     ;
 
     /**
-     * <code>TOPIC_TYPE_UNKOWN = 0;</code>
+     * <code>TOPIC_TYPE_UNKNOWN = 0;</code>
      */
-    public static final int TOPIC_TYPE_UNKOWN_VALUE = 0;
+    public static final int TOPIC_TYPE_UNKNOWN_VALUE = 0;
     /**
      * <code>TOPIC_TYPE_CLOUD = 1;</code>
      */
@@ -80,7 +80,7 @@ public final class TopicProto {
      */
     public static TopicType forNumber(int value) {
       switch (value) {
-        case 0: return TOPIC_TYPE_UNKOWN;
+        case 0: return TOPIC_TYPE_UNKNOWN;
         case 1: return TOPIC_TYPE_CLOUD;
         case 2: return TOPIC_TYPE_DEVICE;
         case 3: return TOPIC_TYPE_DEVICE_MEMORY;
@@ -323,7 +323,7 @@ public final class TopicProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (type_ != io.toit.proto.toit.model.pubsub.TopicProto.TopicType.TOPIC_TYPE_UNKOWN.getNumber()) {
+      if (type_ != io.toit.proto.toit.model.pubsub.TopicProto.TopicType.TOPIC_TYPE_UNKNOWN.getNumber()) {
         output.writeEnum(1, type_);
       }
       if (!getNameBytes().isEmpty()) {
@@ -338,7 +338,7 @@ public final class TopicProto {
       if (size != -1) return size;
 
       size = 0;
-      if (type_ != io.toit.proto.toit.model.pubsub.TopicProto.TopicType.TOPIC_TYPE_UNKOWN.getNumber()) {
+      if (type_ != io.toit.proto.toit.model.pubsub.TopicProto.TopicType.TOPIC_TYPE_UNKNOWN.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, type_);
       }
@@ -823,13 +823,13 @@ public final class TopicProto {
     java.lang.String[] descriptorData = {
       "\n\035toit/model/pubsub/topic.proto\022\021toit.mo" +
       "del.pubsub\"A\n\005Topic\022*\n\004type\030\001 \001(\0162\034.toit" +
-      ".model.pubsub.TopicType\022\014\n\004name\030\002 \001(\t*m\n" +
-      "\tTopicType\022\025\n\021TOPIC_TYPE_UNKOWN\020\000\022\024\n\020TOP" +
-      "IC_TYPE_CLOUD\020\001\022\025\n\021TOPIC_TYPE_DEVICE\020\002\022\034" +
-      "\n\030TOPIC_TYPE_DEVICE_MEMORY\020\003B\\\n\037io.toit." +
-      "proto.toit.model.pubsubB\nTopicProtoZ-git" +
-      "hub.com/toitware/api.git/toit/model/pubs" +
-      "ubb\006proto3"
+      ".model.pubsub.TopicType\022\014\n\004name\030\002 \001(\t*n\n" +
+      "\tTopicType\022\026\n\022TOPIC_TYPE_UNKNOWN\020\000\022\024\n\020TO" +
+      "PIC_TYPE_CLOUD\020\001\022\025\n\021TOPIC_TYPE_DEVICE\020\002\022" +
+      "\034\n\030TOPIC_TYPE_DEVICE_MEMORY\020\003B\\\n\037io.toit" +
+      ".proto.toit.model.pubsubB\nTopicProtoZ-gi" +
+      "thub.com/toitware/api.git/toit/model/pub" +
+      "subb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

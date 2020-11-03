@@ -52,7 +52,7 @@ public final class SubscribeProto {
   }
   /**
    * <pre>
-   * A subscription must be unique pair of type and name where the name is choosen
+   * A subscription must be unique pair of type and name where the name is chosen
    * on creation. Name must be letters, numbers, dashes (-), periods (.),
    * underscores (_), tildes (~), percents (%) or plus signs (+).
    * </pre>
@@ -393,7 +393,7 @@ public final class SubscribeProto {
     }
     /**
      * <pre>
-     * A subscription must be unique pair of type and name where the name is choosen
+     * A subscription must be unique pair of type and name where the name is chosen
      * on creation. Name must be letters, numbers, dashes (-), periods (.),
      * underscores (_), tildes (~), percents (%) or plus signs (+).
      * </pre>
