@@ -1,4 +1,4 @@
-# Toitware java API [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.toit.api/toit-api/badge.svg?style=plastic)](https://maven-badges.herokuapp.com/maven-central/io.toit.api/toit-api)
+# Toitware java API [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.toit.api/toit-api/badge.svg?style=plastic)](https://maven-badges.herokuapp.com/maven-central/io.toit.api/toit-api) [![javadoc](https://javadoc.io/badge2/io.toit.api/toit-api/javadoc.svg)](https://javadoc.io/doc/io.toit.api/toit-api)
 
 Generated protobuf and grpc stubs for java.
 
