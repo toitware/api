@@ -1,11 +1,12 @@
+__version__="0.0.3"
 import setuptools
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="api",
-    version="0.0.1",
+    name="toit-api",
+    version=__version__,
     author="Toitware",
     author_email="developers@toitware.com",
     description="Toitware",

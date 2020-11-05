@@ -5,6 +5,8 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+  release:
+    types: [ published ]
 
 jobs:
 
@@ -30,6 +32,13 @@ jobs:
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
+      - name: Update version in setup.py (Release only)
+        if: github.event_name == 'release'
+        working-directory: ./python
+        run: |
+          PY_VERSION="$(echo ${{ github.event.release.tag_name }} | sed -e "s/v//gI")"
+          sed -i 's/__version__=.*/__version__="'`echo $PY_VERSION`'"/' setup.py
+
       - name: Build protobuf
         working-directory: ./python
         run: make protobuf
@@ -44,3 +53,31 @@ jobs:
           branch: master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Bundle (Release only)
+        if: github.event_name == 'release'
+        working-directory: ./python
+        run: python setup.py sdist
+
+      - name: Upload tarball to pypi (Release only)
+        if: github.event_name == 'release'
+        uses: pypa/gh-action-pypi-publish@v1.4.1
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_LEON_TOKEN }}
+          packages_dir: python/dist/
+
+      - name: Rename before upload to release (Release only)
+        if: github.event_name == 'release'
+        working-directory: ./python
+        run: for f in $(find dist/ -type f | grep -v 'python_'); do cp -- "$f" "$(dirname $f)/python_$(basename $f)"; done
+
+      - name: Upload tarball to release (Release only)
+        if: github.event_name == 'release'
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: python/dist/python_*.tar.gz
+          tag: ${{ github.ref }}
+          overwrite: true
+          file_glob: true
