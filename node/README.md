@@ -1,4 +1,4 @@
-# Toitware node API [![npm version](https://img.shields.io/npm/v/@toitware/api.svg)](https://npmjs.org/package/@toitware/api)
+# Toitware node API [![npm version](https://img.shields.io/npm/v/@toitware/api.svg?color=success)](https://npmjs.org/package/@toitware/api)
 
 Generated protobuf and grpc stubs for node and typescript.
 
