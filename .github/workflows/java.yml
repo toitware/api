@@ -2,11 +2,11 @@ name: Java
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
   release:
-    types: [ published ]
+    types: [published]
 
 jobs:
   java:
@@ -62,7 +62,7 @@ jobs:
       - name: Deploy jar (Release only)
         if: github.event_name == 'release'
         working-directory: ./java
-        run: mvn -B deploy -P release --file pom.xml
+        run: mvn -B deploy nexus-staging:release -P release --file pom.xml
         env:
           SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
           SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
