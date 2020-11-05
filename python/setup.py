@@ -1,4 +1,4 @@
-__version__="0.0.3"
+__version__="0.0.1"
 import setuptools
 
 with open("README.md", "r") as fh:
