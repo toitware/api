@@ -1,4 +1,4 @@
-# Toitware python API [![pypi version](https://img.shields.io/pypi/v/toit-api)](https://pypi.org/project/toit-api/)
+# Toitware python API [![pypi version](https://img.shields.io/pypi/v/toit-api?color=success)](https://pypi.org/project/toit-api/)
 
 Generated protobuf and grpc stubs for node and typescript.
 
