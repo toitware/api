@@ -15,6 +15,7 @@ service User {
     rpc ChangePasswordWithRPToken(ChangePasswordWithRPTokenRequest) returns (ChangePasswordWithRPTokenResponse) {}
     rpc GetCurrentUser(GetCurrentUserRequest) returns (GetCurrentUserResponse) {}
     rpc ListOrganizations(ListOrganizationsRequest) returns (ListOrganizationsResponse) {}
+    rpc GetOrganization(GetOrganizationRequest) returns (GetOrganizationResponse) {}
     rpc ListUsers(ListUsersRequest) returns (ListUsersResponse) {
         option deprecated = true;
     }
@@ -62,4 +63,10 @@ message ListOrganizationsRequest {
 message ListOrganizationsResponse {
     repeated model.Organization organizations = 1;
     bytes offset = 2;
+}
+
+message GetOrganizationRequest { bytes id = 1; }
+
+message GetOrganizationResponse {
+  model.Organization organization = 1;
 }
