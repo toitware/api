@@ -21,7 +21,7 @@ message CreateAppRequest {
 
   string name = 1;
   string namespace = 2;
-  string version = 3;
+  uint64 revision = 3;
   map<string, toit.model.JobSpec> jobs = 5;
 
   oneof source {
