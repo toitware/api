@@ -13,6 +13,7 @@ interface IUserService extends grpc.ServiceDefinition<grpc.UntypedServiceImpleme
   changePasswordWithRPToken: grpc.MethodDefinition<toit_api_user_pb.ChangePasswordWithRPTokenRequest, toit_api_user_pb.ChangePasswordWithRPTokenResponse>;
   getCurrentUser: grpc.MethodDefinition<toit_api_user_pb.GetCurrentUserRequest, toit_api_user_pb.GetCurrentUserResponse>;
   listOrganizations: grpc.MethodDefinition<toit_api_user_pb.ListOrganizationsRequest, toit_api_user_pb.ListOrganizationsResponse>;
+  getOrganization: grpc.MethodDefinition<toit_api_user_pb.GetOrganizationRequest, toit_api_user_pb.GetOrganizationResponse>;
   listUsers: grpc.MethodDefinition<toit_api_organization_pb.ListUsersRequest, toit_api_organization_pb.ListUsersResponse>;
   createUser: grpc.MethodDefinition<toit_api_organization_pb.CreateUserRequest, toit_api_organization_pb.CreateUserResponse>;
 }
@@ -36,6 +37,9 @@ export class UserClient extends grpc.Client {
   listOrganizations(argument: toit_api_user_pb.ListOrganizationsRequest, callback: grpc.requestCallback<toit_api_user_pb.ListOrganizationsResponse>): grpc.ClientUnaryCall;
   listOrganizations(argument: toit_api_user_pb.ListOrganizationsRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_user_pb.ListOrganizationsResponse>): grpc.ClientUnaryCall;
   listOrganizations(argument: toit_api_user_pb.ListOrganizationsRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_user_pb.ListOrganizationsResponse>): grpc.ClientUnaryCall;
+  getOrganization(argument: toit_api_user_pb.GetOrganizationRequest, callback: grpc.requestCallback<toit_api_user_pb.GetOrganizationResponse>): grpc.ClientUnaryCall;
+  getOrganization(argument: toit_api_user_pb.GetOrganizationRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_user_pb.GetOrganizationResponse>): grpc.ClientUnaryCall;
+  getOrganization(argument: toit_api_user_pb.GetOrganizationRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_user_pb.GetOrganizationResponse>): grpc.ClientUnaryCall;
   listUsers(argument: toit_api_organization_pb.ListUsersRequest, callback: grpc.requestCallback<toit_api_organization_pb.ListUsersResponse>): grpc.ClientUnaryCall;
   listUsers(argument: toit_api_organization_pb.ListUsersRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_organization_pb.ListUsersResponse>): grpc.ClientUnaryCall;
   listUsers(argument: toit_api_organization_pb.ListUsersRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_organization_pb.ListUsersResponse>): grpc.ClientUnaryCall;

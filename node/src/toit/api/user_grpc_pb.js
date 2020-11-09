@@ -72,6 +72,28 @@ function deserialize_toit_api_GetCurrentUserResponse(buffer_arg) {
   return toit_api_user_pb.GetCurrentUserResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_toit_api_GetOrganizationRequest(arg) {
+  if (!(arg instanceof toit_api_user_pb.GetOrganizationRequest)) {
+    throw new Error('Expected argument of type toit.api.GetOrganizationRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_GetOrganizationRequest(buffer_arg) {
+  return toit_api_user_pb.GetOrganizationRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_toit_api_GetOrganizationResponse(arg) {
+  if (!(arg instanceof toit_api_user_pb.GetOrganizationResponse)) {
+    throw new Error('Expected argument of type toit.api.GetOrganizationResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_GetOrganizationResponse(buffer_arg) {
+  return toit_api_user_pb.GetOrganizationResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_toit_api_InitiateResetPasswordRequest(arg) {
   if (!(arg instanceof toit_api_user_pb.InitiateResetPasswordRequest)) {
     throw new Error('Expected argument of type toit.api.InitiateResetPasswordRequest');
@@ -216,6 +238,17 @@ var UserService = exports.UserService = {
     requestDeserialize: deserialize_toit_api_ListOrganizationsRequest,
     responseSerialize: serialize_toit_api_ListOrganizationsResponse,
     responseDeserialize: deserialize_toit_api_ListOrganizationsResponse,
+  },
+  getOrganization: {
+    path: '/toit.api.User/GetOrganization',
+    requestStream: false,
+    responseStream: false,
+    requestType: toit_api_user_pb.GetOrganizationRequest,
+    responseType: toit_api_user_pb.GetOrganizationResponse,
+    requestSerialize: serialize_toit_api_GetOrganizationRequest,
+    requestDeserialize: deserialize_toit_api_GetOrganizationRequest,
+    responseSerialize: serialize_toit_api_GetOrganizationResponse,
+    responseDeserialize: deserialize_toit_api_GetOrganizationResponse,
   },
   listUsers: {
     path: '/toit.api.User/ListUsers',

@@ -233,3 +233,47 @@ export namespace ListOrganizationsResponse {
   }
 }
 
+export class GetOrganizationRequest extends jspb.Message {
+  getId(): Uint8Array | string;
+  getId_asU8(): Uint8Array;
+  getId_asB64(): string;
+  setId(value: Uint8Array | string): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GetOrganizationRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: GetOrganizationRequest): GetOrganizationRequest.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: GetOrganizationRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GetOrganizationRequest;
+  static deserializeBinaryFromReader(message: GetOrganizationRequest, reader: jspb.BinaryReader): GetOrganizationRequest;
+}
+
+export namespace GetOrganizationRequest {
+  export type AsObject = {
+    id: Uint8Array | string,
+  }
+}
+
+export class GetOrganizationResponse extends jspb.Message {
+  hasOrganization(): boolean;
+  clearOrganization(): void;
+  getOrganization(): toit_model_organization_pb.Organization | undefined;
+  setOrganization(value?: toit_model_organization_pb.Organization): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GetOrganizationResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: GetOrganizationResponse): GetOrganizationResponse.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: GetOrganizationResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GetOrganizationResponse;
+  static deserializeBinaryFromReader(message: GetOrganizationResponse, reader: jspb.BinaryReader): GetOrganizationResponse;
+}
+
+export namespace GetOrganizationResponse {
+  export type AsObject = {
+    organization?: toit_model_organization_pb.Organization.AsObject,
+  }
+}
+
