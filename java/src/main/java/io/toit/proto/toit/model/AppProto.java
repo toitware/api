@@ -49,16 +49,10 @@ public final class AppProto {
         getNamespaceBytes();
 
     /**
-     * <code>string version = 4;</code>
-     * @return The version.
+     * <code>uint64 revision = 4;</code>
+     * @return The revision.
      */
-    java.lang.String getVersion();
-    /**
-     * <code>string version = 4;</code>
-     * @return The bytes for version.
-     */
-    com.google.protobuf.ByteString
-        getVersionBytes();
+    long getRevision();
 
     /**
      * <code>bytes source_id = 5;</code>
@@ -137,7 +131,6 @@ public final class AppProto {
       appId_ = com.google.protobuf.ByteString.EMPTY;
       name_ = "";
       namespace_ = "";
-      version_ = "";
       sourceId_ = com.google.protobuf.ByteString.EMPTY;
       createdBy_ = com.google.protobuf.ByteString.EMPTY;
     }
@@ -190,10 +183,9 @@ public final class AppProto {
               namespace_ = s;
               break;
             }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 32: {
 
-              version_ = s;
+              revision_ = input.readUInt64();
               break;
             }
             case 42: {
@@ -358,40 +350,14 @@ public final class AppProto {
       }
     }
 
-    public static final int VERSION_FIELD_NUMBER = 4;
-    private volatile java.lang.Object version_;
+    public static final int REVISION_FIELD_NUMBER = 4;
+    private long revision_;
     /**
-     * <code>string version = 4;</code>
-     * @return The version.
+     * <code>uint64 revision = 4;</code>
+     * @return The revision.
      */
-    public java.lang.String getVersion() {
-      java.lang.Object ref = version_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        version_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string version = 4;</code>
-     * @return The bytes for version.
-     */
-    public com.google.protobuf.ByteString
-        getVersionBytes() {
-      java.lang.Object ref = version_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        version_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public long getRevision() {
+      return revision_;
     }
 
     public static final int SOURCE_ID_FIELD_NUMBER = 5;
@@ -536,8 +502,8 @@ public final class AppProto {
       if (!getNamespaceBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, namespace_);
       }
-      if (!getVersionBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, version_);
+      if (revision_ != 0L) {
+        output.writeUInt64(4, revision_);
       }
       if (!sourceId_.isEmpty()) {
         output.writeBytes(5, sourceId_);
@@ -573,8 +539,9 @@ public final class AppProto {
       if (!getNamespaceBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, namespace_);
       }
-      if (!getVersionBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, version_);
+      if (revision_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, revision_);
       }
       if (!sourceId_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
@@ -619,8 +586,8 @@ public final class AppProto {
           .equals(other.getName())) return false;
       if (!getNamespace()
           .equals(other.getNamespace())) return false;
-      if (!getVersion()
-          .equals(other.getVersion())) return false;
+      if (getRevision()
+          != other.getRevision()) return false;
       if (!getSourceId()
           .equals(other.getSourceId())) return false;
       if (!internalGetJobs().equals(
@@ -649,8 +616,9 @@ public final class AppProto {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + NAMESPACE_FIELD_NUMBER;
       hash = (53 * hash) + getNamespace().hashCode();
-      hash = (37 * hash) + VERSION_FIELD_NUMBER;
-      hash = (53 * hash) + getVersion().hashCode();
+      hash = (37 * hash) + REVISION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRevision());
       hash = (37 * hash) + SOURCE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSourceId().hashCode();
       if (!internalGetJobs().getMap().isEmpty()) {
@@ -824,7 +792,7 @@ public final class AppProto {
 
         namespace_ = "";
 
-        version_ = "";
+        revision_ = 0L;
 
         sourceId_ = com.google.protobuf.ByteString.EMPTY;
 
@@ -867,7 +835,7 @@ public final class AppProto {
         result.appId_ = appId_;
         result.name_ = name_;
         result.namespace_ = namespace_;
-        result.version_ = version_;
+        result.revision_ = revision_;
         result.sourceId_ = sourceId_;
         result.jobs_ = internalGetJobs();
         result.jobs_.makeImmutable();
@@ -936,9 +904,8 @@ public final class AppProto {
           namespace_ = other.namespace_;
           onChanged();
         }
-        if (!other.getVersion().isEmpty()) {
-          version_ = other.version_;
-          onChanged();
+        if (other.getRevision() != 0L) {
+          setRevision(other.getRevision());
         }
         if (other.getSourceId() != com.google.protobuf.ByteString.EMPTY) {
           setSourceId(other.getSourceId());
@@ -1166,78 +1133,32 @@ public final class AppProto {
         return this;
       }
 
-      private java.lang.Object version_ = "";
+      private long revision_ ;
       /**
-       * <code>string version = 4;</code>
-       * @return The version.
+       * <code>uint64 revision = 4;</code>
+       * @return The revision.
        */
-      public java.lang.String getVersion() {
-        java.lang.Object ref = version_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          version_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      public long getRevision() {
+        return revision_;
       }
       /**
-       * <code>string version = 4;</code>
-       * @return The bytes for version.
-       */
-      public com.google.protobuf.ByteString
-          getVersionBytes() {
-        java.lang.Object ref = version_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          version_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string version = 4;</code>
-       * @param value The version to set.
+       * <code>uint64 revision = 4;</code>
+       * @param value The revision to set.
        * @return This builder for chaining.
        */
-      public Builder setVersion(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        version_ = value;
+      public Builder setRevision(long value) {
+        
+        revision_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string version = 4;</code>
+       * <code>uint64 revision = 4;</code>
        * @return This builder for chaining.
        */
-      public Builder clearVersion() {
+      public Builder clearRevision() {
         
-        version_ = getDefaultInstance().getVersion();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string version = 4;</code>
-       * @param value The bytes for version to set.
-       * @return This builder for chaining.
-       */
-      public Builder setVersionBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        version_ = value;
+        revision_ = 0L;
         onChanged();
         return this;
       }
@@ -4106,22 +4027,22 @@ public final class AppProto {
       "\n\024toit/model/app.proto\022\ntoit.model\032\037goog" +
       "le/protobuf/timestamp.proto\032\035toit/model/" +
       "pubsub/topic.proto\032\024toit/model/job.proto" +
-      "\"\211\002\n\003App\022\016\n\006app_id\030\001 \001(\014\022\014\n\004name\030\002 \001(\t\022\021" +
-      "\n\tnamespace\030\003 \001(\t\022\017\n\007version\030\004 \001(\t\022\021\n\tso" +
-      "urce_id\030\005 \001(\014\022\'\n\004jobs\030\006 \003(\0132\031.toit.model" +
-      ".App.JobsEntry\022.\n\ncreated_at\030\007 \001(\0132\032.goo" +
-      "gle.protobuf.Timestamp\022\022\n\ncreated_by\030\010 \001" +
-      "(\014\032@\n\tJobsEntry\022\013\n\003key\030\001 \001(\t\022\"\n\005value\030\002 " +
-      "\001(\0132\023.toit.model.JobSpec:\0028\001\"\216\002\n\007JobSpec" +
-      "\022\014\n\004name\030\001 \001(\t\022\022\n\nentrypoint\030\002 \001(\t\022+\n\tre" +
-      "sources\030\003 \001(\0132\030.toit.model.JobResources\022" +
-      ")\n\010triggers\030\004 \001(\0132\027.toit.model.JobTrigge" +
-      "rs\022*\n\006pubsub\030\005 \001(\0132\032.toit.model.JobSpec." +
-      "PubSub\022\"\n\005files\030\006 \003(\0132\023.toit.model.JobFi" +
-      "le\0329\n\006PubSub\022/\n\rsubscriptions\030\001 \003(\0132\030.to" +
-      "it.model.pubsub.TopicBL\n\030io.toit.proto.t" +
-      "oit.modelB\010AppProtoZ&github.com/toitware" +
-      "/api.git/toit/modelb\006proto3"
+      "\"\212\002\n\003App\022\016\n\006app_id\030\001 \001(\014\022\014\n\004name\030\002 \001(\t\022\021" +
+      "\n\tnamespace\030\003 \001(\t\022\020\n\010revision\030\004 \001(\004\022\021\n\ts" +
+      "ource_id\030\005 \001(\014\022\'\n\004jobs\030\006 \003(\0132\031.toit.mode" +
+      "l.App.JobsEntry\022.\n\ncreated_at\030\007 \001(\0132\032.go" +
+      "ogle.protobuf.Timestamp\022\022\n\ncreated_by\030\010 " +
+      "\001(\014\032@\n\tJobsEntry\022\013\n\003key\030\001 \001(\t\022\"\n\005value\030\002" +
+      " \001(\0132\023.toit.model.JobSpec:\0028\001\"\216\002\n\007JobSpe" +
+      "c\022\014\n\004name\030\001 \001(\t\022\022\n\nentrypoint\030\002 \001(\t\022+\n\tr" +
+      "esources\030\003 \001(\0132\030.toit.model.JobResources" +
+      "\022)\n\010triggers\030\004 \001(\0132\027.toit.model.JobTrigg" +
+      "ers\022*\n\006pubsub\030\005 \001(\0132\032.toit.model.JobSpec" +
+      ".PubSub\022\"\n\005files\030\006 \003(\0132\023.toit.model.JobF" +
+      "ile\0329\n\006PubSub\022/\n\rsubscriptions\030\001 \003(\0132\030.t" +
+      "oit.model.pubsub.TopicBL\n\030io.toit.proto." +
+      "toit.modelB\010AppProtoZ&github.com/toitwar" +
+      "e/api.git/toit/modelb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4135,7 +4056,7 @@ public final class AppProto {
     internal_static_toit_model_App_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_App_descriptor,
-        new java.lang.String[] { "AppId", "Name", "Namespace", "Version", "SourceId", "Jobs", "CreatedAt", "CreatedBy", });
+        new java.lang.String[] { "AppId", "Name", "Namespace", "Revision", "SourceId", "Jobs", "CreatedAt", "CreatedBy", });
     internal_static_toit_model_App_JobsEntry_descriptor =
       internal_static_toit_model_App_descriptor.getNestedTypes().get(0);
     internal_static_toit_model_App_JobsEntry_fieldAccessorTable = new
