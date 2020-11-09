@@ -251,7 +251,7 @@ proto.toit.api.CreateAppRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     name: jspb.Message.getFieldWithDefault(msg, 1, ""),
     namespace: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    version: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    revision: jspb.Message.getFieldWithDefault(msg, 3, 0),
     jobsMap: (f = msg.getJobsMap()) ? f.toObject(includeInstance, proto.toit.model.JobSpec.toObject) : [],
     files: (f = msg.getFiles()) && proto.toit.api.CreateAppRequest.Files.toObject(includeInstance, f),
     bundle: msg.getBundle_asB64()
@@ -300,8 +300,8 @@ proto.toit.api.CreateAppRequest.deserializeBinaryFromReader = function(msg, read
       msg.setNamespace(value);
       break;
     case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setVersion(value);
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setRevision(value);
       break;
     case 5:
       var value = msg.getJobsMap();
@@ -361,9 +361,9 @@ proto.toit.api.CreateAppRequest.serializeBinaryToWriter = function(message, writ
       f
     );
   }
-  f = message.getVersion();
-  if (f.length > 0) {
-    writer.writeString(
+  f = message.getRevision();
+  if (f !== 0) {
+    writer.writeUint64(
       3,
       f
     );
@@ -560,20 +560,20 @@ proto.toit.api.CreateAppRequest.prototype.setNamespace = function(value) {
 
 
 /**
- * optional string version = 3;
- * @return {string}
+ * optional uint64 revision = 3;
+ * @return {number}
  */
-proto.toit.api.CreateAppRequest.prototype.getVersion = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+proto.toit.api.CreateAppRequest.prototype.getRevision = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
 /**
- * @param {string} value
+ * @param {number} value
  * @return {!proto.toit.api.CreateAppRequest} returns this
  */
-proto.toit.api.CreateAppRequest.prototype.setVersion = function(value) {
-  return jspb.Message.setProto3StringField(this, 3, value);
+proto.toit.api.CreateAppRequest.prototype.setRevision = function(value) {
+  return jspb.Message.setProto3IntField(this, 3, value);
 };
 
 

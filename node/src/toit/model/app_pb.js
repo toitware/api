@@ -119,7 +119,7 @@ proto.toit.model.App.toObject = function(includeInstance, msg) {
     appId: msg.getAppId_asB64(),
     name: jspb.Message.getFieldWithDefault(msg, 2, ""),
     namespace: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    version: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    revision: jspb.Message.getFieldWithDefault(msg, 4, 0),
     sourceId: msg.getSourceId_asB64(),
     jobsMap: (f = msg.getJobsMap()) ? f.toObject(includeInstance, proto.toit.model.JobSpec.toObject) : [],
     createdAt: (f = msg.getCreatedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
@@ -173,8 +173,8 @@ proto.toit.model.App.deserializeBinaryFromReader = function(msg, reader) {
       msg.setNamespace(value);
       break;
     case 4:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setVersion(value);
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setRevision(value);
       break;
     case 5:
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
@@ -245,9 +245,9 @@ proto.toit.model.App.serializeBinaryToWriter = function(message, writer) {
       f
     );
   }
-  f = message.getVersion();
-  if (f.length > 0) {
-    writer.writeString(
+  f = message.getRevision();
+  if (f !== 0) {
+    writer.writeUint64(
       4,
       f
     );
@@ -360,20 +360,20 @@ proto.toit.model.App.prototype.setNamespace = function(value) {
 
 
 /**
- * optional string version = 4;
- * @return {string}
+ * optional uint64 revision = 4;
+ * @return {number}
  */
-proto.toit.model.App.prototype.getVersion = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+proto.toit.model.App.prototype.getRevision = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
 
 /**
- * @param {string} value
+ * @param {number} value
  * @return {!proto.toit.model.App} returns this
  */
-proto.toit.model.App.prototype.setVersion = function(value) {
-  return jspb.Message.setProto3StringField(this, 4, value);
+proto.toit.model.App.prototype.setRevision = function(value) {
+  return jspb.Message.setProto3IntField(this, 4, value);
 };
 
 

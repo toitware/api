@@ -11,8 +11,8 @@ export class CreateAppRequest extends jspb.Message {
   getNamespace(): string;
   setNamespace(value: string): void;
 
-  getVersion(): string;
-  setVersion(value: string): void;
+  getRevision(): number;
+  setRevision(value: number): void;
 
   getJobsMap(): jspb.Map<string, toit_model_app_pb.JobSpec>;
   clearJobsMap(): void;
@@ -43,7 +43,7 @@ export namespace CreateAppRequest {
   export type AsObject = {
     name: string,
     namespace: string,
-    version: string,
+    revision: number,
     jobsMap: Array<[string, toit_model_app_pb.JobSpec.AsObject]>,
     files?: CreateAppRequest.Files.AsObject,
     bundle: Uint8Array | string,

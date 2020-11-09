@@ -18,8 +18,8 @@ export class App extends jspb.Message {
   getNamespace(): string;
   setNamespace(value: string): void;
 
-  getVersion(): string;
-  setVersion(value: string): void;
+  getRevision(): number;
+  setRevision(value: number): void;
 
   getSourceId(): Uint8Array | string;
   getSourceId_asU8(): Uint8Array;
@@ -53,7 +53,7 @@ export namespace App {
     appId: Uint8Array | string,
     name: string,
     namespace: string,
-    version: string,
+    revision: number,
     sourceId: Uint8Array | string,
     jobsMap: Array<[string, JobSpec.AsObject]>,
     createdAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
