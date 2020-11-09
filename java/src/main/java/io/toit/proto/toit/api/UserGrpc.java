@@ -182,6 +182,37 @@ public final class UserGrpc {
     return getListOrganizationsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<io.toit.proto.toit.api.UserProto.GetOrganizationRequest,
+      io.toit.proto.toit.api.UserProto.GetOrganizationResponse> getGetOrganizationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetOrganization",
+      requestType = io.toit.proto.toit.api.UserProto.GetOrganizationRequest.class,
+      responseType = io.toit.proto.toit.api.UserProto.GetOrganizationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.toit.proto.toit.api.UserProto.GetOrganizationRequest,
+      io.toit.proto.toit.api.UserProto.GetOrganizationResponse> getGetOrganizationMethod() {
+    io.grpc.MethodDescriptor<io.toit.proto.toit.api.UserProto.GetOrganizationRequest, io.toit.proto.toit.api.UserProto.GetOrganizationResponse> getGetOrganizationMethod;
+    if ((getGetOrganizationMethod = UserGrpc.getGetOrganizationMethod) == null) {
+      synchronized (UserGrpc.class) {
+        if ((getGetOrganizationMethod = UserGrpc.getGetOrganizationMethod) == null) {
+          UserGrpc.getGetOrganizationMethod = getGetOrganizationMethod =
+              io.grpc.MethodDescriptor.<io.toit.proto.toit.api.UserProto.GetOrganizationRequest, io.toit.proto.toit.api.UserProto.GetOrganizationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetOrganization"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.toit.proto.toit.api.UserProto.GetOrganizationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.toit.proto.toit.api.UserProto.GetOrganizationResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new UserMethodDescriptorSupplier("GetOrganization"))
+              .build();
+        }
+      }
+    }
+    return getGetOrganizationMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<io.toit.proto.toit.api.OrgProto.ListUsersRequest,
       io.toit.proto.toit.api.OrgProto.ListUsersResponse> getListUsersMethod;
 
@@ -329,6 +360,13 @@ public final class UserGrpc {
 
     /**
      */
+    public void getOrganization(io.toit.proto.toit.api.UserProto.GetOrganizationRequest request,
+        io.grpc.stub.StreamObserver<io.toit.proto.toit.api.UserProto.GetOrganizationResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetOrganizationMethod(), responseObserver);
+    }
+
+    /**
+     */
     @java.lang.Deprecated
     public void listUsers(io.toit.proto.toit.api.OrgProto.ListUsersRequest request,
         io.grpc.stub.StreamObserver<io.toit.proto.toit.api.OrgProto.ListUsersResponse> responseObserver) {
@@ -380,6 +418,13 @@ public final class UserGrpc {
                 io.toit.proto.toit.api.UserProto.ListOrganizationsRequest,
                 io.toit.proto.toit.api.UserProto.ListOrganizationsResponse>(
                   this, METHODID_LIST_ORGANIZATIONS)))
+          .addMethod(
+            getGetOrganizationMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.toit.proto.toit.api.UserProto.GetOrganizationRequest,
+                io.toit.proto.toit.api.UserProto.GetOrganizationResponse>(
+                  this, METHODID_GET_ORGANIZATION)))
           .addMethod(
             getListUsersMethod(),
             asyncUnaryCall(
@@ -454,6 +499,14 @@ public final class UserGrpc {
 
     /**
      */
+    public void getOrganization(io.toit.proto.toit.api.UserProto.GetOrganizationRequest request,
+        io.grpc.stub.StreamObserver<io.toit.proto.toit.api.UserProto.GetOrganizationResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetOrganizationMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
     @java.lang.Deprecated
     public void listUsers(io.toit.proto.toit.api.OrgProto.ListUsersRequest request,
         io.grpc.stub.StreamObserver<io.toit.proto.toit.api.OrgProto.ListUsersResponse> responseObserver) {
@@ -518,6 +571,13 @@ public final class UserGrpc {
     public io.toit.proto.toit.api.UserProto.ListOrganizationsResponse listOrganizations(io.toit.proto.toit.api.UserProto.ListOrganizationsRequest request) {
       return blockingUnaryCall(
           getChannel(), getListOrganizationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public io.toit.proto.toit.api.UserProto.GetOrganizationResponse getOrganization(io.toit.proto.toit.api.UserProto.GetOrganizationRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getGetOrganizationMethod(), getCallOptions(), request);
     }
 
     /**
@@ -593,6 +653,14 @@ public final class UserGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<io.toit.proto.toit.api.UserProto.GetOrganizationResponse> getOrganization(
+        io.toit.proto.toit.api.UserProto.GetOrganizationRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetOrganizationMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<io.toit.proto.toit.api.OrgProto.ListUsersResponse> listUsers(
         io.toit.proto.toit.api.OrgProto.ListUsersRequest request) {
@@ -615,8 +683,9 @@ public final class UserGrpc {
   private static final int METHODID_CHANGE_PASSWORD_WITH_RPTOKEN = 2;
   private static final int METHODID_GET_CURRENT_USER = 3;
   private static final int METHODID_LIST_ORGANIZATIONS = 4;
-  private static final int METHODID_LIST_USERS = 5;
-  private static final int METHODID_CREATE_USER = 6;
+  private static final int METHODID_GET_ORGANIZATION = 5;
+  private static final int METHODID_LIST_USERS = 6;
+  private static final int METHODID_CREATE_USER = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -654,6 +723,10 @@ public final class UserGrpc {
         case METHODID_LIST_ORGANIZATIONS:
           serviceImpl.listOrganizations((io.toit.proto.toit.api.UserProto.ListOrganizationsRequest) request,
               (io.grpc.stub.StreamObserver<io.toit.proto.toit.api.UserProto.ListOrganizationsResponse>) responseObserver);
+          break;
+        case METHODID_GET_ORGANIZATION:
+          serviceImpl.getOrganization((io.toit.proto.toit.api.UserProto.GetOrganizationRequest) request,
+              (io.grpc.stub.StreamObserver<io.toit.proto.toit.api.UserProto.GetOrganizationResponse>) responseObserver);
           break;
         case METHODID_LIST_USERS:
           serviceImpl.listUsers((io.toit.proto.toit.api.OrgProto.ListUsersRequest) request,
@@ -729,6 +802,7 @@ public final class UserGrpc {
               .addMethod(getChangePasswordWithRPTokenMethod())
               .addMethod(getGetCurrentUserMethod())
               .addMethod(getListOrganizationsMethod())
+              .addMethod(getGetOrganizationMethod())
               .addMethod(getListUsersMethod())
               .addMethod(getCreateUserMethod())
               .build();
