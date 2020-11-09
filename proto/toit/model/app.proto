@@ -14,7 +14,7 @@ message App {
   bytes app_id = 1;
   string name = 2;
   string namespace = 3;
-  string version = 4;
+  uint64 revision = 4;
   bytes source_id = 5;
   map<string, JobSpec> jobs = 6;
   google.protobuf.Timestamp created_at = 7;
