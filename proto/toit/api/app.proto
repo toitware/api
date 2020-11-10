@@ -26,7 +26,7 @@ message CreateAppRequest {
 
   oneof source {
     Files files = 6;
-    bytes bundle = 7;
+    bytes tarball = 7;
   }
 }
 
