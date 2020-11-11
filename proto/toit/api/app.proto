@@ -11,6 +11,7 @@ option java_outer_classname = "AppProto";
 service AppService {
   rpc CreateApp(CreateAppRequest) returns (CreateAppResponse) {}
   rpc GetApp(GetAppRequest) returns (GetAppResponse) {}
+  rpc GetAppFiles(GetAppFilesRequest) returns (GetAppFilesResponse) {}
   rpc ListApps(ListAppsRequest) returns (stream ListAppsResponse) {}
 }
 
@@ -36,10 +37,29 @@ message CreateAppResponse {
 
 message GetAppRequest {
   bytes app_id = 1;
+  // if revision is zero will give the latest.
+  uint64 revision = 2;
 }
 
 message GetAppResponse {
   model.App app = 1;
+}
+
+message GetAppFilesRequest {
+  enum FileType {
+    UNKNOWN = 0;
+    DIRECTORY = 1;
+    FILE = 2;
+  }
+
+  bytes app_id = 1;
+  // if revision is zero will give the latest.
+  uint64 revision = 2;
+  string path = 3;
+  FileType type = 4;
+}
+
+message GetAppFilesResponse {
 }
 
 message ListAppsRequest {
