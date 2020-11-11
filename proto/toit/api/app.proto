@@ -46,20 +46,22 @@ message GetAppResponse {
 }
 
 message GetAppFilesRequest {
-  enum FileType {
-    UNKNOWN = 0;
-    DIRECTORY = 1;
-    FILE = 2;
-  }
-
   bytes app_id = 1;
   // if revision is zero will give the latest.
   uint64 revision = 2;
+  // if path ends with '/' we assume its a directory
   string path = 3;
-  FileType type = 4;
 }
 
 message GetAppFilesResponse {
+  message Directory {
+    repeated string files = 1;
+  }
+
+  oneof result {
+   Directory directory = 1;
+   bytes file_content = 2;
+  }
 }
 
 message ListAppsRequest {
