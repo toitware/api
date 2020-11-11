@@ -10,7 +10,6 @@ option java_outer_classname = "ProgramProto";
 
 message Source {
   bytes id = 1;
-  string entry_filename = 2;
   google.protobuf.Timestamp created_at = 3;
 
   bytes organization_id = 4;
