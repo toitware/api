@@ -3830,16 +3830,15 @@ public final class AppProto {
     long getLimit();
 
     /**
-     * <code>string order_by = 3;</code>
+     * <code>.toit.api.ListAppsRequest.OrderBy order_by = 3;</code>
+     * @return The enum numeric value on the wire for orderBy.
+     */
+    int getOrderByValue();
+    /**
+     * <code>.toit.api.ListAppsRequest.OrderBy order_by = 3;</code>
      * @return The orderBy.
      */
-    java.lang.String getOrderBy();
-    /**
-     * <code>string order_by = 3;</code>
-     * @return The bytes for orderBy.
-     */
-    com.google.protobuf.ByteString
-        getOrderByBytes();
+    io.toit.proto.toit.api.AppProto.ListAppsRequest.OrderBy getOrderBy();
 
     /**
      * <code>bool order_desc = 4;</code>
@@ -3876,7 +3875,7 @@ public final class AppProto {
     }
     private ListAppsRequest() {
       offset_ = com.google.protobuf.ByteString.EMPTY;
-      orderBy_ = "";
+      orderBy_ = 0;
     }
 
     @java.lang.Override
@@ -3919,10 +3918,10 @@ public final class AppProto {
               limit_ = input.readInt64();
               break;
             }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 24: {
+              int rawValue = input.readEnum();
 
-              orderBy_ = s;
+              orderBy_ = rawValue;
               break;
             }
             case 32: {
@@ -3975,6 +3974,110 @@ public final class AppProto {
               io.toit.proto.toit.api.AppProto.ListAppsRequest.class, io.toit.proto.toit.api.AppProto.ListAppsRequest.Builder.class);
     }
 
+    /**
+     * Protobuf enum {@code toit.api.ListAppsRequest.OrderBy}
+     */
+    public enum OrderBy
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>ADDED_ID = 0;</code>
+       */
+      ADDED_ID(0),
+      /**
+       * <code>NAME = 1;</code>
+       */
+      NAME(1),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>ADDED_ID = 0;</code>
+       */
+      public static final int ADDED_ID_VALUE = 0;
+      /**
+       * <code>NAME = 1;</code>
+       */
+      public static final int NAME_VALUE = 1;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static OrderBy valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static OrderBy forNumber(int value) {
+        switch (value) {
+          case 0: return ADDED_ID;
+          case 1: return NAME;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<OrderBy>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          OrderBy> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<OrderBy>() {
+              public OrderBy findValueByNumber(int number) {
+                return OrderBy.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.AppProto.ListAppsRequest.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final OrderBy[] VALUES = values();
+
+      public static OrderBy valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private OrderBy(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:toit.api.ListAppsRequest.OrderBy)
+    }
+
     public static final int OFFSET_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString offset_;
     /**
@@ -3996,39 +4099,22 @@ public final class AppProto {
     }
 
     public static final int ORDER_BY_FIELD_NUMBER = 3;
-    private volatile java.lang.Object orderBy_;
+    private int orderBy_;
     /**
-     * <code>string order_by = 3;</code>
-     * @return The orderBy.
+     * <code>.toit.api.ListAppsRequest.OrderBy order_by = 3;</code>
+     * @return The enum numeric value on the wire for orderBy.
      */
-    public java.lang.String getOrderBy() {
-      java.lang.Object ref = orderBy_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        orderBy_ = s;
-        return s;
-      }
+    public int getOrderByValue() {
+      return orderBy_;
     }
     /**
-     * <code>string order_by = 3;</code>
-     * @return The bytes for orderBy.
+     * <code>.toit.api.ListAppsRequest.OrderBy order_by = 3;</code>
+     * @return The orderBy.
      */
-    public com.google.protobuf.ByteString
-        getOrderByBytes() {
-      java.lang.Object ref = orderBy_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        orderBy_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public io.toit.proto.toit.api.AppProto.ListAppsRequest.OrderBy getOrderBy() {
+      @SuppressWarnings("deprecation")
+      io.toit.proto.toit.api.AppProto.ListAppsRequest.OrderBy result = io.toit.proto.toit.api.AppProto.ListAppsRequest.OrderBy.valueOf(orderBy_);
+      return result == null ? io.toit.proto.toit.api.AppProto.ListAppsRequest.OrderBy.UNRECOGNIZED : result;
     }
 
     public static final int ORDER_DESC_FIELD_NUMBER = 4;
@@ -4084,8 +4170,8 @@ public final class AppProto {
       if (limit_ != 0L) {
         output.writeInt64(2, limit_);
       }
-      if (!getOrderByBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, orderBy_);
+      if (orderBy_ != io.toit.proto.toit.api.AppProto.ListAppsRequest.OrderBy.ADDED_ID.getNumber()) {
+        output.writeEnum(3, orderBy_);
       }
       if (orderDesc_ != false) {
         output.writeBool(4, orderDesc_);
@@ -4110,8 +4196,9 @@ public final class AppProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, limit_);
       }
-      if (!getOrderByBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, orderBy_);
+      if (orderBy_ != io.toit.proto.toit.api.AppProto.ListAppsRequest.OrderBy.ADDED_ID.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, orderBy_);
       }
       if (orderDesc_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -4140,8 +4227,7 @@ public final class AppProto {
           .equals(other.getOffset())) return false;
       if (getLimit()
           != other.getLimit()) return false;
-      if (!getOrderBy()
-          .equals(other.getOrderBy())) return false;
+      if (orderBy_ != other.orderBy_) return false;
       if (getOrderDesc()
           != other.getOrderDesc()) return false;
       if (hasFilter() != other.hasFilter()) return false;
@@ -4166,7 +4252,7 @@ public final class AppProto {
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getLimit());
       hash = (37 * hash) + ORDER_BY_FIELD_NUMBER;
-      hash = (53 * hash) + getOrderBy().hashCode();
+      hash = (53 * hash) + orderBy_;
       hash = (37 * hash) + ORDER_DESC_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getOrderDesc());
@@ -4311,7 +4397,7 @@ public final class AppProto {
 
         limit_ = 0L;
 
-        orderBy_ = "";
+        orderBy_ = 0;
 
         orderDesc_ = false;
 
@@ -4410,9 +4496,8 @@ public final class AppProto {
         if (other.getLimit() != 0L) {
           setLimit(other.getLimit());
         }
-        if (!other.getOrderBy().isEmpty()) {
-          orderBy_ = other.orderBy_;
-          onChanged();
+        if (other.orderBy_ != 0) {
+          setOrderByValue(other.getOrderByValue());
         }
         if (other.getOrderDesc() != false) {
           setOrderDesc(other.getOrderDesc());
@@ -4512,78 +4597,54 @@ public final class AppProto {
         return this;
       }
 
-      private java.lang.Object orderBy_ = "";
+      private int orderBy_ = 0;
       /**
-       * <code>string order_by = 3;</code>
-       * @return The orderBy.
+       * <code>.toit.api.ListAppsRequest.OrderBy order_by = 3;</code>
+       * @return The enum numeric value on the wire for orderBy.
        */
-      public java.lang.String getOrderBy() {
-        java.lang.Object ref = orderBy_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          orderBy_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      public int getOrderByValue() {
+        return orderBy_;
       }
       /**
-       * <code>string order_by = 3;</code>
-       * @return The bytes for orderBy.
-       */
-      public com.google.protobuf.ByteString
-          getOrderByBytes() {
-        java.lang.Object ref = orderBy_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          orderBy_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string order_by = 3;</code>
-       * @param value The orderBy to set.
+       * <code>.toit.api.ListAppsRequest.OrderBy order_by = 3;</code>
+       * @param value The enum numeric value on the wire for orderBy to set.
        * @return This builder for chaining.
        */
-      public Builder setOrderBy(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      public Builder setOrderByValue(int value) {
         orderBy_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string order_by = 3;</code>
+       * <code>.toit.api.ListAppsRequest.OrderBy order_by = 3;</code>
+       * @return The orderBy.
+       */
+      public io.toit.proto.toit.api.AppProto.ListAppsRequest.OrderBy getOrderBy() {
+        @SuppressWarnings("deprecation")
+        io.toit.proto.toit.api.AppProto.ListAppsRequest.OrderBy result = io.toit.proto.toit.api.AppProto.ListAppsRequest.OrderBy.valueOf(orderBy_);
+        return result == null ? io.toit.proto.toit.api.AppProto.ListAppsRequest.OrderBy.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.toit.api.ListAppsRequest.OrderBy order_by = 3;</code>
+       * @param value The orderBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrderBy(io.toit.proto.toit.api.AppProto.ListAppsRequest.OrderBy value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        orderBy_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.toit.api.ListAppsRequest.OrderBy order_by = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearOrderBy() {
         
-        orderBy_ = getDefaultInstance().getOrderBy();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string order_by = 3;</code>
-       * @param value The bytes for orderBy to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOrderByBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        orderBy_ = value;
+        orderBy_ = 0;
         onChanged();
         return this;
       }
@@ -4804,6 +4865,24 @@ public final class AppProto {
      */
     com.google.protobuf.ByteString
         getNamePrefixBytes();
+
+    /**
+     * <code>bool latest = 2;</code>
+     * @return The latest.
+     */
+    boolean getLatest();
+
+    /**
+     * <code>string namespace_prefix = 3;</code>
+     * @return The namespacePrefix.
+     */
+    java.lang.String getNamespacePrefix();
+    /**
+     * <code>string namespace_prefix = 3;</code>
+     * @return The bytes for namespacePrefix.
+     */
+    com.google.protobuf.ByteString
+        getNamespacePrefixBytes();
   }
   /**
    * Protobuf type {@code toit.api.ListAppsFilter}
@@ -4819,6 +4898,7 @@ public final class AppProto {
     }
     private ListAppsFilter() {
       namePrefix_ = "";
+      namespacePrefix_ = "";
     }
 
     @java.lang.Override
@@ -4855,6 +4935,17 @@ public final class AppProto {
               java.lang.String s = input.readStringRequireUtf8();
 
               namePrefix_ = s;
+              break;
+            }
+            case 16: {
+
+              latest_ = input.readBool();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              namespacePrefix_ = s;
               break;
             }
             default: {
@@ -4925,6 +5016,52 @@ public final class AppProto {
       }
     }
 
+    public static final int LATEST_FIELD_NUMBER = 2;
+    private boolean latest_;
+    /**
+     * <code>bool latest = 2;</code>
+     * @return The latest.
+     */
+    public boolean getLatest() {
+      return latest_;
+    }
+
+    public static final int NAMESPACE_PREFIX_FIELD_NUMBER = 3;
+    private volatile java.lang.Object namespacePrefix_;
+    /**
+     * <code>string namespace_prefix = 3;</code>
+     * @return The namespacePrefix.
+     */
+    public java.lang.String getNamespacePrefix() {
+      java.lang.Object ref = namespacePrefix_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        namespacePrefix_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string namespace_prefix = 3;</code>
+     * @return The bytes for namespacePrefix.
+     */
+    public com.google.protobuf.ByteString
+        getNamespacePrefixBytes() {
+      java.lang.Object ref = namespacePrefix_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        namespacePrefix_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4942,6 +5079,12 @@ public final class AppProto {
       if (!getNamePrefixBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, namePrefix_);
       }
+      if (latest_ != false) {
+        output.writeBool(2, latest_);
+      }
+      if (!getNamespacePrefixBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, namespacePrefix_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4953,6 +5096,13 @@ public final class AppProto {
       size = 0;
       if (!getNamePrefixBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, namePrefix_);
+      }
+      if (latest_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, latest_);
+      }
+      if (!getNamespacePrefixBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, namespacePrefix_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4971,6 +5121,10 @@ public final class AppProto {
 
       if (!getNamePrefix()
           .equals(other.getNamePrefix())) return false;
+      if (getLatest()
+          != other.getLatest()) return false;
+      if (!getNamespacePrefix()
+          .equals(other.getNamespacePrefix())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4984,6 +5138,11 @@ public final class AppProto {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + NAME_PREFIX_FIELD_NUMBER;
       hash = (53 * hash) + getNamePrefix().hashCode();
+      hash = (37 * hash) + LATEST_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getLatest());
+      hash = (37 * hash) + NAMESPACE_PREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getNamespacePrefix().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5119,6 +5278,10 @@ public final class AppProto {
         super.clear();
         namePrefix_ = "";
 
+        latest_ = false;
+
+        namespacePrefix_ = "";
+
         return this;
       }
 
@@ -5146,6 +5309,8 @@ public final class AppProto {
       public io.toit.proto.toit.api.AppProto.ListAppsFilter buildPartial() {
         io.toit.proto.toit.api.AppProto.ListAppsFilter result = new io.toit.proto.toit.api.AppProto.ListAppsFilter(this);
         result.namePrefix_ = namePrefix_;
+        result.latest_ = latest_;
+        result.namespacePrefix_ = namespacePrefix_;
         onBuilt();
         return result;
       }
@@ -5196,6 +5361,13 @@ public final class AppProto {
         if (other == io.toit.proto.toit.api.AppProto.ListAppsFilter.getDefaultInstance()) return this;
         if (!other.getNamePrefix().isEmpty()) {
           namePrefix_ = other.namePrefix_;
+          onChanged();
+        }
+        if (other.getLatest() != false) {
+          setLatest(other.getLatest());
+        }
+        if (!other.getNamespacePrefix().isEmpty()) {
+          namespacePrefix_ = other.namespacePrefix_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -5299,6 +5471,112 @@ public final class AppProto {
   checkByteStringIsUtf8(value);
         
         namePrefix_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean latest_ ;
+      /**
+       * <code>bool latest = 2;</code>
+       * @return The latest.
+       */
+      public boolean getLatest() {
+        return latest_;
+      }
+      /**
+       * <code>bool latest = 2;</code>
+       * @param value The latest to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLatest(boolean value) {
+        
+        latest_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool latest = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLatest() {
+        
+        latest_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object namespacePrefix_ = "";
+      /**
+       * <code>string namespace_prefix = 3;</code>
+       * @return The namespacePrefix.
+       */
+      public java.lang.String getNamespacePrefix() {
+        java.lang.Object ref = namespacePrefix_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          namespacePrefix_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string namespace_prefix = 3;</code>
+       * @return The bytes for namespacePrefix.
+       */
+      public com.google.protobuf.ByteString
+          getNamespacePrefixBytes() {
+        java.lang.Object ref = namespacePrefix_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          namespacePrefix_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string namespace_prefix = 3;</code>
+       * @param value The namespacePrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNamespacePrefix(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        namespacePrefix_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string namespace_prefix = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNamespacePrefix() {
+        
+        namespacePrefix_ = getDefaultInstance().getNamespacePrefix();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string namespace_prefix = 3;</code>
+       * @param value The bytes for namespacePrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNamespacePrefixBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        namespacePrefix_ = value;
         onChanged();
         return this;
       }
@@ -6117,21 +6395,24 @@ public final class AppProto {
       "\0132\023.toit.model.JobSpec:\0028\001B\010\n\006source\"#\n\021" +
       "CreateAppResponse\022\016\n\006app_id\030\001 \001(\014\"\037\n\rGet" +
       "AppRequest\022\016\n\006app_id\030\001 \001(\014\".\n\016GetAppResp" +
-      "onse\022\034\n\003app\030\001 \001(\0132\017.toit.model.App\"\200\001\n\017L" +
+      "onse\022\034\n\003app\030\001 \001(\0132\017.toit.model.App\"\306\001\n\017L" +
       "istAppsRequest\022\016\n\006offset\030\001 \001(\014\022\r\n\005limit\030" +
-      "\002 \001(\003\022\020\n\010order_by\030\003 \001(\t\022\022\n\norder_desc\030\004 " +
-      "\001(\010\022(\n\006filter\030\005 \001(\0132\030.toit.api.ListAppsF" +
-      "ilter\"%\n\016ListAppsFilter\022\023\n\013name_prefix\030\001" +
-      " \001(\t\"@\n\020ListAppsResponse\022\034\n\003app\030\001 \001(\0132\017." +
-      "toit.model.App\022\016\n\006offset\030\002 \001(\0142\332\001\n\nAppSe" +
-      "rvice\022F\n\tCreateApp\022\032.toit.api.CreateAppR" +
-      "equest\032\033.toit.api.CreateAppResponse\"\000\022=\n" +
-      "\006GetApp\022\027.toit.api.GetAppRequest\032\030.toit." +
-      "api.GetAppResponse\"\000\022E\n\010ListApps\022\031.toit." +
-      "api.ListAppsRequest\032\032.toit.api.ListAppsR" +
-      "esponse\"\0000\001BH\n\026io.toit.proto.toit.apiB\010A" +
-      "ppProtoZ$github.com/toitware/api.git/toi" +
-      "t/apib\006proto3"
+      "\002 \001(\003\0223\n\010order_by\030\003 \001(\0162!.toit.api.ListA" +
+      "ppsRequest.OrderBy\022\022\n\norder_desc\030\004 \001(\010\022(" +
+      "\n\006filter\030\005 \001(\0132\030.toit.api.ListAppsFilter" +
+      "\"!\n\007OrderBy\022\014\n\010ADDED_ID\020\000\022\010\n\004NAME\020\001\"O\n\016L" +
+      "istAppsFilter\022\023\n\013name_prefix\030\001 \001(\t\022\016\n\006la" +
+      "test\030\002 \001(\010\022\030\n\020namespace_prefix\030\003 \001(\t\"@\n\020" +
+      "ListAppsResponse\022\034\n\003app\030\001 \001(\0132\017.toit.mod" +
+      "el.App\022\016\n\006offset\030\002 \001(\0142\332\001\n\nAppService\022F\n" +
+      "\tCreateApp\022\032.toit.api.CreateAppRequest\032\033" +
+      ".toit.api.CreateAppResponse\"\000\022=\n\006GetApp\022" +
+      "\027.toit.api.GetAppRequest\032\030.toit.api.GetA" +
+      "ppResponse\"\000\022E\n\010ListApps\022\031.toit.api.List" +
+      "AppsRequest\032\032.toit.api.ListAppsResponse\"" +
+      "\0000\001BH\n\026io.toit.proto.toit.apiB\010AppProtoZ" +
+      "$github.com/toitware/api.git/toit/apib\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6191,7 +6472,7 @@ public final class AppProto {
     internal_static_toit_api_ListAppsFilter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_ListAppsFilter_descriptor,
-        new java.lang.String[] { "NamePrefix", });
+        new java.lang.String[] { "NamePrefix", "Latest", "NamespacePrefix", });
     internal_static_toit_api_ListAppsResponse_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_toit_api_ListAppsResponse_fieldAccessorTable = new
