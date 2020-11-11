@@ -25,18 +25,6 @@ public final class ProgramProto {
     com.google.protobuf.ByteString getId();
 
     /**
-     * <code>string entry_filename = 2;</code>
-     * @return The entryFilename.
-     */
-    java.lang.String getEntryFilename();
-    /**
-     * <code>string entry_filename = 2;</code>
-     * @return The bytes for entryFilename.
-     */
-    com.google.protobuf.ByteString
-        getEntryFilenameBytes();
-
-    /**
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      * @return Whether the createdAt field is set.
      */
@@ -77,7 +65,6 @@ public final class ProgramProto {
     }
     private Source() {
       id_ = com.google.protobuf.ByteString.EMPTY;
-      entryFilename_ = "";
       organizationId_ = com.google.protobuf.ByteString.EMPTY;
       creatorId_ = com.google.protobuf.ByteString.EMPTY;
     }
@@ -115,12 +102,6 @@ public final class ProgramProto {
             case 10: {
 
               id_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              entryFilename_ = s;
               break;
             }
             case 26: {
@@ -188,42 +169,6 @@ public final class ProgramProto {
       return id_;
     }
 
-    public static final int ENTRY_FILENAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object entryFilename_;
-    /**
-     * <code>string entry_filename = 2;</code>
-     * @return The entryFilename.
-     */
-    public java.lang.String getEntryFilename() {
-      java.lang.Object ref = entryFilename_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        entryFilename_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string entry_filename = 2;</code>
-     * @return The bytes for entryFilename.
-     */
-    public com.google.protobuf.ByteString
-        getEntryFilenameBytes() {
-      java.lang.Object ref = entryFilename_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        entryFilename_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int CREATED_AT_FIELD_NUMBER = 3;
     private com.google.protobuf.Timestamp createdAt_;
     /**
@@ -284,9 +229,6 @@ public final class ProgramProto {
       if (!id_.isEmpty()) {
         output.writeBytes(1, id_);
       }
-      if (!getEntryFilenameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, entryFilename_);
-      }
       if (createdAt_ != null) {
         output.writeMessage(3, getCreatedAt());
       }
@@ -308,9 +250,6 @@ public final class ProgramProto {
       if (!id_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, id_);
-      }
-      if (!getEntryFilenameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, entryFilename_);
       }
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -341,8 +280,6 @@ public final class ProgramProto {
 
       if (!getId()
           .equals(other.getId())) return false;
-      if (!getEntryFilename()
-          .equals(other.getEntryFilename())) return false;
       if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
         if (!getCreatedAt()
@@ -365,8 +302,6 @@ public final class ProgramProto {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + getId().hashCode();
-      hash = (37 * hash) + ENTRY_FILENAME_FIELD_NUMBER;
-      hash = (53 * hash) + getEntryFilename().hashCode();
       if (hasCreatedAt()) {
         hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
         hash = (53 * hash) + getCreatedAt().hashCode();
@@ -510,8 +445,6 @@ public final class ProgramProto {
         super.clear();
         id_ = com.google.protobuf.ByteString.EMPTY;
 
-        entryFilename_ = "";
-
         if (createdAtBuilder_ == null) {
           createdAt_ = null;
         } else {
@@ -549,7 +482,6 @@ public final class ProgramProto {
       public io.toit.proto.toit.model.ProgramProto.Source buildPartial() {
         io.toit.proto.toit.model.ProgramProto.Source result = new io.toit.proto.toit.model.ProgramProto.Source(this);
         result.id_ = id_;
-        result.entryFilename_ = entryFilename_;
         if (createdAtBuilder_ == null) {
           result.createdAt_ = createdAt_;
         } else {
@@ -607,10 +539,6 @@ public final class ProgramProto {
         if (other == io.toit.proto.toit.model.ProgramProto.Source.getDefaultInstance()) return this;
         if (other.getId() != com.google.protobuf.ByteString.EMPTY) {
           setId(other.getId());
-        }
-        if (!other.getEntryFilename().isEmpty()) {
-          entryFilename_ = other.entryFilename_;
-          onChanged();
         }
         if (other.hasCreatedAt()) {
           mergeCreatedAt(other.getCreatedAt());
@@ -679,82 +607,6 @@ public final class ProgramProto {
       public Builder clearId() {
         
         id_ = getDefaultInstance().getId();
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object entryFilename_ = "";
-      /**
-       * <code>string entry_filename = 2;</code>
-       * @return The entryFilename.
-       */
-      public java.lang.String getEntryFilename() {
-        java.lang.Object ref = entryFilename_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          entryFilename_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string entry_filename = 2;</code>
-       * @return The bytes for entryFilename.
-       */
-      public com.google.protobuf.ByteString
-          getEntryFilenameBytes() {
-        java.lang.Object ref = entryFilename_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          entryFilename_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string entry_filename = 2;</code>
-       * @param value The entryFilename to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEntryFilename(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        entryFilename_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string entry_filename = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearEntryFilename() {
-        
-        entryFilename_ = getDefaultInstance().getEntryFilename();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string entry_filename = 2;</code>
-       * @param value The bytes for entryFilename to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEntryFilenameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        entryFilename_ = value;
         onChanged();
         return this;
       }
@@ -7358,39 +7210,38 @@ public final class ProgramProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\030toit/model/program.proto\022\ntoit.model\032\037" +
-      "google/protobuf/timestamp.proto\"\211\001\n\006Sour" +
-      "ce\022\n\n\002id\030\001 \001(\014\022\026\n\016entry_filename\030\002 \001(\t\022." +
-      "\n\ncreated_at\030\003 \001(\0132\032.google.protobuf.Tim" +
-      "estamp\022\027\n\017organization_id\030\004 \001(\014\022\022\n\ncreat" +
-      "or_id\030\005 \001(\014\"\312\001\n\007Program\022\n\n\002id\030\001 \001(\014\022\014\n\004n" +
-      "ame\030\002 \001(\t\022\021\n\ttemporary\030\003 \001(\010\022.\n\ncreated_" +
-      "at\030\004 \001(\0132\032.google.protobuf.Timestamp\022\021\n\t" +
-      "source_id\030\005 \001(\014\022\"\n\006source\030\006 \001(\0132\022.toit.m" +
-      "odel.Source\022\027\n\017organization_id\030\007 \001(\014\022\022\n\n" +
-      "creator_id\030\010 \001(\014\"\377\001\n\013Compilation\022\n\n\002id\030\001" +
-      " \001(\014\022\013\n\003sdk\030\002 \001(\t\022\021\n\targuments\030\003 \003(\t\022\022\n\n" +
-      "program_id\030\004 \001(\014\022$\n\007program\030\005 \001(\0132\023.toit" +
-      ".model.Program\022-\n\006result\030\006 \001(\0132\035.toit.mo" +
-      "del.CompilationResult\022.\n\ncreated_at\030\007 \001(" +
-      "\0132\032.google.protobuf.Timestamp\022\027\n\017organiz" +
-      "ation_id\030\010 \001(\014\022\022\n\ncreator_id\030\t \001(\014\"\247\001\n\021C" +
-      "ompilationResult\022\r\n\005error\030\001 \001(\t\022\024\n\014snaps" +
-      "hot_out\030\002 \001(\014\022\024\n\014snapshot_err\030\003 \001(\014\022\031\n\021s" +
-      "napshot_exitcode\030\004 \001(\005\022\021\n\timage_out\030\005 \001(" +
-      "\014\022\021\n\timage_err\030\006 \001(\014\022\026\n\016image_exitcode\030\007" +
-      " \001(\005\"\244\002\n\003SDK\022\014\n\004name\030\001 \001(\t\022\017\n\007version\030\002 " +
-      "\001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.protobu" +
-      "f.Timestamp\022\022\n\ncreated_by\030\004 \001(\t\022/\n\010setti" +
-      "ngs\030\005 \003(\0132\035.toit.model.SDK.SettingsEntry" +
-      "\022\016\n\006models\030\006 \003(\t\0224\n\rrelease_level\030\007 \001(\0162" +
-      "\035.toit.model.ReleaseLevel.Type\022\022\n\ndeprec" +
-      "ated\030\010 \001(\010\032/\n\rSettingsEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\t:\0028\001\"f\n\014ReleaseLevel\"V\n\004T" +
-      "ype\022\013\n\007UNKNOWN\020\000\022\014\n\010RELEASED\020\n\022\010\n\004BETA\020\024" +
-      "\022\t\n\005ALPHA\020\036\022\010\n\004EDGE\020(\022\n\n\006LATEST\0202\022\010\n\003ALL" +
-      "\020\377\001BP\n\030io.toit.proto.toit.modelB\014Program" +
-      "ProtoZ&github.com/toitware/api.git/toit/" +
-      "modelb\006proto3"
+      "google/protobuf/timestamp.proto\"q\n\006Sourc" +
+      "e\022\n\n\002id\030\001 \001(\014\022.\n\ncreated_at\030\003 \001(\0132\032.goog" +
+      "le.protobuf.Timestamp\022\027\n\017organization_id" +
+      "\030\004 \001(\014\022\022\n\ncreator_id\030\005 \001(\014\"\312\001\n\007Program\022\n" +
+      "\n\002id\030\001 \001(\014\022\014\n\004name\030\002 \001(\t\022\021\n\ttemporary\030\003 " +
+      "\001(\010\022.\n\ncreated_at\030\004 \001(\0132\032.google.protobu" +
+      "f.Timestamp\022\021\n\tsource_id\030\005 \001(\014\022\"\n\006source" +
+      "\030\006 \001(\0132\022.toit.model.Source\022\027\n\017organizati" +
+      "on_id\030\007 \001(\014\022\022\n\ncreator_id\030\010 \001(\014\"\377\001\n\013Comp" +
+      "ilation\022\n\n\002id\030\001 \001(\014\022\013\n\003sdk\030\002 \001(\t\022\021\n\targu" +
+      "ments\030\003 \003(\t\022\022\n\nprogram_id\030\004 \001(\014\022$\n\007progr" +
+      "am\030\005 \001(\0132\023.toit.model.Program\022-\n\006result\030" +
+      "\006 \001(\0132\035.toit.model.CompilationResult\022.\n\n" +
+      "created_at\030\007 \001(\0132\032.google.protobuf.Times" +
+      "tamp\022\027\n\017organization_id\030\010 \001(\014\022\022\n\ncreator" +
+      "_id\030\t \001(\014\"\247\001\n\021CompilationResult\022\r\n\005error" +
+      "\030\001 \001(\t\022\024\n\014snapshot_out\030\002 \001(\014\022\024\n\014snapshot" +
+      "_err\030\003 \001(\014\022\031\n\021snapshot_exitcode\030\004 \001(\005\022\021\n" +
+      "\timage_out\030\005 \001(\014\022\021\n\timage_err\030\006 \001(\014\022\026\n\016i" +
+      "mage_exitcode\030\007 \001(\005\"\244\002\n\003SDK\022\014\n\004name\030\001 \001(" +
+      "\t\022\017\n\007version\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032" +
+      ".google.protobuf.Timestamp\022\022\n\ncreated_by" +
+      "\030\004 \001(\t\022/\n\010settings\030\005 \003(\0132\035.toit.model.SD" +
+      "K.SettingsEntry\022\016\n\006models\030\006 \003(\t\0224\n\rrelea" +
+      "se_level\030\007 \001(\0162\035.toit.model.ReleaseLevel" +
+      ".Type\022\022\n\ndeprecated\030\010 \001(\010\032/\n\rSettingsEnt" +
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"f\n\014Re" +
+      "leaseLevel\"V\n\004Type\022\013\n\007UNKNOWN\020\000\022\014\n\010RELEA" +
+      "SED\020\n\022\010\n\004BETA\020\024\022\t\n\005ALPHA\020\036\022\010\n\004EDGE\020(\022\n\n\006" +
+      "LATEST\0202\022\010\n\003ALL\020\377\001BP\n\030io.toit.proto.toit" +
+      ".modelB\014ProgramProtoZ&github.com/toitwar" +
+      "e/api.git/toit/modelb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7402,7 +7253,7 @@ public final class ProgramProto {
     internal_static_toit_model_Source_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_Source_descriptor,
-        new java.lang.String[] { "Id", "EntryFilename", "CreatedAt", "OrganizationId", "CreatorId", });
+        new java.lang.String[] { "Id", "CreatedAt", "OrganizationId", "CreatorId", });
     internal_static_toit_model_Program_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_toit_model_Program_fieldAccessorTable = new
