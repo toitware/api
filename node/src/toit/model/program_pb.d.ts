@@ -10,9 +10,6 @@ export class Source extends jspb.Message {
   getId_asB64(): string;
   setId(value: Uint8Array | string): void;
 
-  getEntryFilename(): string;
-  setEntryFilename(value: string): void;
-
   hasCreatedAt(): boolean;
   clearCreatedAt(): void;
   getCreatedAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
@@ -41,7 +38,6 @@ export class Source extends jspb.Message {
 export namespace Source {
   export type AsObject = {
     id: Uint8Array | string,
-    entryFilename: string,
     createdAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
     organizationId: Uint8Array | string,
     creatorId: Uint8Array | string,

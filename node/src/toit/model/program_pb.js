@@ -180,7 +180,6 @@ proto.toit.model.Source.prototype.toObject = function(opt_includeInstance) {
 proto.toit.model.Source.toObject = function(includeInstance, msg) {
   var f, obj = {
     id: msg.getId_asB64(),
-    entryFilename: jspb.Message.getFieldWithDefault(msg, 2, ""),
     createdAt: (f = msg.getCreatedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
     organizationId: msg.getOrganizationId_asB64(),
     creatorId: msg.getCreatorId_asB64()
@@ -223,10 +222,6 @@ proto.toit.model.Source.deserializeBinaryFromReader = function(msg, reader) {
     case 1:
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
       msg.setId(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setEntryFilename(value);
       break;
     case 3:
       var value = new google_protobuf_timestamp_pb.Timestamp;
@@ -274,13 +269,6 @@ proto.toit.model.Source.serializeBinaryToWriter = function(message, writer) {
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f
-    );
-  }
-  f = message.getEntryFilename();
-  if (f.length > 0) {
-    writer.writeString(
-      2,
       f
     );
   }
@@ -348,24 +336,6 @@ proto.toit.model.Source.prototype.getId_asU8 = function() {
  */
 proto.toit.model.Source.prototype.setId = function(value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
-};
-
-
-/**
- * optional string entry_filename = 2;
- * @return {string}
- */
-proto.toit.model.Source.prototype.getEntryFilename = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.toit.model.Source} returns this
- */
-proto.toit.model.Source.prototype.setEntryFilename = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
