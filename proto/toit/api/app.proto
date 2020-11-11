@@ -49,7 +49,7 @@ message GetAppFilesRequest {
   bytes app_id = 1;
   // if revision is zero will give the latest.
   uint64 revision = 2;
-  // if path ends with '/' we assume its a directory
+  // if path ends with '/' when query on a directory.
   string path = 3;
 }
 
