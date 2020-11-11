@@ -150,8 +150,8 @@ export class ListAppsRequest extends jspb.Message {
   getLimit(): number;
   setLimit(value: number): void;
 
-  getOrderBy(): string;
-  setOrderBy(value: string): void;
+  getOrderBy(): ListAppsRequest.OrderByMap[keyof ListAppsRequest.OrderByMap];
+  setOrderBy(value: ListAppsRequest.OrderByMap[keyof ListAppsRequest.OrderByMap]): void;
 
   getOrderDesc(): boolean;
   setOrderDesc(value: boolean): void;
@@ -175,15 +175,28 @@ export namespace ListAppsRequest {
   export type AsObject = {
     offset: Uint8Array | string,
     limit: number,
-    orderBy: string,
+    orderBy: ListAppsRequest.OrderByMap[keyof ListAppsRequest.OrderByMap],
     orderDesc: boolean,
     filter?: ListAppsFilter.AsObject,
   }
+
+  export interface OrderByMap {
+    ADDED_ID: 0;
+    NAME: 1;
+  }
+
+  export const OrderBy: OrderByMap;
 }
 
 export class ListAppsFilter extends jspb.Message {
   getNamePrefix(): string;
   setNamePrefix(value: string): void;
+
+  getLatest(): boolean;
+  setLatest(value: boolean): void;
+
+  getNamespacePrefix(): string;
+  setNamespacePrefix(value: string): void;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ListAppsFilter.AsObject;
@@ -198,6 +211,8 @@ export class ListAppsFilter extends jspb.Message {
 export namespace ListAppsFilter {
   export type AsObject = {
     namePrefix: string,
+    latest: boolean,
+    namespacePrefix: string,
   }
 }
 
