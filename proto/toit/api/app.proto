@@ -49,13 +49,19 @@ message GetAppFilesRequest {
   bytes app_id = 1;
   // if revision is zero will give the latest.
   uint64 revision = 2;
-  // if path ends with '/' when query on a directory.
+  // If path ends with '/', the request is for a directory.
   string path = 3;
 }
 
 message GetAppFilesResponse {
+  message Entry {
+    string name = 1;
+    // content_type only set if not a directory
+    string content_type = 2;
+  }
+
   message Directory {
-    repeated string files = 1;
+    repeated Entry entries = 1;
   }
 
   oneof result {
