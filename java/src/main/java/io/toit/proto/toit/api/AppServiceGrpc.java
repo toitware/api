@@ -89,6 +89,37 @@ public final class AppServiceGrpc {
     return getGetAppMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<io.toit.proto.toit.api.AppProto.GetAppFilesRequest,
+      io.toit.proto.toit.api.AppProto.GetAppFilesResponse> getGetAppFilesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAppFiles",
+      requestType = io.toit.proto.toit.api.AppProto.GetAppFilesRequest.class,
+      responseType = io.toit.proto.toit.api.AppProto.GetAppFilesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.toit.proto.toit.api.AppProto.GetAppFilesRequest,
+      io.toit.proto.toit.api.AppProto.GetAppFilesResponse> getGetAppFilesMethod() {
+    io.grpc.MethodDescriptor<io.toit.proto.toit.api.AppProto.GetAppFilesRequest, io.toit.proto.toit.api.AppProto.GetAppFilesResponse> getGetAppFilesMethod;
+    if ((getGetAppFilesMethod = AppServiceGrpc.getGetAppFilesMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getGetAppFilesMethod = AppServiceGrpc.getGetAppFilesMethod) == null) {
+          AppServiceGrpc.getGetAppFilesMethod = getGetAppFilesMethod =
+              io.grpc.MethodDescriptor.<io.toit.proto.toit.api.AppProto.GetAppFilesRequest, io.toit.proto.toit.api.AppProto.GetAppFilesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAppFiles"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.toit.proto.toit.api.AppProto.GetAppFilesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.toit.proto.toit.api.AppProto.GetAppFilesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("GetAppFiles"))
+              .build();
+        }
+      }
+    }
+    return getGetAppFilesMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<io.toit.proto.toit.api.AppProto.ListAppsRequest,
       io.toit.proto.toit.api.AppProto.ListAppsResponse> getListAppsMethod;
 
@@ -184,6 +215,13 @@ public final class AppServiceGrpc {
 
     /**
      */
+    public void getAppFiles(io.toit.proto.toit.api.AppProto.GetAppFilesRequest request,
+        io.grpc.stub.StreamObserver<io.toit.proto.toit.api.AppProto.GetAppFilesResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetAppFilesMethod(), responseObserver);
+    }
+
+    /**
+     */
     public void listApps(io.toit.proto.toit.api.AppProto.ListAppsRequest request,
         io.grpc.stub.StreamObserver<io.toit.proto.toit.api.AppProto.ListAppsResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getListAppsMethod(), responseObserver);
@@ -205,6 +243,13 @@ public final class AppServiceGrpc {
                 io.toit.proto.toit.api.AppProto.GetAppRequest,
                 io.toit.proto.toit.api.AppProto.GetAppResponse>(
                   this, METHODID_GET_APP)))
+          .addMethod(
+            getGetAppFilesMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.toit.proto.toit.api.AppProto.GetAppFilesRequest,
+                io.toit.proto.toit.api.AppProto.GetAppFilesResponse>(
+                  this, METHODID_GET_APP_FILES)))
           .addMethod(
             getListAppsMethod(),
             asyncServerStreamingCall(
@@ -248,6 +293,14 @@ public final class AppServiceGrpc {
 
     /**
      */
+    public void getAppFiles(io.toit.proto.toit.api.AppProto.GetAppFilesRequest request,
+        io.grpc.stub.StreamObserver<io.toit.proto.toit.api.AppProto.GetAppFilesResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetAppFilesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
     public void listApps(io.toit.proto.toit.api.AppProto.ListAppsRequest request,
         io.grpc.stub.StreamObserver<io.toit.proto.toit.api.AppProto.ListAppsResponse> responseObserver) {
       asyncServerStreamingCall(
@@ -281,6 +334,13 @@ public final class AppServiceGrpc {
     public io.toit.proto.toit.api.AppProto.GetAppResponse getApp(io.toit.proto.toit.api.AppProto.GetAppRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetAppMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public io.toit.proto.toit.api.AppProto.GetAppFilesResponse getAppFiles(io.toit.proto.toit.api.AppProto.GetAppFilesRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getGetAppFilesMethod(), getCallOptions(), request);
     }
 
     /**
@@ -321,11 +381,20 @@ public final class AppServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getGetAppMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.toit.proto.toit.api.AppProto.GetAppFilesResponse> getAppFiles(
+        io.toit.proto.toit.api.AppProto.GetAppFilesRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetAppFilesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_APP = 0;
   private static final int METHODID_GET_APP = 1;
-  private static final int METHODID_LIST_APPS = 2;
+  private static final int METHODID_GET_APP_FILES = 2;
+  private static final int METHODID_LIST_APPS = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -351,6 +420,10 @@ public final class AppServiceGrpc {
         case METHODID_GET_APP:
           serviceImpl.getApp((io.toit.proto.toit.api.AppProto.GetAppRequest) request,
               (io.grpc.stub.StreamObserver<io.toit.proto.toit.api.AppProto.GetAppResponse>) responseObserver);
+          break;
+        case METHODID_GET_APP_FILES:
+          serviceImpl.getAppFiles((io.toit.proto.toit.api.AppProto.GetAppFilesRequest) request,
+              (io.grpc.stub.StreamObserver<io.toit.proto.toit.api.AppProto.GetAppFilesResponse>) responseObserver);
           break;
         case METHODID_LIST_APPS:
           serviceImpl.listApps((io.toit.proto.toit.api.AppProto.ListAppsRequest) request,
@@ -419,6 +492,7 @@ public final class AppServiceGrpc {
               .setSchemaDescriptor(new AppServiceFileDescriptorSupplier())
               .addMethod(getCreateAppMethod())
               .addMethod(getGetAppMethod())
+              .addMethod(getGetAppFilesMethod())
               .addMethod(getListAppsMethod())
               .build();
         }
