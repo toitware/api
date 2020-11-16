@@ -10,6 +10,7 @@ option java_outer_classname = "HardwareProto";
 
 service HardwareService {
   rpc Claim(ClaimRequest) returns (ClaimResponse) {}
+  rpc Replace(ReplaceRequest) returns (ReplaceResponse) {}
   rpc GetActiveDeviceID(GetActiveDeviceIDRequest) returns (GetActiveDeviceIDResponse) {}
 }
 
@@ -25,6 +26,14 @@ message ClaimResponse {
   bytes device_id = 2;
   string device_name = 3;
   bytes organization_id = 4;
+}
+
+message ReplaceRequest {
+  bytes hardware_id = 1;
+  // The ID of the device to replace.
+  bytes device_id = 2;
+  // Optional to set. Default is the current org for the user.
+  bytes organization_id = 3;
 }
 
 message GetActiveDeviceIDRequest { bytes hardware_id = 1; }
@@ -51,5 +60,3 @@ message SetHardwareIdentityInfoRequest {
 }
 
 message SetHardwareIdentityInfoResponse {}
-
-
