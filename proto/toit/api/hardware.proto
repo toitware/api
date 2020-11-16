@@ -36,6 +36,11 @@ message ReplaceRequest {
   bytes organization_id = 3;
 }
 
+message ReplaceResponse {
+  model.HardwareInfo hardware_info = 1;
+  bytes organization_id = 2;
+}
+
 message GetActiveDeviceIDRequest { bytes hardware_id = 1; }
 
 message GetActiveDeviceIDResponse { bytes device_id = 1; }
