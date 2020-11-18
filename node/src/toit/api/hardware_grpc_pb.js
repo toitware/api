@@ -71,6 +71,28 @@ function deserialize_toit_api_GetActiveDeviceIDResponse(buffer_arg) {
   return toit_api_hardware_pb.GetActiveDeviceIDResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_toit_api_ReplaceRequest(arg) {
+  if (!(arg instanceof toit_api_hardware_pb.ReplaceRequest)) {
+    throw new Error('Expected argument of type toit.api.ReplaceRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_ReplaceRequest(buffer_arg) {
+  return toit_api_hardware_pb.ReplaceRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_toit_api_ReplaceResponse(arg) {
+  if (!(arg instanceof toit_api_hardware_pb.ReplaceResponse)) {
+    throw new Error('Expected argument of type toit.api.ReplaceResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_ReplaceResponse(buffer_arg) {
+  return toit_api_hardware_pb.ReplaceResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_toit_api_SetHardwareIdentityInfoRequest(arg) {
   if (!(arg instanceof toit_api_hardware_pb.SetHardwareIdentityInfoRequest)) {
     throw new Error('Expected argument of type toit.api.SetHardwareIdentityInfoRequest');
@@ -105,6 +127,17 @@ var HardwareServiceService = exports.HardwareServiceService = {
     requestDeserialize: deserialize_toit_api_ClaimRequest,
     responseSerialize: serialize_toit_api_ClaimResponse,
     responseDeserialize: deserialize_toit_api_ClaimResponse,
+  },
+  replace: {
+    path: '/toit.api.HardwareService/Replace',
+    requestStream: false,
+    responseStream: false,
+    requestType: toit_api_hardware_pb.ReplaceRequest,
+    responseType: toit_api_hardware_pb.ReplaceResponse,
+    requestSerialize: serialize_toit_api_ReplaceRequest,
+    requestDeserialize: deserialize_toit_api_ReplaceRequest,
+    responseSerialize: serialize_toit_api_ReplaceResponse,
+    responseDeserialize: deserialize_toit_api_ReplaceResponse,
   },
   getActiveDeviceID: {
     path: '/toit.api.HardwareService/GetActiveDeviceID',

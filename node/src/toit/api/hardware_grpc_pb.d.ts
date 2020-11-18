@@ -8,6 +8,7 @@ import * as grpc from "@grpc/grpc-js";
 
 interface IHardwareServiceService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   claim: grpc.MethodDefinition<toit_api_hardware_pb.ClaimRequest, toit_api_hardware_pb.ClaimResponse>;
+  replace: grpc.MethodDefinition<toit_api_hardware_pb.ReplaceRequest, toit_api_hardware_pb.ReplaceResponse>;
   getActiveDeviceID: grpc.MethodDefinition<toit_api_hardware_pb.GetActiveDeviceIDRequest, toit_api_hardware_pb.GetActiveDeviceIDResponse>;
 }
 
@@ -18,6 +19,9 @@ export class HardwareServiceClient extends grpc.Client {
   claim(argument: toit_api_hardware_pb.ClaimRequest, callback: grpc.requestCallback<toit_api_hardware_pb.ClaimResponse>): grpc.ClientUnaryCall;
   claim(argument: toit_api_hardware_pb.ClaimRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_hardware_pb.ClaimResponse>): grpc.ClientUnaryCall;
   claim(argument: toit_api_hardware_pb.ClaimRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_hardware_pb.ClaimResponse>): grpc.ClientUnaryCall;
+  replace(argument: toit_api_hardware_pb.ReplaceRequest, callback: grpc.requestCallback<toit_api_hardware_pb.ReplaceResponse>): grpc.ClientUnaryCall;
+  replace(argument: toit_api_hardware_pb.ReplaceRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_hardware_pb.ReplaceResponse>): grpc.ClientUnaryCall;
+  replace(argument: toit_api_hardware_pb.ReplaceRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_hardware_pb.ReplaceResponse>): grpc.ClientUnaryCall;
   getActiveDeviceID(argument: toit_api_hardware_pb.GetActiveDeviceIDRequest, callback: grpc.requestCallback<toit_api_hardware_pb.GetActiveDeviceIDResponse>): grpc.ClientUnaryCall;
   getActiveDeviceID(argument: toit_api_hardware_pb.GetActiveDeviceIDRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_hardware_pb.GetActiveDeviceIDResponse>): grpc.ClientUnaryCall;
   getActiveDeviceID(argument: toit_api_hardware_pb.GetActiveDeviceIDRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_hardware_pb.GetActiveDeviceIDResponse>): grpc.ClientUnaryCall;

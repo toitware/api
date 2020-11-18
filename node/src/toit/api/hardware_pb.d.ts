@@ -74,6 +74,74 @@ export namespace ClaimResponse {
   }
 }
 
+export class ReplaceRequest extends jspb.Message {
+  getNewHardwareId(): Uint8Array | string;
+  getNewHardwareId_asU8(): Uint8Array;
+  getNewHardwareId_asB64(): string;
+  setNewHardwareId(value: Uint8Array | string): void;
+
+  getCurrentHardwareId(): Uint8Array | string;
+  getCurrentHardwareId_asU8(): Uint8Array;
+  getCurrentHardwareId_asB64(): string;
+  setCurrentHardwareId(value: Uint8Array | string): void;
+
+  getDeviceId(): Uint8Array | string;
+  getDeviceId_asU8(): Uint8Array;
+  getDeviceId_asB64(): string;
+  setDeviceId(value: Uint8Array | string): void;
+
+  getOrganizationId(): Uint8Array | string;
+  getOrganizationId_asU8(): Uint8Array;
+  getOrganizationId_asB64(): string;
+  setOrganizationId(value: Uint8Array | string): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): ReplaceRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: ReplaceRequest): ReplaceRequest.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: ReplaceRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): ReplaceRequest;
+  static deserializeBinaryFromReader(message: ReplaceRequest, reader: jspb.BinaryReader): ReplaceRequest;
+}
+
+export namespace ReplaceRequest {
+  export type AsObject = {
+    newHardwareId: Uint8Array | string,
+    currentHardwareId: Uint8Array | string,
+    deviceId: Uint8Array | string,
+    organizationId: Uint8Array | string,
+  }
+}
+
+export class ReplaceResponse extends jspb.Message {
+  hasHardwareInfo(): boolean;
+  clearHardwareInfo(): void;
+  getHardwareInfo(): toit_model_device_pb.HardwareInfo | undefined;
+  setHardwareInfo(value?: toit_model_device_pb.HardwareInfo): void;
+
+  getOrganizationId(): Uint8Array | string;
+  getOrganizationId_asU8(): Uint8Array;
+  getOrganizationId_asB64(): string;
+  setOrganizationId(value: Uint8Array | string): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): ReplaceResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: ReplaceResponse): ReplaceResponse.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: ReplaceResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): ReplaceResponse;
+  static deserializeBinaryFromReader(message: ReplaceResponse, reader: jspb.BinaryReader): ReplaceResponse;
+}
+
+export namespace ReplaceResponse {
+  export type AsObject = {
+    hardwareInfo?: toit_model_device_pb.HardwareInfo.AsObject,
+    organizationId: Uint8Array | string,
+  }
+}
+
 export class GetActiveDeviceIDRequest extends jspb.Message {
   getHardwareId(): Uint8Array | string;
   getHardwareId_asU8(): Uint8Array;
