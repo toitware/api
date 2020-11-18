@@ -58,6 +58,37 @@ public final class HardwareServiceGrpc {
     return getClaimMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<io.toit.proto.toit.api.HardwareProto.ReplaceRequest,
+      io.toit.proto.toit.api.HardwareProto.ReplaceResponse> getReplaceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Replace",
+      requestType = io.toit.proto.toit.api.HardwareProto.ReplaceRequest.class,
+      responseType = io.toit.proto.toit.api.HardwareProto.ReplaceResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.toit.proto.toit.api.HardwareProto.ReplaceRequest,
+      io.toit.proto.toit.api.HardwareProto.ReplaceResponse> getReplaceMethod() {
+    io.grpc.MethodDescriptor<io.toit.proto.toit.api.HardwareProto.ReplaceRequest, io.toit.proto.toit.api.HardwareProto.ReplaceResponse> getReplaceMethod;
+    if ((getReplaceMethod = HardwareServiceGrpc.getReplaceMethod) == null) {
+      synchronized (HardwareServiceGrpc.class) {
+        if ((getReplaceMethod = HardwareServiceGrpc.getReplaceMethod) == null) {
+          HardwareServiceGrpc.getReplaceMethod = getReplaceMethod =
+              io.grpc.MethodDescriptor.<io.toit.proto.toit.api.HardwareProto.ReplaceRequest, io.toit.proto.toit.api.HardwareProto.ReplaceResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Replace"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.toit.proto.toit.api.HardwareProto.ReplaceRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.toit.proto.toit.api.HardwareProto.ReplaceResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new HardwareServiceMethodDescriptorSupplier("Replace"))
+              .build();
+        }
+      }
+    }
+    return getReplaceMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<io.toit.proto.toit.api.HardwareProto.GetActiveDeviceIDRequest,
       io.toit.proto.toit.api.HardwareProto.GetActiveDeviceIDResponse> getGetActiveDeviceIDMethod;
 
@@ -146,6 +177,13 @@ public final class HardwareServiceGrpc {
 
     /**
      */
+    public void replace(io.toit.proto.toit.api.HardwareProto.ReplaceRequest request,
+        io.grpc.stub.StreamObserver<io.toit.proto.toit.api.HardwareProto.ReplaceResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getReplaceMethod(), responseObserver);
+    }
+
+    /**
+     */
     public void getActiveDeviceID(io.toit.proto.toit.api.HardwareProto.GetActiveDeviceIDRequest request,
         io.grpc.stub.StreamObserver<io.toit.proto.toit.api.HardwareProto.GetActiveDeviceIDResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getGetActiveDeviceIDMethod(), responseObserver);
@@ -160,6 +198,13 @@ public final class HardwareServiceGrpc {
                 io.toit.proto.toit.api.HardwareProto.ClaimRequest,
                 io.toit.proto.toit.api.HardwareProto.ClaimResponse>(
                   this, METHODID_CLAIM)))
+          .addMethod(
+            getReplaceMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.toit.proto.toit.api.HardwareProto.ReplaceRequest,
+                io.toit.proto.toit.api.HardwareProto.ReplaceResponse>(
+                  this, METHODID_REPLACE)))
           .addMethod(
             getGetActiveDeviceIDMethod(),
             asyncUnaryCall(
@@ -195,6 +240,14 @@ public final class HardwareServiceGrpc {
 
     /**
      */
+    public void replace(io.toit.proto.toit.api.HardwareProto.ReplaceRequest request,
+        io.grpc.stub.StreamObserver<io.toit.proto.toit.api.HardwareProto.ReplaceResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getReplaceMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
     public void getActiveDeviceID(io.toit.proto.toit.api.HardwareProto.GetActiveDeviceIDRequest request,
         io.grpc.stub.StreamObserver<io.toit.proto.toit.api.HardwareProto.GetActiveDeviceIDResponse> responseObserver) {
       asyncUnaryCall(
@@ -221,6 +274,13 @@ public final class HardwareServiceGrpc {
     public io.toit.proto.toit.api.HardwareProto.ClaimResponse claim(io.toit.proto.toit.api.HardwareProto.ClaimRequest request) {
       return blockingUnaryCall(
           getChannel(), getClaimMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public io.toit.proto.toit.api.HardwareProto.ReplaceResponse replace(io.toit.proto.toit.api.HardwareProto.ReplaceRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getReplaceMethod(), getCallOptions(), request);
     }
 
     /**
@@ -255,6 +315,14 @@ public final class HardwareServiceGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<io.toit.proto.toit.api.HardwareProto.ReplaceResponse> replace(
+        io.toit.proto.toit.api.HardwareProto.ReplaceRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getReplaceMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<io.toit.proto.toit.api.HardwareProto.GetActiveDeviceIDResponse> getActiveDeviceID(
         io.toit.proto.toit.api.HardwareProto.GetActiveDeviceIDRequest request) {
       return futureUnaryCall(
@@ -263,7 +331,8 @@ public final class HardwareServiceGrpc {
   }
 
   private static final int METHODID_CLAIM = 0;
-  private static final int METHODID_GET_ACTIVE_DEVICE_ID = 1;
+  private static final int METHODID_REPLACE = 1;
+  private static final int METHODID_GET_ACTIVE_DEVICE_ID = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -285,6 +354,10 @@ public final class HardwareServiceGrpc {
         case METHODID_CLAIM:
           serviceImpl.claim((io.toit.proto.toit.api.HardwareProto.ClaimRequest) request,
               (io.grpc.stub.StreamObserver<io.toit.proto.toit.api.HardwareProto.ClaimResponse>) responseObserver);
+          break;
+        case METHODID_REPLACE:
+          serviceImpl.replace((io.toit.proto.toit.api.HardwareProto.ReplaceRequest) request,
+              (io.grpc.stub.StreamObserver<io.toit.proto.toit.api.HardwareProto.ReplaceResponse>) responseObserver);
           break;
         case METHODID_GET_ACTIVE_DEVICE_ID:
           serviceImpl.getActiveDeviceID((io.toit.proto.toit.api.HardwareProto.GetActiveDeviceIDRequest) request,
@@ -352,6 +425,7 @@ public final class HardwareServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new HardwareServiceFileDescriptorSupplier())
               .addMethod(getClaimMethod())
+              .addMethod(getReplaceMethod())
               .addMethod(getGetActiveDeviceIDMethod())
               .build();
         }

@@ -1654,6 +1654,1442 @@ public final class HardwareProto {
 
   }
 
+  public interface ReplaceRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.ReplaceRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes new_hardware_id = 1;</code>
+     * @return The newHardwareId.
+     */
+    com.google.protobuf.ByteString getNewHardwareId();
+
+    /**
+     * <code>bytes current_hardware_id = 2;</code>
+     * @return The currentHardwareId.
+     */
+    com.google.protobuf.ByteString getCurrentHardwareId();
+
+    /**
+     * <pre>
+     * The ID of the device to replace.
+     * </pre>
+     *
+     * <code>bytes device_id = 3;</code>
+     * @return The deviceId.
+     */
+    com.google.protobuf.ByteString getDeviceId();
+
+    /**
+     * <pre>
+     * Optional to set. Default is the current org for the user.
+     * </pre>
+     *
+     * <code>bytes organization_id = 4;</code>
+     * @return The organizationId.
+     */
+    com.google.protobuf.ByteString getOrganizationId();
+  }
+  /**
+   * Protobuf type {@code toit.api.ReplaceRequest}
+   */
+  public  static final class ReplaceRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.api.ReplaceRequest)
+      ReplaceRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ReplaceRequest.newBuilder() to construct.
+    private ReplaceRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ReplaceRequest() {
+      newHardwareId_ = com.google.protobuf.ByteString.EMPTY;
+      currentHardwareId_ = com.google.protobuf.ByteString.EMPTY;
+      deviceId_ = com.google.protobuf.ByteString.EMPTY;
+      organizationId_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ReplaceRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ReplaceRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+
+              newHardwareId_ = input.readBytes();
+              break;
+            }
+            case 18: {
+
+              currentHardwareId_ = input.readBytes();
+              break;
+            }
+            case 26: {
+
+              deviceId_ = input.readBytes();
+              break;
+            }
+            case 34: {
+
+              organizationId_ = input.readBytes();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.api.HardwareProto.internal_static_toit_api_ReplaceRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.api.HardwareProto.internal_static_toit_api_ReplaceRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.api.HardwareProto.ReplaceRequest.class, io.toit.proto.toit.api.HardwareProto.ReplaceRequest.Builder.class);
+    }
+
+    public static final int NEW_HARDWARE_ID_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString newHardwareId_;
+    /**
+     * <code>bytes new_hardware_id = 1;</code>
+     * @return The newHardwareId.
+     */
+    public com.google.protobuf.ByteString getNewHardwareId() {
+      return newHardwareId_;
+    }
+
+    public static final int CURRENT_HARDWARE_ID_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString currentHardwareId_;
+    /**
+     * <code>bytes current_hardware_id = 2;</code>
+     * @return The currentHardwareId.
+     */
+    public com.google.protobuf.ByteString getCurrentHardwareId() {
+      return currentHardwareId_;
+    }
+
+    public static final int DEVICE_ID_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString deviceId_;
+    /**
+     * <pre>
+     * The ID of the device to replace.
+     * </pre>
+     *
+     * <code>bytes device_id = 3;</code>
+     * @return The deviceId.
+     */
+    public com.google.protobuf.ByteString getDeviceId() {
+      return deviceId_;
+    }
+
+    public static final int ORGANIZATION_ID_FIELD_NUMBER = 4;
+    private com.google.protobuf.ByteString organizationId_;
+    /**
+     * <pre>
+     * Optional to set. Default is the current org for the user.
+     * </pre>
+     *
+     * <code>bytes organization_id = 4;</code>
+     * @return The organizationId.
+     */
+    public com.google.protobuf.ByteString getOrganizationId() {
+      return organizationId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!newHardwareId_.isEmpty()) {
+        output.writeBytes(1, newHardwareId_);
+      }
+      if (!currentHardwareId_.isEmpty()) {
+        output.writeBytes(2, currentHardwareId_);
+      }
+      if (!deviceId_.isEmpty()) {
+        output.writeBytes(3, deviceId_);
+      }
+      if (!organizationId_.isEmpty()) {
+        output.writeBytes(4, organizationId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!newHardwareId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, newHardwareId_);
+      }
+      if (!currentHardwareId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, currentHardwareId_);
+      }
+      if (!deviceId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, deviceId_);
+      }
+      if (!organizationId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, organizationId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.api.HardwareProto.ReplaceRequest)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.api.HardwareProto.ReplaceRequest other = (io.toit.proto.toit.api.HardwareProto.ReplaceRequest) obj;
+
+      if (!getNewHardwareId()
+          .equals(other.getNewHardwareId())) return false;
+      if (!getCurrentHardwareId()
+          .equals(other.getCurrentHardwareId())) return false;
+      if (!getDeviceId()
+          .equals(other.getDeviceId())) return false;
+      if (!getOrganizationId()
+          .equals(other.getOrganizationId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NEW_HARDWARE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getNewHardwareId().hashCode();
+      hash = (37 * hash) + CURRENT_HARDWARE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getCurrentHardwareId().hashCode();
+      hash = (37 * hash) + DEVICE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDeviceId().hashCode();
+      hash = (37 * hash) + ORGANIZATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getOrganizationId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.api.HardwareProto.ReplaceRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.ReplaceRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.ReplaceRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.ReplaceRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.ReplaceRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.ReplaceRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.ReplaceRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.ReplaceRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.ReplaceRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.ReplaceRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.ReplaceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.ReplaceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.api.HardwareProto.ReplaceRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.api.ReplaceRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.api.ReplaceRequest)
+        io.toit.proto.toit.api.HardwareProto.ReplaceRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.HardwareProto.internal_static_toit_api_ReplaceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.HardwareProto.internal_static_toit_api_ReplaceRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.HardwareProto.ReplaceRequest.class, io.toit.proto.toit.api.HardwareProto.ReplaceRequest.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.api.HardwareProto.ReplaceRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        newHardwareId_ = com.google.protobuf.ByteString.EMPTY;
+
+        currentHardwareId_ = com.google.protobuf.ByteString.EMPTY;
+
+        deviceId_ = com.google.protobuf.ByteString.EMPTY;
+
+        organizationId_ = com.google.protobuf.ByteString.EMPTY;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.api.HardwareProto.internal_static_toit_api_ReplaceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.HardwareProto.ReplaceRequest getDefaultInstanceForType() {
+        return io.toit.proto.toit.api.HardwareProto.ReplaceRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.HardwareProto.ReplaceRequest build() {
+        io.toit.proto.toit.api.HardwareProto.ReplaceRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.HardwareProto.ReplaceRequest buildPartial() {
+        io.toit.proto.toit.api.HardwareProto.ReplaceRequest result = new io.toit.proto.toit.api.HardwareProto.ReplaceRequest(this);
+        result.newHardwareId_ = newHardwareId_;
+        result.currentHardwareId_ = currentHardwareId_;
+        result.deviceId_ = deviceId_;
+        result.organizationId_ = organizationId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.api.HardwareProto.ReplaceRequest) {
+          return mergeFrom((io.toit.proto.toit.api.HardwareProto.ReplaceRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.api.HardwareProto.ReplaceRequest other) {
+        if (other == io.toit.proto.toit.api.HardwareProto.ReplaceRequest.getDefaultInstance()) return this;
+        if (other.getNewHardwareId() != com.google.protobuf.ByteString.EMPTY) {
+          setNewHardwareId(other.getNewHardwareId());
+        }
+        if (other.getCurrentHardwareId() != com.google.protobuf.ByteString.EMPTY) {
+          setCurrentHardwareId(other.getCurrentHardwareId());
+        }
+        if (other.getDeviceId() != com.google.protobuf.ByteString.EMPTY) {
+          setDeviceId(other.getDeviceId());
+        }
+        if (other.getOrganizationId() != com.google.protobuf.ByteString.EMPTY) {
+          setOrganizationId(other.getOrganizationId());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.api.HardwareProto.ReplaceRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.api.HardwareProto.ReplaceRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.ByteString newHardwareId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes new_hardware_id = 1;</code>
+       * @return The newHardwareId.
+       */
+      public com.google.protobuf.ByteString getNewHardwareId() {
+        return newHardwareId_;
+      }
+      /**
+       * <code>bytes new_hardware_id = 1;</code>
+       * @param value The newHardwareId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewHardwareId(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        newHardwareId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes new_hardware_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewHardwareId() {
+        
+        newHardwareId_ = getDefaultInstance().getNewHardwareId();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString currentHardwareId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes current_hardware_id = 2;</code>
+       * @return The currentHardwareId.
+       */
+      public com.google.protobuf.ByteString getCurrentHardwareId() {
+        return currentHardwareId_;
+      }
+      /**
+       * <code>bytes current_hardware_id = 2;</code>
+       * @param value The currentHardwareId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurrentHardwareId(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        currentHardwareId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes current_hardware_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurrentHardwareId() {
+        
+        currentHardwareId_ = getDefaultInstance().getCurrentHardwareId();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString deviceId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * The ID of the device to replace.
+       * </pre>
+       *
+       * <code>bytes device_id = 3;</code>
+       * @return The deviceId.
+       */
+      public com.google.protobuf.ByteString getDeviceId() {
+        return deviceId_;
+      }
+      /**
+       * <pre>
+       * The ID of the device to replace.
+       * </pre>
+       *
+       * <code>bytes device_id = 3;</code>
+       * @param value The deviceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeviceId(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        deviceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ID of the device to replace.
+       * </pre>
+       *
+       * <code>bytes device_id = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeviceId() {
+        
+        deviceId_ = getDefaultInstance().getDeviceId();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString organizationId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * Optional to set. Default is the current org for the user.
+       * </pre>
+       *
+       * <code>bytes organization_id = 4;</code>
+       * @return The organizationId.
+       */
+      public com.google.protobuf.ByteString getOrganizationId() {
+        return organizationId_;
+      }
+      /**
+       * <pre>
+       * Optional to set. Default is the current org for the user.
+       * </pre>
+       *
+       * <code>bytes organization_id = 4;</code>
+       * @param value The organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationId(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        organizationId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional to set. Default is the current org for the user.
+       * </pre>
+       *
+       * <code>bytes organization_id = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrganizationId() {
+        
+        organizationId_ = getDefaultInstance().getOrganizationId();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.api.ReplaceRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.api.ReplaceRequest)
+    private static final io.toit.proto.toit.api.HardwareProto.ReplaceRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.api.HardwareProto.ReplaceRequest();
+    }
+
+    public static io.toit.proto.toit.api.HardwareProto.ReplaceRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ReplaceRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ReplaceRequest>() {
+      @java.lang.Override
+      public ReplaceRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ReplaceRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ReplaceRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ReplaceRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.api.HardwareProto.ReplaceRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ReplaceResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.ReplaceResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.toit.model.HardwareInfo hardware_info = 1;</code>
+     * @return Whether the hardwareInfo field is set.
+     */
+    boolean hasHardwareInfo();
+    /**
+     * <code>.toit.model.HardwareInfo hardware_info = 1;</code>
+     * @return The hardwareInfo.
+     */
+    io.toit.proto.toit.model.DeviceProto.HardwareInfo getHardwareInfo();
+    /**
+     * <code>.toit.model.HardwareInfo hardware_info = 1;</code>
+     */
+    io.toit.proto.toit.model.DeviceProto.HardwareInfoOrBuilder getHardwareInfoOrBuilder();
+
+    /**
+     * <code>bytes organization_id = 2;</code>
+     * @return The organizationId.
+     */
+    com.google.protobuf.ByteString getOrganizationId();
+  }
+  /**
+   * Protobuf type {@code toit.api.ReplaceResponse}
+   */
+  public  static final class ReplaceResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.api.ReplaceResponse)
+      ReplaceResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ReplaceResponse.newBuilder() to construct.
+    private ReplaceResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ReplaceResponse() {
+      organizationId_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ReplaceResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ReplaceResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              io.toit.proto.toit.model.DeviceProto.HardwareInfo.Builder subBuilder = null;
+              if (hardwareInfo_ != null) {
+                subBuilder = hardwareInfo_.toBuilder();
+              }
+              hardwareInfo_ = input.readMessage(io.toit.proto.toit.model.DeviceProto.HardwareInfo.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(hardwareInfo_);
+                hardwareInfo_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+
+              organizationId_ = input.readBytes();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.api.HardwareProto.internal_static_toit_api_ReplaceResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.api.HardwareProto.internal_static_toit_api_ReplaceResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.api.HardwareProto.ReplaceResponse.class, io.toit.proto.toit.api.HardwareProto.ReplaceResponse.Builder.class);
+    }
+
+    public static final int HARDWARE_INFO_FIELD_NUMBER = 1;
+    private io.toit.proto.toit.model.DeviceProto.HardwareInfo hardwareInfo_;
+    /**
+     * <code>.toit.model.HardwareInfo hardware_info = 1;</code>
+     * @return Whether the hardwareInfo field is set.
+     */
+    public boolean hasHardwareInfo() {
+      return hardwareInfo_ != null;
+    }
+    /**
+     * <code>.toit.model.HardwareInfo hardware_info = 1;</code>
+     * @return The hardwareInfo.
+     */
+    public io.toit.proto.toit.model.DeviceProto.HardwareInfo getHardwareInfo() {
+      return hardwareInfo_ == null ? io.toit.proto.toit.model.DeviceProto.HardwareInfo.getDefaultInstance() : hardwareInfo_;
+    }
+    /**
+     * <code>.toit.model.HardwareInfo hardware_info = 1;</code>
+     */
+    public io.toit.proto.toit.model.DeviceProto.HardwareInfoOrBuilder getHardwareInfoOrBuilder() {
+      return getHardwareInfo();
+    }
+
+    public static final int ORGANIZATION_ID_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString organizationId_;
+    /**
+     * <code>bytes organization_id = 2;</code>
+     * @return The organizationId.
+     */
+    public com.google.protobuf.ByteString getOrganizationId() {
+      return organizationId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (hardwareInfo_ != null) {
+        output.writeMessage(1, getHardwareInfo());
+      }
+      if (!organizationId_.isEmpty()) {
+        output.writeBytes(2, organizationId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (hardwareInfo_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getHardwareInfo());
+      }
+      if (!organizationId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, organizationId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.api.HardwareProto.ReplaceResponse)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.api.HardwareProto.ReplaceResponse other = (io.toit.proto.toit.api.HardwareProto.ReplaceResponse) obj;
+
+      if (hasHardwareInfo() != other.hasHardwareInfo()) return false;
+      if (hasHardwareInfo()) {
+        if (!getHardwareInfo()
+            .equals(other.getHardwareInfo())) return false;
+      }
+      if (!getOrganizationId()
+          .equals(other.getOrganizationId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasHardwareInfo()) {
+        hash = (37 * hash) + HARDWARE_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getHardwareInfo().hashCode();
+      }
+      hash = (37 * hash) + ORGANIZATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getOrganizationId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.api.HardwareProto.ReplaceResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.ReplaceResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.ReplaceResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.ReplaceResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.ReplaceResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.ReplaceResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.ReplaceResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.ReplaceResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.ReplaceResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.ReplaceResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.ReplaceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.ReplaceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.api.HardwareProto.ReplaceResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.api.ReplaceResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.api.ReplaceResponse)
+        io.toit.proto.toit.api.HardwareProto.ReplaceResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.HardwareProto.internal_static_toit_api_ReplaceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.HardwareProto.internal_static_toit_api_ReplaceResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.HardwareProto.ReplaceResponse.class, io.toit.proto.toit.api.HardwareProto.ReplaceResponse.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.api.HardwareProto.ReplaceResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (hardwareInfoBuilder_ == null) {
+          hardwareInfo_ = null;
+        } else {
+          hardwareInfo_ = null;
+          hardwareInfoBuilder_ = null;
+        }
+        organizationId_ = com.google.protobuf.ByteString.EMPTY;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.api.HardwareProto.internal_static_toit_api_ReplaceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.HardwareProto.ReplaceResponse getDefaultInstanceForType() {
+        return io.toit.proto.toit.api.HardwareProto.ReplaceResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.HardwareProto.ReplaceResponse build() {
+        io.toit.proto.toit.api.HardwareProto.ReplaceResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.HardwareProto.ReplaceResponse buildPartial() {
+        io.toit.proto.toit.api.HardwareProto.ReplaceResponse result = new io.toit.proto.toit.api.HardwareProto.ReplaceResponse(this);
+        if (hardwareInfoBuilder_ == null) {
+          result.hardwareInfo_ = hardwareInfo_;
+        } else {
+          result.hardwareInfo_ = hardwareInfoBuilder_.build();
+        }
+        result.organizationId_ = organizationId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.api.HardwareProto.ReplaceResponse) {
+          return mergeFrom((io.toit.proto.toit.api.HardwareProto.ReplaceResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.api.HardwareProto.ReplaceResponse other) {
+        if (other == io.toit.proto.toit.api.HardwareProto.ReplaceResponse.getDefaultInstance()) return this;
+        if (other.hasHardwareInfo()) {
+          mergeHardwareInfo(other.getHardwareInfo());
+        }
+        if (other.getOrganizationId() != com.google.protobuf.ByteString.EMPTY) {
+          setOrganizationId(other.getOrganizationId());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.api.HardwareProto.ReplaceResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.api.HardwareProto.ReplaceResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private io.toit.proto.toit.model.DeviceProto.HardwareInfo hardwareInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.model.DeviceProto.HardwareInfo, io.toit.proto.toit.model.DeviceProto.HardwareInfo.Builder, io.toit.proto.toit.model.DeviceProto.HardwareInfoOrBuilder> hardwareInfoBuilder_;
+      /**
+       * <code>.toit.model.HardwareInfo hardware_info = 1;</code>
+       * @return Whether the hardwareInfo field is set.
+       */
+      public boolean hasHardwareInfo() {
+        return hardwareInfoBuilder_ != null || hardwareInfo_ != null;
+      }
+      /**
+       * <code>.toit.model.HardwareInfo hardware_info = 1;</code>
+       * @return The hardwareInfo.
+       */
+      public io.toit.proto.toit.model.DeviceProto.HardwareInfo getHardwareInfo() {
+        if (hardwareInfoBuilder_ == null) {
+          return hardwareInfo_ == null ? io.toit.proto.toit.model.DeviceProto.HardwareInfo.getDefaultInstance() : hardwareInfo_;
+        } else {
+          return hardwareInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.toit.model.HardwareInfo hardware_info = 1;</code>
+       */
+      public Builder setHardwareInfo(io.toit.proto.toit.model.DeviceProto.HardwareInfo value) {
+        if (hardwareInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          hardwareInfo_ = value;
+          onChanged();
+        } else {
+          hardwareInfoBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.HardwareInfo hardware_info = 1;</code>
+       */
+      public Builder setHardwareInfo(
+          io.toit.proto.toit.model.DeviceProto.HardwareInfo.Builder builderForValue) {
+        if (hardwareInfoBuilder_ == null) {
+          hardwareInfo_ = builderForValue.build();
+          onChanged();
+        } else {
+          hardwareInfoBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.HardwareInfo hardware_info = 1;</code>
+       */
+      public Builder mergeHardwareInfo(io.toit.proto.toit.model.DeviceProto.HardwareInfo value) {
+        if (hardwareInfoBuilder_ == null) {
+          if (hardwareInfo_ != null) {
+            hardwareInfo_ =
+              io.toit.proto.toit.model.DeviceProto.HardwareInfo.newBuilder(hardwareInfo_).mergeFrom(value).buildPartial();
+          } else {
+            hardwareInfo_ = value;
+          }
+          onChanged();
+        } else {
+          hardwareInfoBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.HardwareInfo hardware_info = 1;</code>
+       */
+      public Builder clearHardwareInfo() {
+        if (hardwareInfoBuilder_ == null) {
+          hardwareInfo_ = null;
+          onChanged();
+        } else {
+          hardwareInfo_ = null;
+          hardwareInfoBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.HardwareInfo hardware_info = 1;</code>
+       */
+      public io.toit.proto.toit.model.DeviceProto.HardwareInfo.Builder getHardwareInfoBuilder() {
+        
+        onChanged();
+        return getHardwareInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.toit.model.HardwareInfo hardware_info = 1;</code>
+       */
+      public io.toit.proto.toit.model.DeviceProto.HardwareInfoOrBuilder getHardwareInfoOrBuilder() {
+        if (hardwareInfoBuilder_ != null) {
+          return hardwareInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return hardwareInfo_ == null ?
+              io.toit.proto.toit.model.DeviceProto.HardwareInfo.getDefaultInstance() : hardwareInfo_;
+        }
+      }
+      /**
+       * <code>.toit.model.HardwareInfo hardware_info = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.model.DeviceProto.HardwareInfo, io.toit.proto.toit.model.DeviceProto.HardwareInfo.Builder, io.toit.proto.toit.model.DeviceProto.HardwareInfoOrBuilder> 
+          getHardwareInfoFieldBuilder() {
+        if (hardwareInfoBuilder_ == null) {
+          hardwareInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.toit.proto.toit.model.DeviceProto.HardwareInfo, io.toit.proto.toit.model.DeviceProto.HardwareInfo.Builder, io.toit.proto.toit.model.DeviceProto.HardwareInfoOrBuilder>(
+                  getHardwareInfo(),
+                  getParentForChildren(),
+                  isClean());
+          hardwareInfo_ = null;
+        }
+        return hardwareInfoBuilder_;
+      }
+
+      private com.google.protobuf.ByteString organizationId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes organization_id = 2;</code>
+       * @return The organizationId.
+       */
+      public com.google.protobuf.ByteString getOrganizationId() {
+        return organizationId_;
+      }
+      /**
+       * <code>bytes organization_id = 2;</code>
+       * @param value The organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationId(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        organizationId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes organization_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrganizationId() {
+        
+        organizationId_ = getDefaultInstance().getOrganizationId();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.api.ReplaceResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.api.ReplaceResponse)
+    private static final io.toit.proto.toit.api.HardwareProto.ReplaceResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.api.HardwareProto.ReplaceResponse();
+    }
+
+    public static io.toit.proto.toit.api.HardwareProto.ReplaceResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ReplaceResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ReplaceResponse>() {
+      @java.lang.Override
+      public ReplaceResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ReplaceResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ReplaceResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ReplaceResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.api.HardwareProto.ReplaceResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface GetActiveDeviceIDRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:toit.api.GetActiveDeviceIDRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -5085,6 +6521,16 @@ public final class HardwareProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_toit_api_ClaimResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_ReplaceRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_ReplaceRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_ReplaceResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_ReplaceResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_toit_api_GetActiveDeviceIDRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -5130,29 +6576,36 @@ public final class HardwareProto {
       "sponse\022/\n\rhardware_info\030\001 \001(\0132\030.toit.mod" +
       "el.HardwareInfo\022\021\n\tdevice_id\030\002 \001(\014\022\023\n\013de" +
       "vice_name\030\003 \001(\t\022\027\n\017organization_id\030\004 \001(\014" +
-      "\"/\n\030GetActiveDeviceIDRequest\022\023\n\013hardware" +
-      "_id\030\001 \001(\014\".\n\031GetActiveDeviceIDResponse\022\021" +
-      "\n\tdevice_id\030\001 \001(\014\"<\n\034ClaimHardwareIdenti" +
-      "tyRequest\022\034\n\024flash_station_secret\030\001 \001(\t\"" +
-      "X\n\035ClaimHardwareIdentityResponse\0227\n\021hard" +
-      "ware_identity\030\001 \001(\0132\034.toit.model.Hardwar" +
-      "eIdentity\"z\n\036SetHardwareIdentityInfoRequ" +
-      "est\022\034\n\024flash_station_secret\030\001 \001(\t\022\n\n\002id\030" +
-      "\002 \001(\014\022.\n\004info\030\003 \001(\0132 .toit.model.Hardwar" +
-      "eIdentityInfo\"!\n\037SetHardwareIdentityInfo" +
-      "Response2\255\001\n\017HardwareService\022:\n\005Claim\022\026." +
-      "toit.api.ClaimRequest\032\027.toit.api.ClaimRe" +
-      "sponse\"\000\022^\n\021GetActiveDeviceID\022\".toit.api" +
-      ".GetActiveDeviceIDRequest\032#.toit.api.Get" +
-      "ActiveDeviceIDResponse\"\0002\354\001\n\014FlashStatio" +
-      "n\022j\n\025ClaimHardwareIdentity\022&.toit.api.Cl" +
-      "aimHardwareIdentityRequest\032\'.toit.api.Cl" +
-      "aimHardwareIdentityResponse\"\000\022p\n\027SetHard" +
-      "wareIdentityInfo\022(.toit.api.SetHardwareI" +
-      "dentityInfoRequest\032).toit.api.SetHardwar" +
-      "eIdentityInfoResponse\"\000BM\n\026io.toit.proto" +
-      ".toit.apiB\rHardwareProtoZ$github.com/toi" +
-      "tware/api.git/toit/apib\006proto3"
+      "\"r\n\016ReplaceRequest\022\027\n\017new_hardware_id\030\001 " +
+      "\001(\014\022\033\n\023current_hardware_id\030\002 \001(\014\022\021\n\tdevi" +
+      "ce_id\030\003 \001(\014\022\027\n\017organization_id\030\004 \001(\014\"[\n\017" +
+      "ReplaceResponse\022/\n\rhardware_info\030\001 \001(\0132\030" +
+      ".toit.model.HardwareInfo\022\027\n\017organization" +
+      "_id\030\002 \001(\014\"/\n\030GetActiveDeviceIDRequest\022\023\n" +
+      "\013hardware_id\030\001 \001(\014\".\n\031GetActiveDeviceIDR" +
+      "esponse\022\021\n\tdevice_id\030\001 \001(\014\"<\n\034ClaimHardw" +
+      "areIdentityRequest\022\034\n\024flash_station_secr" +
+      "et\030\001 \001(\t\"X\n\035ClaimHardwareIdentityRespons" +
+      "e\0227\n\021hardware_identity\030\001 \001(\0132\034.toit.mode" +
+      "l.HardwareIdentity\"z\n\036SetHardwareIdentit" +
+      "yInfoRequest\022\034\n\024flash_station_secret\030\001 \001" +
+      "(\t\022\n\n\002id\030\002 \001(\014\022.\n\004info\030\003 \001(\0132 .toit.mode" +
+      "l.HardwareIdentityInfo\"!\n\037SetHardwareIde" +
+      "ntityInfoResponse2\357\001\n\017HardwareService\022:\n" +
+      "\005Claim\022\026.toit.api.ClaimRequest\032\027.toit.ap" +
+      "i.ClaimResponse\"\000\022@\n\007Replace\022\030.toit.api." +
+      "ReplaceRequest\032\031.toit.api.ReplaceRespons" +
+      "e\"\000\022^\n\021GetActiveDeviceID\022\".toit.api.GetA" +
+      "ctiveDeviceIDRequest\032#.toit.api.GetActiv" +
+      "eDeviceIDResponse\"\0002\354\001\n\014FlashStation\022j\n\025" +
+      "ClaimHardwareIdentity\022&.toit.api.ClaimHa" +
+      "rdwareIdentityRequest\032\'.toit.api.ClaimHa" +
+      "rdwareIdentityResponse\"\000\022p\n\027SetHardwareI" +
+      "dentityInfo\022(.toit.api.SetHardwareIdenti" +
+      "tyInfoRequest\032).toit.api.SetHardwareIden" +
+      "tityInfoResponse\"\000BM\n\026io.toit.proto.toit" +
+      ".apiB\rHardwareProtoZ$github.com/toitware" +
+      "/api.git/toit/apib\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5171,38 +6624,50 @@ public final class HardwareProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_ClaimResponse_descriptor,
         new java.lang.String[] { "HardwareInfo", "DeviceId", "DeviceName", "OrganizationId", });
-    internal_static_toit_api_GetActiveDeviceIDRequest_descriptor =
+    internal_static_toit_api_ReplaceRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_toit_api_ReplaceRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_ReplaceRequest_descriptor,
+        new java.lang.String[] { "NewHardwareId", "CurrentHardwareId", "DeviceId", "OrganizationId", });
+    internal_static_toit_api_ReplaceResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_toit_api_ReplaceResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_ReplaceResponse_descriptor,
+        new java.lang.String[] { "HardwareInfo", "OrganizationId", });
+    internal_static_toit_api_GetActiveDeviceIDRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_toit_api_GetActiveDeviceIDRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_GetActiveDeviceIDRequest_descriptor,
         new java.lang.String[] { "HardwareId", });
     internal_static_toit_api_GetActiveDeviceIDResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_toit_api_GetActiveDeviceIDResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_GetActiveDeviceIDResponse_descriptor,
         new java.lang.String[] { "DeviceId", });
     internal_static_toit_api_ClaimHardwareIdentityRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_toit_api_ClaimHardwareIdentityRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_ClaimHardwareIdentityRequest_descriptor,
         new java.lang.String[] { "FlashStationSecret", });
     internal_static_toit_api_ClaimHardwareIdentityResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_toit_api_ClaimHardwareIdentityResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_ClaimHardwareIdentityResponse_descriptor,
         new java.lang.String[] { "HardwareIdentity", });
     internal_static_toit_api_SetHardwareIdentityInfoRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_toit_api_SetHardwareIdentityInfoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_SetHardwareIdentityInfoRequest_descriptor,
         new java.lang.String[] { "FlashStationSecret", "Id", "Info", });
     internal_static_toit_api_SetHardwareIdentityInfoResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_toit_api_SetHardwareIdentityInfoResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_SetHardwareIdentityInfoResponse_descriptor,
