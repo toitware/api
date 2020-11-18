@@ -2714,6 +2714,16 @@ public final class AppProto {
      * @return The appId.
      */
     com.google.protobuf.ByteString getAppId();
+
+    /**
+     * <pre>
+     * if revision is zero will give the latest.
+     * </pre>
+     *
+     * <code>uint64 revision = 2;</code>
+     * @return The revision.
+     */
+    long getRevision();
   }
   /**
    * Protobuf type {@code toit.api.GetAppRequest}
@@ -2766,6 +2776,11 @@ public final class AppProto {
               appId_ = input.readBytes();
               break;
             }
+            case 16: {
+
+              revision_ = input.readUInt64();
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -2808,6 +2823,20 @@ public final class AppProto {
       return appId_;
     }
 
+    public static final int REVISION_FIELD_NUMBER = 2;
+    private long revision_;
+    /**
+     * <pre>
+     * if revision is zero will give the latest.
+     * </pre>
+     *
+     * <code>uint64 revision = 2;</code>
+     * @return The revision.
+     */
+    public long getRevision() {
+      return revision_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2825,6 +2854,9 @@ public final class AppProto {
       if (!appId_.isEmpty()) {
         output.writeBytes(1, appId_);
       }
+      if (revision_ != 0L) {
+        output.writeUInt64(2, revision_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2837,6 +2869,10 @@ public final class AppProto {
       if (!appId_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, appId_);
+      }
+      if (revision_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, revision_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2855,6 +2891,8 @@ public final class AppProto {
 
       if (!getAppId()
           .equals(other.getAppId())) return false;
+      if (getRevision()
+          != other.getRevision()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2868,6 +2906,9 @@ public final class AppProto {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + APP_ID_FIELD_NUMBER;
       hash = (53 * hash) + getAppId().hashCode();
+      hash = (37 * hash) + REVISION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRevision());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3003,6 +3044,8 @@ public final class AppProto {
         super.clear();
         appId_ = com.google.protobuf.ByteString.EMPTY;
 
+        revision_ = 0L;
+
         return this;
       }
 
@@ -3030,6 +3073,7 @@ public final class AppProto {
       public io.toit.proto.toit.api.AppProto.GetAppRequest buildPartial() {
         io.toit.proto.toit.api.AppProto.GetAppRequest result = new io.toit.proto.toit.api.AppProto.GetAppRequest(this);
         result.appId_ = appId_;
+        result.revision_ = revision_;
         onBuilt();
         return result;
       }
@@ -3080,6 +3124,9 @@ public final class AppProto {
         if (other == io.toit.proto.toit.api.AppProto.GetAppRequest.getDefaultInstance()) return this;
         if (other.getAppId() != com.google.protobuf.ByteString.EMPTY) {
           setAppId(other.getAppId());
+        }
+        if (other.getRevision() != 0L) {
+          setRevision(other.getRevision());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3139,6 +3186,48 @@ public final class AppProto {
       public Builder clearAppId() {
         
         appId_ = getDefaultInstance().getAppId();
+        onChanged();
+        return this;
+      }
+
+      private long revision_ ;
+      /**
+       * <pre>
+       * if revision is zero will give the latest.
+       * </pre>
+       *
+       * <code>uint64 revision = 2;</code>
+       * @return The revision.
+       */
+      public long getRevision() {
+        return revision_;
+      }
+      /**
+       * <pre>
+       * if revision is zero will give the latest.
+       * </pre>
+       *
+       * <code>uint64 revision = 2;</code>
+       * @param value The revision to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRevision(long value) {
+        
+        revision_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * if revision is zero will give the latest.
+       * </pre>
+       *
+       * <code>uint64 revision = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRevision() {
+        
+        revision_ = 0L;
         onChanged();
         return this;
       }
@@ -3808,6 +3897,3105 @@ public final class AppProto {
 
     @java.lang.Override
     public io.toit.proto.toit.api.AppProto.GetAppResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetAppFilesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.GetAppFilesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes app_id = 1;</code>
+     * @return The appId.
+     */
+    com.google.protobuf.ByteString getAppId();
+
+    /**
+     * <pre>
+     * if revision is zero will give the latest.
+     * </pre>
+     *
+     * <code>uint64 revision = 2;</code>
+     * @return The revision.
+     */
+    long getRevision();
+
+    /**
+     * <pre>
+     * If path ends with '/', the request is for a directory.
+     * </pre>
+     *
+     * <code>string path = 3;</code>
+     * @return The path.
+     */
+    java.lang.String getPath();
+    /**
+     * <pre>
+     * If path ends with '/', the request is for a directory.
+     * </pre>
+     *
+     * <code>string path = 3;</code>
+     * @return The bytes for path.
+     */
+    com.google.protobuf.ByteString
+        getPathBytes();
+  }
+  /**
+   * Protobuf type {@code toit.api.GetAppFilesRequest}
+   */
+  public  static final class GetAppFilesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.api.GetAppFilesRequest)
+      GetAppFilesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetAppFilesRequest.newBuilder() to construct.
+    private GetAppFilesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetAppFilesRequest() {
+      appId_ = com.google.protobuf.ByteString.EMPTY;
+      path_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetAppFilesRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetAppFilesRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+
+              appId_ = input.readBytes();
+              break;
+            }
+            case 16: {
+
+              revision_ = input.readUInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              path_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.api.AppProto.internal_static_toit_api_GetAppFilesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.api.AppProto.internal_static_toit_api_GetAppFilesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.api.AppProto.GetAppFilesRequest.class, io.toit.proto.toit.api.AppProto.GetAppFilesRequest.Builder.class);
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString appId_;
+    /**
+     * <code>bytes app_id = 1;</code>
+     * @return The appId.
+     */
+    public com.google.protobuf.ByteString getAppId() {
+      return appId_;
+    }
+
+    public static final int REVISION_FIELD_NUMBER = 2;
+    private long revision_;
+    /**
+     * <pre>
+     * if revision is zero will give the latest.
+     * </pre>
+     *
+     * <code>uint64 revision = 2;</code>
+     * @return The revision.
+     */
+    public long getRevision() {
+      return revision_;
+    }
+
+    public static final int PATH_FIELD_NUMBER = 3;
+    private volatile java.lang.Object path_;
+    /**
+     * <pre>
+     * If path ends with '/', the request is for a directory.
+     * </pre>
+     *
+     * <code>string path = 3;</code>
+     * @return The path.
+     */
+    public java.lang.String getPath() {
+      java.lang.Object ref = path_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        path_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * If path ends with '/', the request is for a directory.
+     * </pre>
+     *
+     * <code>string path = 3;</code>
+     * @return The bytes for path.
+     */
+    public com.google.protobuf.ByteString
+        getPathBytes() {
+      java.lang.Object ref = path_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        path_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!appId_.isEmpty()) {
+        output.writeBytes(1, appId_);
+      }
+      if (revision_ != 0L) {
+        output.writeUInt64(2, revision_);
+      }
+      if (!getPathBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, path_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!appId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, appId_);
+      }
+      if (revision_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, revision_);
+      }
+      if (!getPathBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, path_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.api.AppProto.GetAppFilesRequest)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.api.AppProto.GetAppFilesRequest other = (io.toit.proto.toit.api.AppProto.GetAppFilesRequest) obj;
+
+      if (!getAppId()
+          .equals(other.getAppId())) return false;
+      if (getRevision()
+          != other.getRevision()) return false;
+      if (!getPath()
+          .equals(other.getPath())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAppId().hashCode();
+      hash = (37 * hash) + REVISION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRevision());
+      hash = (37 * hash) + PATH_FIELD_NUMBER;
+      hash = (53 * hash) + getPath().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.api.AppProto.GetAppFilesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.AppProto.GetAppFilesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.AppProto.GetAppFilesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.AppProto.GetAppFilesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.AppProto.GetAppFilesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.AppProto.GetAppFilesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.AppProto.GetAppFilesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.AppProto.GetAppFilesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.AppProto.GetAppFilesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.AppProto.GetAppFilesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.AppProto.GetAppFilesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.AppProto.GetAppFilesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.api.AppProto.GetAppFilesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.api.GetAppFilesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.api.GetAppFilesRequest)
+        io.toit.proto.toit.api.AppProto.GetAppFilesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.AppProto.internal_static_toit_api_GetAppFilesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.AppProto.internal_static_toit_api_GetAppFilesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.AppProto.GetAppFilesRequest.class, io.toit.proto.toit.api.AppProto.GetAppFilesRequest.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.api.AppProto.GetAppFilesRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        appId_ = com.google.protobuf.ByteString.EMPTY;
+
+        revision_ = 0L;
+
+        path_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.api.AppProto.internal_static_toit_api_GetAppFilesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.AppProto.GetAppFilesRequest getDefaultInstanceForType() {
+        return io.toit.proto.toit.api.AppProto.GetAppFilesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.AppProto.GetAppFilesRequest build() {
+        io.toit.proto.toit.api.AppProto.GetAppFilesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.AppProto.GetAppFilesRequest buildPartial() {
+        io.toit.proto.toit.api.AppProto.GetAppFilesRequest result = new io.toit.proto.toit.api.AppProto.GetAppFilesRequest(this);
+        result.appId_ = appId_;
+        result.revision_ = revision_;
+        result.path_ = path_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.api.AppProto.GetAppFilesRequest) {
+          return mergeFrom((io.toit.proto.toit.api.AppProto.GetAppFilesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.api.AppProto.GetAppFilesRequest other) {
+        if (other == io.toit.proto.toit.api.AppProto.GetAppFilesRequest.getDefaultInstance()) return this;
+        if (other.getAppId() != com.google.protobuf.ByteString.EMPTY) {
+          setAppId(other.getAppId());
+        }
+        if (other.getRevision() != 0L) {
+          setRevision(other.getRevision());
+        }
+        if (!other.getPath().isEmpty()) {
+          path_ = other.path_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.api.AppProto.GetAppFilesRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.api.AppProto.GetAppFilesRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.ByteString appId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes app_id = 1;</code>
+       * @return The appId.
+       */
+      public com.google.protobuf.ByteString getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>bytes app_id = 1;</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        appId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes app_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        
+        appId_ = getDefaultInstance().getAppId();
+        onChanged();
+        return this;
+      }
+
+      private long revision_ ;
+      /**
+       * <pre>
+       * if revision is zero will give the latest.
+       * </pre>
+       *
+       * <code>uint64 revision = 2;</code>
+       * @return The revision.
+       */
+      public long getRevision() {
+        return revision_;
+      }
+      /**
+       * <pre>
+       * if revision is zero will give the latest.
+       * </pre>
+       *
+       * <code>uint64 revision = 2;</code>
+       * @param value The revision to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRevision(long value) {
+        
+        revision_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * if revision is zero will give the latest.
+       * </pre>
+       *
+       * <code>uint64 revision = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRevision() {
+        
+        revision_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object path_ = "";
+      /**
+       * <pre>
+       * If path ends with '/', the request is for a directory.
+       * </pre>
+       *
+       * <code>string path = 3;</code>
+       * @return The path.
+       */
+      public java.lang.String getPath() {
+        java.lang.Object ref = path_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          path_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * If path ends with '/', the request is for a directory.
+       * </pre>
+       *
+       * <code>string path = 3;</code>
+       * @return The bytes for path.
+       */
+      public com.google.protobuf.ByteString
+          getPathBytes() {
+        java.lang.Object ref = path_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          path_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * If path ends with '/', the request is for a directory.
+       * </pre>
+       *
+       * <code>string path = 3;</code>
+       * @param value The path to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPath(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        path_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If path ends with '/', the request is for a directory.
+       * </pre>
+       *
+       * <code>string path = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPath() {
+        
+        path_ = getDefaultInstance().getPath();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If path ends with '/', the request is for a directory.
+       * </pre>
+       *
+       * <code>string path = 3;</code>
+       * @param value The bytes for path to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPathBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        path_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.api.GetAppFilesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.api.GetAppFilesRequest)
+    private static final io.toit.proto.toit.api.AppProto.GetAppFilesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.api.AppProto.GetAppFilesRequest();
+    }
+
+    public static io.toit.proto.toit.api.AppProto.GetAppFilesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetAppFilesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetAppFilesRequest>() {
+      @java.lang.Override
+      public GetAppFilesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetAppFilesRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetAppFilesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetAppFilesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.api.AppProto.GetAppFilesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetAppFilesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.GetAppFilesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.toit.api.GetAppFilesResponse.Directory directory = 1;</code>
+     * @return Whether the directory field is set.
+     */
+    boolean hasDirectory();
+    /**
+     * <code>.toit.api.GetAppFilesResponse.Directory directory = 1;</code>
+     * @return The directory.
+     */
+    io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory getDirectory();
+    /**
+     * <code>.toit.api.GetAppFilesResponse.Directory directory = 1;</code>
+     */
+    io.toit.proto.toit.api.AppProto.GetAppFilesResponse.DirectoryOrBuilder getDirectoryOrBuilder();
+
+    /**
+     * <code>bytes file_content = 2;</code>
+     * @return The fileContent.
+     */
+    com.google.protobuf.ByteString getFileContent();
+
+    public io.toit.proto.toit.api.AppProto.GetAppFilesResponse.ResultCase getResultCase();
+  }
+  /**
+   * Protobuf type {@code toit.api.GetAppFilesResponse}
+   */
+  public  static final class GetAppFilesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.api.GetAppFilesResponse)
+      GetAppFilesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetAppFilesResponse.newBuilder() to construct.
+    private GetAppFilesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetAppFilesResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetAppFilesResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetAppFilesResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory.Builder subBuilder = null;
+              if (resultCase_ == 1) {
+                subBuilder = ((io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory) result_).toBuilder();
+              }
+              result_ =
+                  input.readMessage(io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory) result_);
+                result_ = subBuilder.buildPartial();
+              }
+              resultCase_ = 1;
+              break;
+            }
+            case 18: {
+              resultCase_ = 2;
+              result_ = input.readBytes();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.api.AppProto.internal_static_toit_api_GetAppFilesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.api.AppProto.internal_static_toit_api_GetAppFilesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.api.AppProto.GetAppFilesResponse.class, io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Builder.class);
+    }
+
+    public interface EntryOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:toit.api.GetAppFilesResponse.Entry)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>string name = 1;</code>
+       * @return The name.
+       */
+      java.lang.String getName();
+      /**
+       * <code>string name = 1;</code>
+       * @return The bytes for name.
+       */
+      com.google.protobuf.ByteString
+          getNameBytes();
+
+      /**
+       * <pre>
+       * content_type only set if not a directory
+       * </pre>
+       *
+       * <code>string content_type = 2;</code>
+       * @return The contentType.
+       */
+      java.lang.String getContentType();
+      /**
+       * <pre>
+       * content_type only set if not a directory
+       * </pre>
+       *
+       * <code>string content_type = 2;</code>
+       * @return The bytes for contentType.
+       */
+      com.google.protobuf.ByteString
+          getContentTypeBytes();
+    }
+    /**
+     * Protobuf type {@code toit.api.GetAppFilesResponse.Entry}
+     */
+    public  static final class Entry extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:toit.api.GetAppFilesResponse.Entry)
+        EntryOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Entry.newBuilder() to construct.
+      private Entry(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Entry() {
+        name_ = "";
+        contentType_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Entry();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Entry(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                name_ = s;
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                contentType_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.AppProto.internal_static_toit_api_GetAppFilesResponse_Entry_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.AppProto.internal_static_toit_api_GetAppFilesResponse_Entry_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry.class, io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry.Builder.class);
+      }
+
+      public static final int NAME_FIELD_NUMBER = 1;
+      private volatile java.lang.Object name_;
+      /**
+       * <code>string name = 1;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int CONTENT_TYPE_FIELD_NUMBER = 2;
+      private volatile java.lang.Object contentType_;
+      /**
+       * <pre>
+       * content_type only set if not a directory
+       * </pre>
+       *
+       * <code>string content_type = 2;</code>
+       * @return The contentType.
+       */
+      public java.lang.String getContentType() {
+        java.lang.Object ref = contentType_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contentType_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * content_type only set if not a directory
+       * </pre>
+       *
+       * <code>string content_type = 2;</code>
+       * @return The bytes for contentType.
+       */
+      public com.google.protobuf.ByteString
+          getContentTypeBytes() {
+        java.lang.Object ref = contentType_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contentType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!getNameBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+        }
+        if (!getContentTypeBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, contentType_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!getNameBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+        }
+        if (!getContentTypeBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, contentType_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry)) {
+          return super.equals(obj);
+        }
+        io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry other = (io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry) obj;
+
+        if (!getName()
+            .equals(other.getName())) return false;
+        if (!getContentType()
+            .equals(other.getContentType())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+        hash = (37 * hash) + CONTENT_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getContentType().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code toit.api.GetAppFilesResponse.Entry}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:toit.api.GetAppFilesResponse.Entry)
+          io.toit.proto.toit.api.AppProto.GetAppFilesResponse.EntryOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return io.toit.proto.toit.api.AppProto.internal_static_toit_api_GetAppFilesResponse_Entry_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return io.toit.proto.toit.api.AppProto.internal_static_toit_api_GetAppFilesResponse_Entry_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry.class, io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry.Builder.class);
+        }
+
+        // Construct using io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          name_ = "";
+
+          contentType_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return io.toit.proto.toit.api.AppProto.internal_static_toit_api_GetAppFilesResponse_Entry_descriptor;
+        }
+
+        @java.lang.Override
+        public io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry getDefaultInstanceForType() {
+          return io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry build() {
+          io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry buildPartial() {
+          io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry result = new io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry(this);
+          result.name_ = name_;
+          result.contentType_ = contentType_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry) {
+            return mergeFrom((io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry other) {
+          if (other == io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry.getDefaultInstance()) return this;
+          if (!other.getName().isEmpty()) {
+            name_ = other.name_;
+            onChanged();
+          }
+          if (!other.getContentType().isEmpty()) {
+            contentType_ = other.contentType_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object name_ = "";
+        /**
+         * <code>string name = 1;</code>
+         * @return The name.
+         */
+        public java.lang.String getName() {
+          java.lang.Object ref = name_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            name_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string name = 1;</code>
+         * @return The bytes for name.
+         */
+        public com.google.protobuf.ByteString
+            getNameBytes() {
+          java.lang.Object ref = name_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            name_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string name = 1;</code>
+         * @param value The name to set.
+         * @return This builder for chaining.
+         */
+        public Builder setName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          name_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string name = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearName() {
+          
+          name_ = getDefaultInstance().getName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string name = 1;</code>
+         * @param value The bytes for name to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          name_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object contentType_ = "";
+        /**
+         * <pre>
+         * content_type only set if not a directory
+         * </pre>
+         *
+         * <code>string content_type = 2;</code>
+         * @return The contentType.
+         */
+        public java.lang.String getContentType() {
+          java.lang.Object ref = contentType_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            contentType_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * content_type only set if not a directory
+         * </pre>
+         *
+         * <code>string content_type = 2;</code>
+         * @return The bytes for contentType.
+         */
+        public com.google.protobuf.ByteString
+            getContentTypeBytes() {
+          java.lang.Object ref = contentType_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            contentType_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * content_type only set if not a directory
+         * </pre>
+         *
+         * <code>string content_type = 2;</code>
+         * @param value The contentType to set.
+         * @return This builder for chaining.
+         */
+        public Builder setContentType(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          contentType_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * content_type only set if not a directory
+         * </pre>
+         *
+         * <code>string content_type = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearContentType() {
+          
+          contentType_ = getDefaultInstance().getContentType();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * content_type only set if not a directory
+         * </pre>
+         *
+         * <code>string content_type = 2;</code>
+         * @param value The bytes for contentType to set.
+         * @return This builder for chaining.
+         */
+        public Builder setContentTypeBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          contentType_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:toit.api.GetAppFilesResponse.Entry)
+      }
+
+      // @@protoc_insertion_point(class_scope:toit.api.GetAppFilesResponse.Entry)
+      private static final io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry();
+      }
+
+      public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Entry>
+          PARSER = new com.google.protobuf.AbstractParser<Entry>() {
+        @java.lang.Override
+        public Entry parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Entry(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Entry> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Entry> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface DirectoryOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:toit.api.GetAppFilesResponse.Directory)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>repeated .toit.api.GetAppFilesResponse.Entry entries = 1;</code>
+       */
+      java.util.List<io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry> 
+          getEntriesList();
+      /**
+       * <code>repeated .toit.api.GetAppFilesResponse.Entry entries = 1;</code>
+       */
+      io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry getEntries(int index);
+      /**
+       * <code>repeated .toit.api.GetAppFilesResponse.Entry entries = 1;</code>
+       */
+      int getEntriesCount();
+      /**
+       * <code>repeated .toit.api.GetAppFilesResponse.Entry entries = 1;</code>
+       */
+      java.util.List<? extends io.toit.proto.toit.api.AppProto.GetAppFilesResponse.EntryOrBuilder> 
+          getEntriesOrBuilderList();
+      /**
+       * <code>repeated .toit.api.GetAppFilesResponse.Entry entries = 1;</code>
+       */
+      io.toit.proto.toit.api.AppProto.GetAppFilesResponse.EntryOrBuilder getEntriesOrBuilder(
+          int index);
+    }
+    /**
+     * Protobuf type {@code toit.api.GetAppFilesResponse.Directory}
+     */
+    public  static final class Directory extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:toit.api.GetAppFilesResponse.Directory)
+        DirectoryOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Directory.newBuilder() to construct.
+      private Directory(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Directory() {
+        entries_ = java.util.Collections.emptyList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Directory();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Directory(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  entries_ = new java.util.ArrayList<io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry>();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                entries_.add(
+                    input.readMessage(io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry.parser(), extensionRegistry));
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            entries_ = java.util.Collections.unmodifiableList(entries_);
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.AppProto.internal_static_toit_api_GetAppFilesResponse_Directory_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.AppProto.internal_static_toit_api_GetAppFilesResponse_Directory_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory.class, io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory.Builder.class);
+      }
+
+      public static final int ENTRIES_FIELD_NUMBER = 1;
+      private java.util.List<io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry> entries_;
+      /**
+       * <code>repeated .toit.api.GetAppFilesResponse.Entry entries = 1;</code>
+       */
+      public java.util.List<io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry> getEntriesList() {
+        return entries_;
+      }
+      /**
+       * <code>repeated .toit.api.GetAppFilesResponse.Entry entries = 1;</code>
+       */
+      public java.util.List<? extends io.toit.proto.toit.api.AppProto.GetAppFilesResponse.EntryOrBuilder> 
+          getEntriesOrBuilderList() {
+        return entries_;
+      }
+      /**
+       * <code>repeated .toit.api.GetAppFilesResponse.Entry entries = 1;</code>
+       */
+      public int getEntriesCount() {
+        return entries_.size();
+      }
+      /**
+       * <code>repeated .toit.api.GetAppFilesResponse.Entry entries = 1;</code>
+       */
+      public io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry getEntries(int index) {
+        return entries_.get(index);
+      }
+      /**
+       * <code>repeated .toit.api.GetAppFilesResponse.Entry entries = 1;</code>
+       */
+      public io.toit.proto.toit.api.AppProto.GetAppFilesResponse.EntryOrBuilder getEntriesOrBuilder(
+          int index) {
+        return entries_.get(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        for (int i = 0; i < entries_.size(); i++) {
+          output.writeMessage(1, entries_.get(i));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        for (int i = 0; i < entries_.size(); i++) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, entries_.get(i));
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory)) {
+          return super.equals(obj);
+        }
+        io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory other = (io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory) obj;
+
+        if (!getEntriesList()
+            .equals(other.getEntriesList())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getEntriesCount() > 0) {
+          hash = (37 * hash) + ENTRIES_FIELD_NUMBER;
+          hash = (53 * hash) + getEntriesList().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code toit.api.GetAppFilesResponse.Directory}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:toit.api.GetAppFilesResponse.Directory)
+          io.toit.proto.toit.api.AppProto.GetAppFilesResponse.DirectoryOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return io.toit.proto.toit.api.AppProto.internal_static_toit_api_GetAppFilesResponse_Directory_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return io.toit.proto.toit.api.AppProto.internal_static_toit_api_GetAppFilesResponse_Directory_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory.class, io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory.Builder.class);
+        }
+
+        // Construct using io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+            getEntriesFieldBuilder();
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (entriesBuilder_ == null) {
+            entries_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            entriesBuilder_.clear();
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return io.toit.proto.toit.api.AppProto.internal_static_toit_api_GetAppFilesResponse_Directory_descriptor;
+        }
+
+        @java.lang.Override
+        public io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory getDefaultInstanceForType() {
+          return io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory build() {
+          io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory buildPartial() {
+          io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory result = new io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory(this);
+          int from_bitField0_ = bitField0_;
+          if (entriesBuilder_ == null) {
+            if (((bitField0_ & 0x00000001) != 0)) {
+              entries_ = java.util.Collections.unmodifiableList(entries_);
+              bitField0_ = (bitField0_ & ~0x00000001);
+            }
+            result.entries_ = entries_;
+          } else {
+            result.entries_ = entriesBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory) {
+            return mergeFrom((io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory other) {
+          if (other == io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory.getDefaultInstance()) return this;
+          if (entriesBuilder_ == null) {
+            if (!other.entries_.isEmpty()) {
+              if (entries_.isEmpty()) {
+                entries_ = other.entries_;
+                bitField0_ = (bitField0_ & ~0x00000001);
+              } else {
+                ensureEntriesIsMutable();
+                entries_.addAll(other.entries_);
+              }
+              onChanged();
+            }
+          } else {
+            if (!other.entries_.isEmpty()) {
+              if (entriesBuilder_.isEmpty()) {
+                entriesBuilder_.dispose();
+                entriesBuilder_ = null;
+                entries_ = other.entries_;
+                bitField0_ = (bitField0_ & ~0x00000001);
+                entriesBuilder_ = 
+                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                     getEntriesFieldBuilder() : null;
+              } else {
+                entriesBuilder_.addAllMessages(other.entries_);
+              }
+            }
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.util.List<io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry> entries_ =
+          java.util.Collections.emptyList();
+        private void ensureEntriesIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            entries_ = new java.util.ArrayList<io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry>(entries_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry, io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry.Builder, io.toit.proto.toit.api.AppProto.GetAppFilesResponse.EntryOrBuilder> entriesBuilder_;
+
+        /**
+         * <code>repeated .toit.api.GetAppFilesResponse.Entry entries = 1;</code>
+         */
+        public java.util.List<io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry> getEntriesList() {
+          if (entriesBuilder_ == null) {
+            return java.util.Collections.unmodifiableList(entries_);
+          } else {
+            return entriesBuilder_.getMessageList();
+          }
+        }
+        /**
+         * <code>repeated .toit.api.GetAppFilesResponse.Entry entries = 1;</code>
+         */
+        public int getEntriesCount() {
+          if (entriesBuilder_ == null) {
+            return entries_.size();
+          } else {
+            return entriesBuilder_.getCount();
+          }
+        }
+        /**
+         * <code>repeated .toit.api.GetAppFilesResponse.Entry entries = 1;</code>
+         */
+        public io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry getEntries(int index) {
+          if (entriesBuilder_ == null) {
+            return entries_.get(index);
+          } else {
+            return entriesBuilder_.getMessage(index);
+          }
+        }
+        /**
+         * <code>repeated .toit.api.GetAppFilesResponse.Entry entries = 1;</code>
+         */
+        public Builder setEntries(
+            int index, io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry value) {
+          if (entriesBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureEntriesIsMutable();
+            entries_.set(index, value);
+            onChanged();
+          } else {
+            entriesBuilder_.setMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .toit.api.GetAppFilesResponse.Entry entries = 1;</code>
+         */
+        public Builder setEntries(
+            int index, io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry.Builder builderForValue) {
+          if (entriesBuilder_ == null) {
+            ensureEntriesIsMutable();
+            entries_.set(index, builderForValue.build());
+            onChanged();
+          } else {
+            entriesBuilder_.setMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .toit.api.GetAppFilesResponse.Entry entries = 1;</code>
+         */
+        public Builder addEntries(io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry value) {
+          if (entriesBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureEntriesIsMutable();
+            entries_.add(value);
+            onChanged();
+          } else {
+            entriesBuilder_.addMessage(value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .toit.api.GetAppFilesResponse.Entry entries = 1;</code>
+         */
+        public Builder addEntries(
+            int index, io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry value) {
+          if (entriesBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureEntriesIsMutable();
+            entries_.add(index, value);
+            onChanged();
+          } else {
+            entriesBuilder_.addMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .toit.api.GetAppFilesResponse.Entry entries = 1;</code>
+         */
+        public Builder addEntries(
+            io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry.Builder builderForValue) {
+          if (entriesBuilder_ == null) {
+            ensureEntriesIsMutable();
+            entries_.add(builderForValue.build());
+            onChanged();
+          } else {
+            entriesBuilder_.addMessage(builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .toit.api.GetAppFilesResponse.Entry entries = 1;</code>
+         */
+        public Builder addEntries(
+            int index, io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry.Builder builderForValue) {
+          if (entriesBuilder_ == null) {
+            ensureEntriesIsMutable();
+            entries_.add(index, builderForValue.build());
+            onChanged();
+          } else {
+            entriesBuilder_.addMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .toit.api.GetAppFilesResponse.Entry entries = 1;</code>
+         */
+        public Builder addAllEntries(
+            java.lang.Iterable<? extends io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry> values) {
+          if (entriesBuilder_ == null) {
+            ensureEntriesIsMutable();
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, entries_);
+            onChanged();
+          } else {
+            entriesBuilder_.addAllMessages(values);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .toit.api.GetAppFilesResponse.Entry entries = 1;</code>
+         */
+        public Builder clearEntries() {
+          if (entriesBuilder_ == null) {
+            entries_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000001);
+            onChanged();
+          } else {
+            entriesBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .toit.api.GetAppFilesResponse.Entry entries = 1;</code>
+         */
+        public Builder removeEntries(int index) {
+          if (entriesBuilder_ == null) {
+            ensureEntriesIsMutable();
+            entries_.remove(index);
+            onChanged();
+          } else {
+            entriesBuilder_.remove(index);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .toit.api.GetAppFilesResponse.Entry entries = 1;</code>
+         */
+        public io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry.Builder getEntriesBuilder(
+            int index) {
+          return getEntriesFieldBuilder().getBuilder(index);
+        }
+        /**
+         * <code>repeated .toit.api.GetAppFilesResponse.Entry entries = 1;</code>
+         */
+        public io.toit.proto.toit.api.AppProto.GetAppFilesResponse.EntryOrBuilder getEntriesOrBuilder(
+            int index) {
+          if (entriesBuilder_ == null) {
+            return entries_.get(index);  } else {
+            return entriesBuilder_.getMessageOrBuilder(index);
+          }
+        }
+        /**
+         * <code>repeated .toit.api.GetAppFilesResponse.Entry entries = 1;</code>
+         */
+        public java.util.List<? extends io.toit.proto.toit.api.AppProto.GetAppFilesResponse.EntryOrBuilder> 
+             getEntriesOrBuilderList() {
+          if (entriesBuilder_ != null) {
+            return entriesBuilder_.getMessageOrBuilderList();
+          } else {
+            return java.util.Collections.unmodifiableList(entries_);
+          }
+        }
+        /**
+         * <code>repeated .toit.api.GetAppFilesResponse.Entry entries = 1;</code>
+         */
+        public io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry.Builder addEntriesBuilder() {
+          return getEntriesFieldBuilder().addBuilder(
+              io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .toit.api.GetAppFilesResponse.Entry entries = 1;</code>
+         */
+        public io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry.Builder addEntriesBuilder(
+            int index) {
+          return getEntriesFieldBuilder().addBuilder(
+              index, io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .toit.api.GetAppFilesResponse.Entry entries = 1;</code>
+         */
+        public java.util.List<io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry.Builder> 
+             getEntriesBuilderList() {
+          return getEntriesFieldBuilder().getBuilderList();
+        }
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry, io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry.Builder, io.toit.proto.toit.api.AppProto.GetAppFilesResponse.EntryOrBuilder> 
+            getEntriesFieldBuilder() {
+          if (entriesBuilder_ == null) {
+            entriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+                io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry, io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Entry.Builder, io.toit.proto.toit.api.AppProto.GetAppFilesResponse.EntryOrBuilder>(
+                    entries_,
+                    ((bitField0_ & 0x00000001) != 0),
+                    getParentForChildren(),
+                    isClean());
+            entries_ = null;
+          }
+          return entriesBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:toit.api.GetAppFilesResponse.Directory)
+      }
+
+      // @@protoc_insertion_point(class_scope:toit.api.GetAppFilesResponse.Directory)
+      private static final io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory();
+      }
+
+      public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Directory>
+          PARSER = new com.google.protobuf.AbstractParser<Directory>() {
+        @java.lang.Override
+        public Directory parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Directory(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Directory> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Directory> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int resultCase_ = 0;
+    private java.lang.Object result_;
+    public enum ResultCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      DIRECTORY(1),
+      FILE_CONTENT(2),
+      RESULT_NOT_SET(0);
+      private final int value;
+      private ResultCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ResultCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ResultCase forNumber(int value) {
+        switch (value) {
+          case 1: return DIRECTORY;
+          case 2: return FILE_CONTENT;
+          case 0: return RESULT_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ResultCase
+    getResultCase() {
+      return ResultCase.forNumber(
+          resultCase_);
+    }
+
+    public static final int DIRECTORY_FIELD_NUMBER = 1;
+    /**
+     * <code>.toit.api.GetAppFilesResponse.Directory directory = 1;</code>
+     * @return Whether the directory field is set.
+     */
+    public boolean hasDirectory() {
+      return resultCase_ == 1;
+    }
+    /**
+     * <code>.toit.api.GetAppFilesResponse.Directory directory = 1;</code>
+     * @return The directory.
+     */
+    public io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory getDirectory() {
+      if (resultCase_ == 1) {
+         return (io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory) result_;
+      }
+      return io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory.getDefaultInstance();
+    }
+    /**
+     * <code>.toit.api.GetAppFilesResponse.Directory directory = 1;</code>
+     */
+    public io.toit.proto.toit.api.AppProto.GetAppFilesResponse.DirectoryOrBuilder getDirectoryOrBuilder() {
+      if (resultCase_ == 1) {
+         return (io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory) result_;
+      }
+      return io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory.getDefaultInstance();
+    }
+
+    public static final int FILE_CONTENT_FIELD_NUMBER = 2;
+    /**
+     * <code>bytes file_content = 2;</code>
+     * @return The fileContent.
+     */
+    public com.google.protobuf.ByteString getFileContent() {
+      if (resultCase_ == 2) {
+        return (com.google.protobuf.ByteString) result_;
+      }
+      return com.google.protobuf.ByteString.EMPTY;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (resultCase_ == 1) {
+        output.writeMessage(1, (io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory) result_);
+      }
+      if (resultCase_ == 2) {
+        output.writeBytes(
+            2, (com.google.protobuf.ByteString) result_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (resultCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory) result_);
+      }
+      if (resultCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(
+              2, (com.google.protobuf.ByteString) result_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.api.AppProto.GetAppFilesResponse)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.api.AppProto.GetAppFilesResponse other = (io.toit.proto.toit.api.AppProto.GetAppFilesResponse) obj;
+
+      if (!getResultCase().equals(other.getResultCase())) return false;
+      switch (resultCase_) {
+        case 1:
+          if (!getDirectory()
+              .equals(other.getDirectory())) return false;
+          break;
+        case 2:
+          if (!getFileContent()
+              .equals(other.getFileContent())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (resultCase_) {
+        case 1:
+          hash = (37 * hash) + DIRECTORY_FIELD_NUMBER;
+          hash = (53 * hash) + getDirectory().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + FILE_CONTENT_FIELD_NUMBER;
+          hash = (53 * hash) + getFileContent().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.api.AppProto.GetAppFilesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.api.GetAppFilesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.api.GetAppFilesResponse)
+        io.toit.proto.toit.api.AppProto.GetAppFilesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.AppProto.internal_static_toit_api_GetAppFilesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.AppProto.internal_static_toit_api_GetAppFilesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.AppProto.GetAppFilesResponse.class, io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.api.AppProto.GetAppFilesResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        resultCase_ = 0;
+        result_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.api.AppProto.internal_static_toit_api_GetAppFilesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.AppProto.GetAppFilesResponse getDefaultInstanceForType() {
+        return io.toit.proto.toit.api.AppProto.GetAppFilesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.AppProto.GetAppFilesResponse build() {
+        io.toit.proto.toit.api.AppProto.GetAppFilesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.AppProto.GetAppFilesResponse buildPartial() {
+        io.toit.proto.toit.api.AppProto.GetAppFilesResponse result = new io.toit.proto.toit.api.AppProto.GetAppFilesResponse(this);
+        if (resultCase_ == 1) {
+          if (directoryBuilder_ == null) {
+            result.result_ = result_;
+          } else {
+            result.result_ = directoryBuilder_.build();
+          }
+        }
+        if (resultCase_ == 2) {
+          result.result_ = result_;
+        }
+        result.resultCase_ = resultCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.api.AppProto.GetAppFilesResponse) {
+          return mergeFrom((io.toit.proto.toit.api.AppProto.GetAppFilesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.api.AppProto.GetAppFilesResponse other) {
+        if (other == io.toit.proto.toit.api.AppProto.GetAppFilesResponse.getDefaultInstance()) return this;
+        switch (other.getResultCase()) {
+          case DIRECTORY: {
+            mergeDirectory(other.getDirectory());
+            break;
+          }
+          case FILE_CONTENT: {
+            setFileContent(other.getFileContent());
+            break;
+          }
+          case RESULT_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.api.AppProto.GetAppFilesResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.api.AppProto.GetAppFilesResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int resultCase_ = 0;
+      private java.lang.Object result_;
+      public ResultCase
+          getResultCase() {
+        return ResultCase.forNumber(
+            resultCase_);
+      }
+
+      public Builder clearResult() {
+        resultCase_ = 0;
+        result_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory, io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory.Builder, io.toit.proto.toit.api.AppProto.GetAppFilesResponse.DirectoryOrBuilder> directoryBuilder_;
+      /**
+       * <code>.toit.api.GetAppFilesResponse.Directory directory = 1;</code>
+       * @return Whether the directory field is set.
+       */
+      public boolean hasDirectory() {
+        return resultCase_ == 1;
+      }
+      /**
+       * <code>.toit.api.GetAppFilesResponse.Directory directory = 1;</code>
+       * @return The directory.
+       */
+      public io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory getDirectory() {
+        if (directoryBuilder_ == null) {
+          if (resultCase_ == 1) {
+            return (io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory) result_;
+          }
+          return io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory.getDefaultInstance();
+        } else {
+          if (resultCase_ == 1) {
+            return directoryBuilder_.getMessage();
+          }
+          return io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.toit.api.GetAppFilesResponse.Directory directory = 1;</code>
+       */
+      public Builder setDirectory(io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory value) {
+        if (directoryBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          result_ = value;
+          onChanged();
+        } else {
+          directoryBuilder_.setMessage(value);
+        }
+        resultCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.toit.api.GetAppFilesResponse.Directory directory = 1;</code>
+       */
+      public Builder setDirectory(
+          io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory.Builder builderForValue) {
+        if (directoryBuilder_ == null) {
+          result_ = builderForValue.build();
+          onChanged();
+        } else {
+          directoryBuilder_.setMessage(builderForValue.build());
+        }
+        resultCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.toit.api.GetAppFilesResponse.Directory directory = 1;</code>
+       */
+      public Builder mergeDirectory(io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory value) {
+        if (directoryBuilder_ == null) {
+          if (resultCase_ == 1 &&
+              result_ != io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory.getDefaultInstance()) {
+            result_ = io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory.newBuilder((io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory) result_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            result_ = value;
+          }
+          onChanged();
+        } else {
+          if (resultCase_ == 1) {
+            directoryBuilder_.mergeFrom(value);
+          }
+          directoryBuilder_.setMessage(value);
+        }
+        resultCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.toit.api.GetAppFilesResponse.Directory directory = 1;</code>
+       */
+      public Builder clearDirectory() {
+        if (directoryBuilder_ == null) {
+          if (resultCase_ == 1) {
+            resultCase_ = 0;
+            result_ = null;
+            onChanged();
+          }
+        } else {
+          if (resultCase_ == 1) {
+            resultCase_ = 0;
+            result_ = null;
+          }
+          directoryBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.toit.api.GetAppFilesResponse.Directory directory = 1;</code>
+       */
+      public io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory.Builder getDirectoryBuilder() {
+        return getDirectoryFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.toit.api.GetAppFilesResponse.Directory directory = 1;</code>
+       */
+      public io.toit.proto.toit.api.AppProto.GetAppFilesResponse.DirectoryOrBuilder getDirectoryOrBuilder() {
+        if ((resultCase_ == 1) && (directoryBuilder_ != null)) {
+          return directoryBuilder_.getMessageOrBuilder();
+        } else {
+          if (resultCase_ == 1) {
+            return (io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory) result_;
+          }
+          return io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.toit.api.GetAppFilesResponse.Directory directory = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory, io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory.Builder, io.toit.proto.toit.api.AppProto.GetAppFilesResponse.DirectoryOrBuilder> 
+          getDirectoryFieldBuilder() {
+        if (directoryBuilder_ == null) {
+          if (!(resultCase_ == 1)) {
+            result_ = io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory.getDefaultInstance();
+          }
+          directoryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory, io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory.Builder, io.toit.proto.toit.api.AppProto.GetAppFilesResponse.DirectoryOrBuilder>(
+                  (io.toit.proto.toit.api.AppProto.GetAppFilesResponse.Directory) result_,
+                  getParentForChildren(),
+                  isClean());
+          result_ = null;
+        }
+        resultCase_ = 1;
+        onChanged();;
+        return directoryBuilder_;
+      }
+
+      /**
+       * <code>bytes file_content = 2;</code>
+       * @return The fileContent.
+       */
+      public com.google.protobuf.ByteString getFileContent() {
+        if (resultCase_ == 2) {
+          return (com.google.protobuf.ByteString) result_;
+        }
+        return com.google.protobuf.ByteString.EMPTY;
+      }
+      /**
+       * <code>bytes file_content = 2;</code>
+       * @param value The fileContent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFileContent(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  resultCase_ = 2;
+        result_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes file_content = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFileContent() {
+        if (resultCase_ == 2) {
+          resultCase_ = 0;
+          result_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.api.GetAppFilesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.api.GetAppFilesResponse)
+    private static final io.toit.proto.toit.api.AppProto.GetAppFilesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.api.AppProto.GetAppFilesResponse();
+    }
+
+    public static io.toit.proto.toit.api.AppProto.GetAppFilesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetAppFilesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<GetAppFilesResponse>() {
+      @java.lang.Override
+      public GetAppFilesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetAppFilesResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetAppFilesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetAppFilesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.api.AppProto.GetAppFilesResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6359,6 +9547,26 @@ public final class AppProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_toit_api_GetAppResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_GetAppFilesRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_GetAppFilesRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_GetAppFilesResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_GetAppFilesResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_GetAppFilesResponse_Entry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_GetAppFilesResponse_Entry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_GetAppFilesResponse_Directory_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_GetAppFilesResponse_Directory_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_toit_api_ListAppsRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -6393,9 +9601,17 @@ public final class AppProto {
       "lesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\014:\0028\001" +
       "\032@\n\tJobsEntry\022\013\n\003key\030\001 \001(\t\022\"\n\005value\030\002 \001(" +
       "\0132\023.toit.model.JobSpec:\0028\001B\010\n\006source\"#\n\021" +
-      "CreateAppResponse\022\016\n\006app_id\030\001 \001(\014\"\037\n\rGet" +
-      "AppRequest\022\016\n\006app_id\030\001 \001(\014\".\n\016GetAppResp" +
-      "onse\022\034\n\003app\030\001 \001(\0132\017.toit.model.App\"\306\001\n\017L" +
+      "CreateAppResponse\022\016\n\006app_id\030\001 \001(\014\"1\n\rGet" +
+      "AppRequest\022\016\n\006app_id\030\001 \001(\014\022\020\n\010revision\030\002" +
+      " \001(\004\".\n\016GetAppResponse\022\034\n\003app\030\001 \001(\0132\017.to" +
+      "it.model.App\"D\n\022GetAppFilesRequest\022\016\n\006ap" +
+      "p_id\030\001 \001(\014\022\020\n\010revision\030\002 \001(\004\022\014\n\004path\030\003 \001" +
+      "(\t\"\345\001\n\023GetAppFilesResponse\022<\n\tdirectory\030" +
+      "\001 \001(\0132\'.toit.api.GetAppFilesResponse.Dir" +
+      "ectoryH\000\022\026\n\014file_content\030\002 \001(\014H\000\032+\n\005Entr" +
+      "y\022\014\n\004name\030\001 \001(\t\022\024\n\014content_type\030\002 \001(\t\032A\n" +
+      "\tDirectory\0224\n\007entries\030\001 \003(\0132#.toit.api.G" +
+      "etAppFilesResponse.EntryB\010\n\006result\"\306\001\n\017L" +
       "istAppsRequest\022\016\n\006offset\030\001 \001(\014\022\r\n\005limit\030" +
       "\002 \001(\003\0223\n\010order_by\030\003 \001(\0162!.toit.api.ListA" +
       "ppsRequest.OrderBy\022\022\n\norder_desc\030\004 \001(\010\022(" +
@@ -6404,15 +9620,17 @@ public final class AppProto {
       "istAppsFilter\022\023\n\013name_prefix\030\001 \001(\t\022\016\n\006la" +
       "test\030\002 \001(\010\022\030\n\020namespace_prefix\030\003 \001(\t\"@\n\020" +
       "ListAppsResponse\022\034\n\003app\030\001 \001(\0132\017.toit.mod" +
-      "el.App\022\016\n\006offset\030\002 \001(\0142\332\001\n\nAppService\022F\n" +
+      "el.App\022\016\n\006offset\030\002 \001(\0142\250\002\n\nAppService\022F\n" +
       "\tCreateApp\022\032.toit.api.CreateAppRequest\032\033" +
       ".toit.api.CreateAppResponse\"\000\022=\n\006GetApp\022" +
       "\027.toit.api.GetAppRequest\032\030.toit.api.GetA" +
-      "ppResponse\"\000\022E\n\010ListApps\022\031.toit.api.List" +
-      "AppsRequest\032\032.toit.api.ListAppsResponse\"" +
-      "\0000\001BH\n\026io.toit.proto.toit.apiB\010AppProtoZ" +
-      "$github.com/toitware/api.git/toit/apib\006p" +
-      "roto3"
+      "ppResponse\"\000\022L\n\013GetAppFiles\022\034.toit.api.G" +
+      "etAppFilesRequest\032\035.toit.api.GetAppFiles" +
+      "Response\"\000\022E\n\010ListApps\022\031.toit.api.ListAp" +
+      "psRequest\032\032.toit.api.ListAppsResponse\"\0000" +
+      "\001BH\n\026io.toit.proto.toit.apiB\010AppProtoZ$g" +
+      "ithub.com/toitware/api.git/toit/apib\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6454,27 +9672,51 @@ public final class AppProto {
     internal_static_toit_api_GetAppRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_GetAppRequest_descriptor,
-        new java.lang.String[] { "AppId", });
+        new java.lang.String[] { "AppId", "Revision", });
     internal_static_toit_api_GetAppResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_toit_api_GetAppResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_GetAppResponse_descriptor,
         new java.lang.String[] { "App", });
-    internal_static_toit_api_ListAppsRequest_descriptor =
+    internal_static_toit_api_GetAppFilesRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
+    internal_static_toit_api_GetAppFilesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_GetAppFilesRequest_descriptor,
+        new java.lang.String[] { "AppId", "Revision", "Path", });
+    internal_static_toit_api_GetAppFilesResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_toit_api_GetAppFilesResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_GetAppFilesResponse_descriptor,
+        new java.lang.String[] { "Directory", "FileContent", "Result", });
+    internal_static_toit_api_GetAppFilesResponse_Entry_descriptor =
+      internal_static_toit_api_GetAppFilesResponse_descriptor.getNestedTypes().get(0);
+    internal_static_toit_api_GetAppFilesResponse_Entry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_GetAppFilesResponse_Entry_descriptor,
+        new java.lang.String[] { "Name", "ContentType", });
+    internal_static_toit_api_GetAppFilesResponse_Directory_descriptor =
+      internal_static_toit_api_GetAppFilesResponse_descriptor.getNestedTypes().get(1);
+    internal_static_toit_api_GetAppFilesResponse_Directory_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_GetAppFilesResponse_Directory_descriptor,
+        new java.lang.String[] { "Entries", });
+    internal_static_toit_api_ListAppsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
     internal_static_toit_api_ListAppsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_ListAppsRequest_descriptor,
         new java.lang.String[] { "Offset", "Limit", "OrderBy", "OrderDesc", "Filter", });
     internal_static_toit_api_ListAppsFilter_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_toit_api_ListAppsFilter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_ListAppsFilter_descriptor,
         new java.lang.String[] { "NamePrefix", "Latest", "NamespacePrefix", });
     internal_static_toit_api_ListAppsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_toit_api_ListAppsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_ListAppsResponse_descriptor,

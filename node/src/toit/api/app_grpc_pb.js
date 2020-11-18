@@ -27,6 +27,28 @@ function deserialize_toit_api_CreateAppResponse(buffer_arg) {
   return toit_api_app_pb.CreateAppResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_toit_api_GetAppFilesRequest(arg) {
+  if (!(arg instanceof toit_api_app_pb.GetAppFilesRequest)) {
+    throw new Error('Expected argument of type toit.api.GetAppFilesRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_GetAppFilesRequest(buffer_arg) {
+  return toit_api_app_pb.GetAppFilesRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_toit_api_GetAppFilesResponse(arg) {
+  if (!(arg instanceof toit_api_app_pb.GetAppFilesResponse)) {
+    throw new Error('Expected argument of type toit.api.GetAppFilesResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_GetAppFilesResponse(buffer_arg) {
+  return toit_api_app_pb.GetAppFilesResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_toit_api_GetAppRequest(arg) {
   if (!(arg instanceof toit_api_app_pb.GetAppRequest)) {
     throw new Error('Expected argument of type toit.api.GetAppRequest');
@@ -94,6 +116,17 @@ var AppServiceService = exports.AppServiceService = {
     requestDeserialize: deserialize_toit_api_GetAppRequest,
     responseSerialize: serialize_toit_api_GetAppResponse,
     responseDeserialize: deserialize_toit_api_GetAppResponse,
+  },
+  getAppFiles: {
+    path: '/toit.api.AppService/GetAppFiles',
+    requestStream: false,
+    responseStream: false,
+    requestType: toit_api_app_pb.GetAppFilesRequest,
+    responseType: toit_api_app_pb.GetAppFilesResponse,
+    requestSerialize: serialize_toit_api_GetAppFilesRequest,
+    requestDeserialize: deserialize_toit_api_GetAppFilesRequest,
+    responseSerialize: serialize_toit_api_GetAppFilesResponse,
+    responseDeserialize: deserialize_toit_api_GetAppFilesResponse,
   },
   listApps: {
     path: '/toit.api.AppService/ListApps',
