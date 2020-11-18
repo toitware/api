@@ -10,6 +10,7 @@ option java_outer_classname = "HardwareProto";
 
 service HardwareService {
   rpc Claim(ClaimRequest) returns (ClaimResponse) {}
+  rpc Replace(ReplaceRequest) returns (ReplaceResponse) {}
   rpc GetActiveDeviceID(GetActiveDeviceIDRequest) returns (GetActiveDeviceIDResponse) {}
 }
 
@@ -21,10 +22,24 @@ message ClaimRequest {
 }
 
 message ClaimResponse {
-  model.HardwareInfo hardware_info = 1;
+  toit.model.HardwareInfo hardware_info = 1;
   bytes device_id = 2;
   string device_name = 3;
   bytes organization_id = 4;
+}
+
+message ReplaceRequest {
+  bytes new_hardware_id = 1;
+  bytes current_hardware_id = 2;
+  // The ID of the device to replace.
+  bytes device_id = 3;
+  // Optional to set. Default is the current org for the user.
+  bytes organization_id = 4;
+}
+
+message ReplaceResponse {
+  toit.model.HardwareInfo hardware_info = 1;
+  bytes organization_id = 2;
 }
 
 message GetActiveDeviceIDRequest { bytes hardware_id = 1; }
@@ -41,15 +56,13 @@ message ClaimHardwareIdentityRequest {
 }
 
 message ClaimHardwareIdentityResponse {
-  model.HardwareIdentity hardware_identity = 1;
+  toit.model.HardwareIdentity hardware_identity = 1;
 }
 
 message SetHardwareIdentityInfoRequest {
   string flash_station_secret = 1;
   bytes id = 2;
-  model.HardwareIdentityInfo info = 3;
+  toit.model.HardwareIdentityInfo info = 3;
 }
 
 message SetHardwareIdentityInfoResponse {}
-
-
