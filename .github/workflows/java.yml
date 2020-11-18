@@ -28,6 +28,8 @@ jobs:
 
       - name: Setup protoc
         uses: arduino/setup-protoc@v1.1.0
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
 
       - name: Update version in pom.xml (Release only)
         if: github.event_name == 'release'
