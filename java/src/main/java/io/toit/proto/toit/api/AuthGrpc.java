@@ -151,6 +151,37 @@ public final class AuthGrpc {
     return getLogoutMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest,
+      io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse> getCreateOrganizationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateOrganization",
+      requestType = io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.class,
+      responseType = io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest,
+      io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse> getCreateOrganizationMethod() {
+    io.grpc.MethodDescriptor<io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest, io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse> getCreateOrganizationMethod;
+    if ((getCreateOrganizationMethod = AuthGrpc.getCreateOrganizationMethod) == null) {
+      synchronized (AuthGrpc.class) {
+        if ((getCreateOrganizationMethod = AuthGrpc.getCreateOrganizationMethod) == null) {
+          AuthGrpc.getCreateOrganizationMethod = getCreateOrganizationMethod =
+              io.grpc.MethodDescriptor.<io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest, io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateOrganization"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new AuthMethodDescriptorSupplier("CreateOrganization"))
+              .build();
+        }
+      }
+    }
+    return getCreateOrganizationMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -227,6 +258,13 @@ public final class AuthGrpc {
       asyncUnimplementedUnaryCall(getLogoutMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void createOrganization(io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest request,
+        io.grpc.stub.StreamObserver<io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getCreateOrganizationMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -257,6 +295,13 @@ public final class AuthGrpc {
                 io.toit.proto.toit.api.AuthProto.LogoutRequest,
                 io.toit.proto.toit.api.AuthProto.LogoutResponse>(
                   this, METHODID_LOGOUT)))
+          .addMethod(
+            getCreateOrganizationMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest,
+                io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse>(
+                  this, METHODID_CREATE_ORGANIZATION)))
           .build();
     }
   }
@@ -306,6 +351,14 @@ public final class AuthGrpc {
       asyncUnaryCall(
           getChannel().newCall(getLogoutMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void createOrganization(io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest request,
+        io.grpc.stub.StreamObserver<io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getCreateOrganizationMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -348,6 +401,13 @@ public final class AuthGrpc {
     public io.toit.proto.toit.api.AuthProto.LogoutResponse logout(io.toit.proto.toit.api.AuthProto.LogoutRequest request) {
       return blockingUnaryCall(
           getChannel(), getLogoutMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse createOrganization(io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getCreateOrganizationMethod(), getCallOptions(), request);
     }
   }
 
@@ -396,12 +456,21 @@ public final class AuthGrpc {
       return futureUnaryCall(
           getChannel().newCall(getLogoutMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse> createOrganization(
+        io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getCreateOrganizationMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_LOGIN = 0;
   private static final int METHODID_REFRESH = 1;
   private static final int METHODID_CHANGE_ORGANIZATION = 2;
   private static final int METHODID_LOGOUT = 3;
+  private static final int METHODID_CREATE_ORGANIZATION = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -435,6 +504,10 @@ public final class AuthGrpc {
         case METHODID_LOGOUT:
           serviceImpl.logout((io.toit.proto.toit.api.AuthProto.LogoutRequest) request,
               (io.grpc.stub.StreamObserver<io.toit.proto.toit.api.AuthProto.LogoutResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_ORGANIZATION:
+          serviceImpl.createOrganization((io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest) request,
+              (io.grpc.stub.StreamObserver<io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -501,6 +574,7 @@ public final class AuthGrpc {
               .addMethod(getRefreshMethod())
               .addMethod(getChangeOrganizationMethod())
               .addMethod(getLogoutMethod())
+              .addMethod(getCreateOrganizationMethod())
               .build();
         }
       }

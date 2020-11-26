@@ -3707,6 +3707,2446 @@ public final class AuthProto {
 
   }
 
+  public interface CreateOrganizationRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.CreateOrganizationRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.toit.api.CreateOrganizationRequest.Organization organization = 1;</code>
+     * @return Whether the organization field is set.
+     */
+    boolean hasOrganization();
+    /**
+     * <code>.toit.api.CreateOrganizationRequest.Organization organization = 1;</code>
+     * @return The organization.
+     */
+    io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization getOrganization();
+    /**
+     * <code>.toit.api.CreateOrganizationRequest.Organization organization = 1;</code>
+     */
+    io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.OrganizationOrBuilder getOrganizationOrBuilder();
+
+    /**
+     * <code>.toit.api.CreateOrganizationRequest.User user = 2;</code>
+     * @return Whether the user field is set.
+     */
+    boolean hasUser();
+    /**
+     * <code>.toit.api.CreateOrganizationRequest.User user = 2;</code>
+     * @return The user.
+     */
+    io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User getUser();
+    /**
+     * <code>.toit.api.CreateOrganizationRequest.User user = 2;</code>
+     */
+    io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.UserOrBuilder getUserOrBuilder();
+  }
+  /**
+   * Protobuf type {@code toit.api.CreateOrganizationRequest}
+   */
+  public  static final class CreateOrganizationRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.api.CreateOrganizationRequest)
+      CreateOrganizationRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CreateOrganizationRequest.newBuilder() to construct.
+    private CreateOrganizationRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CreateOrganizationRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateOrganizationRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CreateOrganizationRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization.Builder subBuilder = null;
+              if (organization_ != null) {
+                subBuilder = organization_.toBuilder();
+              }
+              organization_ = input.readMessage(io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(organization_);
+                organization_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User.Builder subBuilder = null;
+              if (user_ != null) {
+                subBuilder = user_.toBuilder();
+              }
+              user_ = input.readMessage(io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(user_);
+                user_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.api.AuthProto.internal_static_toit_api_CreateOrganizationRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.api.AuthProto.internal_static_toit_api_CreateOrganizationRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.class, io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Builder.class);
+    }
+
+    public interface OrganizationOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:toit.api.CreateOrganizationRequest.Organization)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>string name = 1;</code>
+       * @return The name.
+       */
+      java.lang.String getName();
+      /**
+       * <code>string name = 1;</code>
+       * @return The bytes for name.
+       */
+      com.google.protobuf.ByteString
+          getNameBytes();
+    }
+    /**
+     * Protobuf type {@code toit.api.CreateOrganizationRequest.Organization}
+     */
+    public  static final class Organization extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:toit.api.CreateOrganizationRequest.Organization)
+        OrganizationOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Organization.newBuilder() to construct.
+      private Organization(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Organization() {
+        name_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Organization();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Organization(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                name_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.AuthProto.internal_static_toit_api_CreateOrganizationRequest_Organization_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.AuthProto.internal_static_toit_api_CreateOrganizationRequest_Organization_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization.class, io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization.Builder.class);
+      }
+
+      public static final int NAME_FIELD_NUMBER = 1;
+      private volatile java.lang.Object name_;
+      /**
+       * <code>string name = 1;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!getNameBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!getNameBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization)) {
+          return super.equals(obj);
+        }
+        io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization other = (io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization) obj;
+
+        if (!getName()
+            .equals(other.getName())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code toit.api.CreateOrganizationRequest.Organization}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:toit.api.CreateOrganizationRequest.Organization)
+          io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.OrganizationOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return io.toit.proto.toit.api.AuthProto.internal_static_toit_api_CreateOrganizationRequest_Organization_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return io.toit.proto.toit.api.AuthProto.internal_static_toit_api_CreateOrganizationRequest_Organization_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization.class, io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization.Builder.class);
+        }
+
+        // Construct using io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          name_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return io.toit.proto.toit.api.AuthProto.internal_static_toit_api_CreateOrganizationRequest_Organization_descriptor;
+        }
+
+        @java.lang.Override
+        public io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization getDefaultInstanceForType() {
+          return io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization build() {
+          io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization buildPartial() {
+          io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization result = new io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization(this);
+          result.name_ = name_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization) {
+            return mergeFrom((io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization other) {
+          if (other == io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization.getDefaultInstance()) return this;
+          if (!other.getName().isEmpty()) {
+            name_ = other.name_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object name_ = "";
+        /**
+         * <code>string name = 1;</code>
+         * @return The name.
+         */
+        public java.lang.String getName() {
+          java.lang.Object ref = name_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            name_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string name = 1;</code>
+         * @return The bytes for name.
+         */
+        public com.google.protobuf.ByteString
+            getNameBytes() {
+          java.lang.Object ref = name_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            name_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string name = 1;</code>
+         * @param value The name to set.
+         * @return This builder for chaining.
+         */
+        public Builder setName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          name_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string name = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearName() {
+          
+          name_ = getDefaultInstance().getName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string name = 1;</code>
+         * @param value The bytes for name to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          name_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:toit.api.CreateOrganizationRequest.Organization)
+      }
+
+      // @@protoc_insertion_point(class_scope:toit.api.CreateOrganizationRequest.Organization)
+      private static final io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization();
+      }
+
+      public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Organization>
+          PARSER = new com.google.protobuf.AbstractParser<Organization>() {
+        @java.lang.Override
+        public Organization parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Organization(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Organization> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Organization> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface UserOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:toit.api.CreateOrganizationRequest.User)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>string email = 1;</code>
+       * @return The email.
+       */
+      java.lang.String getEmail();
+      /**
+       * <code>string email = 1;</code>
+       * @return The bytes for email.
+       */
+      com.google.protobuf.ByteString
+          getEmailBytes();
+    }
+    /**
+     * Protobuf type {@code toit.api.CreateOrganizationRequest.User}
+     */
+    public  static final class User extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:toit.api.CreateOrganizationRequest.User)
+        UserOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use User.newBuilder() to construct.
+      private User(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private User() {
+        email_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new User();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private User(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                email_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.AuthProto.internal_static_toit_api_CreateOrganizationRequest_User_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.AuthProto.internal_static_toit_api_CreateOrganizationRequest_User_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User.class, io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User.Builder.class);
+      }
+
+      public static final int EMAIL_FIELD_NUMBER = 1;
+      private volatile java.lang.Object email_;
+      /**
+       * <code>string email = 1;</code>
+       * @return The email.
+       */
+      public java.lang.String getEmail() {
+        java.lang.Object ref = email_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          email_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string email = 1;</code>
+       * @return The bytes for email.
+       */
+      public com.google.protobuf.ByteString
+          getEmailBytes() {
+        java.lang.Object ref = email_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          email_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!getEmailBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, email_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!getEmailBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, email_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User)) {
+          return super.equals(obj);
+        }
+        io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User other = (io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User) obj;
+
+        if (!getEmail()
+            .equals(other.getEmail())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + EMAIL_FIELD_NUMBER;
+        hash = (53 * hash) + getEmail().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code toit.api.CreateOrganizationRequest.User}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:toit.api.CreateOrganizationRequest.User)
+          io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.UserOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return io.toit.proto.toit.api.AuthProto.internal_static_toit_api_CreateOrganizationRequest_User_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return io.toit.proto.toit.api.AuthProto.internal_static_toit_api_CreateOrganizationRequest_User_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User.class, io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User.Builder.class);
+        }
+
+        // Construct using io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          email_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return io.toit.proto.toit.api.AuthProto.internal_static_toit_api_CreateOrganizationRequest_User_descriptor;
+        }
+
+        @java.lang.Override
+        public io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User getDefaultInstanceForType() {
+          return io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User build() {
+          io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User buildPartial() {
+          io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User result = new io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User(this);
+          result.email_ = email_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User) {
+            return mergeFrom((io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User other) {
+          if (other == io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User.getDefaultInstance()) return this;
+          if (!other.getEmail().isEmpty()) {
+            email_ = other.email_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object email_ = "";
+        /**
+         * <code>string email = 1;</code>
+         * @return The email.
+         */
+        public java.lang.String getEmail() {
+          java.lang.Object ref = email_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            email_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string email = 1;</code>
+         * @return The bytes for email.
+         */
+        public com.google.protobuf.ByteString
+            getEmailBytes() {
+          java.lang.Object ref = email_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            email_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string email = 1;</code>
+         * @param value The email to set.
+         * @return This builder for chaining.
+         */
+        public Builder setEmail(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          email_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string email = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearEmail() {
+          
+          email_ = getDefaultInstance().getEmail();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string email = 1;</code>
+         * @param value The bytes for email to set.
+         * @return This builder for chaining.
+         */
+        public Builder setEmailBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          email_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:toit.api.CreateOrganizationRequest.User)
+      }
+
+      // @@protoc_insertion_point(class_scope:toit.api.CreateOrganizationRequest.User)
+      private static final io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User();
+      }
+
+      public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<User>
+          PARSER = new com.google.protobuf.AbstractParser<User>() {
+        @java.lang.Override
+        public User parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new User(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<User> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<User> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int ORGANIZATION_FIELD_NUMBER = 1;
+    private io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization organization_;
+    /**
+     * <code>.toit.api.CreateOrganizationRequest.Organization organization = 1;</code>
+     * @return Whether the organization field is set.
+     */
+    public boolean hasOrganization() {
+      return organization_ != null;
+    }
+    /**
+     * <code>.toit.api.CreateOrganizationRequest.Organization organization = 1;</code>
+     * @return The organization.
+     */
+    public io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization getOrganization() {
+      return organization_ == null ? io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization.getDefaultInstance() : organization_;
+    }
+    /**
+     * <code>.toit.api.CreateOrganizationRequest.Organization organization = 1;</code>
+     */
+    public io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.OrganizationOrBuilder getOrganizationOrBuilder() {
+      return getOrganization();
+    }
+
+    public static final int USER_FIELD_NUMBER = 2;
+    private io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User user_;
+    /**
+     * <code>.toit.api.CreateOrganizationRequest.User user = 2;</code>
+     * @return Whether the user field is set.
+     */
+    public boolean hasUser() {
+      return user_ != null;
+    }
+    /**
+     * <code>.toit.api.CreateOrganizationRequest.User user = 2;</code>
+     * @return The user.
+     */
+    public io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User getUser() {
+      return user_ == null ? io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User.getDefaultInstance() : user_;
+    }
+    /**
+     * <code>.toit.api.CreateOrganizationRequest.User user = 2;</code>
+     */
+    public io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.UserOrBuilder getUserOrBuilder() {
+      return getUser();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (organization_ != null) {
+        output.writeMessage(1, getOrganization());
+      }
+      if (user_ != null) {
+        output.writeMessage(2, getUser());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (organization_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getOrganization());
+      }
+      if (user_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getUser());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest other = (io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest) obj;
+
+      if (hasOrganization() != other.hasOrganization()) return false;
+      if (hasOrganization()) {
+        if (!getOrganization()
+            .equals(other.getOrganization())) return false;
+      }
+      if (hasUser() != other.hasUser()) return false;
+      if (hasUser()) {
+        if (!getUser()
+            .equals(other.getUser())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasOrganization()) {
+        hash = (37 * hash) + ORGANIZATION_FIELD_NUMBER;
+        hash = (53 * hash) + getOrganization().hashCode();
+      }
+      if (hasUser()) {
+        hash = (37 * hash) + USER_FIELD_NUMBER;
+        hash = (53 * hash) + getUser().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.api.CreateOrganizationRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.api.CreateOrganizationRequest)
+        io.toit.proto.toit.api.AuthProto.CreateOrganizationRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.AuthProto.internal_static_toit_api_CreateOrganizationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.AuthProto.internal_static_toit_api_CreateOrganizationRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.class, io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (organizationBuilder_ == null) {
+          organization_ = null;
+        } else {
+          organization_ = null;
+          organizationBuilder_ = null;
+        }
+        if (userBuilder_ == null) {
+          user_ = null;
+        } else {
+          user_ = null;
+          userBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.api.AuthProto.internal_static_toit_api_CreateOrganizationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest getDefaultInstanceForType() {
+        return io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest build() {
+        io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest buildPartial() {
+        io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest result = new io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest(this);
+        if (organizationBuilder_ == null) {
+          result.organization_ = organization_;
+        } else {
+          result.organization_ = organizationBuilder_.build();
+        }
+        if (userBuilder_ == null) {
+          result.user_ = user_;
+        } else {
+          result.user_ = userBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest) {
+          return mergeFrom((io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest other) {
+        if (other == io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.getDefaultInstance()) return this;
+        if (other.hasOrganization()) {
+          mergeOrganization(other.getOrganization());
+        }
+        if (other.hasUser()) {
+          mergeUser(other.getUser());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization organization_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization, io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization.Builder, io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.OrganizationOrBuilder> organizationBuilder_;
+      /**
+       * <code>.toit.api.CreateOrganizationRequest.Organization organization = 1;</code>
+       * @return Whether the organization field is set.
+       */
+      public boolean hasOrganization() {
+        return organizationBuilder_ != null || organization_ != null;
+      }
+      /**
+       * <code>.toit.api.CreateOrganizationRequest.Organization organization = 1;</code>
+       * @return The organization.
+       */
+      public io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization getOrganization() {
+        if (organizationBuilder_ == null) {
+          return organization_ == null ? io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization.getDefaultInstance() : organization_;
+        } else {
+          return organizationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.toit.api.CreateOrganizationRequest.Organization organization = 1;</code>
+       */
+      public Builder setOrganization(io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization value) {
+        if (organizationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          organization_ = value;
+          onChanged();
+        } else {
+          organizationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.api.CreateOrganizationRequest.Organization organization = 1;</code>
+       */
+      public Builder setOrganization(
+          io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization.Builder builderForValue) {
+        if (organizationBuilder_ == null) {
+          organization_ = builderForValue.build();
+          onChanged();
+        } else {
+          organizationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.api.CreateOrganizationRequest.Organization organization = 1;</code>
+       */
+      public Builder mergeOrganization(io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization value) {
+        if (organizationBuilder_ == null) {
+          if (organization_ != null) {
+            organization_ =
+              io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization.newBuilder(organization_).mergeFrom(value).buildPartial();
+          } else {
+            organization_ = value;
+          }
+          onChanged();
+        } else {
+          organizationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.api.CreateOrganizationRequest.Organization organization = 1;</code>
+       */
+      public Builder clearOrganization() {
+        if (organizationBuilder_ == null) {
+          organization_ = null;
+          onChanged();
+        } else {
+          organization_ = null;
+          organizationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.api.CreateOrganizationRequest.Organization organization = 1;</code>
+       */
+      public io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization.Builder getOrganizationBuilder() {
+        
+        onChanged();
+        return getOrganizationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.toit.api.CreateOrganizationRequest.Organization organization = 1;</code>
+       */
+      public io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.OrganizationOrBuilder getOrganizationOrBuilder() {
+        if (organizationBuilder_ != null) {
+          return organizationBuilder_.getMessageOrBuilder();
+        } else {
+          return organization_ == null ?
+              io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization.getDefaultInstance() : organization_;
+        }
+      }
+      /**
+       * <code>.toit.api.CreateOrganizationRequest.Organization organization = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization, io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization.Builder, io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.OrganizationOrBuilder> 
+          getOrganizationFieldBuilder() {
+        if (organizationBuilder_ == null) {
+          organizationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization, io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.Organization.Builder, io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.OrganizationOrBuilder>(
+                  getOrganization(),
+                  getParentForChildren(),
+                  isClean());
+          organization_ = null;
+        }
+        return organizationBuilder_;
+      }
+
+      private io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User user_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User, io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User.Builder, io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.UserOrBuilder> userBuilder_;
+      /**
+       * <code>.toit.api.CreateOrganizationRequest.User user = 2;</code>
+       * @return Whether the user field is set.
+       */
+      public boolean hasUser() {
+        return userBuilder_ != null || user_ != null;
+      }
+      /**
+       * <code>.toit.api.CreateOrganizationRequest.User user = 2;</code>
+       * @return The user.
+       */
+      public io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User getUser() {
+        if (userBuilder_ == null) {
+          return user_ == null ? io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User.getDefaultInstance() : user_;
+        } else {
+          return userBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.toit.api.CreateOrganizationRequest.User user = 2;</code>
+       */
+      public Builder setUser(io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User value) {
+        if (userBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          user_ = value;
+          onChanged();
+        } else {
+          userBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.api.CreateOrganizationRequest.User user = 2;</code>
+       */
+      public Builder setUser(
+          io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User.Builder builderForValue) {
+        if (userBuilder_ == null) {
+          user_ = builderForValue.build();
+          onChanged();
+        } else {
+          userBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.api.CreateOrganizationRequest.User user = 2;</code>
+       */
+      public Builder mergeUser(io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User value) {
+        if (userBuilder_ == null) {
+          if (user_ != null) {
+            user_ =
+              io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User.newBuilder(user_).mergeFrom(value).buildPartial();
+          } else {
+            user_ = value;
+          }
+          onChanged();
+        } else {
+          userBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.api.CreateOrganizationRequest.User user = 2;</code>
+       */
+      public Builder clearUser() {
+        if (userBuilder_ == null) {
+          user_ = null;
+          onChanged();
+        } else {
+          user_ = null;
+          userBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.api.CreateOrganizationRequest.User user = 2;</code>
+       */
+      public io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User.Builder getUserBuilder() {
+        
+        onChanged();
+        return getUserFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.toit.api.CreateOrganizationRequest.User user = 2;</code>
+       */
+      public io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.UserOrBuilder getUserOrBuilder() {
+        if (userBuilder_ != null) {
+          return userBuilder_.getMessageOrBuilder();
+        } else {
+          return user_ == null ?
+              io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User.getDefaultInstance() : user_;
+        }
+      }
+      /**
+       * <code>.toit.api.CreateOrganizationRequest.User user = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User, io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User.Builder, io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.UserOrBuilder> 
+          getUserFieldBuilder() {
+        if (userBuilder_ == null) {
+          userBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User, io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User.Builder, io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.UserOrBuilder>(
+                  getUser(),
+                  getParentForChildren(),
+                  isClean());
+          user_ = null;
+        }
+        return userBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.api.CreateOrganizationRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.api.CreateOrganizationRequest)
+    private static final io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest();
+    }
+
+    public static io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CreateOrganizationRequest>
+        PARSER = new com.google.protobuf.AbstractParser<CreateOrganizationRequest>() {
+      @java.lang.Override
+      public CreateOrganizationRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CreateOrganizationRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CreateOrganizationRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CreateOrganizationRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CreateOrganizationResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.CreateOrganizationResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes organization_id = 1;</code>
+     * @return The organizationId.
+     */
+    com.google.protobuf.ByteString getOrganizationId();
+  }
+  /**
+   * Protobuf type {@code toit.api.CreateOrganizationResponse}
+   */
+  public  static final class CreateOrganizationResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.api.CreateOrganizationResponse)
+      CreateOrganizationResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CreateOrganizationResponse.newBuilder() to construct.
+    private CreateOrganizationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CreateOrganizationResponse() {
+      organizationId_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateOrganizationResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CreateOrganizationResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+
+              organizationId_ = input.readBytes();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.api.AuthProto.internal_static_toit_api_CreateOrganizationResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.api.AuthProto.internal_static_toit_api_CreateOrganizationResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse.class, io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse.Builder.class);
+    }
+
+    public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString organizationId_;
+    /**
+     * <code>bytes organization_id = 1;</code>
+     * @return The organizationId.
+     */
+    public com.google.protobuf.ByteString getOrganizationId() {
+      return organizationId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!organizationId_.isEmpty()) {
+        output.writeBytes(1, organizationId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!organizationId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, organizationId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse other = (io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse) obj;
+
+      if (!getOrganizationId()
+          .equals(other.getOrganizationId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ORGANIZATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getOrganizationId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.api.CreateOrganizationResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.api.CreateOrganizationResponse)
+        io.toit.proto.toit.api.AuthProto.CreateOrganizationResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.AuthProto.internal_static_toit_api_CreateOrganizationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.AuthProto.internal_static_toit_api_CreateOrganizationResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse.class, io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        organizationId_ = com.google.protobuf.ByteString.EMPTY;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.api.AuthProto.internal_static_toit_api_CreateOrganizationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse getDefaultInstanceForType() {
+        return io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse build() {
+        io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse buildPartial() {
+        io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse result = new io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse(this);
+        result.organizationId_ = organizationId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse) {
+          return mergeFrom((io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse other) {
+        if (other == io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse.getDefaultInstance()) return this;
+        if (other.getOrganizationId() != com.google.protobuf.ByteString.EMPTY) {
+          setOrganizationId(other.getOrganizationId());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.ByteString organizationId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes organization_id = 1;</code>
+       * @return The organizationId.
+       */
+      public com.google.protobuf.ByteString getOrganizationId() {
+        return organizationId_;
+      }
+      /**
+       * <code>bytes organization_id = 1;</code>
+       * @param value The organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationId(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        organizationId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes organization_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrganizationId() {
+        
+        organizationId_ = getDefaultInstance().getOrganizationId();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.api.CreateOrganizationResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.api.CreateOrganizationResponse)
+    private static final io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse();
+    }
+
+    public static io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CreateOrganizationResponse>
+        PARSER = new com.google.protobuf.AbstractParser<CreateOrganizationResponse>() {
+      @java.lang.Override
+      public CreateOrganizationResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CreateOrganizationResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CreateOrganizationResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CreateOrganizationResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.api.AuthProto.CreateOrganizationResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_toit_api_LoginRequest_descriptor;
   private static final 
@@ -3737,6 +6177,26 @@ public final class AuthProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_toit_api_ChangeOrganizationRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_CreateOrganizationRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_CreateOrganizationRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_CreateOrganizationRequest_Organization_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_CreateOrganizationRequest_Organization_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_CreateOrganizationRequest_User_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_CreateOrganizationRequest_User_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_CreateOrganizationResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_CreateOrganizationResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3756,17 +6216,26 @@ public final class AuthProto {
       "google.protobuf.Duration\022\025\n\rrefresh_toke" +
       "n\030\004 \001(\014\"\017\n\rLogoutRequest\"\020\n\016LogoutRespon" +
       "se\"K\n\031ChangeOrganizationRequest\022\027\n\017organ" +
-      "ization_id\030\001 \001(\014\022\025\n\rrefresh_token\030\002 \001(\0142" +
-      "\224\002\n\004Auth\0229\n\005Login\022\026.toit.api.LoginReques" +
-      "t\032\026.toit.api.AuthResponse\"\000\022=\n\007Refresh\022\030" +
-      ".toit.api.RefreshRequest\032\026.toit.api.Auth" +
-      "Response\"\000\022S\n\022ChangeOrganization\022#.toit." +
-      "api.ChangeOrganizationRequest\032\026.toit.api" +
-      ".AuthResponse\"\000\022=\n\006Logout\022\027.toit.api.Log" +
-      "outRequest\032\030.toit.api.LogoutResponse\"\000BI" +
-      "\n\026io.toit.proto.toit.apiB\tAuthProtoZ$git" +
-      "hub.com/toitware/api.git/toit/apib\006proto" +
-      "3"
+      "ization_id\030\001 \001(\014\022\025\n\rrefresh_token\030\002 \001(\014\"" +
+      "\320\001\n\031CreateOrganizationRequest\022F\n\014organiz" +
+      "ation\030\001 \001(\01320.toit.api.CreateOrganizatio" +
+      "nRequest.Organization\0226\n\004user\030\002 \001(\0132(.to" +
+      "it.api.CreateOrganizationRequest.User\032\034\n" +
+      "\014Organization\022\014\n\004name\030\001 \001(\t\032\025\n\004User\022\r\n\005e" +
+      "mail\030\001 \001(\t\"5\n\032CreateOrganizationResponse" +
+      "\022\027\n\017organization_id\030\001 \001(\0142\367\002\n\004Auth\0229\n\005Lo" +
+      "gin\022\026.toit.api.LoginRequest\032\026.toit.api.A" +
+      "uthResponse\"\000\022=\n\007Refresh\022\030.toit.api.Refr" +
+      "eshRequest\032\026.toit.api.AuthResponse\"\000\022S\n\022" +
+      "ChangeOrganization\022#.toit.api.ChangeOrga" +
+      "nizationRequest\032\026.toit.api.AuthResponse\"" +
+      "\000\022=\n\006Logout\022\027.toit.api.LogoutRequest\032\030.t" +
+      "oit.api.LogoutResponse\"\000\022a\n\022CreateOrgani" +
+      "zation\022#.toit.api.CreateOrganizationRequ" +
+      "est\032$.toit.api.CreateOrganizationRespons" +
+      "e\"\000BI\n\026io.toit.proto.toit.apiB\tAuthProto" +
+      "Z$github.com/toitware/api.git/toit/apib\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3809,6 +6278,30 @@ public final class AuthProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_ChangeOrganizationRequest_descriptor,
         new java.lang.String[] { "OrganizationId", "RefreshToken", });
+    internal_static_toit_api_CreateOrganizationRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_toit_api_CreateOrganizationRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_CreateOrganizationRequest_descriptor,
+        new java.lang.String[] { "Organization", "User", });
+    internal_static_toit_api_CreateOrganizationRequest_Organization_descriptor =
+      internal_static_toit_api_CreateOrganizationRequest_descriptor.getNestedTypes().get(0);
+    internal_static_toit_api_CreateOrganizationRequest_Organization_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_CreateOrganizationRequest_Organization_descriptor,
+        new java.lang.String[] { "Name", });
+    internal_static_toit_api_CreateOrganizationRequest_User_descriptor =
+      internal_static_toit_api_CreateOrganizationRequest_descriptor.getNestedTypes().get(1);
+    internal_static_toit_api_CreateOrganizationRequest_User_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_CreateOrganizationRequest_User_descriptor,
+        new java.lang.String[] { "Email", });
+    internal_static_toit_api_CreateOrganizationResponse_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_toit_api_CreateOrganizationResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_CreateOrganizationResponse_descriptor,
+        new java.lang.String[] { "OrganizationId", });
     com.google.protobuf.DurationProto.getDescriptor();
   }
 
