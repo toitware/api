@@ -44,8 +44,14 @@ message ChangeOrganizationRequest {
 }
 
 message CreateOrganizationRequest {
-  string org_name = 1;
-  string email = 2;  
+  message Organization {
+    string name = 1;
+  }
+  message User {
+    string email = 1;
+  }
+  Organization organization = 1;
+  User user = 2;
 }
 
 message CreateOrganizationResponse {
