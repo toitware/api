@@ -11,6 +11,7 @@ interface IAuthService extends grpc.ServiceDefinition<grpc.UntypedServiceImpleme
   refresh: grpc.MethodDefinition<toit_api_auth_pb.RefreshRequest, toit_api_auth_pb.AuthResponse>;
   changeOrganization: grpc.MethodDefinition<toit_api_auth_pb.ChangeOrganizationRequest, toit_api_auth_pb.AuthResponse>;
   logout: grpc.MethodDefinition<toit_api_auth_pb.LogoutRequest, toit_api_auth_pb.LogoutResponse>;
+  createOrganization: grpc.MethodDefinition<toit_api_auth_pb.CreateOrganizationRequest, toit_api_auth_pb.CreateOrganizationResponse>;
 }
 
 export const AuthService: IAuthService;
@@ -29,4 +30,7 @@ export class AuthClient extends grpc.Client {
   logout(argument: toit_api_auth_pb.LogoutRequest, callback: grpc.requestCallback<toit_api_auth_pb.LogoutResponse>): grpc.ClientUnaryCall;
   logout(argument: toit_api_auth_pb.LogoutRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_auth_pb.LogoutResponse>): grpc.ClientUnaryCall;
   logout(argument: toit_api_auth_pb.LogoutRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_auth_pb.LogoutResponse>): grpc.ClientUnaryCall;
+  createOrganization(argument: toit_api_auth_pb.CreateOrganizationRequest, callback: grpc.requestCallback<toit_api_auth_pb.CreateOrganizationResponse>): grpc.ClientUnaryCall;
+  createOrganization(argument: toit_api_auth_pb.CreateOrganizationRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_auth_pb.CreateOrganizationResponse>): grpc.ClientUnaryCall;
+  createOrganization(argument: toit_api_auth_pb.CreateOrganizationRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_auth_pb.CreateOrganizationResponse>): grpc.ClientUnaryCall;
 }

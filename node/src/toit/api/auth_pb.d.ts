@@ -158,3 +158,93 @@ export namespace ChangeOrganizationRequest {
   }
 }
 
+export class CreateOrganizationRequest extends jspb.Message {
+  hasOrganization(): boolean;
+  clearOrganization(): void;
+  getOrganization(): CreateOrganizationRequest.Organization | undefined;
+  setOrganization(value?: CreateOrganizationRequest.Organization): void;
+
+  hasUser(): boolean;
+  clearUser(): void;
+  getUser(): CreateOrganizationRequest.User | undefined;
+  setUser(value?: CreateOrganizationRequest.User): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): CreateOrganizationRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: CreateOrganizationRequest): CreateOrganizationRequest.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: CreateOrganizationRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): CreateOrganizationRequest;
+  static deserializeBinaryFromReader(message: CreateOrganizationRequest, reader: jspb.BinaryReader): CreateOrganizationRequest;
+}
+
+export namespace CreateOrganizationRequest {
+  export type AsObject = {
+    organization?: CreateOrganizationRequest.Organization.AsObject,
+    user?: CreateOrganizationRequest.User.AsObject,
+  }
+
+  export class Organization extends jspb.Message {
+    getName(): string;
+    setName(value: string): void;
+
+    serializeBinary(): Uint8Array;
+    toObject(includeInstance?: boolean): Organization.AsObject;
+    static toObject(includeInstance: boolean, msg: Organization): Organization.AsObject;
+    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+    static serializeBinaryToWriter(message: Organization, writer: jspb.BinaryWriter): void;
+    static deserializeBinary(bytes: Uint8Array): Organization;
+    static deserializeBinaryFromReader(message: Organization, reader: jspb.BinaryReader): Organization;
+  }
+
+  export namespace Organization {
+    export type AsObject = {
+      name: string,
+    }
+  }
+
+  export class User extends jspb.Message {
+    getEmail(): string;
+    setEmail(value: string): void;
+
+    serializeBinary(): Uint8Array;
+    toObject(includeInstance?: boolean): User.AsObject;
+    static toObject(includeInstance: boolean, msg: User): User.AsObject;
+    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+    static serializeBinaryToWriter(message: User, writer: jspb.BinaryWriter): void;
+    static deserializeBinary(bytes: Uint8Array): User;
+    static deserializeBinaryFromReader(message: User, reader: jspb.BinaryReader): User;
+  }
+
+  export namespace User {
+    export type AsObject = {
+      email: string,
+    }
+  }
+}
+
+export class CreateOrganizationResponse extends jspb.Message {
+  getOrganizationId(): Uint8Array | string;
+  getOrganizationId_asU8(): Uint8Array;
+  getOrganizationId_asB64(): string;
+  setOrganizationId(value: Uint8Array | string): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): CreateOrganizationResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: CreateOrganizationResponse): CreateOrganizationResponse.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: CreateOrganizationResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): CreateOrganizationResponse;
+  static deserializeBinaryFromReader(message: CreateOrganizationResponse, reader: jspb.BinaryReader): CreateOrganizationResponse;
+}
+
+export namespace CreateOrganizationResponse {
+  export type AsObject = {
+    organizationId: Uint8Array | string,
+  }
+}
+

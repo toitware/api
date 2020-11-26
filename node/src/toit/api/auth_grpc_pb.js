@@ -27,6 +27,28 @@ function deserialize_toit_api_ChangeOrganizationRequest(buffer_arg) {
   return toit_api_auth_pb.ChangeOrganizationRequest.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_toit_api_CreateOrganizationRequest(arg) {
+  if (!(arg instanceof toit_api_auth_pb.CreateOrganizationRequest)) {
+    throw new Error('Expected argument of type toit.api.CreateOrganizationRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_CreateOrganizationRequest(buffer_arg) {
+  return toit_api_auth_pb.CreateOrganizationRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_toit_api_CreateOrganizationResponse(arg) {
+  if (!(arg instanceof toit_api_auth_pb.CreateOrganizationResponse)) {
+    throw new Error('Expected argument of type toit.api.CreateOrganizationResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_CreateOrganizationResponse(buffer_arg) {
+  return toit_api_auth_pb.CreateOrganizationResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_toit_api_LoginRequest(arg) {
   if (!(arg instanceof toit_api_auth_pb.LoginRequest)) {
     throw new Error('Expected argument of type toit.api.LoginRequest');
@@ -116,6 +138,17 @@ var AuthService = exports.AuthService = {
     requestDeserialize: deserialize_toit_api_LogoutRequest,
     responseSerialize: serialize_toit_api_LogoutResponse,
     responseDeserialize: deserialize_toit_api_LogoutResponse,
+  },
+  createOrganization: {
+    path: '/toit.api.Auth/CreateOrganization',
+    requestStream: false,
+    responseStream: false,
+    requestType: toit_api_auth_pb.CreateOrganizationRequest,
+    responseType: toit_api_auth_pb.CreateOrganizationResponse,
+    requestSerialize: serialize_toit_api_CreateOrganizationRequest,
+    requestDeserialize: deserialize_toit_api_CreateOrganizationRequest,
+    responseSerialize: serialize_toit_api_CreateOrganizationResponse,
+    responseDeserialize: deserialize_toit_api_CreateOrganizationResponse,
   },
 };
 
