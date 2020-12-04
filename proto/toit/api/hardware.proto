@@ -3,6 +3,9 @@ syntax = "proto3";
 package toit.api;
 
 import "toit/model/device.proto";
+import "toit/model/data.proto";
+import "toit/model/pubsub/message.proto";
+import "google/protobuf/timestamp.proto";
 
 option go_package = "github.com/toitware/api.git/toit/api";
 option java_package = "io.toit.proto.toit.api";
@@ -12,6 +15,9 @@ service HardwareService {
   rpc Claim(ClaimRequest) returns (ClaimResponse) {}
   rpc Replace(ReplaceRequest) returns (ReplaceResponse) {}
   rpc GetActiveDeviceID(GetActiveDeviceIDRequest) returns (GetActiveDeviceIDResponse) {}
+
+  // Debug endpoints only available on local console
+  rpc HardwareEvents(HardwareEventsRequest) returns (stream HardwareEventsResponse) {}
 }
 
 message ClaimRequest {
@@ -45,6 +51,50 @@ message ReplaceResponse {
 message GetActiveDeviceIDRequest { bytes hardware_id = 1; }
 
 message GetActiveDeviceIDResponse { bytes device_id = 1; }
+
+message HardwareEvent {
+  enum Type {
+    UNKNOWN = 0;
+    LOGS    = 1;
+    METRICS = 2;
+    PUBSUB  = 3;
+  }
+
+  bytes hardware_id = 1;
+  bytes event_id = 2;
+  Type type = 3;
+  bytes job_id = 4;
+  google.protobuf.Timestamp received = 5;
+  google.protobuf.Timestamp created = 6;
+  bytes device_id = 7;
+  bytes organization_id = 8;
+
+  oneof data {
+    toit.model.LogData log = 9;
+    toit.model.MetricsData metrics = 10;
+    toit.model.pubsub.Message pubsub = 11;
+  }
+}
+
+message HardwareEventsRequest {
+  bytes hardware_id = 1;
+  bytes job_id = 2;
+  HardwareEvent.Type type = 3;
+
+  uint64 limit = 4;
+  bool reverse = 5;
+
+   // Where to stream from, exclusive. Empty returns all historic logs.
+  oneof offset {
+    bytes id = 6;
+    google.protobuf.Timestamp ts = 7;
+  }
+}
+
+message HardwareEventsResponse {
+  HardwareEvent event = 1;
+}
+
 
 service FlashStation {
   rpc ClaimHardwareIdentity(ClaimHardwareIdentityRequest) returns (ClaimHardwareIdentityResponse) {}
