@@ -4070,6 +4070,3954 @@ public final class HardwareProto {
 
   }
 
+  public interface HardwareEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.HardwareEvent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes hardware_id = 1;</code>
+     * @return The hardwareId.
+     */
+    com.google.protobuf.ByteString getHardwareId();
+
+    /**
+     * <code>bytes event_id = 2;</code>
+     * @return The eventId.
+     */
+    com.google.protobuf.ByteString getEventId();
+
+    /**
+     * <code>.toit.api.HardwareEvent.Type type = 3;</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    int getTypeValue();
+    /**
+     * <code>.toit.api.HardwareEvent.Type type = 3;</code>
+     * @return The type.
+     */
+    io.toit.proto.toit.api.HardwareProto.HardwareEvent.Type getType();
+
+    /**
+     * <code>bytes job_id = 4;</code>
+     * @return The jobId.
+     */
+    com.google.protobuf.ByteString getJobId();
+
+    /**
+     * <code>.google.protobuf.Timestamp received = 5;</code>
+     * @return Whether the received field is set.
+     */
+    boolean hasReceived();
+    /**
+     * <code>.google.protobuf.Timestamp received = 5;</code>
+     * @return The received.
+     */
+    com.google.protobuf.Timestamp getReceived();
+    /**
+     * <code>.google.protobuf.Timestamp received = 5;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getReceivedOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Timestamp created = 6;</code>
+     * @return Whether the created field is set.
+     */
+    boolean hasCreated();
+    /**
+     * <code>.google.protobuf.Timestamp created = 6;</code>
+     * @return The created.
+     */
+    com.google.protobuf.Timestamp getCreated();
+    /**
+     * <code>.google.protobuf.Timestamp created = 6;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder();
+
+    /**
+     * <code>bytes device_id = 7;</code>
+     * @return The deviceId.
+     */
+    com.google.protobuf.ByteString getDeviceId();
+
+    /**
+     * <code>bytes organization_id = 8;</code>
+     * @return The organizationId.
+     */
+    com.google.protobuf.ByteString getOrganizationId();
+
+    /**
+     * <code>.toit.model.LogData log = 9;</code>
+     * @return Whether the log field is set.
+     */
+    boolean hasLog();
+    /**
+     * <code>.toit.model.LogData log = 9;</code>
+     * @return The log.
+     */
+    io.toit.proto.toit.model.DataProto.LogData getLog();
+    /**
+     * <code>.toit.model.LogData log = 9;</code>
+     */
+    io.toit.proto.toit.model.DataProto.LogDataOrBuilder getLogOrBuilder();
+
+    /**
+     * <code>.toit.model.MetricsData metrics = 10;</code>
+     * @return Whether the metrics field is set.
+     */
+    boolean hasMetrics();
+    /**
+     * <code>.toit.model.MetricsData metrics = 10;</code>
+     * @return The metrics.
+     */
+    io.toit.proto.toit.model.DataProto.MetricsData getMetrics();
+    /**
+     * <code>.toit.model.MetricsData metrics = 10;</code>
+     */
+    io.toit.proto.toit.model.DataProto.MetricsDataOrBuilder getMetricsOrBuilder();
+
+    /**
+     * <code>.toit.model.pubsub.Message pubsub = 11;</code>
+     * @return Whether the pubsub field is set.
+     */
+    boolean hasPubsub();
+    /**
+     * <code>.toit.model.pubsub.Message pubsub = 11;</code>
+     * @return The pubsub.
+     */
+    io.toit.proto.toit.model.pubsub.MessageProto.Message getPubsub();
+    /**
+     * <code>.toit.model.pubsub.Message pubsub = 11;</code>
+     */
+    io.toit.proto.toit.model.pubsub.MessageProto.MessageOrBuilder getPubsubOrBuilder();
+
+    public io.toit.proto.toit.api.HardwareProto.HardwareEvent.DataCase getDataCase();
+  }
+  /**
+   * Protobuf type {@code toit.api.HardwareEvent}
+   */
+  public  static final class HardwareEvent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.api.HardwareEvent)
+      HardwareEventOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use HardwareEvent.newBuilder() to construct.
+    private HardwareEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private HardwareEvent() {
+      hardwareId_ = com.google.protobuf.ByteString.EMPTY;
+      eventId_ = com.google.protobuf.ByteString.EMPTY;
+      type_ = 0;
+      jobId_ = com.google.protobuf.ByteString.EMPTY;
+      deviceId_ = com.google.protobuf.ByteString.EMPTY;
+      organizationId_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HardwareEvent();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private HardwareEvent(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+
+              hardwareId_ = input.readBytes();
+              break;
+            }
+            case 18: {
+
+              eventId_ = input.readBytes();
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+
+              type_ = rawValue;
+              break;
+            }
+            case 34: {
+
+              jobId_ = input.readBytes();
+              break;
+            }
+            case 42: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (received_ != null) {
+                subBuilder = received_.toBuilder();
+              }
+              received_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(received_);
+                received_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (created_ != null) {
+                subBuilder = created_.toBuilder();
+              }
+              created_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(created_);
+                created_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 58: {
+
+              deviceId_ = input.readBytes();
+              break;
+            }
+            case 66: {
+
+              organizationId_ = input.readBytes();
+              break;
+            }
+            case 74: {
+              io.toit.proto.toit.model.DataProto.LogData.Builder subBuilder = null;
+              if (dataCase_ == 9) {
+                subBuilder = ((io.toit.proto.toit.model.DataProto.LogData) data_).toBuilder();
+              }
+              data_ =
+                  input.readMessage(io.toit.proto.toit.model.DataProto.LogData.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((io.toit.proto.toit.model.DataProto.LogData) data_);
+                data_ = subBuilder.buildPartial();
+              }
+              dataCase_ = 9;
+              break;
+            }
+            case 82: {
+              io.toit.proto.toit.model.DataProto.MetricsData.Builder subBuilder = null;
+              if (dataCase_ == 10) {
+                subBuilder = ((io.toit.proto.toit.model.DataProto.MetricsData) data_).toBuilder();
+              }
+              data_ =
+                  input.readMessage(io.toit.proto.toit.model.DataProto.MetricsData.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((io.toit.proto.toit.model.DataProto.MetricsData) data_);
+                data_ = subBuilder.buildPartial();
+              }
+              dataCase_ = 10;
+              break;
+            }
+            case 90: {
+              io.toit.proto.toit.model.pubsub.MessageProto.Message.Builder subBuilder = null;
+              if (dataCase_ == 11) {
+                subBuilder = ((io.toit.proto.toit.model.pubsub.MessageProto.Message) data_).toBuilder();
+              }
+              data_ =
+                  input.readMessage(io.toit.proto.toit.model.pubsub.MessageProto.Message.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((io.toit.proto.toit.model.pubsub.MessageProto.Message) data_);
+                data_ = subBuilder.buildPartial();
+              }
+              dataCase_ = 11;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.api.HardwareProto.internal_static_toit_api_HardwareEvent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.api.HardwareProto.internal_static_toit_api_HardwareEvent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.api.HardwareProto.HardwareEvent.class, io.toit.proto.toit.api.HardwareProto.HardwareEvent.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code toit.api.HardwareEvent.Type}
+     */
+    public enum Type
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>UNKNOWN = 0;</code>
+       */
+      UNKNOWN(0),
+      /**
+       * <code>LOGS = 1;</code>
+       */
+      LOGS(1),
+      /**
+       * <code>METRICS = 2;</code>
+       */
+      METRICS(2),
+      /**
+       * <code>PUBSUB = 3;</code>
+       */
+      PUBSUB(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>UNKNOWN = 0;</code>
+       */
+      public static final int UNKNOWN_VALUE = 0;
+      /**
+       * <code>LOGS = 1;</code>
+       */
+      public static final int LOGS_VALUE = 1;
+      /**
+       * <code>METRICS = 2;</code>
+       */
+      public static final int METRICS_VALUE = 2;
+      /**
+       * <code>PUBSUB = 3;</code>
+       */
+      public static final int PUBSUB_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Type valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Type forNumber(int value) {
+        switch (value) {
+          case 0: return UNKNOWN;
+          case 1: return LOGS;
+          case 2: return METRICS;
+          case 3: return PUBSUB;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Type>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Type> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Type>() {
+              public Type findValueByNumber(int number) {
+                return Type.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.HardwareProto.HardwareEvent.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Type[] VALUES = values();
+
+      public static Type valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Type(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:toit.api.HardwareEvent.Type)
+    }
+
+    private int dataCase_ = 0;
+    private java.lang.Object data_;
+    public enum DataCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      LOG(9),
+      METRICS(10),
+      PUBSUB(11),
+      DATA_NOT_SET(0);
+      private final int value;
+      private DataCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static DataCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static DataCase forNumber(int value) {
+        switch (value) {
+          case 9: return LOG;
+          case 10: return METRICS;
+          case 11: return PUBSUB;
+          case 0: return DATA_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public DataCase
+    getDataCase() {
+      return DataCase.forNumber(
+          dataCase_);
+    }
+
+    public static final int HARDWARE_ID_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString hardwareId_;
+    /**
+     * <code>bytes hardware_id = 1;</code>
+     * @return The hardwareId.
+     */
+    public com.google.protobuf.ByteString getHardwareId() {
+      return hardwareId_;
+    }
+
+    public static final int EVENT_ID_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString eventId_;
+    /**
+     * <code>bytes event_id = 2;</code>
+     * @return The eventId.
+     */
+    public com.google.protobuf.ByteString getEventId() {
+      return eventId_;
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 3;
+    private int type_;
+    /**
+     * <code>.toit.api.HardwareEvent.Type type = 3;</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <code>.toit.api.HardwareEvent.Type type = 3;</code>
+     * @return The type.
+     */
+    public io.toit.proto.toit.api.HardwareProto.HardwareEvent.Type getType() {
+      @SuppressWarnings("deprecation")
+      io.toit.proto.toit.api.HardwareProto.HardwareEvent.Type result = io.toit.proto.toit.api.HardwareProto.HardwareEvent.Type.valueOf(type_);
+      return result == null ? io.toit.proto.toit.api.HardwareProto.HardwareEvent.Type.UNRECOGNIZED : result;
+    }
+
+    public static final int JOB_ID_FIELD_NUMBER = 4;
+    private com.google.protobuf.ByteString jobId_;
+    /**
+     * <code>bytes job_id = 4;</code>
+     * @return The jobId.
+     */
+    public com.google.protobuf.ByteString getJobId() {
+      return jobId_;
+    }
+
+    public static final int RECEIVED_FIELD_NUMBER = 5;
+    private com.google.protobuf.Timestamp received_;
+    /**
+     * <code>.google.protobuf.Timestamp received = 5;</code>
+     * @return Whether the received field is set.
+     */
+    public boolean hasReceived() {
+      return received_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp received = 5;</code>
+     * @return The received.
+     */
+    public com.google.protobuf.Timestamp getReceived() {
+      return received_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : received_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp received = 5;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getReceivedOrBuilder() {
+      return getReceived();
+    }
+
+    public static final int CREATED_FIELD_NUMBER = 6;
+    private com.google.protobuf.Timestamp created_;
+    /**
+     * <code>.google.protobuf.Timestamp created = 6;</code>
+     * @return Whether the created field is set.
+     */
+    public boolean hasCreated() {
+      return created_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created = 6;</code>
+     * @return The created.
+     */
+    public com.google.protobuf.Timestamp getCreated() {
+      return created_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : created_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created = 6;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder() {
+      return getCreated();
+    }
+
+    public static final int DEVICE_ID_FIELD_NUMBER = 7;
+    private com.google.protobuf.ByteString deviceId_;
+    /**
+     * <code>bytes device_id = 7;</code>
+     * @return The deviceId.
+     */
+    public com.google.protobuf.ByteString getDeviceId() {
+      return deviceId_;
+    }
+
+    public static final int ORGANIZATION_ID_FIELD_NUMBER = 8;
+    private com.google.protobuf.ByteString organizationId_;
+    /**
+     * <code>bytes organization_id = 8;</code>
+     * @return The organizationId.
+     */
+    public com.google.protobuf.ByteString getOrganizationId() {
+      return organizationId_;
+    }
+
+    public static final int LOG_FIELD_NUMBER = 9;
+    /**
+     * <code>.toit.model.LogData log = 9;</code>
+     * @return Whether the log field is set.
+     */
+    public boolean hasLog() {
+      return dataCase_ == 9;
+    }
+    /**
+     * <code>.toit.model.LogData log = 9;</code>
+     * @return The log.
+     */
+    public io.toit.proto.toit.model.DataProto.LogData getLog() {
+      if (dataCase_ == 9) {
+         return (io.toit.proto.toit.model.DataProto.LogData) data_;
+      }
+      return io.toit.proto.toit.model.DataProto.LogData.getDefaultInstance();
+    }
+    /**
+     * <code>.toit.model.LogData log = 9;</code>
+     */
+    public io.toit.proto.toit.model.DataProto.LogDataOrBuilder getLogOrBuilder() {
+      if (dataCase_ == 9) {
+         return (io.toit.proto.toit.model.DataProto.LogData) data_;
+      }
+      return io.toit.proto.toit.model.DataProto.LogData.getDefaultInstance();
+    }
+
+    public static final int METRICS_FIELD_NUMBER = 10;
+    /**
+     * <code>.toit.model.MetricsData metrics = 10;</code>
+     * @return Whether the metrics field is set.
+     */
+    public boolean hasMetrics() {
+      return dataCase_ == 10;
+    }
+    /**
+     * <code>.toit.model.MetricsData metrics = 10;</code>
+     * @return The metrics.
+     */
+    public io.toit.proto.toit.model.DataProto.MetricsData getMetrics() {
+      if (dataCase_ == 10) {
+         return (io.toit.proto.toit.model.DataProto.MetricsData) data_;
+      }
+      return io.toit.proto.toit.model.DataProto.MetricsData.getDefaultInstance();
+    }
+    /**
+     * <code>.toit.model.MetricsData metrics = 10;</code>
+     */
+    public io.toit.proto.toit.model.DataProto.MetricsDataOrBuilder getMetricsOrBuilder() {
+      if (dataCase_ == 10) {
+         return (io.toit.proto.toit.model.DataProto.MetricsData) data_;
+      }
+      return io.toit.proto.toit.model.DataProto.MetricsData.getDefaultInstance();
+    }
+
+    public static final int PUBSUB_FIELD_NUMBER = 11;
+    /**
+     * <code>.toit.model.pubsub.Message pubsub = 11;</code>
+     * @return Whether the pubsub field is set.
+     */
+    public boolean hasPubsub() {
+      return dataCase_ == 11;
+    }
+    /**
+     * <code>.toit.model.pubsub.Message pubsub = 11;</code>
+     * @return The pubsub.
+     */
+    public io.toit.proto.toit.model.pubsub.MessageProto.Message getPubsub() {
+      if (dataCase_ == 11) {
+         return (io.toit.proto.toit.model.pubsub.MessageProto.Message) data_;
+      }
+      return io.toit.proto.toit.model.pubsub.MessageProto.Message.getDefaultInstance();
+    }
+    /**
+     * <code>.toit.model.pubsub.Message pubsub = 11;</code>
+     */
+    public io.toit.proto.toit.model.pubsub.MessageProto.MessageOrBuilder getPubsubOrBuilder() {
+      if (dataCase_ == 11) {
+         return (io.toit.proto.toit.model.pubsub.MessageProto.Message) data_;
+      }
+      return io.toit.proto.toit.model.pubsub.MessageProto.Message.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!hardwareId_.isEmpty()) {
+        output.writeBytes(1, hardwareId_);
+      }
+      if (!eventId_.isEmpty()) {
+        output.writeBytes(2, eventId_);
+      }
+      if (type_ != io.toit.proto.toit.api.HardwareProto.HardwareEvent.Type.UNKNOWN.getNumber()) {
+        output.writeEnum(3, type_);
+      }
+      if (!jobId_.isEmpty()) {
+        output.writeBytes(4, jobId_);
+      }
+      if (received_ != null) {
+        output.writeMessage(5, getReceived());
+      }
+      if (created_ != null) {
+        output.writeMessage(6, getCreated());
+      }
+      if (!deviceId_.isEmpty()) {
+        output.writeBytes(7, deviceId_);
+      }
+      if (!organizationId_.isEmpty()) {
+        output.writeBytes(8, organizationId_);
+      }
+      if (dataCase_ == 9) {
+        output.writeMessage(9, (io.toit.proto.toit.model.DataProto.LogData) data_);
+      }
+      if (dataCase_ == 10) {
+        output.writeMessage(10, (io.toit.proto.toit.model.DataProto.MetricsData) data_);
+      }
+      if (dataCase_ == 11) {
+        output.writeMessage(11, (io.toit.proto.toit.model.pubsub.MessageProto.Message) data_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!hardwareId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, hardwareId_);
+      }
+      if (!eventId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, eventId_);
+      }
+      if (type_ != io.toit.proto.toit.api.HardwareProto.HardwareEvent.Type.UNKNOWN.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, type_);
+      }
+      if (!jobId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, jobId_);
+      }
+      if (received_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getReceived());
+      }
+      if (created_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getCreated());
+      }
+      if (!deviceId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(7, deviceId_);
+      }
+      if (!organizationId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(8, organizationId_);
+      }
+      if (dataCase_ == 9) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, (io.toit.proto.toit.model.DataProto.LogData) data_);
+      }
+      if (dataCase_ == 10) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, (io.toit.proto.toit.model.DataProto.MetricsData) data_);
+      }
+      if (dataCase_ == 11) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, (io.toit.proto.toit.model.pubsub.MessageProto.Message) data_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.api.HardwareProto.HardwareEvent)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.api.HardwareProto.HardwareEvent other = (io.toit.proto.toit.api.HardwareProto.HardwareEvent) obj;
+
+      if (!getHardwareId()
+          .equals(other.getHardwareId())) return false;
+      if (!getEventId()
+          .equals(other.getEventId())) return false;
+      if (type_ != other.type_) return false;
+      if (!getJobId()
+          .equals(other.getJobId())) return false;
+      if (hasReceived() != other.hasReceived()) return false;
+      if (hasReceived()) {
+        if (!getReceived()
+            .equals(other.getReceived())) return false;
+      }
+      if (hasCreated() != other.hasCreated()) return false;
+      if (hasCreated()) {
+        if (!getCreated()
+            .equals(other.getCreated())) return false;
+      }
+      if (!getDeviceId()
+          .equals(other.getDeviceId())) return false;
+      if (!getOrganizationId()
+          .equals(other.getOrganizationId())) return false;
+      if (!getDataCase().equals(other.getDataCase())) return false;
+      switch (dataCase_) {
+        case 9:
+          if (!getLog()
+              .equals(other.getLog())) return false;
+          break;
+        case 10:
+          if (!getMetrics()
+              .equals(other.getMetrics())) return false;
+          break;
+        case 11:
+          if (!getPubsub()
+              .equals(other.getPubsub())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HARDWARE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getHardwareId().hashCode();
+      hash = (37 * hash) + EVENT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getEventId().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + type_;
+      hash = (37 * hash) + JOB_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getJobId().hashCode();
+      if (hasReceived()) {
+        hash = (37 * hash) + RECEIVED_FIELD_NUMBER;
+        hash = (53 * hash) + getReceived().hashCode();
+      }
+      if (hasCreated()) {
+        hash = (37 * hash) + CREATED_FIELD_NUMBER;
+        hash = (53 * hash) + getCreated().hashCode();
+      }
+      hash = (37 * hash) + DEVICE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDeviceId().hashCode();
+      hash = (37 * hash) + ORGANIZATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getOrganizationId().hashCode();
+      switch (dataCase_) {
+        case 9:
+          hash = (37 * hash) + LOG_FIELD_NUMBER;
+          hash = (53 * hash) + getLog().hashCode();
+          break;
+        case 10:
+          hash = (37 * hash) + METRICS_FIELD_NUMBER;
+          hash = (53 * hash) + getMetrics().hashCode();
+          break;
+        case 11:
+          hash = (37 * hash) + PUBSUB_FIELD_NUMBER;
+          hash = (53 * hash) + getPubsub().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEvent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEvent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEvent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEvent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEvent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEvent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEvent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEvent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEvent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEvent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEvent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEvent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.api.HardwareProto.HardwareEvent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.api.HardwareEvent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.api.HardwareEvent)
+        io.toit.proto.toit.api.HardwareProto.HardwareEventOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.HardwareProto.internal_static_toit_api_HardwareEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.HardwareProto.internal_static_toit_api_HardwareEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.HardwareProto.HardwareEvent.class, io.toit.proto.toit.api.HardwareProto.HardwareEvent.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.api.HardwareProto.HardwareEvent.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        hardwareId_ = com.google.protobuf.ByteString.EMPTY;
+
+        eventId_ = com.google.protobuf.ByteString.EMPTY;
+
+        type_ = 0;
+
+        jobId_ = com.google.protobuf.ByteString.EMPTY;
+
+        if (receivedBuilder_ == null) {
+          received_ = null;
+        } else {
+          received_ = null;
+          receivedBuilder_ = null;
+        }
+        if (createdBuilder_ == null) {
+          created_ = null;
+        } else {
+          created_ = null;
+          createdBuilder_ = null;
+        }
+        deviceId_ = com.google.protobuf.ByteString.EMPTY;
+
+        organizationId_ = com.google.protobuf.ByteString.EMPTY;
+
+        dataCase_ = 0;
+        data_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.api.HardwareProto.internal_static_toit_api_HardwareEvent_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.HardwareProto.HardwareEvent getDefaultInstanceForType() {
+        return io.toit.proto.toit.api.HardwareProto.HardwareEvent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.HardwareProto.HardwareEvent build() {
+        io.toit.proto.toit.api.HardwareProto.HardwareEvent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.HardwareProto.HardwareEvent buildPartial() {
+        io.toit.proto.toit.api.HardwareProto.HardwareEvent result = new io.toit.proto.toit.api.HardwareProto.HardwareEvent(this);
+        result.hardwareId_ = hardwareId_;
+        result.eventId_ = eventId_;
+        result.type_ = type_;
+        result.jobId_ = jobId_;
+        if (receivedBuilder_ == null) {
+          result.received_ = received_;
+        } else {
+          result.received_ = receivedBuilder_.build();
+        }
+        if (createdBuilder_ == null) {
+          result.created_ = created_;
+        } else {
+          result.created_ = createdBuilder_.build();
+        }
+        result.deviceId_ = deviceId_;
+        result.organizationId_ = organizationId_;
+        if (dataCase_ == 9) {
+          if (logBuilder_ == null) {
+            result.data_ = data_;
+          } else {
+            result.data_ = logBuilder_.build();
+          }
+        }
+        if (dataCase_ == 10) {
+          if (metricsBuilder_ == null) {
+            result.data_ = data_;
+          } else {
+            result.data_ = metricsBuilder_.build();
+          }
+        }
+        if (dataCase_ == 11) {
+          if (pubsubBuilder_ == null) {
+            result.data_ = data_;
+          } else {
+            result.data_ = pubsubBuilder_.build();
+          }
+        }
+        result.dataCase_ = dataCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.api.HardwareProto.HardwareEvent) {
+          return mergeFrom((io.toit.proto.toit.api.HardwareProto.HardwareEvent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.api.HardwareProto.HardwareEvent other) {
+        if (other == io.toit.proto.toit.api.HardwareProto.HardwareEvent.getDefaultInstance()) return this;
+        if (other.getHardwareId() != com.google.protobuf.ByteString.EMPTY) {
+          setHardwareId(other.getHardwareId());
+        }
+        if (other.getEventId() != com.google.protobuf.ByteString.EMPTY) {
+          setEventId(other.getEventId());
+        }
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
+        }
+        if (other.getJobId() != com.google.protobuf.ByteString.EMPTY) {
+          setJobId(other.getJobId());
+        }
+        if (other.hasReceived()) {
+          mergeReceived(other.getReceived());
+        }
+        if (other.hasCreated()) {
+          mergeCreated(other.getCreated());
+        }
+        if (other.getDeviceId() != com.google.protobuf.ByteString.EMPTY) {
+          setDeviceId(other.getDeviceId());
+        }
+        if (other.getOrganizationId() != com.google.protobuf.ByteString.EMPTY) {
+          setOrganizationId(other.getOrganizationId());
+        }
+        switch (other.getDataCase()) {
+          case LOG: {
+            mergeLog(other.getLog());
+            break;
+          }
+          case METRICS: {
+            mergeMetrics(other.getMetrics());
+            break;
+          }
+          case PUBSUB: {
+            mergePubsub(other.getPubsub());
+            break;
+          }
+          case DATA_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.api.HardwareProto.HardwareEvent parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.api.HardwareProto.HardwareEvent) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int dataCase_ = 0;
+      private java.lang.Object data_;
+      public DataCase
+          getDataCase() {
+        return DataCase.forNumber(
+            dataCase_);
+      }
+
+      public Builder clearData() {
+        dataCase_ = 0;
+        data_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.ByteString hardwareId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes hardware_id = 1;</code>
+       * @return The hardwareId.
+       */
+      public com.google.protobuf.ByteString getHardwareId() {
+        return hardwareId_;
+      }
+      /**
+       * <code>bytes hardware_id = 1;</code>
+       * @param value The hardwareId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHardwareId(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        hardwareId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes hardware_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHardwareId() {
+        
+        hardwareId_ = getDefaultInstance().getHardwareId();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString eventId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes event_id = 2;</code>
+       * @return The eventId.
+       */
+      public com.google.protobuf.ByteString getEventId() {
+        return eventId_;
+      }
+      /**
+       * <code>bytes event_id = 2;</code>
+       * @param value The eventId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEventId(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        eventId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes event_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEventId() {
+        
+        eventId_ = getDefaultInstance().getEventId();
+        onChanged();
+        return this;
+      }
+
+      private int type_ = 0;
+      /**
+       * <code>.toit.api.HardwareEvent.Type type = 3;</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <code>.toit.api.HardwareEvent.Type type = 3;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeValue(int value) {
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.toit.api.HardwareEvent.Type type = 3;</code>
+       * @return The type.
+       */
+      public io.toit.proto.toit.api.HardwareProto.HardwareEvent.Type getType() {
+        @SuppressWarnings("deprecation")
+        io.toit.proto.toit.api.HardwareProto.HardwareEvent.Type result = io.toit.proto.toit.api.HardwareProto.HardwareEvent.Type.valueOf(type_);
+        return result == null ? io.toit.proto.toit.api.HardwareProto.HardwareEvent.Type.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.toit.api.HardwareEvent.Type type = 3;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(io.toit.proto.toit.api.HardwareProto.HardwareEvent.Type value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.toit.api.HardwareEvent.Type type = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString jobId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes job_id = 4;</code>
+       * @return The jobId.
+       */
+      public com.google.protobuf.ByteString getJobId() {
+        return jobId_;
+      }
+      /**
+       * <code>bytes job_id = 4;</code>
+       * @param value The jobId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJobId(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        jobId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes job_id = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJobId() {
+        
+        jobId_ = getDefaultInstance().getJobId();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp received_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> receivedBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp received = 5;</code>
+       * @return Whether the received field is set.
+       */
+      public boolean hasReceived() {
+        return receivedBuilder_ != null || received_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp received = 5;</code>
+       * @return The received.
+       */
+      public com.google.protobuf.Timestamp getReceived() {
+        if (receivedBuilder_ == null) {
+          return received_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : received_;
+        } else {
+          return receivedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp received = 5;</code>
+       */
+      public Builder setReceived(com.google.protobuf.Timestamp value) {
+        if (receivedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          received_ = value;
+          onChanged();
+        } else {
+          receivedBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp received = 5;</code>
+       */
+      public Builder setReceived(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (receivedBuilder_ == null) {
+          received_ = builderForValue.build();
+          onChanged();
+        } else {
+          receivedBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp received = 5;</code>
+       */
+      public Builder mergeReceived(com.google.protobuf.Timestamp value) {
+        if (receivedBuilder_ == null) {
+          if (received_ != null) {
+            received_ =
+              com.google.protobuf.Timestamp.newBuilder(received_).mergeFrom(value).buildPartial();
+          } else {
+            received_ = value;
+          }
+          onChanged();
+        } else {
+          receivedBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp received = 5;</code>
+       */
+      public Builder clearReceived() {
+        if (receivedBuilder_ == null) {
+          received_ = null;
+          onChanged();
+        } else {
+          received_ = null;
+          receivedBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp received = 5;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getReceivedBuilder() {
+        
+        onChanged();
+        return getReceivedFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp received = 5;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getReceivedOrBuilder() {
+        if (receivedBuilder_ != null) {
+          return receivedBuilder_.getMessageOrBuilder();
+        } else {
+          return received_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : received_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp received = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getReceivedFieldBuilder() {
+        if (receivedBuilder_ == null) {
+          receivedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getReceived(),
+                  getParentForChildren(),
+                  isClean());
+          received_ = null;
+        }
+        return receivedBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp created_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp created = 6;</code>
+       * @return Whether the created field is set.
+       */
+      public boolean hasCreated() {
+        return createdBuilder_ != null || created_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created = 6;</code>
+       * @return The created.
+       */
+      public com.google.protobuf.Timestamp getCreated() {
+        if (createdBuilder_ == null) {
+          return created_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : created_;
+        } else {
+          return createdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created = 6;</code>
+       */
+      public Builder setCreated(com.google.protobuf.Timestamp value) {
+        if (createdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          created_ = value;
+          onChanged();
+        } else {
+          createdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created = 6;</code>
+       */
+      public Builder setCreated(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (createdBuilder_ == null) {
+          created_ = builderForValue.build();
+          onChanged();
+        } else {
+          createdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created = 6;</code>
+       */
+      public Builder mergeCreated(com.google.protobuf.Timestamp value) {
+        if (createdBuilder_ == null) {
+          if (created_ != null) {
+            created_ =
+              com.google.protobuf.Timestamp.newBuilder(created_).mergeFrom(value).buildPartial();
+          } else {
+            created_ = value;
+          }
+          onChanged();
+        } else {
+          createdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created = 6;</code>
+       */
+      public Builder clearCreated() {
+        if (createdBuilder_ == null) {
+          created_ = null;
+          onChanged();
+        } else {
+          created_ = null;
+          createdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created = 6;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCreatedBuilder() {
+        
+        onChanged();
+        return getCreatedFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created = 6;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder() {
+        if (createdBuilder_ != null) {
+          return createdBuilder_.getMessageOrBuilder();
+        } else {
+          return created_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : created_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCreatedFieldBuilder() {
+        if (createdBuilder_ == null) {
+          createdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCreated(),
+                  getParentForChildren(),
+                  isClean());
+          created_ = null;
+        }
+        return createdBuilder_;
+      }
+
+      private com.google.protobuf.ByteString deviceId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes device_id = 7;</code>
+       * @return The deviceId.
+       */
+      public com.google.protobuf.ByteString getDeviceId() {
+        return deviceId_;
+      }
+      /**
+       * <code>bytes device_id = 7;</code>
+       * @param value The deviceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeviceId(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        deviceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes device_id = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeviceId() {
+        
+        deviceId_ = getDefaultInstance().getDeviceId();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString organizationId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes organization_id = 8;</code>
+       * @return The organizationId.
+       */
+      public com.google.protobuf.ByteString getOrganizationId() {
+        return organizationId_;
+      }
+      /**
+       * <code>bytes organization_id = 8;</code>
+       * @param value The organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationId(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        organizationId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes organization_id = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrganizationId() {
+        
+        organizationId_ = getDefaultInstance().getOrganizationId();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.model.DataProto.LogData, io.toit.proto.toit.model.DataProto.LogData.Builder, io.toit.proto.toit.model.DataProto.LogDataOrBuilder> logBuilder_;
+      /**
+       * <code>.toit.model.LogData log = 9;</code>
+       * @return Whether the log field is set.
+       */
+      public boolean hasLog() {
+        return dataCase_ == 9;
+      }
+      /**
+       * <code>.toit.model.LogData log = 9;</code>
+       * @return The log.
+       */
+      public io.toit.proto.toit.model.DataProto.LogData getLog() {
+        if (logBuilder_ == null) {
+          if (dataCase_ == 9) {
+            return (io.toit.proto.toit.model.DataProto.LogData) data_;
+          }
+          return io.toit.proto.toit.model.DataProto.LogData.getDefaultInstance();
+        } else {
+          if (dataCase_ == 9) {
+            return logBuilder_.getMessage();
+          }
+          return io.toit.proto.toit.model.DataProto.LogData.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.toit.model.LogData log = 9;</code>
+       */
+      public Builder setLog(io.toit.proto.toit.model.DataProto.LogData value) {
+        if (logBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          data_ = value;
+          onChanged();
+        } else {
+          logBuilder_.setMessage(value);
+        }
+        dataCase_ = 9;
+        return this;
+      }
+      /**
+       * <code>.toit.model.LogData log = 9;</code>
+       */
+      public Builder setLog(
+          io.toit.proto.toit.model.DataProto.LogData.Builder builderForValue) {
+        if (logBuilder_ == null) {
+          data_ = builderForValue.build();
+          onChanged();
+        } else {
+          logBuilder_.setMessage(builderForValue.build());
+        }
+        dataCase_ = 9;
+        return this;
+      }
+      /**
+       * <code>.toit.model.LogData log = 9;</code>
+       */
+      public Builder mergeLog(io.toit.proto.toit.model.DataProto.LogData value) {
+        if (logBuilder_ == null) {
+          if (dataCase_ == 9 &&
+              data_ != io.toit.proto.toit.model.DataProto.LogData.getDefaultInstance()) {
+            data_ = io.toit.proto.toit.model.DataProto.LogData.newBuilder((io.toit.proto.toit.model.DataProto.LogData) data_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            data_ = value;
+          }
+          onChanged();
+        } else {
+          if (dataCase_ == 9) {
+            logBuilder_.mergeFrom(value);
+          }
+          logBuilder_.setMessage(value);
+        }
+        dataCase_ = 9;
+        return this;
+      }
+      /**
+       * <code>.toit.model.LogData log = 9;</code>
+       */
+      public Builder clearLog() {
+        if (logBuilder_ == null) {
+          if (dataCase_ == 9) {
+            dataCase_ = 0;
+            data_ = null;
+            onChanged();
+          }
+        } else {
+          if (dataCase_ == 9) {
+            dataCase_ = 0;
+            data_ = null;
+          }
+          logBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.toit.model.LogData log = 9;</code>
+       */
+      public io.toit.proto.toit.model.DataProto.LogData.Builder getLogBuilder() {
+        return getLogFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.toit.model.LogData log = 9;</code>
+       */
+      public io.toit.proto.toit.model.DataProto.LogDataOrBuilder getLogOrBuilder() {
+        if ((dataCase_ == 9) && (logBuilder_ != null)) {
+          return logBuilder_.getMessageOrBuilder();
+        } else {
+          if (dataCase_ == 9) {
+            return (io.toit.proto.toit.model.DataProto.LogData) data_;
+          }
+          return io.toit.proto.toit.model.DataProto.LogData.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.toit.model.LogData log = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.model.DataProto.LogData, io.toit.proto.toit.model.DataProto.LogData.Builder, io.toit.proto.toit.model.DataProto.LogDataOrBuilder> 
+          getLogFieldBuilder() {
+        if (logBuilder_ == null) {
+          if (!(dataCase_ == 9)) {
+            data_ = io.toit.proto.toit.model.DataProto.LogData.getDefaultInstance();
+          }
+          logBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.toit.proto.toit.model.DataProto.LogData, io.toit.proto.toit.model.DataProto.LogData.Builder, io.toit.proto.toit.model.DataProto.LogDataOrBuilder>(
+                  (io.toit.proto.toit.model.DataProto.LogData) data_,
+                  getParentForChildren(),
+                  isClean());
+          data_ = null;
+        }
+        dataCase_ = 9;
+        onChanged();;
+        return logBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.model.DataProto.MetricsData, io.toit.proto.toit.model.DataProto.MetricsData.Builder, io.toit.proto.toit.model.DataProto.MetricsDataOrBuilder> metricsBuilder_;
+      /**
+       * <code>.toit.model.MetricsData metrics = 10;</code>
+       * @return Whether the metrics field is set.
+       */
+      public boolean hasMetrics() {
+        return dataCase_ == 10;
+      }
+      /**
+       * <code>.toit.model.MetricsData metrics = 10;</code>
+       * @return The metrics.
+       */
+      public io.toit.proto.toit.model.DataProto.MetricsData getMetrics() {
+        if (metricsBuilder_ == null) {
+          if (dataCase_ == 10) {
+            return (io.toit.proto.toit.model.DataProto.MetricsData) data_;
+          }
+          return io.toit.proto.toit.model.DataProto.MetricsData.getDefaultInstance();
+        } else {
+          if (dataCase_ == 10) {
+            return metricsBuilder_.getMessage();
+          }
+          return io.toit.proto.toit.model.DataProto.MetricsData.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.toit.model.MetricsData metrics = 10;</code>
+       */
+      public Builder setMetrics(io.toit.proto.toit.model.DataProto.MetricsData value) {
+        if (metricsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          data_ = value;
+          onChanged();
+        } else {
+          metricsBuilder_.setMessage(value);
+        }
+        dataCase_ = 10;
+        return this;
+      }
+      /**
+       * <code>.toit.model.MetricsData metrics = 10;</code>
+       */
+      public Builder setMetrics(
+          io.toit.proto.toit.model.DataProto.MetricsData.Builder builderForValue) {
+        if (metricsBuilder_ == null) {
+          data_ = builderForValue.build();
+          onChanged();
+        } else {
+          metricsBuilder_.setMessage(builderForValue.build());
+        }
+        dataCase_ = 10;
+        return this;
+      }
+      /**
+       * <code>.toit.model.MetricsData metrics = 10;</code>
+       */
+      public Builder mergeMetrics(io.toit.proto.toit.model.DataProto.MetricsData value) {
+        if (metricsBuilder_ == null) {
+          if (dataCase_ == 10 &&
+              data_ != io.toit.proto.toit.model.DataProto.MetricsData.getDefaultInstance()) {
+            data_ = io.toit.proto.toit.model.DataProto.MetricsData.newBuilder((io.toit.proto.toit.model.DataProto.MetricsData) data_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            data_ = value;
+          }
+          onChanged();
+        } else {
+          if (dataCase_ == 10) {
+            metricsBuilder_.mergeFrom(value);
+          }
+          metricsBuilder_.setMessage(value);
+        }
+        dataCase_ = 10;
+        return this;
+      }
+      /**
+       * <code>.toit.model.MetricsData metrics = 10;</code>
+       */
+      public Builder clearMetrics() {
+        if (metricsBuilder_ == null) {
+          if (dataCase_ == 10) {
+            dataCase_ = 0;
+            data_ = null;
+            onChanged();
+          }
+        } else {
+          if (dataCase_ == 10) {
+            dataCase_ = 0;
+            data_ = null;
+          }
+          metricsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.toit.model.MetricsData metrics = 10;</code>
+       */
+      public io.toit.proto.toit.model.DataProto.MetricsData.Builder getMetricsBuilder() {
+        return getMetricsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.toit.model.MetricsData metrics = 10;</code>
+       */
+      public io.toit.proto.toit.model.DataProto.MetricsDataOrBuilder getMetricsOrBuilder() {
+        if ((dataCase_ == 10) && (metricsBuilder_ != null)) {
+          return metricsBuilder_.getMessageOrBuilder();
+        } else {
+          if (dataCase_ == 10) {
+            return (io.toit.proto.toit.model.DataProto.MetricsData) data_;
+          }
+          return io.toit.proto.toit.model.DataProto.MetricsData.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.toit.model.MetricsData metrics = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.model.DataProto.MetricsData, io.toit.proto.toit.model.DataProto.MetricsData.Builder, io.toit.proto.toit.model.DataProto.MetricsDataOrBuilder> 
+          getMetricsFieldBuilder() {
+        if (metricsBuilder_ == null) {
+          if (!(dataCase_ == 10)) {
+            data_ = io.toit.proto.toit.model.DataProto.MetricsData.getDefaultInstance();
+          }
+          metricsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.toit.proto.toit.model.DataProto.MetricsData, io.toit.proto.toit.model.DataProto.MetricsData.Builder, io.toit.proto.toit.model.DataProto.MetricsDataOrBuilder>(
+                  (io.toit.proto.toit.model.DataProto.MetricsData) data_,
+                  getParentForChildren(),
+                  isClean());
+          data_ = null;
+        }
+        dataCase_ = 10;
+        onChanged();;
+        return metricsBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.model.pubsub.MessageProto.Message, io.toit.proto.toit.model.pubsub.MessageProto.Message.Builder, io.toit.proto.toit.model.pubsub.MessageProto.MessageOrBuilder> pubsubBuilder_;
+      /**
+       * <code>.toit.model.pubsub.Message pubsub = 11;</code>
+       * @return Whether the pubsub field is set.
+       */
+      public boolean hasPubsub() {
+        return dataCase_ == 11;
+      }
+      /**
+       * <code>.toit.model.pubsub.Message pubsub = 11;</code>
+       * @return The pubsub.
+       */
+      public io.toit.proto.toit.model.pubsub.MessageProto.Message getPubsub() {
+        if (pubsubBuilder_ == null) {
+          if (dataCase_ == 11) {
+            return (io.toit.proto.toit.model.pubsub.MessageProto.Message) data_;
+          }
+          return io.toit.proto.toit.model.pubsub.MessageProto.Message.getDefaultInstance();
+        } else {
+          if (dataCase_ == 11) {
+            return pubsubBuilder_.getMessage();
+          }
+          return io.toit.proto.toit.model.pubsub.MessageProto.Message.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.toit.model.pubsub.Message pubsub = 11;</code>
+       */
+      public Builder setPubsub(io.toit.proto.toit.model.pubsub.MessageProto.Message value) {
+        if (pubsubBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          data_ = value;
+          onChanged();
+        } else {
+          pubsubBuilder_.setMessage(value);
+        }
+        dataCase_ = 11;
+        return this;
+      }
+      /**
+       * <code>.toit.model.pubsub.Message pubsub = 11;</code>
+       */
+      public Builder setPubsub(
+          io.toit.proto.toit.model.pubsub.MessageProto.Message.Builder builderForValue) {
+        if (pubsubBuilder_ == null) {
+          data_ = builderForValue.build();
+          onChanged();
+        } else {
+          pubsubBuilder_.setMessage(builderForValue.build());
+        }
+        dataCase_ = 11;
+        return this;
+      }
+      /**
+       * <code>.toit.model.pubsub.Message pubsub = 11;</code>
+       */
+      public Builder mergePubsub(io.toit.proto.toit.model.pubsub.MessageProto.Message value) {
+        if (pubsubBuilder_ == null) {
+          if (dataCase_ == 11 &&
+              data_ != io.toit.proto.toit.model.pubsub.MessageProto.Message.getDefaultInstance()) {
+            data_ = io.toit.proto.toit.model.pubsub.MessageProto.Message.newBuilder((io.toit.proto.toit.model.pubsub.MessageProto.Message) data_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            data_ = value;
+          }
+          onChanged();
+        } else {
+          if (dataCase_ == 11) {
+            pubsubBuilder_.mergeFrom(value);
+          }
+          pubsubBuilder_.setMessage(value);
+        }
+        dataCase_ = 11;
+        return this;
+      }
+      /**
+       * <code>.toit.model.pubsub.Message pubsub = 11;</code>
+       */
+      public Builder clearPubsub() {
+        if (pubsubBuilder_ == null) {
+          if (dataCase_ == 11) {
+            dataCase_ = 0;
+            data_ = null;
+            onChanged();
+          }
+        } else {
+          if (dataCase_ == 11) {
+            dataCase_ = 0;
+            data_ = null;
+          }
+          pubsubBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.toit.model.pubsub.Message pubsub = 11;</code>
+       */
+      public io.toit.proto.toit.model.pubsub.MessageProto.Message.Builder getPubsubBuilder() {
+        return getPubsubFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.toit.model.pubsub.Message pubsub = 11;</code>
+       */
+      public io.toit.proto.toit.model.pubsub.MessageProto.MessageOrBuilder getPubsubOrBuilder() {
+        if ((dataCase_ == 11) && (pubsubBuilder_ != null)) {
+          return pubsubBuilder_.getMessageOrBuilder();
+        } else {
+          if (dataCase_ == 11) {
+            return (io.toit.proto.toit.model.pubsub.MessageProto.Message) data_;
+          }
+          return io.toit.proto.toit.model.pubsub.MessageProto.Message.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.toit.model.pubsub.Message pubsub = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.model.pubsub.MessageProto.Message, io.toit.proto.toit.model.pubsub.MessageProto.Message.Builder, io.toit.proto.toit.model.pubsub.MessageProto.MessageOrBuilder> 
+          getPubsubFieldBuilder() {
+        if (pubsubBuilder_ == null) {
+          if (!(dataCase_ == 11)) {
+            data_ = io.toit.proto.toit.model.pubsub.MessageProto.Message.getDefaultInstance();
+          }
+          pubsubBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.toit.proto.toit.model.pubsub.MessageProto.Message, io.toit.proto.toit.model.pubsub.MessageProto.Message.Builder, io.toit.proto.toit.model.pubsub.MessageProto.MessageOrBuilder>(
+                  (io.toit.proto.toit.model.pubsub.MessageProto.Message) data_,
+                  getParentForChildren(),
+                  isClean());
+          data_ = null;
+        }
+        dataCase_ = 11;
+        onChanged();;
+        return pubsubBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.api.HardwareEvent)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.api.HardwareEvent)
+    private static final io.toit.proto.toit.api.HardwareProto.HardwareEvent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.api.HardwareProto.HardwareEvent();
+    }
+
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEvent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<HardwareEvent>
+        PARSER = new com.google.protobuf.AbstractParser<HardwareEvent>() {
+      @java.lang.Override
+      public HardwareEvent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new HardwareEvent(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<HardwareEvent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<HardwareEvent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.api.HardwareProto.HardwareEvent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface HardwareEventsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.HardwareEventsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes hardware_id = 1;</code>
+     * @return The hardwareId.
+     */
+    com.google.protobuf.ByteString getHardwareId();
+
+    /**
+     * <code>bytes job_id = 2;</code>
+     * @return The jobId.
+     */
+    com.google.protobuf.ByteString getJobId();
+
+    /**
+     * <code>.toit.api.HardwareEvent.Type type = 3;</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    int getTypeValue();
+    /**
+     * <code>.toit.api.HardwareEvent.Type type = 3;</code>
+     * @return The type.
+     */
+    io.toit.proto.toit.api.HardwareProto.HardwareEvent.Type getType();
+
+    /**
+     * <code>uint64 limit = 4;</code>
+     * @return The limit.
+     */
+    long getLimit();
+
+    /**
+     * <code>bool reverse = 5;</code>
+     * @return The reverse.
+     */
+    boolean getReverse();
+
+    /**
+     * <code>bytes id = 6;</code>
+     * @return The id.
+     */
+    com.google.protobuf.ByteString getId();
+
+    /**
+     * <code>.google.protobuf.Timestamp ts = 7;</code>
+     * @return Whether the ts field is set.
+     */
+    boolean hasTs();
+    /**
+     * <code>.google.protobuf.Timestamp ts = 7;</code>
+     * @return The ts.
+     */
+    com.google.protobuf.Timestamp getTs();
+    /**
+     * <code>.google.protobuf.Timestamp ts = 7;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getTsOrBuilder();
+
+    public io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest.OffsetCase getOffsetCase();
+  }
+  /**
+   * Protobuf type {@code toit.api.HardwareEventsRequest}
+   */
+  public  static final class HardwareEventsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.api.HardwareEventsRequest)
+      HardwareEventsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use HardwareEventsRequest.newBuilder() to construct.
+    private HardwareEventsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private HardwareEventsRequest() {
+      hardwareId_ = com.google.protobuf.ByteString.EMPTY;
+      jobId_ = com.google.protobuf.ByteString.EMPTY;
+      type_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HardwareEventsRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private HardwareEventsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+
+              hardwareId_ = input.readBytes();
+              break;
+            }
+            case 18: {
+
+              jobId_ = input.readBytes();
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+
+              type_ = rawValue;
+              break;
+            }
+            case 32: {
+
+              limit_ = input.readUInt64();
+              break;
+            }
+            case 40: {
+
+              reverse_ = input.readBool();
+              break;
+            }
+            case 50: {
+              offsetCase_ = 6;
+              offset_ = input.readBytes();
+              break;
+            }
+            case 58: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (offsetCase_ == 7) {
+                subBuilder = ((com.google.protobuf.Timestamp) offset_).toBuilder();
+              }
+              offset_ =
+                  input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.google.protobuf.Timestamp) offset_);
+                offset_ = subBuilder.buildPartial();
+              }
+              offsetCase_ = 7;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.api.HardwareProto.internal_static_toit_api_HardwareEventsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.api.HardwareProto.internal_static_toit_api_HardwareEventsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest.class, io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest.Builder.class);
+    }
+
+    private int offsetCase_ = 0;
+    private java.lang.Object offset_;
+    public enum OffsetCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      ID(6),
+      TS(7),
+      OFFSET_NOT_SET(0);
+      private final int value;
+      private OffsetCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static OffsetCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static OffsetCase forNumber(int value) {
+        switch (value) {
+          case 6: return ID;
+          case 7: return TS;
+          case 0: return OFFSET_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public OffsetCase
+    getOffsetCase() {
+      return OffsetCase.forNumber(
+          offsetCase_);
+    }
+
+    public static final int HARDWARE_ID_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString hardwareId_;
+    /**
+     * <code>bytes hardware_id = 1;</code>
+     * @return The hardwareId.
+     */
+    public com.google.protobuf.ByteString getHardwareId() {
+      return hardwareId_;
+    }
+
+    public static final int JOB_ID_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString jobId_;
+    /**
+     * <code>bytes job_id = 2;</code>
+     * @return The jobId.
+     */
+    public com.google.protobuf.ByteString getJobId() {
+      return jobId_;
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 3;
+    private int type_;
+    /**
+     * <code>.toit.api.HardwareEvent.Type type = 3;</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <code>.toit.api.HardwareEvent.Type type = 3;</code>
+     * @return The type.
+     */
+    public io.toit.proto.toit.api.HardwareProto.HardwareEvent.Type getType() {
+      @SuppressWarnings("deprecation")
+      io.toit.proto.toit.api.HardwareProto.HardwareEvent.Type result = io.toit.proto.toit.api.HardwareProto.HardwareEvent.Type.valueOf(type_);
+      return result == null ? io.toit.proto.toit.api.HardwareProto.HardwareEvent.Type.UNRECOGNIZED : result;
+    }
+
+    public static final int LIMIT_FIELD_NUMBER = 4;
+    private long limit_;
+    /**
+     * <code>uint64 limit = 4;</code>
+     * @return The limit.
+     */
+    public long getLimit() {
+      return limit_;
+    }
+
+    public static final int REVERSE_FIELD_NUMBER = 5;
+    private boolean reverse_;
+    /**
+     * <code>bool reverse = 5;</code>
+     * @return The reverse.
+     */
+    public boolean getReverse() {
+      return reverse_;
+    }
+
+    public static final int ID_FIELD_NUMBER = 6;
+    /**
+     * <code>bytes id = 6;</code>
+     * @return The id.
+     */
+    public com.google.protobuf.ByteString getId() {
+      if (offsetCase_ == 6) {
+        return (com.google.protobuf.ByteString) offset_;
+      }
+      return com.google.protobuf.ByteString.EMPTY;
+    }
+
+    public static final int TS_FIELD_NUMBER = 7;
+    /**
+     * <code>.google.protobuf.Timestamp ts = 7;</code>
+     * @return Whether the ts field is set.
+     */
+    public boolean hasTs() {
+      return offsetCase_ == 7;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp ts = 7;</code>
+     * @return The ts.
+     */
+    public com.google.protobuf.Timestamp getTs() {
+      if (offsetCase_ == 7) {
+         return (com.google.protobuf.Timestamp) offset_;
+      }
+      return com.google.protobuf.Timestamp.getDefaultInstance();
+    }
+    /**
+     * <code>.google.protobuf.Timestamp ts = 7;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getTsOrBuilder() {
+      if (offsetCase_ == 7) {
+         return (com.google.protobuf.Timestamp) offset_;
+      }
+      return com.google.protobuf.Timestamp.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!hardwareId_.isEmpty()) {
+        output.writeBytes(1, hardwareId_);
+      }
+      if (!jobId_.isEmpty()) {
+        output.writeBytes(2, jobId_);
+      }
+      if (type_ != io.toit.proto.toit.api.HardwareProto.HardwareEvent.Type.UNKNOWN.getNumber()) {
+        output.writeEnum(3, type_);
+      }
+      if (limit_ != 0L) {
+        output.writeUInt64(4, limit_);
+      }
+      if (reverse_ != false) {
+        output.writeBool(5, reverse_);
+      }
+      if (offsetCase_ == 6) {
+        output.writeBytes(
+            6, (com.google.protobuf.ByteString) offset_);
+      }
+      if (offsetCase_ == 7) {
+        output.writeMessage(7, (com.google.protobuf.Timestamp) offset_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!hardwareId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, hardwareId_);
+      }
+      if (!jobId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, jobId_);
+      }
+      if (type_ != io.toit.proto.toit.api.HardwareProto.HardwareEvent.Type.UNKNOWN.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, type_);
+      }
+      if (limit_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, limit_);
+      }
+      if (reverse_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, reverse_);
+      }
+      if (offsetCase_ == 6) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(
+              6, (com.google.protobuf.ByteString) offset_);
+      }
+      if (offsetCase_ == 7) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, (com.google.protobuf.Timestamp) offset_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest other = (io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest) obj;
+
+      if (!getHardwareId()
+          .equals(other.getHardwareId())) return false;
+      if (!getJobId()
+          .equals(other.getJobId())) return false;
+      if (type_ != other.type_) return false;
+      if (getLimit()
+          != other.getLimit()) return false;
+      if (getReverse()
+          != other.getReverse()) return false;
+      if (!getOffsetCase().equals(other.getOffsetCase())) return false;
+      switch (offsetCase_) {
+        case 6:
+          if (!getId()
+              .equals(other.getId())) return false;
+          break;
+        case 7:
+          if (!getTs()
+              .equals(other.getTs())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HARDWARE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getHardwareId().hashCode();
+      hash = (37 * hash) + JOB_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getJobId().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + type_;
+      hash = (37 * hash) + LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLimit());
+      hash = (37 * hash) + REVERSE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getReverse());
+      switch (offsetCase_) {
+        case 6:
+          hash = (37 * hash) + ID_FIELD_NUMBER;
+          hash = (53 * hash) + getId().hashCode();
+          break;
+        case 7:
+          hash = (37 * hash) + TS_FIELD_NUMBER;
+          hash = (53 * hash) + getTs().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.api.HardwareEventsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.api.HardwareEventsRequest)
+        io.toit.proto.toit.api.HardwareProto.HardwareEventsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.HardwareProto.internal_static_toit_api_HardwareEventsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.HardwareProto.internal_static_toit_api_HardwareEventsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest.class, io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        hardwareId_ = com.google.protobuf.ByteString.EMPTY;
+
+        jobId_ = com.google.protobuf.ByteString.EMPTY;
+
+        type_ = 0;
+
+        limit_ = 0L;
+
+        reverse_ = false;
+
+        offsetCase_ = 0;
+        offset_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.api.HardwareProto.internal_static_toit_api_HardwareEventsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest getDefaultInstanceForType() {
+        return io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest build() {
+        io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest buildPartial() {
+        io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest result = new io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest(this);
+        result.hardwareId_ = hardwareId_;
+        result.jobId_ = jobId_;
+        result.type_ = type_;
+        result.limit_ = limit_;
+        result.reverse_ = reverse_;
+        if (offsetCase_ == 6) {
+          result.offset_ = offset_;
+        }
+        if (offsetCase_ == 7) {
+          if (tsBuilder_ == null) {
+            result.offset_ = offset_;
+          } else {
+            result.offset_ = tsBuilder_.build();
+          }
+        }
+        result.offsetCase_ = offsetCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest) {
+          return mergeFrom((io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest other) {
+        if (other == io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest.getDefaultInstance()) return this;
+        if (other.getHardwareId() != com.google.protobuf.ByteString.EMPTY) {
+          setHardwareId(other.getHardwareId());
+        }
+        if (other.getJobId() != com.google.protobuf.ByteString.EMPTY) {
+          setJobId(other.getJobId());
+        }
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
+        }
+        if (other.getLimit() != 0L) {
+          setLimit(other.getLimit());
+        }
+        if (other.getReverse() != false) {
+          setReverse(other.getReverse());
+        }
+        switch (other.getOffsetCase()) {
+          case ID: {
+            setId(other.getId());
+            break;
+          }
+          case TS: {
+            mergeTs(other.getTs());
+            break;
+          }
+          case OFFSET_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int offsetCase_ = 0;
+      private java.lang.Object offset_;
+      public OffsetCase
+          getOffsetCase() {
+        return OffsetCase.forNumber(
+            offsetCase_);
+      }
+
+      public Builder clearOffset() {
+        offsetCase_ = 0;
+        offset_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.ByteString hardwareId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes hardware_id = 1;</code>
+       * @return The hardwareId.
+       */
+      public com.google.protobuf.ByteString getHardwareId() {
+        return hardwareId_;
+      }
+      /**
+       * <code>bytes hardware_id = 1;</code>
+       * @param value The hardwareId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHardwareId(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        hardwareId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes hardware_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHardwareId() {
+        
+        hardwareId_ = getDefaultInstance().getHardwareId();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString jobId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes job_id = 2;</code>
+       * @return The jobId.
+       */
+      public com.google.protobuf.ByteString getJobId() {
+        return jobId_;
+      }
+      /**
+       * <code>bytes job_id = 2;</code>
+       * @param value The jobId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJobId(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        jobId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes job_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJobId() {
+        
+        jobId_ = getDefaultInstance().getJobId();
+        onChanged();
+        return this;
+      }
+
+      private int type_ = 0;
+      /**
+       * <code>.toit.api.HardwareEvent.Type type = 3;</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <code>.toit.api.HardwareEvent.Type type = 3;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeValue(int value) {
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.toit.api.HardwareEvent.Type type = 3;</code>
+       * @return The type.
+       */
+      public io.toit.proto.toit.api.HardwareProto.HardwareEvent.Type getType() {
+        @SuppressWarnings("deprecation")
+        io.toit.proto.toit.api.HardwareProto.HardwareEvent.Type result = io.toit.proto.toit.api.HardwareProto.HardwareEvent.Type.valueOf(type_);
+        return result == null ? io.toit.proto.toit.api.HardwareProto.HardwareEvent.Type.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.toit.api.HardwareEvent.Type type = 3;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(io.toit.proto.toit.api.HardwareProto.HardwareEvent.Type value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.toit.api.HardwareEvent.Type type = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long limit_ ;
+      /**
+       * <code>uint64 limit = 4;</code>
+       * @return The limit.
+       */
+      public long getLimit() {
+        return limit_;
+      }
+      /**
+       * <code>uint64 limit = 4;</code>
+       * @param value The limit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLimit(long value) {
+        
+        limit_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 limit = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLimit() {
+        
+        limit_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private boolean reverse_ ;
+      /**
+       * <code>bool reverse = 5;</code>
+       * @return The reverse.
+       */
+      public boolean getReverse() {
+        return reverse_;
+      }
+      /**
+       * <code>bool reverse = 5;</code>
+       * @param value The reverse to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReverse(boolean value) {
+        
+        reverse_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool reverse = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReverse() {
+        
+        reverse_ = false;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>bytes id = 6;</code>
+       * @return The id.
+       */
+      public com.google.protobuf.ByteString getId() {
+        if (offsetCase_ == 6) {
+          return (com.google.protobuf.ByteString) offset_;
+        }
+        return com.google.protobuf.ByteString.EMPTY;
+      }
+      /**
+       * <code>bytes id = 6;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  offsetCase_ = 6;
+        offset_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes id = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        if (offsetCase_ == 6) {
+          offsetCase_ = 0;
+          offset_ = null;
+          onChanged();
+        }
+        return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> tsBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp ts = 7;</code>
+       * @return Whether the ts field is set.
+       */
+      public boolean hasTs() {
+        return offsetCase_ == 7;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp ts = 7;</code>
+       * @return The ts.
+       */
+      public com.google.protobuf.Timestamp getTs() {
+        if (tsBuilder_ == null) {
+          if (offsetCase_ == 7) {
+            return (com.google.protobuf.Timestamp) offset_;
+          }
+          return com.google.protobuf.Timestamp.getDefaultInstance();
+        } else {
+          if (offsetCase_ == 7) {
+            return tsBuilder_.getMessage();
+          }
+          return com.google.protobuf.Timestamp.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp ts = 7;</code>
+       */
+      public Builder setTs(com.google.protobuf.Timestamp value) {
+        if (tsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          offset_ = value;
+          onChanged();
+        } else {
+          tsBuilder_.setMessage(value);
+        }
+        offsetCase_ = 7;
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp ts = 7;</code>
+       */
+      public Builder setTs(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (tsBuilder_ == null) {
+          offset_ = builderForValue.build();
+          onChanged();
+        } else {
+          tsBuilder_.setMessage(builderForValue.build());
+        }
+        offsetCase_ = 7;
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp ts = 7;</code>
+       */
+      public Builder mergeTs(com.google.protobuf.Timestamp value) {
+        if (tsBuilder_ == null) {
+          if (offsetCase_ == 7 &&
+              offset_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            offset_ = com.google.protobuf.Timestamp.newBuilder((com.google.protobuf.Timestamp) offset_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            offset_ = value;
+          }
+          onChanged();
+        } else {
+          if (offsetCase_ == 7) {
+            tsBuilder_.mergeFrom(value);
+          }
+          tsBuilder_.setMessage(value);
+        }
+        offsetCase_ = 7;
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp ts = 7;</code>
+       */
+      public Builder clearTs() {
+        if (tsBuilder_ == null) {
+          if (offsetCase_ == 7) {
+            offsetCase_ = 0;
+            offset_ = null;
+            onChanged();
+          }
+        } else {
+          if (offsetCase_ == 7) {
+            offsetCase_ = 0;
+            offset_ = null;
+          }
+          tsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp ts = 7;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getTsBuilder() {
+        return getTsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp ts = 7;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getTsOrBuilder() {
+        if ((offsetCase_ == 7) && (tsBuilder_ != null)) {
+          return tsBuilder_.getMessageOrBuilder();
+        } else {
+          if (offsetCase_ == 7) {
+            return (com.google.protobuf.Timestamp) offset_;
+          }
+          return com.google.protobuf.Timestamp.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp ts = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getTsFieldBuilder() {
+        if (tsBuilder_ == null) {
+          if (!(offsetCase_ == 7)) {
+            offset_ = com.google.protobuf.Timestamp.getDefaultInstance();
+          }
+          tsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  (com.google.protobuf.Timestamp) offset_,
+                  getParentForChildren(),
+                  isClean());
+          offset_ = null;
+        }
+        offsetCase_ = 7;
+        onChanged();;
+        return tsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.api.HardwareEventsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.api.HardwareEventsRequest)
+    private static final io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest();
+    }
+
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<HardwareEventsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<HardwareEventsRequest>() {
+      @java.lang.Override
+      public HardwareEventsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new HardwareEventsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<HardwareEventsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<HardwareEventsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface HardwareEventsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.HardwareEventsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.toit.api.HardwareEvent event = 1;</code>
+     * @return Whether the event field is set.
+     */
+    boolean hasEvent();
+    /**
+     * <code>.toit.api.HardwareEvent event = 1;</code>
+     * @return The event.
+     */
+    io.toit.proto.toit.api.HardwareProto.HardwareEvent getEvent();
+    /**
+     * <code>.toit.api.HardwareEvent event = 1;</code>
+     */
+    io.toit.proto.toit.api.HardwareProto.HardwareEventOrBuilder getEventOrBuilder();
+  }
+  /**
+   * Protobuf type {@code toit.api.HardwareEventsResponse}
+   */
+  public  static final class HardwareEventsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.api.HardwareEventsResponse)
+      HardwareEventsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use HardwareEventsResponse.newBuilder() to construct.
+    private HardwareEventsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private HardwareEventsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HardwareEventsResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private HardwareEventsResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              io.toit.proto.toit.api.HardwareProto.HardwareEvent.Builder subBuilder = null;
+              if (event_ != null) {
+                subBuilder = event_.toBuilder();
+              }
+              event_ = input.readMessage(io.toit.proto.toit.api.HardwareProto.HardwareEvent.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(event_);
+                event_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.api.HardwareProto.internal_static_toit_api_HardwareEventsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.api.HardwareProto.internal_static_toit_api_HardwareEventsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse.class, io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse.Builder.class);
+    }
+
+    public static final int EVENT_FIELD_NUMBER = 1;
+    private io.toit.proto.toit.api.HardwareProto.HardwareEvent event_;
+    /**
+     * <code>.toit.api.HardwareEvent event = 1;</code>
+     * @return Whether the event field is set.
+     */
+    public boolean hasEvent() {
+      return event_ != null;
+    }
+    /**
+     * <code>.toit.api.HardwareEvent event = 1;</code>
+     * @return The event.
+     */
+    public io.toit.proto.toit.api.HardwareProto.HardwareEvent getEvent() {
+      return event_ == null ? io.toit.proto.toit.api.HardwareProto.HardwareEvent.getDefaultInstance() : event_;
+    }
+    /**
+     * <code>.toit.api.HardwareEvent event = 1;</code>
+     */
+    public io.toit.proto.toit.api.HardwareProto.HardwareEventOrBuilder getEventOrBuilder() {
+      return getEvent();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (event_ != null) {
+        output.writeMessage(1, getEvent());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (event_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getEvent());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse other = (io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse) obj;
+
+      if (hasEvent() != other.hasEvent()) return false;
+      if (hasEvent()) {
+        if (!getEvent()
+            .equals(other.getEvent())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasEvent()) {
+        hash = (37 * hash) + EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getEvent().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.api.HardwareEventsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.api.HardwareEventsResponse)
+        io.toit.proto.toit.api.HardwareProto.HardwareEventsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.HardwareProto.internal_static_toit_api_HardwareEventsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.HardwareProto.internal_static_toit_api_HardwareEventsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse.class, io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (eventBuilder_ == null) {
+          event_ = null;
+        } else {
+          event_ = null;
+          eventBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.api.HardwareProto.internal_static_toit_api_HardwareEventsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse getDefaultInstanceForType() {
+        return io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse build() {
+        io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse buildPartial() {
+        io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse result = new io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse(this);
+        if (eventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = eventBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse) {
+          return mergeFrom((io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse other) {
+        if (other == io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse.getDefaultInstance()) return this;
+        if (other.hasEvent()) {
+          mergeEvent(other.getEvent());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private io.toit.proto.toit.api.HardwareProto.HardwareEvent event_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.api.HardwareProto.HardwareEvent, io.toit.proto.toit.api.HardwareProto.HardwareEvent.Builder, io.toit.proto.toit.api.HardwareProto.HardwareEventOrBuilder> eventBuilder_;
+      /**
+       * <code>.toit.api.HardwareEvent event = 1;</code>
+       * @return Whether the event field is set.
+       */
+      public boolean hasEvent() {
+        return eventBuilder_ != null || event_ != null;
+      }
+      /**
+       * <code>.toit.api.HardwareEvent event = 1;</code>
+       * @return The event.
+       */
+      public io.toit.proto.toit.api.HardwareProto.HardwareEvent getEvent() {
+        if (eventBuilder_ == null) {
+          return event_ == null ? io.toit.proto.toit.api.HardwareProto.HardwareEvent.getDefaultInstance() : event_;
+        } else {
+          return eventBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.toit.api.HardwareEvent event = 1;</code>
+       */
+      public Builder setEvent(io.toit.proto.toit.api.HardwareProto.HardwareEvent value) {
+        if (eventBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          event_ = value;
+          onChanged();
+        } else {
+          eventBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.api.HardwareEvent event = 1;</code>
+       */
+      public Builder setEvent(
+          io.toit.proto.toit.api.HardwareProto.HardwareEvent.Builder builderForValue) {
+        if (eventBuilder_ == null) {
+          event_ = builderForValue.build();
+          onChanged();
+        } else {
+          eventBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.api.HardwareEvent event = 1;</code>
+       */
+      public Builder mergeEvent(io.toit.proto.toit.api.HardwareProto.HardwareEvent value) {
+        if (eventBuilder_ == null) {
+          if (event_ != null) {
+            event_ =
+              io.toit.proto.toit.api.HardwareProto.HardwareEvent.newBuilder(event_).mergeFrom(value).buildPartial();
+          } else {
+            event_ = value;
+          }
+          onChanged();
+        } else {
+          eventBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.api.HardwareEvent event = 1;</code>
+       */
+      public Builder clearEvent() {
+        if (eventBuilder_ == null) {
+          event_ = null;
+          onChanged();
+        } else {
+          event_ = null;
+          eventBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.api.HardwareEvent event = 1;</code>
+       */
+      public io.toit.proto.toit.api.HardwareProto.HardwareEvent.Builder getEventBuilder() {
+        
+        onChanged();
+        return getEventFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.toit.api.HardwareEvent event = 1;</code>
+       */
+      public io.toit.proto.toit.api.HardwareProto.HardwareEventOrBuilder getEventOrBuilder() {
+        if (eventBuilder_ != null) {
+          return eventBuilder_.getMessageOrBuilder();
+        } else {
+          return event_ == null ?
+              io.toit.proto.toit.api.HardwareProto.HardwareEvent.getDefaultInstance() : event_;
+        }
+      }
+      /**
+       * <code>.toit.api.HardwareEvent event = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.api.HardwareProto.HardwareEvent, io.toit.proto.toit.api.HardwareProto.HardwareEvent.Builder, io.toit.proto.toit.api.HardwareProto.HardwareEventOrBuilder> 
+          getEventFieldBuilder() {
+        if (eventBuilder_ == null) {
+          eventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.toit.proto.toit.api.HardwareProto.HardwareEvent, io.toit.proto.toit.api.HardwareProto.HardwareEvent.Builder, io.toit.proto.toit.api.HardwareProto.HardwareEventOrBuilder>(
+                  getEvent(),
+                  getParentForChildren(),
+                  isClean());
+          event_ = null;
+        }
+        return eventBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.api.HardwareEventsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.api.HardwareEventsResponse)
+    private static final io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse();
+    }
+
+    public static io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<HardwareEventsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<HardwareEventsResponse>() {
+      @java.lang.Override
+      public HardwareEventsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new HardwareEventsResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<HardwareEventsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<HardwareEventsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ClaimHardwareIdentityRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:toit.api.ClaimHardwareIdentityRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -6541,6 +10489,21 @@ public final class HardwareProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_toit_api_GetActiveDeviceIDResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_HardwareEvent_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_HardwareEvent_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_HardwareEventsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_HardwareEventsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_HardwareEventsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_HardwareEventsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_toit_api_ClaimHardwareIdentityRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -6570,47 +10533,72 @@ public final class HardwareProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\027toit/api/hardware.proto\022\010toit.api\032\027toi" +
-      "t/model/device.proto\"V\n\014ClaimRequest\022\023\n\013" +
-      "hardware_id\030\001 \001(\014\022\030\n\020init_device_name\030\002 " +
-      "\001(\t\022\027\n\017organization_id\030\003 \001(\014\"\201\001\n\rClaimRe" +
-      "sponse\022/\n\rhardware_info\030\001 \001(\0132\030.toit.mod" +
-      "el.HardwareInfo\022\021\n\tdevice_id\030\002 \001(\014\022\023\n\013de" +
-      "vice_name\030\003 \001(\t\022\027\n\017organization_id\030\004 \001(\014" +
-      "\"r\n\016ReplaceRequest\022\027\n\017new_hardware_id\030\001 " +
-      "\001(\014\022\033\n\023current_hardware_id\030\002 \001(\014\022\021\n\tdevi" +
-      "ce_id\030\003 \001(\014\022\027\n\017organization_id\030\004 \001(\014\"[\n\017" +
-      "ReplaceResponse\022/\n\rhardware_info\030\001 \001(\0132\030" +
-      ".toit.model.HardwareInfo\022\027\n\017organization" +
-      "_id\030\002 \001(\014\"/\n\030GetActiveDeviceIDRequest\022\023\n" +
-      "\013hardware_id\030\001 \001(\014\".\n\031GetActiveDeviceIDR" +
-      "esponse\022\021\n\tdevice_id\030\001 \001(\014\"<\n\034ClaimHardw" +
-      "areIdentityRequest\022\034\n\024flash_station_secr" +
-      "et\030\001 \001(\t\"X\n\035ClaimHardwareIdentityRespons" +
-      "e\0227\n\021hardware_identity\030\001 \001(\0132\034.toit.mode" +
-      "l.HardwareIdentity\"z\n\036SetHardwareIdentit" +
-      "yInfoRequest\022\034\n\024flash_station_secret\030\001 \001" +
-      "(\t\022\n\n\002id\030\002 \001(\014\022.\n\004info\030\003 \001(\0132 .toit.mode" +
-      "l.HardwareIdentityInfo\"!\n\037SetHardwareIde" +
-      "ntityInfoResponse2\357\001\n\017HardwareService\022:\n" +
-      "\005Claim\022\026.toit.api.ClaimRequest\032\027.toit.ap" +
-      "i.ClaimResponse\"\000\022@\n\007Replace\022\030.toit.api." +
-      "ReplaceRequest\032\031.toit.api.ReplaceRespons" +
-      "e\"\000\022^\n\021GetActiveDeviceID\022\".toit.api.GetA" +
-      "ctiveDeviceIDRequest\032#.toit.api.GetActiv" +
-      "eDeviceIDResponse\"\0002\354\001\n\014FlashStation\022j\n\025" +
-      "ClaimHardwareIdentity\022&.toit.api.ClaimHa" +
-      "rdwareIdentityRequest\032\'.toit.api.ClaimHa" +
-      "rdwareIdentityResponse\"\000\022p\n\027SetHardwareI" +
-      "dentityInfo\022(.toit.api.SetHardwareIdenti" +
-      "tyInfoRequest\032).toit.api.SetHardwareIden" +
-      "tityInfoResponse\"\000BM\n\026io.toit.proto.toit" +
-      ".apiB\rHardwareProtoZ$github.com/toitware" +
-      "/api.git/toit/apib\006proto3"
+      "t/model/device.proto\032\025toit/model/data.pr" +
+      "oto\032\037toit/model/pubsub/message.proto\032\037go" +
+      "ogle/protobuf/timestamp.proto\"V\n\014ClaimRe" +
+      "quest\022\023\n\013hardware_id\030\001 \001(\014\022\030\n\020init_devic" +
+      "e_name\030\002 \001(\t\022\027\n\017organization_id\030\003 \001(\014\"\201\001" +
+      "\n\rClaimResponse\022/\n\rhardware_info\030\001 \001(\0132\030" +
+      ".toit.model.HardwareInfo\022\021\n\tdevice_id\030\002 " +
+      "\001(\014\022\023\n\013device_name\030\003 \001(\t\022\027\n\017organization" +
+      "_id\030\004 \001(\014\"r\n\016ReplaceRequest\022\027\n\017new_hardw" +
+      "are_id\030\001 \001(\014\022\033\n\023current_hardware_id\030\002 \001(" +
+      "\014\022\021\n\tdevice_id\030\003 \001(\014\022\027\n\017organization_id\030" +
+      "\004 \001(\014\"[\n\017ReplaceResponse\022/\n\rhardware_inf" +
+      "o\030\001 \001(\0132\030.toit.model.HardwareInfo\022\027\n\017org" +
+      "anization_id\030\002 \001(\014\"/\n\030GetActiveDeviceIDR" +
+      "equest\022\023\n\013hardware_id\030\001 \001(\014\".\n\031GetActive" +
+      "DeviceIDResponse\022\021\n\tdevice_id\030\001 \001(\014\"\267\003\n\r" +
+      "HardwareEvent\022\023\n\013hardware_id\030\001 \001(\014\022\020\n\010ev" +
+      "ent_id\030\002 \001(\014\022*\n\004type\030\003 \001(\0162\034.toit.api.Ha" +
+      "rdwareEvent.Type\022\016\n\006job_id\030\004 \001(\014\022,\n\010rece" +
+      "ived\030\005 \001(\0132\032.google.protobuf.Timestamp\022+" +
+      "\n\007created\030\006 \001(\0132\032.google.protobuf.Timest" +
+      "amp\022\021\n\tdevice_id\030\007 \001(\014\022\027\n\017organization_i" +
+      "d\030\010 \001(\014\022\"\n\003log\030\t \001(\0132\023.toit.model.LogDat" +
+      "aH\000\022*\n\007metrics\030\n \001(\0132\027.toit.model.Metric" +
+      "sDataH\000\022,\n\006pubsub\030\013 \001(\0132\032.toit.model.pub" +
+      "sub.MessageH\000\"6\n\004Type\022\013\n\007UNKNOWN\020\000\022\010\n\004LO" +
+      "GS\020\001\022\013\n\007METRICS\020\002\022\n\n\006PUBSUB\020\003B\006\n\004data\"\312\001" +
+      "\n\025HardwareEventsRequest\022\023\n\013hardware_id\030\001" +
+      " \001(\014\022\016\n\006job_id\030\002 \001(\014\022*\n\004type\030\003 \001(\0162\034.toi" +
+      "t.api.HardwareEvent.Type\022\r\n\005limit\030\004 \001(\004\022" +
+      "\017\n\007reverse\030\005 \001(\010\022\014\n\002id\030\006 \001(\014H\000\022(\n\002ts\030\007 \001" +
+      "(\0132\032.google.protobuf.TimestampH\000B\010\n\006offs" +
+      "et\"@\n\026HardwareEventsResponse\022&\n\005event\030\001 " +
+      "\001(\0132\027.toit.api.HardwareEvent\"<\n\034ClaimHar" +
+      "dwareIdentityRequest\022\034\n\024flash_station_se" +
+      "cret\030\001 \001(\t\"X\n\035ClaimHardwareIdentityRespo" +
+      "nse\0227\n\021hardware_identity\030\001 \001(\0132\034.toit.mo" +
+      "del.HardwareIdentity\"z\n\036SetHardwareIdent" +
+      "ityInfoRequest\022\034\n\024flash_station_secret\030\001" +
+      " \001(\t\022\n\n\002id\030\002 \001(\014\022.\n\004info\030\003 \001(\0132 .toit.mo" +
+      "del.HardwareIdentityInfo\"!\n\037SetHardwareI" +
+      "dentityInfoResponse2\310\002\n\017HardwareService\022" +
+      ":\n\005Claim\022\026.toit.api.ClaimRequest\032\027.toit." +
+      "api.ClaimResponse\"\000\022@\n\007Replace\022\030.toit.ap" +
+      "i.ReplaceRequest\032\031.toit.api.ReplaceRespo" +
+      "nse\"\000\022^\n\021GetActiveDeviceID\022\".toit.api.Ge" +
+      "tActiveDeviceIDRequest\032#.toit.api.GetAct" +
+      "iveDeviceIDResponse\"\000\022W\n\016HardwareEvents\022" +
+      "\037.toit.api.HardwareEventsRequest\032 .toit." +
+      "api.HardwareEventsResponse\"\0000\0012\354\001\n\014Flash" +
+      "Station\022j\n\025ClaimHardwareIdentity\022&.toit." +
+      "api.ClaimHardwareIdentityRequest\032\'.toit." +
+      "api.ClaimHardwareIdentityResponse\"\000\022p\n\027S" +
+      "etHardwareIdentityInfo\022(.toit.api.SetHar" +
+      "dwareIdentityInfoRequest\032).toit.api.SetH" +
+      "ardwareIdentityInfoResponse\"\000BM\n\026io.toit" +
+      ".proto.toit.apiB\rHardwareProtoZ$github.c" +
+      "om/toitware/api.git/toit/apib\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           io.toit.proto.toit.model.DeviceProto.getDescriptor(),
+          io.toit.proto.toit.model.DataProto.getDescriptor(),
+          io.toit.proto.toit.model.pubsub.MessageProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_toit_api_ClaimRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -6648,31 +10636,52 @@ public final class HardwareProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_GetActiveDeviceIDResponse_descriptor,
         new java.lang.String[] { "DeviceId", });
-    internal_static_toit_api_ClaimHardwareIdentityRequest_descriptor =
+    internal_static_toit_api_HardwareEvent_descriptor =
       getDescriptor().getMessageTypes().get(6);
+    internal_static_toit_api_HardwareEvent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_HardwareEvent_descriptor,
+        new java.lang.String[] { "HardwareId", "EventId", "Type", "JobId", "Received", "Created", "DeviceId", "OrganizationId", "Log", "Metrics", "Pubsub", "Data", });
+    internal_static_toit_api_HardwareEventsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_toit_api_HardwareEventsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_HardwareEventsRequest_descriptor,
+        new java.lang.String[] { "HardwareId", "JobId", "Type", "Limit", "Reverse", "Id", "Ts", "Offset", });
+    internal_static_toit_api_HardwareEventsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_toit_api_HardwareEventsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_HardwareEventsResponse_descriptor,
+        new java.lang.String[] { "Event", });
+    internal_static_toit_api_ClaimHardwareIdentityRequest_descriptor =
+      getDescriptor().getMessageTypes().get(9);
     internal_static_toit_api_ClaimHardwareIdentityRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_ClaimHardwareIdentityRequest_descriptor,
         new java.lang.String[] { "FlashStationSecret", });
     internal_static_toit_api_ClaimHardwareIdentityResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_toit_api_ClaimHardwareIdentityResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_ClaimHardwareIdentityResponse_descriptor,
         new java.lang.String[] { "HardwareIdentity", });
     internal_static_toit_api_SetHardwareIdentityInfoRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_toit_api_SetHardwareIdentityInfoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_SetHardwareIdentityInfoRequest_descriptor,
         new java.lang.String[] { "FlashStationSecret", "Id", "Info", });
     internal_static_toit_api_SetHardwareIdentityInfoResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_toit_api_SetHardwareIdentityInfoResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_SetHardwareIdentityInfoResponse_descriptor,
         new java.lang.String[] { });
     io.toit.proto.toit.model.DeviceProto.getDescriptor();
+    io.toit.proto.toit.model.DataProto.getDescriptor();
+    io.toit.proto.toit.model.pubsub.MessageProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

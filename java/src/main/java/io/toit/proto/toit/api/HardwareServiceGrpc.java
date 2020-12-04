@@ -120,6 +120,37 @@ public final class HardwareServiceGrpc {
     return getGetActiveDeviceIDMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest,
+      io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse> getHardwareEventsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "HardwareEvents",
+      requestType = io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest.class,
+      responseType = io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest,
+      io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse> getHardwareEventsMethod() {
+    io.grpc.MethodDescriptor<io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest, io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse> getHardwareEventsMethod;
+    if ((getHardwareEventsMethod = HardwareServiceGrpc.getHardwareEventsMethod) == null) {
+      synchronized (HardwareServiceGrpc.class) {
+        if ((getHardwareEventsMethod = HardwareServiceGrpc.getHardwareEventsMethod) == null) {
+          HardwareServiceGrpc.getHardwareEventsMethod = getHardwareEventsMethod =
+              io.grpc.MethodDescriptor.<io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest, io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "HardwareEvents"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new HardwareServiceMethodDescriptorSupplier("HardwareEvents"))
+              .build();
+        }
+      }
+    }
+    return getHardwareEventsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -189,6 +220,16 @@ public final class HardwareServiceGrpc {
       asyncUnimplementedUnaryCall(getGetActiveDeviceIDMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Debug endpoints only available on local console
+     * </pre>
+     */
+    public void hardwareEvents(io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest request,
+        io.grpc.stub.StreamObserver<io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getHardwareEventsMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -212,6 +253,13 @@ public final class HardwareServiceGrpc {
                 io.toit.proto.toit.api.HardwareProto.GetActiveDeviceIDRequest,
                 io.toit.proto.toit.api.HardwareProto.GetActiveDeviceIDResponse>(
                   this, METHODID_GET_ACTIVE_DEVICE_ID)))
+          .addMethod(
+            getHardwareEventsMethod(),
+            asyncServerStreamingCall(
+              new MethodHandlers<
+                io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest,
+                io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse>(
+                  this, METHODID_HARDWARE_EVENTS)))
           .build();
     }
   }
@@ -253,6 +301,17 @@ public final class HardwareServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getGetActiveDeviceIDMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Debug endpoints only available on local console
+     * </pre>
+     */
+    public void hardwareEvents(io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest request,
+        io.grpc.stub.StreamObserver<io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse> responseObserver) {
+      asyncServerStreamingCall(
+          getChannel().newCall(getHardwareEventsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -288,6 +347,17 @@ public final class HardwareServiceGrpc {
     public io.toit.proto.toit.api.HardwareProto.GetActiveDeviceIDResponse getActiveDeviceID(io.toit.proto.toit.api.HardwareProto.GetActiveDeviceIDRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetActiveDeviceIDMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Debug endpoints only available on local console
+     * </pre>
+     */
+    public java.util.Iterator<io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse> hardwareEvents(
+        io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest request) {
+      return blockingServerStreamingCall(
+          getChannel(), getHardwareEventsMethod(), getCallOptions(), request);
     }
   }
 
@@ -333,6 +403,7 @@ public final class HardwareServiceGrpc {
   private static final int METHODID_CLAIM = 0;
   private static final int METHODID_REPLACE = 1;
   private static final int METHODID_GET_ACTIVE_DEVICE_ID = 2;
+  private static final int METHODID_HARDWARE_EVENTS = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -362,6 +433,10 @@ public final class HardwareServiceGrpc {
         case METHODID_GET_ACTIVE_DEVICE_ID:
           serviceImpl.getActiveDeviceID((io.toit.proto.toit.api.HardwareProto.GetActiveDeviceIDRequest) request,
               (io.grpc.stub.StreamObserver<io.toit.proto.toit.api.HardwareProto.GetActiveDeviceIDResponse>) responseObserver);
+          break;
+        case METHODID_HARDWARE_EVENTS:
+          serviceImpl.hardwareEvents((io.toit.proto.toit.api.HardwareProto.HardwareEventsRequest) request,
+              (io.grpc.stub.StreamObserver<io.toit.proto.toit.api.HardwareProto.HardwareEventsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -427,6 +502,7 @@ public final class HardwareServiceGrpc {
               .addMethod(getClaimMethod())
               .addMethod(getReplaceMethod())
               .addMethod(getGetActiveDeviceIDMethod())
+              .addMethod(getHardwareEventsMethod())
               .build();
         }
       }
