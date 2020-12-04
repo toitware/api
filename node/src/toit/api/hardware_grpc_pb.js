@@ -4,6 +4,9 @@
 var grpc = require('@grpc/grpc-js');
 var toit_api_hardware_pb = require('../../toit/api/hardware_pb.js');
 var toit_model_device_pb = require('../../toit/model/device_pb.js');
+var toit_model_data_pb = require('../../toit/model/data_pb.js');
+var toit_model_pubsub_message_pb = require('../../toit/model/pubsub/message_pb.js');
+var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
 
 function serialize_toit_api_ClaimHardwareIdentityRequest(arg) {
   if (!(arg instanceof toit_api_hardware_pb.ClaimHardwareIdentityRequest)) {
@@ -69,6 +72,28 @@ function serialize_toit_api_GetActiveDeviceIDResponse(arg) {
 
 function deserialize_toit_api_GetActiveDeviceIDResponse(buffer_arg) {
   return toit_api_hardware_pb.GetActiveDeviceIDResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_toit_api_HardwareEventsRequest(arg) {
+  if (!(arg instanceof toit_api_hardware_pb.HardwareEventsRequest)) {
+    throw new Error('Expected argument of type toit.api.HardwareEventsRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_HardwareEventsRequest(buffer_arg) {
+  return toit_api_hardware_pb.HardwareEventsRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_toit_api_HardwareEventsResponse(arg) {
+  if (!(arg instanceof toit_api_hardware_pb.HardwareEventsResponse)) {
+    throw new Error('Expected argument of type toit.api.HardwareEventsResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_HardwareEventsResponse(buffer_arg) {
+  return toit_api_hardware_pb.HardwareEventsResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
 function serialize_toit_api_ReplaceRequest(arg) {
@@ -149,6 +174,18 @@ var HardwareServiceService = exports.HardwareServiceService = {
     requestDeserialize: deserialize_toit_api_GetActiveDeviceIDRequest,
     responseSerialize: serialize_toit_api_GetActiveDeviceIDResponse,
     responseDeserialize: deserialize_toit_api_GetActiveDeviceIDResponse,
+  },
+  // Debug endpoints only available on local console
+hardwareEvents: {
+    path: '/toit.api.HardwareService/HardwareEvents',
+    requestStream: false,
+    responseStream: true,
+    requestType: toit_api_hardware_pb.HardwareEventsRequest,
+    responseType: toit_api_hardware_pb.HardwareEventsResponse,
+    requestSerialize: serialize_toit_api_HardwareEventsRequest,
+    requestDeserialize: deserialize_toit_api_HardwareEventsRequest,
+    responseSerialize: serialize_toit_api_HardwareEventsResponse,
+    responseDeserialize: deserialize_toit_api_HardwareEventsResponse,
   },
 };
 
