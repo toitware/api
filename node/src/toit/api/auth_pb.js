@@ -1491,7 +1491,8 @@ proto.toit.api.CreateOrganizationRequest.Organization.prototype.toObject = funct
  */
 proto.toit.api.CreateOrganizationRequest.Organization.toObject = function(includeInstance, msg) {
   var f, obj = {
-    name: jspb.Message.getFieldWithDefault(msg, 1, "")
+    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    email: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {
@@ -1532,6 +1533,10 @@ proto.toit.api.CreateOrganizationRequest.Organization.deserializeBinaryFromReade
       var value = /** @type {string} */ (reader.readString());
       msg.setName(value);
       break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setEmail(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -1568,6 +1573,13 @@ proto.toit.api.CreateOrganizationRequest.Organization.serializeBinaryToWriter = 
       f
     );
   }
+  f = message.getEmail();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
 };
 
 
@@ -1586,6 +1598,24 @@ proto.toit.api.CreateOrganizationRequest.Organization.prototype.getName = functi
  */
 proto.toit.api.CreateOrganizationRequest.Organization.prototype.setName = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional string email = 2;
+ * @return {string}
+ */
+proto.toit.api.CreateOrganizationRequest.Organization.prototype.getEmail = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.toit.api.CreateOrganizationRequest.Organization} returns this
+ */
+proto.toit.api.CreateOrganizationRequest.Organization.prototype.setEmail = function(value) {
+  return jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -1621,7 +1651,8 @@ proto.toit.api.CreateOrganizationRequest.User.prototype.toObject = function(opt_
  */
 proto.toit.api.CreateOrganizationRequest.User.toObject = function(includeInstance, msg) {
   var f, obj = {
-    email: jspb.Message.getFieldWithDefault(msg, 1, "")
+    email: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    name: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {
@@ -1662,6 +1693,10 @@ proto.toit.api.CreateOrganizationRequest.User.deserializeBinaryFromReader = func
       var value = /** @type {string} */ (reader.readString());
       msg.setEmail(value);
       break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setName(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -1698,6 +1733,13 @@ proto.toit.api.CreateOrganizationRequest.User.serializeBinaryToWriter = function
       f
     );
   }
+  f = message.getName();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
 };
 
 
@@ -1716,6 +1758,24 @@ proto.toit.api.CreateOrganizationRequest.User.prototype.getEmail = function() {
  */
 proto.toit.api.CreateOrganizationRequest.User.prototype.setEmail = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional string name = 2;
+ * @return {string}
+ */
+proto.toit.api.CreateOrganizationRequest.User.prototype.getName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.toit.api.CreateOrganizationRequest.User} returns this
+ */
+proto.toit.api.CreateOrganizationRequest.User.prototype.setName = function(value) {
+  return jspb.Message.setProto3StringField(this, 2, value);
 };
 
 

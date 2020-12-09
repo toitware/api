@@ -51,6 +51,9 @@ export class User extends jspb.Message {
   getEmail(): string;
   setEmail(value: string): void;
 
+  getName(): string;
+  setName(value: string): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): User.AsObject;
   static toObject(includeInstance: boolean, msg: User): User.AsObject;
@@ -66,6 +69,7 @@ export namespace User {
     id: Uint8Array | string,
     organizationId: Uint8Array | string,
     email: string,
+    name: string,
   }
 }
 
