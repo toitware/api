@@ -18,4 +18,5 @@ message User {
     bytes organization_id = 2;
     string email = 3;
     string name = 4;
+    uint64 hubspot_id = 5;
 }
