@@ -22,7 +22,6 @@ message User {
     string name = 4;
 }
 
-
 message APIKey {
     bytes id = 1;
     bytes organization_id = 2;

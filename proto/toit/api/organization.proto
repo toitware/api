@@ -47,8 +47,6 @@ message GetUserRequest {
 
 message GetUserResponse { model.User user = 1; }
 
-
-
 message CreateAPIKeyRequest {
   string name = 1;
 }
