@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package toit.model;
 
+import "google/protobuf/timestamp.proto";
+
 option go_package = "github.com/toitware/api.git/toit/model";
 option java_package = "io.toit.proto.toit.model";
 option java_outer_classname = "OrganizationProto";
@@ -18,4 +20,12 @@ message User {
     bytes organization_id = 2;
     string email = 3;
     string name = 4;
+}
+
+
+message APIKey {
+    bytes id = 1;
+    bytes organization_id = 2;
+    string name = 3;
+    google.protobuf.Timestamp created_at = 4;
 }
