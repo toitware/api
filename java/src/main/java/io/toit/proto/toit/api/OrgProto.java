@@ -5074,6 +5074,4620 @@ public final class OrgProto {
 
   }
 
+  public interface CreateAPIKeyRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.CreateAPIKeyRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+  }
+  /**
+   * Protobuf type {@code toit.api.CreateAPIKeyRequest}
+   */
+  public  static final class CreateAPIKeyRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.api.CreateAPIKeyRequest)
+      CreateAPIKeyRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CreateAPIKeyRequest.newBuilder() to construct.
+    private CreateAPIKeyRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CreateAPIKeyRequest() {
+      name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateAPIKeyRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CreateAPIKeyRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_CreateAPIKeyRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_CreateAPIKeyRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest.class, io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest other = (io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.api.CreateAPIKeyRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.api.CreateAPIKeyRequest)
+        io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_CreateAPIKeyRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_CreateAPIKeyRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest.class, io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_CreateAPIKeyRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest getDefaultInstanceForType() {
+        return io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest build() {
+        io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest buildPartial() {
+        io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest result = new io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest(this);
+        result.name_ = name_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest) {
+          return mergeFrom((io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest other) {
+        if (other == io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 1;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.api.CreateAPIKeyRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.api.CreateAPIKeyRequest)
+    private static final io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest();
+    }
+
+    public static io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CreateAPIKeyRequest>
+        PARSER = new com.google.protobuf.AbstractParser<CreateAPIKeyRequest>() {
+      @java.lang.Override
+      public CreateAPIKeyRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CreateAPIKeyRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CreateAPIKeyRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CreateAPIKeyRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CreateAPIKeyResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.CreateAPIKeyResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.toit.model.APIKey api_key = 1;</code>
+     * @return Whether the apiKey field is set.
+     */
+    boolean hasApiKey();
+    /**
+     * <code>.toit.model.APIKey api_key = 1;</code>
+     * @return The apiKey.
+     */
+    io.toit.proto.toit.model.OrganizationProto.APIKey getApiKey();
+    /**
+     * <code>.toit.model.APIKey api_key = 1;</code>
+     */
+    io.toit.proto.toit.model.OrganizationProto.APIKeyOrBuilder getApiKeyOrBuilder();
+  }
+  /**
+   * Protobuf type {@code toit.api.CreateAPIKeyResponse}
+   */
+  public  static final class CreateAPIKeyResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.api.CreateAPIKeyResponse)
+      CreateAPIKeyResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CreateAPIKeyResponse.newBuilder() to construct.
+    private CreateAPIKeyResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CreateAPIKeyResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateAPIKeyResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CreateAPIKeyResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              io.toit.proto.toit.model.OrganizationProto.APIKey.Builder subBuilder = null;
+              if (apiKey_ != null) {
+                subBuilder = apiKey_.toBuilder();
+              }
+              apiKey_ = input.readMessage(io.toit.proto.toit.model.OrganizationProto.APIKey.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(apiKey_);
+                apiKey_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_CreateAPIKeyResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_CreateAPIKeyResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse.class, io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse.Builder.class);
+    }
+
+    public static final int API_KEY_FIELD_NUMBER = 1;
+    private io.toit.proto.toit.model.OrganizationProto.APIKey apiKey_;
+    /**
+     * <code>.toit.model.APIKey api_key = 1;</code>
+     * @return Whether the apiKey field is set.
+     */
+    public boolean hasApiKey() {
+      return apiKey_ != null;
+    }
+    /**
+     * <code>.toit.model.APIKey api_key = 1;</code>
+     * @return The apiKey.
+     */
+    public io.toit.proto.toit.model.OrganizationProto.APIKey getApiKey() {
+      return apiKey_ == null ? io.toit.proto.toit.model.OrganizationProto.APIKey.getDefaultInstance() : apiKey_;
+    }
+    /**
+     * <code>.toit.model.APIKey api_key = 1;</code>
+     */
+    public io.toit.proto.toit.model.OrganizationProto.APIKeyOrBuilder getApiKeyOrBuilder() {
+      return getApiKey();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (apiKey_ != null) {
+        output.writeMessage(1, getApiKey());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (apiKey_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getApiKey());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse other = (io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse) obj;
+
+      if (hasApiKey() != other.hasApiKey()) return false;
+      if (hasApiKey()) {
+        if (!getApiKey()
+            .equals(other.getApiKey())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasApiKey()) {
+        hash = (37 * hash) + API_KEY_FIELD_NUMBER;
+        hash = (53 * hash) + getApiKey().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.api.CreateAPIKeyResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.api.CreateAPIKeyResponse)
+        io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_CreateAPIKeyResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_CreateAPIKeyResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse.class, io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (apiKeyBuilder_ == null) {
+          apiKey_ = null;
+        } else {
+          apiKey_ = null;
+          apiKeyBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_CreateAPIKeyResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse getDefaultInstanceForType() {
+        return io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse build() {
+        io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse buildPartial() {
+        io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse result = new io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse(this);
+        if (apiKeyBuilder_ == null) {
+          result.apiKey_ = apiKey_;
+        } else {
+          result.apiKey_ = apiKeyBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse) {
+          return mergeFrom((io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse other) {
+        if (other == io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse.getDefaultInstance()) return this;
+        if (other.hasApiKey()) {
+          mergeApiKey(other.getApiKey());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private io.toit.proto.toit.model.OrganizationProto.APIKey apiKey_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.model.OrganizationProto.APIKey, io.toit.proto.toit.model.OrganizationProto.APIKey.Builder, io.toit.proto.toit.model.OrganizationProto.APIKeyOrBuilder> apiKeyBuilder_;
+      /**
+       * <code>.toit.model.APIKey api_key = 1;</code>
+       * @return Whether the apiKey field is set.
+       */
+      public boolean hasApiKey() {
+        return apiKeyBuilder_ != null || apiKey_ != null;
+      }
+      /**
+       * <code>.toit.model.APIKey api_key = 1;</code>
+       * @return The apiKey.
+       */
+      public io.toit.proto.toit.model.OrganizationProto.APIKey getApiKey() {
+        if (apiKeyBuilder_ == null) {
+          return apiKey_ == null ? io.toit.proto.toit.model.OrganizationProto.APIKey.getDefaultInstance() : apiKey_;
+        } else {
+          return apiKeyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.toit.model.APIKey api_key = 1;</code>
+       */
+      public Builder setApiKey(io.toit.proto.toit.model.OrganizationProto.APIKey value) {
+        if (apiKeyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          apiKey_ = value;
+          onChanged();
+        } else {
+          apiKeyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.APIKey api_key = 1;</code>
+       */
+      public Builder setApiKey(
+          io.toit.proto.toit.model.OrganizationProto.APIKey.Builder builderForValue) {
+        if (apiKeyBuilder_ == null) {
+          apiKey_ = builderForValue.build();
+          onChanged();
+        } else {
+          apiKeyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.APIKey api_key = 1;</code>
+       */
+      public Builder mergeApiKey(io.toit.proto.toit.model.OrganizationProto.APIKey value) {
+        if (apiKeyBuilder_ == null) {
+          if (apiKey_ != null) {
+            apiKey_ =
+              io.toit.proto.toit.model.OrganizationProto.APIKey.newBuilder(apiKey_).mergeFrom(value).buildPartial();
+          } else {
+            apiKey_ = value;
+          }
+          onChanged();
+        } else {
+          apiKeyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.APIKey api_key = 1;</code>
+       */
+      public Builder clearApiKey() {
+        if (apiKeyBuilder_ == null) {
+          apiKey_ = null;
+          onChanged();
+        } else {
+          apiKey_ = null;
+          apiKeyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.APIKey api_key = 1;</code>
+       */
+      public io.toit.proto.toit.model.OrganizationProto.APIKey.Builder getApiKeyBuilder() {
+        
+        onChanged();
+        return getApiKeyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.toit.model.APIKey api_key = 1;</code>
+       */
+      public io.toit.proto.toit.model.OrganizationProto.APIKeyOrBuilder getApiKeyOrBuilder() {
+        if (apiKeyBuilder_ != null) {
+          return apiKeyBuilder_.getMessageOrBuilder();
+        } else {
+          return apiKey_ == null ?
+              io.toit.proto.toit.model.OrganizationProto.APIKey.getDefaultInstance() : apiKey_;
+        }
+      }
+      /**
+       * <code>.toit.model.APIKey api_key = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.model.OrganizationProto.APIKey, io.toit.proto.toit.model.OrganizationProto.APIKey.Builder, io.toit.proto.toit.model.OrganizationProto.APIKeyOrBuilder> 
+          getApiKeyFieldBuilder() {
+        if (apiKeyBuilder_ == null) {
+          apiKeyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.toit.proto.toit.model.OrganizationProto.APIKey, io.toit.proto.toit.model.OrganizationProto.APIKey.Builder, io.toit.proto.toit.model.OrganizationProto.APIKeyOrBuilder>(
+                  getApiKey(),
+                  getParentForChildren(),
+                  isClean());
+          apiKey_ = null;
+        }
+        return apiKeyBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.api.CreateAPIKeyResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.api.CreateAPIKeyResponse)
+    private static final io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse();
+    }
+
+    public static io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CreateAPIKeyResponse>
+        PARSER = new com.google.protobuf.AbstractParser<CreateAPIKeyResponse>() {
+      @java.lang.Override
+      public CreateAPIKeyResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CreateAPIKeyResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CreateAPIKeyResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CreateAPIKeyResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListAPIKeysRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.ListAPIKeysRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes offset = 1;</code>
+     * @return The offset.
+     */
+    com.google.protobuf.ByteString getOffset();
+
+    /**
+     * <code>int64 limit = 2;</code>
+     * @return The limit.
+     */
+    long getLimit();
+
+    /**
+     * <code>string order_by = 3;</code>
+     * @return The orderBy.
+     */
+    java.lang.String getOrderBy();
+    /**
+     * <code>string order_by = 3;</code>
+     * @return The bytes for orderBy.
+     */
+    com.google.protobuf.ByteString
+        getOrderByBytes();
+
+    /**
+     * <code>bool order_desc = 4;</code>
+     * @return The orderDesc.
+     */
+    boolean getOrderDesc();
+  }
+  /**
+   * Protobuf type {@code toit.api.ListAPIKeysRequest}
+   */
+  public  static final class ListAPIKeysRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.api.ListAPIKeysRequest)
+      ListAPIKeysRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListAPIKeysRequest.newBuilder() to construct.
+    private ListAPIKeysRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListAPIKeysRequest() {
+      offset_ = com.google.protobuf.ByteString.EMPTY;
+      orderBy_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListAPIKeysRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListAPIKeysRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+
+              offset_ = input.readBytes();
+              break;
+            }
+            case 16: {
+
+              limit_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              orderBy_ = s;
+              break;
+            }
+            case 32: {
+
+              orderDesc_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_ListAPIKeysRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_ListAPIKeysRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest.class, io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest.Builder.class);
+    }
+
+    public static final int OFFSET_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString offset_;
+    /**
+     * <code>bytes offset = 1;</code>
+     * @return The offset.
+     */
+    public com.google.protobuf.ByteString getOffset() {
+      return offset_;
+    }
+
+    public static final int LIMIT_FIELD_NUMBER = 2;
+    private long limit_;
+    /**
+     * <code>int64 limit = 2;</code>
+     * @return The limit.
+     */
+    public long getLimit() {
+      return limit_;
+    }
+
+    public static final int ORDER_BY_FIELD_NUMBER = 3;
+    private volatile java.lang.Object orderBy_;
+    /**
+     * <code>string order_by = 3;</code>
+     * @return The orderBy.
+     */
+    public java.lang.String getOrderBy() {
+      java.lang.Object ref = orderBy_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        orderBy_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string order_by = 3;</code>
+     * @return The bytes for orderBy.
+     */
+    public com.google.protobuf.ByteString
+        getOrderByBytes() {
+      java.lang.Object ref = orderBy_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        orderBy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ORDER_DESC_FIELD_NUMBER = 4;
+    private boolean orderDesc_;
+    /**
+     * <code>bool order_desc = 4;</code>
+     * @return The orderDesc.
+     */
+    public boolean getOrderDesc() {
+      return orderDesc_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!offset_.isEmpty()) {
+        output.writeBytes(1, offset_);
+      }
+      if (limit_ != 0L) {
+        output.writeInt64(2, limit_);
+      }
+      if (!getOrderByBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, orderBy_);
+      }
+      if (orderDesc_ != false) {
+        output.writeBool(4, orderDesc_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!offset_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, offset_);
+      }
+      if (limit_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, limit_);
+      }
+      if (!getOrderByBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, orderBy_);
+      }
+      if (orderDesc_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, orderDesc_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest other = (io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest) obj;
+
+      if (!getOffset()
+          .equals(other.getOffset())) return false;
+      if (getLimit()
+          != other.getLimit()) return false;
+      if (!getOrderBy()
+          .equals(other.getOrderBy())) return false;
+      if (getOrderDesc()
+          != other.getOrderDesc()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OFFSET_FIELD_NUMBER;
+      hash = (53 * hash) + getOffset().hashCode();
+      hash = (37 * hash) + LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLimit());
+      hash = (37 * hash) + ORDER_BY_FIELD_NUMBER;
+      hash = (53 * hash) + getOrderBy().hashCode();
+      hash = (37 * hash) + ORDER_DESC_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getOrderDesc());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.api.ListAPIKeysRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.api.ListAPIKeysRequest)
+        io.toit.proto.toit.api.OrgProto.ListAPIKeysRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_ListAPIKeysRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_ListAPIKeysRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest.class, io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        offset_ = com.google.protobuf.ByteString.EMPTY;
+
+        limit_ = 0L;
+
+        orderBy_ = "";
+
+        orderDesc_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_ListAPIKeysRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest getDefaultInstanceForType() {
+        return io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest build() {
+        io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest buildPartial() {
+        io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest result = new io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest(this);
+        result.offset_ = offset_;
+        result.limit_ = limit_;
+        result.orderBy_ = orderBy_;
+        result.orderDesc_ = orderDesc_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest) {
+          return mergeFrom((io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest other) {
+        if (other == io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest.getDefaultInstance()) return this;
+        if (other.getOffset() != com.google.protobuf.ByteString.EMPTY) {
+          setOffset(other.getOffset());
+        }
+        if (other.getLimit() != 0L) {
+          setLimit(other.getLimit());
+        }
+        if (!other.getOrderBy().isEmpty()) {
+          orderBy_ = other.orderBy_;
+          onChanged();
+        }
+        if (other.getOrderDesc() != false) {
+          setOrderDesc(other.getOrderDesc());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.ByteString offset_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes offset = 1;</code>
+       * @return The offset.
+       */
+      public com.google.protobuf.ByteString getOffset() {
+        return offset_;
+      }
+      /**
+       * <code>bytes offset = 1;</code>
+       * @param value The offset to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOffset(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        offset_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes offset = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOffset() {
+        
+        offset_ = getDefaultInstance().getOffset();
+        onChanged();
+        return this;
+      }
+
+      private long limit_ ;
+      /**
+       * <code>int64 limit = 2;</code>
+       * @return The limit.
+       */
+      public long getLimit() {
+        return limit_;
+      }
+      /**
+       * <code>int64 limit = 2;</code>
+       * @param value The limit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLimit(long value) {
+        
+        limit_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 limit = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLimit() {
+        
+        limit_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object orderBy_ = "";
+      /**
+       * <code>string order_by = 3;</code>
+       * @return The orderBy.
+       */
+      public java.lang.String getOrderBy() {
+        java.lang.Object ref = orderBy_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          orderBy_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string order_by = 3;</code>
+       * @return The bytes for orderBy.
+       */
+      public com.google.protobuf.ByteString
+          getOrderByBytes() {
+        java.lang.Object ref = orderBy_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          orderBy_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string order_by = 3;</code>
+       * @param value The orderBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrderBy(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        orderBy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string order_by = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrderBy() {
+        
+        orderBy_ = getDefaultInstance().getOrderBy();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string order_by = 3;</code>
+       * @param value The bytes for orderBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrderByBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        orderBy_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean orderDesc_ ;
+      /**
+       * <code>bool order_desc = 4;</code>
+       * @return The orderDesc.
+       */
+      public boolean getOrderDesc() {
+        return orderDesc_;
+      }
+      /**
+       * <code>bool order_desc = 4;</code>
+       * @param value The orderDesc to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrderDesc(boolean value) {
+        
+        orderDesc_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool order_desc = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrderDesc() {
+        
+        orderDesc_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.api.ListAPIKeysRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.api.ListAPIKeysRequest)
+    private static final io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest();
+    }
+
+    public static io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListAPIKeysRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListAPIKeysRequest>() {
+      @java.lang.Override
+      public ListAPIKeysRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListAPIKeysRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListAPIKeysRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListAPIKeysRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListAPIKeysResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.ListAPIKeysResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.toit.model.APIKey api_key = 1;</code>
+     * @return Whether the apiKey field is set.
+     */
+    boolean hasApiKey();
+    /**
+     * <code>.toit.model.APIKey api_key = 1;</code>
+     * @return The apiKey.
+     */
+    io.toit.proto.toit.model.OrganizationProto.APIKey getApiKey();
+    /**
+     * <code>.toit.model.APIKey api_key = 1;</code>
+     */
+    io.toit.proto.toit.model.OrganizationProto.APIKeyOrBuilder getApiKeyOrBuilder();
+
+    /**
+     * <code>bytes offset = 2;</code>
+     * @return The offset.
+     */
+    com.google.protobuf.ByteString getOffset();
+  }
+  /**
+   * Protobuf type {@code toit.api.ListAPIKeysResponse}
+   */
+  public  static final class ListAPIKeysResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.api.ListAPIKeysResponse)
+      ListAPIKeysResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListAPIKeysResponse.newBuilder() to construct.
+    private ListAPIKeysResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListAPIKeysResponse() {
+      offset_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListAPIKeysResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListAPIKeysResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              io.toit.proto.toit.model.OrganizationProto.APIKey.Builder subBuilder = null;
+              if (apiKey_ != null) {
+                subBuilder = apiKey_.toBuilder();
+              }
+              apiKey_ = input.readMessage(io.toit.proto.toit.model.OrganizationProto.APIKey.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(apiKey_);
+                apiKey_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+
+              offset_ = input.readBytes();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_ListAPIKeysResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_ListAPIKeysResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse.class, io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse.Builder.class);
+    }
+
+    public static final int API_KEY_FIELD_NUMBER = 1;
+    private io.toit.proto.toit.model.OrganizationProto.APIKey apiKey_;
+    /**
+     * <code>.toit.model.APIKey api_key = 1;</code>
+     * @return Whether the apiKey field is set.
+     */
+    public boolean hasApiKey() {
+      return apiKey_ != null;
+    }
+    /**
+     * <code>.toit.model.APIKey api_key = 1;</code>
+     * @return The apiKey.
+     */
+    public io.toit.proto.toit.model.OrganizationProto.APIKey getApiKey() {
+      return apiKey_ == null ? io.toit.proto.toit.model.OrganizationProto.APIKey.getDefaultInstance() : apiKey_;
+    }
+    /**
+     * <code>.toit.model.APIKey api_key = 1;</code>
+     */
+    public io.toit.proto.toit.model.OrganizationProto.APIKeyOrBuilder getApiKeyOrBuilder() {
+      return getApiKey();
+    }
+
+    public static final int OFFSET_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString offset_;
+    /**
+     * <code>bytes offset = 2;</code>
+     * @return The offset.
+     */
+    public com.google.protobuf.ByteString getOffset() {
+      return offset_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (apiKey_ != null) {
+        output.writeMessage(1, getApiKey());
+      }
+      if (!offset_.isEmpty()) {
+        output.writeBytes(2, offset_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (apiKey_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getApiKey());
+      }
+      if (!offset_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, offset_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse other = (io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse) obj;
+
+      if (hasApiKey() != other.hasApiKey()) return false;
+      if (hasApiKey()) {
+        if (!getApiKey()
+            .equals(other.getApiKey())) return false;
+      }
+      if (!getOffset()
+          .equals(other.getOffset())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasApiKey()) {
+        hash = (37 * hash) + API_KEY_FIELD_NUMBER;
+        hash = (53 * hash) + getApiKey().hashCode();
+      }
+      hash = (37 * hash) + OFFSET_FIELD_NUMBER;
+      hash = (53 * hash) + getOffset().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.api.ListAPIKeysResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.api.ListAPIKeysResponse)
+        io.toit.proto.toit.api.OrgProto.ListAPIKeysResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_ListAPIKeysResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_ListAPIKeysResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse.class, io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (apiKeyBuilder_ == null) {
+          apiKey_ = null;
+        } else {
+          apiKey_ = null;
+          apiKeyBuilder_ = null;
+        }
+        offset_ = com.google.protobuf.ByteString.EMPTY;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_ListAPIKeysResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse getDefaultInstanceForType() {
+        return io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse build() {
+        io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse buildPartial() {
+        io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse result = new io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse(this);
+        if (apiKeyBuilder_ == null) {
+          result.apiKey_ = apiKey_;
+        } else {
+          result.apiKey_ = apiKeyBuilder_.build();
+        }
+        result.offset_ = offset_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse) {
+          return mergeFrom((io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse other) {
+        if (other == io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse.getDefaultInstance()) return this;
+        if (other.hasApiKey()) {
+          mergeApiKey(other.getApiKey());
+        }
+        if (other.getOffset() != com.google.protobuf.ByteString.EMPTY) {
+          setOffset(other.getOffset());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private io.toit.proto.toit.model.OrganizationProto.APIKey apiKey_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.model.OrganizationProto.APIKey, io.toit.proto.toit.model.OrganizationProto.APIKey.Builder, io.toit.proto.toit.model.OrganizationProto.APIKeyOrBuilder> apiKeyBuilder_;
+      /**
+       * <code>.toit.model.APIKey api_key = 1;</code>
+       * @return Whether the apiKey field is set.
+       */
+      public boolean hasApiKey() {
+        return apiKeyBuilder_ != null || apiKey_ != null;
+      }
+      /**
+       * <code>.toit.model.APIKey api_key = 1;</code>
+       * @return The apiKey.
+       */
+      public io.toit.proto.toit.model.OrganizationProto.APIKey getApiKey() {
+        if (apiKeyBuilder_ == null) {
+          return apiKey_ == null ? io.toit.proto.toit.model.OrganizationProto.APIKey.getDefaultInstance() : apiKey_;
+        } else {
+          return apiKeyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.toit.model.APIKey api_key = 1;</code>
+       */
+      public Builder setApiKey(io.toit.proto.toit.model.OrganizationProto.APIKey value) {
+        if (apiKeyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          apiKey_ = value;
+          onChanged();
+        } else {
+          apiKeyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.APIKey api_key = 1;</code>
+       */
+      public Builder setApiKey(
+          io.toit.proto.toit.model.OrganizationProto.APIKey.Builder builderForValue) {
+        if (apiKeyBuilder_ == null) {
+          apiKey_ = builderForValue.build();
+          onChanged();
+        } else {
+          apiKeyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.APIKey api_key = 1;</code>
+       */
+      public Builder mergeApiKey(io.toit.proto.toit.model.OrganizationProto.APIKey value) {
+        if (apiKeyBuilder_ == null) {
+          if (apiKey_ != null) {
+            apiKey_ =
+              io.toit.proto.toit.model.OrganizationProto.APIKey.newBuilder(apiKey_).mergeFrom(value).buildPartial();
+          } else {
+            apiKey_ = value;
+          }
+          onChanged();
+        } else {
+          apiKeyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.APIKey api_key = 1;</code>
+       */
+      public Builder clearApiKey() {
+        if (apiKeyBuilder_ == null) {
+          apiKey_ = null;
+          onChanged();
+        } else {
+          apiKey_ = null;
+          apiKeyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.APIKey api_key = 1;</code>
+       */
+      public io.toit.proto.toit.model.OrganizationProto.APIKey.Builder getApiKeyBuilder() {
+        
+        onChanged();
+        return getApiKeyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.toit.model.APIKey api_key = 1;</code>
+       */
+      public io.toit.proto.toit.model.OrganizationProto.APIKeyOrBuilder getApiKeyOrBuilder() {
+        if (apiKeyBuilder_ != null) {
+          return apiKeyBuilder_.getMessageOrBuilder();
+        } else {
+          return apiKey_ == null ?
+              io.toit.proto.toit.model.OrganizationProto.APIKey.getDefaultInstance() : apiKey_;
+        }
+      }
+      /**
+       * <code>.toit.model.APIKey api_key = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.model.OrganizationProto.APIKey, io.toit.proto.toit.model.OrganizationProto.APIKey.Builder, io.toit.proto.toit.model.OrganizationProto.APIKeyOrBuilder> 
+          getApiKeyFieldBuilder() {
+        if (apiKeyBuilder_ == null) {
+          apiKeyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.toit.proto.toit.model.OrganizationProto.APIKey, io.toit.proto.toit.model.OrganizationProto.APIKey.Builder, io.toit.proto.toit.model.OrganizationProto.APIKeyOrBuilder>(
+                  getApiKey(),
+                  getParentForChildren(),
+                  isClean());
+          apiKey_ = null;
+        }
+        return apiKeyBuilder_;
+      }
+
+      private com.google.protobuf.ByteString offset_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes offset = 2;</code>
+       * @return The offset.
+       */
+      public com.google.protobuf.ByteString getOffset() {
+        return offset_;
+      }
+      /**
+       * <code>bytes offset = 2;</code>
+       * @param value The offset to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOffset(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        offset_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes offset = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOffset() {
+        
+        offset_ = getDefaultInstance().getOffset();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.api.ListAPIKeysResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.api.ListAPIKeysResponse)
+    private static final io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse();
+    }
+
+    public static io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListAPIKeysResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListAPIKeysResponse>() {
+      @java.lang.Override
+      public ListAPIKeysResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListAPIKeysResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListAPIKeysResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListAPIKeysResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteAPIKeyRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.DeleteAPIKeyRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes id = 1;</code>
+     * @return The id.
+     */
+    com.google.protobuf.ByteString getId();
+  }
+  /**
+   * Protobuf type {@code toit.api.DeleteAPIKeyRequest}
+   */
+  public  static final class DeleteAPIKeyRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.api.DeleteAPIKeyRequest)
+      DeleteAPIKeyRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteAPIKeyRequest.newBuilder() to construct.
+    private DeleteAPIKeyRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteAPIKeyRequest() {
+      id_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteAPIKeyRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteAPIKeyRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+
+              id_ = input.readBytes();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_DeleteAPIKeyRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_DeleteAPIKeyRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest.class, io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString id_;
+    /**
+     * <code>bytes id = 1;</code>
+     * @return The id.
+     */
+    public com.google.protobuf.ByteString getId() {
+      return id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!id_.isEmpty()) {
+        output.writeBytes(1, id_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!id_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, id_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest other = (io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.api.DeleteAPIKeyRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.api.DeleteAPIKeyRequest)
+        io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_DeleteAPIKeyRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_DeleteAPIKeyRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest.class, io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = com.google.protobuf.ByteString.EMPTY;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_DeleteAPIKeyRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest getDefaultInstanceForType() {
+        return io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest build() {
+        io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest buildPartial() {
+        io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest result = new io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest(this);
+        result.id_ = id_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest) {
+          return mergeFrom((io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest other) {
+        if (other == io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest.getDefaultInstance()) return this;
+        if (other.getId() != com.google.protobuf.ByteString.EMPTY) {
+          setId(other.getId());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.ByteString id_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes id = 1;</code>
+       * @return The id.
+       */
+      public com.google.protobuf.ByteString getId() {
+        return id_;
+      }
+      /**
+       * <code>bytes id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.api.DeleteAPIKeyRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.api.DeleteAPIKeyRequest)
+    private static final io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest();
+    }
+
+    public static io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteAPIKeyRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteAPIKeyRequest>() {
+      @java.lang.Override
+      public DeleteAPIKeyRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteAPIKeyRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteAPIKeyRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteAPIKeyRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteAPIKeyResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.DeleteAPIKeyResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code toit.api.DeleteAPIKeyResponse}
+   */
+  public  static final class DeleteAPIKeyResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.api.DeleteAPIKeyResponse)
+      DeleteAPIKeyResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteAPIKeyResponse.newBuilder() to construct.
+    private DeleteAPIKeyResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteAPIKeyResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteAPIKeyResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteAPIKeyResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_DeleteAPIKeyResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_DeleteAPIKeyResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse.class, io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse other = (io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.api.DeleteAPIKeyResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.api.DeleteAPIKeyResponse)
+        io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_DeleteAPIKeyResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_DeleteAPIKeyResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse.class, io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_DeleteAPIKeyResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse getDefaultInstanceForType() {
+        return io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse build() {
+        io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse buildPartial() {
+        io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse result = new io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse) {
+          return mergeFrom((io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse other) {
+        if (other == io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.api.DeleteAPIKeyResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.api.DeleteAPIKeyResponse)
+    private static final io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse();
+    }
+
+    public static io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteAPIKeyResponse>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteAPIKeyResponse>() {
+      @java.lang.Override
+      public DeleteAPIKeyResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteAPIKeyResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteAPIKeyResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteAPIKeyResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetAPIKeySecretRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.GetAPIKeySecretRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes id = 1;</code>
+     * @return The id.
+     */
+    com.google.protobuf.ByteString getId();
+  }
+  /**
+   * Protobuf type {@code toit.api.GetAPIKeySecretRequest}
+   */
+  public  static final class GetAPIKeySecretRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.api.GetAPIKeySecretRequest)
+      GetAPIKeySecretRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetAPIKeySecretRequest.newBuilder() to construct.
+    private GetAPIKeySecretRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetAPIKeySecretRequest() {
+      id_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetAPIKeySecretRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetAPIKeySecretRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+
+              id_ = input.readBytes();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_GetAPIKeySecretRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_GetAPIKeySecretRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest.class, io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString id_;
+    /**
+     * <code>bytes id = 1;</code>
+     * @return The id.
+     */
+    public com.google.protobuf.ByteString getId() {
+      return id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!id_.isEmpty()) {
+        output.writeBytes(1, id_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!id_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, id_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest other = (io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.api.GetAPIKeySecretRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.api.GetAPIKeySecretRequest)
+        io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_GetAPIKeySecretRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_GetAPIKeySecretRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest.class, io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = com.google.protobuf.ByteString.EMPTY;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_GetAPIKeySecretRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest getDefaultInstanceForType() {
+        return io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest build() {
+        io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest buildPartial() {
+        io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest result = new io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest(this);
+        result.id_ = id_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest) {
+          return mergeFrom((io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest other) {
+        if (other == io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest.getDefaultInstance()) return this;
+        if (other.getId() != com.google.protobuf.ByteString.EMPTY) {
+          setId(other.getId());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.ByteString id_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes id = 1;</code>
+       * @return The id.
+       */
+      public com.google.protobuf.ByteString getId() {
+        return id_;
+      }
+      /**
+       * <code>bytes id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.api.GetAPIKeySecretRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.api.GetAPIKeySecretRequest)
+    private static final io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest();
+    }
+
+    public static io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetAPIKeySecretRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetAPIKeySecretRequest>() {
+      @java.lang.Override
+      public GetAPIKeySecretRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetAPIKeySecretRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetAPIKeySecretRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetAPIKeySecretRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetAPIKeySecretResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.GetAPIKeySecretResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string secret = 1;</code>
+     * @return The secret.
+     */
+    java.lang.String getSecret();
+    /**
+     * <code>string secret = 1;</code>
+     * @return The bytes for secret.
+     */
+    com.google.protobuf.ByteString
+        getSecretBytes();
+  }
+  /**
+   * Protobuf type {@code toit.api.GetAPIKeySecretResponse}
+   */
+  public  static final class GetAPIKeySecretResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.api.GetAPIKeySecretResponse)
+      GetAPIKeySecretResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetAPIKeySecretResponse.newBuilder() to construct.
+    private GetAPIKeySecretResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetAPIKeySecretResponse() {
+      secret_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetAPIKeySecretResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetAPIKeySecretResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secret_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_GetAPIKeySecretResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_GetAPIKeySecretResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse.class, io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse.Builder.class);
+    }
+
+    public static final int SECRET_FIELD_NUMBER = 1;
+    private volatile java.lang.Object secret_;
+    /**
+     * <code>string secret = 1;</code>
+     * @return The secret.
+     */
+    public java.lang.String getSecret() {
+      java.lang.Object ref = secret_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secret_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string secret = 1;</code>
+     * @return The bytes for secret.
+     */
+    public com.google.protobuf.ByteString
+        getSecretBytes() {
+      java.lang.Object ref = secret_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secret_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getSecretBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, secret_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getSecretBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, secret_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse other = (io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse) obj;
+
+      if (!getSecret()
+          .equals(other.getSecret())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SECRET_FIELD_NUMBER;
+      hash = (53 * hash) + getSecret().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.api.GetAPIKeySecretResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.api.GetAPIKeySecretResponse)
+        io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_GetAPIKeySecretResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_GetAPIKeySecretResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse.class, io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        secret_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_GetAPIKeySecretResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse getDefaultInstanceForType() {
+        return io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse build() {
+        io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse buildPartial() {
+        io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse result = new io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse(this);
+        result.secret_ = secret_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse) {
+          return mergeFrom((io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse other) {
+        if (other == io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse.getDefaultInstance()) return this;
+        if (!other.getSecret().isEmpty()) {
+          secret_ = other.secret_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object secret_ = "";
+      /**
+       * <code>string secret = 1;</code>
+       * @return The secret.
+       */
+      public java.lang.String getSecret() {
+        java.lang.Object ref = secret_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secret_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string secret = 1;</code>
+       * @return The bytes for secret.
+       */
+      public com.google.protobuf.ByteString
+          getSecretBytes() {
+        java.lang.Object ref = secret_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secret_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string secret = 1;</code>
+       * @param value The secret to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecret(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secret_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string secret = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecret() {
+        
+        secret_ = getDefaultInstance().getSecret();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string secret = 1;</code>
+       * @param value The bytes for secret to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secret_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.api.GetAPIKeySecretResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.api.GetAPIKeySecretResponse)
+    private static final io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse();
+    }
+
+    public static io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetAPIKeySecretResponse>
+        PARSER = new com.google.protobuf.AbstractParser<GetAPIKeySecretResponse>() {
+      @java.lang.Override
+      public GetAPIKeySecretResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetAPIKeySecretResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetAPIKeySecretResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetAPIKeySecretResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_toit_api_ListUsersRequest_descriptor;
   private static final 
@@ -5114,6 +9728,46 @@ public final class OrgProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_toit_api_GetUserResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_CreateAPIKeyRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_CreateAPIKeyRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_CreateAPIKeyResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_CreateAPIKeyResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_ListAPIKeysRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_ListAPIKeysRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_ListAPIKeysResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_ListAPIKeysResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_DeleteAPIKeyRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_DeleteAPIKeyRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_DeleteAPIKeyResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_DeleteAPIKeyResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_GetAPIKeySecretRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_GetAPIKeySecretRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_GetAPIKeySecretResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_GetAPIKeySecretResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5134,17 +9788,36 @@ public final class OrgProto {
       "\"\n\021DeleteUserRequest\022\r\n\005email\030\001 \001(\t\"\024\n\022D" +
       "eleteUserResponse\"+\n\016GetUserRequest\022\n\n\002i" +
       "d\030\001 \001(\014\022\r\n\005email\030\002 \001(\t\"1\n\017GetUserRespons" +
-      "e\022\036\n\004user\030\001 \001(\0132\020.toit.model.User2\265\002\n\023Or" +
-      "ganizationService\022@\n\007GetUser\022\030.toit.api." +
-      "GetUserRequest\032\031.toit.api.GetUserRespons" +
-      "e\"\000\022F\n\tListUsers\022\032.toit.api.ListUsersReq" +
-      "uest\032\033.toit.api.ListUsersResponse\"\000\022I\n\nC" +
-      "reateUser\022\033.toit.api.CreateUserRequest\032\034" +
-      ".toit.api.CreateUserResponse\"\000\022I\n\nDelete" +
-      "User\022\033.toit.api.DeleteUserRequest\032\034.toit" +
-      ".api.DeleteUserResponse\"\000BH\n\026io.toit.pro" +
-      "to.toit.apiB\010OrgProtoZ$github.com/toitwa" +
-      "re/api.git/toit/apib\006proto3"
+      "e\022\036\n\004user\030\001 \001(\0132\020.toit.model.User\"#\n\023Cre" +
+      "ateAPIKeyRequest\022\014\n\004name\030\001 \001(\t\";\n\024Create" +
+      "APIKeyResponse\022#\n\007api_key\030\001 \001(\0132\022.toit.m" +
+      "odel.APIKey\"Y\n\022ListAPIKeysRequest\022\016\n\006off" +
+      "set\030\001 \001(\014\022\r\n\005limit\030\002 \001(\003\022\020\n\010order_by\030\003 \001" +
+      "(\t\022\022\n\norder_desc\030\004 \001(\010\"J\n\023ListAPIKeysRes" +
+      "ponse\022#\n\007api_key\030\001 \001(\0132\022.toit.model.APIK" +
+      "ey\022\016\n\006offset\030\002 \001(\014\"!\n\023DeleteAPIKeyReques" +
+      "t\022\n\n\002id\030\001 \001(\014\"\026\n\024DeleteAPIKeyResponse\"$\n" +
+      "\026GetAPIKeySecretRequest\022\n\n\002id\030\001 \001(\014\")\n\027G" +
+      "etAPIKeySecretResponse\022\016\n\006secret\030\001 \001(\t2\201" +
+      "\005\n\023OrganizationService\022@\n\007GetUser\022\030.toit" +
+      ".api.GetUserRequest\032\031.toit.api.GetUserRe" +
+      "sponse\"\000\022F\n\tListUsers\022\032.toit.api.ListUse" +
+      "rsRequest\032\033.toit.api.ListUsersResponse\"\000" +
+      "\022I\n\nCreateUser\022\033.toit.api.CreateUserRequ" +
+      "est\032\034.toit.api.CreateUserResponse\"\000\022I\n\nD" +
+      "eleteUser\022\033.toit.api.DeleteUserRequest\032\034" +
+      ".toit.api.DeleteUserResponse\"\000\022O\n\014Create" +
+      "APIKey\022\035.toit.api.CreateAPIKeyRequest\032\036." +
+      "toit.api.CreateAPIKeyResponse\"\000\022N\n\013ListA" +
+      "PIKeys\022\034.toit.api.ListAPIKeysRequest\032\035.t" +
+      "oit.api.ListAPIKeysResponse\"\0000\001\022O\n\014Delet" +
+      "eAPIKey\022\035.toit.api.DeleteAPIKeyRequest\032\036" +
+      ".toit.api.DeleteAPIKeyResponse\"\000\022X\n\017GetA" +
+      "PIKeySecret\022 .toit.api.GetAPIKeySecretRe" +
+      "quest\032!.toit.api.GetAPIKeySecretResponse" +
+      "\"\000BH\n\026io.toit.proto.toit.apiB\010OrgProtoZ$" +
+      "github.com/toitware/api.git/toit/apib\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5199,6 +9872,54 @@ public final class OrgProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_GetUserResponse_descriptor,
         new java.lang.String[] { "User", });
+    internal_static_toit_api_CreateAPIKeyRequest_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_toit_api_CreateAPIKeyRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_CreateAPIKeyRequest_descriptor,
+        new java.lang.String[] { "Name", });
+    internal_static_toit_api_CreateAPIKeyResponse_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_toit_api_CreateAPIKeyResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_CreateAPIKeyResponse_descriptor,
+        new java.lang.String[] { "ApiKey", });
+    internal_static_toit_api_ListAPIKeysRequest_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_toit_api_ListAPIKeysRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_ListAPIKeysRequest_descriptor,
+        new java.lang.String[] { "Offset", "Limit", "OrderBy", "OrderDesc", });
+    internal_static_toit_api_ListAPIKeysResponse_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_toit_api_ListAPIKeysResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_ListAPIKeysResponse_descriptor,
+        new java.lang.String[] { "ApiKey", "Offset", });
+    internal_static_toit_api_DeleteAPIKeyRequest_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_toit_api_DeleteAPIKeyRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_DeleteAPIKeyRequest_descriptor,
+        new java.lang.String[] { "Id", });
+    internal_static_toit_api_DeleteAPIKeyResponse_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_toit_api_DeleteAPIKeyResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_DeleteAPIKeyResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_toit_api_GetAPIKeySecretRequest_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_toit_api_GetAPIKeySecretRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_GetAPIKeySecretRequest_descriptor,
+        new java.lang.String[] { "Id", });
+    internal_static_toit_api_GetAPIKeySecretResponse_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_toit_api_GetAPIKeySecretResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_GetAPIKeySecretResponse_descriptor,
+        new java.lang.String[] { "Secret", });
     io.toit.proto.toit.model.OrganizationProto.getDescriptor();
   }
 

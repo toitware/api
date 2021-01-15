@@ -151,6 +151,130 @@ public final class OrganizationServiceGrpc {
     return getDeleteUserMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest,
+      io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse> getCreateAPIKeyMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateAPIKey",
+      requestType = io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest.class,
+      responseType = io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest,
+      io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse> getCreateAPIKeyMethod() {
+    io.grpc.MethodDescriptor<io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest, io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse> getCreateAPIKeyMethod;
+    if ((getCreateAPIKeyMethod = OrganizationServiceGrpc.getCreateAPIKeyMethod) == null) {
+      synchronized (OrganizationServiceGrpc.class) {
+        if ((getCreateAPIKeyMethod = OrganizationServiceGrpc.getCreateAPIKeyMethod) == null) {
+          OrganizationServiceGrpc.getCreateAPIKeyMethod = getCreateAPIKeyMethod =
+              io.grpc.MethodDescriptor.<io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest, io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateAPIKey"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrganizationServiceMethodDescriptorSupplier("CreateAPIKey"))
+              .build();
+        }
+      }
+    }
+    return getCreateAPIKeyMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest,
+      io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse> getListAPIKeysMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListAPIKeys",
+      requestType = io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest.class,
+      responseType = io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest,
+      io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse> getListAPIKeysMethod() {
+    io.grpc.MethodDescriptor<io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest, io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse> getListAPIKeysMethod;
+    if ((getListAPIKeysMethod = OrganizationServiceGrpc.getListAPIKeysMethod) == null) {
+      synchronized (OrganizationServiceGrpc.class) {
+        if ((getListAPIKeysMethod = OrganizationServiceGrpc.getListAPIKeysMethod) == null) {
+          OrganizationServiceGrpc.getListAPIKeysMethod = getListAPIKeysMethod =
+              io.grpc.MethodDescriptor.<io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest, io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAPIKeys"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrganizationServiceMethodDescriptorSupplier("ListAPIKeys"))
+              .build();
+        }
+      }
+    }
+    return getListAPIKeysMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest,
+      io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse> getDeleteAPIKeyMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteAPIKey",
+      requestType = io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest.class,
+      responseType = io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest,
+      io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse> getDeleteAPIKeyMethod() {
+    io.grpc.MethodDescriptor<io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest, io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse> getDeleteAPIKeyMethod;
+    if ((getDeleteAPIKeyMethod = OrganizationServiceGrpc.getDeleteAPIKeyMethod) == null) {
+      synchronized (OrganizationServiceGrpc.class) {
+        if ((getDeleteAPIKeyMethod = OrganizationServiceGrpc.getDeleteAPIKeyMethod) == null) {
+          OrganizationServiceGrpc.getDeleteAPIKeyMethod = getDeleteAPIKeyMethod =
+              io.grpc.MethodDescriptor.<io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest, io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteAPIKey"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrganizationServiceMethodDescriptorSupplier("DeleteAPIKey"))
+              .build();
+        }
+      }
+    }
+    return getDeleteAPIKeyMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest,
+      io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse> getGetAPIKeySecretMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAPIKeySecret",
+      requestType = io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest.class,
+      responseType = io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest,
+      io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse> getGetAPIKeySecretMethod() {
+    io.grpc.MethodDescriptor<io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest, io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse> getGetAPIKeySecretMethod;
+    if ((getGetAPIKeySecretMethod = OrganizationServiceGrpc.getGetAPIKeySecretMethod) == null) {
+      synchronized (OrganizationServiceGrpc.class) {
+        if ((getGetAPIKeySecretMethod = OrganizationServiceGrpc.getGetAPIKeySecretMethod) == null) {
+          OrganizationServiceGrpc.getGetAPIKeySecretMethod = getGetAPIKeySecretMethod =
+              io.grpc.MethodDescriptor.<io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest, io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAPIKeySecret"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrganizationServiceMethodDescriptorSupplier("GetAPIKeySecret"))
+              .build();
+        }
+      }
+    }
+    return getGetAPIKeySecretMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -227,6 +351,34 @@ public final class OrganizationServiceGrpc {
       asyncUnimplementedUnaryCall(getDeleteUserMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void createAPIKey(io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest request,
+        io.grpc.stub.StreamObserver<io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getCreateAPIKeyMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void listAPIKeys(io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest request,
+        io.grpc.stub.StreamObserver<io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getListAPIKeysMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void deleteAPIKey(io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest request,
+        io.grpc.stub.StreamObserver<io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getDeleteAPIKeyMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void getAPIKeySecret(io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest request,
+        io.grpc.stub.StreamObserver<io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetAPIKeySecretMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -257,6 +409,34 @@ public final class OrganizationServiceGrpc {
                 io.toit.proto.toit.api.OrgProto.DeleteUserRequest,
                 io.toit.proto.toit.api.OrgProto.DeleteUserResponse>(
                   this, METHODID_DELETE_USER)))
+          .addMethod(
+            getCreateAPIKeyMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest,
+                io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse>(
+                  this, METHODID_CREATE_APIKEY)))
+          .addMethod(
+            getListAPIKeysMethod(),
+            asyncServerStreamingCall(
+              new MethodHandlers<
+                io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest,
+                io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse>(
+                  this, METHODID_LIST_APIKEYS)))
+          .addMethod(
+            getDeleteAPIKeyMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest,
+                io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse>(
+                  this, METHODID_DELETE_APIKEY)))
+          .addMethod(
+            getGetAPIKeySecretMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest,
+                io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse>(
+                  this, METHODID_GET_APIKEY_SECRET)))
           .build();
     }
   }
@@ -306,6 +486,38 @@ public final class OrganizationServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getDeleteUserMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void createAPIKey(io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest request,
+        io.grpc.stub.StreamObserver<io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getCreateAPIKeyMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void listAPIKeys(io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest request,
+        io.grpc.stub.StreamObserver<io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse> responseObserver) {
+      asyncServerStreamingCall(
+          getChannel().newCall(getListAPIKeysMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void deleteAPIKey(io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest request,
+        io.grpc.stub.StreamObserver<io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getDeleteAPIKeyMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getAPIKeySecret(io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest request,
+        io.grpc.stub.StreamObserver<io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetAPIKeySecretMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -348,6 +560,35 @@ public final class OrganizationServiceGrpc {
     public io.toit.proto.toit.api.OrgProto.DeleteUserResponse deleteUser(io.toit.proto.toit.api.OrgProto.DeleteUserRequest request) {
       return blockingUnaryCall(
           getChannel(), getDeleteUserMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse createAPIKey(io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getCreateAPIKeyMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public java.util.Iterator<io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse> listAPIKeys(
+        io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest request) {
+      return blockingServerStreamingCall(
+          getChannel(), getListAPIKeysMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse deleteAPIKey(io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getDeleteAPIKeyMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse getAPIKeySecret(io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getGetAPIKeySecretMethod(), getCallOptions(), request);
     }
   }
 
@@ -396,12 +637,40 @@ public final class OrganizationServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getDeleteUserMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse> createAPIKey(
+        io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getCreateAPIKeyMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse> deleteAPIKey(
+        io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getDeleteAPIKeyMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse> getAPIKeySecret(
+        io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetAPIKeySecretMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_USER = 0;
   private static final int METHODID_LIST_USERS = 1;
   private static final int METHODID_CREATE_USER = 2;
   private static final int METHODID_DELETE_USER = 3;
+  private static final int METHODID_CREATE_APIKEY = 4;
+  private static final int METHODID_LIST_APIKEYS = 5;
+  private static final int METHODID_DELETE_APIKEY = 6;
+  private static final int METHODID_GET_APIKEY_SECRET = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -435,6 +704,22 @@ public final class OrganizationServiceGrpc {
         case METHODID_DELETE_USER:
           serviceImpl.deleteUser((io.toit.proto.toit.api.OrgProto.DeleteUserRequest) request,
               (io.grpc.stub.StreamObserver<io.toit.proto.toit.api.OrgProto.DeleteUserResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_APIKEY:
+          serviceImpl.createAPIKey((io.toit.proto.toit.api.OrgProto.CreateAPIKeyRequest) request,
+              (io.grpc.stub.StreamObserver<io.toit.proto.toit.api.OrgProto.CreateAPIKeyResponse>) responseObserver);
+          break;
+        case METHODID_LIST_APIKEYS:
+          serviceImpl.listAPIKeys((io.toit.proto.toit.api.OrgProto.ListAPIKeysRequest) request,
+              (io.grpc.stub.StreamObserver<io.toit.proto.toit.api.OrgProto.ListAPIKeysResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_APIKEY:
+          serviceImpl.deleteAPIKey((io.toit.proto.toit.api.OrgProto.DeleteAPIKeyRequest) request,
+              (io.grpc.stub.StreamObserver<io.toit.proto.toit.api.OrgProto.DeleteAPIKeyResponse>) responseObserver);
+          break;
+        case METHODID_GET_APIKEY_SECRET:
+          serviceImpl.getAPIKeySecret((io.toit.proto.toit.api.OrgProto.GetAPIKeySecretRequest) request,
+              (io.grpc.stub.StreamObserver<io.toit.proto.toit.api.OrgProto.GetAPIKeySecretResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -501,6 +786,10 @@ public final class OrganizationServiceGrpc {
               .addMethod(getListUsersMethod())
               .addMethod(getCreateUserMethod())
               .addMethod(getDeleteUserMethod())
+              .addMethod(getCreateAPIKeyMethod())
+              .addMethod(getListAPIKeysMethod())
+              .addMethod(getDeleteAPIKeyMethod())
+              .addMethod(getGetAPIKeySecretMethod())
               .build();
         }
       }
