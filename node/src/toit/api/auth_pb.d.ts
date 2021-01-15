@@ -189,6 +189,9 @@ export namespace CreateOrganizationRequest {
     getName(): string;
     setName(value: string): void;
 
+    getEmail(): string;
+    setEmail(value: string): void;
+
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Organization.AsObject;
     static toObject(includeInstance: boolean, msg: Organization): Organization.AsObject;
@@ -202,12 +205,16 @@ export namespace CreateOrganizationRequest {
   export namespace Organization {
     export type AsObject = {
       name: string,
+      email: string,
     }
   }
 
   export class User extends jspb.Message {
     getEmail(): string;
     setEmail(value: string): void;
+
+    getName(): string;
+    setName(value: string): void;
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): User.AsObject;
@@ -222,6 +229,7 @@ export namespace CreateOrganizationRequest {
   export namespace User {
     export type AsObject = {
       email: string,
+      name: string,
     }
   }
 }

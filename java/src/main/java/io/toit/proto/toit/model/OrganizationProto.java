@@ -975,6 +975,18 @@ public final class OrganizationProto {
      */
     com.google.protobuf.ByteString
         getEmailBytes();
+
+    /**
+     * <code>string name = 4;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 4;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
   }
   /**
    * Protobuf type {@code toit.model.User}
@@ -992,6 +1004,7 @@ public final class OrganizationProto {
       id_ = com.google.protobuf.ByteString.EMPTY;
       organizationId_ = com.google.protobuf.ByteString.EMPTY;
       email_ = "";
+      name_ = "";
     }
 
     @java.lang.Override
@@ -1038,6 +1051,12 @@ public final class OrganizationProto {
               java.lang.String s = input.readStringRequireUtf8();
 
               email_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
               break;
             }
             default: {
@@ -1128,6 +1147,42 @@ public final class OrganizationProto {
       }
     }
 
+    public static final int NAME_FIELD_NUMBER = 4;
+    private volatile java.lang.Object name_;
+    /**
+     * <code>string name = 4;</code>
+     * @return The name.
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 4;</code>
+     * @return The bytes for name.
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1151,6 +1206,9 @@ public final class OrganizationProto {
       if (!getEmailBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, email_);
       }
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1170,6 +1228,9 @@ public final class OrganizationProto {
       }
       if (!getEmailBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, email_);
+      }
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1192,6 +1253,8 @@ public final class OrganizationProto {
           .equals(other.getOrganizationId())) return false;
       if (!getEmail()
           .equals(other.getEmail())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1209,6 +1272,8 @@ public final class OrganizationProto {
       hash = (53 * hash) + getOrganizationId().hashCode();
       hash = (37 * hash) + EMAIL_FIELD_NUMBER;
       hash = (53 * hash) + getEmail().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1348,6 +1413,8 @@ public final class OrganizationProto {
 
         email_ = "";
 
+        name_ = "";
+
         return this;
       }
 
@@ -1377,6 +1444,7 @@ public final class OrganizationProto {
         result.id_ = id_;
         result.organizationId_ = organizationId_;
         result.email_ = email_;
+        result.name_ = name_;
         onBuilt();
         return result;
       }
@@ -1433,6 +1501,10 @@ public final class OrganizationProto {
         }
         if (!other.getEmail().isEmpty()) {
           email_ = other.email_;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -1605,6 +1677,82 @@ public final class OrganizationProto {
         onChanged();
         return this;
       }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 4;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 4;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 4;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 4;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1680,10 +1828,11 @@ public final class OrganizationProto {
       "\n\035toit/model/organization.proto\022\ntoit.mo" +
       "del\"L\n\014Organization\022\n\n\002id\030\001 \001(\014\022\014\n\004name\030" +
       "\002 \001(\t\022\023\n\013default_sdk\030\003 \001(\t\022\r\n\005email\030\004 \001(" +
-      "\t\":\n\004User\022\n\n\002id\030\001 \001(\014\022\027\n\017organization_id" +
-      "\030\002 \001(\014\022\r\n\005email\030\003 \001(\tBU\n\030io.toit.proto.t" +
-      "oit.modelB\021OrganizationProtoZ&github.com" +
-      "/toitware/api.git/toit/modelb\006proto3"
+      "\t\"H\n\004User\022\n\n\002id\030\001 \001(\014\022\027\n\017organization_id" +
+      "\030\002 \001(\014\022\r\n\005email\030\003 \001(\t\022\014\n\004name\030\004 \001(\tBU\n\030i" +
+      "o.toit.proto.toit.modelB\021OrganizationPro" +
+      "toZ&github.com/toitware/api.git/toit/mod" +
+      "elb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1700,7 +1849,7 @@ public final class OrganizationProto {
     internal_static_toit_model_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_User_descriptor,
-        new java.lang.String[] { "Id", "OrganizationId", "Email", });
+        new java.lang.String[] { "Id", "OrganizationId", "Email", "Name", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
