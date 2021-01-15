@@ -11,6 +11,10 @@ interface IOrganizationServiceService extends grpc.ServiceDefinition<grpc.Untype
   listUsers: grpc.MethodDefinition<toit_api_organization_pb.ListUsersRequest, toit_api_organization_pb.ListUsersResponse>;
   createUser: grpc.MethodDefinition<toit_api_organization_pb.CreateUserRequest, toit_api_organization_pb.CreateUserResponse>;
   deleteUser: grpc.MethodDefinition<toit_api_organization_pb.DeleteUserRequest, toit_api_organization_pb.DeleteUserResponse>;
+  createAPIKey: grpc.MethodDefinition<toit_api_organization_pb.CreateAPIKeyRequest, toit_api_organization_pb.CreateAPIKeyResponse>;
+  listAPIKeys: grpc.MethodDefinition<toit_api_organization_pb.ListAPIKeysRequest, toit_api_organization_pb.ListAPIKeysResponse>;
+  deleteAPIKey: grpc.MethodDefinition<toit_api_organization_pb.DeleteAPIKeyRequest, toit_api_organization_pb.DeleteAPIKeyResponse>;
+  getAPIKeySecret: grpc.MethodDefinition<toit_api_organization_pb.GetAPIKeySecretRequest, toit_api_organization_pb.GetAPIKeySecretResponse>;
 }
 
 export const OrganizationServiceService: IOrganizationServiceService;
@@ -29,4 +33,15 @@ export class OrganizationServiceClient extends grpc.Client {
   deleteUser(argument: toit_api_organization_pb.DeleteUserRequest, callback: grpc.requestCallback<toit_api_organization_pb.DeleteUserResponse>): grpc.ClientUnaryCall;
   deleteUser(argument: toit_api_organization_pb.DeleteUserRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_organization_pb.DeleteUserResponse>): grpc.ClientUnaryCall;
   deleteUser(argument: toit_api_organization_pb.DeleteUserRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_organization_pb.DeleteUserResponse>): grpc.ClientUnaryCall;
+  createAPIKey(argument: toit_api_organization_pb.CreateAPIKeyRequest, callback: grpc.requestCallback<toit_api_organization_pb.CreateAPIKeyResponse>): grpc.ClientUnaryCall;
+  createAPIKey(argument: toit_api_organization_pb.CreateAPIKeyRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_organization_pb.CreateAPIKeyResponse>): grpc.ClientUnaryCall;
+  createAPIKey(argument: toit_api_organization_pb.CreateAPIKeyRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_organization_pb.CreateAPIKeyResponse>): grpc.ClientUnaryCall;
+  listAPIKeys(argument: toit_api_organization_pb.ListAPIKeysRequest, metadataOrOptions?: grpc.Metadata | grpc.CallOptions | null): grpc.ClientReadableStream<toit_api_organization_pb.ListAPIKeysResponse>;
+  listAPIKeys(argument: toit_api_organization_pb.ListAPIKeysRequest, metadata?: grpc.Metadata | null, options?: grpc.CallOptions | null): grpc.ClientReadableStream<toit_api_organization_pb.ListAPIKeysResponse>;
+  deleteAPIKey(argument: toit_api_organization_pb.DeleteAPIKeyRequest, callback: grpc.requestCallback<toit_api_organization_pb.DeleteAPIKeyResponse>): grpc.ClientUnaryCall;
+  deleteAPIKey(argument: toit_api_organization_pb.DeleteAPIKeyRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_organization_pb.DeleteAPIKeyResponse>): grpc.ClientUnaryCall;
+  deleteAPIKey(argument: toit_api_organization_pb.DeleteAPIKeyRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_organization_pb.DeleteAPIKeyResponse>): grpc.ClientUnaryCall;
+  getAPIKeySecret(argument: toit_api_organization_pb.GetAPIKeySecretRequest, callback: grpc.requestCallback<toit_api_organization_pb.GetAPIKeySecretResponse>): grpc.ClientUnaryCall;
+  getAPIKeySecret(argument: toit_api_organization_pb.GetAPIKeySecretRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_organization_pb.GetAPIKeySecretResponse>): grpc.ClientUnaryCall;
+  getAPIKeySecret(argument: toit_api_organization_pb.GetAPIKeySecretRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_organization_pb.GetAPIKeySecretResponse>): grpc.ClientUnaryCall;
 }
