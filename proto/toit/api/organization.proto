@@ -13,6 +13,11 @@ service OrganizationService {
   rpc ListUsers(ListUsersRequest) returns (ListUsersResponse) {}
   rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {}
   rpc DeleteUser(DeleteUserRequest) returns (DeleteUserResponse) {}
+
+  rpc CreateAPIKey(CreateAPIKeyRequest) returns (CreateAPIKeyResponse) {}
+  rpc ListAPIKeys(ListAPIKeysRequest) returns (stream ListAPIKeysResponse) {}
+  rpc DeleteAPIKey(DeleteAPIKeyRequest) returns (DeleteAPIKeyResponse) {}
+  rpc GetAPIKeySecret(GetAPIKeySecretRequest) returns (GetAPIKeySecretResponse) {}
 }
 
 message ListUsersRequest {
@@ -42,3 +47,36 @@ message GetUserRequest {
 
 message GetUserResponse { model.User user = 1; }
 
+message CreateAPIKeyRequest {
+  string name = 1;
+}
+
+message CreateAPIKeyResponse {
+  model.APIKey api_key = 1;
+}
+
+message ListAPIKeysRequest {
+  bytes offset = 1;
+  int64 limit = 2;
+  string order_by =3;
+  bool order_desc = 4;
+}
+
+message ListAPIKeysResponse {
+  model.APIKey api_key = 1;
+  bytes offset = 2;
+}
+
+message DeleteAPIKeyRequest {
+  bytes id = 1;
+}
+
+message DeleteAPIKeyResponse {}
+
+message GetAPIKeySecretRequest {
+  bytes id = 1;
+}
+
+message GetAPIKeySecretResponse {
+  string secret = 1;
+}
