@@ -3,6 +3,7 @@ syntax = "proto3";
 package toit.api;
 
 import "toit/model/organization.proto";
+import "google/protobuf/timestamp.proto";
 
 option go_package = "github.com/toitware/api.git/toit/api";
 option java_package = "io.toit.proto.toit.api";
@@ -18,6 +19,9 @@ service OrganizationService {
   rpc ListAPIKeys(ListAPIKeysRequest) returns (stream ListAPIKeysResponse) {}
   rpc DeleteAPIKey(DeleteAPIKeyRequest) returns (DeleteAPIKeyResponse) {}
   rpc GetAPIKeySecret(GetAPIKeySecretRequest) returns (GetAPIKeySecretResponse) {}
+
+  rpc UpdateOrganization(UpdateOrganizationRequest) returns (UpdateOrganizationResponse) {}
+  rpc UpdatePayment(UpdatePaymentRequest) returns (UpdatePaymentResponse) {}
 }
 
 message ListUsersRequest {
@@ -80,3 +84,22 @@ message GetAPIKeySecretRequest {
 message GetAPIKeySecretResponse {
   string secret = 1;
 }
+
+message UpdateOrganizationRequest {
+  string city = 1;
+  string country = 2;
+  string phone_number = 3;
+  string cvr_number = 4;
+}
+
+message UpdateOrganizationResponse {}
+
+message UpdatePaymentRequest {
+  uint64 card_number = 1;
+  google.protobuf.Timestamp expiry = 2;
+  int32 cvc = 3;
+  string currency = 4;
+  string name_on_card = 5;
+}
+
+message UpdatePaymentResponse {}
