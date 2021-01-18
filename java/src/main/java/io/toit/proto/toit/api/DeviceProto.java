@@ -16223,87 +16223,6 @@ public final class DeviceProto {
     com.google.protobuf.ByteString getDeviceId();
 
     /**
-     * <code>string name = 2 [deprecated = true];</code>
-     * @return The name.
-     */
-    @java.lang.Deprecated java.lang.String getName();
-    /**
-     * <code>string name = 2 [deprecated = true];</code>
-     * @return The bytes for name.
-     */
-    @java.lang.Deprecated com.google.protobuf.ByteString
-        getNameBytes();
-
-    /**
-     * <code>string sdk = 3 [deprecated = true];</code>
-     * @return The sdk.
-     */
-    @java.lang.Deprecated java.lang.String getSdk();
-    /**
-     * <code>string sdk = 3 [deprecated = true];</code>
-     * @return The bytes for sdk.
-     */
-    @java.lang.Deprecated com.google.protobuf.ByteString
-        getSdkBytes();
-
-    /**
-     * <code>.toit.model.DeviceBrokerSettings broker_settings = 4 [deprecated = true];</code>
-     * @return Whether the brokerSettings field is set.
-     */
-    @java.lang.Deprecated boolean hasBrokerSettings();
-    /**
-     * <code>.toit.model.DeviceBrokerSettings broker_settings = 4 [deprecated = true];</code>
-     * @return The brokerSettings.
-     */
-    @java.lang.Deprecated io.toit.proto.toit.model.DeviceProto.DeviceBrokerSettings getBrokerSettings();
-    /**
-     * <code>.toit.model.DeviceBrokerSettings broker_settings = 4 [deprecated = true];</code>
-     */
-    @java.lang.Deprecated io.toit.proto.toit.model.DeviceProto.DeviceBrokerSettingsOrBuilder getBrokerSettingsOrBuilder();
-
-    /**
-     * <code>.google.protobuf.Duration max_offline = 5 [deprecated = true];</code>
-     * @return Whether the maxOffline field is set.
-     */
-    @java.lang.Deprecated boolean hasMaxOffline();
-    /**
-     * <code>.google.protobuf.Duration max_offline = 5 [deprecated = true];</code>
-     * @return The maxOffline.
-     */
-    @java.lang.Deprecated com.google.protobuf.Duration getMaxOffline();
-    /**
-     * <code>.google.protobuf.Duration max_offline = 5 [deprecated = true];</code>
-     */
-    @java.lang.Deprecated com.google.protobuf.DurationOrBuilder getMaxOfflineOrBuilder();
-
-    /**
-     * <code>string model = 6 [deprecated = true];</code>
-     * @return The model.
-     */
-    @java.lang.Deprecated java.lang.String getModel();
-    /**
-     * <code>string model = 6 [deprecated = true];</code>
-     * @return The bytes for model.
-     */
-    @java.lang.Deprecated com.google.protobuf.ByteString
-        getModelBytes();
-
-    /**
-     * <code>.toit.api.ConnectionSettings connection_settings = 7 [deprecated = true];</code>
-     * @return Whether the connectionSettings field is set.
-     */
-    @java.lang.Deprecated boolean hasConnectionSettings();
-    /**
-     * <code>.toit.api.ConnectionSettings connection_settings = 7 [deprecated = true];</code>
-     * @return The connectionSettings.
-     */
-    @java.lang.Deprecated io.toit.proto.toit.api.DeviceProto.ConnectionSettings getConnectionSettings();
-    /**
-     * <code>.toit.api.ConnectionSettings connection_settings = 7 [deprecated = true];</code>
-     */
-    @java.lang.Deprecated io.toit.proto.toit.api.DeviceProto.ConnectionSettingsOrBuilder getConnectionSettingsOrBuilder();
-
-    /**
      * <code>repeated .toit.api.ConfigChange config_changes = 8;</code>
      */
     java.util.List<io.toit.proto.toit.api.DeviceProto.ConfigChange> 
@@ -16341,9 +16260,6 @@ public final class DeviceProto {
     }
     private ConfigureDeviceRequest() {
       deviceId_ = com.google.protobuf.ByteString.EMPTY;
-      name_ = "";
-      sdk_ = "";
-      model_ = "";
       configChanges_ = java.util.Collections.emptyList();
     }
 
@@ -16381,63 +16297,6 @@ public final class DeviceProto {
             case 10: {
 
               deviceId_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              sdk_ = s;
-              break;
-            }
-            case 34: {
-              io.toit.proto.toit.model.DeviceProto.DeviceBrokerSettings.Builder subBuilder = null;
-              if (brokerSettings_ != null) {
-                subBuilder = brokerSettings_.toBuilder();
-              }
-              brokerSettings_ = input.readMessage(io.toit.proto.toit.model.DeviceProto.DeviceBrokerSettings.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(brokerSettings_);
-                brokerSettings_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 42: {
-              com.google.protobuf.Duration.Builder subBuilder = null;
-              if (maxOffline_ != null) {
-                subBuilder = maxOffline_.toBuilder();
-              }
-              maxOffline_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(maxOffline_);
-                maxOffline_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              model_ = s;
-              break;
-            }
-            case 58: {
-              io.toit.proto.toit.api.DeviceProto.ConnectionSettings.Builder subBuilder = null;
-              if (connectionSettings_ != null) {
-                subBuilder = connectionSettings_.toBuilder();
-              }
-              connectionSettings_ = input.readMessage(io.toit.proto.toit.api.DeviceProto.ConnectionSettings.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(connectionSettings_);
-                connectionSettings_ = subBuilder.buildPartial();
-              }
-
               break;
             }
             case 66: {
@@ -16494,183 +16353,6 @@ public final class DeviceProto {
       return deviceId_;
     }
 
-    public static final int NAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object name_;
-    /**
-     * <code>string name = 2 [deprecated = true];</code>
-     * @return The name.
-     */
-    @java.lang.Deprecated public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string name = 2 [deprecated = true];</code>
-     * @return The bytes for name.
-     */
-    @java.lang.Deprecated public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int SDK_FIELD_NUMBER = 3;
-    private volatile java.lang.Object sdk_;
-    /**
-     * <code>string sdk = 3 [deprecated = true];</code>
-     * @return The sdk.
-     */
-    @java.lang.Deprecated public java.lang.String getSdk() {
-      java.lang.Object ref = sdk_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        sdk_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string sdk = 3 [deprecated = true];</code>
-     * @return The bytes for sdk.
-     */
-    @java.lang.Deprecated public com.google.protobuf.ByteString
-        getSdkBytes() {
-      java.lang.Object ref = sdk_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        sdk_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int BROKER_SETTINGS_FIELD_NUMBER = 4;
-    private io.toit.proto.toit.model.DeviceProto.DeviceBrokerSettings brokerSettings_;
-    /**
-     * <code>.toit.model.DeviceBrokerSettings broker_settings = 4 [deprecated = true];</code>
-     * @return Whether the brokerSettings field is set.
-     */
-    @java.lang.Deprecated public boolean hasBrokerSettings() {
-      return brokerSettings_ != null;
-    }
-    /**
-     * <code>.toit.model.DeviceBrokerSettings broker_settings = 4 [deprecated = true];</code>
-     * @return The brokerSettings.
-     */
-    @java.lang.Deprecated public io.toit.proto.toit.model.DeviceProto.DeviceBrokerSettings getBrokerSettings() {
-      return brokerSettings_ == null ? io.toit.proto.toit.model.DeviceProto.DeviceBrokerSettings.getDefaultInstance() : brokerSettings_;
-    }
-    /**
-     * <code>.toit.model.DeviceBrokerSettings broker_settings = 4 [deprecated = true];</code>
-     */
-    @java.lang.Deprecated public io.toit.proto.toit.model.DeviceProto.DeviceBrokerSettingsOrBuilder getBrokerSettingsOrBuilder() {
-      return getBrokerSettings();
-    }
-
-    public static final int MAX_OFFLINE_FIELD_NUMBER = 5;
-    private com.google.protobuf.Duration maxOffline_;
-    /**
-     * <code>.google.protobuf.Duration max_offline = 5 [deprecated = true];</code>
-     * @return Whether the maxOffline field is set.
-     */
-    @java.lang.Deprecated public boolean hasMaxOffline() {
-      return maxOffline_ != null;
-    }
-    /**
-     * <code>.google.protobuf.Duration max_offline = 5 [deprecated = true];</code>
-     * @return The maxOffline.
-     */
-    @java.lang.Deprecated public com.google.protobuf.Duration getMaxOffline() {
-      return maxOffline_ == null ? com.google.protobuf.Duration.getDefaultInstance() : maxOffline_;
-    }
-    /**
-     * <code>.google.protobuf.Duration max_offline = 5 [deprecated = true];</code>
-     */
-    @java.lang.Deprecated public com.google.protobuf.DurationOrBuilder getMaxOfflineOrBuilder() {
-      return getMaxOffline();
-    }
-
-    public static final int MODEL_FIELD_NUMBER = 6;
-    private volatile java.lang.Object model_;
-    /**
-     * <code>string model = 6 [deprecated = true];</code>
-     * @return The model.
-     */
-    @java.lang.Deprecated public java.lang.String getModel() {
-      java.lang.Object ref = model_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        model_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string model = 6 [deprecated = true];</code>
-     * @return The bytes for model.
-     */
-    @java.lang.Deprecated public com.google.protobuf.ByteString
-        getModelBytes() {
-      java.lang.Object ref = model_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        model_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CONNECTION_SETTINGS_FIELD_NUMBER = 7;
-    private io.toit.proto.toit.api.DeviceProto.ConnectionSettings connectionSettings_;
-    /**
-     * <code>.toit.api.ConnectionSettings connection_settings = 7 [deprecated = true];</code>
-     * @return Whether the connectionSettings field is set.
-     */
-    @java.lang.Deprecated public boolean hasConnectionSettings() {
-      return connectionSettings_ != null;
-    }
-    /**
-     * <code>.toit.api.ConnectionSettings connection_settings = 7 [deprecated = true];</code>
-     * @return The connectionSettings.
-     */
-    @java.lang.Deprecated public io.toit.proto.toit.api.DeviceProto.ConnectionSettings getConnectionSettings() {
-      return connectionSettings_ == null ? io.toit.proto.toit.api.DeviceProto.ConnectionSettings.getDefaultInstance() : connectionSettings_;
-    }
-    /**
-     * <code>.toit.api.ConnectionSettings connection_settings = 7 [deprecated = true];</code>
-     */
-    @java.lang.Deprecated public io.toit.proto.toit.api.DeviceProto.ConnectionSettingsOrBuilder getConnectionSettingsOrBuilder() {
-      return getConnectionSettings();
-    }
-
     public static final int CONFIG_CHANGES_FIELD_NUMBER = 8;
     private java.util.List<io.toit.proto.toit.api.DeviceProto.ConfigChange> configChanges_;
     /**
@@ -16723,24 +16405,6 @@ public final class DeviceProto {
       if (!deviceId_.isEmpty()) {
         output.writeBytes(1, deviceId_);
       }
-      if (!getNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
-      }
-      if (!getSdkBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, sdk_);
-      }
-      if (brokerSettings_ != null) {
-        output.writeMessage(4, getBrokerSettings());
-      }
-      if (maxOffline_ != null) {
-        output.writeMessage(5, getMaxOffline());
-      }
-      if (!getModelBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, model_);
-      }
-      if (connectionSettings_ != null) {
-        output.writeMessage(7, getConnectionSettings());
-      }
       for (int i = 0; i < configChanges_.size(); i++) {
         output.writeMessage(8, configChanges_.get(i));
       }
@@ -16756,27 +16420,6 @@ public final class DeviceProto {
       if (!deviceId_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, deviceId_);
-      }
-      if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
-      }
-      if (!getSdkBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, sdk_);
-      }
-      if (brokerSettings_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getBrokerSettings());
-      }
-      if (maxOffline_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getMaxOffline());
-      }
-      if (!getModelBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, model_);
-      }
-      if (connectionSettings_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, getConnectionSettings());
       }
       for (int i = 0; i < configChanges_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -16799,27 +16442,6 @@ public final class DeviceProto {
 
       if (!getDeviceId()
           .equals(other.getDeviceId())) return false;
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getSdk()
-          .equals(other.getSdk())) return false;
-      if (hasBrokerSettings() != other.hasBrokerSettings()) return false;
-      if (hasBrokerSettings()) {
-        if (!getBrokerSettings()
-            .equals(other.getBrokerSettings())) return false;
-      }
-      if (hasMaxOffline() != other.hasMaxOffline()) return false;
-      if (hasMaxOffline()) {
-        if (!getMaxOffline()
-            .equals(other.getMaxOffline())) return false;
-      }
-      if (!getModel()
-          .equals(other.getModel())) return false;
-      if (hasConnectionSettings() != other.hasConnectionSettings()) return false;
-      if (hasConnectionSettings()) {
-        if (!getConnectionSettings()
-            .equals(other.getConnectionSettings())) return false;
-      }
       if (!getConfigChangesList()
           .equals(other.getConfigChangesList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -16835,24 +16457,6 @@ public final class DeviceProto {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + DEVICE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getDeviceId().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + SDK_FIELD_NUMBER;
-      hash = (53 * hash) + getSdk().hashCode();
-      if (hasBrokerSettings()) {
-        hash = (37 * hash) + BROKER_SETTINGS_FIELD_NUMBER;
-        hash = (53 * hash) + getBrokerSettings().hashCode();
-      }
-      if (hasMaxOffline()) {
-        hash = (37 * hash) + MAX_OFFLINE_FIELD_NUMBER;
-        hash = (53 * hash) + getMaxOffline().hashCode();
-      }
-      hash = (37 * hash) + MODEL_FIELD_NUMBER;
-      hash = (53 * hash) + getModel().hashCode();
-      if (hasConnectionSettings()) {
-        hash = (37 * hash) + CONNECTION_SETTINGS_FIELD_NUMBER;
-        hash = (53 * hash) + getConnectionSettings().hashCode();
-      }
       if (getConfigChangesCount() > 0) {
         hash = (37 * hash) + CONFIG_CHANGES_FIELD_NUMBER;
         hash = (53 * hash) + getConfigChangesList().hashCode();
@@ -16993,30 +16597,6 @@ public final class DeviceProto {
         super.clear();
         deviceId_ = com.google.protobuf.ByteString.EMPTY;
 
-        name_ = "";
-
-        sdk_ = "";
-
-        if (brokerSettingsBuilder_ == null) {
-          brokerSettings_ = null;
-        } else {
-          brokerSettings_ = null;
-          brokerSettingsBuilder_ = null;
-        }
-        if (maxOfflineBuilder_ == null) {
-          maxOffline_ = null;
-        } else {
-          maxOffline_ = null;
-          maxOfflineBuilder_ = null;
-        }
-        model_ = "";
-
-        if (connectionSettingsBuilder_ == null) {
-          connectionSettings_ = null;
-        } else {
-          connectionSettings_ = null;
-          connectionSettingsBuilder_ = null;
-        }
         if (configChangesBuilder_ == null) {
           configChanges_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -17051,24 +16631,6 @@ public final class DeviceProto {
         io.toit.proto.toit.api.DeviceProto.ConfigureDeviceRequest result = new io.toit.proto.toit.api.DeviceProto.ConfigureDeviceRequest(this);
         int from_bitField0_ = bitField0_;
         result.deviceId_ = deviceId_;
-        result.name_ = name_;
-        result.sdk_ = sdk_;
-        if (brokerSettingsBuilder_ == null) {
-          result.brokerSettings_ = brokerSettings_;
-        } else {
-          result.brokerSettings_ = brokerSettingsBuilder_.build();
-        }
-        if (maxOfflineBuilder_ == null) {
-          result.maxOffline_ = maxOffline_;
-        } else {
-          result.maxOffline_ = maxOfflineBuilder_.build();
-        }
-        result.model_ = model_;
-        if (connectionSettingsBuilder_ == null) {
-          result.connectionSettings_ = connectionSettings_;
-        } else {
-          result.connectionSettings_ = connectionSettingsBuilder_.build();
-        }
         if (configChangesBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             configChanges_ = java.util.Collections.unmodifiableList(configChanges_);
@@ -17128,27 +16690,6 @@ public final class DeviceProto {
         if (other == io.toit.proto.toit.api.DeviceProto.ConfigureDeviceRequest.getDefaultInstance()) return this;
         if (other.getDeviceId() != com.google.protobuf.ByteString.EMPTY) {
           setDeviceId(other.getDeviceId());
-        }
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          onChanged();
-        }
-        if (!other.getSdk().isEmpty()) {
-          sdk_ = other.sdk_;
-          onChanged();
-        }
-        if (other.hasBrokerSettings()) {
-          mergeBrokerSettings(other.getBrokerSettings());
-        }
-        if (other.hasMaxOffline()) {
-          mergeMaxOffline(other.getMaxOffline());
-        }
-        if (!other.getModel().isEmpty()) {
-          model_ = other.model_;
-          onChanged();
-        }
-        if (other.hasConnectionSettings()) {
-          mergeConnectionSettings(other.getConnectionSettings());
         }
         if (configChangesBuilder_ == null) {
           if (!other.configChanges_.isEmpty()) {
@@ -17237,591 +16778,6 @@ public final class DeviceProto {
         deviceId_ = getDefaultInstance().getDeviceId();
         onChanged();
         return this;
-      }
-
-      private java.lang.Object name_ = "";
-      /**
-       * <code>string name = 2 [deprecated = true];</code>
-       * @return The name.
-       */
-      @java.lang.Deprecated public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string name = 2 [deprecated = true];</code>
-       * @return The bytes for name.
-       */
-      @java.lang.Deprecated public com.google.protobuf.ByteString
-          getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string name = 2 [deprecated = true];</code>
-       * @param value The name to set.
-       * @return This builder for chaining.
-       */
-      @java.lang.Deprecated public Builder setName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        name_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string name = 2 [deprecated = true];</code>
-       * @return This builder for chaining.
-       */
-      @java.lang.Deprecated public Builder clearName() {
-        
-        name_ = getDefaultInstance().getName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string name = 2 [deprecated = true];</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
-       */
-      @java.lang.Deprecated public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        name_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object sdk_ = "";
-      /**
-       * <code>string sdk = 3 [deprecated = true];</code>
-       * @return The sdk.
-       */
-      @java.lang.Deprecated public java.lang.String getSdk() {
-        java.lang.Object ref = sdk_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          sdk_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string sdk = 3 [deprecated = true];</code>
-       * @return The bytes for sdk.
-       */
-      @java.lang.Deprecated public com.google.protobuf.ByteString
-          getSdkBytes() {
-        java.lang.Object ref = sdk_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          sdk_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string sdk = 3 [deprecated = true];</code>
-       * @param value The sdk to set.
-       * @return This builder for chaining.
-       */
-      @java.lang.Deprecated public Builder setSdk(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        sdk_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string sdk = 3 [deprecated = true];</code>
-       * @return This builder for chaining.
-       */
-      @java.lang.Deprecated public Builder clearSdk() {
-        
-        sdk_ = getDefaultInstance().getSdk();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string sdk = 3 [deprecated = true];</code>
-       * @param value The bytes for sdk to set.
-       * @return This builder for chaining.
-       */
-      @java.lang.Deprecated public Builder setSdkBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        sdk_ = value;
-        onChanged();
-        return this;
-      }
-
-      private io.toit.proto.toit.model.DeviceProto.DeviceBrokerSettings brokerSettings_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.toit.proto.toit.model.DeviceProto.DeviceBrokerSettings, io.toit.proto.toit.model.DeviceProto.DeviceBrokerSettings.Builder, io.toit.proto.toit.model.DeviceProto.DeviceBrokerSettingsOrBuilder> brokerSettingsBuilder_;
-      /**
-       * <code>.toit.model.DeviceBrokerSettings broker_settings = 4 [deprecated = true];</code>
-       * @return Whether the brokerSettings field is set.
-       */
-      @java.lang.Deprecated public boolean hasBrokerSettings() {
-        return brokerSettingsBuilder_ != null || brokerSettings_ != null;
-      }
-      /**
-       * <code>.toit.model.DeviceBrokerSettings broker_settings = 4 [deprecated = true];</code>
-       * @return The brokerSettings.
-       */
-      @java.lang.Deprecated public io.toit.proto.toit.model.DeviceProto.DeviceBrokerSettings getBrokerSettings() {
-        if (brokerSettingsBuilder_ == null) {
-          return brokerSettings_ == null ? io.toit.proto.toit.model.DeviceProto.DeviceBrokerSettings.getDefaultInstance() : brokerSettings_;
-        } else {
-          return brokerSettingsBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.toit.model.DeviceBrokerSettings broker_settings = 4 [deprecated = true];</code>
-       */
-      @java.lang.Deprecated public Builder setBrokerSettings(io.toit.proto.toit.model.DeviceProto.DeviceBrokerSettings value) {
-        if (brokerSettingsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          brokerSettings_ = value;
-          onChanged();
-        } else {
-          brokerSettingsBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.toit.model.DeviceBrokerSettings broker_settings = 4 [deprecated = true];</code>
-       */
-      @java.lang.Deprecated public Builder setBrokerSettings(
-          io.toit.proto.toit.model.DeviceProto.DeviceBrokerSettings.Builder builderForValue) {
-        if (brokerSettingsBuilder_ == null) {
-          brokerSettings_ = builderForValue.build();
-          onChanged();
-        } else {
-          brokerSettingsBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.toit.model.DeviceBrokerSettings broker_settings = 4 [deprecated = true];</code>
-       */
-      @java.lang.Deprecated public Builder mergeBrokerSettings(io.toit.proto.toit.model.DeviceProto.DeviceBrokerSettings value) {
-        if (brokerSettingsBuilder_ == null) {
-          if (brokerSettings_ != null) {
-            brokerSettings_ =
-              io.toit.proto.toit.model.DeviceProto.DeviceBrokerSettings.newBuilder(brokerSettings_).mergeFrom(value).buildPartial();
-          } else {
-            brokerSettings_ = value;
-          }
-          onChanged();
-        } else {
-          brokerSettingsBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.toit.model.DeviceBrokerSettings broker_settings = 4 [deprecated = true];</code>
-       */
-      @java.lang.Deprecated public Builder clearBrokerSettings() {
-        if (brokerSettingsBuilder_ == null) {
-          brokerSettings_ = null;
-          onChanged();
-        } else {
-          brokerSettings_ = null;
-          brokerSettingsBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.toit.model.DeviceBrokerSettings broker_settings = 4 [deprecated = true];</code>
-       */
-      @java.lang.Deprecated public io.toit.proto.toit.model.DeviceProto.DeviceBrokerSettings.Builder getBrokerSettingsBuilder() {
-        
-        onChanged();
-        return getBrokerSettingsFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.toit.model.DeviceBrokerSettings broker_settings = 4 [deprecated = true];</code>
-       */
-      @java.lang.Deprecated public io.toit.proto.toit.model.DeviceProto.DeviceBrokerSettingsOrBuilder getBrokerSettingsOrBuilder() {
-        if (brokerSettingsBuilder_ != null) {
-          return brokerSettingsBuilder_.getMessageOrBuilder();
-        } else {
-          return brokerSettings_ == null ?
-              io.toit.proto.toit.model.DeviceProto.DeviceBrokerSettings.getDefaultInstance() : brokerSettings_;
-        }
-      }
-      /**
-       * <code>.toit.model.DeviceBrokerSettings broker_settings = 4 [deprecated = true];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.toit.proto.toit.model.DeviceProto.DeviceBrokerSettings, io.toit.proto.toit.model.DeviceProto.DeviceBrokerSettings.Builder, io.toit.proto.toit.model.DeviceProto.DeviceBrokerSettingsOrBuilder> 
-          getBrokerSettingsFieldBuilder() {
-        if (brokerSettingsBuilder_ == null) {
-          brokerSettingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.toit.proto.toit.model.DeviceProto.DeviceBrokerSettings, io.toit.proto.toit.model.DeviceProto.DeviceBrokerSettings.Builder, io.toit.proto.toit.model.DeviceProto.DeviceBrokerSettingsOrBuilder>(
-                  getBrokerSettings(),
-                  getParentForChildren(),
-                  isClean());
-          brokerSettings_ = null;
-        }
-        return brokerSettingsBuilder_;
-      }
-
-      private com.google.protobuf.Duration maxOffline_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> maxOfflineBuilder_;
-      /**
-       * <code>.google.protobuf.Duration max_offline = 5 [deprecated = true];</code>
-       * @return Whether the maxOffline field is set.
-       */
-      @java.lang.Deprecated public boolean hasMaxOffline() {
-        return maxOfflineBuilder_ != null || maxOffline_ != null;
-      }
-      /**
-       * <code>.google.protobuf.Duration max_offline = 5 [deprecated = true];</code>
-       * @return The maxOffline.
-       */
-      @java.lang.Deprecated public com.google.protobuf.Duration getMaxOffline() {
-        if (maxOfflineBuilder_ == null) {
-          return maxOffline_ == null ? com.google.protobuf.Duration.getDefaultInstance() : maxOffline_;
-        } else {
-          return maxOfflineBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.google.protobuf.Duration max_offline = 5 [deprecated = true];</code>
-       */
-      @java.lang.Deprecated public Builder setMaxOffline(com.google.protobuf.Duration value) {
-        if (maxOfflineBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          maxOffline_ = value;
-          onChanged();
-        } else {
-          maxOfflineBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Duration max_offline = 5 [deprecated = true];</code>
-       */
-      @java.lang.Deprecated public Builder setMaxOffline(
-          com.google.protobuf.Duration.Builder builderForValue) {
-        if (maxOfflineBuilder_ == null) {
-          maxOffline_ = builderForValue.build();
-          onChanged();
-        } else {
-          maxOfflineBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Duration max_offline = 5 [deprecated = true];</code>
-       */
-      @java.lang.Deprecated public Builder mergeMaxOffline(com.google.protobuf.Duration value) {
-        if (maxOfflineBuilder_ == null) {
-          if (maxOffline_ != null) {
-            maxOffline_ =
-              com.google.protobuf.Duration.newBuilder(maxOffline_).mergeFrom(value).buildPartial();
-          } else {
-            maxOffline_ = value;
-          }
-          onChanged();
-        } else {
-          maxOfflineBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Duration max_offline = 5 [deprecated = true];</code>
-       */
-      @java.lang.Deprecated public Builder clearMaxOffline() {
-        if (maxOfflineBuilder_ == null) {
-          maxOffline_ = null;
-          onChanged();
-        } else {
-          maxOffline_ = null;
-          maxOfflineBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Duration max_offline = 5 [deprecated = true];</code>
-       */
-      @java.lang.Deprecated public com.google.protobuf.Duration.Builder getMaxOfflineBuilder() {
-        
-        onChanged();
-        return getMaxOfflineFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Duration max_offline = 5 [deprecated = true];</code>
-       */
-      @java.lang.Deprecated public com.google.protobuf.DurationOrBuilder getMaxOfflineOrBuilder() {
-        if (maxOfflineBuilder_ != null) {
-          return maxOfflineBuilder_.getMessageOrBuilder();
-        } else {
-          return maxOffline_ == null ?
-              com.google.protobuf.Duration.getDefaultInstance() : maxOffline_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Duration max_offline = 5 [deprecated = true];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
-          getMaxOfflineFieldBuilder() {
-        if (maxOfflineBuilder_ == null) {
-          maxOfflineBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
-                  getMaxOffline(),
-                  getParentForChildren(),
-                  isClean());
-          maxOffline_ = null;
-        }
-        return maxOfflineBuilder_;
-      }
-
-      private java.lang.Object model_ = "";
-      /**
-       * <code>string model = 6 [deprecated = true];</code>
-       * @return The model.
-       */
-      @java.lang.Deprecated public java.lang.String getModel() {
-        java.lang.Object ref = model_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          model_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string model = 6 [deprecated = true];</code>
-       * @return The bytes for model.
-       */
-      @java.lang.Deprecated public com.google.protobuf.ByteString
-          getModelBytes() {
-        java.lang.Object ref = model_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          model_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string model = 6 [deprecated = true];</code>
-       * @param value The model to set.
-       * @return This builder for chaining.
-       */
-      @java.lang.Deprecated public Builder setModel(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        model_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string model = 6 [deprecated = true];</code>
-       * @return This builder for chaining.
-       */
-      @java.lang.Deprecated public Builder clearModel() {
-        
-        model_ = getDefaultInstance().getModel();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string model = 6 [deprecated = true];</code>
-       * @param value The bytes for model to set.
-       * @return This builder for chaining.
-       */
-      @java.lang.Deprecated public Builder setModelBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        model_ = value;
-        onChanged();
-        return this;
-      }
-
-      private io.toit.proto.toit.api.DeviceProto.ConnectionSettings connectionSettings_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.toit.proto.toit.api.DeviceProto.ConnectionSettings, io.toit.proto.toit.api.DeviceProto.ConnectionSettings.Builder, io.toit.proto.toit.api.DeviceProto.ConnectionSettingsOrBuilder> connectionSettingsBuilder_;
-      /**
-       * <code>.toit.api.ConnectionSettings connection_settings = 7 [deprecated = true];</code>
-       * @return Whether the connectionSettings field is set.
-       */
-      @java.lang.Deprecated public boolean hasConnectionSettings() {
-        return connectionSettingsBuilder_ != null || connectionSettings_ != null;
-      }
-      /**
-       * <code>.toit.api.ConnectionSettings connection_settings = 7 [deprecated = true];</code>
-       * @return The connectionSettings.
-       */
-      @java.lang.Deprecated public io.toit.proto.toit.api.DeviceProto.ConnectionSettings getConnectionSettings() {
-        if (connectionSettingsBuilder_ == null) {
-          return connectionSettings_ == null ? io.toit.proto.toit.api.DeviceProto.ConnectionSettings.getDefaultInstance() : connectionSettings_;
-        } else {
-          return connectionSettingsBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.toit.api.ConnectionSettings connection_settings = 7 [deprecated = true];</code>
-       */
-      @java.lang.Deprecated public Builder setConnectionSettings(io.toit.proto.toit.api.DeviceProto.ConnectionSettings value) {
-        if (connectionSettingsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          connectionSettings_ = value;
-          onChanged();
-        } else {
-          connectionSettingsBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.toit.api.ConnectionSettings connection_settings = 7 [deprecated = true];</code>
-       */
-      @java.lang.Deprecated public Builder setConnectionSettings(
-          io.toit.proto.toit.api.DeviceProto.ConnectionSettings.Builder builderForValue) {
-        if (connectionSettingsBuilder_ == null) {
-          connectionSettings_ = builderForValue.build();
-          onChanged();
-        } else {
-          connectionSettingsBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.toit.api.ConnectionSettings connection_settings = 7 [deprecated = true];</code>
-       */
-      @java.lang.Deprecated public Builder mergeConnectionSettings(io.toit.proto.toit.api.DeviceProto.ConnectionSettings value) {
-        if (connectionSettingsBuilder_ == null) {
-          if (connectionSettings_ != null) {
-            connectionSettings_ =
-              io.toit.proto.toit.api.DeviceProto.ConnectionSettings.newBuilder(connectionSettings_).mergeFrom(value).buildPartial();
-          } else {
-            connectionSettings_ = value;
-          }
-          onChanged();
-        } else {
-          connectionSettingsBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.toit.api.ConnectionSettings connection_settings = 7 [deprecated = true];</code>
-       */
-      @java.lang.Deprecated public Builder clearConnectionSettings() {
-        if (connectionSettingsBuilder_ == null) {
-          connectionSettings_ = null;
-          onChanged();
-        } else {
-          connectionSettings_ = null;
-          connectionSettingsBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.toit.api.ConnectionSettings connection_settings = 7 [deprecated = true];</code>
-       */
-      @java.lang.Deprecated public io.toit.proto.toit.api.DeviceProto.ConnectionSettings.Builder getConnectionSettingsBuilder() {
-        
-        onChanged();
-        return getConnectionSettingsFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.toit.api.ConnectionSettings connection_settings = 7 [deprecated = true];</code>
-       */
-      @java.lang.Deprecated public io.toit.proto.toit.api.DeviceProto.ConnectionSettingsOrBuilder getConnectionSettingsOrBuilder() {
-        if (connectionSettingsBuilder_ != null) {
-          return connectionSettingsBuilder_.getMessageOrBuilder();
-        } else {
-          return connectionSettings_ == null ?
-              io.toit.proto.toit.api.DeviceProto.ConnectionSettings.getDefaultInstance() : connectionSettings_;
-        }
-      }
-      /**
-       * <code>.toit.api.ConnectionSettings connection_settings = 7 [deprecated = true];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.toit.proto.toit.api.DeviceProto.ConnectionSettings, io.toit.proto.toit.api.DeviceProto.ConnectionSettings.Builder, io.toit.proto.toit.api.DeviceProto.ConnectionSettingsOrBuilder> 
-          getConnectionSettingsFieldBuilder() {
-        if (connectionSettingsBuilder_ == null) {
-          connectionSettingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.toit.proto.toit.api.DeviceProto.ConnectionSettings, io.toit.proto.toit.api.DeviceProto.ConnectionSettings.Builder, io.toit.proto.toit.api.DeviceProto.ConnectionSettingsOrBuilder>(
-                  getConnectionSettings(),
-                  getParentForChildren(),
-                  isClean());
-          connectionSettings_ = null;
-        }
-        return connectionSettingsBuilder_;
       }
 
       private java.util.List<io.toit.proto.toit.api.DeviceProto.ConfigChange> configChanges_ =
@@ -42803,134 +41759,129 @@ public final class DeviceProto {
       "\0162\035.toit.model.MetricsData.Level\032\017\n\rRepo" +
       "rtModules\032Z\n\014UpdateModule\022*\n\004type\030\001 \001(\0162" +
       "\034.toit.model.DeviceModuleType\022\r\n\005model\030\002" +
-      " \001(\t\022\017\n\007version\030\003 \001(\tB\010\n\006config\"\303\002\n\026Conf" +
-      "igureDeviceRequest\022\021\n\tdevice_id\030\001 \001(\014\022\020\n" +
-      "\004name\030\002 \001(\tB\002\030\001\022\017\n\003sdk\030\003 \001(\tB\002\030\001\022=\n\017brok" +
-      "er_settings\030\004 \001(\0132 .toit.model.DeviceBro" +
-      "kerSettingsB\002\030\001\0222\n\013max_offline\030\005 \001(\0132\031.g" +
-      "oogle.protobuf.DurationB\002\030\001\022\021\n\005model\030\006 \001" +
-      "(\tB\002\030\001\022=\n\023connection_settings\030\007 \001(\0132\034.to" +
-      "it.api.ConnectionSettingsB\002\030\001\022.\n\016config_" +
-      "changes\030\010 \003(\0132\026.toit.api.ConfigChange\"\031\n" +
-      "\027ConfigureDeviceResponse\"H\n\022ConnectionSe" +
-      "ttings\0222\n\013connections\030\001 \003(\0132\035.toit.model" +
-      ".ConnectionSetting\"+\n\024LookupDevicesReque" +
-      "st\022\023\n\013device_name\030\001 \001(\t\"+\n\025LookupDevices" +
-      "Response\022\022\n\ndevice_ids\030\001 \003(\014\"\206\001\n\022ListDev" +
-      "icesRequest\022\016\n\006offset\030\001 \001(\014\022\r\n\005limit\030\002 \001" +
-      "(\003\022\020\n\010order_by\030\003 \001(\t\022\022\n\norder_desc\030\004 \001(\010" +
-      "\022+\n\006filter\030\005 \001(\0132\033.toit.api.ListDevicesF" +
-      "ilter\"r\n\021ListDevicesFilter\022/\n\014last_updat" +
-      "ed\030\001 \001(\0132\031.google.protobuf.Duration\022\027\n\017o" +
-      "nly_simulators\030\002 \001(\010\022\023\n\013name_prefix\030\003 \001(" +
-      "\t\"H\n\023ListDevicesResponse\022!\n\007devices\030\001 \003(" +
-      "\0132\020.toit.api.Device\022\016\n\006offset\030\002 \001(\014\"\200\001\n\017" +
-      "ListJobsRequest\022\016\n\006offset\030\001 \001(\014\022\r\n\005limit" +
-      "\030\002 \001(\003\022\020\n\010order_by\030\003 \001(\t\022\022\n\norder_desc\030\004" +
-      " \001(\010\022(\n\006filter\030\005 \001(\0132\030.toit.api.ListJobs" +
-      "Filter\"\207\001\n\016ListJobsFilter\022\021\n\tdevice_id\030\001" +
-      " \001(\014\022$\n\006states\030\002 \003(\0162\024.toit.model.JobSta" +
-      "te\022,\n\ngoalstates\030\003 \003(\0162\030.toit.model.JobG" +
-      "oalState\022\016\n\006job_id\030\004 \001(\014\"?\n\020ListJobsResp" +
-      "onse\022\033\n\004jobs\030\001 \003(\0132\r.toit.api.Job\022\016\n\006off" +
-      "set\030\002 \001(\014\"M\n\021InstallJobRequest\022\021\n\tdevice" +
-      "_id\030\001 \001(\014\022%\n\006config\030\002 \001(\0132\025.toit.model.J" +
-      "obConfig\"$\n\022InstallJobResponse\022\016\n\006job_id" +
-      "\030\001 \001(\014\"f\n\023ConfigureJobRequest\022\021\n\tdevice_" +
-      "id\030\001 \001(\014\022\016\n\006job_id\030\002 \001(\014\022,\n\ngoal_state\030\003" +
-      " \001(\0162\030.toit.model.JobGoalState\"\026\n\024Config" +
-      "ureJobResponse\"(\n\023RebootDeviceRequest\022\021\n" +
-      "\tdevice_id\030\001 \001(\014\"\026\n\024RebootDeviceResponse" +
-      "\"\244\001\n\025ReadDeviceLogsRequest\022\021\n\tdevice_id\030" +
-      "\001 \001(\014\022\014\n\002id\030\002 \001(\014H\000\022(\n\002ts\030\003 \001(\0132\032.google" +
-      ".protobuf.TimestampH\000\022\r\n\005limit\030\004 \001(\004\022\017\n\007" +
-      "reverse\030\005 \001(\010\022\026\n\016filter_job_ids\030\006 \003(\014B\010\n" +
-      "\006offset\";\n\026ReadDeviceLogsResponse\022!\n\004log" +
-      "s\030\001 \003(\0132\023.toit.api.DeviceLog\"\216\001\n\027ReadDev" +
-      "iceEventsRequest\022\021\n\tdevice_id\030\001 \001(\014\022\014\n\002i" +
-      "d\030\002 \001(\014H\000\022(\n\002ts\030\003 \001(\0132\032.google.protobuf." +
-      "TimestampH\000\022\r\n\005limit\030\004 \001(\004\022\017\n\007reverse\030\005 " +
-      "\001(\010B\010\n\006offset\"C\n\030ReadDeviceEventsRespons" +
-      "e\022\'\n\006events\030\001 \003(\0132\027.toit.model.DeviceEve" +
-      "nt\"\373\002\n\032GetDevicePartitionsRequest\022\020\n\010sdk" +
-      "_name\030\001 \001(\t\0227\n\004mode\030\002 \001(\0162).toit.api.Get" +
-      "DevicePartitionsRequest.Mode\022H\n\nproperti" +
-      "es\030\003 \003(\01324.toit.api.GetDevicePartitionsR" +
-      "equest.PropertiesEntry\0227\n\021hardware_ident" +
-      "ity\030\004 \001(\0132\034.toit.model.HardwareIdentity\022" +
-      "\r\n\005model\030\005 \001(\t\022\016\n\006qrcode\030\006 \001(\014\0321\n\017Proper" +
-      "tiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
-      "\001\"=\n\004Mode\022\013\n\007UNKNOWN\020\000\022\n\n\006SYSTEM\020\002\022\013\n\007IN" +
-      "ITIAL\020\003\022\017\n\013REPARTITION\020\004\"\256\001\n\033GetDevicePa" +
-      "rtitionsResponse\022C\n\npartitions\030\001 \003(\0132/.t" +
-      "oit.api.GetDevicePartitionsResponse.Part" +
-      "ition\022\021\n\tdevice_id\030\002 \001(\014\0327\n\tPartition\022\014\n" +
-      "\004name\030\001 \001(\t\022\016\n\006offset\030\002 \001(\003\022\014\n\004data\030\003 \001(" +
-      "\014\"F\n\031WatchDeviceChangesRequest\022\021\n\tdevice" +
-      "_id\030\001 \001(\014\022\026\n\016watch_revision\030\002 \001(\003\"\247\001\n\032Wa" +
-      "tchDeviceChangesResponse\022*\n\004type\030\001 \001(\0162\034" +
-      ".toit.model.DeviceChangeType\022\021\n\tdevice_i" +
-      "d\030\002 \001(\014\022\026\n\016watch_revision\030\003 \001(\003\0222\n\016last_" +
-      "connected\030\004 \001(\0132\032.google.protobuf.Timest" +
-      "amp\"S\n\026WatchJobChangesRequest\022\021\n\tdevice_" +
-      "id\030\001 \001(\014\022\016\n\006job_id\030\002 \001(\014\022\026\n\016watch_revisi" +
-      "on\030\003 \001(\003\"}\n\027WatchJobChangesResponse\022\'\n\004t" +
-      "ype\030\001 \001(\0162\031.toit.model.JobChangeType\022\016\n\006" +
-      "job_id\030\002 \001(\014\022\026\n\016watch_revision\030\003 \001(\003\022\021\n\t" +
-      "device_id\030\004 \001(\014\"G\n\032WatchSessionChangesRe" +
-      "quest\022\021\n\tdevice_id\030\001 \001(\014\022\026\n\016watch_revisi" +
-      "on\030\002 \001(\003\"\257\001\n\033WatchSessionChangesResponse" +
-      "\0221\n\004type\030\001 \001(\0162#.toit.model.DeviceSessio" +
-      "nChangeType\022\021\n\tdevice_id\030\002 \001(\014\022\026\n\016watch_" +
-      "revision\030\003 \001(\003\0222\n\016last_connected\030\004 \001(\0132\032" +
-      ".google.protobuf.Timestamp\"\027\n\025GetCurrent" +
-      "TimeRequest\"J\n\026GetCurrentTimeResponse\0220\n" +
-      "\014current_time\030\001 \001(\0132\032.google.protobuf.Ti" +
-      "mestamp\")\n\024UnclaimDeviceRequest\022\021\n\tdevic" +
-      "e_id\030\001 \001(\014\"\027\n\025UnclaimDeviceResponse*f\n\rP" +
-      "rocessStatus\022\032\n\026PROCESS_STATUS_UNKNOWN\020\000" +
-      "\022\032\n\026PROCESS_STATUS_RUNNING\020\001\022\035\n\031PROCESS_" +
-      "STATUS_TERMINATED\020\002*y\n\021ProcessGoalStatus" +
-      "\022\037\n\033PROCESS_GOAL_STATUS_UNKNOWN\020\000\022\037\n\033PRO" +
-      "CESS_GOAL_STATUS_RUNNING\020\001\022\"\n\036PROCESS_GO" +
-      "AL_STATUS_TERMINATED\020\0022\366\n\n\rDeviceService" +
-      "\022F\n\tGetDevice\022\032.toit.api.GetDeviceReques" +
-      "t\032\033.toit.api.GetDeviceResponse\"\000\022X\n\017Conf" +
-      "igureDevice\022 .toit.api.ConfigureDeviceRe" +
-      "quest\032!.toit.api.ConfigureDeviceResponse" +
-      "\"\000\022R\n\rLookupDevices\022\036.toit.api.LookupDev" +
-      "icesRequest\032\037.toit.api.LookupDevicesResp" +
-      "onse\"\000\022L\n\013ListDevices\022\034.toit.api.ListDev" +
-      "icesRequest\032\035.toit.api.ListDevicesRespon" +
-      "se\"\000\022C\n\010ListJobs\022\031.toit.api.ListJobsRequ" +
-      "est\032\032.toit.api.ListJobsResponse\"\000\022I\n\nIns" +
-      "tallJob\022\033.toit.api.InstallJobRequest\032\034.t" +
-      "oit.api.InstallJobResponse\"\000\022O\n\014Configur" +
-      "eJob\022\035.toit.api.ConfigureJobRequest\032\036.to" +
-      "it.api.ConfigureJobResponse\"\000\022R\n\014RebootD" +
-      "evice\022\035.toit.api.RebootDeviceRequest\032\036.t" +
-      "oit.api.RebootDeviceResponse\"\003\210\002\001\022U\n\016Rea" +
-      "dDeviceLogs\022\037.toit.api.ReadDeviceLogsReq" +
-      "uest\032 .toit.api.ReadDeviceLogsResponse\"\000" +
-      "\022[\n\020ReadDeviceEvents\022!.toit.api.ReadDevi" +
-      "ceEventsRequest\032\".toit.api.ReadDeviceEve" +
-      "ntsResponse\"\000\022d\n\023GetDevicePartitions\022$.t" +
-      "oit.api.GetDevicePartitionsRequest\032%.toi" +
-      "t.api.GetDevicePartitionsResponse\"\000\022c\n\022W" +
-      "atchDeviceChanges\022#.toit.api.WatchDevice" +
-      "ChangesRequest\032$.toit.api.WatchDeviceCha" +
-      "ngesResponse\"\0000\001\022Z\n\017WatchJobChanges\022 .to" +
-      "it.api.WatchJobChangesRequest\032!.toit.api" +
-      ".WatchJobChangesResponse\"\0000\001\022f\n\023WatchSes" +
-      "sionChanges\022$.toit.api.WatchSessionChang" +
-      "esRequest\032%.toit.api.WatchSessionChanges" +
-      "Response\"\0000\001\022U\n\016GetCurrentTime\022\037.toit.ap" +
-      "i.GetCurrentTimeRequest\032 .toit.api.GetCu" +
-      "rrentTimeResponse\"\000\022R\n\rUnclaimDevice\022\036.t" +
-      "oit.api.UnclaimDeviceRequest\032\037.toit.api." +
-      "UnclaimDeviceResponse\"\000BK\n\026io.toit.proto" +
-      ".toit.apiB\013DeviceProtoZ$github.com/toitw" +
-      "are/api.git/toit/apib\006proto3"
+      " \001(\t\022\017\n\007version\030\003 \001(\tB\010\n\006config\"a\n\026Confi" +
+      "gureDeviceRequest\022\021\n\tdevice_id\030\001 \001(\014\022.\n\016" +
+      "config_changes\030\010 \003(\0132\026.toit.api.ConfigCh" +
+      "angeJ\004\010\002\020\010\"\031\n\027ConfigureDeviceResponse\"H\n" +
+      "\022ConnectionSettings\0222\n\013connections\030\001 \003(\013" +
+      "2\035.toit.model.ConnectionSetting\"+\n\024Looku" +
+      "pDevicesRequest\022\023\n\013device_name\030\001 \001(\t\"+\n\025" +
+      "LookupDevicesResponse\022\022\n\ndevice_ids\030\001 \003(" +
+      "\014\"\206\001\n\022ListDevicesRequest\022\016\n\006offset\030\001 \001(\014" +
+      "\022\r\n\005limit\030\002 \001(\003\022\020\n\010order_by\030\003 \001(\t\022\022\n\nord" +
+      "er_desc\030\004 \001(\010\022+\n\006filter\030\005 \001(\0132\033.toit.api" +
+      ".ListDevicesFilter\"r\n\021ListDevicesFilter\022" +
+      "/\n\014last_updated\030\001 \001(\0132\031.google.protobuf." +
+      "Duration\022\027\n\017only_simulators\030\002 \001(\010\022\023\n\013nam" +
+      "e_prefix\030\003 \001(\t\"H\n\023ListDevicesResponse\022!\n" +
+      "\007devices\030\001 \003(\0132\020.toit.api.Device\022\016\n\006offs" +
+      "et\030\002 \001(\014\"\200\001\n\017ListJobsRequest\022\016\n\006offset\030\001" +
+      " \001(\014\022\r\n\005limit\030\002 \001(\003\022\020\n\010order_by\030\003 \001(\t\022\022\n" +
+      "\norder_desc\030\004 \001(\010\022(\n\006filter\030\005 \001(\0132\030.toit" +
+      ".api.ListJobsFilter\"\207\001\n\016ListJobsFilter\022\021" +
+      "\n\tdevice_id\030\001 \001(\014\022$\n\006states\030\002 \003(\0162\024.toit" +
+      ".model.JobState\022,\n\ngoalstates\030\003 \003(\0162\030.to" +
+      "it.model.JobGoalState\022\016\n\006job_id\030\004 \001(\014\"?\n" +
+      "\020ListJobsResponse\022\033\n\004jobs\030\001 \003(\0132\r.toit.a" +
+      "pi.Job\022\016\n\006offset\030\002 \001(\014\"M\n\021InstallJobRequ" +
+      "est\022\021\n\tdevice_id\030\001 \001(\014\022%\n\006config\030\002 \001(\0132\025" +
+      ".toit.model.JobConfig\"$\n\022InstallJobRespo" +
+      "nse\022\016\n\006job_id\030\001 \001(\014\"f\n\023ConfigureJobReque" +
+      "st\022\021\n\tdevice_id\030\001 \001(\014\022\016\n\006job_id\030\002 \001(\014\022,\n" +
+      "\ngoal_state\030\003 \001(\0162\030.toit.model.JobGoalSt" +
+      "ate\"\026\n\024ConfigureJobResponse\"(\n\023RebootDev" +
+      "iceRequest\022\021\n\tdevice_id\030\001 \001(\014\"\026\n\024RebootD" +
+      "eviceResponse\"\244\001\n\025ReadDeviceLogsRequest\022" +
+      "\021\n\tdevice_id\030\001 \001(\014\022\014\n\002id\030\002 \001(\014H\000\022(\n\002ts\030\003" +
+      " \001(\0132\032.google.protobuf.TimestampH\000\022\r\n\005li" +
+      "mit\030\004 \001(\004\022\017\n\007reverse\030\005 \001(\010\022\026\n\016filter_job" +
+      "_ids\030\006 \003(\014B\010\n\006offset\";\n\026ReadDeviceLogsRe" +
+      "sponse\022!\n\004logs\030\001 \003(\0132\023.toit.api.DeviceLo" +
+      "g\"\216\001\n\027ReadDeviceEventsRequest\022\021\n\tdevice_" +
+      "id\030\001 \001(\014\022\014\n\002id\030\002 \001(\014H\000\022(\n\002ts\030\003 \001(\0132\032.goo" +
+      "gle.protobuf.TimestampH\000\022\r\n\005limit\030\004 \001(\004\022" +
+      "\017\n\007reverse\030\005 \001(\010B\010\n\006offset\"C\n\030ReadDevice" +
+      "EventsResponse\022\'\n\006events\030\001 \003(\0132\027.toit.mo" +
+      "del.DeviceEvent\"\373\002\n\032GetDevicePartitionsR" +
+      "equest\022\020\n\010sdk_name\030\001 \001(\t\0227\n\004mode\030\002 \001(\0162)" +
+      ".toit.api.GetDevicePartitionsRequest.Mod" +
+      "e\022H\n\nproperties\030\003 \003(\01324.toit.api.GetDevi" +
+      "cePartitionsRequest.PropertiesEntry\0227\n\021h" +
+      "ardware_identity\030\004 \001(\0132\034.toit.model.Hard" +
+      "wareIdentity\022\r\n\005model\030\005 \001(\t\022\016\n\006qrcode\030\006 " +
+      "\001(\014\0321\n\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001\"=\n\004Mode\022\013\n\007UNKNOWN\020\000\022\n\n\006S" +
+      "YSTEM\020\002\022\013\n\007INITIAL\020\003\022\017\n\013REPARTITION\020\004\"\256\001" +
+      "\n\033GetDevicePartitionsResponse\022C\n\npartiti" +
+      "ons\030\001 \003(\0132/.toit.api.GetDevicePartitions" +
+      "Response.Partition\022\021\n\tdevice_id\030\002 \001(\014\0327\n" +
+      "\tPartition\022\014\n\004name\030\001 \001(\t\022\016\n\006offset\030\002 \001(\003" +
+      "\022\014\n\004data\030\003 \001(\014\"F\n\031WatchDeviceChangesRequ" +
+      "est\022\021\n\tdevice_id\030\001 \001(\014\022\026\n\016watch_revision" +
+      "\030\002 \001(\003\"\247\001\n\032WatchDeviceChangesResponse\022*\n" +
+      "\004type\030\001 \001(\0162\034.toit.model.DeviceChangeTyp" +
+      "e\022\021\n\tdevice_id\030\002 \001(\014\022\026\n\016watch_revision\030\003" +
+      " \001(\003\0222\n\016last_connected\030\004 \001(\0132\032.google.pr" +
+      "otobuf.Timestamp\"S\n\026WatchJobChangesReque" +
+      "st\022\021\n\tdevice_id\030\001 \001(\014\022\016\n\006job_id\030\002 \001(\014\022\026\n" +
+      "\016watch_revision\030\003 \001(\003\"}\n\027WatchJobChanges" +
+      "Response\022\'\n\004type\030\001 \001(\0162\031.toit.model.JobC" +
+      "hangeType\022\016\n\006job_id\030\002 \001(\014\022\026\n\016watch_revis" +
+      "ion\030\003 \001(\003\022\021\n\tdevice_id\030\004 \001(\014\"G\n\032WatchSes" +
+      "sionChangesRequest\022\021\n\tdevice_id\030\001 \001(\014\022\026\n" +
+      "\016watch_revision\030\002 \001(\003\"\257\001\n\033WatchSessionCh" +
+      "angesResponse\0221\n\004type\030\001 \001(\0162#.toit.model" +
+      ".DeviceSessionChangeType\022\021\n\tdevice_id\030\002 " +
+      "\001(\014\022\026\n\016watch_revision\030\003 \001(\003\0222\n\016last_conn" +
+      "ected\030\004 \001(\0132\032.google.protobuf.Timestamp\"" +
+      "\027\n\025GetCurrentTimeRequest\"J\n\026GetCurrentTi" +
+      "meResponse\0220\n\014current_time\030\001 \001(\0132\032.googl" +
+      "e.protobuf.Timestamp\")\n\024UnclaimDeviceReq" +
+      "uest\022\021\n\tdevice_id\030\001 \001(\014\"\027\n\025UnclaimDevice" +
+      "Response*f\n\rProcessStatus\022\032\n\026PROCESS_STA" +
+      "TUS_UNKNOWN\020\000\022\032\n\026PROCESS_STATUS_RUNNING\020" +
+      "\001\022\035\n\031PROCESS_STATUS_TERMINATED\020\002*y\n\021Proc" +
+      "essGoalStatus\022\037\n\033PROCESS_GOAL_STATUS_UNK" +
+      "NOWN\020\000\022\037\n\033PROCESS_GOAL_STATUS_RUNNING\020\001\022" +
+      "\"\n\036PROCESS_GOAL_STATUS_TERMINATED\020\0022\366\n\n\r" +
+      "DeviceService\022F\n\tGetDevice\022\032.toit.api.Ge" +
+      "tDeviceRequest\032\033.toit.api.GetDeviceRespo" +
+      "nse\"\000\022X\n\017ConfigureDevice\022 .toit.api.Conf" +
+      "igureDeviceRequest\032!.toit.api.ConfigureD" +
+      "eviceResponse\"\000\022R\n\rLookupDevices\022\036.toit." +
+      "api.LookupDevicesRequest\032\037.toit.api.Look" +
+      "upDevicesResponse\"\000\022L\n\013ListDevices\022\034.toi" +
+      "t.api.ListDevicesRequest\032\035.toit.api.List" +
+      "DevicesResponse\"\000\022C\n\010ListJobs\022\031.toit.api" +
+      ".ListJobsRequest\032\032.toit.api.ListJobsResp" +
+      "onse\"\000\022I\n\nInstallJob\022\033.toit.api.InstallJ" +
+      "obRequest\032\034.toit.api.InstallJobResponse\"" +
+      "\000\022O\n\014ConfigureJob\022\035.toit.api.ConfigureJo" +
+      "bRequest\032\036.toit.api.ConfigureJobResponse" +
+      "\"\000\022R\n\014RebootDevice\022\035.toit.api.RebootDevi" +
+      "ceRequest\032\036.toit.api.RebootDeviceRespons" +
+      "e\"\003\210\002\001\022U\n\016ReadDeviceLogs\022\037.toit.api.Read" +
+      "DeviceLogsRequest\032 .toit.api.ReadDeviceL" +
+      "ogsResponse\"\000\022[\n\020ReadDeviceEvents\022!.toit" +
+      ".api.ReadDeviceEventsRequest\032\".toit.api." +
+      "ReadDeviceEventsResponse\"\000\022d\n\023GetDeviceP" +
+      "artitions\022$.toit.api.GetDevicePartitions" +
+      "Request\032%.toit.api.GetDevicePartitionsRe" +
+      "sponse\"\000\022c\n\022WatchDeviceChanges\022#.toit.ap" +
+      "i.WatchDeviceChangesRequest\032$.toit.api.W" +
+      "atchDeviceChangesResponse\"\0000\001\022Z\n\017WatchJo" +
+      "bChanges\022 .toit.api.WatchJobChangesReque" +
+      "st\032!.toit.api.WatchJobChangesResponse\"\0000" +
+      "\001\022f\n\023WatchSessionChanges\022$.toit.api.Watc" +
+      "hSessionChangesRequest\032%.toit.api.WatchS" +
+      "essionChangesResponse\"\0000\001\022U\n\016GetCurrentT" +
+      "ime\022\037.toit.api.GetCurrentTimeRequest\032 .t" +
+      "oit.api.GetCurrentTimeResponse\"\000\022R\n\rUncl" +
+      "aimDevice\022\036.toit.api.UnclaimDeviceReques" +
+      "t\032\037.toit.api.UnclaimDeviceResponse\"\000BK\n\026" +
+      "io.toit.proto.toit.apiB\013DeviceProtoZ$git" +
+      "hub.com/toitware/api.git/toit/apib\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -43060,7 +42011,7 @@ public final class DeviceProto {
     internal_static_toit_api_ConfigureDeviceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_ConfigureDeviceRequest_descriptor,
-        new java.lang.String[] { "DeviceId", "Name", "Sdk", "BrokerSettings", "MaxOffline", "Model", "ConnectionSettings", "ConfigChanges", });
+        new java.lang.String[] { "DeviceId", "ConfigChanges", });
     internal_static_toit_api_ConfigureDeviceResponse_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_toit_api_ConfigureDeviceResponse_fieldAccessorTable = new
