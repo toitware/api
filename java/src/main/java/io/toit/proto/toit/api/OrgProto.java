@@ -9688,6 +9688,2903 @@ public final class OrgProto {
 
   }
 
+  public interface UpdateOrganizationRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.UpdateOrganizationRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string city = 1;</code>
+     * @return The city.
+     */
+    java.lang.String getCity();
+    /**
+     * <code>string city = 1;</code>
+     * @return The bytes for city.
+     */
+    com.google.protobuf.ByteString
+        getCityBytes();
+
+    /**
+     * <code>string country = 2;</code>
+     * @return The country.
+     */
+    java.lang.String getCountry();
+    /**
+     * <code>string country = 2;</code>
+     * @return The bytes for country.
+     */
+    com.google.protobuf.ByteString
+        getCountryBytes();
+
+    /**
+     * <code>string phone_number = 3;</code>
+     * @return The phoneNumber.
+     */
+    java.lang.String getPhoneNumber();
+    /**
+     * <code>string phone_number = 3;</code>
+     * @return The bytes for phoneNumber.
+     */
+    com.google.protobuf.ByteString
+        getPhoneNumberBytes();
+
+    /**
+     * <code>string cvr_number = 4;</code>
+     * @return The cvrNumber.
+     */
+    java.lang.String getCvrNumber();
+    /**
+     * <code>string cvr_number = 4;</code>
+     * @return The bytes for cvrNumber.
+     */
+    com.google.protobuf.ByteString
+        getCvrNumberBytes();
+  }
+  /**
+   * Protobuf type {@code toit.api.UpdateOrganizationRequest}
+   */
+  public  static final class UpdateOrganizationRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.api.UpdateOrganizationRequest)
+      UpdateOrganizationRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateOrganizationRequest.newBuilder() to construct.
+    private UpdateOrganizationRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateOrganizationRequest() {
+      city_ = "";
+      country_ = "";
+      phoneNumber_ = "";
+      cvrNumber_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateOrganizationRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateOrganizationRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              city_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              country_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              phoneNumber_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              cvrNumber_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_UpdateOrganizationRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_UpdateOrganizationRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest.class, io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest.Builder.class);
+    }
+
+    public static final int CITY_FIELD_NUMBER = 1;
+    private volatile java.lang.Object city_;
+    /**
+     * <code>string city = 1;</code>
+     * @return The city.
+     */
+    public java.lang.String getCity() {
+      java.lang.Object ref = city_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        city_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string city = 1;</code>
+     * @return The bytes for city.
+     */
+    public com.google.protobuf.ByteString
+        getCityBytes() {
+      java.lang.Object ref = city_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        city_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COUNTRY_FIELD_NUMBER = 2;
+    private volatile java.lang.Object country_;
+    /**
+     * <code>string country = 2;</code>
+     * @return The country.
+     */
+    public java.lang.String getCountry() {
+      java.lang.Object ref = country_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        country_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string country = 2;</code>
+     * @return The bytes for country.
+     */
+    public com.google.protobuf.ByteString
+        getCountryBytes() {
+      java.lang.Object ref = country_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        country_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PHONE_NUMBER_FIELD_NUMBER = 3;
+    private volatile java.lang.Object phoneNumber_;
+    /**
+     * <code>string phone_number = 3;</code>
+     * @return The phoneNumber.
+     */
+    public java.lang.String getPhoneNumber() {
+      java.lang.Object ref = phoneNumber_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        phoneNumber_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string phone_number = 3;</code>
+     * @return The bytes for phoneNumber.
+     */
+    public com.google.protobuf.ByteString
+        getPhoneNumberBytes() {
+      java.lang.Object ref = phoneNumber_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        phoneNumber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CVR_NUMBER_FIELD_NUMBER = 4;
+    private volatile java.lang.Object cvrNumber_;
+    /**
+     * <code>string cvr_number = 4;</code>
+     * @return The cvrNumber.
+     */
+    public java.lang.String getCvrNumber() {
+      java.lang.Object ref = cvrNumber_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cvrNumber_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string cvr_number = 4;</code>
+     * @return The bytes for cvrNumber.
+     */
+    public com.google.protobuf.ByteString
+        getCvrNumberBytes() {
+      java.lang.Object ref = cvrNumber_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cvrNumber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getCityBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, city_);
+      }
+      if (!getCountryBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, country_);
+      }
+      if (!getPhoneNumberBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, phoneNumber_);
+      }
+      if (!getCvrNumberBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, cvrNumber_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getCityBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, city_);
+      }
+      if (!getCountryBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, country_);
+      }
+      if (!getPhoneNumberBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, phoneNumber_);
+      }
+      if (!getCvrNumberBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, cvrNumber_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest other = (io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest) obj;
+
+      if (!getCity()
+          .equals(other.getCity())) return false;
+      if (!getCountry()
+          .equals(other.getCountry())) return false;
+      if (!getPhoneNumber()
+          .equals(other.getPhoneNumber())) return false;
+      if (!getCvrNumber()
+          .equals(other.getCvrNumber())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CITY_FIELD_NUMBER;
+      hash = (53 * hash) + getCity().hashCode();
+      hash = (37 * hash) + COUNTRY_FIELD_NUMBER;
+      hash = (53 * hash) + getCountry().hashCode();
+      hash = (37 * hash) + PHONE_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getPhoneNumber().hashCode();
+      hash = (37 * hash) + CVR_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getCvrNumber().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.api.UpdateOrganizationRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.api.UpdateOrganizationRequest)
+        io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_UpdateOrganizationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_UpdateOrganizationRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest.class, io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        city_ = "";
+
+        country_ = "";
+
+        phoneNumber_ = "";
+
+        cvrNumber_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_UpdateOrganizationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest getDefaultInstanceForType() {
+        return io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest build() {
+        io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest buildPartial() {
+        io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest result = new io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest(this);
+        result.city_ = city_;
+        result.country_ = country_;
+        result.phoneNumber_ = phoneNumber_;
+        result.cvrNumber_ = cvrNumber_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest) {
+          return mergeFrom((io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest other) {
+        if (other == io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest.getDefaultInstance()) return this;
+        if (!other.getCity().isEmpty()) {
+          city_ = other.city_;
+          onChanged();
+        }
+        if (!other.getCountry().isEmpty()) {
+          country_ = other.country_;
+          onChanged();
+        }
+        if (!other.getPhoneNumber().isEmpty()) {
+          phoneNumber_ = other.phoneNumber_;
+          onChanged();
+        }
+        if (!other.getCvrNumber().isEmpty()) {
+          cvrNumber_ = other.cvrNumber_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object city_ = "";
+      /**
+       * <code>string city = 1;</code>
+       * @return The city.
+       */
+      public java.lang.String getCity() {
+        java.lang.Object ref = city_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          city_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string city = 1;</code>
+       * @return The bytes for city.
+       */
+      public com.google.protobuf.ByteString
+          getCityBytes() {
+        java.lang.Object ref = city_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          city_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string city = 1;</code>
+       * @param value The city to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCity(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        city_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string city = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCity() {
+        
+        city_ = getDefaultInstance().getCity();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string city = 1;</code>
+       * @param value The bytes for city to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        city_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object country_ = "";
+      /**
+       * <code>string country = 2;</code>
+       * @return The country.
+       */
+      public java.lang.String getCountry() {
+        java.lang.Object ref = country_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          country_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string country = 2;</code>
+       * @return The bytes for country.
+       */
+      public com.google.protobuf.ByteString
+          getCountryBytes() {
+        java.lang.Object ref = country_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          country_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string country = 2;</code>
+       * @param value The country to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCountry(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        country_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string country = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCountry() {
+        
+        country_ = getDefaultInstance().getCountry();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string country = 2;</code>
+       * @param value The bytes for country to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCountryBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        country_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object phoneNumber_ = "";
+      /**
+       * <code>string phone_number = 3;</code>
+       * @return The phoneNumber.
+       */
+      public java.lang.String getPhoneNumber() {
+        java.lang.Object ref = phoneNumber_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          phoneNumber_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string phone_number = 3;</code>
+       * @return The bytes for phoneNumber.
+       */
+      public com.google.protobuf.ByteString
+          getPhoneNumberBytes() {
+        java.lang.Object ref = phoneNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          phoneNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string phone_number = 3;</code>
+       * @param value The phoneNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPhoneNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        phoneNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string phone_number = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPhoneNumber() {
+        
+        phoneNumber_ = getDefaultInstance().getPhoneNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string phone_number = 3;</code>
+       * @param value The bytes for phoneNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPhoneNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        phoneNumber_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object cvrNumber_ = "";
+      /**
+       * <code>string cvr_number = 4;</code>
+       * @return The cvrNumber.
+       */
+      public java.lang.String getCvrNumber() {
+        java.lang.Object ref = cvrNumber_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cvrNumber_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string cvr_number = 4;</code>
+       * @return The bytes for cvrNumber.
+       */
+      public com.google.protobuf.ByteString
+          getCvrNumberBytes() {
+        java.lang.Object ref = cvrNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cvrNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string cvr_number = 4;</code>
+       * @param value The cvrNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCvrNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        cvrNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string cvr_number = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCvrNumber() {
+        
+        cvrNumber_ = getDefaultInstance().getCvrNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string cvr_number = 4;</code>
+       * @param value The bytes for cvrNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCvrNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        cvrNumber_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.api.UpdateOrganizationRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.api.UpdateOrganizationRequest)
+    private static final io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest();
+    }
+
+    public static io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateOrganizationRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateOrganizationRequest>() {
+      @java.lang.Override
+      public UpdateOrganizationRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateOrganizationRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateOrganizationRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateOrganizationRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateOrganizationResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.UpdateOrganizationResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code toit.api.UpdateOrganizationResponse}
+   */
+  public  static final class UpdateOrganizationResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.api.UpdateOrganizationResponse)
+      UpdateOrganizationResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateOrganizationResponse.newBuilder() to construct.
+    private UpdateOrganizationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateOrganizationResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateOrganizationResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateOrganizationResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_UpdateOrganizationResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_UpdateOrganizationResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse.class, io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse other = (io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.api.UpdateOrganizationResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.api.UpdateOrganizationResponse)
+        io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_UpdateOrganizationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_UpdateOrganizationResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse.class, io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_UpdateOrganizationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse getDefaultInstanceForType() {
+        return io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse build() {
+        io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse buildPartial() {
+        io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse result = new io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse) {
+          return mergeFrom((io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse other) {
+        if (other == io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.api.UpdateOrganizationResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.api.UpdateOrganizationResponse)
+    private static final io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse();
+    }
+
+    public static io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateOrganizationResponse>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateOrganizationResponse>() {
+      @java.lang.Override
+      public UpdateOrganizationResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateOrganizationResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateOrganizationResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateOrganizationResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdatePaymentRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.UpdatePaymentRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 card_number = 1;</code>
+     * @return The cardNumber.
+     */
+    long getCardNumber();
+
+    /**
+     * <code>.google.protobuf.Timestamp expiry = 2;</code>
+     * @return Whether the expiry field is set.
+     */
+    boolean hasExpiry();
+    /**
+     * <code>.google.protobuf.Timestamp expiry = 2;</code>
+     * @return The expiry.
+     */
+    com.google.protobuf.Timestamp getExpiry();
+    /**
+     * <code>.google.protobuf.Timestamp expiry = 2;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getExpiryOrBuilder();
+
+    /**
+     * <code>int32 cvc = 3;</code>
+     * @return The cvc.
+     */
+    int getCvc();
+
+    /**
+     * <code>string currency = 4;</code>
+     * @return The currency.
+     */
+    java.lang.String getCurrency();
+    /**
+     * <code>string currency = 4;</code>
+     * @return The bytes for currency.
+     */
+    com.google.protobuf.ByteString
+        getCurrencyBytes();
+
+    /**
+     * <code>string name_on_card = 5;</code>
+     * @return The nameOnCard.
+     */
+    java.lang.String getNameOnCard();
+    /**
+     * <code>string name_on_card = 5;</code>
+     * @return The bytes for nameOnCard.
+     */
+    com.google.protobuf.ByteString
+        getNameOnCardBytes();
+  }
+  /**
+   * Protobuf type {@code toit.api.UpdatePaymentRequest}
+   */
+  public  static final class UpdatePaymentRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.api.UpdatePaymentRequest)
+      UpdatePaymentRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdatePaymentRequest.newBuilder() to construct.
+    private UpdatePaymentRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdatePaymentRequest() {
+      currency_ = "";
+      nameOnCard_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdatePaymentRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdatePaymentRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              cardNumber_ = input.readUInt64();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (expiry_ != null) {
+                subBuilder = expiry_.toBuilder();
+              }
+              expiry_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(expiry_);
+                expiry_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 24: {
+
+              cvc_ = input.readInt32();
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              currency_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nameOnCard_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_UpdatePaymentRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_UpdatePaymentRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest.class, io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest.Builder.class);
+    }
+
+    public static final int CARD_NUMBER_FIELD_NUMBER = 1;
+    private long cardNumber_;
+    /**
+     * <code>uint64 card_number = 1;</code>
+     * @return The cardNumber.
+     */
+    public long getCardNumber() {
+      return cardNumber_;
+    }
+
+    public static final int EXPIRY_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp expiry_;
+    /**
+     * <code>.google.protobuf.Timestamp expiry = 2;</code>
+     * @return Whether the expiry field is set.
+     */
+    public boolean hasExpiry() {
+      return expiry_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp expiry = 2;</code>
+     * @return The expiry.
+     */
+    public com.google.protobuf.Timestamp getExpiry() {
+      return expiry_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiry_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp expiry = 2;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getExpiryOrBuilder() {
+      return getExpiry();
+    }
+
+    public static final int CVC_FIELD_NUMBER = 3;
+    private int cvc_;
+    /**
+     * <code>int32 cvc = 3;</code>
+     * @return The cvc.
+     */
+    public int getCvc() {
+      return cvc_;
+    }
+
+    public static final int CURRENCY_FIELD_NUMBER = 4;
+    private volatile java.lang.Object currency_;
+    /**
+     * <code>string currency = 4;</code>
+     * @return The currency.
+     */
+    public java.lang.String getCurrency() {
+      java.lang.Object ref = currency_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        currency_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string currency = 4;</code>
+     * @return The bytes for currency.
+     */
+    public com.google.protobuf.ByteString
+        getCurrencyBytes() {
+      java.lang.Object ref = currency_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        currency_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_ON_CARD_FIELD_NUMBER = 5;
+    private volatile java.lang.Object nameOnCard_;
+    /**
+     * <code>string name_on_card = 5;</code>
+     * @return The nameOnCard.
+     */
+    public java.lang.String getNameOnCard() {
+      java.lang.Object ref = nameOnCard_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nameOnCard_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name_on_card = 5;</code>
+     * @return The bytes for nameOnCard.
+     */
+    public com.google.protobuf.ByteString
+        getNameOnCardBytes() {
+      java.lang.Object ref = nameOnCard_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nameOnCard_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (cardNumber_ != 0L) {
+        output.writeUInt64(1, cardNumber_);
+      }
+      if (expiry_ != null) {
+        output.writeMessage(2, getExpiry());
+      }
+      if (cvc_ != 0) {
+        output.writeInt32(3, cvc_);
+      }
+      if (!getCurrencyBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, currency_);
+      }
+      if (!getNameOnCardBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, nameOnCard_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (cardNumber_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, cardNumber_);
+      }
+      if (expiry_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getExpiry());
+      }
+      if (cvc_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, cvc_);
+      }
+      if (!getCurrencyBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, currency_);
+      }
+      if (!getNameOnCardBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, nameOnCard_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest other = (io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest) obj;
+
+      if (getCardNumber()
+          != other.getCardNumber()) return false;
+      if (hasExpiry() != other.hasExpiry()) return false;
+      if (hasExpiry()) {
+        if (!getExpiry()
+            .equals(other.getExpiry())) return false;
+      }
+      if (getCvc()
+          != other.getCvc()) return false;
+      if (!getCurrency()
+          .equals(other.getCurrency())) return false;
+      if (!getNameOnCard()
+          .equals(other.getNameOnCard())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CARD_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCardNumber());
+      if (hasExpiry()) {
+        hash = (37 * hash) + EXPIRY_FIELD_NUMBER;
+        hash = (53 * hash) + getExpiry().hashCode();
+      }
+      hash = (37 * hash) + CVC_FIELD_NUMBER;
+      hash = (53 * hash) + getCvc();
+      hash = (37 * hash) + CURRENCY_FIELD_NUMBER;
+      hash = (53 * hash) + getCurrency().hashCode();
+      hash = (37 * hash) + NAME_ON_CARD_FIELD_NUMBER;
+      hash = (53 * hash) + getNameOnCard().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.api.UpdatePaymentRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.api.UpdatePaymentRequest)
+        io.toit.proto.toit.api.OrgProto.UpdatePaymentRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_UpdatePaymentRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_UpdatePaymentRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest.class, io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        cardNumber_ = 0L;
+
+        if (expiryBuilder_ == null) {
+          expiry_ = null;
+        } else {
+          expiry_ = null;
+          expiryBuilder_ = null;
+        }
+        cvc_ = 0;
+
+        currency_ = "";
+
+        nameOnCard_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_UpdatePaymentRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest getDefaultInstanceForType() {
+        return io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest build() {
+        io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest buildPartial() {
+        io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest result = new io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest(this);
+        result.cardNumber_ = cardNumber_;
+        if (expiryBuilder_ == null) {
+          result.expiry_ = expiry_;
+        } else {
+          result.expiry_ = expiryBuilder_.build();
+        }
+        result.cvc_ = cvc_;
+        result.currency_ = currency_;
+        result.nameOnCard_ = nameOnCard_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest) {
+          return mergeFrom((io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest other) {
+        if (other == io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest.getDefaultInstance()) return this;
+        if (other.getCardNumber() != 0L) {
+          setCardNumber(other.getCardNumber());
+        }
+        if (other.hasExpiry()) {
+          mergeExpiry(other.getExpiry());
+        }
+        if (other.getCvc() != 0) {
+          setCvc(other.getCvc());
+        }
+        if (!other.getCurrency().isEmpty()) {
+          currency_ = other.currency_;
+          onChanged();
+        }
+        if (!other.getNameOnCard().isEmpty()) {
+          nameOnCard_ = other.nameOnCard_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long cardNumber_ ;
+      /**
+       * <code>uint64 card_number = 1;</code>
+       * @return The cardNumber.
+       */
+      public long getCardNumber() {
+        return cardNumber_;
+      }
+      /**
+       * <code>uint64 card_number = 1;</code>
+       * @param value The cardNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCardNumber(long value) {
+        
+        cardNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 card_number = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCardNumber() {
+        
+        cardNumber_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp expiry_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> expiryBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp expiry = 2;</code>
+       * @return Whether the expiry field is set.
+       */
+      public boolean hasExpiry() {
+        return expiryBuilder_ != null || expiry_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp expiry = 2;</code>
+       * @return The expiry.
+       */
+      public com.google.protobuf.Timestamp getExpiry() {
+        if (expiryBuilder_ == null) {
+          return expiry_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiry_;
+        } else {
+          return expiryBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp expiry = 2;</code>
+       */
+      public Builder setExpiry(com.google.protobuf.Timestamp value) {
+        if (expiryBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          expiry_ = value;
+          onChanged();
+        } else {
+          expiryBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp expiry = 2;</code>
+       */
+      public Builder setExpiry(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (expiryBuilder_ == null) {
+          expiry_ = builderForValue.build();
+          onChanged();
+        } else {
+          expiryBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp expiry = 2;</code>
+       */
+      public Builder mergeExpiry(com.google.protobuf.Timestamp value) {
+        if (expiryBuilder_ == null) {
+          if (expiry_ != null) {
+            expiry_ =
+              com.google.protobuf.Timestamp.newBuilder(expiry_).mergeFrom(value).buildPartial();
+          } else {
+            expiry_ = value;
+          }
+          onChanged();
+        } else {
+          expiryBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp expiry = 2;</code>
+       */
+      public Builder clearExpiry() {
+        if (expiryBuilder_ == null) {
+          expiry_ = null;
+          onChanged();
+        } else {
+          expiry_ = null;
+          expiryBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp expiry = 2;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getExpiryBuilder() {
+        
+        onChanged();
+        return getExpiryFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp expiry = 2;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getExpiryOrBuilder() {
+        if (expiryBuilder_ != null) {
+          return expiryBuilder_.getMessageOrBuilder();
+        } else {
+          return expiry_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : expiry_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp expiry = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getExpiryFieldBuilder() {
+        if (expiryBuilder_ == null) {
+          expiryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getExpiry(),
+                  getParentForChildren(),
+                  isClean());
+          expiry_ = null;
+        }
+        return expiryBuilder_;
+      }
+
+      private int cvc_ ;
+      /**
+       * <code>int32 cvc = 3;</code>
+       * @return The cvc.
+       */
+      public int getCvc() {
+        return cvc_;
+      }
+      /**
+       * <code>int32 cvc = 3;</code>
+       * @param value The cvc to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCvc(int value) {
+        
+        cvc_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 cvc = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCvc() {
+        
+        cvc_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object currency_ = "";
+      /**
+       * <code>string currency = 4;</code>
+       * @return The currency.
+       */
+      public java.lang.String getCurrency() {
+        java.lang.Object ref = currency_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          currency_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string currency = 4;</code>
+       * @return The bytes for currency.
+       */
+      public com.google.protobuf.ByteString
+          getCurrencyBytes() {
+        java.lang.Object ref = currency_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          currency_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string currency = 4;</code>
+       * @param value The currency to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurrency(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        currency_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string currency = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurrency() {
+        
+        currency_ = getDefaultInstance().getCurrency();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string currency = 4;</code>
+       * @param value The bytes for currency to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurrencyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        currency_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object nameOnCard_ = "";
+      /**
+       * <code>string name_on_card = 5;</code>
+       * @return The nameOnCard.
+       */
+      public java.lang.String getNameOnCard() {
+        java.lang.Object ref = nameOnCard_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nameOnCard_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name_on_card = 5;</code>
+       * @return The bytes for nameOnCard.
+       */
+      public com.google.protobuf.ByteString
+          getNameOnCardBytes() {
+        java.lang.Object ref = nameOnCard_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nameOnCard_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name_on_card = 5;</code>
+       * @param value The nameOnCard to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameOnCard(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nameOnCard_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name_on_card = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNameOnCard() {
+        
+        nameOnCard_ = getDefaultInstance().getNameOnCard();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name_on_card = 5;</code>
+       * @param value The bytes for nameOnCard to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameOnCardBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nameOnCard_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.api.UpdatePaymentRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.api.UpdatePaymentRequest)
+    private static final io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest();
+    }
+
+    public static io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdatePaymentRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UpdatePaymentRequest>() {
+      @java.lang.Override
+      public UpdatePaymentRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdatePaymentRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdatePaymentRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdatePaymentRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdatePaymentResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.UpdatePaymentResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code toit.api.UpdatePaymentResponse}
+   */
+  public  static final class UpdatePaymentResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.api.UpdatePaymentResponse)
+      UpdatePaymentResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdatePaymentResponse.newBuilder() to construct.
+    private UpdatePaymentResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdatePaymentResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdatePaymentResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdatePaymentResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_UpdatePaymentResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_UpdatePaymentResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse.class, io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse other = (io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.api.UpdatePaymentResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.api.UpdatePaymentResponse)
+        io.toit.proto.toit.api.OrgProto.UpdatePaymentResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_UpdatePaymentResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_UpdatePaymentResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse.class, io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_UpdatePaymentResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse getDefaultInstanceForType() {
+        return io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse build() {
+        io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse buildPartial() {
+        io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse result = new io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse) {
+          return mergeFrom((io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse other) {
+        if (other == io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.api.UpdatePaymentResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.api.UpdatePaymentResponse)
+    private static final io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse();
+    }
+
+    public static io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdatePaymentResponse>
+        PARSER = new com.google.protobuf.AbstractParser<UpdatePaymentResponse>() {
+      @java.lang.Override
+      public UpdatePaymentResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdatePaymentResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdatePaymentResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdatePaymentResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_toit_api_ListUsersRequest_descriptor;
   private static final 
@@ -9768,6 +12665,26 @@ public final class OrgProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_toit_api_GetAPIKeySecretResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_UpdateOrganizationRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_UpdateOrganizationRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_UpdateOrganizationResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_UpdateOrganizationResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_UpdatePaymentRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_UpdatePaymentRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_UpdatePaymentResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_UpdatePaymentResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -9778,51 +12695,64 @@ public final class OrgProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\033toit/api/organization.proto\022\010toit.api\032" +
-      "\035toit/model/organization.proto\"W\n\020ListUs" +
-      "ersRequest\022\016\n\006offset\030\001 \001(\014\022\r\n\005limit\030\002 \001(" +
-      "\003\022\020\n\010order_by\030\003 \001(\t\022\022\n\norder_desc\030\004 \001(\010\"" +
-      "D\n\021ListUsersResponse\022\037\n\005users\030\001 \003(\0132\020.to" +
-      "it.model.User\022\016\n\006offset\030\002 \001(\014\"\"\n\021CreateU" +
-      "serRequest\022\r\n\005email\030\001 \001(\t\"4\n\022CreateUserR" +
-      "esponse\022\036\n\004user\030\001 \001(\0132\020.toit.model.User\"" +
-      "\"\n\021DeleteUserRequest\022\r\n\005email\030\001 \001(\t\"\024\n\022D" +
-      "eleteUserResponse\"+\n\016GetUserRequest\022\n\n\002i" +
-      "d\030\001 \001(\014\022\r\n\005email\030\002 \001(\t\"1\n\017GetUserRespons" +
-      "e\022\036\n\004user\030\001 \001(\0132\020.toit.model.User\"#\n\023Cre" +
-      "ateAPIKeyRequest\022\014\n\004name\030\001 \001(\t\";\n\024Create" +
-      "APIKeyResponse\022#\n\007api_key\030\001 \001(\0132\022.toit.m" +
-      "odel.APIKey\"Y\n\022ListAPIKeysRequest\022\016\n\006off" +
-      "set\030\001 \001(\014\022\r\n\005limit\030\002 \001(\003\022\020\n\010order_by\030\003 \001" +
-      "(\t\022\022\n\norder_desc\030\004 \001(\010\"J\n\023ListAPIKeysRes" +
-      "ponse\022#\n\007api_key\030\001 \001(\0132\022.toit.model.APIK" +
-      "ey\022\016\n\006offset\030\002 \001(\014\"!\n\023DeleteAPIKeyReques" +
-      "t\022\n\n\002id\030\001 \001(\014\"\026\n\024DeleteAPIKeyResponse\"$\n" +
-      "\026GetAPIKeySecretRequest\022\n\n\002id\030\001 \001(\014\")\n\027G" +
-      "etAPIKeySecretResponse\022\016\n\006secret\030\001 \001(\t2\201" +
-      "\005\n\023OrganizationService\022@\n\007GetUser\022\030.toit" +
-      ".api.GetUserRequest\032\031.toit.api.GetUserRe" +
-      "sponse\"\000\022F\n\tListUsers\022\032.toit.api.ListUse" +
-      "rsRequest\032\033.toit.api.ListUsersResponse\"\000" +
-      "\022I\n\nCreateUser\022\033.toit.api.CreateUserRequ" +
-      "est\032\034.toit.api.CreateUserResponse\"\000\022I\n\nD" +
-      "eleteUser\022\033.toit.api.DeleteUserRequest\032\034" +
-      ".toit.api.DeleteUserResponse\"\000\022O\n\014Create" +
-      "APIKey\022\035.toit.api.CreateAPIKeyRequest\032\036." +
-      "toit.api.CreateAPIKeyResponse\"\000\022N\n\013ListA" +
-      "PIKeys\022\034.toit.api.ListAPIKeysRequest\032\035.t" +
-      "oit.api.ListAPIKeysResponse\"\0000\001\022O\n\014Delet" +
-      "eAPIKey\022\035.toit.api.DeleteAPIKeyRequest\032\036" +
-      ".toit.api.DeleteAPIKeyResponse\"\000\022X\n\017GetA" +
-      "PIKeySecret\022 .toit.api.GetAPIKeySecretRe" +
-      "quest\032!.toit.api.GetAPIKeySecretResponse" +
-      "\"\000BH\n\026io.toit.proto.toit.apiB\010OrgProtoZ$" +
-      "github.com/toitware/api.git/toit/apib\006pr" +
-      "oto3"
+      "\035toit/model/organization.proto\032\037google/p" +
+      "rotobuf/timestamp.proto\"W\n\020ListUsersRequ" +
+      "est\022\016\n\006offset\030\001 \001(\014\022\r\n\005limit\030\002 \001(\003\022\020\n\010or" +
+      "der_by\030\003 \001(\t\022\022\n\norder_desc\030\004 \001(\010\"D\n\021List" +
+      "UsersResponse\022\037\n\005users\030\001 \003(\0132\020.toit.mode" +
+      "l.User\022\016\n\006offset\030\002 \001(\014\"\"\n\021CreateUserRequ" +
+      "est\022\r\n\005email\030\001 \001(\t\"4\n\022CreateUserResponse" +
+      "\022\036\n\004user\030\001 \001(\0132\020.toit.model.User\"\"\n\021Dele" +
+      "teUserRequest\022\r\n\005email\030\001 \001(\t\"\024\n\022DeleteUs" +
+      "erResponse\"+\n\016GetUserRequest\022\n\n\002id\030\001 \001(\014" +
+      "\022\r\n\005email\030\002 \001(\t\"1\n\017GetUserResponse\022\036\n\004us" +
+      "er\030\001 \001(\0132\020.toit.model.User\"#\n\023CreateAPIK" +
+      "eyRequest\022\014\n\004name\030\001 \001(\t\";\n\024CreateAPIKeyR" +
+      "esponse\022#\n\007api_key\030\001 \001(\0132\022.toit.model.AP" +
+      "IKey\"Y\n\022ListAPIKeysRequest\022\016\n\006offset\030\001 \001" +
+      "(\014\022\r\n\005limit\030\002 \001(\003\022\020\n\010order_by\030\003 \001(\t\022\022\n\no" +
+      "rder_desc\030\004 \001(\010\"J\n\023ListAPIKeysResponse\022#" +
+      "\n\007api_key\030\001 \001(\0132\022.toit.model.APIKey\022\016\n\006o" +
+      "ffset\030\002 \001(\014\"!\n\023DeleteAPIKeyRequest\022\n\n\002id" +
+      "\030\001 \001(\014\"\026\n\024DeleteAPIKeyResponse\"$\n\026GetAPI" +
+      "KeySecretRequest\022\n\n\002id\030\001 \001(\014\")\n\027GetAPIKe" +
+      "ySecretResponse\022\016\n\006secret\030\001 \001(\t\"d\n\031Updat" +
+      "eOrganizationRequest\022\014\n\004city\030\001 \001(\t\022\017\n\007co" +
+      "untry\030\002 \001(\t\022\024\n\014phone_number\030\003 \001(\t\022\022\n\ncvr" +
+      "_number\030\004 \001(\t\"\034\n\032UpdateOrganizationRespo" +
+      "nse\"\214\001\n\024UpdatePaymentRequest\022\023\n\013card_num" +
+      "ber\030\001 \001(\004\022*\n\006expiry\030\002 \001(\0132\032.google.proto" +
+      "buf.Timestamp\022\013\n\003cvc\030\003 \001(\005\022\020\n\010currency\030\004" +
+      " \001(\t\022\024\n\014name_on_card\030\005 \001(\t\"\027\n\025UpdatePaym" +
+      "entResponse2\270\006\n\023OrganizationService\022@\n\007G" +
+      "etUser\022\030.toit.api.GetUserRequest\032\031.toit." +
+      "api.GetUserResponse\"\000\022F\n\tListUsers\022\032.toi" +
+      "t.api.ListUsersRequest\032\033.toit.api.ListUs" +
+      "ersResponse\"\000\022I\n\nCreateUser\022\033.toit.api.C" +
+      "reateUserRequest\032\034.toit.api.CreateUserRe" +
+      "sponse\"\000\022I\n\nDeleteUser\022\033.toit.api.Delete" +
+      "UserRequest\032\034.toit.api.DeleteUserRespons" +
+      "e\"\000\022O\n\014CreateAPIKey\022\035.toit.api.CreateAPI" +
+      "KeyRequest\032\036.toit.api.CreateAPIKeyRespon" +
+      "se\"\000\022N\n\013ListAPIKeys\022\034.toit.api.ListAPIKe" +
+      "ysRequest\032\035.toit.api.ListAPIKeysResponse" +
+      "\"\0000\001\022O\n\014DeleteAPIKey\022\035.toit.api.DeleteAP" +
+      "IKeyRequest\032\036.toit.api.DeleteAPIKeyRespo" +
+      "nse\"\000\022X\n\017GetAPIKeySecret\022 .toit.api.GetA" +
+      "PIKeySecretRequest\032!.toit.api.GetAPIKeyS" +
+      "ecretResponse\"\000\022a\n\022UpdateOrganization\022#." +
+      "toit.api.UpdateOrganizationRequest\032$.toi" +
+      "t.api.UpdateOrganizationResponse\"\000\022R\n\rUp" +
+      "datePayment\022\036.toit.api.UpdatePaymentRequ" +
+      "est\032\037.toit.api.UpdatePaymentResponse\"\000BH" +
+      "\n\026io.toit.proto.toit.apiB\010OrgProtoZ$gith" +
+      "ub.com/toitware/api.git/toit/apib\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           io.toit.proto.toit.model.OrganizationProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_toit_api_ListUsersRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -9920,7 +12850,32 @@ public final class OrgProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_GetAPIKeySecretResponse_descriptor,
         new java.lang.String[] { "Secret", });
+    internal_static_toit_api_UpdateOrganizationRequest_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_toit_api_UpdateOrganizationRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_UpdateOrganizationRequest_descriptor,
+        new java.lang.String[] { "City", "Country", "PhoneNumber", "CvrNumber", });
+    internal_static_toit_api_UpdateOrganizationResponse_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_toit_api_UpdateOrganizationResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_UpdateOrganizationResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_toit_api_UpdatePaymentRequest_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_toit_api_UpdatePaymentRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_UpdatePaymentRequest_descriptor,
+        new java.lang.String[] { "CardNumber", "Expiry", "Cvc", "Currency", "NameOnCard", });
+    internal_static_toit_api_UpdatePaymentResponse_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_toit_api_UpdatePaymentResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_UpdatePaymentResponse_descriptor,
+        new java.lang.String[] { });
     io.toit.proto.toit.model.OrganizationProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -59,6 +59,54 @@ public final class OrganizationProto {
      */
     com.google.protobuf.ByteString
         getEmailBytes();
+
+    /**
+     * <code>string city = 5;</code>
+     * @return The city.
+     */
+    java.lang.String getCity();
+    /**
+     * <code>string city = 5;</code>
+     * @return The bytes for city.
+     */
+    com.google.protobuf.ByteString
+        getCityBytes();
+
+    /**
+     * <code>string country = 6;</code>
+     * @return The country.
+     */
+    java.lang.String getCountry();
+    /**
+     * <code>string country = 6;</code>
+     * @return The bytes for country.
+     */
+    com.google.protobuf.ByteString
+        getCountryBytes();
+
+    /**
+     * <code>string phone_number = 7;</code>
+     * @return The phoneNumber.
+     */
+    java.lang.String getPhoneNumber();
+    /**
+     * <code>string phone_number = 7;</code>
+     * @return The bytes for phoneNumber.
+     */
+    com.google.protobuf.ByteString
+        getPhoneNumberBytes();
+
+    /**
+     * <code>string cvr_number = 8;</code>
+     * @return The cvrNumber.
+     */
+    java.lang.String getCvrNumber();
+    /**
+     * <code>string cvr_number = 8;</code>
+     * @return The bytes for cvrNumber.
+     */
+    com.google.protobuf.ByteString
+        getCvrNumberBytes();
   }
   /**
    * Protobuf type {@code toit.model.Organization}
@@ -77,6 +125,10 @@ public final class OrganizationProto {
       name_ = "";
       defaultSdk_ = "";
       email_ = "";
+      city_ = "";
+      country_ = "";
+      phoneNumber_ = "";
+      cvrNumber_ = "";
     }
 
     @java.lang.Override
@@ -130,6 +182,30 @@ public final class OrganizationProto {
               java.lang.String s = input.readStringRequireUtf8();
 
               email_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              city_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              country_ = s;
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              phoneNumber_ = s;
+              break;
+            }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              cvrNumber_ = s;
               break;
             }
             default: {
@@ -282,6 +358,150 @@ public final class OrganizationProto {
       }
     }
 
+    public static final int CITY_FIELD_NUMBER = 5;
+    private volatile java.lang.Object city_;
+    /**
+     * <code>string city = 5;</code>
+     * @return The city.
+     */
+    public java.lang.String getCity() {
+      java.lang.Object ref = city_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        city_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string city = 5;</code>
+     * @return The bytes for city.
+     */
+    public com.google.protobuf.ByteString
+        getCityBytes() {
+      java.lang.Object ref = city_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        city_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COUNTRY_FIELD_NUMBER = 6;
+    private volatile java.lang.Object country_;
+    /**
+     * <code>string country = 6;</code>
+     * @return The country.
+     */
+    public java.lang.String getCountry() {
+      java.lang.Object ref = country_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        country_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string country = 6;</code>
+     * @return The bytes for country.
+     */
+    public com.google.protobuf.ByteString
+        getCountryBytes() {
+      java.lang.Object ref = country_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        country_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PHONE_NUMBER_FIELD_NUMBER = 7;
+    private volatile java.lang.Object phoneNumber_;
+    /**
+     * <code>string phone_number = 7;</code>
+     * @return The phoneNumber.
+     */
+    public java.lang.String getPhoneNumber() {
+      java.lang.Object ref = phoneNumber_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        phoneNumber_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string phone_number = 7;</code>
+     * @return The bytes for phoneNumber.
+     */
+    public com.google.protobuf.ByteString
+        getPhoneNumberBytes() {
+      java.lang.Object ref = phoneNumber_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        phoneNumber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CVR_NUMBER_FIELD_NUMBER = 8;
+    private volatile java.lang.Object cvrNumber_;
+    /**
+     * <code>string cvr_number = 8;</code>
+     * @return The cvrNumber.
+     */
+    public java.lang.String getCvrNumber() {
+      java.lang.Object ref = cvrNumber_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cvrNumber_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string cvr_number = 8;</code>
+     * @return The bytes for cvrNumber.
+     */
+    public com.google.protobuf.ByteString
+        getCvrNumberBytes() {
+      java.lang.Object ref = cvrNumber_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cvrNumber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -308,6 +528,18 @@ public final class OrganizationProto {
       if (!getEmailBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, email_);
       }
+      if (!getCityBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, city_);
+      }
+      if (!getCountryBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, country_);
+      }
+      if (!getPhoneNumberBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, phoneNumber_);
+      }
+      if (!getCvrNumberBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, cvrNumber_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -329,6 +561,18 @@ public final class OrganizationProto {
       }
       if (!getEmailBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, email_);
+      }
+      if (!getCityBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, city_);
+      }
+      if (!getCountryBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, country_);
+      }
+      if (!getPhoneNumberBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, phoneNumber_);
+      }
+      if (!getCvrNumberBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, cvrNumber_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -353,6 +597,14 @@ public final class OrganizationProto {
           .equals(other.getDefaultSdk())) return false;
       if (!getEmail()
           .equals(other.getEmail())) return false;
+      if (!getCity()
+          .equals(other.getCity())) return false;
+      if (!getCountry()
+          .equals(other.getCountry())) return false;
+      if (!getPhoneNumber()
+          .equals(other.getPhoneNumber())) return false;
+      if (!getCvrNumber()
+          .equals(other.getCvrNumber())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -372,6 +624,14 @@ public final class OrganizationProto {
       hash = (53 * hash) + getDefaultSdk().hashCode();
       hash = (37 * hash) + EMAIL_FIELD_NUMBER;
       hash = (53 * hash) + getEmail().hashCode();
+      hash = (37 * hash) + CITY_FIELD_NUMBER;
+      hash = (53 * hash) + getCity().hashCode();
+      hash = (37 * hash) + COUNTRY_FIELD_NUMBER;
+      hash = (53 * hash) + getCountry().hashCode();
+      hash = (37 * hash) + PHONE_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getPhoneNumber().hashCode();
+      hash = (37 * hash) + CVR_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getCvrNumber().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -513,6 +773,14 @@ public final class OrganizationProto {
 
         email_ = "";
 
+        city_ = "";
+
+        country_ = "";
+
+        phoneNumber_ = "";
+
+        cvrNumber_ = "";
+
         return this;
       }
 
@@ -543,6 +811,10 @@ public final class OrganizationProto {
         result.name_ = name_;
         result.defaultSdk_ = defaultSdk_;
         result.email_ = email_;
+        result.city_ = city_;
+        result.country_ = country_;
+        result.phoneNumber_ = phoneNumber_;
+        result.cvrNumber_ = cvrNumber_;
         onBuilt();
         return result;
       }
@@ -604,6 +876,22 @@ public final class OrganizationProto {
         }
         if (!other.getEmail().isEmpty()) {
           email_ = other.email_;
+          onChanged();
+        }
+        if (!other.getCity().isEmpty()) {
+          city_ = other.city_;
+          onChanged();
+        }
+        if (!other.getCountry().isEmpty()) {
+          country_ = other.country_;
+          onChanged();
+        }
+        if (!other.getPhoneNumber().isEmpty()) {
+          phoneNumber_ = other.phoneNumber_;
+          onChanged();
+        }
+        if (!other.getCvrNumber().isEmpty()) {
+          cvrNumber_ = other.cvrNumber_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -892,6 +1180,310 @@ public final class OrganizationProto {
   checkByteStringIsUtf8(value);
         
         email_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object city_ = "";
+      /**
+       * <code>string city = 5;</code>
+       * @return The city.
+       */
+      public java.lang.String getCity() {
+        java.lang.Object ref = city_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          city_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string city = 5;</code>
+       * @return The bytes for city.
+       */
+      public com.google.protobuf.ByteString
+          getCityBytes() {
+        java.lang.Object ref = city_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          city_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string city = 5;</code>
+       * @param value The city to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCity(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        city_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string city = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCity() {
+        
+        city_ = getDefaultInstance().getCity();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string city = 5;</code>
+       * @param value The bytes for city to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        city_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object country_ = "";
+      /**
+       * <code>string country = 6;</code>
+       * @return The country.
+       */
+      public java.lang.String getCountry() {
+        java.lang.Object ref = country_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          country_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string country = 6;</code>
+       * @return The bytes for country.
+       */
+      public com.google.protobuf.ByteString
+          getCountryBytes() {
+        java.lang.Object ref = country_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          country_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string country = 6;</code>
+       * @param value The country to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCountry(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        country_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string country = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCountry() {
+        
+        country_ = getDefaultInstance().getCountry();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string country = 6;</code>
+       * @param value The bytes for country to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCountryBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        country_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object phoneNumber_ = "";
+      /**
+       * <code>string phone_number = 7;</code>
+       * @return The phoneNumber.
+       */
+      public java.lang.String getPhoneNumber() {
+        java.lang.Object ref = phoneNumber_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          phoneNumber_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string phone_number = 7;</code>
+       * @return The bytes for phoneNumber.
+       */
+      public com.google.protobuf.ByteString
+          getPhoneNumberBytes() {
+        java.lang.Object ref = phoneNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          phoneNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string phone_number = 7;</code>
+       * @param value The phoneNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPhoneNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        phoneNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string phone_number = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPhoneNumber() {
+        
+        phoneNumber_ = getDefaultInstance().getPhoneNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string phone_number = 7;</code>
+       * @param value The bytes for phoneNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPhoneNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        phoneNumber_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object cvrNumber_ = "";
+      /**
+       * <code>string cvr_number = 8;</code>
+       * @return The cvrNumber.
+       */
+      public java.lang.String getCvrNumber() {
+        java.lang.Object ref = cvrNumber_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cvrNumber_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string cvr_number = 8;</code>
+       * @return The bytes for cvrNumber.
+       */
+      public com.google.protobuf.ByteString
+          getCvrNumberBytes() {
+        java.lang.Object ref = cvrNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cvrNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string cvr_number = 8;</code>
+       * @param value The cvrNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCvrNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        cvrNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string cvr_number = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCvrNumber() {
+        
+        cvrNumber_ = getDefaultInstance().getCvrNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string cvr_number = 8;</code>
+       * @param value The bytes for cvrNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCvrNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        cvrNumber_ = value;
         onChanged();
         return this;
       }
@@ -2741,16 +3333,18 @@ public final class OrganizationProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\035toit/model/organization.proto\022\ntoit.mo" +
-      "del\032\037google/protobuf/timestamp.proto\"L\n\014" +
-      "Organization\022\n\n\002id\030\001 \001(\014\022\014\n\004name\030\002 \001(\t\022\023" +
-      "\n\013default_sdk\030\003 \001(\t\022\r\n\005email\030\004 \001(\t\"H\n\004Us" +
-      "er\022\n\n\002id\030\001 \001(\014\022\027\n\017organization_id\030\002 \001(\014\022" +
-      "\r\n\005email\030\003 \001(\t\022\014\n\004name\030\004 \001(\t\"k\n\006APIKey\022\n" +
-      "\n\002id\030\001 \001(\014\022\027\n\017organization_id\030\002 \001(\014\022\014\n\004n" +
-      "ame\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132\032.google.p" +
-      "rotobuf.TimestampBU\n\030io.toit.proto.toit." +
-      "modelB\021OrganizationProtoZ&github.com/toi" +
-      "tware/api.git/toit/modelb\006proto3"
+      "del\032\037google/protobuf/timestamp.proto\"\225\001\n" +
+      "\014Organization\022\n\n\002id\030\001 \001(\014\022\014\n\004name\030\002 \001(\t\022" +
+      "\023\n\013default_sdk\030\003 \001(\t\022\r\n\005email\030\004 \001(\t\022\014\n\004c" +
+      "ity\030\005 \001(\t\022\017\n\007country\030\006 \001(\t\022\024\n\014phone_numb" +
+      "er\030\007 \001(\t\022\022\n\ncvr_number\030\010 \001(\t\"H\n\004User\022\n\n\002" +
+      "id\030\001 \001(\014\022\027\n\017organization_id\030\002 \001(\014\022\r\n\005ema" +
+      "il\030\003 \001(\t\022\014\n\004name\030\004 \001(\t\"k\n\006APIKey\022\n\n\002id\030\001" +
+      " \001(\014\022\027\n\017organization_id\030\002 \001(\014\022\014\n\004name\030\003 " +
+      "\001(\t\022.\n\ncreated_at\030\004 \001(\0132\032.google.protobu" +
+      "f.TimestampBU\n\030io.toit.proto.toit.modelB" +
+      "\021OrganizationProtoZ&github.com/toitware/" +
+      "api.git/toit/modelb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2762,7 +3356,7 @@ public final class OrganizationProto {
     internal_static_toit_model_Organization_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_Organization_descriptor,
-        new java.lang.String[] { "Id", "Name", "DefaultSdk", "Email", });
+        new java.lang.String[] { "Id", "Name", "DefaultSdk", "Email", "City", "Country", "PhoneNumber", "CvrNumber", });
     internal_static_toit_model_User_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_toit_model_User_fieldAccessorTable = new
