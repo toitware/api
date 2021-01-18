@@ -165,12 +165,9 @@ message ConfigChange {
 
 message ConfigureDeviceRequest {
   bytes device_id = 1;
-  string name = 2 [ deprecated = true ];
-  string sdk = 3 [ deprecated = true ];
-  toit.model.DeviceBrokerSettings broker_settings = 4 [ deprecated = true ];
-  google.protobuf.Duration max_offline = 5 [ deprecated = true ];
-  string model = 6 [ deprecated = true ];
-  ConnectionSettings connection_settings = 7 [ deprecated = true ];
+
+  reserved 2 to 7;
+
   repeated ConfigChange config_changes = 8;
 }
 
