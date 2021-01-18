@@ -13,6 +13,10 @@ message Organization {
     string name = 2;
     string default_sdk = 3;
     string email = 4;
+    string city = 5;
+    string country = 6;
+    string phone_number = 7;
+    string cvr_number = 8;
 }
 
 message User {
