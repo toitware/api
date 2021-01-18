@@ -115,7 +115,11 @@ proto.toit.model.Organization.toObject = function(includeInstance, msg) {
     id: msg.getId_asB64(),
     name: jspb.Message.getFieldWithDefault(msg, 2, ""),
     defaultSdk: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    email: jspb.Message.getFieldWithDefault(msg, 4, "")
+    email: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    city: jspb.Message.getFieldWithDefault(msg, 5, ""),
+    country: jspb.Message.getFieldWithDefault(msg, 6, ""),
+    phoneNumber: jspb.Message.getFieldWithDefault(msg, 7, ""),
+    cvrNumber: jspb.Message.getFieldWithDefault(msg, 8, "")
   };
 
   if (includeInstance) {
@@ -167,6 +171,22 @@ proto.toit.model.Organization.deserializeBinaryFromReader = function(msg, reader
     case 4:
       var value = /** @type {string} */ (reader.readString());
       msg.setEmail(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setCity(value);
+      break;
+    case 6:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setCountry(value);
+      break;
+    case 7:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setPhoneNumber(value);
+      break;
+    case 8:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setCvrNumber(value);
       break;
     default:
       reader.skipField();
@@ -222,6 +242,34 @@ proto.toit.model.Organization.serializeBinaryToWriter = function(message, writer
   if (f.length > 0) {
     writer.writeString(
       4,
+      f
+    );
+  }
+  f = message.getCity();
+  if (f.length > 0) {
+    writer.writeString(
+      5,
+      f
+    );
+  }
+  f = message.getCountry();
+  if (f.length > 0) {
+    writer.writeString(
+      6,
+      f
+    );
+  }
+  f = message.getPhoneNumber();
+  if (f.length > 0) {
+    writer.writeString(
+      7,
+      f
+    );
+  }
+  f = message.getCvrNumber();
+  if (f.length > 0) {
+    writer.writeString(
+      8,
       f
     );
   }
@@ -321,6 +369,78 @@ proto.toit.model.Organization.prototype.getEmail = function() {
  */
 proto.toit.model.Organization.prototype.setEmail = function(value) {
   return jspb.Message.setProto3StringField(this, 4, value);
+};
+
+
+/**
+ * optional string city = 5;
+ * @return {string}
+ */
+proto.toit.model.Organization.prototype.getCity = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.toit.model.Organization} returns this
+ */
+proto.toit.model.Organization.prototype.setCity = function(value) {
+  return jspb.Message.setProto3StringField(this, 5, value);
+};
+
+
+/**
+ * optional string country = 6;
+ * @return {string}
+ */
+proto.toit.model.Organization.prototype.getCountry = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.toit.model.Organization} returns this
+ */
+proto.toit.model.Organization.prototype.setCountry = function(value) {
+  return jspb.Message.setProto3StringField(this, 6, value);
+};
+
+
+/**
+ * optional string phone_number = 7;
+ * @return {string}
+ */
+proto.toit.model.Organization.prototype.getPhoneNumber = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.toit.model.Organization} returns this
+ */
+proto.toit.model.Organization.prototype.setPhoneNumber = function(value) {
+  return jspb.Message.setProto3StringField(this, 7, value);
+};
+
+
+/**
+ * optional string cvr_number = 8;
+ * @return {string}
+ */
+proto.toit.model.Organization.prototype.getCvrNumber = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 8, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.toit.model.Organization} returns this
+ */
+proto.toit.model.Organization.prototype.setCvrNumber = function(value) {
+  return jspb.Message.setProto3StringField(this, 8, value);
 };
 
 

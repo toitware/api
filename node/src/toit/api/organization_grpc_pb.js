@@ -4,6 +4,7 @@
 var grpc = require('@grpc/grpc-js');
 var toit_api_organization_pb = require('../../toit/api/organization_pb.js');
 var toit_model_organization_pb = require('../../toit/model/organization_pb.js');
+var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
 
 function serialize_toit_api_CreateAPIKeyRequest(arg) {
   if (!(arg instanceof toit_api_organization_pb.CreateAPIKeyRequest)) {
@@ -181,6 +182,50 @@ function deserialize_toit_api_ListUsersResponse(buffer_arg) {
   return toit_api_organization_pb.ListUsersResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_toit_api_UpdateOrganizationRequest(arg) {
+  if (!(arg instanceof toit_api_organization_pb.UpdateOrganizationRequest)) {
+    throw new Error('Expected argument of type toit.api.UpdateOrganizationRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_UpdateOrganizationRequest(buffer_arg) {
+  return toit_api_organization_pb.UpdateOrganizationRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_toit_api_UpdateOrganizationResponse(arg) {
+  if (!(arg instanceof toit_api_organization_pb.UpdateOrganizationResponse)) {
+    throw new Error('Expected argument of type toit.api.UpdateOrganizationResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_UpdateOrganizationResponse(buffer_arg) {
+  return toit_api_organization_pb.UpdateOrganizationResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_toit_api_UpdatePaymentRequest(arg) {
+  if (!(arg instanceof toit_api_organization_pb.UpdatePaymentRequest)) {
+    throw new Error('Expected argument of type toit.api.UpdatePaymentRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_UpdatePaymentRequest(buffer_arg) {
+  return toit_api_organization_pb.UpdatePaymentRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_toit_api_UpdatePaymentResponse(arg) {
+  if (!(arg instanceof toit_api_organization_pb.UpdatePaymentResponse)) {
+    throw new Error('Expected argument of type toit.api.UpdatePaymentResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_UpdatePaymentResponse(buffer_arg) {
+  return toit_api_organization_pb.UpdatePaymentResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 
 var OrganizationServiceService = exports.OrganizationServiceService = {
   getUser: {
@@ -270,6 +315,28 @@ var OrganizationServiceService = exports.OrganizationServiceService = {
     requestDeserialize: deserialize_toit_api_GetAPIKeySecretRequest,
     responseSerialize: serialize_toit_api_GetAPIKeySecretResponse,
     responseDeserialize: deserialize_toit_api_GetAPIKeySecretResponse,
+  },
+  updateOrganization: {
+    path: '/toit.api.OrganizationService/UpdateOrganization',
+    requestStream: false,
+    responseStream: false,
+    requestType: toit_api_organization_pb.UpdateOrganizationRequest,
+    responseType: toit_api_organization_pb.UpdateOrganizationResponse,
+    requestSerialize: serialize_toit_api_UpdateOrganizationRequest,
+    requestDeserialize: deserialize_toit_api_UpdateOrganizationRequest,
+    responseSerialize: serialize_toit_api_UpdateOrganizationResponse,
+    responseDeserialize: deserialize_toit_api_UpdateOrganizationResponse,
+  },
+  updatePayment: {
+    path: '/toit.api.OrganizationService/UpdatePayment',
+    requestStream: false,
+    responseStream: false,
+    requestType: toit_api_organization_pb.UpdatePaymentRequest,
+    responseType: toit_api_organization_pb.UpdatePaymentResponse,
+    requestSerialize: serialize_toit_api_UpdatePaymentRequest,
+    requestDeserialize: deserialize_toit_api_UpdatePaymentRequest,
+    responseSerialize: serialize_toit_api_UpdatePaymentResponse,
+    responseDeserialize: deserialize_toit_api_UpdatePaymentResponse,
   },
 };
 

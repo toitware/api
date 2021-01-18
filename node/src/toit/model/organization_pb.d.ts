@@ -19,6 +19,18 @@ export class Organization extends jspb.Message {
   getEmail(): string;
   setEmail(value: string): void;
 
+  getCity(): string;
+  setCity(value: string): void;
+
+  getCountry(): string;
+  setCountry(value: string): void;
+
+  getPhoneNumber(): string;
+  setPhoneNumber(value: string): void;
+
+  getCvrNumber(): string;
+  setCvrNumber(value: string): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Organization.AsObject;
   static toObject(includeInstance: boolean, msg: Organization): Organization.AsObject;
@@ -35,6 +47,10 @@ export namespace Organization {
     name: string,
     defaultSdk: string,
     email: string,
+    city: string,
+    country: string,
+    phoneNumber: string,
+    cvrNumber: string,
   }
 }
 

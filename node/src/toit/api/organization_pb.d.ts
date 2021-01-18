@@ -3,6 +3,7 @@
 
 import * as jspb from "google-protobuf";
 import * as toit_model_organization_pb from "../../toit/model/organization_pb";
+import * as google_protobuf_timestamp_pb from "google-protobuf/google/protobuf/timestamp_pb";
 
 export class ListUsersRequest extends jspb.Message {
   getOffset(): Uint8Array | string;
@@ -373,6 +374,108 @@ export class GetAPIKeySecretResponse extends jspb.Message {
 export namespace GetAPIKeySecretResponse {
   export type AsObject = {
     secret: string,
+  }
+}
+
+export class UpdateOrganizationRequest extends jspb.Message {
+  getCity(): string;
+  setCity(value: string): void;
+
+  getCountry(): string;
+  setCountry(value: string): void;
+
+  getPhoneNumber(): string;
+  setPhoneNumber(value: string): void;
+
+  getCvrNumber(): string;
+  setCvrNumber(value: string): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): UpdateOrganizationRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: UpdateOrganizationRequest): UpdateOrganizationRequest.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: UpdateOrganizationRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): UpdateOrganizationRequest;
+  static deserializeBinaryFromReader(message: UpdateOrganizationRequest, reader: jspb.BinaryReader): UpdateOrganizationRequest;
+}
+
+export namespace UpdateOrganizationRequest {
+  export type AsObject = {
+    city: string,
+    country: string,
+    phoneNumber: string,
+    cvrNumber: string,
+  }
+}
+
+export class UpdateOrganizationResponse extends jspb.Message {
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): UpdateOrganizationResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: UpdateOrganizationResponse): UpdateOrganizationResponse.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: UpdateOrganizationResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): UpdateOrganizationResponse;
+  static deserializeBinaryFromReader(message: UpdateOrganizationResponse, reader: jspb.BinaryReader): UpdateOrganizationResponse;
+}
+
+export namespace UpdateOrganizationResponse {
+  export type AsObject = {
+  }
+}
+
+export class UpdatePaymentRequest extends jspb.Message {
+  getCardNumber(): number;
+  setCardNumber(value: number): void;
+
+  hasExpiry(): boolean;
+  clearExpiry(): void;
+  getExpiry(): google_protobuf_timestamp_pb.Timestamp | undefined;
+  setExpiry(value?: google_protobuf_timestamp_pb.Timestamp): void;
+
+  getCvc(): number;
+  setCvc(value: number): void;
+
+  getCurrency(): string;
+  setCurrency(value: string): void;
+
+  getNameOnCard(): string;
+  setNameOnCard(value: string): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): UpdatePaymentRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: UpdatePaymentRequest): UpdatePaymentRequest.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: UpdatePaymentRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): UpdatePaymentRequest;
+  static deserializeBinaryFromReader(message: UpdatePaymentRequest, reader: jspb.BinaryReader): UpdatePaymentRequest;
+}
+
+export namespace UpdatePaymentRequest {
+  export type AsObject = {
+    cardNumber: number,
+    expiry?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+    cvc: number,
+    currency: string,
+    nameOnCard: string,
+  }
+}
+
+export class UpdatePaymentResponse extends jspb.Message {
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): UpdatePaymentResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: UpdatePaymentResponse): UpdatePaymentResponse.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: UpdatePaymentResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): UpdatePaymentResponse;
+  static deserializeBinaryFromReader(message: UpdatePaymentResponse, reader: jspb.BinaryReader): UpdatePaymentResponse;
+}
+
+export namespace UpdatePaymentResponse {
+  export type AsObject = {
   }
 }
 
