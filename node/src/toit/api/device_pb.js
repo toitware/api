@@ -5336,12 +5336,6 @@ proto.toit.api.ConfigureDeviceRequest.prototype.toObject = function(opt_includeI
 proto.toit.api.ConfigureDeviceRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     deviceId: msg.getDeviceId_asB64(),
-    name: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    sdk: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    brokerSettings: (f = msg.getBrokerSettings()) && toit_model_device_pb.DeviceBrokerSettings.toObject(includeInstance, f),
-    maxOffline: (f = msg.getMaxOffline()) && google_protobuf_duration_pb.Duration.toObject(includeInstance, f),
-    model: jspb.Message.getFieldWithDefault(msg, 6, ""),
-    connectionSettings: (f = msg.getConnectionSettings()) && proto.toit.api.ConnectionSettings.toObject(includeInstance, f),
     configChangesList: jspb.Message.toObjectList(msg.getConfigChangesList(),
     proto.toit.api.ConfigChange.toObject, includeInstance)
   };
@@ -5384,33 +5378,6 @@ proto.toit.api.ConfigureDeviceRequest.deserializeBinaryFromReader = function(msg
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
       msg.setDeviceId(value);
       break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setName(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setSdk(value);
-      break;
-    case 4:
-      var value = new toit_model_device_pb.DeviceBrokerSettings;
-      reader.readMessage(value,toit_model_device_pb.DeviceBrokerSettings.deserializeBinaryFromReader);
-      msg.setBrokerSettings(value);
-      break;
-    case 5:
-      var value = new google_protobuf_duration_pb.Duration;
-      reader.readMessage(value,google_protobuf_duration_pb.Duration.deserializeBinaryFromReader);
-      msg.setMaxOffline(value);
-      break;
-    case 6:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setModel(value);
-      break;
-    case 7:
-      var value = new proto.toit.api.ConnectionSettings;
-      reader.readMessage(value,proto.toit.api.ConnectionSettings.deserializeBinaryFromReader);
-      msg.setConnectionSettings(value);
-      break;
     case 8:
       var value = new proto.toit.api.ConfigChange;
       reader.readMessage(value,proto.toit.api.ConfigChange.deserializeBinaryFromReader);
@@ -5450,51 +5417,6 @@ proto.toit.api.ConfigureDeviceRequest.serializeBinaryToWriter = function(message
     writer.writeBytes(
       1,
       f
-    );
-  }
-  f = message.getName();
-  if (f.length > 0) {
-    writer.writeString(
-      2,
-      f
-    );
-  }
-  f = message.getSdk();
-  if (f.length > 0) {
-    writer.writeString(
-      3,
-      f
-    );
-  }
-  f = message.getBrokerSettings();
-  if (f != null) {
-    writer.writeMessage(
-      4,
-      f,
-      toit_model_device_pb.DeviceBrokerSettings.serializeBinaryToWriter
-    );
-  }
-  f = message.getMaxOffline();
-  if (f != null) {
-    writer.writeMessage(
-      5,
-      f,
-      google_protobuf_duration_pb.Duration.serializeBinaryToWriter
-    );
-  }
-  f = message.getModel();
-  if (f.length > 0) {
-    writer.writeString(
-      6,
-      f
-    );
-  }
-  f = message.getConnectionSettings();
-  if (f != null) {
-    writer.writeMessage(
-      7,
-      f,
-      proto.toit.api.ConnectionSettings.serializeBinaryToWriter
     );
   }
   f = message.getConfigChangesList();
@@ -5547,171 +5469,6 @@ proto.toit.api.ConfigureDeviceRequest.prototype.getDeviceId_asU8 = function() {
  */
 proto.toit.api.ConfigureDeviceRequest.prototype.setDeviceId = function(value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
-};
-
-
-/**
- * optional string name = 2;
- * @return {string}
- */
-proto.toit.api.ConfigureDeviceRequest.prototype.getName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.toit.api.ConfigureDeviceRequest} returns this
- */
-proto.toit.api.ConfigureDeviceRequest.prototype.setName = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
-};
-
-
-/**
- * optional string sdk = 3;
- * @return {string}
- */
-proto.toit.api.ConfigureDeviceRequest.prototype.getSdk = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.toit.api.ConfigureDeviceRequest} returns this
- */
-proto.toit.api.ConfigureDeviceRequest.prototype.setSdk = function(value) {
-  return jspb.Message.setProto3StringField(this, 3, value);
-};
-
-
-/**
- * optional toit.model.DeviceBrokerSettings broker_settings = 4;
- * @return {?proto.toit.model.DeviceBrokerSettings}
- */
-proto.toit.api.ConfigureDeviceRequest.prototype.getBrokerSettings = function() {
-  return /** @type{?proto.toit.model.DeviceBrokerSettings} */ (
-    jspb.Message.getWrapperField(this, toit_model_device_pb.DeviceBrokerSettings, 4));
-};
-
-
-/**
- * @param {?proto.toit.model.DeviceBrokerSettings|undefined} value
- * @return {!proto.toit.api.ConfigureDeviceRequest} returns this
-*/
-proto.toit.api.ConfigureDeviceRequest.prototype.setBrokerSettings = function(value) {
-  return jspb.Message.setWrapperField(this, 4, value);
-};
-
-
-/**
- * Clears the message field making it undefined.
- * @return {!proto.toit.api.ConfigureDeviceRequest} returns this
- */
-proto.toit.api.ConfigureDeviceRequest.prototype.clearBrokerSettings = function() {
-  return this.setBrokerSettings(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.toit.api.ConfigureDeviceRequest.prototype.hasBrokerSettings = function() {
-  return jspb.Message.getField(this, 4) != null;
-};
-
-
-/**
- * optional google.protobuf.Duration max_offline = 5;
- * @return {?proto.google.protobuf.Duration}
- */
-proto.toit.api.ConfigureDeviceRequest.prototype.getMaxOffline = function() {
-  return /** @type{?proto.google.protobuf.Duration} */ (
-    jspb.Message.getWrapperField(this, google_protobuf_duration_pb.Duration, 5));
-};
-
-
-/**
- * @param {?proto.google.protobuf.Duration|undefined} value
- * @return {!proto.toit.api.ConfigureDeviceRequest} returns this
-*/
-proto.toit.api.ConfigureDeviceRequest.prototype.setMaxOffline = function(value) {
-  return jspb.Message.setWrapperField(this, 5, value);
-};
-
-
-/**
- * Clears the message field making it undefined.
- * @return {!proto.toit.api.ConfigureDeviceRequest} returns this
- */
-proto.toit.api.ConfigureDeviceRequest.prototype.clearMaxOffline = function() {
-  return this.setMaxOffline(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.toit.api.ConfigureDeviceRequest.prototype.hasMaxOffline = function() {
-  return jspb.Message.getField(this, 5) != null;
-};
-
-
-/**
- * optional string model = 6;
- * @return {string}
- */
-proto.toit.api.ConfigureDeviceRequest.prototype.getModel = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.toit.api.ConfigureDeviceRequest} returns this
- */
-proto.toit.api.ConfigureDeviceRequest.prototype.setModel = function(value) {
-  return jspb.Message.setProto3StringField(this, 6, value);
-};
-
-
-/**
- * optional ConnectionSettings connection_settings = 7;
- * @return {?proto.toit.api.ConnectionSettings}
- */
-proto.toit.api.ConfigureDeviceRequest.prototype.getConnectionSettings = function() {
-  return /** @type{?proto.toit.api.ConnectionSettings} */ (
-    jspb.Message.getWrapperField(this, proto.toit.api.ConnectionSettings, 7));
-};
-
-
-/**
- * @param {?proto.toit.api.ConnectionSettings|undefined} value
- * @return {!proto.toit.api.ConfigureDeviceRequest} returns this
-*/
-proto.toit.api.ConfigureDeviceRequest.prototype.setConnectionSettings = function(value) {
-  return jspb.Message.setWrapperField(this, 7, value);
-};
-
-
-/**
- * Clears the message field making it undefined.
- * @return {!proto.toit.api.ConfigureDeviceRequest} returns this
- */
-proto.toit.api.ConfigureDeviceRequest.prototype.clearConnectionSettings = function() {
-  return this.setConnectionSettings(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.toit.api.ConfigureDeviceRequest.prototype.hasConnectionSettings = function() {
-  return jspb.Message.getField(this, 7) != null;
 };
 
 

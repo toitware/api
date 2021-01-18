@@ -602,30 +602,6 @@ export class ConfigureDeviceRequest extends jspb.Message {
   getDeviceId_asB64(): string;
   setDeviceId(value: Uint8Array | string): void;
 
-  getName(): string;
-  setName(value: string): void;
-
-  getSdk(): string;
-  setSdk(value: string): void;
-
-  hasBrokerSettings(): boolean;
-  clearBrokerSettings(): void;
-  getBrokerSettings(): toit_model_device_pb.DeviceBrokerSettings | undefined;
-  setBrokerSettings(value?: toit_model_device_pb.DeviceBrokerSettings): void;
-
-  hasMaxOffline(): boolean;
-  clearMaxOffline(): void;
-  getMaxOffline(): google_protobuf_duration_pb.Duration | undefined;
-  setMaxOffline(value?: google_protobuf_duration_pb.Duration): void;
-
-  getModel(): string;
-  setModel(value: string): void;
-
-  hasConnectionSettings(): boolean;
-  clearConnectionSettings(): void;
-  getConnectionSettings(): ConnectionSettings | undefined;
-  setConnectionSettings(value?: ConnectionSettings): void;
-
   clearConfigChangesList(): void;
   getConfigChangesList(): Array<ConfigChange>;
   setConfigChangesList(value: Array<ConfigChange>): void;
@@ -644,12 +620,6 @@ export class ConfigureDeviceRequest extends jspb.Message {
 export namespace ConfigureDeviceRequest {
   export type AsObject = {
     deviceId: Uint8Array | string,
-    name: string,
-    sdk: string,
-    brokerSettings?: toit_model_device_pb.DeviceBrokerSettings.AsObject,
-    maxOffline?: google_protobuf_duration_pb.Duration.AsObject,
-    model: string,
-    connectionSettings?: ConnectionSettings.AsObject,
     configChangesList: Array<ConfigChange.AsObject>,
   }
 }
