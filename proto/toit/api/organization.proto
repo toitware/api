@@ -85,11 +85,18 @@ message GetAPIKeySecretResponse {
   string secret = 1;
 }
 
+message OrganizationChange {
+  oneof change {
+    string city = 1;
+    string country = 2;
+    string phone_number = 3;
+    string cvr_number = 4;
+    string name = 5;
+    string email = 6;
+  }
+}
 message UpdateOrganizationRequest {
-  string city = 1;
-  string country = 2;
-  string phone_number = 3;
-  string cvr_number = 4;
+  repeated OrganizationChange changes = 1;
 }
 
 message UpdateOrganizationResponse {}
