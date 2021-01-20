@@ -9688,8 +9688,8 @@ public final class OrgProto {
 
   }
 
-  public interface UpdateOrganizationRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:toit.api.UpdateOrganizationRequest)
+  public interface OrganizationChangeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.OrganizationChange)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -9739,31 +9739,53 @@ public final class OrgProto {
      */
     com.google.protobuf.ByteString
         getCvrNumberBytes();
+
+    /**
+     * <code>string name = 5;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 5;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>string email = 6;</code>
+     * @return The email.
+     */
+    java.lang.String getEmail();
+    /**
+     * <code>string email = 6;</code>
+     * @return The bytes for email.
+     */
+    com.google.protobuf.ByteString
+        getEmailBytes();
+
+    public io.toit.proto.toit.api.OrgProto.OrganizationChange.ChangeCase getChangeCase();
   }
   /**
-   * Protobuf type {@code toit.api.UpdateOrganizationRequest}
+   * Protobuf type {@code toit.api.OrganizationChange}
    */
-  public  static final class UpdateOrganizationRequest extends
+  public  static final class OrganizationChange extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:toit.api.UpdateOrganizationRequest)
-      UpdateOrganizationRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:toit.api.OrganizationChange)
+      OrganizationChangeOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use UpdateOrganizationRequest.newBuilder() to construct.
-    private UpdateOrganizationRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use OrganizationChange.newBuilder() to construct.
+    private OrganizationChange(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private UpdateOrganizationRequest() {
-      city_ = "";
-      country_ = "";
-      phoneNumber_ = "";
-      cvrNumber_ = "";
+    private OrganizationChange() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new UpdateOrganizationRequest();
+      return new OrganizationChange();
     }
 
     @java.lang.Override
@@ -9771,7 +9793,7 @@ public final class OrgProto {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private UpdateOrganizationRequest(
+    private OrganizationChange(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -9791,26 +9813,38 @@ public final class OrgProto {
               break;
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
-
-              city_ = s;
+              changeCase_ = 1;
+              change_ = s;
               break;
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-
-              country_ = s;
+              changeCase_ = 2;
+              change_ = s;
               break;
             }
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
-
-              phoneNumber_ = s;
+              changeCase_ = 3;
+              change_ = s;
               break;
             }
             case 34: {
               java.lang.String s = input.readStringRequireUtf8();
-
-              cvrNumber_ = s;
+              changeCase_ = 4;
+              change_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+              changeCase_ = 5;
+              change_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+              changeCase_ = 6;
+              change_ = s;
               break;
             }
             default: {
@@ -9834,32 +9868,85 @@ public final class OrgProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_UpdateOrganizationRequest_descriptor;
+      return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_OrganizationChange_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_UpdateOrganizationRequest_fieldAccessorTable
+      return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_OrganizationChange_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest.class, io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest.Builder.class);
+              io.toit.proto.toit.api.OrgProto.OrganizationChange.class, io.toit.proto.toit.api.OrgProto.OrganizationChange.Builder.class);
+    }
+
+    private int changeCase_ = 0;
+    private java.lang.Object change_;
+    public enum ChangeCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      CITY(1),
+      COUNTRY(2),
+      PHONE_NUMBER(3),
+      CVR_NUMBER(4),
+      NAME(5),
+      EMAIL(6),
+      CHANGE_NOT_SET(0);
+      private final int value;
+      private ChangeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ChangeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ChangeCase forNumber(int value) {
+        switch (value) {
+          case 1: return CITY;
+          case 2: return COUNTRY;
+          case 3: return PHONE_NUMBER;
+          case 4: return CVR_NUMBER;
+          case 5: return NAME;
+          case 6: return EMAIL;
+          case 0: return CHANGE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ChangeCase
+    getChangeCase() {
+      return ChangeCase.forNumber(
+          changeCase_);
     }
 
     public static final int CITY_FIELD_NUMBER = 1;
-    private volatile java.lang.Object city_;
     /**
      * <code>string city = 1;</code>
      * @return The city.
      */
     public java.lang.String getCity() {
-      java.lang.Object ref = city_;
+      java.lang.Object ref = "";
+      if (changeCase_ == 1) {
+        ref = change_;
+      }
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        city_ = s;
+        if (changeCase_ == 1) {
+          change_ = s;
+        }
         return s;
       }
     }
@@ -9869,12 +9956,17 @@ public final class OrgProto {
      */
     public com.google.protobuf.ByteString
         getCityBytes() {
-      java.lang.Object ref = city_;
+      java.lang.Object ref = "";
+      if (changeCase_ == 1) {
+        ref = change_;
+      }
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        city_ = b;
+        if (changeCase_ == 1) {
+          change_ = b;
+        }
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -9882,20 +9974,24 @@ public final class OrgProto {
     }
 
     public static final int COUNTRY_FIELD_NUMBER = 2;
-    private volatile java.lang.Object country_;
     /**
      * <code>string country = 2;</code>
      * @return The country.
      */
     public java.lang.String getCountry() {
-      java.lang.Object ref = country_;
+      java.lang.Object ref = "";
+      if (changeCase_ == 2) {
+        ref = change_;
+      }
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        country_ = s;
+        if (changeCase_ == 2) {
+          change_ = s;
+        }
         return s;
       }
     }
@@ -9905,12 +10001,17 @@ public final class OrgProto {
      */
     public com.google.protobuf.ByteString
         getCountryBytes() {
-      java.lang.Object ref = country_;
+      java.lang.Object ref = "";
+      if (changeCase_ == 2) {
+        ref = change_;
+      }
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        country_ = b;
+        if (changeCase_ == 2) {
+          change_ = b;
+        }
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -9918,20 +10019,24 @@ public final class OrgProto {
     }
 
     public static final int PHONE_NUMBER_FIELD_NUMBER = 3;
-    private volatile java.lang.Object phoneNumber_;
     /**
      * <code>string phone_number = 3;</code>
      * @return The phoneNumber.
      */
     public java.lang.String getPhoneNumber() {
-      java.lang.Object ref = phoneNumber_;
+      java.lang.Object ref = "";
+      if (changeCase_ == 3) {
+        ref = change_;
+      }
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        phoneNumber_ = s;
+        if (changeCase_ == 3) {
+          change_ = s;
+        }
         return s;
       }
     }
@@ -9941,12 +10046,17 @@ public final class OrgProto {
      */
     public com.google.protobuf.ByteString
         getPhoneNumberBytes() {
-      java.lang.Object ref = phoneNumber_;
+      java.lang.Object ref = "";
+      if (changeCase_ == 3) {
+        ref = change_;
+      }
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        phoneNumber_ = b;
+        if (changeCase_ == 3) {
+          change_ = b;
+        }
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -9954,20 +10064,24 @@ public final class OrgProto {
     }
 
     public static final int CVR_NUMBER_FIELD_NUMBER = 4;
-    private volatile java.lang.Object cvrNumber_;
     /**
      * <code>string cvr_number = 4;</code>
      * @return The cvrNumber.
      */
     public java.lang.String getCvrNumber() {
-      java.lang.Object ref = cvrNumber_;
+      java.lang.Object ref = "";
+      if (changeCase_ == 4) {
+        ref = change_;
+      }
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        cvrNumber_ = s;
+        if (changeCase_ == 4) {
+          change_ = s;
+        }
         return s;
       }
     }
@@ -9977,12 +10091,107 @@ public final class OrgProto {
      */
     public com.google.protobuf.ByteString
         getCvrNumberBytes() {
-      java.lang.Object ref = cvrNumber_;
+      java.lang.Object ref = "";
+      if (changeCase_ == 4) {
+        ref = change_;
+      }
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        cvrNumber_ = b;
+        if (changeCase_ == 4) {
+          change_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 5;
+    /**
+     * <code>string name = 5;</code>
+     * @return The name.
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = "";
+      if (changeCase_ == 5) {
+        ref = change_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (changeCase_ == 5) {
+          change_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 5;</code>
+     * @return The bytes for name.
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = "";
+      if (changeCase_ == 5) {
+        ref = change_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (changeCase_ == 5) {
+          change_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EMAIL_FIELD_NUMBER = 6;
+    /**
+     * <code>string email = 6;</code>
+     * @return The email.
+     */
+    public java.lang.String getEmail() {
+      java.lang.Object ref = "";
+      if (changeCase_ == 6) {
+        ref = change_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (changeCase_ == 6) {
+          change_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>string email = 6;</code>
+     * @return The bytes for email.
+     */
+    public com.google.protobuf.ByteString
+        getEmailBytes() {
+      java.lang.Object ref = "";
+      if (changeCase_ == 6) {
+        ref = change_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (changeCase_ == 6) {
+          change_ = b;
+        }
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -10003,17 +10212,23 @@ public final class OrgProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getCityBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, city_);
+      if (changeCase_ == 1) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, change_);
       }
-      if (!getCountryBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, country_);
+      if (changeCase_ == 2) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, change_);
       }
-      if (!getPhoneNumberBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, phoneNumber_);
+      if (changeCase_ == 3) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, change_);
       }
-      if (!getCvrNumberBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, cvrNumber_);
+      if (changeCase_ == 4) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, change_);
+      }
+      if (changeCase_ == 5) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, change_);
+      }
+      if (changeCase_ == 6) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, change_);
       }
       unknownFields.writeTo(output);
     }
@@ -10024,17 +10239,1177 @@ public final class OrgProto {
       if (size != -1) return size;
 
       size = 0;
-      if (!getCityBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, city_);
+      if (changeCase_ == 1) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, change_);
       }
-      if (!getCountryBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, country_);
+      if (changeCase_ == 2) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, change_);
       }
-      if (!getPhoneNumberBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, phoneNumber_);
+      if (changeCase_ == 3) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, change_);
       }
-      if (!getCvrNumberBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, cvrNumber_);
+      if (changeCase_ == 4) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, change_);
+      }
+      if (changeCase_ == 5) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, change_);
+      }
+      if (changeCase_ == 6) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, change_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.api.OrgProto.OrganizationChange)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.api.OrgProto.OrganizationChange other = (io.toit.proto.toit.api.OrgProto.OrganizationChange) obj;
+
+      if (!getChangeCase().equals(other.getChangeCase())) return false;
+      switch (changeCase_) {
+        case 1:
+          if (!getCity()
+              .equals(other.getCity())) return false;
+          break;
+        case 2:
+          if (!getCountry()
+              .equals(other.getCountry())) return false;
+          break;
+        case 3:
+          if (!getPhoneNumber()
+              .equals(other.getPhoneNumber())) return false;
+          break;
+        case 4:
+          if (!getCvrNumber()
+              .equals(other.getCvrNumber())) return false;
+          break;
+        case 5:
+          if (!getName()
+              .equals(other.getName())) return false;
+          break;
+        case 6:
+          if (!getEmail()
+              .equals(other.getEmail())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (changeCase_) {
+        case 1:
+          hash = (37 * hash) + CITY_FIELD_NUMBER;
+          hash = (53 * hash) + getCity().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + COUNTRY_FIELD_NUMBER;
+          hash = (53 * hash) + getCountry().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + PHONE_NUMBER_FIELD_NUMBER;
+          hash = (53 * hash) + getPhoneNumber().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + CVR_NUMBER_FIELD_NUMBER;
+          hash = (53 * hash) + getCvrNumber().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + NAME_FIELD_NUMBER;
+          hash = (53 * hash) + getName().hashCode();
+          break;
+        case 6:
+          hash = (37 * hash) + EMAIL_FIELD_NUMBER;
+          hash = (53 * hash) + getEmail().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.api.OrgProto.OrganizationChange parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.OrganizationChange parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.OrganizationChange parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.OrganizationChange parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.OrganizationChange parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.OrgProto.OrganizationChange parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.OrganizationChange parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.OrganizationChange parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.OrganizationChange parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.OrganizationChange parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.OrgProto.OrganizationChange parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.OrgProto.OrganizationChange parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.api.OrgProto.OrganizationChange prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.api.OrganizationChange}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.api.OrganizationChange)
+        io.toit.proto.toit.api.OrgProto.OrganizationChangeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_OrganizationChange_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_OrganizationChange_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.OrgProto.OrganizationChange.class, io.toit.proto.toit.api.OrgProto.OrganizationChange.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.api.OrgProto.OrganizationChange.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        changeCase_ = 0;
+        change_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_OrganizationChange_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.OrganizationChange getDefaultInstanceForType() {
+        return io.toit.proto.toit.api.OrgProto.OrganizationChange.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.OrganizationChange build() {
+        io.toit.proto.toit.api.OrgProto.OrganizationChange result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.OrgProto.OrganizationChange buildPartial() {
+        io.toit.proto.toit.api.OrgProto.OrganizationChange result = new io.toit.proto.toit.api.OrgProto.OrganizationChange(this);
+        if (changeCase_ == 1) {
+          result.change_ = change_;
+        }
+        if (changeCase_ == 2) {
+          result.change_ = change_;
+        }
+        if (changeCase_ == 3) {
+          result.change_ = change_;
+        }
+        if (changeCase_ == 4) {
+          result.change_ = change_;
+        }
+        if (changeCase_ == 5) {
+          result.change_ = change_;
+        }
+        if (changeCase_ == 6) {
+          result.change_ = change_;
+        }
+        result.changeCase_ = changeCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.api.OrgProto.OrganizationChange) {
+          return mergeFrom((io.toit.proto.toit.api.OrgProto.OrganizationChange)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.api.OrgProto.OrganizationChange other) {
+        if (other == io.toit.proto.toit.api.OrgProto.OrganizationChange.getDefaultInstance()) return this;
+        switch (other.getChangeCase()) {
+          case CITY: {
+            changeCase_ = 1;
+            change_ = other.change_;
+            onChanged();
+            break;
+          }
+          case COUNTRY: {
+            changeCase_ = 2;
+            change_ = other.change_;
+            onChanged();
+            break;
+          }
+          case PHONE_NUMBER: {
+            changeCase_ = 3;
+            change_ = other.change_;
+            onChanged();
+            break;
+          }
+          case CVR_NUMBER: {
+            changeCase_ = 4;
+            change_ = other.change_;
+            onChanged();
+            break;
+          }
+          case NAME: {
+            changeCase_ = 5;
+            change_ = other.change_;
+            onChanged();
+            break;
+          }
+          case EMAIL: {
+            changeCase_ = 6;
+            change_ = other.change_;
+            onChanged();
+            break;
+          }
+          case CHANGE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.api.OrgProto.OrganizationChange parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.api.OrgProto.OrganizationChange) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int changeCase_ = 0;
+      private java.lang.Object change_;
+      public ChangeCase
+          getChangeCase() {
+        return ChangeCase.forNumber(
+            changeCase_);
+      }
+
+      public Builder clearChange() {
+        changeCase_ = 0;
+        change_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      /**
+       * <code>string city = 1;</code>
+       * @return The city.
+       */
+      public java.lang.String getCity() {
+        java.lang.Object ref = "";
+        if (changeCase_ == 1) {
+          ref = change_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (changeCase_ == 1) {
+            change_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string city = 1;</code>
+       * @return The bytes for city.
+       */
+      public com.google.protobuf.ByteString
+          getCityBytes() {
+        java.lang.Object ref = "";
+        if (changeCase_ == 1) {
+          ref = change_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (changeCase_ == 1) {
+            change_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string city = 1;</code>
+       * @param value The city to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCity(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  changeCase_ = 1;
+        change_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string city = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCity() {
+        if (changeCase_ == 1) {
+          changeCase_ = 0;
+          change_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>string city = 1;</code>
+       * @param value The bytes for city to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        changeCase_ = 1;
+        change_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string country = 2;</code>
+       * @return The country.
+       */
+      public java.lang.String getCountry() {
+        java.lang.Object ref = "";
+        if (changeCase_ == 2) {
+          ref = change_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (changeCase_ == 2) {
+            change_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string country = 2;</code>
+       * @return The bytes for country.
+       */
+      public com.google.protobuf.ByteString
+          getCountryBytes() {
+        java.lang.Object ref = "";
+        if (changeCase_ == 2) {
+          ref = change_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (changeCase_ == 2) {
+            change_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string country = 2;</code>
+       * @param value The country to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCountry(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  changeCase_ = 2;
+        change_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string country = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCountry() {
+        if (changeCase_ == 2) {
+          changeCase_ = 0;
+          change_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>string country = 2;</code>
+       * @param value The bytes for country to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCountryBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        changeCase_ = 2;
+        change_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string phone_number = 3;</code>
+       * @return The phoneNumber.
+       */
+      public java.lang.String getPhoneNumber() {
+        java.lang.Object ref = "";
+        if (changeCase_ == 3) {
+          ref = change_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (changeCase_ == 3) {
+            change_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string phone_number = 3;</code>
+       * @return The bytes for phoneNumber.
+       */
+      public com.google.protobuf.ByteString
+          getPhoneNumberBytes() {
+        java.lang.Object ref = "";
+        if (changeCase_ == 3) {
+          ref = change_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (changeCase_ == 3) {
+            change_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string phone_number = 3;</code>
+       * @param value The phoneNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPhoneNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  changeCase_ = 3;
+        change_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string phone_number = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPhoneNumber() {
+        if (changeCase_ == 3) {
+          changeCase_ = 0;
+          change_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>string phone_number = 3;</code>
+       * @param value The bytes for phoneNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPhoneNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        changeCase_ = 3;
+        change_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string cvr_number = 4;</code>
+       * @return The cvrNumber.
+       */
+      public java.lang.String getCvrNumber() {
+        java.lang.Object ref = "";
+        if (changeCase_ == 4) {
+          ref = change_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (changeCase_ == 4) {
+            change_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string cvr_number = 4;</code>
+       * @return The bytes for cvrNumber.
+       */
+      public com.google.protobuf.ByteString
+          getCvrNumberBytes() {
+        java.lang.Object ref = "";
+        if (changeCase_ == 4) {
+          ref = change_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (changeCase_ == 4) {
+            change_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string cvr_number = 4;</code>
+       * @param value The cvrNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCvrNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  changeCase_ = 4;
+        change_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string cvr_number = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCvrNumber() {
+        if (changeCase_ == 4) {
+          changeCase_ = 0;
+          change_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>string cvr_number = 4;</code>
+       * @param value The bytes for cvrNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCvrNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        changeCase_ = 4;
+        change_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string name = 5;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = "";
+        if (changeCase_ == 5) {
+          ref = change_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (changeCase_ == 5) {
+            change_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 5;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = "";
+        if (changeCase_ == 5) {
+          ref = change_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (changeCase_ == 5) {
+            change_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 5;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  changeCase_ = 5;
+        change_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        if (changeCase_ == 5) {
+          changeCase_ = 0;
+          change_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>string name = 5;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        changeCase_ = 5;
+        change_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string email = 6;</code>
+       * @return The email.
+       */
+      public java.lang.String getEmail() {
+        java.lang.Object ref = "";
+        if (changeCase_ == 6) {
+          ref = change_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (changeCase_ == 6) {
+            change_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string email = 6;</code>
+       * @return The bytes for email.
+       */
+      public com.google.protobuf.ByteString
+          getEmailBytes() {
+        java.lang.Object ref = "";
+        if (changeCase_ == 6) {
+          ref = change_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (changeCase_ == 6) {
+            change_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string email = 6;</code>
+       * @param value The email to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmail(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  changeCase_ = 6;
+        change_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string email = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEmail() {
+        if (changeCase_ == 6) {
+          changeCase_ = 0;
+          change_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>string email = 6;</code>
+       * @param value The bytes for email to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmailBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        changeCase_ = 6;
+        change_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.api.OrganizationChange)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.api.OrganizationChange)
+    private static final io.toit.proto.toit.api.OrgProto.OrganizationChange DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.api.OrgProto.OrganizationChange();
+    }
+
+    public static io.toit.proto.toit.api.OrgProto.OrganizationChange getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<OrganizationChange>
+        PARSER = new com.google.protobuf.AbstractParser<OrganizationChange>() {
+      @java.lang.Override
+      public OrganizationChange parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new OrganizationChange(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<OrganizationChange> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<OrganizationChange> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.api.OrgProto.OrganizationChange getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateOrganizationRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.UpdateOrganizationRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .toit.api.OrganizationChange changes = 1;</code>
+     */
+    java.util.List<io.toit.proto.toit.api.OrgProto.OrganizationChange> 
+        getChangesList();
+    /**
+     * <code>repeated .toit.api.OrganizationChange changes = 1;</code>
+     */
+    io.toit.proto.toit.api.OrgProto.OrganizationChange getChanges(int index);
+    /**
+     * <code>repeated .toit.api.OrganizationChange changes = 1;</code>
+     */
+    int getChangesCount();
+    /**
+     * <code>repeated .toit.api.OrganizationChange changes = 1;</code>
+     */
+    java.util.List<? extends io.toit.proto.toit.api.OrgProto.OrganizationChangeOrBuilder> 
+        getChangesOrBuilderList();
+    /**
+     * <code>repeated .toit.api.OrganizationChange changes = 1;</code>
+     */
+    io.toit.proto.toit.api.OrgProto.OrganizationChangeOrBuilder getChangesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code toit.api.UpdateOrganizationRequest}
+   */
+  public  static final class UpdateOrganizationRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.api.UpdateOrganizationRequest)
+      UpdateOrganizationRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateOrganizationRequest.newBuilder() to construct.
+    private UpdateOrganizationRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateOrganizationRequest() {
+      changes_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateOrganizationRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateOrganizationRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                changes_ = new java.util.ArrayList<io.toit.proto.toit.api.OrgProto.OrganizationChange>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              changes_.add(
+                  input.readMessage(io.toit.proto.toit.api.OrgProto.OrganizationChange.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          changes_ = java.util.Collections.unmodifiableList(changes_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_UpdateOrganizationRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.api.OrgProto.internal_static_toit_api_UpdateOrganizationRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest.class, io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest.Builder.class);
+    }
+
+    public static final int CHANGES_FIELD_NUMBER = 1;
+    private java.util.List<io.toit.proto.toit.api.OrgProto.OrganizationChange> changes_;
+    /**
+     * <code>repeated .toit.api.OrganizationChange changes = 1;</code>
+     */
+    public java.util.List<io.toit.proto.toit.api.OrgProto.OrganizationChange> getChangesList() {
+      return changes_;
+    }
+    /**
+     * <code>repeated .toit.api.OrganizationChange changes = 1;</code>
+     */
+    public java.util.List<? extends io.toit.proto.toit.api.OrgProto.OrganizationChangeOrBuilder> 
+        getChangesOrBuilderList() {
+      return changes_;
+    }
+    /**
+     * <code>repeated .toit.api.OrganizationChange changes = 1;</code>
+     */
+    public int getChangesCount() {
+      return changes_.size();
+    }
+    /**
+     * <code>repeated .toit.api.OrganizationChange changes = 1;</code>
+     */
+    public io.toit.proto.toit.api.OrgProto.OrganizationChange getChanges(int index) {
+      return changes_.get(index);
+    }
+    /**
+     * <code>repeated .toit.api.OrganizationChange changes = 1;</code>
+     */
+    public io.toit.proto.toit.api.OrgProto.OrganizationChangeOrBuilder getChangesOrBuilder(
+        int index) {
+      return changes_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < changes_.size(); i++) {
+        output.writeMessage(1, changes_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < changes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, changes_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10051,14 +11426,8 @@ public final class OrgProto {
       }
       io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest other = (io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest) obj;
 
-      if (!getCity()
-          .equals(other.getCity())) return false;
-      if (!getCountry()
-          .equals(other.getCountry())) return false;
-      if (!getPhoneNumber()
-          .equals(other.getPhoneNumber())) return false;
-      if (!getCvrNumber()
-          .equals(other.getCvrNumber())) return false;
+      if (!getChangesList()
+          .equals(other.getChangesList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10070,14 +11439,10 @@ public final class OrgProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CITY_FIELD_NUMBER;
-      hash = (53 * hash) + getCity().hashCode();
-      hash = (37 * hash) + COUNTRY_FIELD_NUMBER;
-      hash = (53 * hash) + getCountry().hashCode();
-      hash = (37 * hash) + PHONE_NUMBER_FIELD_NUMBER;
-      hash = (53 * hash) + getPhoneNumber().hashCode();
-      hash = (37 * hash) + CVR_NUMBER_FIELD_NUMBER;
-      hash = (53 * hash) + getCvrNumber().hashCode();
+      if (getChangesCount() > 0) {
+        hash = (37 * hash) + CHANGES_FIELD_NUMBER;
+        hash = (53 * hash) + getChangesList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -10206,19 +11571,18 @@ public final class OrgProto {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getChangesFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        city_ = "";
-
-        country_ = "";
-
-        phoneNumber_ = "";
-
-        cvrNumber_ = "";
-
+        if (changesBuilder_ == null) {
+          changes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          changesBuilder_.clear();
+        }
         return this;
       }
 
@@ -10245,10 +11609,16 @@ public final class OrgProto {
       @java.lang.Override
       public io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest buildPartial() {
         io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest result = new io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest(this);
-        result.city_ = city_;
-        result.country_ = country_;
-        result.phoneNumber_ = phoneNumber_;
-        result.cvrNumber_ = cvrNumber_;
+        int from_bitField0_ = bitField0_;
+        if (changesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            changes_ = java.util.Collections.unmodifiableList(changes_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.changes_ = changes_;
+        } else {
+          result.changes_ = changesBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -10297,21 +11667,31 @@ public final class OrgProto {
 
       public Builder mergeFrom(io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest other) {
         if (other == io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest.getDefaultInstance()) return this;
-        if (!other.getCity().isEmpty()) {
-          city_ = other.city_;
-          onChanged();
-        }
-        if (!other.getCountry().isEmpty()) {
-          country_ = other.country_;
-          onChanged();
-        }
-        if (!other.getPhoneNumber().isEmpty()) {
-          phoneNumber_ = other.phoneNumber_;
-          onChanged();
-        }
-        if (!other.getCvrNumber().isEmpty()) {
-          cvrNumber_ = other.cvrNumber_;
-          onChanged();
+        if (changesBuilder_ == null) {
+          if (!other.changes_.isEmpty()) {
+            if (changes_.isEmpty()) {
+              changes_ = other.changes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureChangesIsMutable();
+              changes_.addAll(other.changes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.changes_.isEmpty()) {
+            if (changesBuilder_.isEmpty()) {
+              changesBuilder_.dispose();
+              changesBuilder_ = null;
+              changes_ = other.changes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              changesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getChangesFieldBuilder() : null;
+            } else {
+              changesBuilder_.addAllMessages(other.changes_);
+            }
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -10341,309 +11721,246 @@ public final class OrgProto {
         }
         return this;
       }
+      private int bitField0_;
 
-      private java.lang.Object city_ = "";
-      /**
-       * <code>string city = 1;</code>
-       * @return The city.
-       */
-      public java.lang.String getCity() {
-        java.lang.Object ref = city_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          city_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string city = 1;</code>
-       * @return The bytes for city.
-       */
-      public com.google.protobuf.ByteString
-          getCityBytes() {
-        java.lang.Object ref = city_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          city_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string city = 1;</code>
-       * @param value The city to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCity(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        city_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string city = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCity() {
-        
-        city_ = getDefaultInstance().getCity();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string city = 1;</code>
-       * @param value The bytes for city to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCityBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        city_ = value;
-        onChanged();
-        return this;
+      private java.util.List<io.toit.proto.toit.api.OrgProto.OrganizationChange> changes_ =
+        java.util.Collections.emptyList();
+      private void ensureChangesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          changes_ = new java.util.ArrayList<io.toit.proto.toit.api.OrgProto.OrganizationChange>(changes_);
+          bitField0_ |= 0x00000001;
+         }
       }
 
-      private java.lang.Object country_ = "";
-      /**
-       * <code>string country = 2;</code>
-       * @return The country.
-       */
-      public java.lang.String getCountry() {
-        java.lang.Object ref = country_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          country_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string country = 2;</code>
-       * @return The bytes for country.
-       */
-      public com.google.protobuf.ByteString
-          getCountryBytes() {
-        java.lang.Object ref = country_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          country_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string country = 2;</code>
-       * @param value The country to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCountry(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        country_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string country = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCountry() {
-        
-        country_ = getDefaultInstance().getCountry();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string country = 2;</code>
-       * @param value The bytes for country to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCountryBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        country_ = value;
-        onChanged();
-        return this;
-      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          io.toit.proto.toit.api.OrgProto.OrganizationChange, io.toit.proto.toit.api.OrgProto.OrganizationChange.Builder, io.toit.proto.toit.api.OrgProto.OrganizationChangeOrBuilder> changesBuilder_;
 
-      private java.lang.Object phoneNumber_ = "";
       /**
-       * <code>string phone_number = 3;</code>
-       * @return The phoneNumber.
+       * <code>repeated .toit.api.OrganizationChange changes = 1;</code>
        */
-      public java.lang.String getPhoneNumber() {
-        java.lang.Object ref = phoneNumber_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          phoneNumber_ = s;
-          return s;
+      public java.util.List<io.toit.proto.toit.api.OrgProto.OrganizationChange> getChangesList() {
+        if (changesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(changes_);
         } else {
-          return (java.lang.String) ref;
+          return changesBuilder_.getMessageList();
         }
       }
       /**
-       * <code>string phone_number = 3;</code>
-       * @return The bytes for phoneNumber.
+       * <code>repeated .toit.api.OrganizationChange changes = 1;</code>
        */
-      public com.google.protobuf.ByteString
-          getPhoneNumberBytes() {
-        java.lang.Object ref = phoneNumber_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          phoneNumber_ = b;
-          return b;
+      public int getChangesCount() {
+        if (changesBuilder_ == null) {
+          return changes_.size();
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return changesBuilder_.getCount();
         }
       }
       /**
-       * <code>string phone_number = 3;</code>
-       * @param value The phoneNumber to set.
-       * @return This builder for chaining.
+       * <code>repeated .toit.api.OrganizationChange changes = 1;</code>
        */
-      public Builder setPhoneNumber(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        phoneNumber_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string phone_number = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPhoneNumber() {
-        
-        phoneNumber_ = getDefaultInstance().getPhoneNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string phone_number = 3;</code>
-       * @param value The bytes for phoneNumber to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPhoneNumberBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        phoneNumber_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object cvrNumber_ = "";
-      /**
-       * <code>string cvr_number = 4;</code>
-       * @return The cvrNumber.
-       */
-      public java.lang.String getCvrNumber() {
-        java.lang.Object ref = cvrNumber_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          cvrNumber_ = s;
-          return s;
+      public io.toit.proto.toit.api.OrgProto.OrganizationChange getChanges(int index) {
+        if (changesBuilder_ == null) {
+          return changes_.get(index);
         } else {
-          return (java.lang.String) ref;
+          return changesBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>string cvr_number = 4;</code>
-       * @return The bytes for cvrNumber.
+       * <code>repeated .toit.api.OrganizationChange changes = 1;</code>
        */
-      public com.google.protobuf.ByteString
-          getCvrNumberBytes() {
-        java.lang.Object ref = cvrNumber_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          cvrNumber_ = b;
-          return b;
+      public Builder setChanges(
+          int index, io.toit.proto.toit.api.OrgProto.OrganizationChange value) {
+        if (changesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureChangesIsMutable();
+          changes_.set(index, value);
+          onChanged();
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          changesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .toit.api.OrganizationChange changes = 1;</code>
+       */
+      public Builder setChanges(
+          int index, io.toit.proto.toit.api.OrgProto.OrganizationChange.Builder builderForValue) {
+        if (changesBuilder_ == null) {
+          ensureChangesIsMutable();
+          changes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          changesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .toit.api.OrganizationChange changes = 1;</code>
+       */
+      public Builder addChanges(io.toit.proto.toit.api.OrgProto.OrganizationChange value) {
+        if (changesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureChangesIsMutable();
+          changes_.add(value);
+          onChanged();
+        } else {
+          changesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .toit.api.OrganizationChange changes = 1;</code>
+       */
+      public Builder addChanges(
+          int index, io.toit.proto.toit.api.OrgProto.OrganizationChange value) {
+        if (changesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureChangesIsMutable();
+          changes_.add(index, value);
+          onChanged();
+        } else {
+          changesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .toit.api.OrganizationChange changes = 1;</code>
+       */
+      public Builder addChanges(
+          io.toit.proto.toit.api.OrgProto.OrganizationChange.Builder builderForValue) {
+        if (changesBuilder_ == null) {
+          ensureChangesIsMutable();
+          changes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          changesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .toit.api.OrganizationChange changes = 1;</code>
+       */
+      public Builder addChanges(
+          int index, io.toit.proto.toit.api.OrgProto.OrganizationChange.Builder builderForValue) {
+        if (changesBuilder_ == null) {
+          ensureChangesIsMutable();
+          changes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          changesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .toit.api.OrganizationChange changes = 1;</code>
+       */
+      public Builder addAllChanges(
+          java.lang.Iterable<? extends io.toit.proto.toit.api.OrgProto.OrganizationChange> values) {
+        if (changesBuilder_ == null) {
+          ensureChangesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, changes_);
+          onChanged();
+        } else {
+          changesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .toit.api.OrganizationChange changes = 1;</code>
+       */
+      public Builder clearChanges() {
+        if (changesBuilder_ == null) {
+          changes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          changesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .toit.api.OrganizationChange changes = 1;</code>
+       */
+      public Builder removeChanges(int index) {
+        if (changesBuilder_ == null) {
+          ensureChangesIsMutable();
+          changes_.remove(index);
+          onChanged();
+        } else {
+          changesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .toit.api.OrganizationChange changes = 1;</code>
+       */
+      public io.toit.proto.toit.api.OrgProto.OrganizationChange.Builder getChangesBuilder(
+          int index) {
+        return getChangesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .toit.api.OrganizationChange changes = 1;</code>
+       */
+      public io.toit.proto.toit.api.OrgProto.OrganizationChangeOrBuilder getChangesOrBuilder(
+          int index) {
+        if (changesBuilder_ == null) {
+          return changes_.get(index);  } else {
+          return changesBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>string cvr_number = 4;</code>
-       * @param value The cvrNumber to set.
-       * @return This builder for chaining.
+       * <code>repeated .toit.api.OrganizationChange changes = 1;</code>
        */
-      public Builder setCvrNumber(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        cvrNumber_ = value;
-        onChanged();
-        return this;
+      public java.util.List<? extends io.toit.proto.toit.api.OrgProto.OrganizationChangeOrBuilder> 
+           getChangesOrBuilderList() {
+        if (changesBuilder_ != null) {
+          return changesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(changes_);
+        }
       }
       /**
-       * <code>string cvr_number = 4;</code>
-       * @return This builder for chaining.
+       * <code>repeated .toit.api.OrganizationChange changes = 1;</code>
        */
-      public Builder clearCvrNumber() {
-        
-        cvrNumber_ = getDefaultInstance().getCvrNumber();
-        onChanged();
-        return this;
+      public io.toit.proto.toit.api.OrgProto.OrganizationChange.Builder addChangesBuilder() {
+        return getChangesFieldBuilder().addBuilder(
+            io.toit.proto.toit.api.OrgProto.OrganizationChange.getDefaultInstance());
       }
       /**
-       * <code>string cvr_number = 4;</code>
-       * @param value The bytes for cvrNumber to set.
-       * @return This builder for chaining.
+       * <code>repeated .toit.api.OrganizationChange changes = 1;</code>
        */
-      public Builder setCvrNumberBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        cvrNumber_ = value;
-        onChanged();
-        return this;
+      public io.toit.proto.toit.api.OrgProto.OrganizationChange.Builder addChangesBuilder(
+          int index) {
+        return getChangesFieldBuilder().addBuilder(
+            index, io.toit.proto.toit.api.OrgProto.OrganizationChange.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .toit.api.OrganizationChange changes = 1;</code>
+       */
+      public java.util.List<io.toit.proto.toit.api.OrgProto.OrganizationChange.Builder> 
+           getChangesBuilderList() {
+        return getChangesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          io.toit.proto.toit.api.OrgProto.OrganizationChange, io.toit.proto.toit.api.OrgProto.OrganizationChange.Builder, io.toit.proto.toit.api.OrgProto.OrganizationChangeOrBuilder> 
+          getChangesFieldBuilder() {
+        if (changesBuilder_ == null) {
+          changesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              io.toit.proto.toit.api.OrgProto.OrganizationChange, io.toit.proto.toit.api.OrgProto.OrganizationChange.Builder, io.toit.proto.toit.api.OrgProto.OrganizationChangeOrBuilder>(
+                  changes_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          changes_ = null;
+        }
+        return changesBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -12666,6 +13983,11 @@ public final class OrgProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_toit_api_GetAPIKeySecretResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_OrganizationChange_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_OrganizationChange_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_toit_api_UpdateOrganizationRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -12716,37 +14038,41 @@ public final class OrgProto {
       "ffset\030\002 \001(\014\"!\n\023DeleteAPIKeyRequest\022\n\n\002id" +
       "\030\001 \001(\014\"\026\n\024DeleteAPIKeyResponse\"$\n\026GetAPI" +
       "KeySecretRequest\022\n\n\002id\030\001 \001(\014\")\n\027GetAPIKe" +
-      "ySecretResponse\022\016\n\006secret\030\001 \001(\t\"d\n\031Updat" +
-      "eOrganizationRequest\022\014\n\004city\030\001 \001(\t\022\017\n\007co" +
-      "untry\030\002 \001(\t\022\024\n\014phone_number\030\003 \001(\t\022\022\n\ncvr" +
-      "_number\030\004 \001(\t\"\034\n\032UpdateOrganizationRespo" +
-      "nse\"\214\001\n\024UpdatePaymentRequest\022\023\n\013card_num" +
-      "ber\030\001 \001(\004\022*\n\006expiry\030\002 \001(\0132\032.google.proto" +
-      "buf.Timestamp\022\013\n\003cvc\030\003 \001(\005\022\020\n\010currency\030\004" +
-      " \001(\t\022\024\n\014name_on_card\030\005 \001(\t\"\027\n\025UpdatePaym" +
-      "entResponse2\270\006\n\023OrganizationService\022@\n\007G" +
-      "etUser\022\030.toit.api.GetUserRequest\032\031.toit." +
-      "api.GetUserResponse\"\000\022F\n\tListUsers\022\032.toi" +
-      "t.api.ListUsersRequest\032\033.toit.api.ListUs" +
-      "ersResponse\"\000\022I\n\nCreateUser\022\033.toit.api.C" +
-      "reateUserRequest\032\034.toit.api.CreateUserRe" +
-      "sponse\"\000\022I\n\nDeleteUser\022\033.toit.api.Delete" +
-      "UserRequest\032\034.toit.api.DeleteUserRespons" +
-      "e\"\000\022O\n\014CreateAPIKey\022\035.toit.api.CreateAPI" +
-      "KeyRequest\032\036.toit.api.CreateAPIKeyRespon" +
-      "se\"\000\022N\n\013ListAPIKeys\022\034.toit.api.ListAPIKe" +
-      "ysRequest\032\035.toit.api.ListAPIKeysResponse" +
-      "\"\0000\001\022O\n\014DeleteAPIKey\022\035.toit.api.DeleteAP" +
-      "IKeyRequest\032\036.toit.api.DeleteAPIKeyRespo" +
-      "nse\"\000\022X\n\017GetAPIKeySecret\022 .toit.api.GetA" +
-      "PIKeySecretRequest\032!.toit.api.GetAPIKeyS" +
-      "ecretResponse\"\000\022a\n\022UpdateOrganization\022#." +
-      "toit.api.UpdateOrganizationRequest\032$.toi" +
-      "t.api.UpdateOrganizationResponse\"\000\022R\n\rUp" +
-      "datePayment\022\036.toit.api.UpdatePaymentRequ" +
-      "est\032\037.toit.api.UpdatePaymentResponse\"\000BH" +
-      "\n\026io.toit.proto.toit.apiB\010OrgProtoZ$gith" +
-      "ub.com/toitware/api.git/toit/apib\006proto3"
+      "ySecretResponse\022\016\n\006secret\030\001 \001(\t\"\220\001\n\022Orga" +
+      "nizationChange\022\016\n\004city\030\001 \001(\tH\000\022\021\n\007countr" +
+      "y\030\002 \001(\tH\000\022\026\n\014phone_number\030\003 \001(\tH\000\022\024\n\ncvr" +
+      "_number\030\004 \001(\tH\000\022\016\n\004name\030\005 \001(\tH\000\022\017\n\005email" +
+      "\030\006 \001(\tH\000B\010\n\006change\"J\n\031UpdateOrganization" +
+      "Request\022-\n\007changes\030\001 \003(\0132\034.toit.api.Orga" +
+      "nizationChange\"\034\n\032UpdateOrganizationResp" +
+      "onse\"\214\001\n\024UpdatePaymentRequest\022\023\n\013card_nu" +
+      "mber\030\001 \001(\004\022*\n\006expiry\030\002 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\022\013\n\003cvc\030\003 \001(\005\022\020\n\010currency\030" +
+      "\004 \001(\t\022\024\n\014name_on_card\030\005 \001(\t\"\027\n\025UpdatePay" +
+      "mentResponse2\270\006\n\023OrganizationService\022@\n\007" +
+      "GetUser\022\030.toit.api.GetUserRequest\032\031.toit" +
+      ".api.GetUserResponse\"\000\022F\n\tListUsers\022\032.to" +
+      "it.api.ListUsersRequest\032\033.toit.api.ListU" +
+      "sersResponse\"\000\022I\n\nCreateUser\022\033.toit.api." +
+      "CreateUserRequest\032\034.toit.api.CreateUserR" +
+      "esponse\"\000\022I\n\nDeleteUser\022\033.toit.api.Delet" +
+      "eUserRequest\032\034.toit.api.DeleteUserRespon" +
+      "se\"\000\022O\n\014CreateAPIKey\022\035.toit.api.CreateAP" +
+      "IKeyRequest\032\036.toit.api.CreateAPIKeyRespo" +
+      "nse\"\000\022N\n\013ListAPIKeys\022\034.toit.api.ListAPIK" +
+      "eysRequest\032\035.toit.api.ListAPIKeysRespons" +
+      "e\"\0000\001\022O\n\014DeleteAPIKey\022\035.toit.api.DeleteA" +
+      "PIKeyRequest\032\036.toit.api.DeleteAPIKeyResp" +
+      "onse\"\000\022X\n\017GetAPIKeySecret\022 .toit.api.Get" +
+      "APIKeySecretRequest\032!.toit.api.GetAPIKey" +
+      "SecretResponse\"\000\022a\n\022UpdateOrganization\022#" +
+      ".toit.api.UpdateOrganizationRequest\032$.to" +
+      "it.api.UpdateOrganizationResponse\"\000\022R\n\rU" +
+      "pdatePayment\022\036.toit.api.UpdatePaymentReq" +
+      "uest\032\037.toit.api.UpdatePaymentResponse\"\000B" +
+      "H\n\026io.toit.proto.toit.apiB\010OrgProtoZ$git" +
+      "hub.com/toitware/api.git/toit/apib\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12850,26 +14176,32 @@ public final class OrgProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_GetAPIKeySecretResponse_descriptor,
         new java.lang.String[] { "Secret", });
-    internal_static_toit_api_UpdateOrganizationRequest_descriptor =
+    internal_static_toit_api_OrganizationChange_descriptor =
       getDescriptor().getMessageTypes().get(16);
+    internal_static_toit_api_OrganizationChange_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_OrganizationChange_descriptor,
+        new java.lang.String[] { "City", "Country", "PhoneNumber", "CvrNumber", "Name", "Email", "Change", });
+    internal_static_toit_api_UpdateOrganizationRequest_descriptor =
+      getDescriptor().getMessageTypes().get(17);
     internal_static_toit_api_UpdateOrganizationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_UpdateOrganizationRequest_descriptor,
-        new java.lang.String[] { "City", "Country", "PhoneNumber", "CvrNumber", });
+        new java.lang.String[] { "Changes", });
     internal_static_toit_api_UpdateOrganizationResponse_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_toit_api_UpdateOrganizationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_UpdateOrganizationResponse_descriptor,
         new java.lang.String[] { });
     internal_static_toit_api_UpdatePaymentRequest_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_toit_api_UpdatePaymentRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_UpdatePaymentRequest_descriptor,
         new java.lang.String[] { "CardNumber", "Expiry", "Cvc", "Currency", "NameOnCard", });
     internal_static_toit_api_UpdatePaymentResponse_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_toit_api_UpdatePaymentResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_UpdatePaymentResponse_descriptor,
