@@ -377,18 +377,74 @@ export namespace GetAPIKeySecretResponse {
   }
 }
 
-export class UpdateOrganizationRequest extends jspb.Message {
+export class OrganizationChange extends jspb.Message {
+  hasCity(): boolean;
+  clearCity(): void;
   getCity(): string;
   setCity(value: string): void;
 
+  hasCountry(): boolean;
+  clearCountry(): void;
   getCountry(): string;
   setCountry(value: string): void;
 
+  hasPhoneNumber(): boolean;
+  clearPhoneNumber(): void;
   getPhoneNumber(): string;
   setPhoneNumber(value: string): void;
 
+  hasCvrNumber(): boolean;
+  clearCvrNumber(): void;
   getCvrNumber(): string;
   setCvrNumber(value: string): void;
+
+  hasName(): boolean;
+  clearName(): void;
+  getName(): string;
+  setName(value: string): void;
+
+  hasEmail(): boolean;
+  clearEmail(): void;
+  getEmail(): string;
+  setEmail(value: string): void;
+
+  getChangeCase(): OrganizationChange.ChangeCase;
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): OrganizationChange.AsObject;
+  static toObject(includeInstance: boolean, msg: OrganizationChange): OrganizationChange.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: OrganizationChange, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): OrganizationChange;
+  static deserializeBinaryFromReader(message: OrganizationChange, reader: jspb.BinaryReader): OrganizationChange;
+}
+
+export namespace OrganizationChange {
+  export type AsObject = {
+    city: string,
+    country: string,
+    phoneNumber: string,
+    cvrNumber: string,
+    name: string,
+    email: string,
+  }
+
+  export enum ChangeCase {
+    CHANGE_NOT_SET = 0,
+    CITY = 1,
+    COUNTRY = 2,
+    PHONE_NUMBER = 3,
+    CVR_NUMBER = 4,
+    NAME = 5,
+    EMAIL = 6,
+  }
+}
+
+export class UpdateOrganizationRequest extends jspb.Message {
+  clearChangesList(): void;
+  getChangesList(): Array<OrganizationChange>;
+  setChangesList(value: Array<OrganizationChange>): void;
+  addChanges(value?: OrganizationChange, index?: number): OrganizationChange;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UpdateOrganizationRequest.AsObject;
@@ -402,10 +458,7 @@ export class UpdateOrganizationRequest extends jspb.Message {
 
 export namespace UpdateOrganizationRequest {
   export type AsObject = {
-    city: string,
-    country: string,
-    phoneNumber: string,
-    cvrNumber: string,
+    changesList: Array<OrganizationChange.AsObject>,
   }
 }
 
