@@ -52,8 +52,12 @@ message CreateOrganizationRequest {
     string email = 1;
     string name = 2;
   }
+  message HubspotContact {
+    uint64 hubspot_contact_id  = 1;
+  }
   Organization organization = 1;
   User user = 2;
+  HubspotContact hubspot_contact = 3;
 }
 
 message CreateOrganizationResponse {
