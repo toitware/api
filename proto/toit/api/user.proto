@@ -81,5 +81,5 @@ message CreatePaymentSubscriptionRequest {
 }
 
 message CreatePaymentSubscriptionResponse {
-
+    string customer_id = 1;
 }
