@@ -28,6 +28,28 @@ function deserialize_toit_api_ChangePasswordWithRPTokenResponse(buffer_arg) {
   return toit_api_user_pb.ChangePasswordWithRPTokenResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_toit_api_CreatePaymentSubscriptionRequest(arg) {
+  if (!(arg instanceof toit_api_user_pb.CreatePaymentSubscriptionRequest)) {
+    throw new Error('Expected argument of type toit.api.CreatePaymentSubscriptionRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_CreatePaymentSubscriptionRequest(buffer_arg) {
+  return toit_api_user_pb.CreatePaymentSubscriptionRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_toit_api_CreatePaymentSubscriptionResponse(arg) {
+  if (!(arg instanceof toit_api_user_pb.CreatePaymentSubscriptionResponse)) {
+    throw new Error('Expected argument of type toit.api.CreatePaymentSubscriptionResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_CreatePaymentSubscriptionResponse(buffer_arg) {
+  return toit_api_user_pb.CreatePaymentSubscriptionResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_toit_api_CreateUserRequest(arg) {
   if (!(arg instanceof toit_api_organization_pb.CreateUserRequest)) {
     throw new Error('Expected argument of type toit.api.CreateUserRequest');
@@ -249,6 +271,17 @@ var UserService = exports.UserService = {
     requestDeserialize: deserialize_toit_api_GetOrganizationRequest,
     responseSerialize: serialize_toit_api_GetOrganizationResponse,
     responseDeserialize: deserialize_toit_api_GetOrganizationResponse,
+  },
+  createPaymentSubscription: {
+    path: '/toit.api.User/CreatePaymentSubscription',
+    requestStream: false,
+    responseStream: false,
+    requestType: toit_api_user_pb.CreatePaymentSubscriptionRequest,
+    responseType: toit_api_user_pb.CreatePaymentSubscriptionResponse,
+    requestSerialize: serialize_toit_api_CreatePaymentSubscriptionRequest,
+    requestDeserialize: deserialize_toit_api_CreatePaymentSubscriptionRequest,
+    responseSerialize: serialize_toit_api_CreatePaymentSubscriptionResponse,
+    responseDeserialize: deserialize_toit_api_CreatePaymentSubscriptionResponse,
   },
   listUsers: {
     path: '/toit.api.User/ListUsers',

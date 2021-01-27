@@ -277,3 +277,55 @@ export namespace GetOrganizationResponse {
   }
 }
 
+export class CreatePaymentSubscriptionRequest extends jspb.Message {
+  getBillingEmail(): string;
+  setBillingEmail(value: string): void;
+
+  getCardHolderName(): string;
+  setCardHolderName(value: string): void;
+
+  getCardCvc(): number;
+  setCardCvc(value: number): void;
+
+  getCardExpiry(): string;
+  setCardExpiry(value: string): void;
+
+  getCardNumber(): number;
+  setCardNumber(value: number): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): CreatePaymentSubscriptionRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: CreatePaymentSubscriptionRequest): CreatePaymentSubscriptionRequest.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: CreatePaymentSubscriptionRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): CreatePaymentSubscriptionRequest;
+  static deserializeBinaryFromReader(message: CreatePaymentSubscriptionRequest, reader: jspb.BinaryReader): CreatePaymentSubscriptionRequest;
+}
+
+export namespace CreatePaymentSubscriptionRequest {
+  export type AsObject = {
+    billingEmail: string,
+    cardHolderName: string,
+    cardCvc: number,
+    cardExpiry: string,
+    cardNumber: number,
+  }
+}
+
+export class CreatePaymentSubscriptionResponse extends jspb.Message {
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): CreatePaymentSubscriptionResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: CreatePaymentSubscriptionResponse): CreatePaymentSubscriptionResponse.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: CreatePaymentSubscriptionResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): CreatePaymentSubscriptionResponse;
+  static deserializeBinaryFromReader(message: CreatePaymentSubscriptionResponse, reader: jspb.BinaryReader): CreatePaymentSubscriptionResponse;
+}
+
+export namespace CreatePaymentSubscriptionResponse {
+  export type AsObject = {
+  }
+}
+
