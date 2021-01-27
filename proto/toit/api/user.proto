@@ -74,9 +74,9 @@ message GetOrganizationResponse {
 
 message CreatePaymentSubscriptionRequest {
     string billing_email = 1;
-    string card_holder = 2;
-    int32 cvc = 3;
-    string expiry_date = 4;
+    string card_holder_name = 2;
+    int32 card_cvc = 3;
+    string card_expiry = 4;
     int64 card_number = 5;
 }
 
