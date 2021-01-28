@@ -31,6 +31,9 @@ export class Organization extends jspb.Message {
   getCvrNumber(): string;
   setCvrNumber(value: string): void;
 
+  getTier(): Tier.TypeMap[keyof Tier.TypeMap];
+  setTier(value: Tier.TypeMap[keyof Tier.TypeMap]): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Organization.AsObject;
   static toObject(includeInstance: boolean, msg: Organization): Organization.AsObject;
@@ -51,6 +54,7 @@ export namespace Organization {
     country: string,
     phoneNumber: string,
     cvrNumber: string,
+    tier: Tier.TypeMap[keyof Tier.TypeMap],
   }
 }
 
@@ -126,5 +130,29 @@ export namespace APIKey {
     name: string,
     createdAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
   }
+}
+
+export class Tier extends jspb.Message {
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): Tier.AsObject;
+  static toObject(includeInstance: boolean, msg: Tier): Tier.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: Tier, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): Tier;
+  static deserializeBinaryFromReader(message: Tier, reader: jspb.BinaryReader): Tier;
+}
+
+export namespace Tier {
+  export type AsObject = {
+  }
+
+  export interface TypeMap {
+    UNKNOWN: 0;
+    FREE: 1;
+    PAID: 2;
+  }
+
+  export const Type: TypeMap;
 }
 
