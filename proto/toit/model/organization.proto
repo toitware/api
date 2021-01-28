@@ -17,6 +17,7 @@ message Organization {
     string country = 6;
     string phone_number = 7;
     string cvr_number = 8;
+    Tier.Type tier = 9;
 }
 
 message User {
@@ -32,3 +33,11 @@ message APIKey {
     string name = 3;
     google.protobuf.Timestamp created_at = 4;
 }
+
+message Tier {
+    enum Type {
+      UNKNOWN = 0;
+      FREE = 1;
+      PAID = 2;
+    };
+  }
