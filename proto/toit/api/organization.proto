@@ -109,4 +109,6 @@ message UpdatePaymentRequest {
   string name_on_card = 5;
 }
 
-message UpdatePaymentResponse {}
+message UpdatePaymentResponse {
+  string error_message = 1;
+}
