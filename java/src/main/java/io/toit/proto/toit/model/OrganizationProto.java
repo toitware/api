@@ -107,6 +107,17 @@ public final class OrganizationProto {
      */
     com.google.protobuf.ByteString
         getCvrNumberBytes();
+
+    /**
+     * <code>.toit.model.Tier.Type tier = 9;</code>
+     * @return The enum numeric value on the wire for tier.
+     */
+    int getTierValue();
+    /**
+     * <code>.toit.model.Tier.Type tier = 9;</code>
+     * @return The tier.
+     */
+    io.toit.proto.toit.model.OrganizationProto.Tier.Type getTier();
   }
   /**
    * Protobuf type {@code toit.model.Organization}
@@ -129,6 +140,7 @@ public final class OrganizationProto {
       country_ = "";
       phoneNumber_ = "";
       cvrNumber_ = "";
+      tier_ = 0;
     }
 
     @java.lang.Override
@@ -206,6 +218,12 @@ public final class OrganizationProto {
               java.lang.String s = input.readStringRequireUtf8();
 
               cvrNumber_ = s;
+              break;
+            }
+            case 72: {
+              int rawValue = input.readEnum();
+
+              tier_ = rawValue;
               break;
             }
             default: {
@@ -502,6 +520,25 @@ public final class OrganizationProto {
       }
     }
 
+    public static final int TIER_FIELD_NUMBER = 9;
+    private int tier_;
+    /**
+     * <code>.toit.model.Tier.Type tier = 9;</code>
+     * @return The enum numeric value on the wire for tier.
+     */
+    public int getTierValue() {
+      return tier_;
+    }
+    /**
+     * <code>.toit.model.Tier.Type tier = 9;</code>
+     * @return The tier.
+     */
+    public io.toit.proto.toit.model.OrganizationProto.Tier.Type getTier() {
+      @SuppressWarnings("deprecation")
+      io.toit.proto.toit.model.OrganizationProto.Tier.Type result = io.toit.proto.toit.model.OrganizationProto.Tier.Type.valueOf(tier_);
+      return result == null ? io.toit.proto.toit.model.OrganizationProto.Tier.Type.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -540,6 +577,9 @@ public final class OrganizationProto {
       if (!getCvrNumberBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, cvrNumber_);
       }
+      if (tier_ != io.toit.proto.toit.model.OrganizationProto.Tier.Type.UNKNOWN.getNumber()) {
+        output.writeEnum(9, tier_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -574,6 +614,10 @@ public final class OrganizationProto {
       if (!getCvrNumberBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, cvrNumber_);
       }
+      if (tier_ != io.toit.proto.toit.model.OrganizationProto.Tier.Type.UNKNOWN.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(9, tier_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -605,6 +649,7 @@ public final class OrganizationProto {
           .equals(other.getPhoneNumber())) return false;
       if (!getCvrNumber()
           .equals(other.getCvrNumber())) return false;
+      if (tier_ != other.tier_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -632,6 +677,8 @@ public final class OrganizationProto {
       hash = (53 * hash) + getPhoneNumber().hashCode();
       hash = (37 * hash) + CVR_NUMBER_FIELD_NUMBER;
       hash = (53 * hash) + getCvrNumber().hashCode();
+      hash = (37 * hash) + TIER_FIELD_NUMBER;
+      hash = (53 * hash) + tier_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -781,6 +828,8 @@ public final class OrganizationProto {
 
         cvrNumber_ = "";
 
+        tier_ = 0;
+
         return this;
       }
 
@@ -815,6 +864,7 @@ public final class OrganizationProto {
         result.country_ = country_;
         result.phoneNumber_ = phoneNumber_;
         result.cvrNumber_ = cvrNumber_;
+        result.tier_ = tier_;
         onBuilt();
         return result;
       }
@@ -893,6 +943,9 @@ public final class OrganizationProto {
         if (!other.getCvrNumber().isEmpty()) {
           cvrNumber_ = other.cvrNumber_;
           onChanged();
+        }
+        if (other.tier_ != 0) {
+          setTierValue(other.getTierValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1484,6 +1537,58 @@ public final class OrganizationProto {
   checkByteStringIsUtf8(value);
         
         cvrNumber_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int tier_ = 0;
+      /**
+       * <code>.toit.model.Tier.Type tier = 9;</code>
+       * @return The enum numeric value on the wire for tier.
+       */
+      public int getTierValue() {
+        return tier_;
+      }
+      /**
+       * <code>.toit.model.Tier.Type tier = 9;</code>
+       * @param value The enum numeric value on the wire for tier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTierValue(int value) {
+        tier_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.toit.model.Tier.Type tier = 9;</code>
+       * @return The tier.
+       */
+      public io.toit.proto.toit.model.OrganizationProto.Tier.Type getTier() {
+        @SuppressWarnings("deprecation")
+        io.toit.proto.toit.model.OrganizationProto.Tier.Type result = io.toit.proto.toit.model.OrganizationProto.Tier.Type.valueOf(tier_);
+        return result == null ? io.toit.proto.toit.model.OrganizationProto.Tier.Type.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.toit.model.Tier.Type tier = 9;</code>
+       * @param value The tier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTier(io.toit.proto.toit.model.OrganizationProto.Tier.Type value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        tier_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.toit.model.Tier.Type tier = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTier() {
+        
+        tier_ = 0;
         onChanged();
         return this;
       }
@@ -3308,6 +3413,537 @@ public final class OrganizationProto {
 
   }
 
+  public interface TierOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.model.Tier)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code toit.model.Tier}
+   */
+  public  static final class Tier extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.model.Tier)
+      TierOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Tier.newBuilder() to construct.
+    private Tier(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Tier() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Tier();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Tier(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.model.OrganizationProto.internal_static_toit_model_Tier_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.model.OrganizationProto.internal_static_toit_model_Tier_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.model.OrganizationProto.Tier.class, io.toit.proto.toit.model.OrganizationProto.Tier.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code toit.model.Tier.Type}
+     */
+    public enum Type
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>UNKNOWN = 0;</code>
+       */
+      UNKNOWN(0),
+      /**
+       * <code>FREE = 1;</code>
+       */
+      FREE(1),
+      /**
+       * <code>PAID = 2;</code>
+       */
+      PAID(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>UNKNOWN = 0;</code>
+       */
+      public static final int UNKNOWN_VALUE = 0;
+      /**
+       * <code>FREE = 1;</code>
+       */
+      public static final int FREE_VALUE = 1;
+      /**
+       * <code>PAID = 2;</code>
+       */
+      public static final int PAID_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Type valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Type forNumber(int value) {
+        switch (value) {
+          case 0: return UNKNOWN;
+          case 1: return FREE;
+          case 2: return PAID;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Type>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Type> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Type>() {
+              public Type findValueByNumber(int number) {
+                return Type.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return io.toit.proto.toit.model.OrganizationProto.Tier.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Type[] VALUES = values();
+
+      public static Type valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Type(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:toit.model.Tier.Type)
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.model.OrganizationProto.Tier)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.model.OrganizationProto.Tier other = (io.toit.proto.toit.model.OrganizationProto.Tier) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.model.OrganizationProto.Tier parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.model.OrganizationProto.Tier parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.model.OrganizationProto.Tier parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.model.OrganizationProto.Tier parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.model.OrganizationProto.Tier parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.model.OrganizationProto.Tier parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.model.OrganizationProto.Tier parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.model.OrganizationProto.Tier parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.model.OrganizationProto.Tier parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.model.OrganizationProto.Tier parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.model.OrganizationProto.Tier parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.model.OrganizationProto.Tier parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.model.OrganizationProto.Tier prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.model.Tier}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.model.Tier)
+        io.toit.proto.toit.model.OrganizationProto.TierOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.model.OrganizationProto.internal_static_toit_model_Tier_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.model.OrganizationProto.internal_static_toit_model_Tier_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.model.OrganizationProto.Tier.class, io.toit.proto.toit.model.OrganizationProto.Tier.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.model.OrganizationProto.Tier.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.model.OrganizationProto.internal_static_toit_model_Tier_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.model.OrganizationProto.Tier getDefaultInstanceForType() {
+        return io.toit.proto.toit.model.OrganizationProto.Tier.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.model.OrganizationProto.Tier build() {
+        io.toit.proto.toit.model.OrganizationProto.Tier result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.model.OrganizationProto.Tier buildPartial() {
+        io.toit.proto.toit.model.OrganizationProto.Tier result = new io.toit.proto.toit.model.OrganizationProto.Tier(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.model.OrganizationProto.Tier) {
+          return mergeFrom((io.toit.proto.toit.model.OrganizationProto.Tier)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.model.OrganizationProto.Tier other) {
+        if (other == io.toit.proto.toit.model.OrganizationProto.Tier.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.model.OrganizationProto.Tier parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.model.OrganizationProto.Tier) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.model.Tier)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.model.Tier)
+    private static final io.toit.proto.toit.model.OrganizationProto.Tier DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.model.OrganizationProto.Tier();
+    }
+
+    public static io.toit.proto.toit.model.OrganizationProto.Tier getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Tier>
+        PARSER = new com.google.protobuf.AbstractParser<Tier>() {
+      @java.lang.Override
+      public Tier parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Tier(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Tier> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Tier> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.model.OrganizationProto.Tier getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_toit_model_Organization_descriptor;
   private static final 
@@ -3323,6 +3959,11 @@ public final class OrganizationProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_toit_model_APIKey_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_model_Tier_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_model_Tier_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3333,18 +3974,20 @@ public final class OrganizationProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\035toit/model/organization.proto\022\ntoit.mo" +
-      "del\032\037google/protobuf/timestamp.proto\"\225\001\n" +
+      "del\032\037google/protobuf/timestamp.proto\"\272\001\n" +
       "\014Organization\022\n\n\002id\030\001 \001(\014\022\014\n\004name\030\002 \001(\t\022" +
       "\023\n\013default_sdk\030\003 \001(\t\022\r\n\005email\030\004 \001(\t\022\014\n\004c" +
       "ity\030\005 \001(\t\022\017\n\007country\030\006 \001(\t\022\024\n\014phone_numb" +
-      "er\030\007 \001(\t\022\022\n\ncvr_number\030\010 \001(\t\"H\n\004User\022\n\n\002" +
-      "id\030\001 \001(\014\022\027\n\017organization_id\030\002 \001(\014\022\r\n\005ema" +
-      "il\030\003 \001(\t\022\014\n\004name\030\004 \001(\t\"k\n\006APIKey\022\n\n\002id\030\001" +
-      " \001(\014\022\027\n\017organization_id\030\002 \001(\014\022\014\n\004name\030\003 " +
-      "\001(\t\022.\n\ncreated_at\030\004 \001(\0132\032.google.protobu" +
-      "f.TimestampBU\n\030io.toit.proto.toit.modelB" +
-      "\021OrganizationProtoZ&github.com/toitware/" +
-      "api.git/toit/modelb\006proto3"
+      "er\030\007 \001(\t\022\022\n\ncvr_number\030\010 \001(\t\022#\n\004tier\030\t \001" +
+      "(\0162\025.toit.model.Tier.Type\"H\n\004User\022\n\n\002id\030" +
+      "\001 \001(\014\022\027\n\017organization_id\030\002 \001(\014\022\r\n\005email\030" +
+      "\003 \001(\t\022\014\n\004name\030\004 \001(\t\"k\n\006APIKey\022\n\n\002id\030\001 \001(" +
+      "\014\022\027\n\017organization_id\030\002 \001(\014\022\014\n\004name\030\003 \001(\t" +
+      "\022.\n\ncreated_at\030\004 \001(\0132\032.google.protobuf.T" +
+      "imestamp\"/\n\004Tier\"\'\n\004Type\022\013\n\007UNKNOWN\020\000\022\010\n" +
+      "\004FREE\020\001\022\010\n\004PAID\020\002BU\n\030io.toit.proto.toit." +
+      "modelB\021OrganizationProtoZ&github.com/toi" +
+      "tware/api.git/toit/modelb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3356,7 +3999,7 @@ public final class OrganizationProto {
     internal_static_toit_model_Organization_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_Organization_descriptor,
-        new java.lang.String[] { "Id", "Name", "DefaultSdk", "Email", "City", "Country", "PhoneNumber", "CvrNumber", });
+        new java.lang.String[] { "Id", "Name", "DefaultSdk", "Email", "City", "Country", "PhoneNumber", "CvrNumber", "Tier", });
     internal_static_toit_model_User_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_toit_model_User_fieldAccessorTable = new
@@ -3369,6 +4012,12 @@ public final class OrganizationProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_APIKey_descriptor,
         new java.lang.String[] { "Id", "OrganizationId", "Name", "CreatedAt", });
+    internal_static_toit_model_Tier_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_toit_model_Tier_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_model_Tier_descriptor,
+        new java.lang.String[] { });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 
