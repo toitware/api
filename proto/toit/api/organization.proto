@@ -21,7 +21,6 @@ service OrganizationService {
   rpc GetAPIKeySecret(GetAPIKeySecretRequest) returns (GetAPIKeySecretResponse) {}
 
   rpc UpdateOrganization(UpdateOrganizationRequest) returns (UpdateOrganizationResponse) {}
-  rpc UpdatePayment(UpdatePaymentRequest) returns (UpdatePaymentResponse) {}
 }
 
 message ListUsersRequest {
@@ -100,13 +99,3 @@ message UpdateOrganizationRequest {
 }
 
 message UpdateOrganizationResponse {}
-
-message UpdatePaymentRequest {
-  uint64 card_number = 1;
-  google.protobuf.Timestamp expiry = 2;
-  int32 cvc = 3;
-  string currency = 4;
-  string name_on_card = 5;
-}
-
-message UpdatePaymentResponse {}
