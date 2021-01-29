@@ -78,7 +78,7 @@ message CreatePaymentSubscriptionRequest {
     int32 card_cvc = 3;
     int32 card_expiry_month = 4;
     int32 card_expiry_year = 5;
-    int64 card_number = 6;
+    uint64 card_number = 6;
 }
 
 message CreatePaymentSubscriptionResponse {
