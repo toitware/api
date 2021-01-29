@@ -2232,8 +2232,9 @@ proto.toit.api.CreatePaymentSubscriptionRequest.toObject = function(includeInsta
     billingEmail: jspb.Message.getFieldWithDefault(msg, 1, ""),
     cardHolderName: jspb.Message.getFieldWithDefault(msg, 2, ""),
     cardCvc: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    cardExpiry: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    cardNumber: jspb.Message.getFieldWithDefault(msg, 5, 0)
+    cardExpiryMonth: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    cardExpiryYear: jspb.Message.getFieldWithDefault(msg, 5, 0),
+    cardNumber: jspb.Message.getFieldWithDefault(msg, 6, 0)
   };
 
   if (includeInstance) {
@@ -2283,11 +2284,15 @@ proto.toit.api.CreatePaymentSubscriptionRequest.deserializeBinaryFromReader = fu
       msg.setCardCvc(value);
       break;
     case 4:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setCardExpiry(value);
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setCardExpiryMonth(value);
       break;
     case 5:
-      var value = /** @type {number} */ (reader.readInt64());
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setCardExpiryYear(value);
+      break;
+    case 6:
+      var value = /** @type {number} */ (reader.readUint64());
       msg.setCardNumber(value);
       break;
     default:
@@ -2340,17 +2345,24 @@ proto.toit.api.CreatePaymentSubscriptionRequest.serializeBinaryToWriter = functi
       f
     );
   }
-  f = message.getCardExpiry();
-  if (f.length > 0) {
-    writer.writeString(
+  f = message.getCardExpiryMonth();
+  if (f !== 0) {
+    writer.writeInt32(
       4,
+      f
+    );
+  }
+  f = message.getCardExpiryYear();
+  if (f !== 0) {
+    writer.writeInt32(
+      5,
       f
     );
   }
   f = message.getCardNumber();
   if (f !== 0) {
-    writer.writeInt64(
-      5,
+    writer.writeUint64(
+      6,
       f
     );
   }
@@ -2412,28 +2424,28 @@ proto.toit.api.CreatePaymentSubscriptionRequest.prototype.setCardCvc = function(
 
 
 /**
- * optional string card_expiry = 4;
- * @return {string}
- */
-proto.toit.api.CreatePaymentSubscriptionRequest.prototype.getCardExpiry = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.toit.api.CreatePaymentSubscriptionRequest} returns this
- */
-proto.toit.api.CreatePaymentSubscriptionRequest.prototype.setCardExpiry = function(value) {
-  return jspb.Message.setProto3StringField(this, 4, value);
-};
-
-
-/**
- * optional int64 card_number = 5;
+ * optional int32 card_expiry_month = 4;
  * @return {number}
  */
-proto.toit.api.CreatePaymentSubscriptionRequest.prototype.getCardNumber = function() {
+proto.toit.api.CreatePaymentSubscriptionRequest.prototype.getCardExpiryMonth = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.toit.api.CreatePaymentSubscriptionRequest} returns this
+ */
+proto.toit.api.CreatePaymentSubscriptionRequest.prototype.setCardExpiryMonth = function(value) {
+  return jspb.Message.setProto3IntField(this, 4, value);
+};
+
+
+/**
+ * optional int32 card_expiry_year = 5;
+ * @return {number}
+ */
+proto.toit.api.CreatePaymentSubscriptionRequest.prototype.getCardExpiryYear = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
 };
 
@@ -2442,8 +2454,26 @@ proto.toit.api.CreatePaymentSubscriptionRequest.prototype.getCardNumber = functi
  * @param {number} value
  * @return {!proto.toit.api.CreatePaymentSubscriptionRequest} returns this
  */
-proto.toit.api.CreatePaymentSubscriptionRequest.prototype.setCardNumber = function(value) {
+proto.toit.api.CreatePaymentSubscriptionRequest.prototype.setCardExpiryYear = function(value) {
   return jspb.Message.setProto3IntField(this, 5, value);
+};
+
+
+/**
+ * optional uint64 card_number = 6;
+ * @return {number}
+ */
+proto.toit.api.CreatePaymentSubscriptionRequest.prototype.getCardNumber = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.toit.api.CreatePaymentSubscriptionRequest} returns this
+ */
+proto.toit.api.CreatePaymentSubscriptionRequest.prototype.setCardNumber = function(value) {
+  return jspb.Message.setProto3IntField(this, 6, value);
 };
 
 

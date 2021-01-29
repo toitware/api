@@ -16,7 +16,6 @@ interface IOrganizationServiceService extends grpc.ServiceDefinition<grpc.Untype
   deleteAPIKey: grpc.MethodDefinition<toit_api_organization_pb.DeleteAPIKeyRequest, toit_api_organization_pb.DeleteAPIKeyResponse>;
   getAPIKeySecret: grpc.MethodDefinition<toit_api_organization_pb.GetAPIKeySecretRequest, toit_api_organization_pb.GetAPIKeySecretResponse>;
   updateOrganization: grpc.MethodDefinition<toit_api_organization_pb.UpdateOrganizationRequest, toit_api_organization_pb.UpdateOrganizationResponse>;
-  updatePayment: grpc.MethodDefinition<toit_api_organization_pb.UpdatePaymentRequest, toit_api_organization_pb.UpdatePaymentResponse>;
 }
 
 export const OrganizationServiceService: IOrganizationServiceService;
@@ -49,7 +48,4 @@ export class OrganizationServiceClient extends grpc.Client {
   updateOrganization(argument: toit_api_organization_pb.UpdateOrganizationRequest, callback: grpc.requestCallback<toit_api_organization_pb.UpdateOrganizationResponse>): grpc.ClientUnaryCall;
   updateOrganization(argument: toit_api_organization_pb.UpdateOrganizationRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_organization_pb.UpdateOrganizationResponse>): grpc.ClientUnaryCall;
   updateOrganization(argument: toit_api_organization_pb.UpdateOrganizationRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_organization_pb.UpdateOrganizationResponse>): grpc.ClientUnaryCall;
-  updatePayment(argument: toit_api_organization_pb.UpdatePaymentRequest, callback: grpc.requestCallback<toit_api_organization_pb.UpdatePaymentResponse>): grpc.ClientUnaryCall;
-  updatePayment(argument: toit_api_organization_pb.UpdatePaymentRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_organization_pb.UpdatePaymentResponse>): grpc.ClientUnaryCall;
-  updatePayment(argument: toit_api_organization_pb.UpdatePaymentRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_organization_pb.UpdatePaymentResponse>): grpc.ClientUnaryCall;
 }

@@ -287,8 +287,11 @@ export class CreatePaymentSubscriptionRequest extends jspb.Message {
   getCardCvc(): number;
   setCardCvc(value: number): void;
 
-  getCardExpiry(): string;
-  setCardExpiry(value: string): void;
+  getCardExpiryMonth(): number;
+  setCardExpiryMonth(value: number): void;
+
+  getCardExpiryYear(): number;
+  setCardExpiryYear(value: number): void;
 
   getCardNumber(): number;
   setCardNumber(value: number): void;
@@ -308,7 +311,8 @@ export namespace CreatePaymentSubscriptionRequest {
     billingEmail: string,
     cardHolderName: string,
     cardCvc: number,
-    cardExpiry: string,
+    cardExpiryMonth: number,
+    cardExpiryYear: number,
     cardNumber: number,
   }
 }
