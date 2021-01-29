@@ -7349,19 +7349,19 @@ public final class UserProto {
     int getCardCvc();
 
     /**
-     * <code>string card_expiry = 4;</code>
-     * @return The cardExpiry.
+     * <code>int32 card_expiry_month = 4;</code>
+     * @return The cardExpiryMonth.
      */
-    java.lang.String getCardExpiry();
-    /**
-     * <code>string card_expiry = 4;</code>
-     * @return The bytes for cardExpiry.
-     */
-    com.google.protobuf.ByteString
-        getCardExpiryBytes();
+    int getCardExpiryMonth();
 
     /**
-     * <code>int64 card_number = 5;</code>
+     * <code>int32 card_expiry_year = 5;</code>
+     * @return The cardExpiryYear.
+     */
+    int getCardExpiryYear();
+
+    /**
+     * <code>uint64 card_number = 6;</code>
      * @return The cardNumber.
      */
     long getCardNumber();
@@ -7381,7 +7381,6 @@ public final class UserProto {
     private CreatePaymentSubscriptionRequest() {
       billingEmail_ = "";
       cardHolderName_ = "";
-      cardExpiry_ = "";
     }
 
     @java.lang.Override
@@ -7431,15 +7430,19 @@ public final class UserProto {
               cardCvc_ = input.readInt32();
               break;
             }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 32: {
 
-              cardExpiry_ = s;
+              cardExpiryMonth_ = input.readInt32();
               break;
             }
             case 40: {
 
-              cardNumber_ = input.readInt64();
+              cardExpiryYear_ = input.readInt32();
+              break;
+            }
+            case 48: {
+
+              cardNumber_ = input.readUInt64();
               break;
             }
             default: {
@@ -7556,46 +7559,30 @@ public final class UserProto {
       return cardCvc_;
     }
 
-    public static final int CARD_EXPIRY_FIELD_NUMBER = 4;
-    private volatile java.lang.Object cardExpiry_;
+    public static final int CARD_EXPIRY_MONTH_FIELD_NUMBER = 4;
+    private int cardExpiryMonth_;
     /**
-     * <code>string card_expiry = 4;</code>
-     * @return The cardExpiry.
+     * <code>int32 card_expiry_month = 4;</code>
+     * @return The cardExpiryMonth.
      */
-    public java.lang.String getCardExpiry() {
-      java.lang.Object ref = cardExpiry_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        cardExpiry_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string card_expiry = 4;</code>
-     * @return The bytes for cardExpiry.
-     */
-    public com.google.protobuf.ByteString
-        getCardExpiryBytes() {
-      java.lang.Object ref = cardExpiry_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        cardExpiry_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public int getCardExpiryMonth() {
+      return cardExpiryMonth_;
     }
 
-    public static final int CARD_NUMBER_FIELD_NUMBER = 5;
+    public static final int CARD_EXPIRY_YEAR_FIELD_NUMBER = 5;
+    private int cardExpiryYear_;
+    /**
+     * <code>int32 card_expiry_year = 5;</code>
+     * @return The cardExpiryYear.
+     */
+    public int getCardExpiryYear() {
+      return cardExpiryYear_;
+    }
+
+    public static final int CARD_NUMBER_FIELD_NUMBER = 6;
     private long cardNumber_;
     /**
-     * <code>int64 card_number = 5;</code>
+     * <code>uint64 card_number = 6;</code>
      * @return The cardNumber.
      */
     public long getCardNumber() {
@@ -7625,11 +7612,14 @@ public final class UserProto {
       if (cardCvc_ != 0) {
         output.writeInt32(3, cardCvc_);
       }
-      if (!getCardExpiryBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, cardExpiry_);
+      if (cardExpiryMonth_ != 0) {
+        output.writeInt32(4, cardExpiryMonth_);
+      }
+      if (cardExpiryYear_ != 0) {
+        output.writeInt32(5, cardExpiryYear_);
       }
       if (cardNumber_ != 0L) {
-        output.writeInt64(5, cardNumber_);
+        output.writeUInt64(6, cardNumber_);
       }
       unknownFields.writeTo(output);
     }
@@ -7650,12 +7640,17 @@ public final class UserProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(3, cardCvc_);
       }
-      if (!getCardExpiryBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, cardExpiry_);
+      if (cardExpiryMonth_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, cardExpiryMonth_);
+      }
+      if (cardExpiryYear_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, cardExpiryYear_);
       }
       if (cardNumber_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(5, cardNumber_);
+          .computeUInt64Size(6, cardNumber_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7678,8 +7673,10 @@ public final class UserProto {
           .equals(other.getCardHolderName())) return false;
       if (getCardCvc()
           != other.getCardCvc()) return false;
-      if (!getCardExpiry()
-          .equals(other.getCardExpiry())) return false;
+      if (getCardExpiryMonth()
+          != other.getCardExpiryMonth()) return false;
+      if (getCardExpiryYear()
+          != other.getCardExpiryYear()) return false;
       if (getCardNumber()
           != other.getCardNumber()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -7699,8 +7696,10 @@ public final class UserProto {
       hash = (53 * hash) + getCardHolderName().hashCode();
       hash = (37 * hash) + CARD_CVC_FIELD_NUMBER;
       hash = (53 * hash) + getCardCvc();
-      hash = (37 * hash) + CARD_EXPIRY_FIELD_NUMBER;
-      hash = (53 * hash) + getCardExpiry().hashCode();
+      hash = (37 * hash) + CARD_EXPIRY_MONTH_FIELD_NUMBER;
+      hash = (53 * hash) + getCardExpiryMonth();
+      hash = (37 * hash) + CARD_EXPIRY_YEAR_FIELD_NUMBER;
+      hash = (53 * hash) + getCardExpiryYear();
       hash = (37 * hash) + CARD_NUMBER_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getCardNumber());
@@ -7843,7 +7842,9 @@ public final class UserProto {
 
         cardCvc_ = 0;
 
-        cardExpiry_ = "";
+        cardExpiryMonth_ = 0;
+
+        cardExpiryYear_ = 0;
 
         cardNumber_ = 0L;
 
@@ -7876,7 +7877,8 @@ public final class UserProto {
         result.billingEmail_ = billingEmail_;
         result.cardHolderName_ = cardHolderName_;
         result.cardCvc_ = cardCvc_;
-        result.cardExpiry_ = cardExpiry_;
+        result.cardExpiryMonth_ = cardExpiryMonth_;
+        result.cardExpiryYear_ = cardExpiryYear_;
         result.cardNumber_ = cardNumber_;
         onBuilt();
         return result;
@@ -7937,9 +7939,11 @@ public final class UserProto {
         if (other.getCardCvc() != 0) {
           setCardCvc(other.getCardCvc());
         }
-        if (!other.getCardExpiry().isEmpty()) {
-          cardExpiry_ = other.cardExpiry_;
-          onChanged();
+        if (other.getCardExpiryMonth() != 0) {
+          setCardExpiryMonth(other.getCardExpiryMonth());
+        }
+        if (other.getCardExpiryYear() != 0) {
+          setCardExpiryYear(other.getCardExpiryYear());
         }
         if (other.getCardNumber() != 0L) {
           setCardNumber(other.getCardNumber());
@@ -8155,92 +8159,76 @@ public final class UserProto {
         return this;
       }
 
-      private java.lang.Object cardExpiry_ = "";
+      private int cardExpiryMonth_ ;
       /**
-       * <code>string card_expiry = 4;</code>
-       * @return The cardExpiry.
+       * <code>int32 card_expiry_month = 4;</code>
+       * @return The cardExpiryMonth.
        */
-      public java.lang.String getCardExpiry() {
-        java.lang.Object ref = cardExpiry_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          cardExpiry_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      public int getCardExpiryMonth() {
+        return cardExpiryMonth_;
       }
       /**
-       * <code>string card_expiry = 4;</code>
-       * @return The bytes for cardExpiry.
-       */
-      public com.google.protobuf.ByteString
-          getCardExpiryBytes() {
-        java.lang.Object ref = cardExpiry_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          cardExpiry_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string card_expiry = 4;</code>
-       * @param value The cardExpiry to set.
+       * <code>int32 card_expiry_month = 4;</code>
+       * @param value The cardExpiryMonth to set.
        * @return This builder for chaining.
        */
-      public Builder setCardExpiry(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        cardExpiry_ = value;
+      public Builder setCardExpiryMonth(int value) {
+        
+        cardExpiryMonth_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string card_expiry = 4;</code>
+       * <code>int32 card_expiry_month = 4;</code>
        * @return This builder for chaining.
        */
-      public Builder clearCardExpiry() {
+      public Builder clearCardExpiryMonth() {
         
-        cardExpiry_ = getDefaultInstance().getCardExpiry();
+        cardExpiryMonth_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int cardExpiryYear_ ;
+      /**
+       * <code>int32 card_expiry_year = 5;</code>
+       * @return The cardExpiryYear.
+       */
+      public int getCardExpiryYear() {
+        return cardExpiryYear_;
+      }
+      /**
+       * <code>int32 card_expiry_year = 5;</code>
+       * @param value The cardExpiryYear to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCardExpiryYear(int value) {
+        
+        cardExpiryYear_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string card_expiry = 4;</code>
-       * @param value The bytes for cardExpiry to set.
+       * <code>int32 card_expiry_year = 5;</code>
        * @return This builder for chaining.
        */
-      public Builder setCardExpiryBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      public Builder clearCardExpiryYear() {
         
-        cardExpiry_ = value;
+        cardExpiryYear_ = 0;
         onChanged();
         return this;
       }
 
       private long cardNumber_ ;
       /**
-       * <code>int64 card_number = 5;</code>
+       * <code>uint64 card_number = 6;</code>
        * @return The cardNumber.
        */
       public long getCardNumber() {
         return cardNumber_;
       }
       /**
-       * <code>int64 card_number = 5;</code>
+       * <code>uint64 card_number = 6;</code>
        * @param value The cardNumber to set.
        * @return This builder for chaining.
        */
@@ -8251,7 +8239,7 @@ public final class UserProto {
         return this;
       }
       /**
-       * <code>int64 card_number = 5;</code>
+       * <code>uint64 card_number = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearCardNumber() {
@@ -8830,35 +8818,36 @@ public final class UserProto {
       ".Organization\022\016\n\006offset\030\002 \001(\014\"$\n\026GetOrga" +
       "nizationRequest\022\n\n\002id\030\001 \001(\014\"I\n\027GetOrgani" +
       "zationResponse\022.\n\014organization\030\001 \001(\0132\030.t" +
-      "oit.model.Organization\"\217\001\n CreatePayment" +
+      "oit.model.Organization\"\257\001\n CreatePayment" +
       "SubscriptionRequest\022\025\n\rbilling_email\030\001 \001" +
       "(\t\022\030\n\020card_holder_name\030\002 \001(\t\022\020\n\010card_cvc" +
-      "\030\003 \001(\005\022\023\n\013card_expiry\030\004 \001(\t\022\023\n\013card_numb" +
-      "er\030\005 \001(\003\"#\n!CreatePaymentSubscriptionRes" +
-      "ponse2\332\006\n\004User\022L\n\013SetPassword\022\034.toit.api" +
-      ".SetPasswordRequest\032\035.toit.api.SetPasswo" +
-      "rdResponse\"\000\022j\n\025InitiateResetPassword\022&." +
-      "toit.api.InitiateResetPasswordRequest\032\'." +
-      "toit.api.InitiateResetPasswordResponse\"\000" +
-      "\022v\n\031ChangePasswordWithRPToken\022*.toit.api" +
-      ".ChangePasswordWithRPTokenRequest\032+.toit" +
-      ".api.ChangePasswordWithRPTokenResponse\"\000" +
-      "\022U\n\016GetCurrentUser\022\037.toit.api.GetCurrent" +
-      "UserRequest\032 .toit.api.GetCurrentUserRes" +
-      "ponse\"\000\022^\n\021ListOrganizations\022\".toit.api." +
-      "ListOrganizationsRequest\032#.toit.api.List" +
-      "OrganizationsResponse\"\000\022X\n\017GetOrganizati" +
-      "on\022 .toit.api.GetOrganizationRequest\032!.t" +
-      "oit.api.GetOrganizationResponse\"\000\022v\n\031Cre" +
-      "atePaymentSubscription\022*.toit.api.Create" +
-      "PaymentSubscriptionRequest\032+.toit.api.Cr" +
-      "eatePaymentSubscriptionResponse\"\000\022I\n\tLis" +
-      "tUsers\022\032.toit.api.ListUsersRequest\032\033.toi" +
-      "t.api.ListUsersResponse\"\003\210\002\001\022L\n\nCreateUs" +
-      "er\022\033.toit.api.CreateUserRequest\032\034.toit.a" +
-      "pi.CreateUserResponse\"\003\210\002\001BI\n\026io.toit.pr" +
-      "oto.toit.apiB\tUserProtoZ$github.com/toit" +
-      "ware/api.git/toit/apib\006proto3"
+      "\030\003 \001(\005\022\031\n\021card_expiry_month\030\004 \001(\005\022\030\n\020car" +
+      "d_expiry_year\030\005 \001(\005\022\023\n\013card_number\030\006 \001(\004" +
+      "\"#\n!CreatePaymentSubscriptionResponse2\332\006" +
+      "\n\004User\022L\n\013SetPassword\022\034.toit.api.SetPass" +
+      "wordRequest\032\035.toit.api.SetPasswordRespon" +
+      "se\"\000\022j\n\025InitiateResetPassword\022&.toit.api" +
+      ".InitiateResetPasswordRequest\032\'.toit.api" +
+      ".InitiateResetPasswordResponse\"\000\022v\n\031Chan" +
+      "gePasswordWithRPToken\022*.toit.api.ChangeP" +
+      "asswordWithRPTokenRequest\032+.toit.api.Cha" +
+      "ngePasswordWithRPTokenResponse\"\000\022U\n\016GetC" +
+      "urrentUser\022\037.toit.api.GetCurrentUserRequ" +
+      "est\032 .toit.api.GetCurrentUserResponse\"\000\022" +
+      "^\n\021ListOrganizations\022\".toit.api.ListOrga" +
+      "nizationsRequest\032#.toit.api.ListOrganiza" +
+      "tionsResponse\"\000\022X\n\017GetOrganization\022 .toi" +
+      "t.api.GetOrganizationRequest\032!.toit.api." +
+      "GetOrganizationResponse\"\000\022v\n\031CreatePayme" +
+      "ntSubscription\022*.toit.api.CreatePaymentS" +
+      "ubscriptionRequest\032+.toit.api.CreatePaym" +
+      "entSubscriptionResponse\"\000\022I\n\tListUsers\022\032" +
+      ".toit.api.ListUsersRequest\032\033.toit.api.Li" +
+      "stUsersResponse\"\003\210\002\001\022L\n\nCreateUser\022\033.toi" +
+      "t.api.CreateUserRequest\032\034.toit.api.Creat" +
+      "eUserResponse\"\003\210\002\001BI\n\026io.toit.proto.toit" +
+      ".apiB\tUserProtoZ$github.com/toitware/api" +
+      ".git/toit/apib\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8943,7 +8932,7 @@ public final class UserProto {
     internal_static_toit_api_CreatePaymentSubscriptionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_CreatePaymentSubscriptionRequest_descriptor,
-        new java.lang.String[] { "BillingEmail", "CardHolderName", "CardCvc", "CardExpiry", "CardNumber", });
+        new java.lang.String[] { "BillingEmail", "CardHolderName", "CardCvc", "CardExpiryMonth", "CardExpiryYear", "CardNumber", });
     internal_static_toit_api_CreatePaymentSubscriptionResponse_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_toit_api_CreatePaymentSubscriptionResponse_fieldAccessorTable = new

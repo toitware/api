@@ -306,37 +306,6 @@ public final class OrganizationServiceGrpc {
     return getUpdateOrganizationMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest,
-      io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse> getUpdatePaymentMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "UpdatePayment",
-      requestType = io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest.class,
-      responseType = io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest,
-      io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse> getUpdatePaymentMethod() {
-    io.grpc.MethodDescriptor<io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest, io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse> getUpdatePaymentMethod;
-    if ((getUpdatePaymentMethod = OrganizationServiceGrpc.getUpdatePaymentMethod) == null) {
-      synchronized (OrganizationServiceGrpc.class) {
-        if ((getUpdatePaymentMethod = OrganizationServiceGrpc.getUpdatePaymentMethod) == null) {
-          OrganizationServiceGrpc.getUpdatePaymentMethod = getUpdatePaymentMethod =
-              io.grpc.MethodDescriptor.<io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest, io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdatePayment"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrganizationServiceMethodDescriptorSupplier("UpdatePayment"))
-              .build();
-        }
-      }
-    }
-    return getUpdatePaymentMethod;
-  }
-
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -448,13 +417,6 @@ public final class OrganizationServiceGrpc {
       asyncUnimplementedUnaryCall(getUpdateOrganizationMethod(), responseObserver);
     }
 
-    /**
-     */
-    public void updatePayment(io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest request,
-        io.grpc.stub.StreamObserver<io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdatePaymentMethod(), responseObserver);
-    }
-
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -520,13 +482,6 @@ public final class OrganizationServiceGrpc {
                 io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest,
                 io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse>(
                   this, METHODID_UPDATE_ORGANIZATION)))
-          .addMethod(
-            getUpdatePaymentMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest,
-                io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse>(
-                  this, METHODID_UPDATE_PAYMENT)))
           .build();
     }
   }
@@ -616,14 +571,6 @@ public final class OrganizationServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getUpdateOrganizationMethod(), getCallOptions()), request, responseObserver);
     }
-
-    /**
-     */
-    public void updatePayment(io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest request,
-        io.grpc.stub.StreamObserver<io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(getUpdatePaymentMethod(), getCallOptions()), request, responseObserver);
-    }
   }
 
   /**
@@ -702,13 +649,6 @@ public final class OrganizationServiceGrpc {
     public io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse updateOrganization(io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest request) {
       return blockingUnaryCall(
           getChannel(), getUpdateOrganizationMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse updatePayment(io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest request) {
-      return blockingUnaryCall(
-          getChannel(), getUpdatePaymentMethod(), getCallOptions(), request);
     }
   }
 
@@ -789,14 +729,6 @@ public final class OrganizationServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getUpdateOrganizationMethod(), getCallOptions()), request);
     }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse> updatePayment(
-        io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest request) {
-      return futureUnaryCall(
-          getChannel().newCall(getUpdatePaymentMethod(), getCallOptions()), request);
-    }
   }
 
   private static final int METHODID_GET_USER = 0;
@@ -808,7 +740,6 @@ public final class OrganizationServiceGrpc {
   private static final int METHODID_DELETE_APIKEY = 6;
   private static final int METHODID_GET_APIKEY_SECRET = 7;
   private static final int METHODID_UPDATE_ORGANIZATION = 8;
-  private static final int METHODID_UPDATE_PAYMENT = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -862,10 +793,6 @@ public final class OrganizationServiceGrpc {
         case METHODID_UPDATE_ORGANIZATION:
           serviceImpl.updateOrganization((io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest) request,
               (io.grpc.stub.StreamObserver<io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse>) responseObserver);
-          break;
-        case METHODID_UPDATE_PAYMENT:
-          serviceImpl.updatePayment((io.toit.proto.toit.api.OrgProto.UpdatePaymentRequest) request,
-              (io.grpc.stub.StreamObserver<io.toit.proto.toit.api.OrgProto.UpdatePaymentResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -937,7 +864,6 @@ public final class OrganizationServiceGrpc {
               .addMethod(getDeleteAPIKeyMethod())
               .addMethod(getGetAPIKeySecretMethod())
               .addMethod(getUpdateOrganizationMethod())
-              .addMethod(getUpdatePaymentMethod())
               .build();
         }
       }
