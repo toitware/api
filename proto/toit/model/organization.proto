@@ -23,8 +23,9 @@ message Organization {
 
 message PaymentDetails {
     string last4 = 1;
-    string expiry = 2;
-    string brand = 3;
+    string expiry_month = 2;
+    string expiry_year = 3;
+    string brand = 4;
 }
 
 message User {
