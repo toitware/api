@@ -16,7 +16,7 @@ message Organization {
     string city = 5;
     string country = 6;
     string phone_number = 7;
-    string cvr_number = 8;
+    string vat_number = 8;
     Tier.Type tier = 9;
     PaymentDetails payment_details = 10;
 }
@@ -24,6 +24,7 @@ message Organization {
 message PaymentDetails {
     string last4 = 1;
     string expiry = 2;
+    string brand = 3;
 }
 
 message User {
