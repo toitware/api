@@ -34,6 +34,11 @@ export class Organization extends jspb.Message {
   getTier(): Tier.TypeMap[keyof Tier.TypeMap];
   setTier(value: Tier.TypeMap[keyof Tier.TypeMap]): void;
 
+  hasPaymentDetails(): boolean;
+  clearPaymentDetails(): void;
+  getPaymentDetails(): PaymentDetails | undefined;
+  setPaymentDetails(value?: PaymentDetails): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Organization.AsObject;
   static toObject(includeInstance: boolean, msg: Organization): Organization.AsObject;
@@ -55,6 +60,31 @@ export namespace Organization {
     phoneNumber: string,
     cvrNumber: string,
     tier: Tier.TypeMap[keyof Tier.TypeMap],
+    paymentDetails?: PaymentDetails.AsObject,
+  }
+}
+
+export class PaymentDetails extends jspb.Message {
+  getLast4(): string;
+  setLast4(value: string): void;
+
+  getExpiry(): string;
+  setExpiry(value: string): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): PaymentDetails.AsObject;
+  static toObject(includeInstance: boolean, msg: PaymentDetails): PaymentDetails.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: PaymentDetails, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): PaymentDetails;
+  static deserializeBinaryFromReader(message: PaymentDetails, reader: jspb.BinaryReader): PaymentDetails;
+}
+
+export namespace PaymentDetails {
+  export type AsObject = {
+    last4: string,
+    expiry: string,
   }
 }
 
