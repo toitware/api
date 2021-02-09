@@ -18,6 +18,12 @@ message Organization {
     string phone_number = 7;
     string cvr_number = 8;
     Tier.Type tier = 9;
+    PaymentDetails payment_details = 10;
+}
+
+message PaymentDetails {
+    string last4 = 1;
+    string expiry = 2;
 }
 
 message User {
