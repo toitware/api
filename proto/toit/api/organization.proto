@@ -3,7 +3,6 @@ syntax = "proto3";
 package toit.api;
 
 import "toit/model/organization.proto";
-import "google/protobuf/timestamp.proto";
 
 option go_package = "github.com/toitware/api.git/toit/api";
 option java_package = "io.toit.proto.toit.api";
