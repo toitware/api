@@ -17,8 +17,10 @@ message Organization {
     string country = 6;
     string phone_number = 7;
     string vat_number = 8;
-    Tier.Type tier = 9;
-    PaymentDetails payment_details = 10;
+    string vat_country_code = 9;
+    string invoice_email = 10;
+    Tier.Type tier = 11; // Read only value
+    PaymentDetails payment_details = 12; // Read only values
 }
 
 message PaymentDetails {
@@ -26,6 +28,8 @@ message PaymentDetails {
     string expiry_month = 2;
     string expiry_year = 3;
     string brand = 4;
+    string country_code = 5;
+    string cvc_check = 6;
 }
 
 message User {
