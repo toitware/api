@@ -15,12 +15,14 @@ message Organization {
     string email = 4;
     string city = 5;
     string country = 6;
-    string phone_number = 7;
-    string vat_number = 8;
-    string vat_country_code = 9;
-    Customer.Type customer = 10;
-    Tier.Type tier = 11;
-    PaymentDetails payment_details = 12;
+    string address_line = 7;
+    string postal_code = 8;
+    string phone_number = 9;
+    string vat_number = 10;
+    string vat_country_code = 11;
+    Customer.Type customer = 12;
+    Tier.Type tier = 13;
+    PaymentDetails payment_details = 14;
 }
 
 message PaymentDetails {
