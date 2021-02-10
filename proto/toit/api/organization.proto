@@ -89,9 +89,13 @@ message OrganizationChange {
     string city = 1;
     string country = 2;
     string phone_number = 3;
-    string cvr_number = 4;
-    string name = 5;
-    string email = 6;
+    string vat_number = 4;
+    string vat_country_code = 5;
+    string name = 6;
+    string email = 7;
+    string address_line = 8;
+    string postal_code = 9;
+    model.Customer.Type customer = 10;
   }
 }
 message UpdateOrganizationRequest {
