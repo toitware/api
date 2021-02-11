@@ -2,8 +2,8 @@ syntax = "proto3";
 
 package toit.api;
 
+import "toit/model/device.proto";
 import "toit/model/organization.proto";
-import "google/protobuf/timestamp.proto";
 
 option go_package = "github.com/toitware/api.git/toit/api";
 option java_package = "io.toit.proto.toit.api";
@@ -21,6 +21,9 @@ service OrganizationService {
   rpc GetAPIKeySecret(GetAPIKeySecretRequest) returns (GetAPIKeySecretResponse) {}
 
   rpc UpdateOrganization(UpdateOrganizationRequest) returns (UpdateOrganizationResponse) {}
+
+  rpc ClaimHardwareIdentity(ClaimHardwareIdentityRequest) returns (ClaimHardwareIdentityResponse) {}
+  rpc SetHardwareIdentityInfo(SetHardwareIdentityInfoRequest) returns (SetHardwareIdentityInfoResponse) {}
 }
 
 message ListUsersRequest {
@@ -99,3 +102,16 @@ message UpdateOrganizationRequest {
 }
 
 message UpdateOrganizationResponse {}
+
+message ClaimHardwareIdentityRequest {}
+
+message ClaimHardwareIdentityResponse {
+  toit.model.HardwareIdentity hardware_identity = 1;
+}
+
+message SetHardwareIdentityInfoRequest {
+  bytes hardware_id = 1;
+  toit.model.HardwareIdentityInfo info = 2;
+}
+
+message SetHardwareIdentityInfoResponse {}

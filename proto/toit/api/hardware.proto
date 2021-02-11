@@ -97,22 +97,22 @@ message HardwareEventsResponse {
 
 
 service FlashStation {
-  rpc ClaimHardwareIdentity(ClaimHardwareIdentityRequest) returns (ClaimHardwareIdentityResponse) {}
-  rpc SetHardwareIdentityInfo(SetHardwareIdentityInfoRequest) returns (SetHardwareIdentityInfoResponse) {}
+  rpc HardwareClaimIdentity(HardwareClaimIdentityRequest) returns (HardwareClaimIdentityResponse) {}
+  rpc HardwareSetIdentityInfo(HardwareSetIdentityInfoRequest) returns (HardwareSetIdentityInfoResponse) {}
 }
 
-message ClaimHardwareIdentityRequest {
+message HardwareClaimIdentityRequest {
   string flash_station_secret = 1;
 }
 
-message ClaimHardwareIdentityResponse {
+message HardwareClaimIdentityResponse {
   toit.model.HardwareIdentity hardware_identity = 1;
 }
 
-message SetHardwareIdentityInfoRequest {
+message HardwareSetIdentityInfoRequest {
   string flash_station_secret = 1;
   bytes id = 2;
   toit.model.HardwareIdentityInfo info = 3;
 }
 
-message SetHardwareIdentityInfoResponse {}
+message HardwareSetIdentityInfoResponse {}
