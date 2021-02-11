@@ -3,8 +3,30 @@
 'use strict';
 var grpc = require('@grpc/grpc-js');
 var toit_api_organization_pb = require('../../toit/api/organization_pb.js');
+var toit_model_device_pb = require('../../toit/model/device_pb.js');
 var toit_model_organization_pb = require('../../toit/model/organization_pb.js');
-var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
+
+function serialize_toit_api_ClaimHardwareIdentityRequest(arg) {
+  if (!(arg instanceof toit_api_organization_pb.ClaimHardwareIdentityRequest)) {
+    throw new Error('Expected argument of type toit.api.ClaimHardwareIdentityRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_ClaimHardwareIdentityRequest(buffer_arg) {
+  return toit_api_organization_pb.ClaimHardwareIdentityRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_toit_api_ClaimHardwareIdentityResponse(arg) {
+  if (!(arg instanceof toit_api_organization_pb.ClaimHardwareIdentityResponse)) {
+    throw new Error('Expected argument of type toit.api.ClaimHardwareIdentityResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_ClaimHardwareIdentityResponse(buffer_arg) {
+  return toit_api_organization_pb.ClaimHardwareIdentityResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
 
 function serialize_toit_api_CreateAPIKeyRequest(arg) {
   if (!(arg instanceof toit_api_organization_pb.CreateAPIKeyRequest)) {
@@ -182,6 +204,28 @@ function deserialize_toit_api_ListUsersResponse(buffer_arg) {
   return toit_api_organization_pb.ListUsersResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_toit_api_SetHardwareIdentityInfoRequest(arg) {
+  if (!(arg instanceof toit_api_organization_pb.SetHardwareIdentityInfoRequest)) {
+    throw new Error('Expected argument of type toit.api.SetHardwareIdentityInfoRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_SetHardwareIdentityInfoRequest(buffer_arg) {
+  return toit_api_organization_pb.SetHardwareIdentityInfoRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_toit_api_SetHardwareIdentityInfoResponse(arg) {
+  if (!(arg instanceof toit_api_organization_pb.SetHardwareIdentityInfoResponse)) {
+    throw new Error('Expected argument of type toit.api.SetHardwareIdentityInfoResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_SetHardwareIdentityInfoResponse(buffer_arg) {
+  return toit_api_organization_pb.SetHardwareIdentityInfoResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_toit_api_UpdateOrganizationRequest(arg) {
   if (!(arg instanceof toit_api_organization_pb.UpdateOrganizationRequest)) {
     throw new Error('Expected argument of type toit.api.UpdateOrganizationRequest');
@@ -304,6 +348,28 @@ var OrganizationServiceService = exports.OrganizationServiceService = {
     requestDeserialize: deserialize_toit_api_UpdateOrganizationRequest,
     responseSerialize: serialize_toit_api_UpdateOrganizationResponse,
     responseDeserialize: deserialize_toit_api_UpdateOrganizationResponse,
+  },
+  claimHardwareIdentity: {
+    path: '/toit.api.OrganizationService/ClaimHardwareIdentity',
+    requestStream: false,
+    responseStream: false,
+    requestType: toit_api_organization_pb.ClaimHardwareIdentityRequest,
+    responseType: toit_api_organization_pb.ClaimHardwareIdentityResponse,
+    requestSerialize: serialize_toit_api_ClaimHardwareIdentityRequest,
+    requestDeserialize: deserialize_toit_api_ClaimHardwareIdentityRequest,
+    responseSerialize: serialize_toit_api_ClaimHardwareIdentityResponse,
+    responseDeserialize: deserialize_toit_api_ClaimHardwareIdentityResponse,
+  },
+  setHardwareIdentityInfo: {
+    path: '/toit.api.OrganizationService/SetHardwareIdentityInfo',
+    requestStream: false,
+    responseStream: false,
+    requestType: toit_api_organization_pb.SetHardwareIdentityInfoRequest,
+    responseType: toit_api_organization_pb.SetHardwareIdentityInfoResponse,
+    requestSerialize: serialize_toit_api_SetHardwareIdentityInfoRequest,
+    requestDeserialize: deserialize_toit_api_SetHardwareIdentityInfoRequest,
+    responseSerialize: serialize_toit_api_SetHardwareIdentityInfoResponse,
+    responseDeserialize: deserialize_toit_api_SetHardwareIdentityInfoResponse,
   },
 };
 

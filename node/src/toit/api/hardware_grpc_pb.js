@@ -8,28 +8,6 @@ var toit_model_data_pb = require('../../toit/model/data_pb.js');
 var toit_model_pubsub_message_pb = require('../../toit/model/pubsub/message_pb.js');
 var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
 
-function serialize_toit_api_ClaimHardwareIdentityRequest(arg) {
-  if (!(arg instanceof toit_api_hardware_pb.ClaimHardwareIdentityRequest)) {
-    throw new Error('Expected argument of type toit.api.ClaimHardwareIdentityRequest');
-  }
-  return Buffer.from(arg.serializeBinary());
-}
-
-function deserialize_toit_api_ClaimHardwareIdentityRequest(buffer_arg) {
-  return toit_api_hardware_pb.ClaimHardwareIdentityRequest.deserializeBinary(new Uint8Array(buffer_arg));
-}
-
-function serialize_toit_api_ClaimHardwareIdentityResponse(arg) {
-  if (!(arg instanceof toit_api_hardware_pb.ClaimHardwareIdentityResponse)) {
-    throw new Error('Expected argument of type toit.api.ClaimHardwareIdentityResponse');
-  }
-  return Buffer.from(arg.serializeBinary());
-}
-
-function deserialize_toit_api_ClaimHardwareIdentityResponse(buffer_arg) {
-  return toit_api_hardware_pb.ClaimHardwareIdentityResponse.deserializeBinary(new Uint8Array(buffer_arg));
-}
-
 function serialize_toit_api_ClaimRequest(arg) {
   if (!(arg instanceof toit_api_hardware_pb.ClaimRequest)) {
     throw new Error('Expected argument of type toit.api.ClaimRequest');
@@ -74,6 +52,28 @@ function deserialize_toit_api_GetActiveDeviceIDResponse(buffer_arg) {
   return toit_api_hardware_pb.GetActiveDeviceIDResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_toit_api_HardwareClaimIdentityRequest(arg) {
+  if (!(arg instanceof toit_api_hardware_pb.HardwareClaimIdentityRequest)) {
+    throw new Error('Expected argument of type toit.api.HardwareClaimIdentityRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_HardwareClaimIdentityRequest(buffer_arg) {
+  return toit_api_hardware_pb.HardwareClaimIdentityRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_toit_api_HardwareClaimIdentityResponse(arg) {
+  if (!(arg instanceof toit_api_hardware_pb.HardwareClaimIdentityResponse)) {
+    throw new Error('Expected argument of type toit.api.HardwareClaimIdentityResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_HardwareClaimIdentityResponse(buffer_arg) {
+  return toit_api_hardware_pb.HardwareClaimIdentityResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_toit_api_HardwareEventsRequest(arg) {
   if (!(arg instanceof toit_api_hardware_pb.HardwareEventsRequest)) {
     throw new Error('Expected argument of type toit.api.HardwareEventsRequest');
@@ -96,6 +96,28 @@ function deserialize_toit_api_HardwareEventsResponse(buffer_arg) {
   return toit_api_hardware_pb.HardwareEventsResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_toit_api_HardwareSetIdentityInfoRequest(arg) {
+  if (!(arg instanceof toit_api_hardware_pb.HardwareSetIdentityInfoRequest)) {
+    throw new Error('Expected argument of type toit.api.HardwareSetIdentityInfoRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_HardwareSetIdentityInfoRequest(buffer_arg) {
+  return toit_api_hardware_pb.HardwareSetIdentityInfoRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_toit_api_HardwareSetIdentityInfoResponse(arg) {
+  if (!(arg instanceof toit_api_hardware_pb.HardwareSetIdentityInfoResponse)) {
+    throw new Error('Expected argument of type toit.api.HardwareSetIdentityInfoResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_HardwareSetIdentityInfoResponse(buffer_arg) {
+  return toit_api_hardware_pb.HardwareSetIdentityInfoResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_toit_api_ReplaceRequest(arg) {
   if (!(arg instanceof toit_api_hardware_pb.ReplaceRequest)) {
     throw new Error('Expected argument of type toit.api.ReplaceRequest');
@@ -116,28 +138,6 @@ function serialize_toit_api_ReplaceResponse(arg) {
 
 function deserialize_toit_api_ReplaceResponse(buffer_arg) {
   return toit_api_hardware_pb.ReplaceResponse.deserializeBinary(new Uint8Array(buffer_arg));
-}
-
-function serialize_toit_api_SetHardwareIdentityInfoRequest(arg) {
-  if (!(arg instanceof toit_api_hardware_pb.SetHardwareIdentityInfoRequest)) {
-    throw new Error('Expected argument of type toit.api.SetHardwareIdentityInfoRequest');
-  }
-  return Buffer.from(arg.serializeBinary());
-}
-
-function deserialize_toit_api_SetHardwareIdentityInfoRequest(buffer_arg) {
-  return toit_api_hardware_pb.SetHardwareIdentityInfoRequest.deserializeBinary(new Uint8Array(buffer_arg));
-}
-
-function serialize_toit_api_SetHardwareIdentityInfoResponse(arg) {
-  if (!(arg instanceof toit_api_hardware_pb.SetHardwareIdentityInfoResponse)) {
-    throw new Error('Expected argument of type toit.api.SetHardwareIdentityInfoResponse');
-  }
-  return Buffer.from(arg.serializeBinary());
-}
-
-function deserialize_toit_api_SetHardwareIdentityInfoResponse(buffer_arg) {
-  return toit_api_hardware_pb.SetHardwareIdentityInfoResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
 
@@ -191,27 +191,27 @@ hardwareEvents: {
 
 exports.HardwareServiceClient = grpc.makeGenericClientConstructor(HardwareServiceService);
 var FlashStationService = exports.FlashStationService = {
-  claimHardwareIdentity: {
-    path: '/toit.api.FlashStation/ClaimHardwareIdentity',
+  hardwareClaimIdentity: {
+    path: '/toit.api.FlashStation/HardwareClaimIdentity',
     requestStream: false,
     responseStream: false,
-    requestType: toit_api_hardware_pb.ClaimHardwareIdentityRequest,
-    responseType: toit_api_hardware_pb.ClaimHardwareIdentityResponse,
-    requestSerialize: serialize_toit_api_ClaimHardwareIdentityRequest,
-    requestDeserialize: deserialize_toit_api_ClaimHardwareIdentityRequest,
-    responseSerialize: serialize_toit_api_ClaimHardwareIdentityResponse,
-    responseDeserialize: deserialize_toit_api_ClaimHardwareIdentityResponse,
+    requestType: toit_api_hardware_pb.HardwareClaimIdentityRequest,
+    responseType: toit_api_hardware_pb.HardwareClaimIdentityResponse,
+    requestSerialize: serialize_toit_api_HardwareClaimIdentityRequest,
+    requestDeserialize: deserialize_toit_api_HardwareClaimIdentityRequest,
+    responseSerialize: serialize_toit_api_HardwareClaimIdentityResponse,
+    responseDeserialize: deserialize_toit_api_HardwareClaimIdentityResponse,
   },
-  setHardwareIdentityInfo: {
-    path: '/toit.api.FlashStation/SetHardwareIdentityInfo',
+  hardwareSetIdentityInfo: {
+    path: '/toit.api.FlashStation/HardwareSetIdentityInfo',
     requestStream: false,
     responseStream: false,
-    requestType: toit_api_hardware_pb.SetHardwareIdentityInfoRequest,
-    responseType: toit_api_hardware_pb.SetHardwareIdentityInfoResponse,
-    requestSerialize: serialize_toit_api_SetHardwareIdentityInfoRequest,
-    requestDeserialize: deserialize_toit_api_SetHardwareIdentityInfoRequest,
-    responseSerialize: serialize_toit_api_SetHardwareIdentityInfoResponse,
-    responseDeserialize: deserialize_toit_api_SetHardwareIdentityInfoResponse,
+    requestType: toit_api_hardware_pb.HardwareSetIdentityInfoRequest,
+    responseType: toit_api_hardware_pb.HardwareSetIdentityInfoResponse,
+    requestSerialize: serialize_toit_api_HardwareSetIdentityInfoRequest,
+    requestDeserialize: deserialize_toit_api_HardwareSetIdentityInfoRequest,
+    responseSerialize: serialize_toit_api_HardwareSetIdentityInfoResponse,
+    responseDeserialize: deserialize_toit_api_HardwareSetIdentityInfoResponse,
   },
 };
 
