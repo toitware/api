@@ -64,7 +64,7 @@ message CreateAPIKeyResponse {
 message ListAPIKeysRequest {
   bytes offset = 1;
   int64 limit = 2;
-  string order_by =3;
+  string order_by = 3;
   bool order_desc = 4;
 }
 

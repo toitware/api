@@ -56,12 +56,12 @@ message Tier {
       FREE = 1;
       PAID = 2;
     };
-  }
+}
 
-  message Customer {
+message Customer {
     enum Type {
       UNKNOWN = 0;
       PERSON = 1;
       ORGANIZATION = 2;
     };
-  }
+}
