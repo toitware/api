@@ -2,7 +2,6 @@ syntax = "proto3";
 
 package toit.api;
 
-import "toit/model/device.proto";
 import "toit/model/organization.proto";
 import "toit/api/hardware.proto";
 
@@ -89,7 +88,6 @@ message GetAPIKeySecretResponse {
 }
 
 message OrganizationChange {
-
   oneof change {
     string city = 1;
     string country = 2;
