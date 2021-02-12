@@ -73,7 +73,7 @@ message GetOrganizationResponse {
 }
 
 message CreatePaymentSubscriptionRequest {
-    string billing_email = 1;
+    string billing_email = 1; // Not used
     string card_holder_name = 2;
     int32 card_cvc = 3;
     int32 card_expiry_month = 4;

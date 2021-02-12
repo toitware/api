@@ -16,14 +16,24 @@ message Organization {
     string city = 5;
     string country = 6;
     string phone_number = 7;
-    string cvr_number = 8;
+    string cvr_number = 8; // Not used
     Tier.Type tier = 9;
     PaymentDetails payment_details = 10;
+    string address_line = 11;
+    string postal_code = 12;
+    string vat_number = 13;
+    string vat_country_code = 14;
+    Customer.Type customer = 15;
 }
 
 message PaymentDetails {
     string last4 = 1;
-    string expiry = 2;
+    string expiry = 2; // Not used
+    string expiry_month = 3;
+    string expiry_year = 4;
+    string brand = 5;
+    string country_code = 6;
+    string cvc_check = 7;
 }
 
 message User {
@@ -46,4 +56,12 @@ message Tier {
       FREE = 1;
       PAID = 2;
     };
-  }
+}
+
+message Customer {
+    enum Type {
+      UNKNOWN = 0;
+      PERSON = 1;
+      ORGANIZATION = 2;
+    };
+}

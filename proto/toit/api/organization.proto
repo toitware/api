@@ -2,7 +2,6 @@ syntax = "proto3";
 
 package toit.api;
 
-import "toit/model/device.proto";
 import "toit/model/organization.proto";
 import "toit/api/hardware.proto";
 
@@ -65,7 +64,7 @@ message CreateAPIKeyResponse {
 message ListAPIKeysRequest {
   bytes offset = 1;
   int64 limit = 2;
-  string order_by =3;
+  string order_by = 3;
   bool order_desc = 4;
 }
 
@@ -93,11 +92,17 @@ message OrganizationChange {
     string city = 1;
     string country = 2;
     string phone_number = 3;
-    string cvr_number = 4;
+    string cvr_number = 4; // Not used
     string name = 5;
     string email = 6;
+    string vat_number = 7;
+    string vat_country_code = 8;
+    string address_line = 9;
+    string postal_code = 10;
+    model.Customer.Type customer = 11;
   }
 }
+
 message UpdateOrganizationRequest {
   repeated OrganizationChange changes = 1;
 }
