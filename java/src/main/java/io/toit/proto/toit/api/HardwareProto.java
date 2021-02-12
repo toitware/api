@@ -9219,10 +9219,10 @@ public final class HardwareProto {
         getFlashStationSecretBytes();
 
     /**
-     * <code>bytes id = 2;</code>
-     * @return The id.
+     * <code>bytes hardware_id = 2;</code>
+     * @return The hardwareId.
      */
-    com.google.protobuf.ByteString getId();
+    com.google.protobuf.ByteString getHardwareId();
 
     /**
      * <code>.toit.model.HardwareIdentityInfo info = 3;</code>
@@ -9253,7 +9253,7 @@ public final class HardwareProto {
     }
     private SetHardwareIdentityInfoRequest() {
       flashStationSecret_ = "";
-      id_ = com.google.protobuf.ByteString.EMPTY;
+      hardwareId_ = com.google.protobuf.ByteString.EMPTY;
     }
 
     @java.lang.Override
@@ -9294,7 +9294,7 @@ public final class HardwareProto {
             }
             case 18: {
 
-              id_ = input.readBytes();
+              hardwareId_ = input.readBytes();
               break;
             }
             case 26: {
@@ -9378,14 +9378,14 @@ public final class HardwareProto {
       }
     }
 
-    public static final int ID_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString id_;
+    public static final int HARDWARE_ID_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString hardwareId_;
     /**
-     * <code>bytes id = 2;</code>
-     * @return The id.
+     * <code>bytes hardware_id = 2;</code>
+     * @return The hardwareId.
      */
-    public com.google.protobuf.ByteString getId() {
-      return id_;
+    public com.google.protobuf.ByteString getHardwareId() {
+      return hardwareId_;
     }
 
     public static final int INFO_FIELD_NUMBER = 3;
@@ -9428,8 +9428,8 @@ public final class HardwareProto {
       if (!getFlashStationSecretBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, flashStationSecret_);
       }
-      if (!id_.isEmpty()) {
-        output.writeBytes(2, id_);
+      if (!hardwareId_.isEmpty()) {
+        output.writeBytes(2, hardwareId_);
       }
       if (info_ != null) {
         output.writeMessage(3, getInfo());
@@ -9446,9 +9446,9 @@ public final class HardwareProto {
       if (!getFlashStationSecretBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, flashStationSecret_);
       }
-      if (!id_.isEmpty()) {
+      if (!hardwareId_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, id_);
+          .computeBytesSize(2, hardwareId_);
       }
       if (info_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -9471,8 +9471,8 @@ public final class HardwareProto {
 
       if (!getFlashStationSecret()
           .equals(other.getFlashStationSecret())) return false;
-      if (!getId()
-          .equals(other.getId())) return false;
+      if (!getHardwareId()
+          .equals(other.getHardwareId())) return false;
       if (hasInfo() != other.hasInfo()) return false;
       if (hasInfo()) {
         if (!getInfo()
@@ -9491,8 +9491,8 @@ public final class HardwareProto {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + FLASH_STATION_SECRET_FIELD_NUMBER;
       hash = (53 * hash) + getFlashStationSecret().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + HARDWARE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getHardwareId().hashCode();
       if (hasInfo()) {
         hash = (37 * hash) + INFO_FIELD_NUMBER;
         hash = (53 * hash) + getInfo().hashCode();
@@ -9632,7 +9632,7 @@ public final class HardwareProto {
         super.clear();
         flashStationSecret_ = "";
 
-        id_ = com.google.protobuf.ByteString.EMPTY;
+        hardwareId_ = com.google.protobuf.ByteString.EMPTY;
 
         if (infoBuilder_ == null) {
           info_ = null;
@@ -9667,7 +9667,7 @@ public final class HardwareProto {
       public io.toit.proto.toit.api.HardwareProto.SetHardwareIdentityInfoRequest buildPartial() {
         io.toit.proto.toit.api.HardwareProto.SetHardwareIdentityInfoRequest result = new io.toit.proto.toit.api.HardwareProto.SetHardwareIdentityInfoRequest(this);
         result.flashStationSecret_ = flashStationSecret_;
-        result.id_ = id_;
+        result.hardwareId_ = hardwareId_;
         if (infoBuilder_ == null) {
           result.info_ = info_;
         } else {
@@ -9725,8 +9725,8 @@ public final class HardwareProto {
           flashStationSecret_ = other.flashStationSecret_;
           onChanged();
         }
-        if (other.getId() != com.google.protobuf.ByteString.EMPTY) {
-          setId(other.getId());
+        if (other.getHardwareId() != com.google.protobuf.ByteString.EMPTY) {
+          setHardwareId(other.getHardwareId());
         }
         if (other.hasInfo()) {
           mergeInfo(other.getInfo());
@@ -9836,35 +9836,35 @@ public final class HardwareProto {
         return this;
       }
 
-      private com.google.protobuf.ByteString id_ = com.google.protobuf.ByteString.EMPTY;
+      private com.google.protobuf.ByteString hardwareId_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>bytes id = 2;</code>
-       * @return The id.
+       * <code>bytes hardware_id = 2;</code>
+       * @return The hardwareId.
        */
-      public com.google.protobuf.ByteString getId() {
-        return id_;
+      public com.google.protobuf.ByteString getHardwareId() {
+        return hardwareId_;
       }
       /**
-       * <code>bytes id = 2;</code>
-       * @param value The id to set.
+       * <code>bytes hardware_id = 2;</code>
+       * @param value The hardwareId to set.
        * @return This builder for chaining.
        */
-      public Builder setId(com.google.protobuf.ByteString value) {
+      public Builder setHardwareId(com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        id_ = value;
+        hardwareId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bytes id = 2;</code>
+       * <code>bytes hardware_id = 2;</code>
        * @return This builder for chaining.
        */
-      public Builder clearId() {
+      public Builder clearHardwareId() {
         
-        id_ = getDefaultInstance().getId();
+        hardwareId_ = getDefaultInstance().getHardwareId();
         onChanged();
         return this;
       }
@@ -10570,27 +10570,28 @@ public final class HardwareProto {
       "dwareIdentityRequest\022\034\n\024flash_station_se" +
       "cret\030\001 \001(\t\"X\n\035ClaimHardwareIdentityRespo" +
       "nse\0227\n\021hardware_identity\030\001 \001(\0132\034.toit.mo" +
-      "del.HardwareIdentity\"z\n\036SetHardwareIdent" +
-      "ityInfoRequest\022\034\n\024flash_station_secret\030\001" +
-      " \001(\t\022\n\n\002id\030\002 \001(\014\022.\n\004info\030\003 \001(\0132 .toit.mo" +
-      "del.HardwareIdentityInfo\"!\n\037SetHardwareI" +
-      "dentityInfoResponse2\310\002\n\017HardwareService\022" +
-      ":\n\005Claim\022\026.toit.api.ClaimRequest\032\027.toit." +
-      "api.ClaimResponse\"\000\022@\n\007Replace\022\030.toit.ap" +
-      "i.ReplaceRequest\032\031.toit.api.ReplaceRespo" +
-      "nse\"\000\022^\n\021GetActiveDeviceID\022\".toit.api.Ge" +
-      "tActiveDeviceIDRequest\032#.toit.api.GetAct" +
-      "iveDeviceIDResponse\"\000\022W\n\016HardwareEvents\022" +
-      "\037.toit.api.HardwareEventsRequest\032 .toit." +
-      "api.HardwareEventsResponse\"\0000\0012\354\001\n\014Flash" +
-      "Station\022j\n\025ClaimHardwareIdentity\022&.toit." +
-      "api.ClaimHardwareIdentityRequest\032\'.toit." +
-      "api.ClaimHardwareIdentityResponse\"\000\022p\n\027S" +
-      "etHardwareIdentityInfo\022(.toit.api.SetHar" +
-      "dwareIdentityInfoRequest\032).toit.api.SetH" +
-      "ardwareIdentityInfoResponse\"\000BM\n\026io.toit" +
-      ".proto.toit.apiB\rHardwareProtoZ$github.c" +
-      "om/toitware/api.git/toit/apib\006proto3"
+      "del.HardwareIdentity\"\203\001\n\036SetHardwareIden" +
+      "tityInfoRequest\022\034\n\024flash_station_secret\030" +
+      "\001 \001(\t\022\023\n\013hardware_id\030\002 \001(\014\022.\n\004info\030\003 \001(\013" +
+      "2 .toit.model.HardwareIdentityInfo\"!\n\037Se" +
+      "tHardwareIdentityInfoResponse2\310\002\n\017Hardwa" +
+      "reService\022:\n\005Claim\022\026.toit.api.ClaimReque" +
+      "st\032\027.toit.api.ClaimResponse\"\000\022@\n\007Replace" +
+      "\022\030.toit.api.ReplaceRequest\032\031.toit.api.Re" +
+      "placeResponse\"\000\022^\n\021GetActiveDeviceID\022\".t" +
+      "oit.api.GetActiveDeviceIDRequest\032#.toit." +
+      "api.GetActiveDeviceIDResponse\"\000\022W\n\016Hardw" +
+      "areEvents\022\037.toit.api.HardwareEventsReque" +
+      "st\032 .toit.api.HardwareEventsResponse\"\0000\001" +
+      "2\354\001\n\014FlashStation\022j\n\025ClaimHardwareIdenti" +
+      "ty\022&.toit.api.ClaimHardwareIdentityReque" +
+      "st\032\'.toit.api.ClaimHardwareIdentityRespo" +
+      "nse\"\000\022p\n\027SetHardwareIdentityInfo\022(.toit." +
+      "api.SetHardwareIdentityInfoRequest\032).toi" +
+      "t.api.SetHardwareIdentityInfoResponse\"\000B" +
+      "M\n\026io.toit.proto.toit.apiB\rHardwareProto" +
+      "Z$github.com/toitware/api.git/toit/apib\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10671,7 +10672,7 @@ public final class HardwareProto {
     internal_static_toit_api_SetHardwareIdentityInfoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_SetHardwareIdentityInfoRequest_descriptor,
-        new java.lang.String[] { "FlashStationSecret", "Id", "Info", });
+        new java.lang.String[] { "FlashStationSecret", "HardwareId", "Info", });
     internal_static_toit_api_SetHardwareIdentityInfoResponse_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_toit_api_SetHardwareIdentityInfoResponse_fieldAccessorTable = new

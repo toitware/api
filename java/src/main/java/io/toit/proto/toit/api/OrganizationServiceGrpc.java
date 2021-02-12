@@ -306,6 +306,68 @@ public final class OrganizationServiceGrpc {
     return getUpdateOrganizationMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityRequest,
+      io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityResponse> getClaimHardwareIdentityMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ClaimHardwareIdentity",
+      requestType = io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityRequest.class,
+      responseType = io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityRequest,
+      io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityResponse> getClaimHardwareIdentityMethod() {
+    io.grpc.MethodDescriptor<io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityRequest, io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityResponse> getClaimHardwareIdentityMethod;
+    if ((getClaimHardwareIdentityMethod = OrganizationServiceGrpc.getClaimHardwareIdentityMethod) == null) {
+      synchronized (OrganizationServiceGrpc.class) {
+        if ((getClaimHardwareIdentityMethod = OrganizationServiceGrpc.getClaimHardwareIdentityMethod) == null) {
+          OrganizationServiceGrpc.getClaimHardwareIdentityMethod = getClaimHardwareIdentityMethod =
+              io.grpc.MethodDescriptor.<io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityRequest, io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ClaimHardwareIdentity"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrganizationServiceMethodDescriptorSupplier("ClaimHardwareIdentity"))
+              .build();
+        }
+      }
+    }
+    return getClaimHardwareIdentityMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<io.toit.proto.toit.api.HardwareProto.SetHardwareIdentityInfoRequest,
+      io.toit.proto.toit.api.HardwareProto.SetHardwareIdentityInfoResponse> getSetHardwareIdentityInfoMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetHardwareIdentityInfo",
+      requestType = io.toit.proto.toit.api.HardwareProto.SetHardwareIdentityInfoRequest.class,
+      responseType = io.toit.proto.toit.api.HardwareProto.SetHardwareIdentityInfoResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.toit.proto.toit.api.HardwareProto.SetHardwareIdentityInfoRequest,
+      io.toit.proto.toit.api.HardwareProto.SetHardwareIdentityInfoResponse> getSetHardwareIdentityInfoMethod() {
+    io.grpc.MethodDescriptor<io.toit.proto.toit.api.HardwareProto.SetHardwareIdentityInfoRequest, io.toit.proto.toit.api.HardwareProto.SetHardwareIdentityInfoResponse> getSetHardwareIdentityInfoMethod;
+    if ((getSetHardwareIdentityInfoMethod = OrganizationServiceGrpc.getSetHardwareIdentityInfoMethod) == null) {
+      synchronized (OrganizationServiceGrpc.class) {
+        if ((getSetHardwareIdentityInfoMethod = OrganizationServiceGrpc.getSetHardwareIdentityInfoMethod) == null) {
+          OrganizationServiceGrpc.getSetHardwareIdentityInfoMethod = getSetHardwareIdentityInfoMethod =
+              io.grpc.MethodDescriptor.<io.toit.proto.toit.api.HardwareProto.SetHardwareIdentityInfoRequest, io.toit.proto.toit.api.HardwareProto.SetHardwareIdentityInfoResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetHardwareIdentityInfo"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.toit.proto.toit.api.HardwareProto.SetHardwareIdentityInfoRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.toit.proto.toit.api.HardwareProto.SetHardwareIdentityInfoResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrganizationServiceMethodDescriptorSupplier("SetHardwareIdentityInfo"))
+              .build();
+        }
+      }
+    }
+    return getSetHardwareIdentityInfoMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -417,6 +479,20 @@ public final class OrganizationServiceGrpc {
       asyncUnimplementedUnaryCall(getUpdateOrganizationMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void claimHardwareIdentity(io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityRequest request,
+        io.grpc.stub.StreamObserver<io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getClaimHardwareIdentityMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void setHardwareIdentityInfo(io.toit.proto.toit.api.HardwareProto.SetHardwareIdentityInfoRequest request,
+        io.grpc.stub.StreamObserver<io.toit.proto.toit.api.HardwareProto.SetHardwareIdentityInfoResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getSetHardwareIdentityInfoMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -482,6 +558,20 @@ public final class OrganizationServiceGrpc {
                 io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest,
                 io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse>(
                   this, METHODID_UPDATE_ORGANIZATION)))
+          .addMethod(
+            getClaimHardwareIdentityMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityRequest,
+                io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityResponse>(
+                  this, METHODID_CLAIM_HARDWARE_IDENTITY)))
+          .addMethod(
+            getSetHardwareIdentityInfoMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.toit.proto.toit.api.HardwareProto.SetHardwareIdentityInfoRequest,
+                io.toit.proto.toit.api.HardwareProto.SetHardwareIdentityInfoResponse>(
+                  this, METHODID_SET_HARDWARE_IDENTITY_INFO)))
           .build();
     }
   }
@@ -571,6 +661,22 @@ public final class OrganizationServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getUpdateOrganizationMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void claimHardwareIdentity(io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityRequest request,
+        io.grpc.stub.StreamObserver<io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getClaimHardwareIdentityMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void setHardwareIdentityInfo(io.toit.proto.toit.api.HardwareProto.SetHardwareIdentityInfoRequest request,
+        io.grpc.stub.StreamObserver<io.toit.proto.toit.api.HardwareProto.SetHardwareIdentityInfoResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getSetHardwareIdentityInfoMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -649,6 +755,20 @@ public final class OrganizationServiceGrpc {
     public io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse updateOrganization(io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest request) {
       return blockingUnaryCall(
           getChannel(), getUpdateOrganizationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityResponse claimHardwareIdentity(io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getClaimHardwareIdentityMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public io.toit.proto.toit.api.HardwareProto.SetHardwareIdentityInfoResponse setHardwareIdentityInfo(io.toit.proto.toit.api.HardwareProto.SetHardwareIdentityInfoRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getSetHardwareIdentityInfoMethod(), getCallOptions(), request);
     }
   }
 
@@ -729,6 +849,22 @@ public final class OrganizationServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getUpdateOrganizationMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityResponse> claimHardwareIdentity(
+        io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getClaimHardwareIdentityMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.toit.proto.toit.api.HardwareProto.SetHardwareIdentityInfoResponse> setHardwareIdentityInfo(
+        io.toit.proto.toit.api.HardwareProto.SetHardwareIdentityInfoRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getSetHardwareIdentityInfoMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_USER = 0;
@@ -740,6 +876,8 @@ public final class OrganizationServiceGrpc {
   private static final int METHODID_DELETE_APIKEY = 6;
   private static final int METHODID_GET_APIKEY_SECRET = 7;
   private static final int METHODID_UPDATE_ORGANIZATION = 8;
+  private static final int METHODID_CLAIM_HARDWARE_IDENTITY = 9;
+  private static final int METHODID_SET_HARDWARE_IDENTITY_INFO = 10;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -793,6 +931,14 @@ public final class OrganizationServiceGrpc {
         case METHODID_UPDATE_ORGANIZATION:
           serviceImpl.updateOrganization((io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest) request,
               (io.grpc.stub.StreamObserver<io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse>) responseObserver);
+          break;
+        case METHODID_CLAIM_HARDWARE_IDENTITY:
+          serviceImpl.claimHardwareIdentity((io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityRequest) request,
+              (io.grpc.stub.StreamObserver<io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityResponse>) responseObserver);
+          break;
+        case METHODID_SET_HARDWARE_IDENTITY_INFO:
+          serviceImpl.setHardwareIdentityInfo((io.toit.proto.toit.api.HardwareProto.SetHardwareIdentityInfoRequest) request,
+              (io.grpc.stub.StreamObserver<io.toit.proto.toit.api.HardwareProto.SetHardwareIdentityInfoResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -864,6 +1010,8 @@ public final class OrganizationServiceGrpc {
               .addMethod(getDeleteAPIKeyMethod())
               .addMethod(getGetAPIKeySecretMethod())
               .addMethod(getUpdateOrganizationMethod())
+              .addMethod(getClaimHardwareIdentityMethod())
+              .addMethod(getSetHardwareIdentityInfoMethod())
               .build();
         }
       }
