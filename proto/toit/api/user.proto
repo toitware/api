@@ -73,11 +73,12 @@ message GetOrganizationResponse {
 }
 
 message CreatePaymentSubscriptionRequest {
-    string card_holder_name = 1;
-    int32 card_cvc = 2;
-    int32 card_expiry_month = 3;
-    int32 card_expiry_year = 4;
-    uint64 card_number = 5;
+    string billing_email = 1; // Not used
+    string card_holder_name = 2;
+    int32 card_cvc = 3;
+    int32 card_expiry_month = 4;
+    int32 card_expiry_year = 5;
+    uint64 card_number = 6;
 }
 
 message CreatePaymentSubscriptionResponse {

@@ -89,19 +89,22 @@ message GetAPIKeySecretResponse {
 }
 
 message OrganizationChange {
+
   oneof change {
     string city = 1;
     string country = 2;
     string phone_number = 3;
-    string vat_number = 4;
-    string vat_country_code = 5;
-    string name = 6;
-    string email = 7;
-    string address_line = 8;
-    string postal_code = 9;
-    model.Customer.Type customer = 10;
+    string cvr_number = 4; // Not used
+    string name = 5;
+    string email = 6;
+    string vat_number = 7;
+    string vat_country_code = 8;
+    string address_line = 9;
+    string postal_code = 10;
+    model.Customer.Type customer = 11;
   }
 }
+
 message UpdateOrganizationRequest {
   repeated OrganizationChange changes = 1;
 }

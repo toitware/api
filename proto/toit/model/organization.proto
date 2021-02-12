@@ -15,23 +15,24 @@ message Organization {
     string email = 4;
     string city = 5;
     string country = 6;
-    string address_line = 7;
-    string postal_code = 8;
-    string phone_number = 9;
-    string vat_number = 10;
-    string vat_country_code = 11;
-    Customer.Type customer = 12;
-    Tier.Type tier = 13;
-    PaymentDetails payment_details = 14;
-}
+    string phone_number = 7;
+    string cvr_number = 8; // Not used
+    Tier.Type tier = 9;
+    PaymentDetails payment_details = 10;
+    string address_line = 11;
+    string postal_code = 12;
+    string vat_number = 13;
+    string vat_country_code = 14;
+    Customer.Type customer = 15;
 
 message PaymentDetails {
     string last4 = 1;
-    string expiry_month = 2;
-    string expiry_year = 3;
-    string brand = 4;
-    string country_code = 5;
-    string cvc_check = 6;
+    string expiry = 2; // Not used
+    string expiry_month = 3;
+    string expiry_year = 4;
+    string brand = 5;
+    string country_code = 6;
+    string cvc_check = 7;
 }
 
 message User {
