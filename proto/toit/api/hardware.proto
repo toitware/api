@@ -111,7 +111,7 @@ message ClaimHardwareIdentityResponse {
 
 message SetHardwareIdentityInfoRequest {
   string flash_station_secret = 1;
-  bytes id = 2;
+  bytes hardware_id = 2;
   toit.model.HardwareIdentityInfo info = 3;
 }
 

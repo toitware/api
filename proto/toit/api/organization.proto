@@ -2,7 +2,9 @@ syntax = "proto3";
 
 package toit.api;
 
+import "toit/model/device.proto";
 import "toit/model/organization.proto";
+import "toit/api/hardware.proto";
 
 option go_package = "github.com/toitware/api.git/toit/api";
 option java_package = "io.toit.proto.toit.api";
@@ -20,6 +22,9 @@ service OrganizationService {
   rpc GetAPIKeySecret(GetAPIKeySecretRequest) returns (GetAPIKeySecretResponse) {}
 
   rpc UpdateOrganization(UpdateOrganizationRequest) returns (UpdateOrganizationResponse) {}
+
+  rpc ClaimHardwareIdentity(ClaimHardwareIdentityRequest) returns (ClaimHardwareIdentityResponse) {}
+  rpc SetHardwareIdentityInfo(SetHardwareIdentityInfoRequest) returns (SetHardwareIdentityInfoResponse) {}
 }
 
 message ListUsersRequest {

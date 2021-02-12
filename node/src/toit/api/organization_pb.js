@@ -12,10 +12,12 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
+var toit_model_device_pb = require('../../toit/model/device_pb.js');
+goog.object.extend(proto, toit_model_device_pb);
 var toit_model_organization_pb = require('../../toit/model/organization_pb.js');
 goog.object.extend(proto, toit_model_organization_pb);
-var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
-goog.object.extend(proto, google_protobuf_timestamp_pb);
+var toit_api_hardware_pb = require('../../toit/api/hardware_pb.js');
+goog.object.extend(proto, toit_api_hardware_pb);
 goog.exportSymbol('proto.toit.api.CreateAPIKeyRequest', null, global);
 goog.exportSymbol('proto.toit.api.CreateAPIKeyResponse', null, global);
 goog.exportSymbol('proto.toit.api.CreateUserRequest', null, global);

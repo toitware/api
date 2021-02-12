@@ -4,6 +4,7 @@
 // file: toit/api/organization.proto
 
 import * as toit_api_organization_pb from "../../toit/api/organization_pb";
+import * as toit_api_hardware_pb from "../../toit/api/hardware_pb";
 import * as grpc from "@grpc/grpc-js";
 
 interface IOrganizationServiceService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
@@ -16,6 +17,8 @@ interface IOrganizationServiceService extends grpc.ServiceDefinition<grpc.Untype
   deleteAPIKey: grpc.MethodDefinition<toit_api_organization_pb.DeleteAPIKeyRequest, toit_api_organization_pb.DeleteAPIKeyResponse>;
   getAPIKeySecret: grpc.MethodDefinition<toit_api_organization_pb.GetAPIKeySecretRequest, toit_api_organization_pb.GetAPIKeySecretResponse>;
   updateOrganization: grpc.MethodDefinition<toit_api_organization_pb.UpdateOrganizationRequest, toit_api_organization_pb.UpdateOrganizationResponse>;
+  claimHardwareIdentity: grpc.MethodDefinition<toit_api_hardware_pb.ClaimHardwareIdentityRequest, toit_api_hardware_pb.ClaimHardwareIdentityResponse>;
+  setHardwareIdentityInfo: grpc.MethodDefinition<toit_api_hardware_pb.SetHardwareIdentityInfoRequest, toit_api_hardware_pb.SetHardwareIdentityInfoResponse>;
 }
 
 export const OrganizationServiceService: IOrganizationServiceService;
@@ -48,4 +51,10 @@ export class OrganizationServiceClient extends grpc.Client {
   updateOrganization(argument: toit_api_organization_pb.UpdateOrganizationRequest, callback: grpc.requestCallback<toit_api_organization_pb.UpdateOrganizationResponse>): grpc.ClientUnaryCall;
   updateOrganization(argument: toit_api_organization_pb.UpdateOrganizationRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_organization_pb.UpdateOrganizationResponse>): grpc.ClientUnaryCall;
   updateOrganization(argument: toit_api_organization_pb.UpdateOrganizationRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_organization_pb.UpdateOrganizationResponse>): grpc.ClientUnaryCall;
+  claimHardwareIdentity(argument: toit_api_hardware_pb.ClaimHardwareIdentityRequest, callback: grpc.requestCallback<toit_api_hardware_pb.ClaimHardwareIdentityResponse>): grpc.ClientUnaryCall;
+  claimHardwareIdentity(argument: toit_api_hardware_pb.ClaimHardwareIdentityRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_hardware_pb.ClaimHardwareIdentityResponse>): grpc.ClientUnaryCall;
+  claimHardwareIdentity(argument: toit_api_hardware_pb.ClaimHardwareIdentityRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_hardware_pb.ClaimHardwareIdentityResponse>): grpc.ClientUnaryCall;
+  setHardwareIdentityInfo(argument: toit_api_hardware_pb.SetHardwareIdentityInfoRequest, callback: grpc.requestCallback<toit_api_hardware_pb.SetHardwareIdentityInfoResponse>): grpc.ClientUnaryCall;
+  setHardwareIdentityInfo(argument: toit_api_hardware_pb.SetHardwareIdentityInfoRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_hardware_pb.SetHardwareIdentityInfoResponse>): grpc.ClientUnaryCall;
+  setHardwareIdentityInfo(argument: toit_api_hardware_pb.SetHardwareIdentityInfoRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_hardware_pb.SetHardwareIdentityInfoResponse>): grpc.ClientUnaryCall;
 }

@@ -2,8 +2,9 @@
 // file: toit/api/organization.proto
 
 import * as jspb from "google-protobuf";
+import * as toit_model_device_pb from "../../toit/model/device_pb";
 import * as toit_model_organization_pb from "../../toit/model/organization_pb";
-import * as google_protobuf_timestamp_pb from "google-protobuf/google/protobuf/timestamp_pb";
+import * as toit_api_hardware_pb from "../../toit/api/hardware_pb";
 
 export class ListUsersRequest extends jspb.Message {
   getOffset(): Uint8Array | string;

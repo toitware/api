@@ -3269,7 +3269,7 @@ proto.toit.api.SetHardwareIdentityInfoRequest.prototype.toObject = function(opt_
 proto.toit.api.SetHardwareIdentityInfoRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     flashStationSecret: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    id: msg.getId_asB64(),
+    hardwareId: msg.getHardwareId_asB64(),
     info: (f = msg.getInfo()) && toit_model_device_pb.HardwareIdentityInfo.toObject(includeInstance, f)
   };
 
@@ -3313,7 +3313,7 @@ proto.toit.api.SetHardwareIdentityInfoRequest.deserializeBinaryFromReader = func
       break;
     case 2:
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setId(value);
+      msg.setHardwareId(value);
       break;
     case 3:
       var value = new toit_model_device_pb.HardwareIdentityInfo;
@@ -3356,7 +3356,7 @@ proto.toit.api.SetHardwareIdentityInfoRequest.serializeBinaryToWriter = function
       f
     );
   }
-  f = message.getId_asU8();
+  f = message.getHardwareId_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       2,
@@ -3393,35 +3393,35 @@ proto.toit.api.SetHardwareIdentityInfoRequest.prototype.setFlashStationSecret = 
 
 
 /**
- * optional bytes id = 2;
+ * optional bytes hardware_id = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.toit.api.SetHardwareIdentityInfoRequest.prototype.getId = function() {
+proto.toit.api.SetHardwareIdentityInfoRequest.prototype.getHardwareId = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
- * optional bytes id = 2;
- * This is a type-conversion wrapper around `getId()`
+ * optional bytes hardware_id = 2;
+ * This is a type-conversion wrapper around `getHardwareId()`
  * @return {string}
  */
-proto.toit.api.SetHardwareIdentityInfoRequest.prototype.getId_asB64 = function() {
+proto.toit.api.SetHardwareIdentityInfoRequest.prototype.getHardwareId_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getId()));
+      this.getHardwareId()));
 };
 
 
 /**
- * optional bytes id = 2;
+ * optional bytes hardware_id = 2;
  * Note that Uint8Array is not supported on all browsers.
  * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getId()`
+ * This is a type-conversion wrapper around `getHardwareId()`
  * @return {!Uint8Array}
  */
-proto.toit.api.SetHardwareIdentityInfoRequest.prototype.getId_asU8 = function() {
+proto.toit.api.SetHardwareIdentityInfoRequest.prototype.getHardwareId_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getId()));
+      this.getHardwareId()));
 };
 
 
@@ -3429,7 +3429,7 @@ proto.toit.api.SetHardwareIdentityInfoRequest.prototype.getId_asU8 = function() 
  * @param {!(string|Uint8Array)} value
  * @return {!proto.toit.api.SetHardwareIdentityInfoRequest} returns this
  */
-proto.toit.api.SetHardwareIdentityInfoRequest.prototype.setId = function(value) {
+proto.toit.api.SetHardwareIdentityInfoRequest.prototype.setHardwareId = function(value) {
   return jspb.Message.setProto3BytesField(this, 2, value);
 };
 

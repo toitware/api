@@ -12538,61 +12538,68 @@ public final class OrgProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\033toit/api/organization.proto\022\010toit.api\032" +
-      "\035toit/model/organization.proto\032\037google/p" +
-      "rotobuf/timestamp.proto\"W\n\020ListUsersRequ" +
+      "\027toit/model/device.proto\032\035toit/model/org" +
+      "anization.proto\032\027toit/api/hardware.proto" +
+      "\"W\n\020ListUsersRequest\022\016\n\006offset\030\001 \001(\014\022\r\n\005" +
+      "limit\030\002 \001(\003\022\020\n\010order_by\030\003 \001(\t\022\022\n\norder_d" +
+      "esc\030\004 \001(\010\"D\n\021ListUsersResponse\022\037\n\005users\030" +
+      "\001 \003(\0132\020.toit.model.User\022\016\n\006offset\030\002 \001(\014\"" +
+      "\"\n\021CreateUserRequest\022\r\n\005email\030\001 \001(\t\"4\n\022C" +
+      "reateUserResponse\022\036\n\004user\030\001 \001(\0132\020.toit.m" +
+      "odel.User\"\"\n\021DeleteUserRequest\022\r\n\005email\030" +
+      "\001 \001(\t\"\024\n\022DeleteUserResponse\"+\n\016GetUserRe" +
+      "quest\022\n\n\002id\030\001 \001(\014\022\r\n\005email\030\002 \001(\t\"1\n\017GetU" +
+      "serResponse\022\036\n\004user\030\001 \001(\0132\020.toit.model.U" +
+      "ser\"#\n\023CreateAPIKeyRequest\022\014\n\004name\030\001 \001(\t" +
+      "\";\n\024CreateAPIKeyResponse\022#\n\007api_key\030\001 \001(" +
+      "\0132\022.toit.model.APIKey\"Y\n\022ListAPIKeysRequ" +
       "est\022\016\n\006offset\030\001 \001(\014\022\r\n\005limit\030\002 \001(\003\022\020\n\010or" +
-      "der_by\030\003 \001(\t\022\022\n\norder_desc\030\004 \001(\010\"D\n\021List" +
-      "UsersResponse\022\037\n\005users\030\001 \003(\0132\020.toit.mode" +
-      "l.User\022\016\n\006offset\030\002 \001(\014\"\"\n\021CreateUserRequ" +
-      "est\022\r\n\005email\030\001 \001(\t\"4\n\022CreateUserResponse" +
-      "\022\036\n\004user\030\001 \001(\0132\020.toit.model.User\"\"\n\021Dele" +
-      "teUserRequest\022\r\n\005email\030\001 \001(\t\"\024\n\022DeleteUs" +
-      "erResponse\"+\n\016GetUserRequest\022\n\n\002id\030\001 \001(\014" +
-      "\022\r\n\005email\030\002 \001(\t\"1\n\017GetUserResponse\022\036\n\004us" +
-      "er\030\001 \001(\0132\020.toit.model.User\"#\n\023CreateAPIK" +
-      "eyRequest\022\014\n\004name\030\001 \001(\t\";\n\024CreateAPIKeyR" +
-      "esponse\022#\n\007api_key\030\001 \001(\0132\022.toit.model.AP" +
-      "IKey\"Y\n\022ListAPIKeysRequest\022\016\n\006offset\030\001 \001" +
-      "(\014\022\r\n\005limit\030\002 \001(\003\022\020\n\010order_by\030\003 \001(\t\022\022\n\no" +
-      "rder_desc\030\004 \001(\010\"J\n\023ListAPIKeysResponse\022#" +
-      "\n\007api_key\030\001 \001(\0132\022.toit.model.APIKey\022\016\n\006o" +
-      "ffset\030\002 \001(\014\"!\n\023DeleteAPIKeyRequest\022\n\n\002id" +
-      "\030\001 \001(\014\"\026\n\024DeleteAPIKeyResponse\"$\n\026GetAPI" +
-      "KeySecretRequest\022\n\n\002id\030\001 \001(\014\")\n\027GetAPIKe" +
-      "ySecretResponse\022\016\n\006secret\030\001 \001(\t\"\220\001\n\022Orga" +
-      "nizationChange\022\016\n\004city\030\001 \001(\tH\000\022\021\n\007countr" +
-      "y\030\002 \001(\tH\000\022\026\n\014phone_number\030\003 \001(\tH\000\022\024\n\ncvr" +
-      "_number\030\004 \001(\tH\000\022\016\n\004name\030\005 \001(\tH\000\022\017\n\005email" +
-      "\030\006 \001(\tH\000B\010\n\006change\"J\n\031UpdateOrganization" +
-      "Request\022-\n\007changes\030\001 \003(\0132\034.toit.api.Orga" +
-      "nizationChange\"\034\n\032UpdateOrganizationResp" +
-      "onse2\344\005\n\023OrganizationService\022@\n\007GetUser\022" +
-      "\030.toit.api.GetUserRequest\032\031.toit.api.Get" +
-      "UserResponse\"\000\022F\n\tListUsers\022\032.toit.api.L" +
-      "istUsersRequest\032\033.toit.api.ListUsersResp" +
-      "onse\"\000\022I\n\nCreateUser\022\033.toit.api.CreateUs" +
-      "erRequest\032\034.toit.api.CreateUserResponse\"" +
-      "\000\022I\n\nDeleteUser\022\033.toit.api.DeleteUserReq" +
-      "uest\032\034.toit.api.DeleteUserResponse\"\000\022O\n\014" +
-      "CreateAPIKey\022\035.toit.api.CreateAPIKeyRequ" +
-      "est\032\036.toit.api.CreateAPIKeyResponse\"\000\022N\n" +
-      "\013ListAPIKeys\022\034.toit.api.ListAPIKeysReque" +
-      "st\032\035.toit.api.ListAPIKeysResponse\"\0000\001\022O\n" +
-      "\014DeleteAPIKey\022\035.toit.api.DeleteAPIKeyReq" +
-      "uest\032\036.toit.api.DeleteAPIKeyResponse\"\000\022X" +
-      "\n\017GetAPIKeySecret\022 .toit.api.GetAPIKeySe" +
-      "cretRequest\032!.toit.api.GetAPIKeySecretRe" +
-      "sponse\"\000\022a\n\022UpdateOrganization\022#.toit.ap" +
-      "i.UpdateOrganizationRequest\032$.toit.api.U" +
-      "pdateOrganizationResponse\"\000BH\n\026io.toit.p" +
-      "roto.toit.apiB\010OrgProtoZ$github.com/toit" +
-      "ware/api.git/toit/apib\006proto3"
+      "der_by\030\003 \001(\t\022\022\n\norder_desc\030\004 \001(\010\"J\n\023List" +
+      "APIKeysResponse\022#\n\007api_key\030\001 \001(\0132\022.toit." +
+      "model.APIKey\022\016\n\006offset\030\002 \001(\014\"!\n\023DeleteAP" +
+      "IKeyRequest\022\n\n\002id\030\001 \001(\014\"\026\n\024DeleteAPIKeyR" +
+      "esponse\"$\n\026GetAPIKeySecretRequest\022\n\n\002id\030" +
+      "\001 \001(\014\")\n\027GetAPIKeySecretResponse\022\016\n\006secr" +
+      "et\030\001 \001(\t\"\220\001\n\022OrganizationChange\022\016\n\004city\030" +
+      "\001 \001(\tH\000\022\021\n\007country\030\002 \001(\tH\000\022\026\n\014phone_numb" +
+      "er\030\003 \001(\tH\000\022\024\n\ncvr_number\030\004 \001(\tH\000\022\016\n\004name" +
+      "\030\005 \001(\tH\000\022\017\n\005email\030\006 \001(\tH\000B\010\n\006change\"J\n\031U" +
+      "pdateOrganizationRequest\022-\n\007changes\030\001 \003(" +
+      "\0132\034.toit.api.OrganizationChange\"\034\n\032Updat" +
+      "eOrganizationResponse2\302\007\n\023OrganizationSe" +
+      "rvice\022@\n\007GetUser\022\030.toit.api.GetUserReque" +
+      "st\032\031.toit.api.GetUserResponse\"\000\022F\n\tListU" +
+      "sers\022\032.toit.api.ListUsersRequest\032\033.toit." +
+      "api.ListUsersResponse\"\000\022I\n\nCreateUser\022\033." +
+      "toit.api.CreateUserRequest\032\034.toit.api.Cr" +
+      "eateUserResponse\"\000\022I\n\nDeleteUser\022\033.toit." +
+      "api.DeleteUserRequest\032\034.toit.api.DeleteU" +
+      "serResponse\"\000\022O\n\014CreateAPIKey\022\035.toit.api" +
+      ".CreateAPIKeyRequest\032\036.toit.api.CreateAP" +
+      "IKeyResponse\"\000\022N\n\013ListAPIKeys\022\034.toit.api" +
+      ".ListAPIKeysRequest\032\035.toit.api.ListAPIKe" +
+      "ysResponse\"\0000\001\022O\n\014DeleteAPIKey\022\035.toit.ap" +
+      "i.DeleteAPIKeyRequest\032\036.toit.api.DeleteA" +
+      "PIKeyResponse\"\000\022X\n\017GetAPIKeySecret\022 .toi" +
+      "t.api.GetAPIKeySecretRequest\032!.toit.api." +
+      "GetAPIKeySecretResponse\"\000\022a\n\022UpdateOrgan" +
+      "ization\022#.toit.api.UpdateOrganizationReq" +
+      "uest\032$.toit.api.UpdateOrganizationRespon" +
+      "se\"\000\022j\n\025ClaimHardwareIdentity\022&.toit.api" +
+      ".ClaimHardwareIdentityRequest\032\'.toit.api" +
+      ".ClaimHardwareIdentityResponse\"\000\022p\n\027SetH" +
+      "ardwareIdentityInfo\022(.toit.api.SetHardwa" +
+      "reIdentityInfoRequest\032).toit.api.SetHard" +
+      "wareIdentityInfoResponse\"\000BH\n\026io.toit.pr" +
+      "oto.toit.apiB\010OrgProtoZ$github.com/toitw" +
+      "are/api.git/toit/apib\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          io.toit.proto.toit.model.DeviceProto.getDescriptor(),
           io.toit.proto.toit.model.OrganizationProto.getDescriptor(),
-          com.google.protobuf.TimestampProto.getDescriptor(),
+          io.toit.proto.toit.api.HardwareProto.getDescriptor(),
         });
     internal_static_toit_api_ListUsersRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -12708,8 +12715,9 @@ public final class OrgProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_UpdateOrganizationResponse_descriptor,
         new java.lang.String[] { });
+    io.toit.proto.toit.model.DeviceProto.getDescriptor();
     io.toit.proto.toit.model.OrganizationProto.getDescriptor();
-    com.google.protobuf.TimestampProto.getDescriptor();
+    io.toit.proto.toit.api.HardwareProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

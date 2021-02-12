@@ -415,10 +415,10 @@ export class SetHardwareIdentityInfoRequest extends jspb.Message {
   getFlashStationSecret(): string;
   setFlashStationSecret(value: string): void;
 
-  getId(): Uint8Array | string;
-  getId_asU8(): Uint8Array;
-  getId_asB64(): string;
-  setId(value: Uint8Array | string): void;
+  getHardwareId(): Uint8Array | string;
+  getHardwareId_asU8(): Uint8Array;
+  getHardwareId_asB64(): string;
+  setHardwareId(value: Uint8Array | string): void;
 
   hasInfo(): boolean;
   clearInfo(): void;
@@ -438,7 +438,7 @@ export class SetHardwareIdentityInfoRequest extends jspb.Message {
 export namespace SetHardwareIdentityInfoRequest {
   export type AsObject = {
     flashStationSecret: string,
-    id: Uint8Array | string,
+    hardwareId: Uint8Array | string,
     info?: toit_model_device_pb.HardwareIdentityInfo.AsObject,
   }
 }
