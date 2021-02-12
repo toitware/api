@@ -369,56 +369,56 @@ export namespace HardwareEventsResponse {
   }
 }
 
-export class HardwareClaimIdentityRequest extends jspb.Message {
+export class ClaimHardwareIdentityRequest extends jspb.Message {
   getFlashStationSecret(): string;
   setFlashStationSecret(value: string): void;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): HardwareClaimIdentityRequest.AsObject;
-  static toObject(includeInstance: boolean, msg: HardwareClaimIdentityRequest): HardwareClaimIdentityRequest.AsObject;
+  toObject(includeInstance?: boolean): ClaimHardwareIdentityRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: ClaimHardwareIdentityRequest): ClaimHardwareIdentityRequest.AsObject;
   static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
   static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: HardwareClaimIdentityRequest, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): HardwareClaimIdentityRequest;
-  static deserializeBinaryFromReader(message: HardwareClaimIdentityRequest, reader: jspb.BinaryReader): HardwareClaimIdentityRequest;
+  static serializeBinaryToWriter(message: ClaimHardwareIdentityRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): ClaimHardwareIdentityRequest;
+  static deserializeBinaryFromReader(message: ClaimHardwareIdentityRequest, reader: jspb.BinaryReader): ClaimHardwareIdentityRequest;
 }
 
-export namespace HardwareClaimIdentityRequest {
+export namespace ClaimHardwareIdentityRequest {
   export type AsObject = {
     flashStationSecret: string,
   }
 }
 
-export class HardwareClaimIdentityResponse extends jspb.Message {
+export class ClaimHardwareIdentityResponse extends jspb.Message {
   hasHardwareIdentity(): boolean;
   clearHardwareIdentity(): void;
   getHardwareIdentity(): toit_model_device_pb.HardwareIdentity | undefined;
   setHardwareIdentity(value?: toit_model_device_pb.HardwareIdentity): void;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): HardwareClaimIdentityResponse.AsObject;
-  static toObject(includeInstance: boolean, msg: HardwareClaimIdentityResponse): HardwareClaimIdentityResponse.AsObject;
+  toObject(includeInstance?: boolean): ClaimHardwareIdentityResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: ClaimHardwareIdentityResponse): ClaimHardwareIdentityResponse.AsObject;
   static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
   static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: HardwareClaimIdentityResponse, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): HardwareClaimIdentityResponse;
-  static deserializeBinaryFromReader(message: HardwareClaimIdentityResponse, reader: jspb.BinaryReader): HardwareClaimIdentityResponse;
+  static serializeBinaryToWriter(message: ClaimHardwareIdentityResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): ClaimHardwareIdentityResponse;
+  static deserializeBinaryFromReader(message: ClaimHardwareIdentityResponse, reader: jspb.BinaryReader): ClaimHardwareIdentityResponse;
 }
 
-export namespace HardwareClaimIdentityResponse {
+export namespace ClaimHardwareIdentityResponse {
   export type AsObject = {
     hardwareIdentity?: toit_model_device_pb.HardwareIdentity.AsObject,
   }
 }
 
-export class HardwareSetIdentityInfoRequest extends jspb.Message {
+export class SetHardwareIdentityInfoRequest extends jspb.Message {
   getFlashStationSecret(): string;
   setFlashStationSecret(value: string): void;
 
-  getId(): Uint8Array | string;
-  getId_asU8(): Uint8Array;
-  getId_asB64(): string;
-  setId(value: Uint8Array | string): void;
+  getHardwareId(): Uint8Array | string;
+  getHardwareId_asU8(): Uint8Array;
+  getHardwareId_asB64(): string;
+  setHardwareId(value: Uint8Array | string): void;
 
   hasInfo(): boolean;
   clearInfo(): void;
@@ -426,35 +426,35 @@ export class HardwareSetIdentityInfoRequest extends jspb.Message {
   setInfo(value?: toit_model_device_pb.HardwareIdentityInfo): void;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): HardwareSetIdentityInfoRequest.AsObject;
-  static toObject(includeInstance: boolean, msg: HardwareSetIdentityInfoRequest): HardwareSetIdentityInfoRequest.AsObject;
+  toObject(includeInstance?: boolean): SetHardwareIdentityInfoRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: SetHardwareIdentityInfoRequest): SetHardwareIdentityInfoRequest.AsObject;
   static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
   static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: HardwareSetIdentityInfoRequest, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): HardwareSetIdentityInfoRequest;
-  static deserializeBinaryFromReader(message: HardwareSetIdentityInfoRequest, reader: jspb.BinaryReader): HardwareSetIdentityInfoRequest;
+  static serializeBinaryToWriter(message: SetHardwareIdentityInfoRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): SetHardwareIdentityInfoRequest;
+  static deserializeBinaryFromReader(message: SetHardwareIdentityInfoRequest, reader: jspb.BinaryReader): SetHardwareIdentityInfoRequest;
 }
 
-export namespace HardwareSetIdentityInfoRequest {
+export namespace SetHardwareIdentityInfoRequest {
   export type AsObject = {
     flashStationSecret: string,
-    id: Uint8Array | string,
+    hardwareId: Uint8Array | string,
     info?: toit_model_device_pb.HardwareIdentityInfo.AsObject,
   }
 }
 
-export class HardwareSetIdentityInfoResponse extends jspb.Message {
+export class SetHardwareIdentityInfoResponse extends jspb.Message {
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): HardwareSetIdentityInfoResponse.AsObject;
-  static toObject(includeInstance: boolean, msg: HardwareSetIdentityInfoResponse): HardwareSetIdentityInfoResponse.AsObject;
+  toObject(includeInstance?: boolean): SetHardwareIdentityInfoResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: SetHardwareIdentityInfoResponse): SetHardwareIdentityInfoResponse.AsObject;
   static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
   static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: HardwareSetIdentityInfoResponse, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): HardwareSetIdentityInfoResponse;
-  static deserializeBinaryFromReader(message: HardwareSetIdentityInfoResponse, reader: jspb.BinaryReader): HardwareSetIdentityInfoResponse;
+  static serializeBinaryToWriter(message: SetHardwareIdentityInfoResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): SetHardwareIdentityInfoResponse;
+  static deserializeBinaryFromReader(message: SetHardwareIdentityInfoResponse, reader: jspb.BinaryReader): SetHardwareIdentityInfoResponse;
 }
 
-export namespace HardwareSetIdentityInfoResponse {
+export namespace SetHardwareIdentityInfoResponse {
   export type AsObject = {
   }
 }

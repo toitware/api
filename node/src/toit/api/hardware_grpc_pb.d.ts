@@ -31,18 +31,18 @@ export class HardwareServiceClient extends grpc.Client {
 }
 
 interface IFlashStationService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
-  hardwareClaimIdentity: grpc.MethodDefinition<toit_api_hardware_pb.HardwareClaimIdentityRequest, toit_api_hardware_pb.HardwareClaimIdentityResponse>;
-  hardwareSetIdentityInfo: grpc.MethodDefinition<toit_api_hardware_pb.HardwareSetIdentityInfoRequest, toit_api_hardware_pb.HardwareSetIdentityInfoResponse>;
+  claimHardwareIdentity: grpc.MethodDefinition<toit_api_hardware_pb.ClaimHardwareIdentityRequest, toit_api_hardware_pb.ClaimHardwareIdentityResponse>;
+  setHardwareIdentityInfo: grpc.MethodDefinition<toit_api_hardware_pb.SetHardwareIdentityInfoRequest, toit_api_hardware_pb.SetHardwareIdentityInfoResponse>;
 }
 
 export const FlashStationService: IFlashStationService;
 
 export class FlashStationClient extends grpc.Client {
   constructor(address: string, credentials: grpc.ChannelCredentials, options?: object);
-  hardwareClaimIdentity(argument: toit_api_hardware_pb.HardwareClaimIdentityRequest, callback: grpc.requestCallback<toit_api_hardware_pb.HardwareClaimIdentityResponse>): grpc.ClientUnaryCall;
-  hardwareClaimIdentity(argument: toit_api_hardware_pb.HardwareClaimIdentityRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_hardware_pb.HardwareClaimIdentityResponse>): grpc.ClientUnaryCall;
-  hardwareClaimIdentity(argument: toit_api_hardware_pb.HardwareClaimIdentityRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_hardware_pb.HardwareClaimIdentityResponse>): grpc.ClientUnaryCall;
-  hardwareSetIdentityInfo(argument: toit_api_hardware_pb.HardwareSetIdentityInfoRequest, callback: grpc.requestCallback<toit_api_hardware_pb.HardwareSetIdentityInfoResponse>): grpc.ClientUnaryCall;
-  hardwareSetIdentityInfo(argument: toit_api_hardware_pb.HardwareSetIdentityInfoRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_hardware_pb.HardwareSetIdentityInfoResponse>): grpc.ClientUnaryCall;
-  hardwareSetIdentityInfo(argument: toit_api_hardware_pb.HardwareSetIdentityInfoRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_hardware_pb.HardwareSetIdentityInfoResponse>): grpc.ClientUnaryCall;
+  claimHardwareIdentity(argument: toit_api_hardware_pb.ClaimHardwareIdentityRequest, callback: grpc.requestCallback<toit_api_hardware_pb.ClaimHardwareIdentityResponse>): grpc.ClientUnaryCall;
+  claimHardwareIdentity(argument: toit_api_hardware_pb.ClaimHardwareIdentityRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_hardware_pb.ClaimHardwareIdentityResponse>): grpc.ClientUnaryCall;
+  claimHardwareIdentity(argument: toit_api_hardware_pb.ClaimHardwareIdentityRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_hardware_pb.ClaimHardwareIdentityResponse>): grpc.ClientUnaryCall;
+  setHardwareIdentityInfo(argument: toit_api_hardware_pb.SetHardwareIdentityInfoRequest, callback: grpc.requestCallback<toit_api_hardware_pb.SetHardwareIdentityInfoResponse>): grpc.ClientUnaryCall;
+  setHardwareIdentityInfo(argument: toit_api_hardware_pb.SetHardwareIdentityInfoRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_hardware_pb.SetHardwareIdentityInfoResponse>): grpc.ClientUnaryCall;
+  setHardwareIdentityInfo(argument: toit_api_hardware_pb.SetHardwareIdentityInfoRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_hardware_pb.SetHardwareIdentityInfoResponse>): grpc.ClientUnaryCall;
 }
