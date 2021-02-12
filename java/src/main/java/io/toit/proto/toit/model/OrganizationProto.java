@@ -97,11 +97,19 @@ public final class OrganizationProto {
         getPhoneNumberBytes();
 
     /**
+     * <pre>
+     * Not used
+     * </pre>
+     *
      * <code>string cvr_number = 8;</code>
      * @return The cvrNumber.
      */
     java.lang.String getCvrNumber();
     /**
+     * <pre>
+     * Not used
+     * </pre>
+     *
      * <code>string cvr_number = 8;</code>
      * @return The bytes for cvrNumber.
      */
@@ -133,6 +141,65 @@ public final class OrganizationProto {
      * <code>.toit.model.PaymentDetails payment_details = 10;</code>
      */
     io.toit.proto.toit.model.OrganizationProto.PaymentDetailsOrBuilder getPaymentDetailsOrBuilder();
+
+    /**
+     * <code>string address_line = 11;</code>
+     * @return The addressLine.
+     */
+    java.lang.String getAddressLine();
+    /**
+     * <code>string address_line = 11;</code>
+     * @return The bytes for addressLine.
+     */
+    com.google.protobuf.ByteString
+        getAddressLineBytes();
+
+    /**
+     * <code>string postal_code = 12;</code>
+     * @return The postalCode.
+     */
+    java.lang.String getPostalCode();
+    /**
+     * <code>string postal_code = 12;</code>
+     * @return The bytes for postalCode.
+     */
+    com.google.protobuf.ByteString
+        getPostalCodeBytes();
+
+    /**
+     * <code>string vat_number = 13;</code>
+     * @return The vatNumber.
+     */
+    java.lang.String getVatNumber();
+    /**
+     * <code>string vat_number = 13;</code>
+     * @return The bytes for vatNumber.
+     */
+    com.google.protobuf.ByteString
+        getVatNumberBytes();
+
+    /**
+     * <code>string vat_country_code = 14;</code>
+     * @return The vatCountryCode.
+     */
+    java.lang.String getVatCountryCode();
+    /**
+     * <code>string vat_country_code = 14;</code>
+     * @return The bytes for vatCountryCode.
+     */
+    com.google.protobuf.ByteString
+        getVatCountryCodeBytes();
+
+    /**
+     * <code>.toit.model.Customer.Type customer = 15;</code>
+     * @return The enum numeric value on the wire for customer.
+     */
+    int getCustomerValue();
+    /**
+     * <code>.toit.model.Customer.Type customer = 15;</code>
+     * @return The customer.
+     */
+    io.toit.proto.toit.model.OrganizationProto.Customer.Type getCustomer();
   }
   /**
    * Protobuf type {@code toit.model.Organization}
@@ -156,6 +223,11 @@ public final class OrganizationProto {
       phoneNumber_ = "";
       cvrNumber_ = "";
       tier_ = 0;
+      addressLine_ = "";
+      postalCode_ = "";
+      vatNumber_ = "";
+      vatCountryCode_ = "";
+      customer_ = 0;
     }
 
     @java.lang.Override
@@ -252,6 +324,36 @@ public final class OrganizationProto {
                 paymentDetails_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              addressLine_ = s;
+              break;
+            }
+            case 98: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              postalCode_ = s;
+              break;
+            }
+            case 106: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              vatNumber_ = s;
+              break;
+            }
+            case 114: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              vatCountryCode_ = s;
+              break;
+            }
+            case 120: {
+              int rawValue = input.readEnum();
+
+              customer_ = rawValue;
               break;
             }
             default: {
@@ -515,6 +617,10 @@ public final class OrganizationProto {
     public static final int CVR_NUMBER_FIELD_NUMBER = 8;
     private volatile java.lang.Object cvrNumber_;
     /**
+     * <pre>
+     * Not used
+     * </pre>
+     *
      * <code>string cvr_number = 8;</code>
      * @return The cvrNumber.
      */
@@ -531,6 +637,10 @@ public final class OrganizationProto {
       }
     }
     /**
+     * <pre>
+     * Not used
+     * </pre>
+     *
      * <code>string cvr_number = 8;</code>
      * @return The bytes for cvrNumber.
      */
@@ -590,6 +700,169 @@ public final class OrganizationProto {
       return getPaymentDetails();
     }
 
+    public static final int ADDRESS_LINE_FIELD_NUMBER = 11;
+    private volatile java.lang.Object addressLine_;
+    /**
+     * <code>string address_line = 11;</code>
+     * @return The addressLine.
+     */
+    public java.lang.String getAddressLine() {
+      java.lang.Object ref = addressLine_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        addressLine_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address_line = 11;</code>
+     * @return The bytes for addressLine.
+     */
+    public com.google.protobuf.ByteString
+        getAddressLineBytes() {
+      java.lang.Object ref = addressLine_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        addressLine_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int POSTAL_CODE_FIELD_NUMBER = 12;
+    private volatile java.lang.Object postalCode_;
+    /**
+     * <code>string postal_code = 12;</code>
+     * @return The postalCode.
+     */
+    public java.lang.String getPostalCode() {
+      java.lang.Object ref = postalCode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        postalCode_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string postal_code = 12;</code>
+     * @return The bytes for postalCode.
+     */
+    public com.google.protobuf.ByteString
+        getPostalCodeBytes() {
+      java.lang.Object ref = postalCode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        postalCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VAT_NUMBER_FIELD_NUMBER = 13;
+    private volatile java.lang.Object vatNumber_;
+    /**
+     * <code>string vat_number = 13;</code>
+     * @return The vatNumber.
+     */
+    public java.lang.String getVatNumber() {
+      java.lang.Object ref = vatNumber_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        vatNumber_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string vat_number = 13;</code>
+     * @return The bytes for vatNumber.
+     */
+    public com.google.protobuf.ByteString
+        getVatNumberBytes() {
+      java.lang.Object ref = vatNumber_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        vatNumber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VAT_COUNTRY_CODE_FIELD_NUMBER = 14;
+    private volatile java.lang.Object vatCountryCode_;
+    /**
+     * <code>string vat_country_code = 14;</code>
+     * @return The vatCountryCode.
+     */
+    public java.lang.String getVatCountryCode() {
+      java.lang.Object ref = vatCountryCode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        vatCountryCode_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string vat_country_code = 14;</code>
+     * @return The bytes for vatCountryCode.
+     */
+    public com.google.protobuf.ByteString
+        getVatCountryCodeBytes() {
+      java.lang.Object ref = vatCountryCode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        vatCountryCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CUSTOMER_FIELD_NUMBER = 15;
+    private int customer_;
+    /**
+     * <code>.toit.model.Customer.Type customer = 15;</code>
+     * @return The enum numeric value on the wire for customer.
+     */
+    public int getCustomerValue() {
+      return customer_;
+    }
+    /**
+     * <code>.toit.model.Customer.Type customer = 15;</code>
+     * @return The customer.
+     */
+    public io.toit.proto.toit.model.OrganizationProto.Customer.Type getCustomer() {
+      @SuppressWarnings("deprecation")
+      io.toit.proto.toit.model.OrganizationProto.Customer.Type result = io.toit.proto.toit.model.OrganizationProto.Customer.Type.valueOf(customer_);
+      return result == null ? io.toit.proto.toit.model.OrganizationProto.Customer.Type.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -634,6 +907,21 @@ public final class OrganizationProto {
       if (paymentDetails_ != null) {
         output.writeMessage(10, getPaymentDetails());
       }
+      if (!getAddressLineBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, addressLine_);
+      }
+      if (!getPostalCodeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, postalCode_);
+      }
+      if (!getVatNumberBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, vatNumber_);
+      }
+      if (!getVatCountryCodeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, vatCountryCode_);
+      }
+      if (customer_ != io.toit.proto.toit.model.OrganizationProto.Customer.Type.UNKNOWN.getNumber()) {
+        output.writeEnum(15, customer_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -676,6 +964,22 @@ public final class OrganizationProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getPaymentDetails());
       }
+      if (!getAddressLineBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, addressLine_);
+      }
+      if (!getPostalCodeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, postalCode_);
+      }
+      if (!getVatNumberBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, vatNumber_);
+      }
+      if (!getVatCountryCodeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, vatCountryCode_);
+      }
+      if (customer_ != io.toit.proto.toit.model.OrganizationProto.Customer.Type.UNKNOWN.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(15, customer_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -713,6 +1017,15 @@ public final class OrganizationProto {
         if (!getPaymentDetails()
             .equals(other.getPaymentDetails())) return false;
       }
+      if (!getAddressLine()
+          .equals(other.getAddressLine())) return false;
+      if (!getPostalCode()
+          .equals(other.getPostalCode())) return false;
+      if (!getVatNumber()
+          .equals(other.getVatNumber())) return false;
+      if (!getVatCountryCode()
+          .equals(other.getVatCountryCode())) return false;
+      if (customer_ != other.customer_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -746,6 +1059,16 @@ public final class OrganizationProto {
         hash = (37 * hash) + PAYMENT_DETAILS_FIELD_NUMBER;
         hash = (53 * hash) + getPaymentDetails().hashCode();
       }
+      hash = (37 * hash) + ADDRESS_LINE_FIELD_NUMBER;
+      hash = (53 * hash) + getAddressLine().hashCode();
+      hash = (37 * hash) + POSTAL_CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getPostalCode().hashCode();
+      hash = (37 * hash) + VAT_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getVatNumber().hashCode();
+      hash = (37 * hash) + VAT_COUNTRY_CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getVatCountryCode().hashCode();
+      hash = (37 * hash) + CUSTOMER_FIELD_NUMBER;
+      hash = (53 * hash) + customer_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -903,6 +1226,16 @@ public final class OrganizationProto {
           paymentDetails_ = null;
           paymentDetailsBuilder_ = null;
         }
+        addressLine_ = "";
+
+        postalCode_ = "";
+
+        vatNumber_ = "";
+
+        vatCountryCode_ = "";
+
+        customer_ = 0;
+
         return this;
       }
 
@@ -943,6 +1276,11 @@ public final class OrganizationProto {
         } else {
           result.paymentDetails_ = paymentDetailsBuilder_.build();
         }
+        result.addressLine_ = addressLine_;
+        result.postalCode_ = postalCode_;
+        result.vatNumber_ = vatNumber_;
+        result.vatCountryCode_ = vatCountryCode_;
+        result.customer_ = customer_;
         onBuilt();
         return result;
       }
@@ -1027,6 +1365,25 @@ public final class OrganizationProto {
         }
         if (other.hasPaymentDetails()) {
           mergePaymentDetails(other.getPaymentDetails());
+        }
+        if (!other.getAddressLine().isEmpty()) {
+          addressLine_ = other.addressLine_;
+          onChanged();
+        }
+        if (!other.getPostalCode().isEmpty()) {
+          postalCode_ = other.postalCode_;
+          onChanged();
+        }
+        if (!other.getVatNumber().isEmpty()) {
+          vatNumber_ = other.vatNumber_;
+          onChanged();
+        }
+        if (!other.getVatCountryCode().isEmpty()) {
+          vatCountryCode_ = other.vatCountryCode_;
+          onChanged();
+        }
+        if (other.customer_ != 0) {
+          setCustomerValue(other.getCustomerValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1548,6 +1905,10 @@ public final class OrganizationProto {
 
       private java.lang.Object cvrNumber_ = "";
       /**
+       * <pre>
+       * Not used
+       * </pre>
+       *
        * <code>string cvr_number = 8;</code>
        * @return The cvrNumber.
        */
@@ -1564,6 +1925,10 @@ public final class OrganizationProto {
         }
       }
       /**
+       * <pre>
+       * Not used
+       * </pre>
+       *
        * <code>string cvr_number = 8;</code>
        * @return The bytes for cvrNumber.
        */
@@ -1581,6 +1946,10 @@ public final class OrganizationProto {
         }
       }
       /**
+       * <pre>
+       * Not used
+       * </pre>
+       *
        * <code>string cvr_number = 8;</code>
        * @param value The cvrNumber to set.
        * @return This builder for chaining.
@@ -1596,6 +1965,10 @@ public final class OrganizationProto {
         return this;
       }
       /**
+       * <pre>
+       * Not used
+       * </pre>
+       *
        * <code>string cvr_number = 8;</code>
        * @return This builder for chaining.
        */
@@ -1606,6 +1979,10 @@ public final class OrganizationProto {
         return this;
       }
       /**
+       * <pre>
+       * Not used
+       * </pre>
+       *
        * <code>string cvr_number = 8;</code>
        * @param value The bytes for cvrNumber to set.
        * @return This builder for chaining.
@@ -1792,6 +2169,362 @@ public final class OrganizationProto {
         }
         return paymentDetailsBuilder_;
       }
+
+      private java.lang.Object addressLine_ = "";
+      /**
+       * <code>string address_line = 11;</code>
+       * @return The addressLine.
+       */
+      public java.lang.String getAddressLine() {
+        java.lang.Object ref = addressLine_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          addressLine_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address_line = 11;</code>
+       * @return The bytes for addressLine.
+       */
+      public com.google.protobuf.ByteString
+          getAddressLineBytes() {
+        java.lang.Object ref = addressLine_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          addressLine_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address_line = 11;</code>
+       * @param value The addressLine to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressLine(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        addressLine_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address_line = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddressLine() {
+        
+        addressLine_ = getDefaultInstance().getAddressLine();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address_line = 11;</code>
+       * @param value The bytes for addressLine to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressLineBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        addressLine_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object postalCode_ = "";
+      /**
+       * <code>string postal_code = 12;</code>
+       * @return The postalCode.
+       */
+      public java.lang.String getPostalCode() {
+        java.lang.Object ref = postalCode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          postalCode_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string postal_code = 12;</code>
+       * @return The bytes for postalCode.
+       */
+      public com.google.protobuf.ByteString
+          getPostalCodeBytes() {
+        java.lang.Object ref = postalCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          postalCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string postal_code = 12;</code>
+       * @param value The postalCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPostalCode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        postalCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string postal_code = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPostalCode() {
+        
+        postalCode_ = getDefaultInstance().getPostalCode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string postal_code = 12;</code>
+       * @param value The bytes for postalCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPostalCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        postalCode_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object vatNumber_ = "";
+      /**
+       * <code>string vat_number = 13;</code>
+       * @return The vatNumber.
+       */
+      public java.lang.String getVatNumber() {
+        java.lang.Object ref = vatNumber_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          vatNumber_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string vat_number = 13;</code>
+       * @return The bytes for vatNumber.
+       */
+      public com.google.protobuf.ByteString
+          getVatNumberBytes() {
+        java.lang.Object ref = vatNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          vatNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string vat_number = 13;</code>
+       * @param value The vatNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVatNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        vatNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string vat_number = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVatNumber() {
+        
+        vatNumber_ = getDefaultInstance().getVatNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string vat_number = 13;</code>
+       * @param value The bytes for vatNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVatNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        vatNumber_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object vatCountryCode_ = "";
+      /**
+       * <code>string vat_country_code = 14;</code>
+       * @return The vatCountryCode.
+       */
+      public java.lang.String getVatCountryCode() {
+        java.lang.Object ref = vatCountryCode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          vatCountryCode_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string vat_country_code = 14;</code>
+       * @return The bytes for vatCountryCode.
+       */
+      public com.google.protobuf.ByteString
+          getVatCountryCodeBytes() {
+        java.lang.Object ref = vatCountryCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          vatCountryCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string vat_country_code = 14;</code>
+       * @param value The vatCountryCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVatCountryCode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        vatCountryCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string vat_country_code = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVatCountryCode() {
+        
+        vatCountryCode_ = getDefaultInstance().getVatCountryCode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string vat_country_code = 14;</code>
+       * @param value The bytes for vatCountryCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVatCountryCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        vatCountryCode_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int customer_ = 0;
+      /**
+       * <code>.toit.model.Customer.Type customer = 15;</code>
+       * @return The enum numeric value on the wire for customer.
+       */
+      public int getCustomerValue() {
+        return customer_;
+      }
+      /**
+       * <code>.toit.model.Customer.Type customer = 15;</code>
+       * @param value The enum numeric value on the wire for customer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCustomerValue(int value) {
+        customer_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.toit.model.Customer.Type customer = 15;</code>
+       * @return The customer.
+       */
+      public io.toit.proto.toit.model.OrganizationProto.Customer.Type getCustomer() {
+        @SuppressWarnings("deprecation")
+        io.toit.proto.toit.model.OrganizationProto.Customer.Type result = io.toit.proto.toit.model.OrganizationProto.Customer.Type.valueOf(customer_);
+        return result == null ? io.toit.proto.toit.model.OrganizationProto.Customer.Type.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.toit.model.Customer.Type customer = 15;</code>
+       * @param value The customer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCustomer(io.toit.proto.toit.model.OrganizationProto.Customer.Type value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        customer_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.toit.model.Customer.Type customer = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCustomer() {
+        
+        customer_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1862,16 +2595,84 @@ public final class OrganizationProto {
         getLast4Bytes();
 
     /**
+     * <pre>
+     * Not used
+     * </pre>
+     *
      * <code>string expiry = 2;</code>
      * @return The expiry.
      */
     java.lang.String getExpiry();
     /**
+     * <pre>
+     * Not used
+     * </pre>
+     *
      * <code>string expiry = 2;</code>
      * @return The bytes for expiry.
      */
     com.google.protobuf.ByteString
         getExpiryBytes();
+
+    /**
+     * <code>string expiry_month = 3;</code>
+     * @return The expiryMonth.
+     */
+    java.lang.String getExpiryMonth();
+    /**
+     * <code>string expiry_month = 3;</code>
+     * @return The bytes for expiryMonth.
+     */
+    com.google.protobuf.ByteString
+        getExpiryMonthBytes();
+
+    /**
+     * <code>string expiry_year = 4;</code>
+     * @return The expiryYear.
+     */
+    java.lang.String getExpiryYear();
+    /**
+     * <code>string expiry_year = 4;</code>
+     * @return The bytes for expiryYear.
+     */
+    com.google.protobuf.ByteString
+        getExpiryYearBytes();
+
+    /**
+     * <code>string brand = 5;</code>
+     * @return The brand.
+     */
+    java.lang.String getBrand();
+    /**
+     * <code>string brand = 5;</code>
+     * @return The bytes for brand.
+     */
+    com.google.protobuf.ByteString
+        getBrandBytes();
+
+    /**
+     * <code>string country_code = 6;</code>
+     * @return The countryCode.
+     */
+    java.lang.String getCountryCode();
+    /**
+     * <code>string country_code = 6;</code>
+     * @return The bytes for countryCode.
+     */
+    com.google.protobuf.ByteString
+        getCountryCodeBytes();
+
+    /**
+     * <code>string cvc_check = 7;</code>
+     * @return The cvcCheck.
+     */
+    java.lang.String getCvcCheck();
+    /**
+     * <code>string cvc_check = 7;</code>
+     * @return The bytes for cvcCheck.
+     */
+    com.google.protobuf.ByteString
+        getCvcCheckBytes();
   }
   /**
    * Protobuf type {@code toit.model.PaymentDetails}
@@ -1888,6 +2689,11 @@ public final class OrganizationProto {
     private PaymentDetails() {
       last4_ = "";
       expiry_ = "";
+      expiryMonth_ = "";
+      expiryYear_ = "";
+      brand_ = "";
+      countryCode_ = "";
+      cvcCheck_ = "";
     }
 
     @java.lang.Override
@@ -1930,6 +2736,36 @@ public final class OrganizationProto {
               java.lang.String s = input.readStringRequireUtf8();
 
               expiry_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              expiryMonth_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              expiryYear_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              brand_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              countryCode_ = s;
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              cvcCheck_ = s;
               break;
             }
             default: {
@@ -2003,6 +2839,10 @@ public final class OrganizationProto {
     public static final int EXPIRY_FIELD_NUMBER = 2;
     private volatile java.lang.Object expiry_;
     /**
+     * <pre>
+     * Not used
+     * </pre>
+     *
      * <code>string expiry = 2;</code>
      * @return The expiry.
      */
@@ -2019,6 +2859,10 @@ public final class OrganizationProto {
       }
     }
     /**
+     * <pre>
+     * Not used
+     * </pre>
+     *
      * <code>string expiry = 2;</code>
      * @return The bytes for expiry.
      */
@@ -2030,6 +2874,186 @@ public final class OrganizationProto {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         expiry_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EXPIRY_MONTH_FIELD_NUMBER = 3;
+    private volatile java.lang.Object expiryMonth_;
+    /**
+     * <code>string expiry_month = 3;</code>
+     * @return The expiryMonth.
+     */
+    public java.lang.String getExpiryMonth() {
+      java.lang.Object ref = expiryMonth_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        expiryMonth_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string expiry_month = 3;</code>
+     * @return The bytes for expiryMonth.
+     */
+    public com.google.protobuf.ByteString
+        getExpiryMonthBytes() {
+      java.lang.Object ref = expiryMonth_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        expiryMonth_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EXPIRY_YEAR_FIELD_NUMBER = 4;
+    private volatile java.lang.Object expiryYear_;
+    /**
+     * <code>string expiry_year = 4;</code>
+     * @return The expiryYear.
+     */
+    public java.lang.String getExpiryYear() {
+      java.lang.Object ref = expiryYear_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        expiryYear_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string expiry_year = 4;</code>
+     * @return The bytes for expiryYear.
+     */
+    public com.google.protobuf.ByteString
+        getExpiryYearBytes() {
+      java.lang.Object ref = expiryYear_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        expiryYear_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BRAND_FIELD_NUMBER = 5;
+    private volatile java.lang.Object brand_;
+    /**
+     * <code>string brand = 5;</code>
+     * @return The brand.
+     */
+    public java.lang.String getBrand() {
+      java.lang.Object ref = brand_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        brand_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string brand = 5;</code>
+     * @return The bytes for brand.
+     */
+    public com.google.protobuf.ByteString
+        getBrandBytes() {
+      java.lang.Object ref = brand_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        brand_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COUNTRY_CODE_FIELD_NUMBER = 6;
+    private volatile java.lang.Object countryCode_;
+    /**
+     * <code>string country_code = 6;</code>
+     * @return The countryCode.
+     */
+    public java.lang.String getCountryCode() {
+      java.lang.Object ref = countryCode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        countryCode_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string country_code = 6;</code>
+     * @return The bytes for countryCode.
+     */
+    public com.google.protobuf.ByteString
+        getCountryCodeBytes() {
+      java.lang.Object ref = countryCode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        countryCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CVC_CHECK_FIELD_NUMBER = 7;
+    private volatile java.lang.Object cvcCheck_;
+    /**
+     * <code>string cvc_check = 7;</code>
+     * @return The cvcCheck.
+     */
+    public java.lang.String getCvcCheck() {
+      java.lang.Object ref = cvcCheck_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cvcCheck_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string cvc_check = 7;</code>
+     * @return The bytes for cvcCheck.
+     */
+    public com.google.protobuf.ByteString
+        getCvcCheckBytes() {
+      java.lang.Object ref = cvcCheck_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cvcCheck_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -2056,6 +3080,21 @@ public final class OrganizationProto {
       if (!getExpiryBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, expiry_);
       }
+      if (!getExpiryMonthBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, expiryMonth_);
+      }
+      if (!getExpiryYearBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, expiryYear_);
+      }
+      if (!getBrandBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, brand_);
+      }
+      if (!getCountryCodeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, countryCode_);
+      }
+      if (!getCvcCheckBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, cvcCheck_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2070,6 +3109,21 @@ public final class OrganizationProto {
       }
       if (!getExpiryBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, expiry_);
+      }
+      if (!getExpiryMonthBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, expiryMonth_);
+      }
+      if (!getExpiryYearBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, expiryYear_);
+      }
+      if (!getBrandBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, brand_);
+      }
+      if (!getCountryCodeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, countryCode_);
+      }
+      if (!getCvcCheckBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, cvcCheck_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2090,6 +3144,16 @@ public final class OrganizationProto {
           .equals(other.getLast4())) return false;
       if (!getExpiry()
           .equals(other.getExpiry())) return false;
+      if (!getExpiryMonth()
+          .equals(other.getExpiryMonth())) return false;
+      if (!getExpiryYear()
+          .equals(other.getExpiryYear())) return false;
+      if (!getBrand()
+          .equals(other.getBrand())) return false;
+      if (!getCountryCode()
+          .equals(other.getCountryCode())) return false;
+      if (!getCvcCheck()
+          .equals(other.getCvcCheck())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2105,6 +3169,16 @@ public final class OrganizationProto {
       hash = (53 * hash) + getLast4().hashCode();
       hash = (37 * hash) + EXPIRY_FIELD_NUMBER;
       hash = (53 * hash) + getExpiry().hashCode();
+      hash = (37 * hash) + EXPIRY_MONTH_FIELD_NUMBER;
+      hash = (53 * hash) + getExpiryMonth().hashCode();
+      hash = (37 * hash) + EXPIRY_YEAR_FIELD_NUMBER;
+      hash = (53 * hash) + getExpiryYear().hashCode();
+      hash = (37 * hash) + BRAND_FIELD_NUMBER;
+      hash = (53 * hash) + getBrand().hashCode();
+      hash = (37 * hash) + COUNTRY_CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getCountryCode().hashCode();
+      hash = (37 * hash) + CVC_CHECK_FIELD_NUMBER;
+      hash = (53 * hash) + getCvcCheck().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2242,6 +3316,16 @@ public final class OrganizationProto {
 
         expiry_ = "";
 
+        expiryMonth_ = "";
+
+        expiryYear_ = "";
+
+        brand_ = "";
+
+        countryCode_ = "";
+
+        cvcCheck_ = "";
+
         return this;
       }
 
@@ -2270,6 +3354,11 @@ public final class OrganizationProto {
         io.toit.proto.toit.model.OrganizationProto.PaymentDetails result = new io.toit.proto.toit.model.OrganizationProto.PaymentDetails(this);
         result.last4_ = last4_;
         result.expiry_ = expiry_;
+        result.expiryMonth_ = expiryMonth_;
+        result.expiryYear_ = expiryYear_;
+        result.brand_ = brand_;
+        result.countryCode_ = countryCode_;
+        result.cvcCheck_ = cvcCheck_;
         onBuilt();
         return result;
       }
@@ -2324,6 +3413,26 @@ public final class OrganizationProto {
         }
         if (!other.getExpiry().isEmpty()) {
           expiry_ = other.expiry_;
+          onChanged();
+        }
+        if (!other.getExpiryMonth().isEmpty()) {
+          expiryMonth_ = other.expiryMonth_;
+          onChanged();
+        }
+        if (!other.getExpiryYear().isEmpty()) {
+          expiryYear_ = other.expiryYear_;
+          onChanged();
+        }
+        if (!other.getBrand().isEmpty()) {
+          brand_ = other.brand_;
+          onChanged();
+        }
+        if (!other.getCountryCode().isEmpty()) {
+          countryCode_ = other.countryCode_;
+          onChanged();
+        }
+        if (!other.getCvcCheck().isEmpty()) {
+          cvcCheck_ = other.cvcCheck_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -2433,6 +3542,10 @@ public final class OrganizationProto {
 
       private java.lang.Object expiry_ = "";
       /**
+       * <pre>
+       * Not used
+       * </pre>
+       *
        * <code>string expiry = 2;</code>
        * @return The expiry.
        */
@@ -2449,6 +3562,10 @@ public final class OrganizationProto {
         }
       }
       /**
+       * <pre>
+       * Not used
+       * </pre>
+       *
        * <code>string expiry = 2;</code>
        * @return The bytes for expiry.
        */
@@ -2466,6 +3583,10 @@ public final class OrganizationProto {
         }
       }
       /**
+       * <pre>
+       * Not used
+       * </pre>
+       *
        * <code>string expiry = 2;</code>
        * @param value The expiry to set.
        * @return This builder for chaining.
@@ -2481,6 +3602,10 @@ public final class OrganizationProto {
         return this;
       }
       /**
+       * <pre>
+       * Not used
+       * </pre>
+       *
        * <code>string expiry = 2;</code>
        * @return This builder for chaining.
        */
@@ -2491,6 +3616,10 @@ public final class OrganizationProto {
         return this;
       }
       /**
+       * <pre>
+       * Not used
+       * </pre>
+       *
        * <code>string expiry = 2;</code>
        * @param value The bytes for expiry to set.
        * @return This builder for chaining.
@@ -2503,6 +3632,386 @@ public final class OrganizationProto {
   checkByteStringIsUtf8(value);
         
         expiry_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object expiryMonth_ = "";
+      /**
+       * <code>string expiry_month = 3;</code>
+       * @return The expiryMonth.
+       */
+      public java.lang.String getExpiryMonth() {
+        java.lang.Object ref = expiryMonth_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          expiryMonth_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string expiry_month = 3;</code>
+       * @return The bytes for expiryMonth.
+       */
+      public com.google.protobuf.ByteString
+          getExpiryMonthBytes() {
+        java.lang.Object ref = expiryMonth_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          expiryMonth_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string expiry_month = 3;</code>
+       * @param value The expiryMonth to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExpiryMonth(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        expiryMonth_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string expiry_month = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExpiryMonth() {
+        
+        expiryMonth_ = getDefaultInstance().getExpiryMonth();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string expiry_month = 3;</code>
+       * @param value The bytes for expiryMonth to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExpiryMonthBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        expiryMonth_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object expiryYear_ = "";
+      /**
+       * <code>string expiry_year = 4;</code>
+       * @return The expiryYear.
+       */
+      public java.lang.String getExpiryYear() {
+        java.lang.Object ref = expiryYear_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          expiryYear_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string expiry_year = 4;</code>
+       * @return The bytes for expiryYear.
+       */
+      public com.google.protobuf.ByteString
+          getExpiryYearBytes() {
+        java.lang.Object ref = expiryYear_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          expiryYear_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string expiry_year = 4;</code>
+       * @param value The expiryYear to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExpiryYear(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        expiryYear_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string expiry_year = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExpiryYear() {
+        
+        expiryYear_ = getDefaultInstance().getExpiryYear();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string expiry_year = 4;</code>
+       * @param value The bytes for expiryYear to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExpiryYearBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        expiryYear_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object brand_ = "";
+      /**
+       * <code>string brand = 5;</code>
+       * @return The brand.
+       */
+      public java.lang.String getBrand() {
+        java.lang.Object ref = brand_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          brand_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string brand = 5;</code>
+       * @return The bytes for brand.
+       */
+      public com.google.protobuf.ByteString
+          getBrandBytes() {
+        java.lang.Object ref = brand_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          brand_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string brand = 5;</code>
+       * @param value The brand to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBrand(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        brand_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string brand = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBrand() {
+        
+        brand_ = getDefaultInstance().getBrand();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string brand = 5;</code>
+       * @param value The bytes for brand to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBrandBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        brand_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object countryCode_ = "";
+      /**
+       * <code>string country_code = 6;</code>
+       * @return The countryCode.
+       */
+      public java.lang.String getCountryCode() {
+        java.lang.Object ref = countryCode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          countryCode_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string country_code = 6;</code>
+       * @return The bytes for countryCode.
+       */
+      public com.google.protobuf.ByteString
+          getCountryCodeBytes() {
+        java.lang.Object ref = countryCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          countryCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string country_code = 6;</code>
+       * @param value The countryCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCountryCode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        countryCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string country_code = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCountryCode() {
+        
+        countryCode_ = getDefaultInstance().getCountryCode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string country_code = 6;</code>
+       * @param value The bytes for countryCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCountryCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        countryCode_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object cvcCheck_ = "";
+      /**
+       * <code>string cvc_check = 7;</code>
+       * @return The cvcCheck.
+       */
+      public java.lang.String getCvcCheck() {
+        java.lang.Object ref = cvcCheck_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cvcCheck_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string cvc_check = 7;</code>
+       * @return The bytes for cvcCheck.
+       */
+      public com.google.protobuf.ByteString
+          getCvcCheckBytes() {
+        java.lang.Object ref = cvcCheck_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cvcCheck_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string cvc_check = 7;</code>
+       * @param value The cvcCheck to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCvcCheck(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        cvcCheck_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string cvc_check = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCvcCheck() {
+        
+        cvcCheck_ = getDefaultInstance().getCvcCheck();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string cvc_check = 7;</code>
+       * @param value The bytes for cvcCheck to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCvcCheckBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        cvcCheck_ = value;
         onChanged();
         return this;
       }
@@ -4858,6 +6367,537 @@ public final class OrganizationProto {
 
   }
 
+  public interface CustomerOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.model.Customer)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code toit.model.Customer}
+   */
+  public  static final class Customer extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.model.Customer)
+      CustomerOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Customer.newBuilder() to construct.
+    private Customer(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Customer() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Customer();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Customer(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.model.OrganizationProto.internal_static_toit_model_Customer_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.model.OrganizationProto.internal_static_toit_model_Customer_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.model.OrganizationProto.Customer.class, io.toit.proto.toit.model.OrganizationProto.Customer.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code toit.model.Customer.Type}
+     */
+    public enum Type
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>UNKNOWN = 0;</code>
+       */
+      UNKNOWN(0),
+      /**
+       * <code>PERSON = 1;</code>
+       */
+      PERSON(1),
+      /**
+       * <code>ORGANIZATION = 2;</code>
+       */
+      ORGANIZATION(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>UNKNOWN = 0;</code>
+       */
+      public static final int UNKNOWN_VALUE = 0;
+      /**
+       * <code>PERSON = 1;</code>
+       */
+      public static final int PERSON_VALUE = 1;
+      /**
+       * <code>ORGANIZATION = 2;</code>
+       */
+      public static final int ORGANIZATION_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Type valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Type forNumber(int value) {
+        switch (value) {
+          case 0: return UNKNOWN;
+          case 1: return PERSON;
+          case 2: return ORGANIZATION;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Type>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Type> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Type>() {
+              public Type findValueByNumber(int number) {
+                return Type.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return io.toit.proto.toit.model.OrganizationProto.Customer.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Type[] VALUES = values();
+
+      public static Type valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Type(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:toit.model.Customer.Type)
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.model.OrganizationProto.Customer)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.model.OrganizationProto.Customer other = (io.toit.proto.toit.model.OrganizationProto.Customer) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.model.OrganizationProto.Customer parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.model.OrganizationProto.Customer parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.model.OrganizationProto.Customer parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.model.OrganizationProto.Customer parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.model.OrganizationProto.Customer parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.model.OrganizationProto.Customer parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.model.OrganizationProto.Customer parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.model.OrganizationProto.Customer parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.model.OrganizationProto.Customer parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.model.OrganizationProto.Customer parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.model.OrganizationProto.Customer parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.model.OrganizationProto.Customer parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.model.OrganizationProto.Customer prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.model.Customer}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.model.Customer)
+        io.toit.proto.toit.model.OrganizationProto.CustomerOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.model.OrganizationProto.internal_static_toit_model_Customer_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.model.OrganizationProto.internal_static_toit_model_Customer_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.model.OrganizationProto.Customer.class, io.toit.proto.toit.model.OrganizationProto.Customer.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.model.OrganizationProto.Customer.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.model.OrganizationProto.internal_static_toit_model_Customer_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.model.OrganizationProto.Customer getDefaultInstanceForType() {
+        return io.toit.proto.toit.model.OrganizationProto.Customer.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.model.OrganizationProto.Customer build() {
+        io.toit.proto.toit.model.OrganizationProto.Customer result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.model.OrganizationProto.Customer buildPartial() {
+        io.toit.proto.toit.model.OrganizationProto.Customer result = new io.toit.proto.toit.model.OrganizationProto.Customer(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.model.OrganizationProto.Customer) {
+          return mergeFrom((io.toit.proto.toit.model.OrganizationProto.Customer)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.model.OrganizationProto.Customer other) {
+        if (other == io.toit.proto.toit.model.OrganizationProto.Customer.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.model.OrganizationProto.Customer parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.model.OrganizationProto.Customer) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.model.Customer)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.model.Customer)
+    private static final io.toit.proto.toit.model.OrganizationProto.Customer DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.model.OrganizationProto.Customer();
+    }
+
+    public static io.toit.proto.toit.model.OrganizationProto.Customer getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Customer>
+        PARSER = new com.google.protobuf.AbstractParser<Customer>() {
+      @java.lang.Override
+      public Customer parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Customer(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Customer> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Customer> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.model.OrganizationProto.Customer getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_toit_model_Organization_descriptor;
   private static final 
@@ -4883,6 +6923,11 @@ public final class OrganizationProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_toit_model_Tier_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_model_Customer_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_model_Customer_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4893,23 +6938,30 @@ public final class OrganizationProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\035toit/model/organization.proto\022\ntoit.mo" +
-      "del\032\037google/protobuf/timestamp.proto\"\357\001\n" +
+      "del\032\037google/protobuf/timestamp.proto\"\365\002\n" +
       "\014Organization\022\n\n\002id\030\001 \001(\014\022\014\n\004name\030\002 \001(\t\022" +
       "\023\n\013default_sdk\030\003 \001(\t\022\r\n\005email\030\004 \001(\t\022\014\n\004c" +
       "ity\030\005 \001(\t\022\017\n\007country\030\006 \001(\t\022\024\n\014phone_numb" +
       "er\030\007 \001(\t\022\022\n\ncvr_number\030\010 \001(\t\022#\n\004tier\030\t \001" +
       "(\0162\025.toit.model.Tier.Type\0223\n\017payment_det" +
-      "ails\030\n \001(\0132\032.toit.model.PaymentDetails\"/" +
-      "\n\016PaymentDetails\022\r\n\005last4\030\001 \001(\t\022\016\n\006expir" +
-      "y\030\002 \001(\t\"H\n\004User\022\n\n\002id\030\001 \001(\014\022\027\n\017organizat" +
-      "ion_id\030\002 \001(\014\022\r\n\005email\030\003 \001(\t\022\014\n\004name\030\004 \001(" +
-      "\t\"k\n\006APIKey\022\n\n\002id\030\001 \001(\014\022\027\n\017organization_" +
-      "id\030\002 \001(\014\022\014\n\004name\030\003 \001(\t\022.\n\ncreated_at\030\004 \001" +
-      "(\0132\032.google.protobuf.Timestamp\"/\n\004Tier\"\'" +
-      "\n\004Type\022\013\n\007UNKNOWN\020\000\022\010\n\004FREE\020\001\022\010\n\004PAID\020\002B" +
-      "U\n\030io.toit.proto.toit.modelB\021Organizatio" +
-      "nProtoZ&github.com/toitware/api.git/toit" +
-      "/modelb\006proto3"
+      "ails\030\n \001(\0132\032.toit.model.PaymentDetails\022\024" +
+      "\n\014address_line\030\013 \001(\t\022\023\n\013postal_code\030\014 \001(" +
+      "\t\022\022\n\nvat_number\030\r \001(\t\022\030\n\020vat_country_cod" +
+      "e\030\016 \001(\t\022+\n\010customer\030\017 \001(\0162\031.toit.model.C" +
+      "ustomer.Type\"\222\001\n\016PaymentDetails\022\r\n\005last4" +
+      "\030\001 \001(\t\022\016\n\006expiry\030\002 \001(\t\022\024\n\014expiry_month\030\003" +
+      " \001(\t\022\023\n\013expiry_year\030\004 \001(\t\022\r\n\005brand\030\005 \001(\t" +
+      "\022\024\n\014country_code\030\006 \001(\t\022\021\n\tcvc_check\030\007 \001(" +
+      "\t\"H\n\004User\022\n\n\002id\030\001 \001(\014\022\027\n\017organization_id" +
+      "\030\002 \001(\014\022\r\n\005email\030\003 \001(\t\022\014\n\004name\030\004 \001(\t\"k\n\006A" +
+      "PIKey\022\n\n\002id\030\001 \001(\014\022\027\n\017organization_id\030\002 \001" +
+      "(\014\022\014\n\004name\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132\032.g" +
+      "oogle.protobuf.Timestamp\"/\n\004Tier\"\'\n\004Type" +
+      "\022\013\n\007UNKNOWN\020\000\022\010\n\004FREE\020\001\022\010\n\004PAID\020\002\"=\n\010Cus" +
+      "tomer\"1\n\004Type\022\013\n\007UNKNOWN\020\000\022\n\n\006PERSON\020\001\022\020" +
+      "\n\014ORGANIZATION\020\002BU\n\030io.toit.proto.toit.m" +
+      "odelB\021OrganizationProtoZ&github.com/toit" +
+      "ware/api.git/toit/modelb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4921,13 +6973,13 @@ public final class OrganizationProto {
     internal_static_toit_model_Organization_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_Organization_descriptor,
-        new java.lang.String[] { "Id", "Name", "DefaultSdk", "Email", "City", "Country", "PhoneNumber", "CvrNumber", "Tier", "PaymentDetails", });
+        new java.lang.String[] { "Id", "Name", "DefaultSdk", "Email", "City", "Country", "PhoneNumber", "CvrNumber", "Tier", "PaymentDetails", "AddressLine", "PostalCode", "VatNumber", "VatCountryCode", "Customer", });
     internal_static_toit_model_PaymentDetails_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_toit_model_PaymentDetails_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_PaymentDetails_descriptor,
-        new java.lang.String[] { "Last4", "Expiry", });
+        new java.lang.String[] { "Last4", "Expiry", "ExpiryMonth", "ExpiryYear", "Brand", "CountryCode", "CvcCheck", });
     internal_static_toit_model_User_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_toit_model_User_fieldAccessorTable = new
@@ -4945,6 +6997,12 @@ public final class OrganizationProto {
     internal_static_toit_model_Tier_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_Tier_descriptor,
+        new java.lang.String[] { });
+    internal_static_toit_model_Customer_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_toit_model_Customer_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_model_Customer_descriptor,
         new java.lang.String[] { });
     com.google.protobuf.TimestampProto.getDescriptor();
   }

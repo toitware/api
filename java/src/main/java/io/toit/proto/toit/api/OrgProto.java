@@ -9729,11 +9729,19 @@ public final class OrgProto {
         getPhoneNumberBytes();
 
     /**
+     * <pre>
+     * Not used
+     * </pre>
+     *
      * <code>string cvr_number = 4;</code>
      * @return The cvrNumber.
      */
     java.lang.String getCvrNumber();
     /**
+     * <pre>
+     * Not used
+     * </pre>
+     *
      * <code>string cvr_number = 4;</code>
      * @return The bytes for cvrNumber.
      */
@@ -9763,6 +9771,65 @@ public final class OrgProto {
      */
     com.google.protobuf.ByteString
         getEmailBytes();
+
+    /**
+     * <code>string vat_number = 7;</code>
+     * @return The vatNumber.
+     */
+    java.lang.String getVatNumber();
+    /**
+     * <code>string vat_number = 7;</code>
+     * @return The bytes for vatNumber.
+     */
+    com.google.protobuf.ByteString
+        getVatNumberBytes();
+
+    /**
+     * <code>string vat_country_code = 8;</code>
+     * @return The vatCountryCode.
+     */
+    java.lang.String getVatCountryCode();
+    /**
+     * <code>string vat_country_code = 8;</code>
+     * @return The bytes for vatCountryCode.
+     */
+    com.google.protobuf.ByteString
+        getVatCountryCodeBytes();
+
+    /**
+     * <code>string address_line = 9;</code>
+     * @return The addressLine.
+     */
+    java.lang.String getAddressLine();
+    /**
+     * <code>string address_line = 9;</code>
+     * @return The bytes for addressLine.
+     */
+    com.google.protobuf.ByteString
+        getAddressLineBytes();
+
+    /**
+     * <code>string postal_code = 10;</code>
+     * @return The postalCode.
+     */
+    java.lang.String getPostalCode();
+    /**
+     * <code>string postal_code = 10;</code>
+     * @return The bytes for postalCode.
+     */
+    com.google.protobuf.ByteString
+        getPostalCodeBytes();
+
+    /**
+     * <code>.toit.model.Customer.Type customer = 11;</code>
+     * @return The enum numeric value on the wire for customer.
+     */
+    int getCustomerValue();
+    /**
+     * <code>.toit.model.Customer.Type customer = 11;</code>
+     * @return The customer.
+     */
+    io.toit.proto.toit.model.OrganizationProto.Customer.Type getCustomer();
 
     public io.toit.proto.toit.api.OrgProto.OrganizationChange.ChangeCase getChangeCase();
   }
@@ -9847,6 +9914,36 @@ public final class OrgProto {
               change_ = s;
               break;
             }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+              changeCase_ = 7;
+              change_ = s;
+              break;
+            }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+              changeCase_ = 8;
+              change_ = s;
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+              changeCase_ = 9;
+              change_ = s;
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+              changeCase_ = 10;
+              change_ = s;
+              break;
+            }
+            case 88: {
+              int rawValue = input.readEnum();
+              changeCase_ = 11;
+              change_ = rawValue;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -9890,6 +9987,11 @@ public final class OrgProto {
       CVR_NUMBER(4),
       NAME(5),
       EMAIL(6),
+      VAT_NUMBER(7),
+      VAT_COUNTRY_CODE(8),
+      ADDRESS_LINE(9),
+      POSTAL_CODE(10),
+      CUSTOMER(11),
       CHANGE_NOT_SET(0);
       private final int value;
       private ChangeCase(int value) {
@@ -9913,6 +10015,11 @@ public final class OrgProto {
           case 4: return CVR_NUMBER;
           case 5: return NAME;
           case 6: return EMAIL;
+          case 7: return VAT_NUMBER;
+          case 8: return VAT_COUNTRY_CODE;
+          case 9: return ADDRESS_LINE;
+          case 10: return POSTAL_CODE;
+          case 11: return CUSTOMER;
           case 0: return CHANGE_NOT_SET;
           default: return null;
         }
@@ -10065,6 +10172,10 @@ public final class OrgProto {
 
     public static final int CVR_NUMBER_FIELD_NUMBER = 4;
     /**
+     * <pre>
+     * Not used
+     * </pre>
+     *
      * <code>string cvr_number = 4;</code>
      * @return The cvrNumber.
      */
@@ -10086,6 +10197,10 @@ public final class OrgProto {
       }
     }
     /**
+     * <pre>
+     * Not used
+     * </pre>
+     *
      * <code>string cvr_number = 4;</code>
      * @return The bytes for cvrNumber.
      */
@@ -10198,6 +10313,211 @@ public final class OrgProto {
       }
     }
 
+    public static final int VAT_NUMBER_FIELD_NUMBER = 7;
+    /**
+     * <code>string vat_number = 7;</code>
+     * @return The vatNumber.
+     */
+    public java.lang.String getVatNumber() {
+      java.lang.Object ref = "";
+      if (changeCase_ == 7) {
+        ref = change_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (changeCase_ == 7) {
+          change_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>string vat_number = 7;</code>
+     * @return The bytes for vatNumber.
+     */
+    public com.google.protobuf.ByteString
+        getVatNumberBytes() {
+      java.lang.Object ref = "";
+      if (changeCase_ == 7) {
+        ref = change_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (changeCase_ == 7) {
+          change_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VAT_COUNTRY_CODE_FIELD_NUMBER = 8;
+    /**
+     * <code>string vat_country_code = 8;</code>
+     * @return The vatCountryCode.
+     */
+    public java.lang.String getVatCountryCode() {
+      java.lang.Object ref = "";
+      if (changeCase_ == 8) {
+        ref = change_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (changeCase_ == 8) {
+          change_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>string vat_country_code = 8;</code>
+     * @return The bytes for vatCountryCode.
+     */
+    public com.google.protobuf.ByteString
+        getVatCountryCodeBytes() {
+      java.lang.Object ref = "";
+      if (changeCase_ == 8) {
+        ref = change_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (changeCase_ == 8) {
+          change_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADDRESS_LINE_FIELD_NUMBER = 9;
+    /**
+     * <code>string address_line = 9;</code>
+     * @return The addressLine.
+     */
+    public java.lang.String getAddressLine() {
+      java.lang.Object ref = "";
+      if (changeCase_ == 9) {
+        ref = change_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (changeCase_ == 9) {
+          change_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>string address_line = 9;</code>
+     * @return The bytes for addressLine.
+     */
+    public com.google.protobuf.ByteString
+        getAddressLineBytes() {
+      java.lang.Object ref = "";
+      if (changeCase_ == 9) {
+        ref = change_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (changeCase_ == 9) {
+          change_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int POSTAL_CODE_FIELD_NUMBER = 10;
+    /**
+     * <code>string postal_code = 10;</code>
+     * @return The postalCode.
+     */
+    public java.lang.String getPostalCode() {
+      java.lang.Object ref = "";
+      if (changeCase_ == 10) {
+        ref = change_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (changeCase_ == 10) {
+          change_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>string postal_code = 10;</code>
+     * @return The bytes for postalCode.
+     */
+    public com.google.protobuf.ByteString
+        getPostalCodeBytes() {
+      java.lang.Object ref = "";
+      if (changeCase_ == 10) {
+        ref = change_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (changeCase_ == 10) {
+          change_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CUSTOMER_FIELD_NUMBER = 11;
+    /**
+     * <code>.toit.model.Customer.Type customer = 11;</code>
+     * @return The enum numeric value on the wire for customer.
+     */
+    public int getCustomerValue() {
+      if (changeCase_ == 11) {
+        return (java.lang.Integer) change_;
+      }
+      return 0;
+    }
+    /**
+     * <code>.toit.model.Customer.Type customer = 11;</code>
+     * @return The customer.
+     */
+    public io.toit.proto.toit.model.OrganizationProto.Customer.Type getCustomer() {
+      if (changeCase_ == 11) {
+        @SuppressWarnings("deprecation")
+        io.toit.proto.toit.model.OrganizationProto.Customer.Type result = io.toit.proto.toit.model.OrganizationProto.Customer.Type.valueOf(
+            (java.lang.Integer) change_);
+        return result == null ? io.toit.proto.toit.model.OrganizationProto.Customer.Type.UNRECOGNIZED : result;
+      }
+      return io.toit.proto.toit.model.OrganizationProto.Customer.Type.UNKNOWN;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10230,6 +10550,21 @@ public final class OrgProto {
       if (changeCase_ == 6) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, change_);
       }
+      if (changeCase_ == 7) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, change_);
+      }
+      if (changeCase_ == 8) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, change_);
+      }
+      if (changeCase_ == 9) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, change_);
+      }
+      if (changeCase_ == 10) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, change_);
+      }
+      if (changeCase_ == 11) {
+        output.writeEnum(11, ((java.lang.Integer) change_));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -10256,6 +10591,22 @@ public final class OrgProto {
       }
       if (changeCase_ == 6) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, change_);
+      }
+      if (changeCase_ == 7) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, change_);
+      }
+      if (changeCase_ == 8) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, change_);
+      }
+      if (changeCase_ == 9) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, change_);
+      }
+      if (changeCase_ == 10) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, change_);
+      }
+      if (changeCase_ == 11) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(11, ((java.lang.Integer) change_));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10298,6 +10649,26 @@ public final class OrgProto {
           if (!getEmail()
               .equals(other.getEmail())) return false;
           break;
+        case 7:
+          if (!getVatNumber()
+              .equals(other.getVatNumber())) return false;
+          break;
+        case 8:
+          if (!getVatCountryCode()
+              .equals(other.getVatCountryCode())) return false;
+          break;
+        case 9:
+          if (!getAddressLine()
+              .equals(other.getAddressLine())) return false;
+          break;
+        case 10:
+          if (!getPostalCode()
+              .equals(other.getPostalCode())) return false;
+          break;
+        case 11:
+          if (getCustomerValue()
+              != other.getCustomerValue()) return false;
+          break;
         case 0:
         default:
       }
@@ -10336,6 +10707,26 @@ public final class OrgProto {
         case 6:
           hash = (37 * hash) + EMAIL_FIELD_NUMBER;
           hash = (53 * hash) + getEmail().hashCode();
+          break;
+        case 7:
+          hash = (37 * hash) + VAT_NUMBER_FIELD_NUMBER;
+          hash = (53 * hash) + getVatNumber().hashCode();
+          break;
+        case 8:
+          hash = (37 * hash) + VAT_COUNTRY_CODE_FIELD_NUMBER;
+          hash = (53 * hash) + getVatCountryCode().hashCode();
+          break;
+        case 9:
+          hash = (37 * hash) + ADDRESS_LINE_FIELD_NUMBER;
+          hash = (53 * hash) + getAddressLine().hashCode();
+          break;
+        case 10:
+          hash = (37 * hash) + POSTAL_CODE_FIELD_NUMBER;
+          hash = (53 * hash) + getPostalCode().hashCode();
+          break;
+        case 11:
+          hash = (37 * hash) + CUSTOMER_FIELD_NUMBER;
+          hash = (53 * hash) + getCustomerValue();
           break;
         case 0:
         default:
@@ -10519,6 +10910,21 @@ public final class OrgProto {
         if (changeCase_ == 6) {
           result.change_ = change_;
         }
+        if (changeCase_ == 7) {
+          result.change_ = change_;
+        }
+        if (changeCase_ == 8) {
+          result.change_ = change_;
+        }
+        if (changeCase_ == 9) {
+          result.change_ = change_;
+        }
+        if (changeCase_ == 10) {
+          result.change_ = change_;
+        }
+        if (changeCase_ == 11) {
+          result.change_ = change_;
+        }
         result.changeCase_ = changeCase_;
         onBuilt();
         return result;
@@ -10603,6 +11009,34 @@ public final class OrgProto {
             changeCase_ = 6;
             change_ = other.change_;
             onChanged();
+            break;
+          }
+          case VAT_NUMBER: {
+            changeCase_ = 7;
+            change_ = other.change_;
+            onChanged();
+            break;
+          }
+          case VAT_COUNTRY_CODE: {
+            changeCase_ = 8;
+            change_ = other.change_;
+            onChanged();
+            break;
+          }
+          case ADDRESS_LINE: {
+            changeCase_ = 9;
+            change_ = other.change_;
+            onChanged();
+            break;
+          }
+          case POSTAL_CODE: {
+            changeCase_ = 10;
+            change_ = other.change_;
+            onChanged();
+            break;
+          }
+          case CUSTOMER: {
+            setCustomerValue(other.getCustomerValue());
             break;
           }
           case CHANGE_NOT_SET: {
@@ -10915,6 +11349,10 @@ public final class OrgProto {
       }
 
       /**
+       * <pre>
+       * Not used
+       * </pre>
+       *
        * <code>string cvr_number = 4;</code>
        * @return The cvrNumber.
        */
@@ -10936,6 +11374,10 @@ public final class OrgProto {
         }
       }
       /**
+       * <pre>
+       * Not used
+       * </pre>
+       *
        * <code>string cvr_number = 4;</code>
        * @return The bytes for cvrNumber.
        */
@@ -10958,6 +11400,10 @@ public final class OrgProto {
         }
       }
       /**
+       * <pre>
+       * Not used
+       * </pre>
+       *
        * <code>string cvr_number = 4;</code>
        * @param value The cvrNumber to set.
        * @return This builder for chaining.
@@ -10973,6 +11419,10 @@ public final class OrgProto {
         return this;
       }
       /**
+       * <pre>
+       * Not used
+       * </pre>
+       *
        * <code>string cvr_number = 4;</code>
        * @return This builder for chaining.
        */
@@ -10985,6 +11435,10 @@ public final class OrgProto {
         return this;
       }
       /**
+       * <pre>
+       * Not used
+       * </pre>
+       *
        * <code>string cvr_number = 4;</code>
        * @param value The bytes for cvrNumber to set.
        * @return This builder for chaining.
@@ -11172,6 +11626,415 @@ public final class OrgProto {
         changeCase_ = 6;
         change_ = value;
         onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string vat_number = 7;</code>
+       * @return The vatNumber.
+       */
+      public java.lang.String getVatNumber() {
+        java.lang.Object ref = "";
+        if (changeCase_ == 7) {
+          ref = change_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (changeCase_ == 7) {
+            change_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string vat_number = 7;</code>
+       * @return The bytes for vatNumber.
+       */
+      public com.google.protobuf.ByteString
+          getVatNumberBytes() {
+        java.lang.Object ref = "";
+        if (changeCase_ == 7) {
+          ref = change_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (changeCase_ == 7) {
+            change_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string vat_number = 7;</code>
+       * @param value The vatNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVatNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  changeCase_ = 7;
+        change_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string vat_number = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVatNumber() {
+        if (changeCase_ == 7) {
+          changeCase_ = 0;
+          change_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>string vat_number = 7;</code>
+       * @param value The bytes for vatNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVatNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        changeCase_ = 7;
+        change_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string vat_country_code = 8;</code>
+       * @return The vatCountryCode.
+       */
+      public java.lang.String getVatCountryCode() {
+        java.lang.Object ref = "";
+        if (changeCase_ == 8) {
+          ref = change_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (changeCase_ == 8) {
+            change_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string vat_country_code = 8;</code>
+       * @return The bytes for vatCountryCode.
+       */
+      public com.google.protobuf.ByteString
+          getVatCountryCodeBytes() {
+        java.lang.Object ref = "";
+        if (changeCase_ == 8) {
+          ref = change_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (changeCase_ == 8) {
+            change_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string vat_country_code = 8;</code>
+       * @param value The vatCountryCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVatCountryCode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  changeCase_ = 8;
+        change_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string vat_country_code = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVatCountryCode() {
+        if (changeCase_ == 8) {
+          changeCase_ = 0;
+          change_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>string vat_country_code = 8;</code>
+       * @param value The bytes for vatCountryCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVatCountryCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        changeCase_ = 8;
+        change_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string address_line = 9;</code>
+       * @return The addressLine.
+       */
+      public java.lang.String getAddressLine() {
+        java.lang.Object ref = "";
+        if (changeCase_ == 9) {
+          ref = change_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (changeCase_ == 9) {
+            change_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address_line = 9;</code>
+       * @return The bytes for addressLine.
+       */
+      public com.google.protobuf.ByteString
+          getAddressLineBytes() {
+        java.lang.Object ref = "";
+        if (changeCase_ == 9) {
+          ref = change_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (changeCase_ == 9) {
+            change_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address_line = 9;</code>
+       * @param value The addressLine to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressLine(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  changeCase_ = 9;
+        change_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address_line = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddressLine() {
+        if (changeCase_ == 9) {
+          changeCase_ = 0;
+          change_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>string address_line = 9;</code>
+       * @param value The bytes for addressLine to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressLineBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        changeCase_ = 9;
+        change_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string postal_code = 10;</code>
+       * @return The postalCode.
+       */
+      public java.lang.String getPostalCode() {
+        java.lang.Object ref = "";
+        if (changeCase_ == 10) {
+          ref = change_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (changeCase_ == 10) {
+            change_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string postal_code = 10;</code>
+       * @return The bytes for postalCode.
+       */
+      public com.google.protobuf.ByteString
+          getPostalCodeBytes() {
+        java.lang.Object ref = "";
+        if (changeCase_ == 10) {
+          ref = change_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (changeCase_ == 10) {
+            change_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string postal_code = 10;</code>
+       * @param value The postalCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPostalCode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  changeCase_ = 10;
+        change_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string postal_code = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPostalCode() {
+        if (changeCase_ == 10) {
+          changeCase_ = 0;
+          change_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>string postal_code = 10;</code>
+       * @param value The bytes for postalCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPostalCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        changeCase_ = 10;
+        change_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>.toit.model.Customer.Type customer = 11;</code>
+       * @return The enum numeric value on the wire for customer.
+       */
+      public int getCustomerValue() {
+        if (changeCase_ == 11) {
+          return ((java.lang.Integer) change_).intValue();
+        }
+        return 0;
+      }
+      /**
+       * <code>.toit.model.Customer.Type customer = 11;</code>
+       * @param value The enum numeric value on the wire for customer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCustomerValue(int value) {
+        changeCase_ = 11;
+        change_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.toit.model.Customer.Type customer = 11;</code>
+       * @return The customer.
+       */
+      public io.toit.proto.toit.model.OrganizationProto.Customer.Type getCustomer() {
+        if (changeCase_ == 11) {
+          @SuppressWarnings("deprecation")
+          io.toit.proto.toit.model.OrganizationProto.Customer.Type result = io.toit.proto.toit.model.OrganizationProto.Customer.Type.valueOf(
+              (java.lang.Integer) change_);
+          return result == null ? io.toit.proto.toit.model.OrganizationProto.Customer.Type.UNRECOGNIZED : result;
+        }
+        return io.toit.proto.toit.model.OrganizationProto.Customer.Type.UNKNOWN;
+      }
+      /**
+       * <code>.toit.model.Customer.Type customer = 11;</code>
+       * @param value The customer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCustomer(io.toit.proto.toit.model.OrganizationProto.Customer.Type value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        changeCase_ = 11;
+        change_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.toit.model.Customer.Type customer = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCustomer() {
+        if (changeCase_ == 11) {
+          changeCase_ = 0;
+          change_ = null;
+          onChanged();
+        }
         return this;
       }
       @java.lang.Override
@@ -12538,66 +13401,68 @@ public final class OrgProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\033toit/api/organization.proto\022\010toit.api\032" +
-      "\027toit/model/device.proto\032\035toit/model/org" +
-      "anization.proto\032\027toit/api/hardware.proto" +
-      "\"W\n\020ListUsersRequest\022\016\n\006offset\030\001 \001(\014\022\r\n\005" +
-      "limit\030\002 \001(\003\022\020\n\010order_by\030\003 \001(\t\022\022\n\norder_d" +
-      "esc\030\004 \001(\010\"D\n\021ListUsersResponse\022\037\n\005users\030" +
-      "\001 \003(\0132\020.toit.model.User\022\016\n\006offset\030\002 \001(\014\"" +
-      "\"\n\021CreateUserRequest\022\r\n\005email\030\001 \001(\t\"4\n\022C" +
-      "reateUserResponse\022\036\n\004user\030\001 \001(\0132\020.toit.m" +
-      "odel.User\"\"\n\021DeleteUserRequest\022\r\n\005email\030" +
-      "\001 \001(\t\"\024\n\022DeleteUserResponse\"+\n\016GetUserRe" +
-      "quest\022\n\n\002id\030\001 \001(\014\022\r\n\005email\030\002 \001(\t\"1\n\017GetU" +
-      "serResponse\022\036\n\004user\030\001 \001(\0132\020.toit.model.U" +
-      "ser\"#\n\023CreateAPIKeyRequest\022\014\n\004name\030\001 \001(\t" +
-      "\";\n\024CreateAPIKeyResponse\022#\n\007api_key\030\001 \001(" +
-      "\0132\022.toit.model.APIKey\"Y\n\022ListAPIKeysRequ" +
-      "est\022\016\n\006offset\030\001 \001(\014\022\r\n\005limit\030\002 \001(\003\022\020\n\010or" +
-      "der_by\030\003 \001(\t\022\022\n\norder_desc\030\004 \001(\010\"J\n\023List" +
-      "APIKeysResponse\022#\n\007api_key\030\001 \001(\0132\022.toit." +
-      "model.APIKey\022\016\n\006offset\030\002 \001(\014\"!\n\023DeleteAP" +
-      "IKeyRequest\022\n\n\002id\030\001 \001(\014\"\026\n\024DeleteAPIKeyR" +
-      "esponse\"$\n\026GetAPIKeySecretRequest\022\n\n\002id\030" +
-      "\001 \001(\014\")\n\027GetAPIKeySecretResponse\022\016\n\006secr" +
-      "et\030\001 \001(\t\"\220\001\n\022OrganizationChange\022\016\n\004city\030" +
-      "\001 \001(\tH\000\022\021\n\007country\030\002 \001(\tH\000\022\026\n\014phone_numb" +
-      "er\030\003 \001(\tH\000\022\024\n\ncvr_number\030\004 \001(\tH\000\022\016\n\004name" +
-      "\030\005 \001(\tH\000\022\017\n\005email\030\006 \001(\tH\000B\010\n\006change\"J\n\031U" +
-      "pdateOrganizationRequest\022-\n\007changes\030\001 \003(" +
-      "\0132\034.toit.api.OrganizationChange\"\034\n\032Updat" +
-      "eOrganizationResponse2\302\007\n\023OrganizationSe" +
-      "rvice\022@\n\007GetUser\022\030.toit.api.GetUserReque" +
-      "st\032\031.toit.api.GetUserResponse\"\000\022F\n\tListU" +
-      "sers\022\032.toit.api.ListUsersRequest\032\033.toit." +
-      "api.ListUsersResponse\"\000\022I\n\nCreateUser\022\033." +
-      "toit.api.CreateUserRequest\032\034.toit.api.Cr" +
-      "eateUserResponse\"\000\022I\n\nDeleteUser\022\033.toit." +
-      "api.DeleteUserRequest\032\034.toit.api.DeleteU" +
-      "serResponse\"\000\022O\n\014CreateAPIKey\022\035.toit.api" +
-      ".CreateAPIKeyRequest\032\036.toit.api.CreateAP" +
-      "IKeyResponse\"\000\022N\n\013ListAPIKeys\022\034.toit.api" +
-      ".ListAPIKeysRequest\032\035.toit.api.ListAPIKe" +
-      "ysResponse\"\0000\001\022O\n\014DeleteAPIKey\022\035.toit.ap" +
-      "i.DeleteAPIKeyRequest\032\036.toit.api.DeleteA" +
-      "PIKeyResponse\"\000\022X\n\017GetAPIKeySecret\022 .toi" +
-      "t.api.GetAPIKeySecretRequest\032!.toit.api." +
-      "GetAPIKeySecretResponse\"\000\022a\n\022UpdateOrgan" +
-      "ization\022#.toit.api.UpdateOrganizationReq" +
-      "uest\032$.toit.api.UpdateOrganizationRespon" +
-      "se\"\000\022j\n\025ClaimHardwareIdentity\022&.toit.api" +
-      ".ClaimHardwareIdentityRequest\032\'.toit.api" +
-      ".ClaimHardwareIdentityResponse\"\000\022p\n\027SetH" +
-      "ardwareIdentityInfo\022(.toit.api.SetHardwa" +
-      "reIdentityInfoRequest\032).toit.api.SetHard" +
-      "wareIdentityInfoResponse\"\000BH\n\026io.toit.pr" +
-      "oto.toit.apiB\010OrgProtoZ$github.com/toitw" +
-      "are/api.git/toit/apib\006proto3"
+      "\035toit/model/organization.proto\032\027toit/api" +
+      "/hardware.proto\"W\n\020ListUsersRequest\022\016\n\006o" +
+      "ffset\030\001 \001(\014\022\r\n\005limit\030\002 \001(\003\022\020\n\010order_by\030\003" +
+      " \001(\t\022\022\n\norder_desc\030\004 \001(\010\"D\n\021ListUsersRes" +
+      "ponse\022\037\n\005users\030\001 \003(\0132\020.toit.model.User\022\016" +
+      "\n\006offset\030\002 \001(\014\"\"\n\021CreateUserRequest\022\r\n\005e" +
+      "mail\030\001 \001(\t\"4\n\022CreateUserResponse\022\036\n\004user" +
+      "\030\001 \001(\0132\020.toit.model.User\"\"\n\021DeleteUserRe" +
+      "quest\022\r\n\005email\030\001 \001(\t\"\024\n\022DeleteUserRespon" +
+      "se\"+\n\016GetUserRequest\022\n\n\002id\030\001 \001(\014\022\r\n\005emai" +
+      "l\030\002 \001(\t\"1\n\017GetUserResponse\022\036\n\004user\030\001 \001(\013" +
+      "2\020.toit.model.User\"#\n\023CreateAPIKeyReques" +
+      "t\022\014\n\004name\030\001 \001(\t\";\n\024CreateAPIKeyResponse\022" +
+      "#\n\007api_key\030\001 \001(\0132\022.toit.model.APIKey\"Y\n\022" +
+      "ListAPIKeysRequest\022\016\n\006offset\030\001 \001(\014\022\r\n\005li" +
+      "mit\030\002 \001(\003\022\020\n\010order_by\030\003 \001(\t\022\022\n\norder_des" +
+      "c\030\004 \001(\010\"J\n\023ListAPIKeysResponse\022#\n\007api_ke" +
+      "y\030\001 \001(\0132\022.toit.model.APIKey\022\016\n\006offset\030\002 " +
+      "\001(\014\"!\n\023DeleteAPIKeyRequest\022\n\n\002id\030\001 \001(\014\"\026" +
+      "\n\024DeleteAPIKeyResponse\"$\n\026GetAPIKeySecre" +
+      "tRequest\022\n\n\002id\030\001 \001(\014\")\n\027GetAPIKeySecretR" +
+      "esponse\022\016\n\006secret\030\001 \001(\t\"\240\002\n\022Organization" +
+      "Change\022\016\n\004city\030\001 \001(\tH\000\022\021\n\007country\030\002 \001(\tH" +
+      "\000\022\026\n\014phone_number\030\003 \001(\tH\000\022\024\n\ncvr_number\030" +
+      "\004 \001(\tH\000\022\016\n\004name\030\005 \001(\tH\000\022\017\n\005email\030\006 \001(\tH\000" +
+      "\022\024\n\nvat_number\030\007 \001(\tH\000\022\032\n\020vat_country_co" +
+      "de\030\010 \001(\tH\000\022\026\n\014address_line\030\t \001(\tH\000\022\025\n\013po" +
+      "stal_code\030\n \001(\tH\000\022-\n\010customer\030\013 \001(\0162\031.to" +
+      "it.model.Customer.TypeH\000B\010\n\006change\"J\n\031Up" +
+      "dateOrganizationRequest\022-\n\007changes\030\001 \003(\013" +
+      "2\034.toit.api.OrganizationChange\"\034\n\032Update" +
+      "OrganizationResponse2\302\007\n\023OrganizationSer" +
+      "vice\022@\n\007GetUser\022\030.toit.api.GetUserReques" +
+      "t\032\031.toit.api.GetUserResponse\"\000\022F\n\tListUs" +
+      "ers\022\032.toit.api.ListUsersRequest\032\033.toit.a" +
+      "pi.ListUsersResponse\"\000\022I\n\nCreateUser\022\033.t" +
+      "oit.api.CreateUserRequest\032\034.toit.api.Cre" +
+      "ateUserResponse\"\000\022I\n\nDeleteUser\022\033.toit.a" +
+      "pi.DeleteUserRequest\032\034.toit.api.DeleteUs" +
+      "erResponse\"\000\022O\n\014CreateAPIKey\022\035.toit.api." +
+      "CreateAPIKeyRequest\032\036.toit.api.CreateAPI" +
+      "KeyResponse\"\000\022N\n\013ListAPIKeys\022\034.toit.api." +
+      "ListAPIKeysRequest\032\035.toit.api.ListAPIKey" +
+      "sResponse\"\0000\001\022O\n\014DeleteAPIKey\022\035.toit.api" +
+      ".DeleteAPIKeyRequest\032\036.toit.api.DeleteAP" +
+      "IKeyResponse\"\000\022X\n\017GetAPIKeySecret\022 .toit" +
+      ".api.GetAPIKeySecretRequest\032!.toit.api.G" +
+      "etAPIKeySecretResponse\"\000\022a\n\022UpdateOrgani" +
+      "zation\022#.toit.api.UpdateOrganizationRequ" +
+      "est\032$.toit.api.UpdateOrganizationRespons" +
+      "e\"\000\022j\n\025ClaimHardwareIdentity\022&.toit.api." +
+      "ClaimHardwareIdentityRequest\032\'.toit.api." +
+      "ClaimHardwareIdentityResponse\"\000\022p\n\027SetHa" +
+      "rdwareIdentityInfo\022(.toit.api.SetHardwar" +
+      "eIdentityInfoRequest\032).toit.api.SetHardw" +
+      "areIdentityInfoResponse\"\000BH\n\026io.toit.pro" +
+      "to.toit.apiB\010OrgProtoZ$github.com/toitwa" +
+      "re/api.git/toit/apib\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          io.toit.proto.toit.model.DeviceProto.getDescriptor(),
           io.toit.proto.toit.model.OrganizationProto.getDescriptor(),
           io.toit.proto.toit.api.HardwareProto.getDescriptor(),
         });
@@ -12702,7 +13567,7 @@ public final class OrgProto {
     internal_static_toit_api_OrganizationChange_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_OrganizationChange_descriptor,
-        new java.lang.String[] { "City", "Country", "PhoneNumber", "CvrNumber", "Name", "Email", "Change", });
+        new java.lang.String[] { "City", "Country", "PhoneNumber", "CvrNumber", "Name", "Email", "VatNumber", "VatCountryCode", "AddressLine", "PostalCode", "Customer", "Change", });
     internal_static_toit_api_UpdateOrganizationRequest_descriptor =
       getDescriptor().getMessageTypes().get(17);
     internal_static_toit_api_UpdateOrganizationRequest_fieldAccessorTable = new
@@ -12715,7 +13580,6 @@ public final class OrgProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_UpdateOrganizationResponse_descriptor,
         new java.lang.String[] { });
-    io.toit.proto.toit.model.DeviceProto.getDescriptor();
     io.toit.proto.toit.model.OrganizationProto.getDescriptor();
     io.toit.proto.toit.api.HardwareProto.getDescriptor();
   }

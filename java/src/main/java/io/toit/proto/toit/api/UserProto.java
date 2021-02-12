@@ -7319,11 +7319,19 @@ public final class UserProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Not used
+     * </pre>
+     *
      * <code>string billing_email = 1;</code>
      * @return The billingEmail.
      */
     java.lang.String getBillingEmail();
     /**
+     * <pre>
+     * Not used
+     * </pre>
+     *
      * <code>string billing_email = 1;</code>
      * @return The bytes for billingEmail.
      */
@@ -7480,6 +7488,10 @@ public final class UserProto {
     public static final int BILLING_EMAIL_FIELD_NUMBER = 1;
     private volatile java.lang.Object billingEmail_;
     /**
+     * <pre>
+     * Not used
+     * </pre>
+     *
      * <code>string billing_email = 1;</code>
      * @return The billingEmail.
      */
@@ -7496,6 +7508,10 @@ public final class UserProto {
       }
     }
     /**
+     * <pre>
+     * Not used
+     * </pre>
+     *
      * <code>string billing_email = 1;</code>
      * @return The bytes for billingEmail.
      */
@@ -7979,6 +7995,10 @@ public final class UserProto {
 
       private java.lang.Object billingEmail_ = "";
       /**
+       * <pre>
+       * Not used
+       * </pre>
+       *
        * <code>string billing_email = 1;</code>
        * @return The billingEmail.
        */
@@ -7995,6 +8015,10 @@ public final class UserProto {
         }
       }
       /**
+       * <pre>
+       * Not used
+       * </pre>
+       *
        * <code>string billing_email = 1;</code>
        * @return The bytes for billingEmail.
        */
@@ -8012,6 +8036,10 @@ public final class UserProto {
         }
       }
       /**
+       * <pre>
+       * Not used
+       * </pre>
+       *
        * <code>string billing_email = 1;</code>
        * @param value The billingEmail to set.
        * @return This builder for chaining.
@@ -8027,6 +8055,10 @@ public final class UserProto {
         return this;
       }
       /**
+       * <pre>
+       * Not used
+       * </pre>
+       *
        * <code>string billing_email = 1;</code>
        * @return This builder for chaining.
        */
@@ -8037,6 +8069,10 @@ public final class UserProto {
         return this;
       }
       /**
+       * <pre>
+       * Not used
+       * </pre>
+       *
        * <code>string billing_email = 1;</code>
        * @param value The bytes for billingEmail to set.
        * @return This builder for chaining.
