@@ -12,8 +12,6 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
-var toit_model_device_pb = require('../../toit/model/device_pb.js');
-goog.object.extend(proto, toit_model_device_pb);
 var toit_model_organization_pb = require('../../toit/model/organization_pb.js');
 goog.object.extend(proto, toit_model_organization_pb);
 var toit_api_hardware_pb = require('../../toit/api/hardware_pb.js');
@@ -3020,7 +3018,7 @@ proto.toit.api.GetAPIKeySecretResponse.prototype.setSecret = function(value) {
  * @private {!Array<!Array<number>>}
  * @const
  */
-proto.toit.api.OrganizationChange.oneofGroups_ = [[1,2,3,4,5,6]];
+proto.toit.api.OrganizationChange.oneofGroups_ = [[1,2,3,4,5,6,7,8,9,10,11]];
 
 /**
  * @enum {number}
@@ -3032,7 +3030,12 @@ proto.toit.api.OrganizationChange.ChangeCase = {
   PHONE_NUMBER: 3,
   CVR_NUMBER: 4,
   NAME: 5,
-  EMAIL: 6
+  EMAIL: 6,
+  VAT_NUMBER: 7,
+  VAT_COUNTRY_CODE: 8,
+  ADDRESS_LINE: 9,
+  POSTAL_CODE: 10,
+  CUSTOMER: 11
 };
 
 /**
@@ -3078,7 +3081,12 @@ proto.toit.api.OrganizationChange.toObject = function(includeInstance, msg) {
     phoneNumber: jspb.Message.getFieldWithDefault(msg, 3, ""),
     cvrNumber: jspb.Message.getFieldWithDefault(msg, 4, ""),
     name: jspb.Message.getFieldWithDefault(msg, 5, ""),
-    email: jspb.Message.getFieldWithDefault(msg, 6, "")
+    email: jspb.Message.getFieldWithDefault(msg, 6, ""),
+    vatNumber: jspb.Message.getFieldWithDefault(msg, 7, ""),
+    vatCountryCode: jspb.Message.getFieldWithDefault(msg, 8, ""),
+    addressLine: jspb.Message.getFieldWithDefault(msg, 9, ""),
+    postalCode: jspb.Message.getFieldWithDefault(msg, 10, ""),
+    customer: jspb.Message.getFieldWithDefault(msg, 11, 0)
   };
 
   if (includeInstance) {
@@ -3138,6 +3146,26 @@ proto.toit.api.OrganizationChange.deserializeBinaryFromReader = function(msg, re
     case 6:
       var value = /** @type {string} */ (reader.readString());
       msg.setEmail(value);
+      break;
+    case 7:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setVatNumber(value);
+      break;
+    case 8:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setVatCountryCode(value);
+      break;
+    case 9:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setAddressLine(value);
+      break;
+    case 10:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setPostalCode(value);
+      break;
+    case 11:
+      var value = /** @type {!proto.toit.model.Customer.Type} */ (reader.readEnum());
+      msg.setCustomer(value);
       break;
     default:
       reader.skipField();
@@ -3207,6 +3235,41 @@ proto.toit.api.OrganizationChange.serializeBinaryToWriter = function(message, wr
   if (f != null) {
     writer.writeString(
       6,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 7));
+  if (f != null) {
+    writer.writeString(
+      7,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 8));
+  if (f != null) {
+    writer.writeString(
+      8,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 9));
+  if (f != null) {
+    writer.writeString(
+      9,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 10));
+  if (f != null) {
+    writer.writeString(
+      10,
+      f
+    );
+  }
+  f = /** @type {!proto.toit.model.Customer.Type} */ (jspb.Message.getField(message, 11));
+  if (f != null) {
+    writer.writeEnum(
+      11,
       f
     );
   }
@@ -3426,6 +3489,186 @@ proto.toit.api.OrganizationChange.prototype.clearEmail = function() {
  */
 proto.toit.api.OrganizationChange.prototype.hasEmail = function() {
   return jspb.Message.getField(this, 6) != null;
+};
+
+
+/**
+ * optional string vat_number = 7;
+ * @return {string}
+ */
+proto.toit.api.OrganizationChange.prototype.getVatNumber = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.toit.api.OrganizationChange} returns this
+ */
+proto.toit.api.OrganizationChange.prototype.setVatNumber = function(value) {
+  return jspb.Message.setOneofField(this, 7, proto.toit.api.OrganizationChange.oneofGroups_[0], value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.toit.api.OrganizationChange} returns this
+ */
+proto.toit.api.OrganizationChange.prototype.clearVatNumber = function() {
+  return jspb.Message.setOneofField(this, 7, proto.toit.api.OrganizationChange.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.toit.api.OrganizationChange.prototype.hasVatNumber = function() {
+  return jspb.Message.getField(this, 7) != null;
+};
+
+
+/**
+ * optional string vat_country_code = 8;
+ * @return {string}
+ */
+proto.toit.api.OrganizationChange.prototype.getVatCountryCode = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 8, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.toit.api.OrganizationChange} returns this
+ */
+proto.toit.api.OrganizationChange.prototype.setVatCountryCode = function(value) {
+  return jspb.Message.setOneofField(this, 8, proto.toit.api.OrganizationChange.oneofGroups_[0], value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.toit.api.OrganizationChange} returns this
+ */
+proto.toit.api.OrganizationChange.prototype.clearVatCountryCode = function() {
+  return jspb.Message.setOneofField(this, 8, proto.toit.api.OrganizationChange.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.toit.api.OrganizationChange.prototype.hasVatCountryCode = function() {
+  return jspb.Message.getField(this, 8) != null;
+};
+
+
+/**
+ * optional string address_line = 9;
+ * @return {string}
+ */
+proto.toit.api.OrganizationChange.prototype.getAddressLine = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 9, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.toit.api.OrganizationChange} returns this
+ */
+proto.toit.api.OrganizationChange.prototype.setAddressLine = function(value) {
+  return jspb.Message.setOneofField(this, 9, proto.toit.api.OrganizationChange.oneofGroups_[0], value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.toit.api.OrganizationChange} returns this
+ */
+proto.toit.api.OrganizationChange.prototype.clearAddressLine = function() {
+  return jspb.Message.setOneofField(this, 9, proto.toit.api.OrganizationChange.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.toit.api.OrganizationChange.prototype.hasAddressLine = function() {
+  return jspb.Message.getField(this, 9) != null;
+};
+
+
+/**
+ * optional string postal_code = 10;
+ * @return {string}
+ */
+proto.toit.api.OrganizationChange.prototype.getPostalCode = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 10, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.toit.api.OrganizationChange} returns this
+ */
+proto.toit.api.OrganizationChange.prototype.setPostalCode = function(value) {
+  return jspb.Message.setOneofField(this, 10, proto.toit.api.OrganizationChange.oneofGroups_[0], value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.toit.api.OrganizationChange} returns this
+ */
+proto.toit.api.OrganizationChange.prototype.clearPostalCode = function() {
+  return jspb.Message.setOneofField(this, 10, proto.toit.api.OrganizationChange.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.toit.api.OrganizationChange.prototype.hasPostalCode = function() {
+  return jspb.Message.getField(this, 10) != null;
+};
+
+
+/**
+ * optional toit.model.Customer.Type customer = 11;
+ * @return {!proto.toit.model.Customer.Type}
+ */
+proto.toit.api.OrganizationChange.prototype.getCustomer = function() {
+  return /** @type {!proto.toit.model.Customer.Type} */ (jspb.Message.getFieldWithDefault(this, 11, 0));
+};
+
+
+/**
+ * @param {!proto.toit.model.Customer.Type} value
+ * @return {!proto.toit.api.OrganizationChange} returns this
+ */
+proto.toit.api.OrganizationChange.prototype.setCustomer = function(value) {
+  return jspb.Message.setOneofField(this, 11, proto.toit.api.OrganizationChange.oneofGroups_[0], value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.toit.api.OrganizationChange} returns this
+ */
+proto.toit.api.OrganizationChange.prototype.clearCustomer = function() {
+  return jspb.Message.setOneofField(this, 11, proto.toit.api.OrganizationChange.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.toit.api.OrganizationChange.prototype.hasCustomer = function() {
+  return jspb.Message.getField(this, 11) != null;
 };
 
 

@@ -39,6 +39,21 @@ export class Organization extends jspb.Message {
   getPaymentDetails(): PaymentDetails | undefined;
   setPaymentDetails(value?: PaymentDetails): void;
 
+  getAddressLine(): string;
+  setAddressLine(value: string): void;
+
+  getPostalCode(): string;
+  setPostalCode(value: string): void;
+
+  getVatNumber(): string;
+  setVatNumber(value: string): void;
+
+  getVatCountryCode(): string;
+  setVatCountryCode(value: string): void;
+
+  getCustomer(): Customer.TypeMap[keyof Customer.TypeMap];
+  setCustomer(value: Customer.TypeMap[keyof Customer.TypeMap]): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Organization.AsObject;
   static toObject(includeInstance: boolean, msg: Organization): Organization.AsObject;
@@ -61,6 +76,11 @@ export namespace Organization {
     cvrNumber: string,
     tier: Tier.TypeMap[keyof Tier.TypeMap],
     paymentDetails?: PaymentDetails.AsObject,
+    addressLine: string,
+    postalCode: string,
+    vatNumber: string,
+    vatCountryCode: string,
+    customer: Customer.TypeMap[keyof Customer.TypeMap],
   }
 }
 
@@ -70,6 +90,21 @@ export class PaymentDetails extends jspb.Message {
 
   getExpiry(): string;
   setExpiry(value: string): void;
+
+  getExpiryMonth(): string;
+  setExpiryMonth(value: string): void;
+
+  getExpiryYear(): string;
+  setExpiryYear(value: string): void;
+
+  getBrand(): string;
+  setBrand(value: string): void;
+
+  getCountryCode(): string;
+  setCountryCode(value: string): void;
+
+  getCvcCheck(): string;
+  setCvcCheck(value: string): void;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PaymentDetails.AsObject;
@@ -85,6 +120,11 @@ export namespace PaymentDetails {
   export type AsObject = {
     last4: string,
     expiry: string,
+    expiryMonth: string,
+    expiryYear: string,
+    brand: string,
+    countryCode: string,
+    cvcCheck: string,
   }
 }
 
@@ -181,6 +221,30 @@ export namespace Tier {
     UNKNOWN: 0;
     FREE: 1;
     PAID: 2;
+  }
+
+  export const Type: TypeMap;
+}
+
+export class Customer extends jspb.Message {
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): Customer.AsObject;
+  static toObject(includeInstance: boolean, msg: Customer): Customer.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: Customer, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): Customer;
+  static deserializeBinaryFromReader(message: Customer, reader: jspb.BinaryReader): Customer;
+}
+
+export namespace Customer {
+  export type AsObject = {
+  }
+
+  export interface TypeMap {
+    UNKNOWN: 0;
+    PERSON: 1;
+    ORGANIZATION: 2;
   }
 
   export const Type: TypeMap;

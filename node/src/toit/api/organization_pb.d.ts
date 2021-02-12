@@ -2,7 +2,6 @@
 // file: toit/api/organization.proto
 
 import * as jspb from "google-protobuf";
-import * as toit_model_device_pb from "../../toit/model/device_pb";
 import * as toit_model_organization_pb from "../../toit/model/organization_pb";
 import * as toit_api_hardware_pb from "../../toit/api/hardware_pb";
 
@@ -409,6 +408,31 @@ export class OrganizationChange extends jspb.Message {
   getEmail(): string;
   setEmail(value: string): void;
 
+  hasVatNumber(): boolean;
+  clearVatNumber(): void;
+  getVatNumber(): string;
+  setVatNumber(value: string): void;
+
+  hasVatCountryCode(): boolean;
+  clearVatCountryCode(): void;
+  getVatCountryCode(): string;
+  setVatCountryCode(value: string): void;
+
+  hasAddressLine(): boolean;
+  clearAddressLine(): void;
+  getAddressLine(): string;
+  setAddressLine(value: string): void;
+
+  hasPostalCode(): boolean;
+  clearPostalCode(): void;
+  getPostalCode(): string;
+  setPostalCode(value: string): void;
+
+  hasCustomer(): boolean;
+  clearCustomer(): void;
+  getCustomer(): toit_model_organization_pb.Customer.TypeMap[keyof toit_model_organization_pb.Customer.TypeMap];
+  setCustomer(value: toit_model_organization_pb.Customer.TypeMap[keyof toit_model_organization_pb.Customer.TypeMap]): void;
+
   getChangeCase(): OrganizationChange.ChangeCase;
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): OrganizationChange.AsObject;
@@ -428,6 +452,11 @@ export namespace OrganizationChange {
     cvrNumber: string,
     name: string,
     email: string,
+    vatNumber: string,
+    vatCountryCode: string,
+    addressLine: string,
+    postalCode: string,
+    customer: toit_model_organization_pb.Customer.TypeMap[keyof toit_model_organization_pb.Customer.TypeMap],
   }
 
   export enum ChangeCase {
@@ -438,6 +467,11 @@ export namespace OrganizationChange {
     CVR_NUMBER = 4,
     NAME = 5,
     EMAIL = 6,
+    VAT_NUMBER = 7,
+    VAT_COUNTRY_CODE = 8,
+    ADDRESS_LINE = 9,
+    POSTAL_CODE = 10,
+    CUSTOMER = 11,
   }
 }
 
