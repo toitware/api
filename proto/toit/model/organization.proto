@@ -23,8 +23,7 @@ message Organization {
     string postal_code = 12;
     string vat_number = 13;
     string vat_country_code = 14;
-    Customer.Type customer = 15;
-    repeated Invoice invoices = 16;
+    Customer.Type customer = 15;    
 }
 
 message PaymentDetails {
@@ -66,9 +65,3 @@ message Customer {
       ORGANIZATION = 2;
     };
 }
-
-message Invoice {
-    string invoice_number = 1;
-    google.protobuf.Timestamp created_at = 2;
-    string pdf_url = 3;
-  }
