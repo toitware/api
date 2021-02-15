@@ -68,7 +68,7 @@ message Customer {
 }
 
 message Invoice {
-    string id = 1;
+    string invoice_number = 1;
     google.protobuf.Timestamp created_at = 2;
-    string url = 3;
+    string pdf_url = 3;
   }
