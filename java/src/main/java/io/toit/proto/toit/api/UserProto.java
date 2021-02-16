@@ -8755,6 +8755,2613 @@ public final class UserProto {
 
   }
 
+  public interface ListPaymentInvoicesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.ListPaymentInvoicesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 limit = 1;</code>
+     * @return The limit.
+     */
+    long getLimit();
+
+    /**
+     * <pre>
+     * If set with an invoice ID, the returned list will start after that invoice ID.
+     * </pre>
+     *
+     * <code>bytes offset = 2;</code>
+     * @return The offset.
+     */
+    com.google.protobuf.ByteString getOffset();
+  }
+  /**
+   * Protobuf type {@code toit.api.ListPaymentInvoicesRequest}
+   */
+  public  static final class ListPaymentInvoicesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.api.ListPaymentInvoicesRequest)
+      ListPaymentInvoicesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListPaymentInvoicesRequest.newBuilder() to construct.
+    private ListPaymentInvoicesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListPaymentInvoicesRequest() {
+      offset_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListPaymentInvoicesRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListPaymentInvoicesRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              limit_ = input.readInt64();
+              break;
+            }
+            case 18: {
+
+              offset_ = input.readBytes();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.api.UserProto.internal_static_toit_api_ListPaymentInvoicesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.api.UserProto.internal_static_toit_api_ListPaymentInvoicesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest.class, io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest.Builder.class);
+    }
+
+    public static final int LIMIT_FIELD_NUMBER = 1;
+    private long limit_;
+    /**
+     * <code>int64 limit = 1;</code>
+     * @return The limit.
+     */
+    public long getLimit() {
+      return limit_;
+    }
+
+    public static final int OFFSET_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString offset_;
+    /**
+     * <pre>
+     * If set with an invoice ID, the returned list will start after that invoice ID.
+     * </pre>
+     *
+     * <code>bytes offset = 2;</code>
+     * @return The offset.
+     */
+    public com.google.protobuf.ByteString getOffset() {
+      return offset_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (limit_ != 0L) {
+        output.writeInt64(1, limit_);
+      }
+      if (!offset_.isEmpty()) {
+        output.writeBytes(2, offset_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (limit_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, limit_);
+      }
+      if (!offset_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, offset_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest other = (io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest) obj;
+
+      if (getLimit()
+          != other.getLimit()) return false;
+      if (!getOffset()
+          .equals(other.getOffset())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLimit());
+      hash = (37 * hash) + OFFSET_FIELD_NUMBER;
+      hash = (53 * hash) + getOffset().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.api.ListPaymentInvoicesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.api.ListPaymentInvoicesRequest)
+        io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.UserProto.internal_static_toit_api_ListPaymentInvoicesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.UserProto.internal_static_toit_api_ListPaymentInvoicesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest.class, io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        limit_ = 0L;
+
+        offset_ = com.google.protobuf.ByteString.EMPTY;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.api.UserProto.internal_static_toit_api_ListPaymentInvoicesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest getDefaultInstanceForType() {
+        return io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest build() {
+        io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest buildPartial() {
+        io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest result = new io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest(this);
+        result.limit_ = limit_;
+        result.offset_ = offset_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest) {
+          return mergeFrom((io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest other) {
+        if (other == io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest.getDefaultInstance()) return this;
+        if (other.getLimit() != 0L) {
+          setLimit(other.getLimit());
+        }
+        if (other.getOffset() != com.google.protobuf.ByteString.EMPTY) {
+          setOffset(other.getOffset());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long limit_ ;
+      /**
+       * <code>int64 limit = 1;</code>
+       * @return The limit.
+       */
+      public long getLimit() {
+        return limit_;
+      }
+      /**
+       * <code>int64 limit = 1;</code>
+       * @param value The limit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLimit(long value) {
+        
+        limit_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 limit = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLimit() {
+        
+        limit_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString offset_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * If set with an invoice ID, the returned list will start after that invoice ID.
+       * </pre>
+       *
+       * <code>bytes offset = 2;</code>
+       * @return The offset.
+       */
+      public com.google.protobuf.ByteString getOffset() {
+        return offset_;
+      }
+      /**
+       * <pre>
+       * If set with an invoice ID, the returned list will start after that invoice ID.
+       * </pre>
+       *
+       * <code>bytes offset = 2;</code>
+       * @param value The offset to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOffset(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        offset_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If set with an invoice ID, the returned list will start after that invoice ID.
+       * </pre>
+       *
+       * <code>bytes offset = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOffset() {
+        
+        offset_ = getDefaultInstance().getOffset();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.api.ListPaymentInvoicesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.api.ListPaymentInvoicesRequest)
+    private static final io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest();
+    }
+
+    public static io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListPaymentInvoicesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListPaymentInvoicesRequest>() {
+      @java.lang.Override
+      public ListPaymentInvoicesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListPaymentInvoicesRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListPaymentInvoicesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListPaymentInvoicesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.api.UserProto.ListPaymentInvoicesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListPaymentInvoicesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.ListPaymentInvoicesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.toit.api.Invoice invoices = 1;</code>
+     * @return Whether the invoices field is set.
+     */
+    boolean hasInvoices();
+    /**
+     * <code>.toit.api.Invoice invoices = 1;</code>
+     * @return The invoices.
+     */
+    io.toit.proto.toit.api.UserProto.Invoice getInvoices();
+    /**
+     * <code>.toit.api.Invoice invoices = 1;</code>
+     */
+    io.toit.proto.toit.api.UserProto.InvoiceOrBuilder getInvoicesOrBuilder();
+  }
+  /**
+   * Protobuf type {@code toit.api.ListPaymentInvoicesResponse}
+   */
+  public  static final class ListPaymentInvoicesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.api.ListPaymentInvoicesResponse)
+      ListPaymentInvoicesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListPaymentInvoicesResponse.newBuilder() to construct.
+    private ListPaymentInvoicesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListPaymentInvoicesResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListPaymentInvoicesResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListPaymentInvoicesResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              io.toit.proto.toit.api.UserProto.Invoice.Builder subBuilder = null;
+              if (invoices_ != null) {
+                subBuilder = invoices_.toBuilder();
+              }
+              invoices_ = input.readMessage(io.toit.proto.toit.api.UserProto.Invoice.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(invoices_);
+                invoices_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.api.UserProto.internal_static_toit_api_ListPaymentInvoicesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.api.UserProto.internal_static_toit_api_ListPaymentInvoicesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse.class, io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse.Builder.class);
+    }
+
+    public static final int INVOICES_FIELD_NUMBER = 1;
+    private io.toit.proto.toit.api.UserProto.Invoice invoices_;
+    /**
+     * <code>.toit.api.Invoice invoices = 1;</code>
+     * @return Whether the invoices field is set.
+     */
+    public boolean hasInvoices() {
+      return invoices_ != null;
+    }
+    /**
+     * <code>.toit.api.Invoice invoices = 1;</code>
+     * @return The invoices.
+     */
+    public io.toit.proto.toit.api.UserProto.Invoice getInvoices() {
+      return invoices_ == null ? io.toit.proto.toit.api.UserProto.Invoice.getDefaultInstance() : invoices_;
+    }
+    /**
+     * <code>.toit.api.Invoice invoices = 1;</code>
+     */
+    public io.toit.proto.toit.api.UserProto.InvoiceOrBuilder getInvoicesOrBuilder() {
+      return getInvoices();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (invoices_ != null) {
+        output.writeMessage(1, getInvoices());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (invoices_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getInvoices());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse other = (io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse) obj;
+
+      if (hasInvoices() != other.hasInvoices()) return false;
+      if (hasInvoices()) {
+        if (!getInvoices()
+            .equals(other.getInvoices())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasInvoices()) {
+        hash = (37 * hash) + INVOICES_FIELD_NUMBER;
+        hash = (53 * hash) + getInvoices().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.api.ListPaymentInvoicesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.api.ListPaymentInvoicesResponse)
+        io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.UserProto.internal_static_toit_api_ListPaymentInvoicesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.UserProto.internal_static_toit_api_ListPaymentInvoicesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse.class, io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (invoicesBuilder_ == null) {
+          invoices_ = null;
+        } else {
+          invoices_ = null;
+          invoicesBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.api.UserProto.internal_static_toit_api_ListPaymentInvoicesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse getDefaultInstanceForType() {
+        return io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse build() {
+        io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse buildPartial() {
+        io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse result = new io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse(this);
+        if (invoicesBuilder_ == null) {
+          result.invoices_ = invoices_;
+        } else {
+          result.invoices_ = invoicesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse) {
+          return mergeFrom((io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse other) {
+        if (other == io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse.getDefaultInstance()) return this;
+        if (other.hasInvoices()) {
+          mergeInvoices(other.getInvoices());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private io.toit.proto.toit.api.UserProto.Invoice invoices_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.api.UserProto.Invoice, io.toit.proto.toit.api.UserProto.Invoice.Builder, io.toit.proto.toit.api.UserProto.InvoiceOrBuilder> invoicesBuilder_;
+      /**
+       * <code>.toit.api.Invoice invoices = 1;</code>
+       * @return Whether the invoices field is set.
+       */
+      public boolean hasInvoices() {
+        return invoicesBuilder_ != null || invoices_ != null;
+      }
+      /**
+       * <code>.toit.api.Invoice invoices = 1;</code>
+       * @return The invoices.
+       */
+      public io.toit.proto.toit.api.UserProto.Invoice getInvoices() {
+        if (invoicesBuilder_ == null) {
+          return invoices_ == null ? io.toit.proto.toit.api.UserProto.Invoice.getDefaultInstance() : invoices_;
+        } else {
+          return invoicesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.toit.api.Invoice invoices = 1;</code>
+       */
+      public Builder setInvoices(io.toit.proto.toit.api.UserProto.Invoice value) {
+        if (invoicesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          invoices_ = value;
+          onChanged();
+        } else {
+          invoicesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.api.Invoice invoices = 1;</code>
+       */
+      public Builder setInvoices(
+          io.toit.proto.toit.api.UserProto.Invoice.Builder builderForValue) {
+        if (invoicesBuilder_ == null) {
+          invoices_ = builderForValue.build();
+          onChanged();
+        } else {
+          invoicesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.api.Invoice invoices = 1;</code>
+       */
+      public Builder mergeInvoices(io.toit.proto.toit.api.UserProto.Invoice value) {
+        if (invoicesBuilder_ == null) {
+          if (invoices_ != null) {
+            invoices_ =
+              io.toit.proto.toit.api.UserProto.Invoice.newBuilder(invoices_).mergeFrom(value).buildPartial();
+          } else {
+            invoices_ = value;
+          }
+          onChanged();
+        } else {
+          invoicesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.api.Invoice invoices = 1;</code>
+       */
+      public Builder clearInvoices() {
+        if (invoicesBuilder_ == null) {
+          invoices_ = null;
+          onChanged();
+        } else {
+          invoices_ = null;
+          invoicesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.api.Invoice invoices = 1;</code>
+       */
+      public io.toit.proto.toit.api.UserProto.Invoice.Builder getInvoicesBuilder() {
+        
+        onChanged();
+        return getInvoicesFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.toit.api.Invoice invoices = 1;</code>
+       */
+      public io.toit.proto.toit.api.UserProto.InvoiceOrBuilder getInvoicesOrBuilder() {
+        if (invoicesBuilder_ != null) {
+          return invoicesBuilder_.getMessageOrBuilder();
+        } else {
+          return invoices_ == null ?
+              io.toit.proto.toit.api.UserProto.Invoice.getDefaultInstance() : invoices_;
+        }
+      }
+      /**
+       * <code>.toit.api.Invoice invoices = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.api.UserProto.Invoice, io.toit.proto.toit.api.UserProto.Invoice.Builder, io.toit.proto.toit.api.UserProto.InvoiceOrBuilder> 
+          getInvoicesFieldBuilder() {
+        if (invoicesBuilder_ == null) {
+          invoicesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.toit.proto.toit.api.UserProto.Invoice, io.toit.proto.toit.api.UserProto.Invoice.Builder, io.toit.proto.toit.api.UserProto.InvoiceOrBuilder>(
+                  getInvoices(),
+                  getParentForChildren(),
+                  isClean());
+          invoices_ = null;
+        }
+        return invoicesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.api.ListPaymentInvoicesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.api.ListPaymentInvoicesResponse)
+    private static final io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse();
+    }
+
+    public static io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListPaymentInvoicesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListPaymentInvoicesResponse>() {
+      @java.lang.Override
+      public ListPaymentInvoicesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListPaymentInvoicesResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListPaymentInvoicesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListPaymentInvoicesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.api.UserProto.ListPaymentInvoicesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface InvoiceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.Invoice)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string invoice_id = 1;</code>
+     * @return The invoiceId.
+     */
+    java.lang.String getInvoiceId();
+    /**
+     * <code>string invoice_id = 1;</code>
+     * @return The bytes for invoiceId.
+     */
+    com.google.protobuf.ByteString
+        getInvoiceIdBytes();
+
+    /**
+     * <code>string invoice_number = 2;</code>
+     * @return The invoiceNumber.
+     */
+    java.lang.String getInvoiceNumber();
+    /**
+     * <code>string invoice_number = 2;</code>
+     * @return The bytes for invoiceNumber.
+     */
+    com.google.protobuf.ByteString
+        getInvoiceNumberBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
+     */
+    boolean hasCreatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
+     */
+    com.google.protobuf.Timestamp getCreatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
+
+    /**
+     * <code>string pdf_url = 4;</code>
+     * @return The pdfUrl.
+     */
+    java.lang.String getPdfUrl();
+    /**
+     * <code>string pdf_url = 4;</code>
+     * @return The bytes for pdfUrl.
+     */
+    com.google.protobuf.ByteString
+        getPdfUrlBytes();
+
+    /**
+     * <code>string status = 5;</code>
+     * @return The status.
+     */
+    java.lang.String getStatus();
+    /**
+     * <code>string status = 5;</code>
+     * @return The bytes for status.
+     */
+    com.google.protobuf.ByteString
+        getStatusBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp due_date = 6;</code>
+     * @return Whether the dueDate field is set.
+     */
+    boolean hasDueDate();
+    /**
+     * <code>.google.protobuf.Timestamp due_date = 6;</code>
+     * @return The dueDate.
+     */
+    com.google.protobuf.Timestamp getDueDate();
+    /**
+     * <code>.google.protobuf.Timestamp due_date = 6;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getDueDateOrBuilder();
+  }
+  /**
+   * Protobuf type {@code toit.api.Invoice}
+   */
+  public  static final class Invoice extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.api.Invoice)
+      InvoiceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Invoice.newBuilder() to construct.
+    private Invoice(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Invoice() {
+      invoiceId_ = "";
+      invoiceNumber_ = "";
+      pdfUrl_ = "";
+      status_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Invoice();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Invoice(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              invoiceId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              invoiceNumber_ = s;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (createdAt_ != null) {
+                subBuilder = createdAt_.toBuilder();
+              }
+              createdAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(createdAt_);
+                createdAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pdfUrl_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              status_ = s;
+              break;
+            }
+            case 50: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (dueDate_ != null) {
+                subBuilder = dueDate_.toBuilder();
+              }
+              dueDate_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(dueDate_);
+                dueDate_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.api.UserProto.internal_static_toit_api_Invoice_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.api.UserProto.internal_static_toit_api_Invoice_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.api.UserProto.Invoice.class, io.toit.proto.toit.api.UserProto.Invoice.Builder.class);
+    }
+
+    public static final int INVOICE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object invoiceId_;
+    /**
+     * <code>string invoice_id = 1;</code>
+     * @return The invoiceId.
+     */
+    public java.lang.String getInvoiceId() {
+      java.lang.Object ref = invoiceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        invoiceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string invoice_id = 1;</code>
+     * @return The bytes for invoiceId.
+     */
+    public com.google.protobuf.ByteString
+        getInvoiceIdBytes() {
+      java.lang.Object ref = invoiceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        invoiceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INVOICE_NUMBER_FIELD_NUMBER = 2;
+    private volatile java.lang.Object invoiceNumber_;
+    /**
+     * <code>string invoice_number = 2;</code>
+     * @return The invoiceNumber.
+     */
+    public java.lang.String getInvoiceNumber() {
+      java.lang.Object ref = invoiceNumber_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        invoiceNumber_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string invoice_number = 2;</code>
+     * @return The bytes for invoiceNumber.
+     */
+    public com.google.protobuf.ByteString
+        getInvoiceNumberBytes() {
+      java.lang.Object ref = invoiceNumber_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        invoiceNumber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CREATED_AT_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp createdAt_;
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
+     */
+    public boolean hasCreatedAt() {
+      return createdAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
+     */
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+      return getCreatedAt();
+    }
+
+    public static final int PDF_URL_FIELD_NUMBER = 4;
+    private volatile java.lang.Object pdfUrl_;
+    /**
+     * <code>string pdf_url = 4;</code>
+     * @return The pdfUrl.
+     */
+    public java.lang.String getPdfUrl() {
+      java.lang.Object ref = pdfUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pdfUrl_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string pdf_url = 4;</code>
+     * @return The bytes for pdfUrl.
+     */
+    public com.google.protobuf.ByteString
+        getPdfUrlBytes() {
+      java.lang.Object ref = pdfUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pdfUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 5;
+    private volatile java.lang.Object status_;
+    /**
+     * <code>string status = 5;</code>
+     * @return The status.
+     */
+    public java.lang.String getStatus() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        status_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string status = 5;</code>
+     * @return The bytes for status.
+     */
+    public com.google.protobuf.ByteString
+        getStatusBytes() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        status_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DUE_DATE_FIELD_NUMBER = 6;
+    private com.google.protobuf.Timestamp dueDate_;
+    /**
+     * <code>.google.protobuf.Timestamp due_date = 6;</code>
+     * @return Whether the dueDate field is set.
+     */
+    public boolean hasDueDate() {
+      return dueDate_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp due_date = 6;</code>
+     * @return The dueDate.
+     */
+    public com.google.protobuf.Timestamp getDueDate() {
+      return dueDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dueDate_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp due_date = 6;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getDueDateOrBuilder() {
+      return getDueDate();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getInvoiceIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, invoiceId_);
+      }
+      if (!getInvoiceNumberBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, invoiceNumber_);
+      }
+      if (createdAt_ != null) {
+        output.writeMessage(3, getCreatedAt());
+      }
+      if (!getPdfUrlBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, pdfUrl_);
+      }
+      if (!getStatusBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, status_);
+      }
+      if (dueDate_ != null) {
+        output.writeMessage(6, getDueDate());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getInvoiceIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, invoiceId_);
+      }
+      if (!getInvoiceNumberBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, invoiceNumber_);
+      }
+      if (createdAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getCreatedAt());
+      }
+      if (!getPdfUrlBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, pdfUrl_);
+      }
+      if (!getStatusBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, status_);
+      }
+      if (dueDate_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getDueDate());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.api.UserProto.Invoice)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.api.UserProto.Invoice other = (io.toit.proto.toit.api.UserProto.Invoice) obj;
+
+      if (!getInvoiceId()
+          .equals(other.getInvoiceId())) return false;
+      if (!getInvoiceNumber()
+          .equals(other.getInvoiceNumber())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
+      if (hasCreatedAt()) {
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
+      }
+      if (!getPdfUrl()
+          .equals(other.getPdfUrl())) return false;
+      if (!getStatus()
+          .equals(other.getStatus())) return false;
+      if (hasDueDate() != other.hasDueDate()) return false;
+      if (hasDueDate()) {
+        if (!getDueDate()
+            .equals(other.getDueDate())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INVOICE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInvoiceId().hashCode();
+      hash = (37 * hash) + INVOICE_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getInvoiceNumber().hashCode();
+      if (hasCreatedAt()) {
+        hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getCreatedAt().hashCode();
+      }
+      hash = (37 * hash) + PDF_URL_FIELD_NUMBER;
+      hash = (53 * hash) + getPdfUrl().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + getStatus().hashCode();
+      if (hasDueDate()) {
+        hash = (37 * hash) + DUE_DATE_FIELD_NUMBER;
+        hash = (53 * hash) + getDueDate().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.api.UserProto.Invoice parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.UserProto.Invoice parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.Invoice parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.UserProto.Invoice parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.Invoice parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.UserProto.Invoice parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.Invoice parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.UserProto.Invoice parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.Invoice parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.UserProto.Invoice parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.Invoice parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.UserProto.Invoice parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.api.UserProto.Invoice prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.api.Invoice}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.api.Invoice)
+        io.toit.proto.toit.api.UserProto.InvoiceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.UserProto.internal_static_toit_api_Invoice_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.UserProto.internal_static_toit_api_Invoice_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.UserProto.Invoice.class, io.toit.proto.toit.api.UserProto.Invoice.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.api.UserProto.Invoice.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        invoiceId_ = "";
+
+        invoiceNumber_ = "";
+
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
+        pdfUrl_ = "";
+
+        status_ = "";
+
+        if (dueDateBuilder_ == null) {
+          dueDate_ = null;
+        } else {
+          dueDate_ = null;
+          dueDateBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.api.UserProto.internal_static_toit_api_Invoice_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.UserProto.Invoice getDefaultInstanceForType() {
+        return io.toit.proto.toit.api.UserProto.Invoice.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.UserProto.Invoice build() {
+        io.toit.proto.toit.api.UserProto.Invoice result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.UserProto.Invoice buildPartial() {
+        io.toit.proto.toit.api.UserProto.Invoice result = new io.toit.proto.toit.api.UserProto.Invoice(this);
+        result.invoiceId_ = invoiceId_;
+        result.invoiceNumber_ = invoiceNumber_;
+        if (createdAtBuilder_ == null) {
+          result.createdAt_ = createdAt_;
+        } else {
+          result.createdAt_ = createdAtBuilder_.build();
+        }
+        result.pdfUrl_ = pdfUrl_;
+        result.status_ = status_;
+        if (dueDateBuilder_ == null) {
+          result.dueDate_ = dueDate_;
+        } else {
+          result.dueDate_ = dueDateBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.api.UserProto.Invoice) {
+          return mergeFrom((io.toit.proto.toit.api.UserProto.Invoice)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.api.UserProto.Invoice other) {
+        if (other == io.toit.proto.toit.api.UserProto.Invoice.getDefaultInstance()) return this;
+        if (!other.getInvoiceId().isEmpty()) {
+          invoiceId_ = other.invoiceId_;
+          onChanged();
+        }
+        if (!other.getInvoiceNumber().isEmpty()) {
+          invoiceNumber_ = other.invoiceNumber_;
+          onChanged();
+        }
+        if (other.hasCreatedAt()) {
+          mergeCreatedAt(other.getCreatedAt());
+        }
+        if (!other.getPdfUrl().isEmpty()) {
+          pdfUrl_ = other.pdfUrl_;
+          onChanged();
+        }
+        if (!other.getStatus().isEmpty()) {
+          status_ = other.status_;
+          onChanged();
+        }
+        if (other.hasDueDate()) {
+          mergeDueDate(other.getDueDate());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.api.UserProto.Invoice parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.api.UserProto.Invoice) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object invoiceId_ = "";
+      /**
+       * <code>string invoice_id = 1;</code>
+       * @return The invoiceId.
+       */
+      public java.lang.String getInvoiceId() {
+        java.lang.Object ref = invoiceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          invoiceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string invoice_id = 1;</code>
+       * @return The bytes for invoiceId.
+       */
+      public com.google.protobuf.ByteString
+          getInvoiceIdBytes() {
+        java.lang.Object ref = invoiceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          invoiceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string invoice_id = 1;</code>
+       * @param value The invoiceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInvoiceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        invoiceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string invoice_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInvoiceId() {
+        
+        invoiceId_ = getDefaultInstance().getInvoiceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string invoice_id = 1;</code>
+       * @param value The bytes for invoiceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInvoiceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        invoiceId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object invoiceNumber_ = "";
+      /**
+       * <code>string invoice_number = 2;</code>
+       * @return The invoiceNumber.
+       */
+      public java.lang.String getInvoiceNumber() {
+        java.lang.Object ref = invoiceNumber_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          invoiceNumber_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string invoice_number = 2;</code>
+       * @return The bytes for invoiceNumber.
+       */
+      public com.google.protobuf.ByteString
+          getInvoiceNumberBytes() {
+        java.lang.Object ref = invoiceNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          invoiceNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string invoice_number = 2;</code>
+       * @param value The invoiceNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInvoiceNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        invoiceNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string invoice_number = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInvoiceNumber() {
+        
+        invoiceNumber_ = getDefaultInstance().getInvoiceNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string invoice_number = 2;</code>
+       * @param value The bytes for invoiceNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInvoiceNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        invoiceNumber_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp createdAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return Whether the createdAt field is set.
+       */
+      public boolean hasCreatedAt() {
+        return createdAtBuilder_ != null || createdAt_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return The createdAt.
+       */
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        } else {
+          return createdAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          createdAt_ = value;
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      public Builder setCreatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (createdAt_ != null) {
+            createdAt_ =
+              com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+          } else {
+            createdAt_ = value;
+          }
+          onChanged();
+        } else {
+          createdAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      public Builder clearCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+          onChanged();
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
+        
+        onChanged();
+        return getCreatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+        if (createdAtBuilder_ != null) {
+          return createdAtBuilder_.getMessageOrBuilder();
+        } else {
+          return createdAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCreatedAtFieldBuilder() {
+        if (createdAtBuilder_ == null) {
+          createdAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCreatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          createdAt_ = null;
+        }
+        return createdAtBuilder_;
+      }
+
+      private java.lang.Object pdfUrl_ = "";
+      /**
+       * <code>string pdf_url = 4;</code>
+       * @return The pdfUrl.
+       */
+      public java.lang.String getPdfUrl() {
+        java.lang.Object ref = pdfUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pdfUrl_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string pdf_url = 4;</code>
+       * @return The bytes for pdfUrl.
+       */
+      public com.google.protobuf.ByteString
+          getPdfUrlBytes() {
+        java.lang.Object ref = pdfUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pdfUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string pdf_url = 4;</code>
+       * @param value The pdfUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPdfUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pdfUrl_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string pdf_url = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPdfUrl() {
+        
+        pdfUrl_ = getDefaultInstance().getPdfUrl();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string pdf_url = 4;</code>
+       * @param value The bytes for pdfUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPdfUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pdfUrl_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object status_ = "";
+      /**
+       * <code>string status = 5;</code>
+       * @return The status.
+       */
+      public java.lang.String getStatus() {
+        java.lang.Object ref = status_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          status_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string status = 5;</code>
+       * @return The bytes for status.
+       */
+      public com.google.protobuf.ByteString
+          getStatusBytes() {
+        java.lang.Object ref = status_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          status_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string status = 5;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string status = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        
+        status_ = getDefaultInstance().getStatus();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string status = 5;</code>
+       * @param value The bytes for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp dueDate_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> dueDateBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp due_date = 6;</code>
+       * @return Whether the dueDate field is set.
+       */
+      public boolean hasDueDate() {
+        return dueDateBuilder_ != null || dueDate_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp due_date = 6;</code>
+       * @return The dueDate.
+       */
+      public com.google.protobuf.Timestamp getDueDate() {
+        if (dueDateBuilder_ == null) {
+          return dueDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dueDate_;
+        } else {
+          return dueDateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp due_date = 6;</code>
+       */
+      public Builder setDueDate(com.google.protobuf.Timestamp value) {
+        if (dueDateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          dueDate_ = value;
+          onChanged();
+        } else {
+          dueDateBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp due_date = 6;</code>
+       */
+      public Builder setDueDate(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (dueDateBuilder_ == null) {
+          dueDate_ = builderForValue.build();
+          onChanged();
+        } else {
+          dueDateBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp due_date = 6;</code>
+       */
+      public Builder mergeDueDate(com.google.protobuf.Timestamp value) {
+        if (dueDateBuilder_ == null) {
+          if (dueDate_ != null) {
+            dueDate_ =
+              com.google.protobuf.Timestamp.newBuilder(dueDate_).mergeFrom(value).buildPartial();
+          } else {
+            dueDate_ = value;
+          }
+          onChanged();
+        } else {
+          dueDateBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp due_date = 6;</code>
+       */
+      public Builder clearDueDate() {
+        if (dueDateBuilder_ == null) {
+          dueDate_ = null;
+          onChanged();
+        } else {
+          dueDate_ = null;
+          dueDateBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp due_date = 6;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getDueDateBuilder() {
+        
+        onChanged();
+        return getDueDateFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp due_date = 6;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getDueDateOrBuilder() {
+        if (dueDateBuilder_ != null) {
+          return dueDateBuilder_.getMessageOrBuilder();
+        } else {
+          return dueDate_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : dueDate_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp due_date = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getDueDateFieldBuilder() {
+        if (dueDateBuilder_ == null) {
+          dueDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getDueDate(),
+                  getParentForChildren(),
+                  isClean());
+          dueDate_ = null;
+        }
+        return dueDateBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.api.Invoice)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.api.Invoice)
+    private static final io.toit.proto.toit.api.UserProto.Invoice DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.api.UserProto.Invoice();
+    }
+
+    public static io.toit.proto.toit.api.UserProto.Invoice getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Invoice>
+        PARSER = new com.google.protobuf.AbstractParser<Invoice>() {
+      @java.lang.Override
+      public Invoice parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Invoice(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Invoice> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Invoice> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.api.UserProto.Invoice getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CancelPaymentSubscriptionRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:toit.api.CancelPaymentSubscriptionRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -9662,6 +12269,21 @@ public final class UserProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_toit_api_CreatePaymentSubscriptionResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_ListPaymentInvoicesRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_ListPaymentInvoicesRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_ListPaymentInvoicesResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_ListPaymentInvoicesResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_Invoice_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_Invoice_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_toit_api_CancelPaymentSubscriptionRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -9682,65 +12304,77 @@ public final class UserProto {
     java.lang.String[] descriptorData = {
       "\n\023toit/api/user.proto\022\010toit.api\032\035toit/mo" +
       "del/organization.proto\032\033toit/api/organiz" +
-      "ation.proto\"@\n\022SetPasswordRequest\022\024\n\014old" +
-      "_password\030\001 \001(\t\022\024\n\014new_password\030\002 \001(\t\"\025\n" +
-      "\023SetPasswordResponse\"-\n\034InitiateResetPas" +
-      "swordRequest\022\r\n\005email\030\001 \001(\t\"\037\n\035InitiateR" +
-      "esetPasswordResponse\"G\n ChangePasswordWi" +
-      "thRPTokenRequest\022\r\n\005token\030\001 \001(\t\022\024\n\014new_p" +
-      "assword\030\002 \001(\t\"#\n!ChangePasswordWithRPTok" +
-      "enResponse\"\027\n\025GetCurrentUserRequest\"h\n\026G" +
-      "etCurrentUserResponse\022\036\n\004user\030\001 \001(\0132\020.to" +
-      "it.model.User\022.\n\014organization\030\002 \001(\0132\030.to" +
-      "it.model.Organization\"p\n\030ListOrganizatio" +
-      "nsRequest\022\017\n\007user_id\030\001 \001(\014\022\016\n\006offset\030\002 \001" +
-      "(\014\022\r\n\005limit\030\003 \001(\003\022\020\n\010order_by\030\004 \001(\t\022\022\n\no" +
-      "rder_desc\030\005 \001(\010\"\\\n\031ListOrganizationsResp" +
-      "onse\022/\n\rorganizations\030\001 \003(\0132\030.toit.model" +
-      ".Organization\022\016\n\006offset\030\002 \001(\014\"$\n\026GetOrga" +
-      "nizationRequest\022\n\n\002id\030\001 \001(\014\"I\n\027GetOrgani" +
-      "zationResponse\022.\n\014organization\030\001 \001(\0132\030.t" +
-      "oit.model.Organization\"\257\001\n CreatePayment" +
-      "SubscriptionRequest\022\025\n\rbilling_email\030\001 \001" +
-      "(\t\022\030\n\020card_holder_name\030\002 \001(\t\022\020\n\010card_cvc" +
-      "\030\003 \001(\005\022\031\n\021card_expiry_month\030\004 \001(\005\022\030\n\020car" +
-      "d_expiry_year\030\005 \001(\005\022\023\n\013card_number\030\006 \001(\004" +
-      "\"#\n!CreatePaymentSubscriptionResponse\"\"\n" +
-      " CancelPaymentSubscriptionRequest\"#\n!Can" +
-      "celPaymentSubscriptionResponse2\322\007\n\004User\022" +
-      "L\n\013SetPassword\022\034.toit.api.SetPasswordReq" +
-      "uest\032\035.toit.api.SetPasswordResponse\"\000\022j\n" +
-      "\025InitiateResetPassword\022&.toit.api.Initia" +
-      "teResetPasswordRequest\032\'.toit.api.Initia" +
-      "teResetPasswordResponse\"\000\022v\n\031ChangePassw" +
-      "ordWithRPToken\022*.toit.api.ChangePassword" +
-      "WithRPTokenRequest\032+.toit.api.ChangePass" +
-      "wordWithRPTokenResponse\"\000\022U\n\016GetCurrentU" +
-      "ser\022\037.toit.api.GetCurrentUserRequest\032 .t" +
-      "oit.api.GetCurrentUserResponse\"\000\022^\n\021List" +
-      "Organizations\022\".toit.api.ListOrganizatio" +
-      "nsRequest\032#.toit.api.ListOrganizationsRe" +
-      "sponse\"\000\022X\n\017GetOrganization\022 .toit.api.G" +
-      "etOrganizationRequest\032!.toit.api.GetOrga" +
-      "nizationResponse\"\000\022v\n\031CreatePaymentSubsc" +
-      "ription\022*.toit.api.CreatePaymentSubscrip" +
-      "tionRequest\032+.toit.api.CreatePaymentSubs" +
-      "criptionResponse\"\000\022I\n\tListUsers\022\032.toit.a" +
-      "pi.ListUsersRequest\032\033.toit.api.ListUsers" +
-      "Response\"\003\210\002\001\022L\n\nCreateUser\022\033.toit.api.C" +
-      "reateUserRequest\032\034.toit.api.CreateUserRe" +
-      "sponse\"\003\210\002\001\022v\n\031CancelPaymentSubscription" +
-      "\022*.toit.api.CancelPaymentSubscriptionReq" +
-      "uest\032+.toit.api.CancelPaymentSubscriptio" +
-      "nResponse\"\000BI\n\026io.toit.proto.toit.apiB\tU" +
-      "serProtoZ$github.com/toitware/api.git/to" +
-      "it/apib\006proto3"
+      "ation.proto\032\037google/protobuf/timestamp.p" +
+      "roto\"@\n\022SetPasswordRequest\022\024\n\014old_passwo" +
+      "rd\030\001 \001(\t\022\024\n\014new_password\030\002 \001(\t\"\025\n\023SetPas" +
+      "swordResponse\"-\n\034InitiateResetPasswordRe" +
+      "quest\022\r\n\005email\030\001 \001(\t\"\037\n\035InitiateResetPas" +
+      "swordResponse\"G\n ChangePasswordWithRPTok" +
+      "enRequest\022\r\n\005token\030\001 \001(\t\022\024\n\014new_password" +
+      "\030\002 \001(\t\"#\n!ChangePasswordWithRPTokenRespo" +
+      "nse\"\027\n\025GetCurrentUserRequest\"h\n\026GetCurre" +
+      "ntUserResponse\022\036\n\004user\030\001 \001(\0132\020.toit.mode" +
+      "l.User\022.\n\014organization\030\002 \001(\0132\030.toit.mode" +
+      "l.Organization\"p\n\030ListOrganizationsReque" +
+      "st\022\017\n\007user_id\030\001 \001(\014\022\016\n\006offset\030\002 \001(\014\022\r\n\005l" +
+      "imit\030\003 \001(\003\022\020\n\010order_by\030\004 \001(\t\022\022\n\norder_de" +
+      "sc\030\005 \001(\010\"\\\n\031ListOrganizationsResponse\022/\n" +
+      "\rorganizations\030\001 \003(\0132\030.toit.model.Organi" +
+      "zation\022\016\n\006offset\030\002 \001(\014\"$\n\026GetOrganizatio" +
+      "nRequest\022\n\n\002id\030\001 \001(\014\"I\n\027GetOrganizationR" +
+      "esponse\022.\n\014organization\030\001 \001(\0132\030.toit.mod" +
+      "el.Organization\"\257\001\n CreatePaymentSubscri" +
+      "ptionRequest\022\025\n\rbilling_email\030\001 \001(\t\022\030\n\020c" +
+      "ard_holder_name\030\002 \001(\t\022\020\n\010card_cvc\030\003 \001(\005\022" +
+      "\031\n\021card_expiry_month\030\004 \001(\005\022\030\n\020card_expir" +
+      "y_year\030\005 \001(\005\022\023\n\013card_number\030\006 \001(\004\"#\n!Cre" +
+      "atePaymentSubscriptionResponse\";\n\032ListPa" +
+      "ymentInvoicesRequest\022\r\n\005limit\030\001 \001(\003\022\016\n\006o" +
+      "ffset\030\002 \001(\014\"B\n\033ListPaymentInvoicesRespon" +
+      "se\022#\n\010invoices\030\001 \001(\0132\021.toit.api.Invoice\"" +
+      "\264\001\n\007Invoice\022\022\n\ninvoice_id\030\001 \001(\t\022\026\n\016invoi" +
+      "ce_number\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.go" +
+      "ogle.protobuf.Timestamp\022\017\n\007pdf_url\030\004 \001(\t" +
+      "\022\016\n\006status\030\005 \001(\t\022,\n\010due_date\030\006 \001(\0132\032.goo" +
+      "gle.protobuf.Timestamp\"\"\n CancelPaymentS" +
+      "ubscriptionRequest\"#\n!CancelPaymentSubsc" +
+      "riptionResponse2\272\010\n\004User\022L\n\013SetPassword\022" +
+      "\034.toit.api.SetPasswordRequest\032\035.toit.api" +
+      ".SetPasswordResponse\"\000\022j\n\025InitiateResetP" +
+      "assword\022&.toit.api.InitiateResetPassword" +
+      "Request\032\'.toit.api.InitiateResetPassword" +
+      "Response\"\000\022v\n\031ChangePasswordWithRPToken\022" +
+      "*.toit.api.ChangePasswordWithRPTokenRequ" +
+      "est\032+.toit.api.ChangePasswordWithRPToken" +
+      "Response\"\000\022U\n\016GetCurrentUser\022\037.toit.api." +
+      "GetCurrentUserRequest\032 .toit.api.GetCurr" +
+      "entUserResponse\"\000\022^\n\021ListOrganizations\022\"" +
+      ".toit.api.ListOrganizationsRequest\032#.toi" +
+      "t.api.ListOrganizationsResponse\"\000\022X\n\017Get" +
+      "Organization\022 .toit.api.GetOrganizationR" +
+      "equest\032!.toit.api.GetOrganizationRespons" +
+      "e\"\000\022I\n\tListUsers\022\032.toit.api.ListUsersReq" +
+      "uest\032\033.toit.api.ListUsersResponse\"\003\210\002\001\022L" +
+      "\n\nCreateUser\022\033.toit.api.CreateUserReques" +
+      "t\032\034.toit.api.CreateUserResponse\"\003\210\002\001\022v\n\031" +
+      "CreatePaymentSubscription\022*.toit.api.Cre" +
+      "atePaymentSubscriptionRequest\032+.toit.api" +
+      ".CreatePaymentSubscriptionResponse\"\000\022f\n\023" +
+      "ListPaymentInvoices\022$.toit.api.ListPayme" +
+      "ntInvoicesRequest\032%.toit.api.ListPayment" +
+      "InvoicesResponse\"\0000\001\022v\n\031CancelPaymentSub" +
+      "scription\022*.toit.api.CancelPaymentSubscr" +
+      "iptionRequest\032+.toit.api.CancelPaymentSu" +
+      "bscriptionResponse\"\000BI\n\026io.toit.proto.to" +
+      "it.apiB\tUserProtoZ$github.com/toitware/a" +
+      "pi.git/toit/apib\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           io.toit.proto.toit.model.OrganizationProto.getDescriptor(),
           io.toit.proto.toit.api.OrgProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_toit_api_SetPasswordRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -9826,20 +12460,39 @@ public final class UserProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_CreatePaymentSubscriptionResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_toit_api_CancelPaymentSubscriptionRequest_descriptor =
+    internal_static_toit_api_ListPaymentInvoicesRequest_descriptor =
       getDescriptor().getMessageTypes().get(14);
+    internal_static_toit_api_ListPaymentInvoicesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_ListPaymentInvoicesRequest_descriptor,
+        new java.lang.String[] { "Limit", "Offset", });
+    internal_static_toit_api_ListPaymentInvoicesResponse_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_toit_api_ListPaymentInvoicesResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_ListPaymentInvoicesResponse_descriptor,
+        new java.lang.String[] { "Invoices", });
+    internal_static_toit_api_Invoice_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_toit_api_Invoice_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_Invoice_descriptor,
+        new java.lang.String[] { "InvoiceId", "InvoiceNumber", "CreatedAt", "PdfUrl", "Status", "DueDate", });
+    internal_static_toit_api_CancelPaymentSubscriptionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(17);
     internal_static_toit_api_CancelPaymentSubscriptionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_CancelPaymentSubscriptionRequest_descriptor,
         new java.lang.String[] { });
     internal_static_toit_api_CancelPaymentSubscriptionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_toit_api_CancelPaymentSubscriptionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_CancelPaymentSubscriptionResponse_descriptor,
         new java.lang.String[] { });
     io.toit.proto.toit.model.OrganizationProto.getDescriptor();
     io.toit.proto.toit.api.OrgProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
