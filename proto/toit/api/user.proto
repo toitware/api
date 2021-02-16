@@ -24,9 +24,9 @@ service User {
     rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {
         option deprecated = true;
     }
-    
+
     rpc CreatePaymentSubscription(CreatePaymentSubscriptionRequest) returns (CreatePaymentSubscriptionResponse) {}
-    rpc ListPaymentInvoices(ListPaymentInvoicesRequest) returns (ListPaymentInvoicesResponse) {}
+    rpc ListPaymentInvoices(ListPaymentInvoicesRequest) returns (stream ListPaymentInvoicesResponse) {}
     rpc CancelPaymentSubscription(CancelPaymentSubscriptionRequest) returns (CancelPaymentSubscriptionResponse) {}
 }
 
@@ -91,18 +91,20 @@ message CreatePaymentSubscriptionResponse {
 
 message ListPaymentInvoicesRequest {
     int64 limit = 1;
+    bytes offset = 2; // If set with an invoice ID, the returned list will start after that invoice ID.
 }
 
 message ListPaymentInvoicesResponse {
-    repeated Invoice invoices = 1;
+    Invoice invoices = 1;
 }
 
 message Invoice {
-    string invoice_number = 1;
-    google.protobuf.Timestamp created_at = 2;
-    string pdf_url = 3;
-    string status = 4;
-    google.protobuf.Timestamp due_date = 5;  
+    string invoice_id = 1;
+    string invoice_number = 2;
+    google.protobuf.Timestamp created_at = 3;
+    string pdf_url = 4;
+    string status = 5;
+    google.protobuf.Timestamp due_date = 6;
 }
 
 message CancelPaymentSubscriptionRequest {}
