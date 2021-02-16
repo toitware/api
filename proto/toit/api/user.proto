@@ -24,8 +24,10 @@ service User {
     rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {
         option deprecated = true;
     }
+    
     rpc CreatePaymentSubscription(CreatePaymentSubscriptionRequest) returns (CreatePaymentSubscriptionResponse) {}
     rpc ListPaymentInvoices(ListPaymentInvoicesRequest) returns (ListPaymentInvoicesResponse) {}
+    rpc CancelPaymentSubscription(CancelPaymentSubscriptionRequest) returns (CancelPaymentSubscriptionResponse) {}
 }
 
 message SetPasswordRequest {
@@ -101,4 +103,8 @@ message Invoice {
     string pdf_url = 3;
     string status = 4;
     google.protobuf.Timestamp due_date = 5;  
-  }
+}
+
+message CancelPaymentSubscriptionRequest {}
+
+message CancelPaymentSubscriptionResponse {}

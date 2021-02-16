@@ -333,3 +333,35 @@ export namespace CreatePaymentSubscriptionResponse {
   }
 }
 
+export class CancelPaymentSubscriptionRequest extends jspb.Message {
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): CancelPaymentSubscriptionRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: CancelPaymentSubscriptionRequest): CancelPaymentSubscriptionRequest.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: CancelPaymentSubscriptionRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): CancelPaymentSubscriptionRequest;
+  static deserializeBinaryFromReader(message: CancelPaymentSubscriptionRequest, reader: jspb.BinaryReader): CancelPaymentSubscriptionRequest;
+}
+
+export namespace CancelPaymentSubscriptionRequest {
+  export type AsObject = {
+  }
+}
+
+export class CancelPaymentSubscriptionResponse extends jspb.Message {
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): CancelPaymentSubscriptionResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: CancelPaymentSubscriptionResponse): CancelPaymentSubscriptionResponse.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: CancelPaymentSubscriptionResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): CancelPaymentSubscriptionResponse;
+  static deserializeBinaryFromReader(message: CancelPaymentSubscriptionResponse, reader: jspb.BinaryReader): CancelPaymentSubscriptionResponse;
+}
+
+export namespace CancelPaymentSubscriptionResponse {
+  export type AsObject = {
+  }
+}
+

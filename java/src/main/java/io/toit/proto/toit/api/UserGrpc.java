@@ -306,6 +306,37 @@ public final class UserGrpc {
     return getCreateUserMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest,
+      io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse> getCancelPaymentSubscriptionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CancelPaymentSubscription",
+      requestType = io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest.class,
+      responseType = io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest,
+      io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse> getCancelPaymentSubscriptionMethod() {
+    io.grpc.MethodDescriptor<io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest, io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse> getCancelPaymentSubscriptionMethod;
+    if ((getCancelPaymentSubscriptionMethod = UserGrpc.getCancelPaymentSubscriptionMethod) == null) {
+      synchronized (UserGrpc.class) {
+        if ((getCancelPaymentSubscriptionMethod = UserGrpc.getCancelPaymentSubscriptionMethod) == null) {
+          UserGrpc.getCancelPaymentSubscriptionMethod = getCancelPaymentSubscriptionMethod =
+              io.grpc.MethodDescriptor.<io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest, io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CancelPaymentSubscription"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new UserMethodDescriptorSupplier("CancelPaymentSubscription"))
+              .build();
+        }
+      }
+    }
+    return getCancelPaymentSubscriptionMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -419,6 +450,13 @@ public final class UserGrpc {
       asyncUnimplementedUnaryCall(getCreateUserMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void cancelPaymentSubscription(io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest request,
+        io.grpc.stub.StreamObserver<io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getCancelPaymentSubscriptionMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -484,6 +522,13 @@ public final class UserGrpc {
                 io.toit.proto.toit.api.OrgProto.CreateUserRequest,
                 io.toit.proto.toit.api.OrgProto.CreateUserResponse>(
                   this, METHODID_CREATE_USER)))
+          .addMethod(
+            getCancelPaymentSubscriptionMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest,
+                io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse>(
+                  this, METHODID_CANCEL_PAYMENT_SUBSCRIPTION)))
           .build();
     }
   }
@@ -575,6 +620,14 @@ public final class UserGrpc {
       asyncUnaryCall(
           getChannel().newCall(getCreateUserMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void cancelPaymentSubscription(io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest request,
+        io.grpc.stub.StreamObserver<io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getCancelPaymentSubscriptionMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -654,6 +707,13 @@ public final class UserGrpc {
     public io.toit.proto.toit.api.OrgProto.CreateUserResponse createUser(io.toit.proto.toit.api.OrgProto.CreateUserRequest request) {
       return blockingUnaryCall(
           getChannel(), getCreateUserMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse cancelPaymentSubscription(io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getCancelPaymentSubscriptionMethod(), getCallOptions(), request);
     }
   }
 
@@ -744,6 +804,14 @@ public final class UserGrpc {
       return futureUnaryCall(
           getChannel().newCall(getCreateUserMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse> cancelPaymentSubscription(
+        io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getCancelPaymentSubscriptionMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_SET_PASSWORD = 0;
@@ -755,6 +823,7 @@ public final class UserGrpc {
   private static final int METHODID_CREATE_PAYMENT_SUBSCRIPTION = 6;
   private static final int METHODID_LIST_USERS = 7;
   private static final int METHODID_CREATE_USER = 8;
+  private static final int METHODID_CANCEL_PAYMENT_SUBSCRIPTION = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -808,6 +877,10 @@ public final class UserGrpc {
         case METHODID_CREATE_USER:
           serviceImpl.createUser((io.toit.proto.toit.api.OrgProto.CreateUserRequest) request,
               (io.grpc.stub.StreamObserver<io.toit.proto.toit.api.OrgProto.CreateUserResponse>) responseObserver);
+          break;
+        case METHODID_CANCEL_PAYMENT_SUBSCRIPTION:
+          serviceImpl.cancelPaymentSubscription((io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest) request,
+              (io.grpc.stub.StreamObserver<io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -879,6 +952,7 @@ public final class UserGrpc {
               .addMethod(getCreatePaymentSubscriptionMethod())
               .addMethod(getListUsersMethod())
               .addMethod(getCreateUserMethod())
+              .addMethod(getCancelPaymentSubscriptionMethod())
               .build();
         }
       }

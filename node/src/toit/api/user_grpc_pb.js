@@ -6,6 +6,28 @@ var toit_api_user_pb = require('../../toit/api/user_pb.js');
 var toit_model_organization_pb = require('../../toit/model/organization_pb.js');
 var toit_api_organization_pb = require('../../toit/api/organization_pb.js');
 
+function serialize_toit_api_CancelPaymentSubscriptionRequest(arg) {
+  if (!(arg instanceof toit_api_user_pb.CancelPaymentSubscriptionRequest)) {
+    throw new Error('Expected argument of type toit.api.CancelPaymentSubscriptionRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_CancelPaymentSubscriptionRequest(buffer_arg) {
+  return toit_api_user_pb.CancelPaymentSubscriptionRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_toit_api_CancelPaymentSubscriptionResponse(arg) {
+  if (!(arg instanceof toit_api_user_pb.CancelPaymentSubscriptionResponse)) {
+    throw new Error('Expected argument of type toit.api.CancelPaymentSubscriptionResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_CancelPaymentSubscriptionResponse(buffer_arg) {
+  return toit_api_user_pb.CancelPaymentSubscriptionResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_toit_api_ChangePasswordWithRPTokenRequest(arg) {
   if (!(arg instanceof toit_api_user_pb.ChangePasswordWithRPTokenRequest)) {
     throw new Error('Expected argument of type toit.api.ChangePasswordWithRPTokenRequest');
@@ -304,6 +326,17 @@ var UserService = exports.UserService = {
     requestDeserialize: deserialize_toit_api_CreateUserRequest,
     responseSerialize: serialize_toit_api_CreateUserResponse,
     responseDeserialize: deserialize_toit_api_CreateUserResponse,
+  },
+  cancelPaymentSubscription: {
+    path: '/toit.api.User/CancelPaymentSubscription',
+    requestStream: false,
+    responseStream: false,
+    requestType: toit_api_user_pb.CancelPaymentSubscriptionRequest,
+    responseType: toit_api_user_pb.CancelPaymentSubscriptionResponse,
+    requestSerialize: serialize_toit_api_CancelPaymentSubscriptionRequest,
+    requestDeserialize: deserialize_toit_api_CancelPaymentSubscriptionRequest,
+    responseSerialize: serialize_toit_api_CancelPaymentSubscriptionResponse,
+    responseDeserialize: deserialize_toit_api_CancelPaymentSubscriptionResponse,
   },
 };
 
