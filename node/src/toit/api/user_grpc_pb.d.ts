@@ -14,9 +14,10 @@ interface IUserService extends grpc.ServiceDefinition<grpc.UntypedServiceImpleme
   getCurrentUser: grpc.MethodDefinition<toit_api_user_pb.GetCurrentUserRequest, toit_api_user_pb.GetCurrentUserResponse>;
   listOrganizations: grpc.MethodDefinition<toit_api_user_pb.ListOrganizationsRequest, toit_api_user_pb.ListOrganizationsResponse>;
   getOrganization: grpc.MethodDefinition<toit_api_user_pb.GetOrganizationRequest, toit_api_user_pb.GetOrganizationResponse>;
-  createPaymentSubscription: grpc.MethodDefinition<toit_api_user_pb.CreatePaymentSubscriptionRequest, toit_api_user_pb.CreatePaymentSubscriptionResponse>;
   listUsers: grpc.MethodDefinition<toit_api_organization_pb.ListUsersRequest, toit_api_organization_pb.ListUsersResponse>;
   createUser: grpc.MethodDefinition<toit_api_organization_pb.CreateUserRequest, toit_api_organization_pb.CreateUserResponse>;
+  createPaymentSubscription: grpc.MethodDefinition<toit_api_user_pb.CreatePaymentSubscriptionRequest, toit_api_user_pb.CreatePaymentSubscriptionResponse>;
+  listPaymentInvoices: grpc.MethodDefinition<toit_api_user_pb.ListPaymentInvoicesRequest, toit_api_user_pb.ListPaymentInvoicesResponse>;
   cancelPaymentSubscription: grpc.MethodDefinition<toit_api_user_pb.CancelPaymentSubscriptionRequest, toit_api_user_pb.CancelPaymentSubscriptionResponse>;
 }
 
@@ -42,15 +43,17 @@ export class UserClient extends grpc.Client {
   getOrganization(argument: toit_api_user_pb.GetOrganizationRequest, callback: grpc.requestCallback<toit_api_user_pb.GetOrganizationResponse>): grpc.ClientUnaryCall;
   getOrganization(argument: toit_api_user_pb.GetOrganizationRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_user_pb.GetOrganizationResponse>): grpc.ClientUnaryCall;
   getOrganization(argument: toit_api_user_pb.GetOrganizationRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_user_pb.GetOrganizationResponse>): grpc.ClientUnaryCall;
-  createPaymentSubscription(argument: toit_api_user_pb.CreatePaymentSubscriptionRequest, callback: grpc.requestCallback<toit_api_user_pb.CreatePaymentSubscriptionResponse>): grpc.ClientUnaryCall;
-  createPaymentSubscription(argument: toit_api_user_pb.CreatePaymentSubscriptionRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_user_pb.CreatePaymentSubscriptionResponse>): grpc.ClientUnaryCall;
-  createPaymentSubscription(argument: toit_api_user_pb.CreatePaymentSubscriptionRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_user_pb.CreatePaymentSubscriptionResponse>): grpc.ClientUnaryCall;
   listUsers(argument: toit_api_organization_pb.ListUsersRequest, callback: grpc.requestCallback<toit_api_organization_pb.ListUsersResponse>): grpc.ClientUnaryCall;
   listUsers(argument: toit_api_organization_pb.ListUsersRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_organization_pb.ListUsersResponse>): grpc.ClientUnaryCall;
   listUsers(argument: toit_api_organization_pb.ListUsersRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_organization_pb.ListUsersResponse>): grpc.ClientUnaryCall;
   createUser(argument: toit_api_organization_pb.CreateUserRequest, callback: grpc.requestCallback<toit_api_organization_pb.CreateUserResponse>): grpc.ClientUnaryCall;
   createUser(argument: toit_api_organization_pb.CreateUserRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_organization_pb.CreateUserResponse>): grpc.ClientUnaryCall;
   createUser(argument: toit_api_organization_pb.CreateUserRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_organization_pb.CreateUserResponse>): grpc.ClientUnaryCall;
+  createPaymentSubscription(argument: toit_api_user_pb.CreatePaymentSubscriptionRequest, callback: grpc.requestCallback<toit_api_user_pb.CreatePaymentSubscriptionResponse>): grpc.ClientUnaryCall;
+  createPaymentSubscription(argument: toit_api_user_pb.CreatePaymentSubscriptionRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_user_pb.CreatePaymentSubscriptionResponse>): grpc.ClientUnaryCall;
+  createPaymentSubscription(argument: toit_api_user_pb.CreatePaymentSubscriptionRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_user_pb.CreatePaymentSubscriptionResponse>): grpc.ClientUnaryCall;
+  listPaymentInvoices(argument: toit_api_user_pb.ListPaymentInvoicesRequest, metadataOrOptions?: grpc.Metadata | grpc.CallOptions | null): grpc.ClientReadableStream<toit_api_user_pb.ListPaymentInvoicesResponse>;
+  listPaymentInvoices(argument: toit_api_user_pb.ListPaymentInvoicesRequest, metadata?: grpc.Metadata | null, options?: grpc.CallOptions | null): grpc.ClientReadableStream<toit_api_user_pb.ListPaymentInvoicesResponse>;
   cancelPaymentSubscription(argument: toit_api_user_pb.CancelPaymentSubscriptionRequest, callback: grpc.requestCallback<toit_api_user_pb.CancelPaymentSubscriptionResponse>): grpc.ClientUnaryCall;
   cancelPaymentSubscription(argument: toit_api_user_pb.CancelPaymentSubscriptionRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_user_pb.CancelPaymentSubscriptionResponse>): grpc.ClientUnaryCall;
   cancelPaymentSubscription(argument: toit_api_user_pb.CancelPaymentSubscriptionRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_user_pb.CancelPaymentSubscriptionResponse>): grpc.ClientUnaryCall;

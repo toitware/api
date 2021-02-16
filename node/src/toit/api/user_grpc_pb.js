@@ -5,6 +5,7 @@ var grpc = require('@grpc/grpc-js');
 var toit_api_user_pb = require('../../toit/api/user_pb.js');
 var toit_model_organization_pb = require('../../toit/model/organization_pb.js');
 var toit_api_organization_pb = require('../../toit/api/organization_pb.js');
+var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
 
 function serialize_toit_api_CancelPaymentSubscriptionRequest(arg) {
   if (!(arg instanceof toit_api_user_pb.CancelPaymentSubscriptionRequest)) {
@@ -182,6 +183,28 @@ function deserialize_toit_api_ListOrganizationsResponse(buffer_arg) {
   return toit_api_user_pb.ListOrganizationsResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_toit_api_ListPaymentInvoicesRequest(arg) {
+  if (!(arg instanceof toit_api_user_pb.ListPaymentInvoicesRequest)) {
+    throw new Error('Expected argument of type toit.api.ListPaymentInvoicesRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_ListPaymentInvoicesRequest(buffer_arg) {
+  return toit_api_user_pb.ListPaymentInvoicesRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_toit_api_ListPaymentInvoicesResponse(arg) {
+  if (!(arg instanceof toit_api_user_pb.ListPaymentInvoicesResponse)) {
+    throw new Error('Expected argument of type toit.api.ListPaymentInvoicesResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_ListPaymentInvoicesResponse(buffer_arg) {
+  return toit_api_user_pb.ListPaymentInvoicesResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_toit_api_ListUsersRequest(arg) {
   if (!(arg instanceof toit_api_organization_pb.ListUsersRequest)) {
     throw new Error('Expected argument of type toit.api.ListUsersRequest');
@@ -294,17 +317,6 @@ var UserService = exports.UserService = {
     responseSerialize: serialize_toit_api_GetOrganizationResponse,
     responseDeserialize: deserialize_toit_api_GetOrganizationResponse,
   },
-  createPaymentSubscription: {
-    path: '/toit.api.User/CreatePaymentSubscription',
-    requestStream: false,
-    responseStream: false,
-    requestType: toit_api_user_pb.CreatePaymentSubscriptionRequest,
-    responseType: toit_api_user_pb.CreatePaymentSubscriptionResponse,
-    requestSerialize: serialize_toit_api_CreatePaymentSubscriptionRequest,
-    requestDeserialize: deserialize_toit_api_CreatePaymentSubscriptionRequest,
-    responseSerialize: serialize_toit_api_CreatePaymentSubscriptionResponse,
-    responseDeserialize: deserialize_toit_api_CreatePaymentSubscriptionResponse,
-  },
   listUsers: {
     path: '/toit.api.User/ListUsers',
     requestStream: false,
@@ -326,6 +338,28 @@ var UserService = exports.UserService = {
     requestDeserialize: deserialize_toit_api_CreateUserRequest,
     responseSerialize: serialize_toit_api_CreateUserResponse,
     responseDeserialize: deserialize_toit_api_CreateUserResponse,
+  },
+  createPaymentSubscription: {
+    path: '/toit.api.User/CreatePaymentSubscription',
+    requestStream: false,
+    responseStream: false,
+    requestType: toit_api_user_pb.CreatePaymentSubscriptionRequest,
+    responseType: toit_api_user_pb.CreatePaymentSubscriptionResponse,
+    requestSerialize: serialize_toit_api_CreatePaymentSubscriptionRequest,
+    requestDeserialize: deserialize_toit_api_CreatePaymentSubscriptionRequest,
+    responseSerialize: serialize_toit_api_CreatePaymentSubscriptionResponse,
+    responseDeserialize: deserialize_toit_api_CreatePaymentSubscriptionResponse,
+  },
+  listPaymentInvoices: {
+    path: '/toit.api.User/ListPaymentInvoices',
+    requestStream: false,
+    responseStream: true,
+    requestType: toit_api_user_pb.ListPaymentInvoicesRequest,
+    responseType: toit_api_user_pb.ListPaymentInvoicesResponse,
+    requestSerialize: serialize_toit_api_ListPaymentInvoicesRequest,
+    requestDeserialize: deserialize_toit_api_ListPaymentInvoicesRequest,
+    responseSerialize: serialize_toit_api_ListPaymentInvoicesResponse,
+    responseDeserialize: deserialize_toit_api_ListPaymentInvoicesResponse,
   },
   cancelPaymentSubscription: {
     path: '/toit.api.User/CancelPaymentSubscription',

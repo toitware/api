@@ -4,6 +4,7 @@
 import * as jspb from "google-protobuf";
 import * as toit_model_organization_pb from "../../toit/model/organization_pb";
 import * as toit_api_organization_pb from "../../toit/api/organization_pb";
+import * as google_protobuf_timestamp_pb from "google-protobuf/google/protobuf/timestamp_pb";
 
 export class SetPasswordRequest extends jspb.Message {
   getOldPassword(): string;
@@ -330,6 +331,98 @@ export class CreatePaymentSubscriptionResponse extends jspb.Message {
 
 export namespace CreatePaymentSubscriptionResponse {
   export type AsObject = {
+  }
+}
+
+export class ListPaymentInvoicesRequest extends jspb.Message {
+  getLimit(): number;
+  setLimit(value: number): void;
+
+  getOffset(): Uint8Array | string;
+  getOffset_asU8(): Uint8Array;
+  getOffset_asB64(): string;
+  setOffset(value: Uint8Array | string): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): ListPaymentInvoicesRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: ListPaymentInvoicesRequest): ListPaymentInvoicesRequest.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: ListPaymentInvoicesRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): ListPaymentInvoicesRequest;
+  static deserializeBinaryFromReader(message: ListPaymentInvoicesRequest, reader: jspb.BinaryReader): ListPaymentInvoicesRequest;
+}
+
+export namespace ListPaymentInvoicesRequest {
+  export type AsObject = {
+    limit: number,
+    offset: Uint8Array | string,
+  }
+}
+
+export class ListPaymentInvoicesResponse extends jspb.Message {
+  hasInvoices(): boolean;
+  clearInvoices(): void;
+  getInvoices(): Invoice | undefined;
+  setInvoices(value?: Invoice): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): ListPaymentInvoicesResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: ListPaymentInvoicesResponse): ListPaymentInvoicesResponse.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: ListPaymentInvoicesResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): ListPaymentInvoicesResponse;
+  static deserializeBinaryFromReader(message: ListPaymentInvoicesResponse, reader: jspb.BinaryReader): ListPaymentInvoicesResponse;
+}
+
+export namespace ListPaymentInvoicesResponse {
+  export type AsObject = {
+    invoices?: Invoice.AsObject,
+  }
+}
+
+export class Invoice extends jspb.Message {
+  getInvoiceId(): string;
+  setInvoiceId(value: string): void;
+
+  getInvoiceNumber(): string;
+  setInvoiceNumber(value: string): void;
+
+  hasCreatedAt(): boolean;
+  clearCreatedAt(): void;
+  getCreatedAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
+  setCreatedAt(value?: google_protobuf_timestamp_pb.Timestamp): void;
+
+  getPdfUrl(): string;
+  setPdfUrl(value: string): void;
+
+  getStatus(): string;
+  setStatus(value: string): void;
+
+  hasDueDate(): boolean;
+  clearDueDate(): void;
+  getDueDate(): google_protobuf_timestamp_pb.Timestamp | undefined;
+  setDueDate(value?: google_protobuf_timestamp_pb.Timestamp): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): Invoice.AsObject;
+  static toObject(includeInstance: boolean, msg: Invoice): Invoice.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: Invoice, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): Invoice;
+  static deserializeBinaryFromReader(message: Invoice, reader: jspb.BinaryReader): Invoice;
+}
+
+export namespace Invoice {
+  export type AsObject = {
+    invoiceId: string,
+    invoiceNumber: string,
+    createdAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+    pdfUrl: string,
+    status: string,
+    dueDate?: google_protobuf_timestamp_pb.Timestamp.AsObject,
   }
 }
 
