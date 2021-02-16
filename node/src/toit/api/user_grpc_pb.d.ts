@@ -17,6 +17,7 @@ interface IUserService extends grpc.ServiceDefinition<grpc.UntypedServiceImpleme
   createPaymentSubscription: grpc.MethodDefinition<toit_api_user_pb.CreatePaymentSubscriptionRequest, toit_api_user_pb.CreatePaymentSubscriptionResponse>;
   listUsers: grpc.MethodDefinition<toit_api_organization_pb.ListUsersRequest, toit_api_organization_pb.ListUsersResponse>;
   createUser: grpc.MethodDefinition<toit_api_organization_pb.CreateUserRequest, toit_api_organization_pb.CreateUserResponse>;
+  cancelPaymentSubscription: grpc.MethodDefinition<toit_api_user_pb.CancelPaymentSubscriptionRequest, toit_api_user_pb.CancelPaymentSubscriptionResponse>;
 }
 
 export const UserService: IUserService;
@@ -50,4 +51,7 @@ export class UserClient extends grpc.Client {
   createUser(argument: toit_api_organization_pb.CreateUserRequest, callback: grpc.requestCallback<toit_api_organization_pb.CreateUserResponse>): grpc.ClientUnaryCall;
   createUser(argument: toit_api_organization_pb.CreateUserRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_organization_pb.CreateUserResponse>): grpc.ClientUnaryCall;
   createUser(argument: toit_api_organization_pb.CreateUserRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_organization_pb.CreateUserResponse>): grpc.ClientUnaryCall;
+  cancelPaymentSubscription(argument: toit_api_user_pb.CancelPaymentSubscriptionRequest, callback: grpc.requestCallback<toit_api_user_pb.CancelPaymentSubscriptionResponse>): grpc.ClientUnaryCall;
+  cancelPaymentSubscription(argument: toit_api_user_pb.CancelPaymentSubscriptionRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_user_pb.CancelPaymentSubscriptionResponse>): grpc.ClientUnaryCall;
+  cancelPaymentSubscription(argument: toit_api_user_pb.CancelPaymentSubscriptionRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_user_pb.CancelPaymentSubscriptionResponse>): grpc.ClientUnaryCall;
 }
