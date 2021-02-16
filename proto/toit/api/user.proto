@@ -4,6 +4,7 @@ package toit.api;
 
 import "toit/model/organization.proto";
 import "toit/api/organization.proto";
+import "google/protobuf/timestamp.proto";
 
 option go_package = "github.com/toitware/api.git/toit/api";
 option java_package = "io.toit.proto.toit.api";
@@ -13,16 +14,19 @@ service User {
     rpc SetPassword(SetPasswordRequest) returns (SetPasswordResponse) {}
     rpc InitiateResetPassword(InitiateResetPasswordRequest) returns (InitiateResetPasswordResponse) {}
     rpc ChangePasswordWithRPToken(ChangePasswordWithRPTokenRequest) returns (ChangePasswordWithRPTokenResponse) {}
+   
     rpc GetCurrentUser(GetCurrentUserRequest) returns (GetCurrentUserResponse) {}
     rpc ListOrganizations(ListOrganizationsRequest) returns (ListOrganizationsResponse) {}
     rpc GetOrganization(GetOrganizationRequest) returns (GetOrganizationResponse) {}
-    rpc CreatePaymentSubscription(CreatePaymentSubscriptionRequest) returns (CreatePaymentSubscriptionResponse) {}
     rpc ListUsers(ListUsersRequest) returns (ListUsersResponse) {
         option deprecated = true;
     }
     rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {
         option deprecated = true;
     }
+
+    rpc CreatePaymentSubscription(CreatePaymentSubscriptionRequest) returns (CreatePaymentSubscriptionResponse) {}
+    rpc ListPaymentInvoices(ListPaymentInvoicesRequest) returns (stream ListPaymentInvoicesResponse) {}
     rpc CancelPaymentSubscription(CancelPaymentSubscriptionRequest) returns (CancelPaymentSubscriptionResponse) {}
 }
 
@@ -83,6 +87,24 @@ message CreatePaymentSubscriptionRequest {
 }
 
 message CreatePaymentSubscriptionResponse {
+}
+
+message ListPaymentInvoicesRequest {
+    int64 limit = 1;
+    bytes offset = 2; // If set with an invoice ID, the returned list will start after that invoice ID.
+}
+
+message ListPaymentInvoicesResponse {
+    Invoice invoices = 1;
+}
+
+message Invoice {
+    string invoice_id = 1;
+    string invoice_number = 2;
+    google.protobuf.Timestamp created_at = 3;
+    string pdf_url = 4;
+    string status = 5;
+    google.protobuf.Timestamp due_date = 6;
 }
 
 message CancelPaymentSubscriptionRequest {}
