@@ -8755,6 +8755,842 @@ public final class UserProto {
 
   }
 
+  public interface CancelPaymentSubscriptionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.CancelPaymentSubscriptionRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code toit.api.CancelPaymentSubscriptionRequest}
+   */
+  public  static final class CancelPaymentSubscriptionRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.api.CancelPaymentSubscriptionRequest)
+      CancelPaymentSubscriptionRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CancelPaymentSubscriptionRequest.newBuilder() to construct.
+    private CancelPaymentSubscriptionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CancelPaymentSubscriptionRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CancelPaymentSubscriptionRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CancelPaymentSubscriptionRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.api.UserProto.internal_static_toit_api_CancelPaymentSubscriptionRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.api.UserProto.internal_static_toit_api_CancelPaymentSubscriptionRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest.class, io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest other = (io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.api.CancelPaymentSubscriptionRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.api.CancelPaymentSubscriptionRequest)
+        io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.UserProto.internal_static_toit_api_CancelPaymentSubscriptionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.UserProto.internal_static_toit_api_CancelPaymentSubscriptionRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest.class, io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.api.UserProto.internal_static_toit_api_CancelPaymentSubscriptionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest getDefaultInstanceForType() {
+        return io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest build() {
+        io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest buildPartial() {
+        io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest result = new io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest) {
+          return mergeFrom((io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest other) {
+        if (other == io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.api.CancelPaymentSubscriptionRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.api.CancelPaymentSubscriptionRequest)
+    private static final io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest();
+    }
+
+    public static io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CancelPaymentSubscriptionRequest>
+        PARSER = new com.google.protobuf.AbstractParser<CancelPaymentSubscriptionRequest>() {
+      @java.lang.Override
+      public CancelPaymentSubscriptionRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CancelPaymentSubscriptionRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CancelPaymentSubscriptionRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CancelPaymentSubscriptionRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CancelPaymentSubscriptionResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.CancelPaymentSubscriptionResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code toit.api.CancelPaymentSubscriptionResponse}
+   */
+  public  static final class CancelPaymentSubscriptionResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.api.CancelPaymentSubscriptionResponse)
+      CancelPaymentSubscriptionResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CancelPaymentSubscriptionResponse.newBuilder() to construct.
+    private CancelPaymentSubscriptionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CancelPaymentSubscriptionResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CancelPaymentSubscriptionResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CancelPaymentSubscriptionResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.api.UserProto.internal_static_toit_api_CancelPaymentSubscriptionResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.api.UserProto.internal_static_toit_api_CancelPaymentSubscriptionResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse.class, io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse other = (io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.api.CancelPaymentSubscriptionResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.api.CancelPaymentSubscriptionResponse)
+        io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.UserProto.internal_static_toit_api_CancelPaymentSubscriptionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.UserProto.internal_static_toit_api_CancelPaymentSubscriptionResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse.class, io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.api.UserProto.internal_static_toit_api_CancelPaymentSubscriptionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse getDefaultInstanceForType() {
+        return io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse build() {
+        io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse buildPartial() {
+        io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse result = new io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse) {
+          return mergeFrom((io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse other) {
+        if (other == io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.api.CancelPaymentSubscriptionResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.api.CancelPaymentSubscriptionResponse)
+    private static final io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse();
+    }
+
+    public static io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CancelPaymentSubscriptionResponse>
+        PARSER = new com.google.protobuf.AbstractParser<CancelPaymentSubscriptionResponse>() {
+      @java.lang.Override
+      public CancelPaymentSubscriptionResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CancelPaymentSubscriptionResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CancelPaymentSubscriptionResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CancelPaymentSubscriptionResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.api.UserProto.CancelPaymentSubscriptionResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_toit_api_SetPasswordRequest_descriptor;
   private static final 
@@ -8825,6 +9661,16 @@ public final class UserProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_toit_api_CreatePaymentSubscriptionResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_CancelPaymentSubscriptionRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_CancelPaymentSubscriptionRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_CancelPaymentSubscriptionResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_CancelPaymentSubscriptionResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -8859,31 +9705,36 @@ public final class UserProto {
       "(\t\022\030\n\020card_holder_name\030\002 \001(\t\022\020\n\010card_cvc" +
       "\030\003 \001(\005\022\031\n\021card_expiry_month\030\004 \001(\005\022\030\n\020car" +
       "d_expiry_year\030\005 \001(\005\022\023\n\013card_number\030\006 \001(\004" +
-      "\"#\n!CreatePaymentSubscriptionResponse2\332\006" +
-      "\n\004User\022L\n\013SetPassword\022\034.toit.api.SetPass" +
-      "wordRequest\032\035.toit.api.SetPasswordRespon" +
-      "se\"\000\022j\n\025InitiateResetPassword\022&.toit.api" +
-      ".InitiateResetPasswordRequest\032\'.toit.api" +
-      ".InitiateResetPasswordResponse\"\000\022v\n\031Chan" +
-      "gePasswordWithRPToken\022*.toit.api.ChangeP" +
-      "asswordWithRPTokenRequest\032+.toit.api.Cha" +
-      "ngePasswordWithRPTokenResponse\"\000\022U\n\016GetC" +
-      "urrentUser\022\037.toit.api.GetCurrentUserRequ" +
-      "est\032 .toit.api.GetCurrentUserResponse\"\000\022" +
-      "^\n\021ListOrganizations\022\".toit.api.ListOrga" +
-      "nizationsRequest\032#.toit.api.ListOrganiza" +
-      "tionsResponse\"\000\022X\n\017GetOrganization\022 .toi" +
-      "t.api.GetOrganizationRequest\032!.toit.api." +
-      "GetOrganizationResponse\"\000\022v\n\031CreatePayme" +
-      "ntSubscription\022*.toit.api.CreatePaymentS" +
-      "ubscriptionRequest\032+.toit.api.CreatePaym" +
-      "entSubscriptionResponse\"\000\022I\n\tListUsers\022\032" +
-      ".toit.api.ListUsersRequest\032\033.toit.api.Li" +
-      "stUsersResponse\"\003\210\002\001\022L\n\nCreateUser\022\033.toi" +
-      "t.api.CreateUserRequest\032\034.toit.api.Creat" +
-      "eUserResponse\"\003\210\002\001BI\n\026io.toit.proto.toit" +
-      ".apiB\tUserProtoZ$github.com/toitware/api" +
-      ".git/toit/apib\006proto3"
+      "\"#\n!CreatePaymentSubscriptionResponse\"\"\n" +
+      " CancelPaymentSubscriptionRequest\"#\n!Can" +
+      "celPaymentSubscriptionResponse2\322\007\n\004User\022" +
+      "L\n\013SetPassword\022\034.toit.api.SetPasswordReq" +
+      "uest\032\035.toit.api.SetPasswordResponse\"\000\022j\n" +
+      "\025InitiateResetPassword\022&.toit.api.Initia" +
+      "teResetPasswordRequest\032\'.toit.api.Initia" +
+      "teResetPasswordResponse\"\000\022v\n\031ChangePassw" +
+      "ordWithRPToken\022*.toit.api.ChangePassword" +
+      "WithRPTokenRequest\032+.toit.api.ChangePass" +
+      "wordWithRPTokenResponse\"\000\022U\n\016GetCurrentU" +
+      "ser\022\037.toit.api.GetCurrentUserRequest\032 .t" +
+      "oit.api.GetCurrentUserResponse\"\000\022^\n\021List" +
+      "Organizations\022\".toit.api.ListOrganizatio" +
+      "nsRequest\032#.toit.api.ListOrganizationsRe" +
+      "sponse\"\000\022X\n\017GetOrganization\022 .toit.api.G" +
+      "etOrganizationRequest\032!.toit.api.GetOrga" +
+      "nizationResponse\"\000\022v\n\031CreatePaymentSubsc" +
+      "ription\022*.toit.api.CreatePaymentSubscrip" +
+      "tionRequest\032+.toit.api.CreatePaymentSubs" +
+      "criptionResponse\"\000\022I\n\tListUsers\022\032.toit.a" +
+      "pi.ListUsersRequest\032\033.toit.api.ListUsers" +
+      "Response\"\003\210\002\001\022L\n\nCreateUser\022\033.toit.api.C" +
+      "reateUserRequest\032\034.toit.api.CreateUserRe" +
+      "sponse\"\003\210\002\001\022v\n\031CancelPaymentSubscription" +
+      "\022*.toit.api.CancelPaymentSubscriptionReq" +
+      "uest\032+.toit.api.CancelPaymentSubscriptio" +
+      "nResponse\"\000BI\n\026io.toit.proto.toit.apiB\tU" +
+      "serProtoZ$github.com/toitware/api.git/to" +
+      "it/apib\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8974,6 +9825,18 @@ public final class UserProto {
     internal_static_toit_api_CreatePaymentSubscriptionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_CreatePaymentSubscriptionResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_toit_api_CancelPaymentSubscriptionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_toit_api_CancelPaymentSubscriptionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_CancelPaymentSubscriptionRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_toit_api_CancelPaymentSubscriptionResponse_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_toit_api_CancelPaymentSubscriptionResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_CancelPaymentSubscriptionResponse_descriptor,
         new java.lang.String[] { });
     io.toit.proto.toit.model.OrganizationProto.getDescriptor();
     io.toit.proto.toit.api.OrgProto.getDescriptor();
