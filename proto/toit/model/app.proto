@@ -9,6 +9,7 @@ import "toit/model/job.proto";
 option go_package = "github.com/toitware/api.git/toit/model";
 option java_package = "io.toit.proto.toit.model";
 option java_outer_classname = "AppProto";
+option csharp_namespace = "Toit.Proto.Model";
 
 message App {
   bytes app_id = 1;

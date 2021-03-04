@@ -5,6 +5,7 @@ package toit.model.pubsub;
 option go_package = "github.com/toitware/api.git/toit/model/pubsub";
 option java_package = "io.toit.proto.toit.model.pubsub";
 option java_outer_classname = "TopicProto";
+option csharp_namespace = "Toit.Proto.Model.PubSub";
 
 enum TopicType {
   TOPIC_TYPE_UNKNOWN = 0;

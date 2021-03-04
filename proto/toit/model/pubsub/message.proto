@@ -7,6 +7,7 @@ import "google/protobuf/timestamp.proto";
 option go_package = "github.com/toitware/api.git/toit/model/pubsub";
 option java_package = "io.toit.proto.toit.model.pubsub";
 option java_outer_classname = "MessageProto";
+option csharp_namespace = "Toit.Proto.Model.PubSub";
 
 message Envelope {
   bytes id = 1;

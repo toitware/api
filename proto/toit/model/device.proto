@@ -10,6 +10,7 @@ import "toit/model/data.proto";
 option go_package = "github.com/toitware/api.git/toit/model";
 option java_package = "io.toit.proto.toit.model";
 option java_outer_classname = "DeviceProto";
+option csharp_namespace = "Toit.Proto.Model";
 
 message DeviceConfig {
   string name = 1;

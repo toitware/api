@@ -5,6 +5,7 @@ package toit.api.pubsub;
 option go_package = "github.com/toitware/api.git/toit/api/pubsub";
 option java_package = "io.toit.proto.toit.api.pubsub";
 option java_outer_classname = "PubSubProto";
+option csharp_namespace = "Toit.Proto.API.PubSub";
 
 service Publish {
   rpc Publish(PublishRequest) returns (PublishResponse) {}
