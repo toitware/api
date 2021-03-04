@@ -8,6 +8,7 @@ import "toit/api/hardware.proto";
 option go_package = "github.com/toitware/api.git/toit/api";
 option java_package = "io.toit.proto.toit.api";
 option java_outer_classname = "OrgProto";
+option csharp_namespace = "Toit.Proto.API";
 
 service OrganizationService {
   rpc GetUser(GetUserRequest) returns (GetUserResponse) {}

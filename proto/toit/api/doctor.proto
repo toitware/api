@@ -5,7 +5,7 @@ package toit.api;
 option go_package = "github.com/toitware/api.git/toit/api";
 option java_package = "io.toit.proto.toit.api";
 option java_outer_classname = "DoctorProto";
-
+option csharp_namespace = "Toit.Proto.API";
 
 service DoctorService {
   rpc HealthCheck(HealthRequest) returns (HealthResponse) {}

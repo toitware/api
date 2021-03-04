@@ -10,6 +10,7 @@ import "google/protobuf/timestamp.proto";
 option go_package = "github.com/toitware/api.git/toit/api";
 option java_package = "io.toit.proto.toit.api";
 option java_outer_classname = "HardwareProto";
+option csharp_namespace = "Toit.Proto.API";
 
 service HardwareService {
   rpc Claim(ClaimRequest) returns (ClaimResponse) {}

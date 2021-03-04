@@ -8,6 +8,7 @@ import "google/protobuf/timestamp.proto";
 option go_package = "github.com/toitware/api.git/toit/model";
 option java_package = "io.toit.proto.toit.model";
 option java_outer_classname = "DataProto";
+option csharp_namespace = "Toit.Proto.Model";
 
 message MetricsData {
   enum Level {

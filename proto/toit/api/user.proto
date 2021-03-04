@@ -9,12 +9,13 @@ import "google/protobuf/timestamp.proto";
 option go_package = "github.com/toitware/api.git/toit/api";
 option java_package = "io.toit.proto.toit.api";
 option java_outer_classname = "UserProto";
+option csharp_namespace = "Toit.Proto.API";
 
 service User {
     rpc SetPassword(SetPasswordRequest) returns (SetPasswordResponse) {}
     rpc InitiateResetPassword(InitiateResetPasswordRequest) returns (InitiateResetPasswordResponse) {}
     rpc ChangePasswordWithRPToken(ChangePasswordWithRPTokenRequest) returns (ChangePasswordWithRPTokenResponse) {}
-   
+
     rpc GetCurrentUser(GetCurrentUserRequest) returns (GetCurrentUserResponse) {}
     rpc ListOrganizations(ListOrganizationsRequest) returns (ListOrganizationsResponse) {}
     rpc GetOrganization(GetOrganizationRequest) returns (GetOrganizationResponse) {}

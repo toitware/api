@@ -11,6 +11,7 @@ import "toit/model/data.proto";
 option go_package = "github.com/toitware/api.git/toit/api";
 option java_package = "io.toit.proto.toit.api";
 option java_outer_classname = "DeviceProto";
+option csharp_namespace = "Toit.Proto.API";
 
 enum ProcessStatus {
   PROCESS_STATUS_UNKNOWN = 0;
