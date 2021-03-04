@@ -2,7 +2,7 @@ name: CSharp
 
 on:
   push:
-    branches: [master, csharp]
+    branches: [master]
   pull_request:
     branches: [master]
   release:
@@ -25,13 +25,14 @@ jobs:
       - name: Build protobuf
         working-directory: ./csharp
         run: make protobuf
-      # - name: Add & Commit
-      #   if: github.event_name == 'push'
-      #   uses: EndBug/add-and-commit@v5.1.0
-      #   with:
-      #     author_name: Leon Gungadin Mogensen
-      #     author_email: leon@toitware.com
-      #     message: built csharp source files
-      #     branch: master
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Add & Commit
+        if: github.event_name == 'push'
+        uses: EndBug/add-and-commit@v5.1.0
+        with:
+          author_name: Leon Gungadin Mogensen
+          author_email: leon@toitware.com
+          message: built csharp source files
+          branch: master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
