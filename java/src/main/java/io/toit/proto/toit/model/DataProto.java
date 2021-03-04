@@ -9221,9 +9221,9 @@ public final class DataProto {
       "OOT\020\005\022\014\n\010SHUTDOWN\020\006\"k\n\005Level\022\017\n\013PRINT_LE" +
       "VEL\020\000\022\017\n\013DEBUG_LEVEL\020\001\022\016\n\nINFO_LEVEL\020\002\022\016" +
       "\n\nWARN_LEVEL\020\003\022\017\n\013ERROR_LEVEL\020\004\022\017\n\013FATAL" +
-      "_LEVEL\020\005BM\n\030io.toit.proto.toit.modelB\tDa" +
+      "_LEVEL\020\005B`\n\030io.toit.proto.toit.modelB\tDa" +
       "taProtoZ&github.com/toitware/api.git/toi" +
-      "t/modelb\006proto3"
+      "t/model\252\002\020Toit.Proto.Modelb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

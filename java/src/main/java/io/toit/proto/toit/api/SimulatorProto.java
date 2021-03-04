@@ -4813,9 +4813,9 @@ public final class SimulatorProto {
       "atorsResponse\"\000\022m\n\026CreateHardwareIdentit" +
       "y\022\'.toit.api.CreateHardwareIdentityReque" +
       "st\032(.toit.api.CreateHardwareIdentityResp" +
-      "onse\"\000BN\n\026io.toit.proto.toit.apiB\016Simula" +
+      "onse\"\000B_\n\026io.toit.proto.toit.apiB\016Simula" +
       "torProtoZ$github.com/toitware/api.git/to" +
-      "it/apib\006proto3"
+      "it/api\252\002\016Toit.Proto.APIb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

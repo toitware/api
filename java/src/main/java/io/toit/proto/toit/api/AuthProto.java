@@ -6529,9 +6529,10 @@ public final class AuthProto {
       "\022\027.toit.api.LogoutRequest\032\030.toit.api.Log" +
       "outResponse\"\000\022a\n\022CreateOrganization\022#.to" +
       "it.api.CreateOrganizationRequest\032$.toit." +
-      "api.CreateOrganizationResponse\"\000BI\n\026io.t" +
+      "api.CreateOrganizationResponse\"\000BZ\n\026io.t" +
       "oit.proto.toit.apiB\tAuthProtoZ$github.co" +
-      "m/toitware/api.git/toit/apib\006proto3"
+      "m/toitware/api.git/toit/api\252\002\016Toit.Proto" +
+      ".APIb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

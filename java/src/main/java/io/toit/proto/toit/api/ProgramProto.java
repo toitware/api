@@ -22539,9 +22539,10 @@ public final class ProgramProto {
       "ceRunRequest\032\033.toit.api.DeviceRunRespons" +
       "e\"\0000\001\022d\n\023DecodeSystemMessage\022$.toit.api." +
       "DecodeSystemMessageRequest\032%.toit.api.De" +
-      "codeSystemMessageResponse\"\000BL\n\026io.toit.p" +
+      "codeSystemMessageResponse\"\000B]\n\026io.toit.p" +
       "roto.toit.apiB\014ProgramProtoZ$github.com/" +
-      "toitware/api.git/toit/apib\006proto3"
+      "toitware/api.git/toit/api\252\002\016Toit.Proto.A" +
+      "PIb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -10263,9 +10263,10 @@ public final class SDKProto {
       "istSDKs\022\031.toit.api.ListSDKsRequest\032\032.toi" +
       "t.api.ListSDKsResponse\"\000\022U\n\016GetFirmwareE" +
       "lf\022\037.toit.api.GetFirmwareElfRequest\032 .to" +
-      "it.api.GetFirmwareElfResponse\"\000BH\n\026io.to" +
+      "it.api.GetFirmwareElfResponse\"\000BY\n\026io.to" +
       "it.proto.toit.apiB\010SDKProtoZ$github.com/" +
-      "toitware/api.git/toit/apib\006proto3"
+      "toitware/api.git/toit/api\252\002\016Toit.Proto.A" +
+      "PIb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

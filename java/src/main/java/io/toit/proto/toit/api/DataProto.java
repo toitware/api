@@ -10582,9 +10582,9 @@ public final class DataProto {
       "oit.api.StreamRequest\032\030.toit.api.StreamR" +
       "esponse\"\0000\001\022L\n\013Acknowledge\022\034.toit.api.Ac" +
       "knowledgeRequest\032\035.toit.api.AcknowledgeR" +
-      "esponse\"\000BI\n\026io.toit.proto.toit.apiB\tDat" +
+      "esponse\"\000BZ\n\026io.toit.proto.toit.apiB\tDat" +
       "aProtoZ$github.com/toitware/api.git/toit" +
-      "/apib\006proto3"
+      "/api\252\002\016Toit.Proto.APIb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

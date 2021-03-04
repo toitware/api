@@ -13456,9 +13456,10 @@ public final class OrgProto {
       "ClaimHardwareIdentityResponse\"\000\022p\n\027SetHa" +
       "rdwareIdentityInfo\022(.toit.api.SetHardwar" +
       "eIdentityInfoRequest\032).toit.api.SetHardw" +
-      "areIdentityInfoResponse\"\000BH\n\026io.toit.pro" +
+      "areIdentityInfoResponse\"\000BY\n\026io.toit.pro" +
       "to.toit.apiB\010OrgProtoZ$github.com/toitwa" +
-      "re/api.git/toit/apib\006proto3"
+      "re/api.git/toit/api\252\002\016Toit.Proto.APIb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

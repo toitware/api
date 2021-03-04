@@ -12365,9 +12365,9 @@ public final class UserProto {
       "InvoicesResponse\"\0000\001\022v\n\031CancelPaymentSub" +
       "scription\022*.toit.api.CancelPaymentSubscr" +
       "iptionRequest\032+.toit.api.CancelPaymentSu" +
-      "bscriptionResponse\"\000BI\n\026io.toit.proto.to" +
+      "bscriptionResponse\"\000BZ\n\026io.toit.proto.to" +
       "it.apiB\tUserProtoZ$github.com/toitware/a" +
-      "pi.git/toit/apib\006proto3"
+      "pi.git/toit/api\252\002\016Toit.Proto.APIb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

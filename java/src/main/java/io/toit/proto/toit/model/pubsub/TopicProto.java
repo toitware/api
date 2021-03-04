@@ -826,10 +826,10 @@ public final class TopicProto {
       ".model.pubsub.TopicType\022\014\n\004name\030\002 \001(\t*n\n" +
       "\tTopicType\022\026\n\022TOPIC_TYPE_UNKNOWN\020\000\022\024\n\020TO" +
       "PIC_TYPE_CLOUD\020\001\022\025\n\021TOPIC_TYPE_DEVICE\020\002\022" +
-      "\034\n\030TOPIC_TYPE_DEVICE_MEMORY\020\003B\\\n\037io.toit" +
+      "\034\n\030TOPIC_TYPE_DEVICE_MEMORY\020\003Bv\n\037io.toit" +
       ".proto.toit.model.pubsubB\nTopicProtoZ-gi" +
       "thub.com/toitware/api.git/toit/model/pub" +
-      "subb\006proto3"
+      "sub\252\002\027Toit.Proto.Model.PubSubb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

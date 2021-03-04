@@ -1080,10 +1080,10 @@ public final class DoctorProto {
       "lthRequest\"<\n\016HealthResponse\022\016\n\006beaver\030\002" +
       " \001(\010\022\r\n\005grass\030\003 \001(\010\022\013\n\003oak\030\004 \001(\0102S\n\rDoct" +
       "orService\022B\n\013HealthCheck\022\027.toit.api.Heal" +
-      "thRequest\032\030.toit.api.HealthResponse\"\000BK\n" +
+      "thRequest\032\030.toit.api.HealthResponse\"\000B\\\n" +
       "\026io.toit.proto.toit.apiB\013DoctorProtoZ$gi" +
-      "thub.com/toitware/api.git/toit/apib\006prot" +
-      "o3"
+      "thub.com/toitware/api.git/toit/api\252\002\016Toi" +
+      "t.Proto.APIb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

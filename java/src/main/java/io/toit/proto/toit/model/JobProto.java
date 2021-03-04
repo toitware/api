@@ -18903,9 +18903,9 @@ public final class JobProto {
       "_STATE_FAILED\020\004*m\n\rJobChangeType\022\026\n\022JOB_" +
       "CHANGE_UNKNOWN\020\000\022\024\n\020JOB_CHANGE_ADDED\020\001\022\026" +
       "\n\022JOB_CHANGE_DELETED\020\002\022\026\n\022JOB_CHANGE_CHA" +
-      "NGED\020\003BL\n\030io.toit.proto.toit.modelB\010JobP" +
+      "NGED\020\003B_\n\030io.toit.proto.toit.modelB\010JobP" +
       "rotoZ&github.com/toitware/api.git/toit/m" +
-      "odelb\006proto3"
+      "odel\252\002\020Toit.Proto.Modelb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

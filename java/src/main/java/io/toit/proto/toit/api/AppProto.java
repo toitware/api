@@ -9628,9 +9628,9 @@ public final class AppProto {
       "etAppFilesRequest\032\035.toit.api.GetAppFiles" +
       "Response\"\000\022E\n\010ListApps\022\031.toit.api.ListAp" +
       "psRequest\032\032.toit.api.ListAppsResponse\"\0000" +
-      "\001BH\n\026io.toit.proto.toit.apiB\010AppProtoZ$g" +
-      "ithub.com/toitware/api.git/toit/apib\006pro" +
-      "to3"
+      "\001BY\n\026io.toit.proto.toit.apiB\010AppProtoZ$g" +
+      "ithub.com/toitware/api.git/toit/api\252\002\016To" +
+      "it.Proto.APIb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

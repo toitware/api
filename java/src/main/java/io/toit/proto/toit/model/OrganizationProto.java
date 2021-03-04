@@ -6959,9 +6959,10 @@ public final class OrganizationProto {
       "oogle.protobuf.Timestamp\"/\n\004Tier\"\'\n\004Type" +
       "\022\013\n\007UNKNOWN\020\000\022\010\n\004FREE\020\001\022\010\n\004PAID\020\002\"=\n\010Cus" +
       "tomer\"1\n\004Type\022\013\n\007UNKNOWN\020\000\022\n\n\006PERSON\020\001\022\020" +
-      "\n\014ORGANIZATION\020\002BU\n\030io.toit.proto.toit.m" +
+      "\n\014ORGANIZATION\020\002Bh\n\030io.toit.proto.toit.m" +
       "odelB\021OrganizationProtoZ&github.com/toit" +
-      "ware/api.git/toit/modelb\006proto3"
+      "ware/api.git/toit/model\252\002\020Toit.Proto.Mod" +
+      "elb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

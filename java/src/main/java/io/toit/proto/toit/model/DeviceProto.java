@@ -33214,9 +33214,9 @@ public final class DeviceProto {
       " \n\034DEVICE_ACTION_REPORT_MODULES\020\013\022(\n$DEV" +
       "ICE_ACTION_UPDATE_MODULE_CELLULAR\020\014*-\n\020D" +
       "eviceModuleType\022\013\n\007Unknown\020\000\022\014\n\010Cellular" +
-      "\020\001BO\n\030io.toit.proto.toit.modelB\013DevicePr" +
+      "\020\001Bb\n\030io.toit.proto.toit.modelB\013DevicePr" +
       "otoZ&github.com/toitware/api.git/toit/mo" +
-      "delb\006proto3"
+      "del\252\002\020Toit.Proto.Modelb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
