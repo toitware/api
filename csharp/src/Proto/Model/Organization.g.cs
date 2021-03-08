@@ -25,7 +25,7 @@ namespace Toit.Proto.Model {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch10b2l0L21vZGVsL29yZ2FuaXphdGlvbi5wcm90bxIKdG9pdC5tb2RlbBof",
-            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byL1AgoMT3JnYW5pemF0",
+            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKJAwoMT3JnYW5pemF0",
             "aW9uEgoKAmlkGAEgASgMEgwKBG5hbWUYAiABKAkSEwoLZGVmYXVsdF9zZGsY",
             "AyABKAkSDQoFZW1haWwYBCABKAkSDAoEY2l0eRgFIAEoCRIPCgdjb3VudHJ5",
             "GAYgASgJEhQKDHBob25lX251bWJlchgHIAEoCRISCgpjdnJfbnVtYmVyGAgg",
@@ -34,23 +34,23 @@ namespace Toit.Proto.Model {
             "aWxzEhQKDGFkZHJlc3NfbGluZRgLIAEoCRITCgtwb3N0YWxfY29kZRgMIAEo",
             "CRISCgp2YXRfbnVtYmVyGA0gASgJEhgKEHZhdF9jb3VudHJ5X2NvZGUYDiAB",
             "KAkSKwoIY3VzdG9tZXIYDyABKA4yGS50b2l0Lm1vZGVsLkN1c3RvbWVyLlR5",
-            "cGUikgEKDlBheW1lbnREZXRhaWxzEg0KBWxhc3Q0GAEgASgJEg4KBmV4cGly",
-            "eRgCIAEoCRIUCgxleHBpcnlfbW9udGgYAyABKAkSEwoLZXhwaXJ5X3llYXIY",
-            "BCABKAkSDQoFYnJhbmQYBSABKAkSFAoMY291bnRyeV9jb2RlGAYgASgJEhEK",
-            "CWN2Y19jaGVjaxgHIAEoCSJICgRVc2VyEgoKAmlkGAEgASgMEhcKD29yZ2Fu",
-            "aXphdGlvbl9pZBgCIAEoDBINCgVlbWFpbBgDIAEoCRIMCgRuYW1lGAQgASgJ",
-            "ImsKBkFQSUtleRIKCgJpZBgBIAEoDBIXCg9vcmdhbml6YXRpb25faWQYAiAB",
-            "KAwSDAoEbmFtZRgDIAEoCRIuCgpjcmVhdGVkX2F0GAQgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcCIvCgRUaWVyIicKBFR5cGUSCwoHVU5LTk9X",
-            "ThAAEggKBEZSRUUQARIICgRQQUlEEAIiPQoIQ3VzdG9tZXIiMQoEVHlwZRIL",
-            "CgdVTktOT1dOEAASCgoGUEVSU09OEAESEAoMT1JHQU5JWkFUSU9OEAJCaAoY",
-            "aW8udG9pdC5wcm90by50b2l0Lm1vZGVsQhFPcmdhbml6YXRpb25Qcm90b1om",
-            "Z2l0aHViLmNvbS90b2l0d2FyZS9hcGkuZ2l0L3RvaXQvbW9kZWyqAhBUb2l0",
-            "LlByb3RvLk1vZGVsYgZwcm90bzM="));
+            "cGUSEgoKaHdpZF9xdW90YRgQIAEoBCKSAQoOUGF5bWVudERldGFpbHMSDQoF",
+            "bGFzdDQYASABKAkSDgoGZXhwaXJ5GAIgASgJEhQKDGV4cGlyeV9tb250aBgD",
+            "IAEoCRITCgtleHBpcnlfeWVhchgEIAEoCRINCgVicmFuZBgFIAEoCRIUCgxj",
+            "b3VudHJ5X2NvZGUYBiABKAkSEQoJY3ZjX2NoZWNrGAcgASgJIkgKBFVzZXIS",
+            "CgoCaWQYASABKAwSFwoPb3JnYW5pemF0aW9uX2lkGAIgASgMEg0KBWVtYWls",
+            "GAMgASgJEgwKBG5hbWUYBCABKAkiawoGQVBJS2V5EgoKAmlkGAEgASgMEhcK",
+            "D29yZ2FuaXphdGlvbl9pZBgCIAEoDBIMCgRuYW1lGAMgASgJEi4KCmNyZWF0",
+            "ZWRfYXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIi8KBFRp",
+            "ZXIiJwoEVHlwZRILCgdVTktOT1dOEAASCAoERlJFRRABEggKBFBBSUQQAiI9",
+            "CghDdXN0b21lciIxCgRUeXBlEgsKB1VOS05PV04QABIKCgZQRVJTT04QARIQ",
+            "CgxPUkdBTklaQVRJT04QAkJoChhpby50b2l0LnByb3RvLnRvaXQubW9kZWxC",
+            "EU9yZ2FuaXphdGlvblByb3RvWiZnaXRodWIuY29tL3RvaXR3YXJlL2FwaS5n",
+            "aXQvdG9pdC9tb2RlbKoCEFRvaXQuUHJvdG8uTW9kZWxiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.Organization), global::Toit.Proto.Model.Organization.Parser, new[]{ "Id", "Name", "DefaultSdk", "Email", "City", "Country", "PhoneNumber", "CvrNumber", "Tier", "PaymentDetails", "AddressLine", "PostalCode", "VatNumber", "VatCountryCode", "Customer" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.Organization), global::Toit.Proto.Model.Organization.Parser, new[]{ "Id", "Name", "DefaultSdk", "Email", "City", "Country", "PhoneNumber", "CvrNumber", "Tier", "PaymentDetails", "AddressLine", "PostalCode", "VatNumber", "VatCountryCode", "Customer", "HwidQuota" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.PaymentDetails), global::Toit.Proto.Model.PaymentDetails.Parser, new[]{ "Last4", "Expiry", "ExpiryMonth", "ExpiryYear", "Brand", "CountryCode", "CvcCheck" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.User), global::Toit.Proto.Model.User.Parser, new[]{ "Id", "OrganizationId", "Email", "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.APIKey), global::Toit.Proto.Model.APIKey.Parser, new[]{ "Id", "OrganizationId", "Name", "CreatedAt" }, null, null, null, null),
@@ -106,6 +106,7 @@ namespace Toit.Proto.Model {
       vatNumber_ = other.vatNumber_;
       vatCountryCode_ = other.vatCountryCode_;
       customer_ = other.customer_;
+      hwidQuota_ = other.hwidQuota_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -282,6 +283,17 @@ namespace Toit.Proto.Model {
       }
     }
 
+    /// <summary>Field number for the "hwid_quota" field.</summary>
+    public const int HwidQuotaFieldNumber = 16;
+    private ulong hwidQuota_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ulong HwidQuota {
+      get { return hwidQuota_; }
+      set {
+        hwidQuota_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Organization);
@@ -310,6 +322,7 @@ namespace Toit.Proto.Model {
       if (VatNumber != other.VatNumber) return false;
       if (VatCountryCode != other.VatCountryCode) return false;
       if (Customer != other.Customer) return false;
+      if (HwidQuota != other.HwidQuota) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -331,6 +344,7 @@ namespace Toit.Proto.Model {
       if (VatNumber.Length != 0) hash ^= VatNumber.GetHashCode();
       if (VatCountryCode.Length != 0) hash ^= VatCountryCode.GetHashCode();
       if (Customer != global::Toit.Proto.Model.Customer.Types.Type.Unknown) hash ^= Customer.GetHashCode();
+      if (HwidQuota != 0UL) hash ^= HwidQuota.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -407,6 +421,10 @@ namespace Toit.Proto.Model {
         output.WriteRawTag(120);
         output.WriteEnum((int) Customer);
       }
+      if (HwidQuota != 0UL) {
+        output.WriteRawTag(128, 1);
+        output.WriteUInt64(HwidQuota);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -476,6 +494,10 @@ namespace Toit.Proto.Model {
         output.WriteRawTag(120);
         output.WriteEnum((int) Customer);
       }
+      if (HwidQuota != 0UL) {
+        output.WriteRawTag(128, 1);
+        output.WriteUInt64(HwidQuota);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -529,6 +551,9 @@ namespace Toit.Proto.Model {
       }
       if (Customer != global::Toit.Proto.Model.Customer.Types.Type.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Customer);
+      }
+      if (HwidQuota != 0UL) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt64Size(HwidQuota);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -588,6 +613,9 @@ namespace Toit.Proto.Model {
       }
       if (other.Customer != global::Toit.Proto.Model.Customer.Types.Type.Unknown) {
         Customer = other.Customer;
+      }
+      if (other.HwidQuota != 0UL) {
+        HwidQuota = other.HwidQuota;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -666,6 +694,10 @@ namespace Toit.Proto.Model {
             Customer = (global::Toit.Proto.Model.Customer.Types.Type) input.ReadEnum();
             break;
           }
+          case 128: {
+            HwidQuota = input.ReadUInt64();
+            break;
+          }
         }
       }
     #endif
@@ -741,6 +773,10 @@ namespace Toit.Proto.Model {
           }
           case 120: {
             Customer = (global::Toit.Proto.Model.Customer.Types.Type) input.ReadEnum();
+            break;
+          }
+          case 128: {
+            HwidQuota = input.ReadUInt64();
             break;
           }
         }
