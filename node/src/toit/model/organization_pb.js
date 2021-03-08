@@ -194,7 +194,8 @@ proto.toit.model.Organization.toObject = function(includeInstance, msg) {
     postalCode: jspb.Message.getFieldWithDefault(msg, 12, ""),
     vatNumber: jspb.Message.getFieldWithDefault(msg, 13, ""),
     vatCountryCode: jspb.Message.getFieldWithDefault(msg, 14, ""),
-    customer: jspb.Message.getFieldWithDefault(msg, 15, 0)
+    customer: jspb.Message.getFieldWithDefault(msg, 15, 0),
+    hwidQuota: jspb.Message.getFieldWithDefault(msg, 16, 0)
   };
 
   if (includeInstance) {
@@ -291,6 +292,10 @@ proto.toit.model.Organization.deserializeBinaryFromReader = function(msg, reader
     case 15:
       var value = /** @type {!proto.toit.model.Customer.Type} */ (reader.readEnum());
       msg.setCustomer(value);
+      break;
+    case 16:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setHwidQuota(value);
       break;
     default:
       reader.skipField();
@@ -424,6 +429,13 @@ proto.toit.model.Organization.serializeBinaryToWriter = function(message, writer
   if (f !== 0.0) {
     writer.writeEnum(
       15,
+      f
+    );
+  }
+  f = message.getHwidQuota();
+  if (f !== 0) {
+    writer.writeUint64(
+      16,
       f
     );
   }
@@ -740,6 +752,24 @@ proto.toit.model.Organization.prototype.getCustomer = function() {
  */
 proto.toit.model.Organization.prototype.setCustomer = function(value) {
   return jspb.Message.setProto3EnumField(this, 15, value);
+};
+
+
+/**
+ * optional uint64 hwid_quota = 16;
+ * @return {number}
+ */
+proto.toit.model.Organization.prototype.getHwidQuota = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 16, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.toit.model.Organization} returns this
+ */
+proto.toit.model.Organization.prototype.setHwidQuota = function(value) {
+  return jspb.Message.setProto3IntField(this, 16, value);
 };
 
 

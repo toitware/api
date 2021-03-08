@@ -54,6 +54,9 @@ export class Organization extends jspb.Message {
   getCustomer(): Customer.TypeMap[keyof Customer.TypeMap];
   setCustomer(value: Customer.TypeMap[keyof Customer.TypeMap]): void;
 
+  getHwidQuota(): number;
+  setHwidQuota(value: number): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Organization.AsObject;
   static toObject(includeInstance: boolean, msg: Organization): Organization.AsObject;
@@ -81,6 +84,7 @@ export namespace Organization {
     vatNumber: string,
     vatCountryCode: string,
     customer: Customer.TypeMap[keyof Customer.TypeMap],
+    hwidQuota: number,
   }
 }
 
