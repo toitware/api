@@ -200,6 +200,12 @@ public final class OrganizationProto {
      * @return The customer.
      */
     io.toit.proto.toit.model.OrganizationProto.Customer.Type getCustomer();
+
+    /**
+     * <code>uint64 hwid_quota = 16;</code>
+     * @return The hwidQuota.
+     */
+    long getHwidQuota();
   }
   /**
    * Protobuf type {@code toit.model.Organization}
@@ -354,6 +360,11 @@ public final class OrganizationProto {
               int rawValue = input.readEnum();
 
               customer_ = rawValue;
+              break;
+            }
+            case 128: {
+
+              hwidQuota_ = input.readUInt64();
               break;
             }
             default: {
@@ -863,6 +874,16 @@ public final class OrganizationProto {
       return result == null ? io.toit.proto.toit.model.OrganizationProto.Customer.Type.UNRECOGNIZED : result;
     }
 
+    public static final int HWID_QUOTA_FIELD_NUMBER = 16;
+    private long hwidQuota_;
+    /**
+     * <code>uint64 hwid_quota = 16;</code>
+     * @return The hwidQuota.
+     */
+    public long getHwidQuota() {
+      return hwidQuota_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -922,6 +943,9 @@ public final class OrganizationProto {
       if (customer_ != io.toit.proto.toit.model.OrganizationProto.Customer.Type.UNKNOWN.getNumber()) {
         output.writeEnum(15, customer_);
       }
+      if (hwidQuota_ != 0L) {
+        output.writeUInt64(16, hwidQuota_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -980,6 +1004,10 @@ public final class OrganizationProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(15, customer_);
       }
+      if (hwidQuota_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(16, hwidQuota_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1026,6 +1054,8 @@ public final class OrganizationProto {
       if (!getVatCountryCode()
           .equals(other.getVatCountryCode())) return false;
       if (customer_ != other.customer_) return false;
+      if (getHwidQuota()
+          != other.getHwidQuota()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1069,6 +1099,9 @@ public final class OrganizationProto {
       hash = (53 * hash) + getVatCountryCode().hashCode();
       hash = (37 * hash) + CUSTOMER_FIELD_NUMBER;
       hash = (53 * hash) + customer_;
+      hash = (37 * hash) + HWID_QUOTA_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getHwidQuota());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1236,6 +1269,8 @@ public final class OrganizationProto {
 
         customer_ = 0;
 
+        hwidQuota_ = 0L;
+
         return this;
       }
 
@@ -1281,6 +1316,7 @@ public final class OrganizationProto {
         result.vatNumber_ = vatNumber_;
         result.vatCountryCode_ = vatCountryCode_;
         result.customer_ = customer_;
+        result.hwidQuota_ = hwidQuota_;
         onBuilt();
         return result;
       }
@@ -1384,6 +1420,9 @@ public final class OrganizationProto {
         }
         if (other.customer_ != 0) {
           setCustomerValue(other.getCustomerValue());
+        }
+        if (other.getHwidQuota() != 0L) {
+          setHwidQuota(other.getHwidQuota());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2522,6 +2561,36 @@ public final class OrganizationProto {
       public Builder clearCustomer() {
         
         customer_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long hwidQuota_ ;
+      /**
+       * <code>uint64 hwid_quota = 16;</code>
+       * @return The hwidQuota.
+       */
+      public long getHwidQuota() {
+        return hwidQuota_;
+      }
+      /**
+       * <code>uint64 hwid_quota = 16;</code>
+       * @param value The hwidQuota to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHwidQuota(long value) {
+        
+        hwidQuota_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 hwid_quota = 16;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHwidQuota() {
+        
+        hwidQuota_ = 0L;
         onChanged();
         return this;
       }
@@ -6938,7 +7007,7 @@ public final class OrganizationProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\035toit/model/organization.proto\022\ntoit.mo" +
-      "del\032\037google/protobuf/timestamp.proto\"\365\002\n" +
+      "del\032\037google/protobuf/timestamp.proto\"\211\003\n" +
       "\014Organization\022\n\n\002id\030\001 \001(\014\022\014\n\004name\030\002 \001(\t\022" +
       "\023\n\013default_sdk\030\003 \001(\t\022\r\n\005email\030\004 \001(\t\022\014\n\004c" +
       "ity\030\005 \001(\t\022\017\n\007country\030\006 \001(\t\022\024\n\014phone_numb" +
@@ -6948,21 +7017,21 @@ public final class OrganizationProto {
       "\n\014address_line\030\013 \001(\t\022\023\n\013postal_code\030\014 \001(" +
       "\t\022\022\n\nvat_number\030\r \001(\t\022\030\n\020vat_country_cod" +
       "e\030\016 \001(\t\022+\n\010customer\030\017 \001(\0162\031.toit.model.C" +
-      "ustomer.Type\"\222\001\n\016PaymentDetails\022\r\n\005last4" +
-      "\030\001 \001(\t\022\016\n\006expiry\030\002 \001(\t\022\024\n\014expiry_month\030\003" +
-      " \001(\t\022\023\n\013expiry_year\030\004 \001(\t\022\r\n\005brand\030\005 \001(\t" +
-      "\022\024\n\014country_code\030\006 \001(\t\022\021\n\tcvc_check\030\007 \001(" +
-      "\t\"H\n\004User\022\n\n\002id\030\001 \001(\014\022\027\n\017organization_id" +
-      "\030\002 \001(\014\022\r\n\005email\030\003 \001(\t\022\014\n\004name\030\004 \001(\t\"k\n\006A" +
-      "PIKey\022\n\n\002id\030\001 \001(\014\022\027\n\017organization_id\030\002 \001" +
-      "(\014\022\014\n\004name\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\"/\n\004Tier\"\'\n\004Type" +
-      "\022\013\n\007UNKNOWN\020\000\022\010\n\004FREE\020\001\022\010\n\004PAID\020\002\"=\n\010Cus" +
-      "tomer\"1\n\004Type\022\013\n\007UNKNOWN\020\000\022\n\n\006PERSON\020\001\022\020" +
-      "\n\014ORGANIZATION\020\002Bh\n\030io.toit.proto.toit.m" +
-      "odelB\021OrganizationProtoZ&github.com/toit" +
-      "ware/api.git/toit/model\252\002\020Toit.Proto.Mod" +
-      "elb\006proto3"
+      "ustomer.Type\022\022\n\nhwid_quota\030\020 \001(\004\"\222\001\n\016Pay" +
+      "mentDetails\022\r\n\005last4\030\001 \001(\t\022\016\n\006expiry\030\002 \001" +
+      "(\t\022\024\n\014expiry_month\030\003 \001(\t\022\023\n\013expiry_year\030" +
+      "\004 \001(\t\022\r\n\005brand\030\005 \001(\t\022\024\n\014country_code\030\006 \001" +
+      "(\t\022\021\n\tcvc_check\030\007 \001(\t\"H\n\004User\022\n\n\002id\030\001 \001(" +
+      "\014\022\027\n\017organization_id\030\002 \001(\014\022\r\n\005email\030\003 \001(" +
+      "\t\022\014\n\004name\030\004 \001(\t\"k\n\006APIKey\022\n\n\002id\030\001 \001(\014\022\027\n" +
+      "\017organization_id\030\002 \001(\014\022\014\n\004name\030\003 \001(\t\022.\n\n" +
+      "created_at\030\004 \001(\0132\032.google.protobuf.Times" +
+      "tamp\"/\n\004Tier\"\'\n\004Type\022\013\n\007UNKNOWN\020\000\022\010\n\004FRE" +
+      "E\020\001\022\010\n\004PAID\020\002\"=\n\010Customer\"1\n\004Type\022\013\n\007UNK" +
+      "NOWN\020\000\022\n\n\006PERSON\020\001\022\020\n\014ORGANIZATION\020\002Bh\n\030" +
+      "io.toit.proto.toit.modelB\021OrganizationPr" +
+      "otoZ&github.com/toitware/api.git/toit/mo" +
+      "del\252\002\020Toit.Proto.Modelb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6974,7 +7043,7 @@ public final class OrganizationProto {
     internal_static_toit_model_Organization_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_Organization_descriptor,
-        new java.lang.String[] { "Id", "Name", "DefaultSdk", "Email", "City", "Country", "PhoneNumber", "CvrNumber", "Tier", "PaymentDetails", "AddressLine", "PostalCode", "VatNumber", "VatCountryCode", "Customer", });
+        new java.lang.String[] { "Id", "Name", "DefaultSdk", "Email", "City", "Country", "PhoneNumber", "CvrNumber", "Tier", "PaymentDetails", "AddressLine", "PostalCode", "VatNumber", "VatCountryCode", "Customer", "HwidQuota", });
     internal_static_toit_model_PaymentDetails_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_toit_model_PaymentDetails_fieldAccessorTable = new
