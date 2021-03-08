@@ -25,6 +25,7 @@ message Organization {
     string vat_number = 13;
     string vat_country_code = 14;
     Customer.Type customer = 15;
+    uint64 hwid_quota = 16;
 }
 
 message PaymentDetails {
