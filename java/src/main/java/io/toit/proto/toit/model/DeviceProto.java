@@ -835,6 +835,21 @@ public final class DeviceProto {
      * <code>.toit.model.DeviceModulesConfig modules = 9;</code>
      */
     io.toit.proto.toit.model.DeviceProto.DeviceModulesConfigOrBuilder getModulesOrBuilder();
+
+    /**
+     * <code>.toit.model.DeviceModelSettings model_settings = 10;</code>
+     * @return Whether the modelSettings field is set.
+     */
+    boolean hasModelSettings();
+    /**
+     * <code>.toit.model.DeviceModelSettings model_settings = 10;</code>
+     * @return The modelSettings.
+     */
+    io.toit.proto.toit.model.DeviceProto.DeviceModelSettings getModelSettings();
+    /**
+     * <code>.toit.model.DeviceModelSettings model_settings = 10;</code>
+     */
+    io.toit.proto.toit.model.DeviceProto.DeviceModelSettingsOrBuilder getModelSettingsOrBuilder();
   }
   /**
    * Protobuf type {@code toit.model.DeviceConfig}
@@ -976,6 +991,19 @@ public final class DeviceProto {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(modules_);
                 modules_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 82: {
+              io.toit.proto.toit.model.DeviceProto.DeviceModelSettings.Builder subBuilder = null;
+              if (modelSettings_ != null) {
+                subBuilder = modelSettings_.toBuilder();
+              }
+              modelSettings_ = input.readMessage(io.toit.proto.toit.model.DeviceProto.DeviceModelSettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(modelSettings_);
+                modelSettings_ = subBuilder.buildPartial();
               }
 
               break;
@@ -1258,6 +1286,29 @@ public final class DeviceProto {
       return getModules();
     }
 
+    public static final int MODEL_SETTINGS_FIELD_NUMBER = 10;
+    private io.toit.proto.toit.model.DeviceProto.DeviceModelSettings modelSettings_;
+    /**
+     * <code>.toit.model.DeviceModelSettings model_settings = 10;</code>
+     * @return Whether the modelSettings field is set.
+     */
+    public boolean hasModelSettings() {
+      return modelSettings_ != null;
+    }
+    /**
+     * <code>.toit.model.DeviceModelSettings model_settings = 10;</code>
+     * @return The modelSettings.
+     */
+    public io.toit.proto.toit.model.DeviceProto.DeviceModelSettings getModelSettings() {
+      return modelSettings_ == null ? io.toit.proto.toit.model.DeviceProto.DeviceModelSettings.getDefaultInstance() : modelSettings_;
+    }
+    /**
+     * <code>.toit.model.DeviceModelSettings model_settings = 10;</code>
+     */
+    public io.toit.proto.toit.model.DeviceProto.DeviceModelSettingsOrBuilder getModelSettingsOrBuilder() {
+      return getModelSettings();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1298,6 +1349,9 @@ public final class DeviceProto {
       }
       if (modules_ != null) {
         output.writeMessage(9, getModules());
+      }
+      if (modelSettings_ != null) {
+        output.writeMessage(10, getModelSettings());
       }
       unknownFields.writeTo(output);
     }
@@ -1340,6 +1394,10 @@ public final class DeviceProto {
       if (modules_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getModules());
+      }
+      if (modelSettings_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getModelSettings());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1392,6 +1450,11 @@ public final class DeviceProto {
         if (!getModules()
             .equals(other.getModules())) return false;
       }
+      if (hasModelSettings() != other.hasModelSettings()) return false;
+      if (hasModelSettings()) {
+        if (!getModelSettings()
+            .equals(other.getModelSettings())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1432,6 +1495,10 @@ public final class DeviceProto {
       if (hasModules()) {
         hash = (37 * hash) + MODULES_FIELD_NUMBER;
         hash = (53 * hash) + getModules().hashCode();
+      }
+      if (hasModelSettings()) {
+        hash = (37 * hash) + MODEL_SETTINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getModelSettings().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1608,6 +1675,12 @@ public final class DeviceProto {
           modules_ = null;
           modulesBuilder_ = null;
         }
+        if (modelSettingsBuilder_ == null) {
+          modelSettings_ = null;
+        } else {
+          modelSettings_ = null;
+          modelSettingsBuilder_ = null;
+        }
         return this;
       }
 
@@ -1666,6 +1739,11 @@ public final class DeviceProto {
           result.modules_ = modules_;
         } else {
           result.modules_ = modulesBuilder_.build();
+        }
+        if (modelSettingsBuilder_ == null) {
+          result.modelSettings_ = modelSettings_;
+        } else {
+          result.modelSettings_ = modelSettingsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -1744,6 +1822,9 @@ public final class DeviceProto {
         }
         if (other.hasModules()) {
           mergeModules(other.getModules());
+        }
+        if (other.hasModelSettings()) {
+          mergeModelSettings(other.getModelSettings());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2714,6 +2795,125 @@ public final class DeviceProto {
           modules_ = null;
         }
         return modulesBuilder_;
+      }
+
+      private io.toit.proto.toit.model.DeviceProto.DeviceModelSettings modelSettings_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.model.DeviceProto.DeviceModelSettings, io.toit.proto.toit.model.DeviceProto.DeviceModelSettings.Builder, io.toit.proto.toit.model.DeviceProto.DeviceModelSettingsOrBuilder> modelSettingsBuilder_;
+      /**
+       * <code>.toit.model.DeviceModelSettings model_settings = 10;</code>
+       * @return Whether the modelSettings field is set.
+       */
+      public boolean hasModelSettings() {
+        return modelSettingsBuilder_ != null || modelSettings_ != null;
+      }
+      /**
+       * <code>.toit.model.DeviceModelSettings model_settings = 10;</code>
+       * @return The modelSettings.
+       */
+      public io.toit.proto.toit.model.DeviceProto.DeviceModelSettings getModelSettings() {
+        if (modelSettingsBuilder_ == null) {
+          return modelSettings_ == null ? io.toit.proto.toit.model.DeviceProto.DeviceModelSettings.getDefaultInstance() : modelSettings_;
+        } else {
+          return modelSettingsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.toit.model.DeviceModelSettings model_settings = 10;</code>
+       */
+      public Builder setModelSettings(io.toit.proto.toit.model.DeviceProto.DeviceModelSettings value) {
+        if (modelSettingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          modelSettings_ = value;
+          onChanged();
+        } else {
+          modelSettingsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.DeviceModelSettings model_settings = 10;</code>
+       */
+      public Builder setModelSettings(
+          io.toit.proto.toit.model.DeviceProto.DeviceModelSettings.Builder builderForValue) {
+        if (modelSettingsBuilder_ == null) {
+          modelSettings_ = builderForValue.build();
+          onChanged();
+        } else {
+          modelSettingsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.DeviceModelSettings model_settings = 10;</code>
+       */
+      public Builder mergeModelSettings(io.toit.proto.toit.model.DeviceProto.DeviceModelSettings value) {
+        if (modelSettingsBuilder_ == null) {
+          if (modelSettings_ != null) {
+            modelSettings_ =
+              io.toit.proto.toit.model.DeviceProto.DeviceModelSettings.newBuilder(modelSettings_).mergeFrom(value).buildPartial();
+          } else {
+            modelSettings_ = value;
+          }
+          onChanged();
+        } else {
+          modelSettingsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.DeviceModelSettings model_settings = 10;</code>
+       */
+      public Builder clearModelSettings() {
+        if (modelSettingsBuilder_ == null) {
+          modelSettings_ = null;
+          onChanged();
+        } else {
+          modelSettings_ = null;
+          modelSettingsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.DeviceModelSettings model_settings = 10;</code>
+       */
+      public io.toit.proto.toit.model.DeviceProto.DeviceModelSettings.Builder getModelSettingsBuilder() {
+        
+        onChanged();
+        return getModelSettingsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.toit.model.DeviceModelSettings model_settings = 10;</code>
+       */
+      public io.toit.proto.toit.model.DeviceProto.DeviceModelSettingsOrBuilder getModelSettingsOrBuilder() {
+        if (modelSettingsBuilder_ != null) {
+          return modelSettingsBuilder_.getMessageOrBuilder();
+        } else {
+          return modelSettings_ == null ?
+              io.toit.proto.toit.model.DeviceProto.DeviceModelSettings.getDefaultInstance() : modelSettings_;
+        }
+      }
+      /**
+       * <code>.toit.model.DeviceModelSettings model_settings = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.model.DeviceProto.DeviceModelSettings, io.toit.proto.toit.model.DeviceProto.DeviceModelSettings.Builder, io.toit.proto.toit.model.DeviceProto.DeviceModelSettingsOrBuilder> 
+          getModelSettingsFieldBuilder() {
+        if (modelSettingsBuilder_ == null) {
+          modelSettingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.toit.proto.toit.model.DeviceProto.DeviceModelSettings, io.toit.proto.toit.model.DeviceProto.DeviceModelSettings.Builder, io.toit.proto.toit.model.DeviceProto.DeviceModelSettingsOrBuilder>(
+                  getModelSettings(),
+                  getParentForChildren(),
+                  isClean());
+          modelSettings_ = null;
+        }
+        return modelSettingsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -32886,6 +33086,734 @@ public final class DeviceProto {
 
   }
 
+  public interface DeviceModelSettingsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.model.DeviceModelSettings)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>map&lt;string, int32&gt; parameters = 1;</code>
+     */
+    int getParametersCount();
+    /**
+     * <code>map&lt;string, int32&gt; parameters = 1;</code>
+     */
+    boolean containsParameters(
+        java.lang.String key);
+    /**
+     * Use {@link #getParametersMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.Integer>
+    getParameters();
+    /**
+     * <code>map&lt;string, int32&gt; parameters = 1;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.Integer>
+    getParametersMap();
+    /**
+     * <code>map&lt;string, int32&gt; parameters = 1;</code>
+     */
+
+    int getParametersOrDefault(
+        java.lang.String key,
+        int defaultValue);
+    /**
+     * <code>map&lt;string, int32&gt; parameters = 1;</code>
+     */
+
+    int getParametersOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code toit.model.DeviceModelSettings}
+   */
+  public  static final class DeviceModelSettings extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.model.DeviceModelSettings)
+      DeviceModelSettingsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeviceModelSettings.newBuilder() to construct.
+    private DeviceModelSettings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeviceModelSettings() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeviceModelSettings();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeviceModelSettings(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                parameters_ = com.google.protobuf.MapField.newMapField(
+                    ParametersDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.Integer>
+              parameters__ = input.readMessage(
+                  ParametersDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              parameters_.getMutableMap().put(
+                  parameters__.getKey(), parameters__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.model.DeviceProto.internal_static_toit_model_DeviceModelSettings_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 1:
+          return internalGetParameters();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.model.DeviceProto.internal_static_toit_model_DeviceModelSettings_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.model.DeviceProto.DeviceModelSettings.class, io.toit.proto.toit.model.DeviceProto.DeviceModelSettings.Builder.class);
+    }
+
+    public static final int PARAMETERS_FIELD_NUMBER = 1;
+    private static final class ParametersDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.Integer> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.Integer>newDefaultInstance(
+                  io.toit.proto.toit.model.DeviceProto.internal_static_toit_model_DeviceModelSettings_ParametersEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.INT32,
+                  0);
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.Integer> parameters_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
+    internalGetParameters() {
+      if (parameters_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            ParametersDefaultEntryHolder.defaultEntry);
+      }
+      return parameters_;
+    }
+
+    public int getParametersCount() {
+      return internalGetParameters().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, int32&gt; parameters = 1;</code>
+     */
+
+    public boolean containsParameters(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetParameters().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getParametersMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.Integer> getParameters() {
+      return getParametersMap();
+    }
+    /**
+     * <code>map&lt;string, int32&gt; parameters = 1;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.Integer> getParametersMap() {
+      return internalGetParameters().getMap();
+    }
+    /**
+     * <code>map&lt;string, int32&gt; parameters = 1;</code>
+     */
+
+    public int getParametersOrDefault(
+        java.lang.String key,
+        int defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.Integer> map =
+          internalGetParameters().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, int32&gt; parameters = 1;</code>
+     */
+
+    public int getParametersOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.Integer> map =
+          internalGetParameters().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetParameters(),
+          ParametersDefaultEntryHolder.defaultEntry,
+          1);
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (java.util.Map.Entry<java.lang.String, java.lang.Integer> entry
+           : internalGetParameters().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.Integer>
+        parameters__ = ParametersDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, parameters__);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.model.DeviceProto.DeviceModelSettings)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.model.DeviceProto.DeviceModelSettings other = (io.toit.proto.toit.model.DeviceProto.DeviceModelSettings) obj;
+
+      if (!internalGetParameters().equals(
+          other.internalGetParameters())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (!internalGetParameters().getMap().isEmpty()) {
+        hash = (37 * hash) + PARAMETERS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetParameters().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.model.DeviceProto.DeviceModelSettings parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.model.DeviceProto.DeviceModelSettings parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.model.DeviceProto.DeviceModelSettings parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.model.DeviceProto.DeviceModelSettings parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.model.DeviceProto.DeviceModelSettings parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.model.DeviceProto.DeviceModelSettings parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.model.DeviceProto.DeviceModelSettings parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.model.DeviceProto.DeviceModelSettings parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.model.DeviceProto.DeviceModelSettings parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.model.DeviceProto.DeviceModelSettings parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.model.DeviceProto.DeviceModelSettings parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.model.DeviceProto.DeviceModelSettings parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.model.DeviceProto.DeviceModelSettings prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.model.DeviceModelSettings}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.model.DeviceModelSettings)
+        io.toit.proto.toit.model.DeviceProto.DeviceModelSettingsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.model.DeviceProto.internal_static_toit_model_DeviceModelSettings_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetParameters();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetMutableParameters();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.model.DeviceProto.internal_static_toit_model_DeviceModelSettings_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.model.DeviceProto.DeviceModelSettings.class, io.toit.proto.toit.model.DeviceProto.DeviceModelSettings.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.model.DeviceProto.DeviceModelSettings.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        internalGetMutableParameters().clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.model.DeviceProto.internal_static_toit_model_DeviceModelSettings_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.model.DeviceProto.DeviceModelSettings getDefaultInstanceForType() {
+        return io.toit.proto.toit.model.DeviceProto.DeviceModelSettings.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.model.DeviceProto.DeviceModelSettings build() {
+        io.toit.proto.toit.model.DeviceProto.DeviceModelSettings result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.model.DeviceProto.DeviceModelSettings buildPartial() {
+        io.toit.proto.toit.model.DeviceProto.DeviceModelSettings result = new io.toit.proto.toit.model.DeviceProto.DeviceModelSettings(this);
+        int from_bitField0_ = bitField0_;
+        result.parameters_ = internalGetParameters();
+        result.parameters_.makeImmutable();
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.model.DeviceProto.DeviceModelSettings) {
+          return mergeFrom((io.toit.proto.toit.model.DeviceProto.DeviceModelSettings)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.model.DeviceProto.DeviceModelSettings other) {
+        if (other == io.toit.proto.toit.model.DeviceProto.DeviceModelSettings.getDefaultInstance()) return this;
+        internalGetMutableParameters().mergeFrom(
+            other.internalGetParameters());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.model.DeviceProto.DeviceModelSettings parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.model.DeviceProto.DeviceModelSettings) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.Integer> parameters_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
+      internalGetParameters() {
+        if (parameters_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              ParametersDefaultEntryHolder.defaultEntry);
+        }
+        return parameters_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
+      internalGetMutableParameters() {
+        onChanged();;
+        if (parameters_ == null) {
+          parameters_ = com.google.protobuf.MapField.newMapField(
+              ParametersDefaultEntryHolder.defaultEntry);
+        }
+        if (!parameters_.isMutable()) {
+          parameters_ = parameters_.copy();
+        }
+        return parameters_;
+      }
+
+      public int getParametersCount() {
+        return internalGetParameters().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, int32&gt; parameters = 1;</code>
+       */
+
+      public boolean containsParameters(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetParameters().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getParametersMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.Integer> getParameters() {
+        return getParametersMap();
+      }
+      /**
+       * <code>map&lt;string, int32&gt; parameters = 1;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.Integer> getParametersMap() {
+        return internalGetParameters().getMap();
+      }
+      /**
+       * <code>map&lt;string, int32&gt; parameters = 1;</code>
+       */
+
+      public int getParametersOrDefault(
+          java.lang.String key,
+          int defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.Integer> map =
+            internalGetParameters().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, int32&gt; parameters = 1;</code>
+       */
+
+      public int getParametersOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.Integer> map =
+            internalGetParameters().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearParameters() {
+        internalGetMutableParameters().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, int32&gt; parameters = 1;</code>
+       */
+
+      public Builder removeParameters(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableParameters().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.Integer>
+      getMutableParameters() {
+        return internalGetMutableParameters().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, int32&gt; parameters = 1;</code>
+       */
+      public Builder putParameters(
+          java.lang.String key,
+          int value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        
+        internalGetMutableParameters().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, int32&gt; parameters = 1;</code>
+       */
+
+      public Builder putAllParameters(
+          java.util.Map<java.lang.String, java.lang.Integer> values) {
+        internalGetMutableParameters().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.model.DeviceModelSettings)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.model.DeviceModelSettings)
+    private static final io.toit.proto.toit.model.DeviceProto.DeviceModelSettings DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.model.DeviceProto.DeviceModelSettings();
+    }
+
+    public static io.toit.proto.toit.model.DeviceProto.DeviceModelSettings getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeviceModelSettings>
+        PARSER = new com.google.protobuf.AbstractParser<DeviceModelSettings>() {
+      @java.lang.Override
+      public DeviceModelSettings parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeviceModelSettings(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeviceModelSettings> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeviceModelSettings> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.model.DeviceProto.DeviceModelSettings getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_toit_model_DeviceConfig_descriptor;
   private static final 
@@ -33066,6 +33994,16 @@ public final class DeviceProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_toit_model_DeviceEvent_Info_Value_Error_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_model_DeviceModelSettings_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_model_DeviceModelSettings_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_model_DeviceModelSettings_ParametersEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_model_DeviceModelSettings_ParametersEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -33078,7 +34016,7 @@ public final class DeviceProto {
       "\n\027toit/model/device.proto\022\ntoit.model\032\037g" +
       "oogle/protobuf/timestamp.proto\032\036google/p" +
       "rotobuf/duration.proto\032\033google/protobuf/" +
-      "empty.proto\032\025toit/model/data.proto\"\360\002\n\014D" +
+      "empty.proto\032\025toit/model/data.proto\"\251\003\n\014D" +
       "eviceConfig\022\014\n\004name\030\001 \001(\t\0221\n\rstarted_aft" +
       "er\030\002 \001(\0132\032.google.protobuf.Timestamp\022\013\n\003" +
       "sdk\030\003 \001(\t\0220\n\006broker\030\004 \001(\0132 .toit.model.D" +
@@ -33088,135 +34026,140 @@ public final class DeviceProto {
       "ogle.protobuf.Timestamp\0222\n\007runtime\030\010 \001(\013" +
       "2!.toit.model.DeviceRuntimeSettings\0220\n\007m" +
       "odules\030\t \001(\0132\037.toit.model.DeviceModulesC" +
-      "onfig\"u\n\023DeviceModulesConfig\0222\n\016sync_req" +
-      "uested\030\001 \001(\0132\032.google.protobuf.Timestamp" +
-      "\022*\n\007modules\030\002 \001(\0132\031.toit.model.DeviceMod" +
-      "ules\"s\n\025DeviceRuntimeSettings\022,\n\007logging" +
-      "\030\001 \001(\0132\033.toit.model.LoggingSettings\022,\n\007m" +
-      "etrics\030\002 \001(\0132\033.toit.model.MetricsSetting" +
-      "s\";\n\017LoggingSettings\022(\n\005level\030\001 \001(\0162\031.to" +
-      "it.model.LogData.Level\"?\n\017MetricsSetting" +
-      "s\022,\n\005level\030\001 \001(\0162\035.toit.model.MetricsDat" +
-      "a.Level\"\235\001\n\030DeviceConnectionSettings\022.\n\013" +
-      "max_offline\030\001 \001(\0132\031.google.protobuf.Dura" +
-      "tion\0222\n\013connections\030\002 \003(\0132\035.toit.model.C" +
-      "onnectionSetting\022\035\n\025event_queue_threshol" +
-      "d\030\003 \001(\r\"c\n\021ConnectionSetting\022%\n\004wifi\030\001 \001" +
-      "(\0132\027.toit.model.WifiSetting\022\'\n\005nbiot\030\002 \001" +
-      "(\0132\030.toit.model.NBIoTSetting\"-\n\013WifiSett" +
-      "ing\022\014\n\004ssid\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\"I\n\014N" +
-      "BIoTSetting\022\013\n\003apn\030\001 \001(\t\022\r\n\005bands\030\002 \003(\003\022" +
-      "\020\n\010operator\030\003 \001(\t\022\013\n\003pin\030\004 \001(\t\"T\n\024Device" +
-      "BrokerSettings\022\014\n\004host\030\001 \001(\t\022\014\n\004port\030\002 \001" +
-      "(\003\022\n\n\002cn\030\003 \001(\t\022\024\n\010protocol\030\004 \001(\tB\002\030\001\"\252\003\n" +
-      "\014DeviceStatus\022\024\n\010revision\030\001 \001(\003B\002\030\001\022\r\n\005e" +
-      "poch\030\006 \001(\014\022\026\n\016state_revision\030\005 \001(\003\022+\n\007up" +
-      "dated\030\002 \001(\0132\032.google.protobuf.Timestamp\022" +
-      "\027\n\017config_revision\030\003 \001(\003\022\013\n\003sdk\030\004 \001(\t\022\r\n" +
-      "\005model\030\007 \001(\t\022(\n\006config\030\010 \001(\0132\030.toit.mode" +
-      "l.DeviceConfig\022\021\n\tconnected\030\t \001(\010\022*\n\004boo" +
-      "t\030\n \001(\0132\034.toit.model.DeviceBootStatus\022(\n" +
-      "\006health\030\013 \001(\0132\030.toit.model.DeviceHealth\022" +
-      "6\n\nconnection\030\014 \001(\0132\".toit.model.DeviceC" +
-      "onnectionStatus\0220\n\007modules\030\r \001(\0132\037.toit." +
-      "model.DeviceModulesStatus\"s\n\023DeviceModul" +
-      "esStatus\0220\n\014last_updated\030\001 \001(\0132\032.google." +
-      "protobuf.Timestamp\022*\n\007modules\030\002 \001(\0132\031.to" +
-      "it.model.DeviceModules\";\n\rDeviceModules\022" +
-      "*\n\010cellular\030\001 \001(\0132\030.toit.model.DeviceMod" +
-      "ule\".\n\014DeviceModule\022\r\n\005model\030\001 \001(\t\022\017\n\007ve" +
-      "rsion\030\002 \001(\t\"W\n\026DeviceConnectionStatus\022\r\n" +
-      "\005index\030\001 \001(\003\022.\n\004type\030\002 \001(\0162 .toit.model." +
-      "DeviceConnectionType\"\214\001\n\020DeviceBootStatu" +
-      "s\022-\n\tlast_boot\030\001 \001(\0132\032.google.protobuf.T" +
-      "imestamp\022\022\n\nin_factory\030\002 \001(\010\0225\n\021last_fac" +
-      "tory_boot\030\003 \001(\0132\032.google.protobuf.Timest" +
-      "amp\"\373\004\n\014DeviceHealth\022-\n\005power\030\001 \001(\0132\036.to" +
-      "it.model.DeviceHealth.Power\022<\n\rbattery_c" +
-      "urve\030\002 \001(\0132%.toit.model.DeviceHealth.Bat" +
-      "teryCurve\022;\n\014connectivity\030\003 \001(\0132%.toit.m" +
-      "odel.DeviceHealth.Connectivity\032\300\001\n\005Power" +
-      "\0223\n\005value\030\001 \001(\0132$.toit.model.DeviceHealt" +
-      "h.Power.Value\0220\n\014last_updated\030\002 \001(\0132\032.go" +
-      "ogle.protobuf.Timestamp\032P\n\005Value\022\021\n\007batt" +
-      "ery\030\001 \001(\001H\000\022+\n\tpluggedin\030\002 \001(\0132\026.google." +
-      "protobuf.EmptyH\000B\007\n\005power\032O\n\014BatteryCurv" +
-      "e\022\r\n\005slope\030\001 \001(\001\0220\n\014last_updated\030\002 \001(\0132\032" +
-      ".google.protobuf.Timestamp\032\254\001\n\014Connectiv" +
-      "ity\022-\n\tlast_seen\030\001 \001(\0132\032.google.protobuf" +
-      ".Timestamp\022\021\n\tconnected\030\002 \001(\010\022?\n\010checkin" +
-      "s\030\003 \003(\0132-.toit.model.DeviceHealth.Connec" +
-      "tivity.Checkin\032\031\n\007Checkin\022\016\n\006missed\030\001 \001(" +
-      "\010\"y\n\020HardwareIdentity\022\023\n\013hardware_id\030\001 \001" +
-      "(\014\022\027\n\017sequence_number\030\002 \001(\003\022\r\n\005batch\030\003 \001" +
-      "(\t\022\023\n\013private_key\030\004 \001(\014\022\023\n\013certificate\030\005" +
-      " \001(\014\"\205\001\n\024HardwareIdentityInfo\022\033\n\023factory" +
-      "_sdk_version\030\001 \001(\t\022\022\n\nflashed_by\030\002 \001(\014\022\r" +
-      "\n\005iccid\030\003 \001(\t\022\017\n\007chip_id\030\004 \001(\t\022\034\n\024factor" +
-      "y_device_model\030\005 \001(\t\"S\n\014HardwareInfo\022\023\n\013" +
-      "hardware_id\030\001 \001(\014\022\025\n\rhardware_fqdn\030\002 \001(\t" +
-      "\022\027\n\017organization_id\030\004 \001(\014\"\226\001\n\024HardwareTo" +
-      "DeviceInfo\022\023\n\013hardware_id\030\001 \001(\014\022\021\n\tdevic" +
-      "e_id\030\002 \001(\014\022)\n\005bound\030\003 \001(\0132\032.google.proto" +
-      "buf.Timestamp\022+\n\007unbound\030\004 \001(\0132\032.google." +
-      "protobuf.Timestamp\"\325\t\n\013DeviceEvent\022\021\n\tde" +
-      "vice_id\030\001 \001(\014\022\020\n\010event_id\030\002 \001(\014\022+\n\007creat" +
-      "ed\030\003 \001(\0132\032.google.protobuf.Timestamp\022*\n\004" +
-      "type\030\004 \001(\0162\034.toit.model.DeviceEvent.Type" +
-      "\022\013\n\003msg\030\005 \001(\t\022\014\n\004data\030\006 \001(\014\0224\n\tinitiater" +
-      "\030\007 \001(\0132!.toit.model.DeviceEvent.Initiate" +
-      "r\0221\n\013information\030\010 \003(\0132\034.toit.model.Devi" +
-      "ceEvent.Info\032\213\002\n\tInitiater\022:\n\006device\030\001 \001" +
-      "(\0132(.toit.model.DeviceEvent.Initiater.De" +
-      "viceH\000\022<\n\007console\030\002 \001(\0132).toit.model.Dev" +
-      "iceEvent.Initiater.ConsoleH\000\0226\n\004user\030\003 \001" +
-      "(\0132&.toit.model.DeviceEvent.Initiater.Us" +
-      "erH\000\032\033\n\006Device\022\021\n\tdevice_id\030\001 \001(\014\032\t\n\007Con" +
-      "sole\032\027\n\004User\022\017\n\007user_id\030\001 \001(\014B\013\n\tinitiat" +
-      "er\032\257\004\n\004Info\022\013\n\003key\030\001 \001(\t\0221\n\005value\030\002 \001(\0132" +
-      "\".toit.model.DeviceEvent.Info.Value\032\346\003\n\005" +
-      "Value\022A\n\tprimitive\030\001 \001(\0132,.toit.model.De" +
-      "viceEvent.Info.Value.PrimitiveH\000\0227\n\004diff" +
-      "\030\002 \001(\0132\'.toit.model.DeviceEvent.Info.Val" +
-      "ue.DiffH\000\0229\n\005error\030\003 \001(\0132(.toit.model.De" +
-      "viceEvent.Info.Value.ErrorH\000\032\206\001\n\tPrimiti" +
-      "ve\022?\n\004type\030\001 \001(\01621.toit.model.DeviceEven" +
-      "t.Info.Value.Primitive.Type\022\r\n\005value\030\002 \001" +
-      "(\014\")\n\004Type\022\013\n\007INVALID\020\000\022\010\n\004JSON\020\001\022\n\n\006STR" +
-      "ING\020\002\032|\n\004Diff\022:\n\004from\030\001 \001(\0132,.toit.model" +
-      ".DeviceEvent.Info.Value.Primitive\0228\n\002to\030" +
-      "\002 \001(\0132,.toit.model.DeviceEvent.Info.Valu" +
-      "e.Primitive\032\026\n\005Error\022\r\n\005error\030\001 \001(\tB\007\n\005v" +
-      "alue\"\203\001\n\004Type\022\013\n\007UNKNOWN\020\000\022\021\n\rCONFIG_CHA" +
-      "NGE\020\001\022\021\n\rSTATUS_CHANGE\020\002\022\017\n\013NEXT_ACTION\020" +
-      "\003\022\021\n\rDEVICE_ACTION\020\004\022\022\n\016QUEUE_OVERFLOW\020\005" +
-      "\022\020\n\014REQUEST_FILE\020\006*\234\001\n\024DeviceConnectionT" +
-      "ype\022\"\n\036DEVICE_CONNECTION_TYPE_UNKNOWN\020\000\022" +
-      "\037\n\033DEVICE_CONNECTION_TYPE_WIFI\020\001\022 \n\034DEVI" +
-      "CE_CONNECTION_TYPE_NBIOT\020\002\022\035\n\031DEVICE_CON" +
-      "NECTION_TYPE_OS\020\003*\332\001\n\020DeviceChangeType\022\031" +
-      "\n\025DEVICE_CHANGE_UNKNOWN\020\000\022\027\n\023DEVICE_CHAN" +
-      "GE_ADDED\020\001\022\031\n\025DEVICE_CHANGE_DELETED\020\002\022\031\n" +
-      "\025DEVICE_CHANGE_CHANGED\020\003\022\037\n\027DEVICE_CHANG" +
-      "E_HEARTBEAT\020\004\032\002\010\001\022\033\n\027DEVICE_CHANGE_CONNE" +
-      "CTED\020\005\022\036\n\032DEVICE_CHANGE_DISCONNECTED\020\006*L" +
-      "\n\027DeviceSessionChangeType\022\020\n\014UNKNOWN_TYP" +
-      "E\020\000\022\r\n\tCONNECTED\020\001\022\020\n\014DISCONNECTED\020\002*\264\003\n" +
-      "\014DeviceAction\022\031\n\025DEVICE_ACTION_UNKNOWN\020\000" +
-      "\022\025\n\021DEVICE_ACTION_NOP\020\001\022\030\n\024DEVICE_ACTION" +
-      "_REBOOT\020\002\022\033\n\027DEVICE_ACTION_NEW_EPOCH\020\003\022\037" +
-      "\n\033DEVICE_ACTION_REPORT_CONFIG\020\004\022!\n\035DEVIC" +
-      "E_ACTION_FACTORY_PROMOTE\020\005\022\037\n\033DEVICE_ACT" +
-      "ION_UPDATE_CONFIG\020\006\022!\n\035DEVICE_ACTION_UPD" +
-      "ATE_FIRMWARE\020\007\022\037\n\033DEVICE_ACTION_FACTORY_" +
-      "RESET\020\010\022\033\n\027DEVICE_ACTION_RECONCILE\020\t\022)\n%" +
-      "DEVICE_ACTION_UPDATE_PARTIAL_FIRMWARE\020\n\022" +
-      " \n\034DEVICE_ACTION_REPORT_MODULES\020\013\022(\n$DEV" +
-      "ICE_ACTION_UPDATE_MODULE_CELLULAR\020\014*-\n\020D" +
-      "eviceModuleType\022\013\n\007Unknown\020\000\022\014\n\010Cellular" +
-      "\020\001Bb\n\030io.toit.proto.toit.modelB\013DevicePr" +
-      "otoZ&github.com/toitware/api.git/toit/mo" +
-      "del\252\002\020Toit.Proto.Modelb\006proto3"
+      "onfig\0227\n\016model_settings\030\n \001(\0132\037.toit.mod" +
+      "el.DeviceModelSettings\"u\n\023DeviceModulesC" +
+      "onfig\0222\n\016sync_requested\030\001 \001(\0132\032.google.p" +
+      "rotobuf.Timestamp\022*\n\007modules\030\002 \001(\0132\031.toi" +
+      "t.model.DeviceModules\"s\n\025DeviceRuntimeSe" +
+      "ttings\022,\n\007logging\030\001 \001(\0132\033.toit.model.Log" +
+      "gingSettings\022,\n\007metrics\030\002 \001(\0132\033.toit.mod" +
+      "el.MetricsSettings\";\n\017LoggingSettings\022(\n" +
+      "\005level\030\001 \001(\0162\031.toit.model.LogData.Level\"" +
+      "?\n\017MetricsSettings\022,\n\005level\030\001 \001(\0162\035.toit" +
+      ".model.MetricsData.Level\"\235\001\n\030DeviceConne" +
+      "ctionSettings\022.\n\013max_offline\030\001 \001(\0132\031.goo" +
+      "gle.protobuf.Duration\0222\n\013connections\030\002 \003" +
+      "(\0132\035.toit.model.ConnectionSetting\022\035\n\025eve" +
+      "nt_queue_threshold\030\003 \001(\r\"c\n\021ConnectionSe" +
+      "tting\022%\n\004wifi\030\001 \001(\0132\027.toit.model.WifiSet" +
+      "ting\022\'\n\005nbiot\030\002 \001(\0132\030.toit.model.NBIoTSe" +
+      "tting\"-\n\013WifiSetting\022\014\n\004ssid\030\001 \001(\t\022\020\n\010pa" +
+      "ssword\030\002 \001(\t\"I\n\014NBIoTSetting\022\013\n\003apn\030\001 \001(" +
+      "\t\022\r\n\005bands\030\002 \003(\003\022\020\n\010operator\030\003 \001(\t\022\013\n\003pi" +
+      "n\030\004 \001(\t\"T\n\024DeviceBrokerSettings\022\014\n\004host\030" +
+      "\001 \001(\t\022\014\n\004port\030\002 \001(\003\022\n\n\002cn\030\003 \001(\t\022\024\n\010proto" +
+      "col\030\004 \001(\tB\002\030\001\"\252\003\n\014DeviceStatus\022\024\n\010revisi" +
+      "on\030\001 \001(\003B\002\030\001\022\r\n\005epoch\030\006 \001(\014\022\026\n\016state_rev" +
+      "ision\030\005 \001(\003\022+\n\007updated\030\002 \001(\0132\032.google.pr" +
+      "otobuf.Timestamp\022\027\n\017config_revision\030\003 \001(" +
+      "\003\022\013\n\003sdk\030\004 \001(\t\022\r\n\005model\030\007 \001(\t\022(\n\006config\030" +
+      "\010 \001(\0132\030.toit.model.DeviceConfig\022\021\n\tconne" +
+      "cted\030\t \001(\010\022*\n\004boot\030\n \001(\0132\034.toit.model.De" +
+      "viceBootStatus\022(\n\006health\030\013 \001(\0132\030.toit.mo" +
+      "del.DeviceHealth\0226\n\nconnection\030\014 \001(\0132\".t" +
+      "oit.model.DeviceConnectionStatus\0220\n\007modu" +
+      "les\030\r \001(\0132\037.toit.model.DeviceModulesStat" +
+      "us\"s\n\023DeviceModulesStatus\0220\n\014last_update" +
+      "d\030\001 \001(\0132\032.google.protobuf.Timestamp\022*\n\007m" +
+      "odules\030\002 \001(\0132\031.toit.model.DeviceModules\"" +
+      ";\n\rDeviceModules\022*\n\010cellular\030\001 \001(\0132\030.toi" +
+      "t.model.DeviceModule\".\n\014DeviceModule\022\r\n\005" +
+      "model\030\001 \001(\t\022\017\n\007version\030\002 \001(\t\"W\n\026DeviceCo" +
+      "nnectionStatus\022\r\n\005index\030\001 \001(\003\022.\n\004type\030\002 " +
+      "\001(\0162 .toit.model.DeviceConnectionType\"\214\001" +
+      "\n\020DeviceBootStatus\022-\n\tlast_boot\030\001 \001(\0132\032." +
+      "google.protobuf.Timestamp\022\022\n\nin_factory\030" +
+      "\002 \001(\010\0225\n\021last_factory_boot\030\003 \001(\0132\032.googl" +
+      "e.protobuf.Timestamp\"\373\004\n\014DeviceHealth\022-\n" +
+      "\005power\030\001 \001(\0132\036.toit.model.DeviceHealth.P" +
+      "ower\022<\n\rbattery_curve\030\002 \001(\0132%.toit.model" +
+      ".DeviceHealth.BatteryCurve\022;\n\014connectivi" +
+      "ty\030\003 \001(\0132%.toit.model.DeviceHealth.Conne" +
+      "ctivity\032\300\001\n\005Power\0223\n\005value\030\001 \001(\0132$.toit." +
+      "model.DeviceHealth.Power.Value\0220\n\014last_u" +
+      "pdated\030\002 \001(\0132\032.google.protobuf.Timestamp" +
+      "\032P\n\005Value\022\021\n\007battery\030\001 \001(\001H\000\022+\n\tpluggedi" +
+      "n\030\002 \001(\0132\026.google.protobuf.EmptyH\000B\007\n\005pow" +
+      "er\032O\n\014BatteryCurve\022\r\n\005slope\030\001 \001(\001\0220\n\014las" +
+      "t_updated\030\002 \001(\0132\032.google.protobuf.Timest" +
+      "amp\032\254\001\n\014Connectivity\022-\n\tlast_seen\030\001 \001(\0132" +
+      "\032.google.protobuf.Timestamp\022\021\n\tconnected" +
+      "\030\002 \001(\010\022?\n\010checkins\030\003 \003(\0132-.toit.model.De" +
+      "viceHealth.Connectivity.Checkin\032\031\n\007Check" +
+      "in\022\016\n\006missed\030\001 \001(\010\"y\n\020HardwareIdentity\022\023" +
+      "\n\013hardware_id\030\001 \001(\014\022\027\n\017sequence_number\030\002" +
+      " \001(\003\022\r\n\005batch\030\003 \001(\t\022\023\n\013private_key\030\004 \001(\014" +
+      "\022\023\n\013certificate\030\005 \001(\014\"\205\001\n\024HardwareIdenti" +
+      "tyInfo\022\033\n\023factory_sdk_version\030\001 \001(\t\022\022\n\nf" +
+      "lashed_by\030\002 \001(\014\022\r\n\005iccid\030\003 \001(\t\022\017\n\007chip_i" +
+      "d\030\004 \001(\t\022\034\n\024factory_device_model\030\005 \001(\t\"S\n" +
+      "\014HardwareInfo\022\023\n\013hardware_id\030\001 \001(\014\022\025\n\rha" +
+      "rdware_fqdn\030\002 \001(\t\022\027\n\017organization_id\030\004 \001" +
+      "(\014\"\226\001\n\024HardwareToDeviceInfo\022\023\n\013hardware_" +
+      "id\030\001 \001(\014\022\021\n\tdevice_id\030\002 \001(\014\022)\n\005bound\030\003 \001" +
+      "(\0132\032.google.protobuf.Timestamp\022+\n\007unboun" +
+      "d\030\004 \001(\0132\032.google.protobuf.Timestamp\"\325\t\n\013" +
+      "DeviceEvent\022\021\n\tdevice_id\030\001 \001(\014\022\020\n\010event_" +
+      "id\030\002 \001(\014\022+\n\007created\030\003 \001(\0132\032.google.proto" +
+      "buf.Timestamp\022*\n\004type\030\004 \001(\0162\034.toit.model" +
+      ".DeviceEvent.Type\022\013\n\003msg\030\005 \001(\t\022\014\n\004data\030\006" +
+      " \001(\014\0224\n\tinitiater\030\007 \001(\0132!.toit.model.Dev" +
+      "iceEvent.Initiater\0221\n\013information\030\010 \003(\0132" +
+      "\034.toit.model.DeviceEvent.Info\032\213\002\n\tInitia" +
+      "ter\022:\n\006device\030\001 \001(\0132(.toit.model.DeviceE" +
+      "vent.Initiater.DeviceH\000\022<\n\007console\030\002 \001(\013" +
+      "2).toit.model.DeviceEvent.Initiater.Cons" +
+      "oleH\000\0226\n\004user\030\003 \001(\0132&.toit.model.DeviceE" +
+      "vent.Initiater.UserH\000\032\033\n\006Device\022\021\n\tdevic" +
+      "e_id\030\001 \001(\014\032\t\n\007Console\032\027\n\004User\022\017\n\007user_id" +
+      "\030\001 \001(\014B\013\n\tinitiater\032\257\004\n\004Info\022\013\n\003key\030\001 \001(" +
+      "\t\0221\n\005value\030\002 \001(\0132\".toit.model.DeviceEven" +
+      "t.Info.Value\032\346\003\n\005Value\022A\n\tprimitive\030\001 \001(" +
+      "\0132,.toit.model.DeviceEvent.Info.Value.Pr" +
+      "imitiveH\000\0227\n\004diff\030\002 \001(\0132\'.toit.model.Dev" +
+      "iceEvent.Info.Value.DiffH\000\0229\n\005error\030\003 \001(" +
+      "\0132(.toit.model.DeviceEvent.Info.Value.Er" +
+      "rorH\000\032\206\001\n\tPrimitive\022?\n\004type\030\001 \001(\01621.toit" +
+      ".model.DeviceEvent.Info.Value.Primitive." +
+      "Type\022\r\n\005value\030\002 \001(\014\")\n\004Type\022\013\n\007INVALID\020\000" +
+      "\022\010\n\004JSON\020\001\022\n\n\006STRING\020\002\032|\n\004Diff\022:\n\004from\030\001" +
+      " \001(\0132,.toit.model.DeviceEvent.Info.Value" +
+      ".Primitive\0228\n\002to\030\002 \001(\0132,.toit.model.Devi" +
+      "ceEvent.Info.Value.Primitive\032\026\n\005Error\022\r\n" +
+      "\005error\030\001 \001(\tB\007\n\005value\"\203\001\n\004Type\022\013\n\007UNKNOW" +
+      "N\020\000\022\021\n\rCONFIG_CHANGE\020\001\022\021\n\rSTATUS_CHANGE\020" +
+      "\002\022\017\n\013NEXT_ACTION\020\003\022\021\n\rDEVICE_ACTION\020\004\022\022\n" +
+      "\016QUEUE_OVERFLOW\020\005\022\020\n\014REQUEST_FILE\020\006\"\215\001\n\023" +
+      "DeviceModelSettings\022C\n\nparameters\030\001 \003(\0132" +
+      "/.toit.model.DeviceModelSettings.Paramet" +
+      "ersEntry\0321\n\017ParametersEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022\r\n\005value\030\002 \001(\005:\0028\001*\234\001\n\024DeviceConnection" +
+      "Type\022\"\n\036DEVICE_CONNECTION_TYPE_UNKNOWN\020\000" +
+      "\022\037\n\033DEVICE_CONNECTION_TYPE_WIFI\020\001\022 \n\034DEV" +
+      "ICE_CONNECTION_TYPE_NBIOT\020\002\022\035\n\031DEVICE_CO" +
+      "NNECTION_TYPE_OS\020\003*\332\001\n\020DeviceChangeType\022" +
+      "\031\n\025DEVICE_CHANGE_UNKNOWN\020\000\022\027\n\023DEVICE_CHA" +
+      "NGE_ADDED\020\001\022\031\n\025DEVICE_CHANGE_DELETED\020\002\022\031" +
+      "\n\025DEVICE_CHANGE_CHANGED\020\003\022\037\n\027DEVICE_CHAN" +
+      "GE_HEARTBEAT\020\004\032\002\010\001\022\033\n\027DEVICE_CHANGE_CONN" +
+      "ECTED\020\005\022\036\n\032DEVICE_CHANGE_DISCONNECTED\020\006*" +
+      "L\n\027DeviceSessionChangeType\022\020\n\014UNKNOWN_TY" +
+      "PE\020\000\022\r\n\tCONNECTED\020\001\022\020\n\014DISCONNECTED\020\002*\264\003" +
+      "\n\014DeviceAction\022\031\n\025DEVICE_ACTION_UNKNOWN\020" +
+      "\000\022\025\n\021DEVICE_ACTION_NOP\020\001\022\030\n\024DEVICE_ACTIO" +
+      "N_REBOOT\020\002\022\033\n\027DEVICE_ACTION_NEW_EPOCH\020\003\022" +
+      "\037\n\033DEVICE_ACTION_REPORT_CONFIG\020\004\022!\n\035DEVI" +
+      "CE_ACTION_FACTORY_PROMOTE\020\005\022\037\n\033DEVICE_AC" +
+      "TION_UPDATE_CONFIG\020\006\022!\n\035DEVICE_ACTION_UP" +
+      "DATE_FIRMWARE\020\007\022\037\n\033DEVICE_ACTION_FACTORY" +
+      "_RESET\020\010\022\033\n\027DEVICE_ACTION_RECONCILE\020\t\022)\n" +
+      "%DEVICE_ACTION_UPDATE_PARTIAL_FIRMWARE\020\n" +
+      "\022 \n\034DEVICE_ACTION_REPORT_MODULES\020\013\022(\n$DE" +
+      "VICE_ACTION_UPDATE_MODULE_CELLULAR\020\014*-\n\020" +
+      "DeviceModuleType\022\013\n\007Unknown\020\000\022\014\n\010Cellula" +
+      "r\020\001Bb\n\030io.toit.proto.toit.modelB\013DeviceP" +
+      "rotoZ&github.com/toitware/api.git/toit/m" +
+      "odel\252\002\020Toit.Proto.Modelb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -33231,7 +34174,7 @@ public final class DeviceProto {
     internal_static_toit_model_DeviceConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_DeviceConfig_descriptor,
-        new java.lang.String[] { "Name", "StartedAfter", "Sdk", "Broker", "Connection", "Model", "FactoryAfter", "Runtime", "Modules", });
+        new java.lang.String[] { "Name", "StartedAfter", "Sdk", "Broker", "Connection", "Model", "FactoryAfter", "Runtime", "Modules", "ModelSettings", });
     internal_static_toit_model_DeviceModulesConfig_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_toit_model_DeviceModulesConfig_fieldAccessorTable = new
@@ -33442,6 +34385,18 @@ public final class DeviceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_DeviceEvent_Info_Value_Error_descriptor,
         new java.lang.String[] { "Error", });
+    internal_static_toit_model_DeviceModelSettings_descriptor =
+      getDescriptor().getMessageTypes().get(22);
+    internal_static_toit_model_DeviceModelSettings_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_model_DeviceModelSettings_descriptor,
+        new java.lang.String[] { "Parameters", });
+    internal_static_toit_model_DeviceModelSettings_ParametersEntry_descriptor =
+      internal_static_toit_model_DeviceModelSettings_descriptor.getNestedTypes().get(0);
+    internal_static_toit_model_DeviceModelSettings_ParametersEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_model_DeviceModelSettings_ParametersEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
