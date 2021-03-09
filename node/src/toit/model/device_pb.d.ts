@@ -47,6 +47,11 @@ export class DeviceConfig extends jspb.Message {
   getModules(): DeviceModulesConfig | undefined;
   setModules(value?: DeviceModulesConfig): void;
 
+  hasModelSettings(): boolean;
+  clearModelSettings(): void;
+  getModelSettings(): DeviceModelSettings | undefined;
+  setModelSettings(value?: DeviceModelSettings): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeviceConfig.AsObject;
   static toObject(includeInstance: boolean, msg: DeviceConfig): DeviceConfig.AsObject;
@@ -68,6 +73,7 @@ export namespace DeviceConfig {
     factoryAfter?: google_protobuf_timestamp_pb.Timestamp.AsObject,
     runtime?: DeviceRuntimeSettings.AsObject,
     modules?: DeviceModulesConfig.AsObject,
+    modelSettings?: DeviceModelSettings.AsObject,
   }
 }
 
@@ -1178,6 +1184,25 @@ export namespace DeviceEvent {
   }
 
   export const Type: TypeMap;
+}
+
+export class DeviceModelSettings extends jspb.Message {
+  getParametersMap(): jspb.Map<string, number>;
+  clearParametersMap(): void;
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): DeviceModelSettings.AsObject;
+  static toObject(includeInstance: boolean, msg: DeviceModelSettings): DeviceModelSettings.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: DeviceModelSettings, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): DeviceModelSettings;
+  static deserializeBinaryFromReader(message: DeviceModelSettings, reader: jspb.BinaryReader): DeviceModelSettings;
+}
+
+export namespace DeviceModelSettings {
+  export type AsObject = {
+    parametersMap: Array<[string, number]>,
+  }
 }
 
 export interface DeviceConnectionTypeMap {
