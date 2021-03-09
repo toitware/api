@@ -22,6 +22,7 @@ message DeviceConfig {
   google.protobuf.Timestamp factory_after = 7;
   DeviceRuntimeSettings runtime = 8;
   DeviceModulesConfig modules = 9;
+  DeviceModelSettings model_settings = 10;
 }
 
 message DeviceModulesConfig {
@@ -79,11 +80,11 @@ message DeviceBrokerSettings {
   string host = 1;
   int64 port = 2;
   string cn = 3;
-  string protocol = 4 [ deprecated = true ];
+  string protocol = 4 [deprecated = true];
 }
 
 message DeviceStatus {
-  int64 revision = 1 [ deprecated = true ];
+  int64 revision = 1 [deprecated = true];
   bytes epoch = 6;
   int64 state_revision = 5;
   google.protobuf.Timestamp updated = 2;
@@ -190,7 +191,7 @@ enum DeviceChangeType {
   DEVICE_CHANGE_ADDED = 1;
   DEVICE_CHANGE_DELETED = 2;
   DEVICE_CHANGE_CHANGED = 3;
-  DEVICE_CHANGE_HEARTBEAT = 4 [ deprecated = true ];
+  DEVICE_CHANGE_HEARTBEAT = 4 [deprecated = true];
   DEVICE_CHANGE_CONNECTED = 5;
   DEVICE_CHANGE_DISCONNECTED = 6;
 };
@@ -226,12 +227,15 @@ message DeviceEvent {
   repeated Info information = 8;
 
   message Initiater {
-
-    message Device { bytes device_id = 1; }
+    message Device {
+      bytes device_id = 1;
+    }
 
     message Console {}
 
-    message User { bytes user_id = 1; }
+    message User {
+      bytes user_id = 1;
+    }
 
     oneof initiater {
       Device device = 1;
@@ -245,7 +249,6 @@ message DeviceEvent {
     Value value = 2;
 
     message Value {
-
       message Primitive {
         enum Type {
           INVALID = 0;
@@ -262,7 +265,9 @@ message DeviceEvent {
         Primitive to = 2;
       }
 
-      message Error { string error = 1; }
+      message Error {
+        string error = 1;
+      }
 
       oneof value {
         Primitive primitive = 1;
@@ -292,4 +297,8 @@ enum DeviceAction {
 enum DeviceModuleType {
   Unknown = 0;
   Cellular = 1;
+}
+
+message DeviceModelSettings {
+  map<string, int32> parameters = 1;
 }
