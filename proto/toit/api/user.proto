@@ -106,6 +106,8 @@ message Invoice {
     string pdf_url = 4;
     string status = 5;
     google.protobuf.Timestamp due_date = 6;
+    string receipt_pdf_url = 7;
+    int64 amount_paid = 8;
 }
 
 message CancelPaymentSubscriptionRequest {}
