@@ -50,39 +50,40 @@ namespace Toit.Proto.API {
             "CiFDcmVhdGVQYXltZW50U3Vic2NyaXB0aW9uUmVzcG9uc2UiOwoaTGlzdFBh",
             "eW1lbnRJbnZvaWNlc1JlcXVlc3QSDQoFbGltaXQYASABKAMSDgoGb2Zmc2V0",
             "GAIgASgMIkIKG0xpc3RQYXltZW50SW52b2ljZXNSZXNwb25zZRIjCghpbnZv",
-            "aWNlcxgBIAEoCzIRLnRvaXQuYXBpLkludm9pY2UitAEKB0ludm9pY2USEgoK",
+            "aWNlcxgBIAEoCzIRLnRvaXQuYXBpLkludm9pY2Ui4gEKB0ludm9pY2USEgoK",
             "aW52b2ljZV9pZBgBIAEoCRIWCg5pbnZvaWNlX251bWJlchgCIAEoCRIuCgpj",
             "cmVhdGVkX2F0GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIP",
             "CgdwZGZfdXJsGAQgASgJEg4KBnN0YXR1cxgFIAEoCRIsCghkdWVfZGF0ZRgG",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiIgogQ2FuY2VsUGF5",
-            "bWVudFN1YnNjcmlwdGlvblJlcXVlc3QiIwohQ2FuY2VsUGF5bWVudFN1YnNj",
-            "cmlwdGlvblJlc3BvbnNlMroICgRVc2VyEkwKC1NldFBhc3N3b3JkEhwudG9p",
-            "dC5hcGkuU2V0UGFzc3dvcmRSZXF1ZXN0Gh0udG9pdC5hcGkuU2V0UGFzc3dv",
-            "cmRSZXNwb25zZSIAEmoKFUluaXRpYXRlUmVzZXRQYXNzd29yZBImLnRvaXQu",
-            "YXBpLkluaXRpYXRlUmVzZXRQYXNzd29yZFJlcXVlc3QaJy50b2l0LmFwaS5J",
-            "bml0aWF0ZVJlc2V0UGFzc3dvcmRSZXNwb25zZSIAEnYKGUNoYW5nZVBhc3N3",
-            "b3JkV2l0aFJQVG9rZW4SKi50b2l0LmFwaS5DaGFuZ2VQYXNzd29yZFdpdGhS",
-            "UFRva2VuUmVxdWVzdBorLnRvaXQuYXBpLkNoYW5nZVBhc3N3b3JkV2l0aFJQ",
-            "VG9rZW5SZXNwb25zZSIAElUKDkdldEN1cnJlbnRVc2VyEh8udG9pdC5hcGku",
-            "R2V0Q3VycmVudFVzZXJSZXF1ZXN0GiAudG9pdC5hcGkuR2V0Q3VycmVudFVz",
-            "ZXJSZXNwb25zZSIAEl4KEUxpc3RPcmdhbml6YXRpb25zEiIudG9pdC5hcGku",
-            "TGlzdE9yZ2FuaXphdGlvbnNSZXF1ZXN0GiMudG9pdC5hcGkuTGlzdE9yZ2Fu",
-            "aXphdGlvbnNSZXNwb25zZSIAElgKD0dldE9yZ2FuaXphdGlvbhIgLnRvaXQu",
-            "YXBpLkdldE9yZ2FuaXphdGlvblJlcXVlc3QaIS50b2l0LmFwaS5HZXRPcmdh",
-            "bml6YXRpb25SZXNwb25zZSIAEkkKCUxpc3RVc2VycxIaLnRvaXQuYXBpLkxp",
-            "c3RVc2Vyc1JlcXVlc3QaGy50b2l0LmFwaS5MaXN0VXNlcnNSZXNwb25zZSID",
-            "iAIBEkwKCkNyZWF0ZVVzZXISGy50b2l0LmFwaS5DcmVhdGVVc2VyUmVxdWVz",
-            "dBocLnRvaXQuYXBpLkNyZWF0ZVVzZXJSZXNwb25zZSIDiAIBEnYKGUNyZWF0",
-            "ZVBheW1lbnRTdWJzY3JpcHRpb24SKi50b2l0LmFwaS5DcmVhdGVQYXltZW50",
-            "U3Vic2NyaXB0aW9uUmVxdWVzdBorLnRvaXQuYXBpLkNyZWF0ZVBheW1lbnRT",
-            "dWJzY3JpcHRpb25SZXNwb25zZSIAEmYKE0xpc3RQYXltZW50SW52b2ljZXMS",
-            "JC50b2l0LmFwaS5MaXN0UGF5bWVudEludm9pY2VzUmVxdWVzdBolLnRvaXQu",
-            "YXBpLkxpc3RQYXltZW50SW52b2ljZXNSZXNwb25zZSIAMAESdgoZQ2FuY2Vs",
-            "UGF5bWVudFN1YnNjcmlwdGlvbhIqLnRvaXQuYXBpLkNhbmNlbFBheW1lbnRT",
-            "dWJzY3JpcHRpb25SZXF1ZXN0GisudG9pdC5hcGkuQ2FuY2VsUGF5bWVudFN1",
-            "YnNjcmlwdGlvblJlc3BvbnNlIgBCWgoWaW8udG9pdC5wcm90by50b2l0LmFw",
-            "aUIJVXNlclByb3RvWiRnaXRodWIuY29tL3RvaXR3YXJlL2FwaS5naXQvdG9p",
-            "dC9hcGmqAg5Ub2l0LlByb3RvLkFQSWIGcHJvdG8z"));
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASFwoPcmVjZWlwdF9w",
+            "ZGZfdXJsGAcgASgJEhMKC2Ftb3VudF9wYWlkGAggASgDIiIKIENhbmNlbFBh",
+            "eW1lbnRTdWJzY3JpcHRpb25SZXF1ZXN0IiMKIUNhbmNlbFBheW1lbnRTdWJz",
+            "Y3JpcHRpb25SZXNwb25zZTK6CAoEVXNlchJMCgtTZXRQYXNzd29yZBIcLnRv",
+            "aXQuYXBpLlNldFBhc3N3b3JkUmVxdWVzdBodLnRvaXQuYXBpLlNldFBhc3N3",
+            "b3JkUmVzcG9uc2UiABJqChVJbml0aWF0ZVJlc2V0UGFzc3dvcmQSJi50b2l0",
+            "LmFwaS5Jbml0aWF0ZVJlc2V0UGFzc3dvcmRSZXF1ZXN0GicudG9pdC5hcGku",
+            "SW5pdGlhdGVSZXNldFBhc3N3b3JkUmVzcG9uc2UiABJ2ChlDaGFuZ2VQYXNz",
+            "d29yZFdpdGhSUFRva2VuEioudG9pdC5hcGkuQ2hhbmdlUGFzc3dvcmRXaXRo",
+            "UlBUb2tlblJlcXVlc3QaKy50b2l0LmFwaS5DaGFuZ2VQYXNzd29yZFdpdGhS",
+            "UFRva2VuUmVzcG9uc2UiABJVCg5HZXRDdXJyZW50VXNlchIfLnRvaXQuYXBp",
+            "LkdldEN1cnJlbnRVc2VyUmVxdWVzdBogLnRvaXQuYXBpLkdldEN1cnJlbnRV",
+            "c2VyUmVzcG9uc2UiABJeChFMaXN0T3JnYW5pemF0aW9ucxIiLnRvaXQuYXBp",
+            "Lkxpc3RPcmdhbml6YXRpb25zUmVxdWVzdBojLnRvaXQuYXBpLkxpc3RPcmdh",
+            "bml6YXRpb25zUmVzcG9uc2UiABJYCg9HZXRPcmdhbml6YXRpb24SIC50b2l0",
+            "LmFwaS5HZXRPcmdhbml6YXRpb25SZXF1ZXN0GiEudG9pdC5hcGkuR2V0T3Jn",
+            "YW5pemF0aW9uUmVzcG9uc2UiABJJCglMaXN0VXNlcnMSGi50b2l0LmFwaS5M",
+            "aXN0VXNlcnNSZXF1ZXN0GhsudG9pdC5hcGkuTGlzdFVzZXJzUmVzcG9uc2Ui",
+            "A4gCARJMCgpDcmVhdGVVc2VyEhsudG9pdC5hcGkuQ3JlYXRlVXNlclJlcXVl",
+            "c3QaHC50b2l0LmFwaS5DcmVhdGVVc2VyUmVzcG9uc2UiA4gCARJ2ChlDcmVh",
+            "dGVQYXltZW50U3Vic2NyaXB0aW9uEioudG9pdC5hcGkuQ3JlYXRlUGF5bWVu",
+            "dFN1YnNjcmlwdGlvblJlcXVlc3QaKy50b2l0LmFwaS5DcmVhdGVQYXltZW50",
+            "U3Vic2NyaXB0aW9uUmVzcG9uc2UiABJmChNMaXN0UGF5bWVudEludm9pY2Vz",
+            "EiQudG9pdC5hcGkuTGlzdFBheW1lbnRJbnZvaWNlc1JlcXVlc3QaJS50b2l0",
+            "LmFwaS5MaXN0UGF5bWVudEludm9pY2VzUmVzcG9uc2UiADABEnYKGUNhbmNl",
+            "bFBheW1lbnRTdWJzY3JpcHRpb24SKi50b2l0LmFwaS5DYW5jZWxQYXltZW50",
+            "U3Vic2NyaXB0aW9uUmVxdWVzdBorLnRvaXQuYXBpLkNhbmNlbFBheW1lbnRT",
+            "dWJzY3JpcHRpb25SZXNwb25zZSIAQloKFmlvLnRvaXQucHJvdG8udG9pdC5h",
+            "cGlCCVVzZXJQcm90b1okZ2l0aHViLmNvbS90b2l0d2FyZS9hcGkuZ2l0L3Rv",
+            "aXQvYXBpqgIOVG9pdC5Qcm90by5BUEliBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Toit.Proto.Model.OrganizationReflection.Descriptor, global::Toit.Proto.API.OrganizationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -102,7 +103,7 @@ namespace Toit.Proto.API {
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.CreatePaymentSubscriptionResponse), global::Toit.Proto.API.CreatePaymentSubscriptionResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.ListPaymentInvoicesRequest), global::Toit.Proto.API.ListPaymentInvoicesRequest.Parser, new[]{ "Limit", "Offset" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.ListPaymentInvoicesResponse), global::Toit.Proto.API.ListPaymentInvoicesResponse.Parser, new[]{ "Invoices" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.Invoice), global::Toit.Proto.API.Invoice.Parser, new[]{ "InvoiceId", "InvoiceNumber", "CreatedAt", "PdfUrl", "Status", "DueDate" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.Invoice), global::Toit.Proto.API.Invoice.Parser, new[]{ "InvoiceId", "InvoiceNumber", "CreatedAt", "PdfUrl", "Status", "DueDate", "ReceiptPdfUrl", "AmountPaid" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.CancelPaymentSubscriptionRequest), global::Toit.Proto.API.CancelPaymentSubscriptionRequest.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.CancelPaymentSubscriptionResponse), global::Toit.Proto.API.CancelPaymentSubscriptionResponse.Parser, null, null, null, null, null)
           }));
@@ -3253,6 +3254,8 @@ namespace Toit.Proto.API {
       pdfUrl_ = other.pdfUrl_;
       status_ = other.status_;
       dueDate_ = other.dueDate_ != null ? other.dueDate_.Clone() : null;
+      receiptPdfUrl_ = other.receiptPdfUrl_;
+      amountPaid_ = other.amountPaid_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3327,6 +3330,28 @@ namespace Toit.Proto.API {
       }
     }
 
+    /// <summary>Field number for the "receipt_pdf_url" field.</summary>
+    public const int ReceiptPdfUrlFieldNumber = 7;
+    private string receiptPdfUrl_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ReceiptPdfUrl {
+      get { return receiptPdfUrl_; }
+      set {
+        receiptPdfUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "amount_paid" field.</summary>
+    public const int AmountPaidFieldNumber = 8;
+    private long amountPaid_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long AmountPaid {
+      get { return amountPaid_; }
+      set {
+        amountPaid_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Invoice);
@@ -3346,6 +3371,8 @@ namespace Toit.Proto.API {
       if (PdfUrl != other.PdfUrl) return false;
       if (Status != other.Status) return false;
       if (!object.Equals(DueDate, other.DueDate)) return false;
+      if (ReceiptPdfUrl != other.ReceiptPdfUrl) return false;
+      if (AmountPaid != other.AmountPaid) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3358,6 +3385,8 @@ namespace Toit.Proto.API {
       if (PdfUrl.Length != 0) hash ^= PdfUrl.GetHashCode();
       if (Status.Length != 0) hash ^= Status.GetHashCode();
       if (dueDate_ != null) hash ^= DueDate.GetHashCode();
+      if (ReceiptPdfUrl.Length != 0) hash ^= ReceiptPdfUrl.GetHashCode();
+      if (AmountPaid != 0L) hash ^= AmountPaid.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3398,6 +3427,14 @@ namespace Toit.Proto.API {
         output.WriteRawTag(50);
         output.WriteMessage(DueDate);
       }
+      if (ReceiptPdfUrl.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ReceiptPdfUrl);
+      }
+      if (AmountPaid != 0L) {
+        output.WriteRawTag(64);
+        output.WriteInt64(AmountPaid);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3431,6 +3468,14 @@ namespace Toit.Proto.API {
         output.WriteRawTag(50);
         output.WriteMessage(DueDate);
       }
+      if (ReceiptPdfUrl.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ReceiptPdfUrl);
+      }
+      if (AmountPaid != 0L) {
+        output.WriteRawTag(64);
+        output.WriteInt64(AmountPaid);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3457,6 +3502,12 @@ namespace Toit.Proto.API {
       }
       if (dueDate_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DueDate);
+      }
+      if (ReceiptPdfUrl.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ReceiptPdfUrl);
+      }
+      if (AmountPaid != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(AmountPaid);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3492,6 +3543,12 @@ namespace Toit.Proto.API {
           DueDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         DueDate.MergeFrom(other.DueDate);
+      }
+      if (other.ReceiptPdfUrl.Length != 0) {
+        ReceiptPdfUrl = other.ReceiptPdfUrl;
+      }
+      if (other.AmountPaid != 0L) {
+        AmountPaid = other.AmountPaid;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3537,6 +3594,14 @@ namespace Toit.Proto.API {
             input.ReadMessage(DueDate);
             break;
           }
+          case 58: {
+            ReceiptPdfUrl = input.ReadString();
+            break;
+          }
+          case 64: {
+            AmountPaid = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -3579,6 +3644,14 @@ namespace Toit.Proto.API {
               DueDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(DueDate);
+            break;
+          }
+          case 58: {
+            ReceiptPdfUrl = input.ReadString();
+            break;
+          }
+          case 64: {
+            AmountPaid = input.ReadInt64();
             break;
           }
         }
