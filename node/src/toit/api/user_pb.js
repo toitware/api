@@ -3062,7 +3062,9 @@ proto.toit.api.Invoice.toObject = function(includeInstance, msg) {
     createdAt: (f = msg.getCreatedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
     pdfUrl: jspb.Message.getFieldWithDefault(msg, 4, ""),
     status: jspb.Message.getFieldWithDefault(msg, 5, ""),
-    dueDate: (f = msg.getDueDate()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f)
+    dueDate: (f = msg.getDueDate()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
+    receiptPdfUrl: jspb.Message.getFieldWithDefault(msg, 7, ""),
+    amountPaid: jspb.Message.getFieldWithDefault(msg, 8, 0)
   };
 
   if (includeInstance) {
@@ -3124,6 +3126,14 @@ proto.toit.api.Invoice.deserializeBinaryFromReader = function(msg, reader) {
       var value = new google_protobuf_timestamp_pb.Timestamp;
       reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
       msg.setDueDate(value);
+      break;
+    case 7:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setReceiptPdfUrl(value);
+      break;
+    case 8:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setAmountPaid(value);
       break;
     default:
       reader.skipField();
@@ -3196,6 +3206,20 @@ proto.toit.api.Invoice.serializeBinaryToWriter = function(message, writer) {
       6,
       f,
       google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
+    );
+  }
+  f = message.getReceiptPdfUrl();
+  if (f.length > 0) {
+    writer.writeString(
+      7,
+      f
+    );
+  }
+  f = message.getAmountPaid();
+  if (f !== 0) {
+    writer.writeInt64(
+      8,
+      f
     );
   }
 };
@@ -3344,6 +3368,42 @@ proto.toit.api.Invoice.prototype.clearDueDate = function() {
  */
 proto.toit.api.Invoice.prototype.hasDueDate = function() {
   return jspb.Message.getField(this, 6) != null;
+};
+
+
+/**
+ * optional string receipt_pdf_url = 7;
+ * @return {string}
+ */
+proto.toit.api.Invoice.prototype.getReceiptPdfUrl = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.toit.api.Invoice} returns this
+ */
+proto.toit.api.Invoice.prototype.setReceiptPdfUrl = function(value) {
+  return jspb.Message.setProto3StringField(this, 7, value);
+};
+
+
+/**
+ * optional int64 amount_paid = 8;
+ * @return {number}
+ */
+proto.toit.api.Invoice.prototype.getAmountPaid = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 8, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.toit.api.Invoice} returns this
+ */
+proto.toit.api.Invoice.prototype.setAmountPaid = function(value) {
+  return jspb.Message.setProto3IntField(this, 8, value);
 };
 
 

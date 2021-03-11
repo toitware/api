@@ -405,6 +405,12 @@ export class Invoice extends jspb.Message {
   getDueDate(): google_protobuf_timestamp_pb.Timestamp | undefined;
   setDueDate(value?: google_protobuf_timestamp_pb.Timestamp): void;
 
+  getReceiptPdfUrl(): string;
+  setReceiptPdfUrl(value: string): void;
+
+  getAmountPaid(): number;
+  setAmountPaid(value: number): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Invoice.AsObject;
   static toObject(includeInstance: boolean, msg: Invoice): Invoice.AsObject;
@@ -423,6 +429,8 @@ export namespace Invoice {
     pdfUrl: string,
     status: string,
     dueDate?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+    receiptPdfUrl: string,
+    amountPaid: number,
   }
 }
 
