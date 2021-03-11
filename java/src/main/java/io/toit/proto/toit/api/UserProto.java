@@ -10033,6 +10033,24 @@ public final class UserProto {
      * <code>.google.protobuf.Timestamp due_date = 6;</code>
      */
     com.google.protobuf.TimestampOrBuilder getDueDateOrBuilder();
+
+    /**
+     * <code>string receipt_pdf_url = 7;</code>
+     * @return The receiptPdfUrl.
+     */
+    java.lang.String getReceiptPdfUrl();
+    /**
+     * <code>string receipt_pdf_url = 7;</code>
+     * @return The bytes for receiptPdfUrl.
+     */
+    com.google.protobuf.ByteString
+        getReceiptPdfUrlBytes();
+
+    /**
+     * <code>int64 amount_paid = 8;</code>
+     * @return The amountPaid.
+     */
+    long getAmountPaid();
   }
   /**
    * Protobuf type {@code toit.api.Invoice}
@@ -10051,6 +10069,7 @@ public final class UserProto {
       invoiceNumber_ = "";
       pdfUrl_ = "";
       status_ = "";
+      receiptPdfUrl_ = "";
     }
 
     @java.lang.Override
@@ -10131,6 +10150,17 @@ public final class UserProto {
                 dueDate_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              receiptPdfUrl_ = s;
+              break;
+            }
+            case 64: {
+
+              amountPaid_ = input.readInt64();
               break;
             }
             default: {
@@ -10355,6 +10385,52 @@ public final class UserProto {
       return getDueDate();
     }
 
+    public static final int RECEIPT_PDF_URL_FIELD_NUMBER = 7;
+    private volatile java.lang.Object receiptPdfUrl_;
+    /**
+     * <code>string receipt_pdf_url = 7;</code>
+     * @return The receiptPdfUrl.
+     */
+    public java.lang.String getReceiptPdfUrl() {
+      java.lang.Object ref = receiptPdfUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        receiptPdfUrl_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string receipt_pdf_url = 7;</code>
+     * @return The bytes for receiptPdfUrl.
+     */
+    public com.google.protobuf.ByteString
+        getReceiptPdfUrlBytes() {
+      java.lang.Object ref = receiptPdfUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        receiptPdfUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_PAID_FIELD_NUMBER = 8;
+    private long amountPaid_;
+    /**
+     * <code>int64 amount_paid = 8;</code>
+     * @return The amountPaid.
+     */
+    public long getAmountPaid() {
+      return amountPaid_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10387,6 +10463,12 @@ public final class UserProto {
       if (dueDate_ != null) {
         output.writeMessage(6, getDueDate());
       }
+      if (!getReceiptPdfUrlBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, receiptPdfUrl_);
+      }
+      if (amountPaid_ != 0L) {
+        output.writeInt64(8, amountPaid_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -10415,6 +10497,13 @@ public final class UserProto {
       if (dueDate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getDueDate());
+      }
+      if (!getReceiptPdfUrlBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, receiptPdfUrl_);
+      }
+      if (amountPaid_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(8, amountPaid_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10449,6 +10538,10 @@ public final class UserProto {
         if (!getDueDate()
             .equals(other.getDueDate())) return false;
       }
+      if (!getReceiptPdfUrl()
+          .equals(other.getReceiptPdfUrl())) return false;
+      if (getAmountPaid()
+          != other.getAmountPaid()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10476,6 +10569,11 @@ public final class UserProto {
         hash = (37 * hash) + DUE_DATE_FIELD_NUMBER;
         hash = (53 * hash) + getDueDate().hashCode();
       }
+      hash = (37 * hash) + RECEIPT_PDF_URL_FIELD_NUMBER;
+      hash = (53 * hash) + getReceiptPdfUrl().hashCode();
+      hash = (37 * hash) + AMOUNT_PAID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAmountPaid());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -10629,6 +10727,10 @@ public final class UserProto {
           dueDate_ = null;
           dueDateBuilder_ = null;
         }
+        receiptPdfUrl_ = "";
+
+        amountPaid_ = 0L;
+
         return this;
       }
 
@@ -10669,6 +10771,8 @@ public final class UserProto {
         } else {
           result.dueDate_ = dueDateBuilder_.build();
         }
+        result.receiptPdfUrl_ = receiptPdfUrl_;
+        result.amountPaid_ = amountPaid_;
         onBuilt();
         return result;
       }
@@ -10738,6 +10842,13 @@ public final class UserProto {
         }
         if (other.hasDueDate()) {
           mergeDueDate(other.getDueDate());
+        }
+        if (!other.getReceiptPdfUrl().isEmpty()) {
+          receiptPdfUrl_ = other.receiptPdfUrl_;
+          onChanged();
+        }
+        if (other.getAmountPaid() != 0L) {
+          setAmountPaid(other.getAmountPaid());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -11308,6 +11419,112 @@ public final class UserProto {
           dueDate_ = null;
         }
         return dueDateBuilder_;
+      }
+
+      private java.lang.Object receiptPdfUrl_ = "";
+      /**
+       * <code>string receipt_pdf_url = 7;</code>
+       * @return The receiptPdfUrl.
+       */
+      public java.lang.String getReceiptPdfUrl() {
+        java.lang.Object ref = receiptPdfUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          receiptPdfUrl_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string receipt_pdf_url = 7;</code>
+       * @return The bytes for receiptPdfUrl.
+       */
+      public com.google.protobuf.ByteString
+          getReceiptPdfUrlBytes() {
+        java.lang.Object ref = receiptPdfUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          receiptPdfUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string receipt_pdf_url = 7;</code>
+       * @param value The receiptPdfUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReceiptPdfUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        receiptPdfUrl_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string receipt_pdf_url = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReceiptPdfUrl() {
+        
+        receiptPdfUrl_ = getDefaultInstance().getReceiptPdfUrl();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string receipt_pdf_url = 7;</code>
+       * @param value The bytes for receiptPdfUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReceiptPdfUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        receiptPdfUrl_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long amountPaid_ ;
+      /**
+       * <code>int64 amount_paid = 8;</code>
+       * @return The amountPaid.
+       */
+      public long getAmountPaid() {
+        return amountPaid_;
+      }
+      /**
+       * <code>int64 amount_paid = 8;</code>
+       * @param value The amountPaid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmountPaid(long value) {
+        
+        amountPaid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 amount_paid = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmountPaid() {
+        
+        amountPaid_ = 0L;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -12332,42 +12549,44 @@ public final class UserProto {
       "ymentInvoicesRequest\022\r\n\005limit\030\001 \001(\003\022\016\n\006o" +
       "ffset\030\002 \001(\014\"B\n\033ListPaymentInvoicesRespon" +
       "se\022#\n\010invoices\030\001 \001(\0132\021.toit.api.Invoice\"" +
-      "\264\001\n\007Invoice\022\022\n\ninvoice_id\030\001 \001(\t\022\026\n\016invoi" +
+      "\342\001\n\007Invoice\022\022\n\ninvoice_id\030\001 \001(\t\022\026\n\016invoi" +
       "ce_number\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.go" +
       "ogle.protobuf.Timestamp\022\017\n\007pdf_url\030\004 \001(\t" +
       "\022\016\n\006status\030\005 \001(\t\022,\n\010due_date\030\006 \001(\0132\032.goo" +
-      "gle.protobuf.Timestamp\"\"\n CancelPaymentS" +
-      "ubscriptionRequest\"#\n!CancelPaymentSubsc" +
-      "riptionResponse2\272\010\n\004User\022L\n\013SetPassword\022" +
-      "\034.toit.api.SetPasswordRequest\032\035.toit.api" +
-      ".SetPasswordResponse\"\000\022j\n\025InitiateResetP" +
-      "assword\022&.toit.api.InitiateResetPassword" +
-      "Request\032\'.toit.api.InitiateResetPassword" +
-      "Response\"\000\022v\n\031ChangePasswordWithRPToken\022" +
-      "*.toit.api.ChangePasswordWithRPTokenRequ" +
-      "est\032+.toit.api.ChangePasswordWithRPToken" +
-      "Response\"\000\022U\n\016GetCurrentUser\022\037.toit.api." +
-      "GetCurrentUserRequest\032 .toit.api.GetCurr" +
-      "entUserResponse\"\000\022^\n\021ListOrganizations\022\"" +
-      ".toit.api.ListOrganizationsRequest\032#.toi" +
-      "t.api.ListOrganizationsResponse\"\000\022X\n\017Get" +
-      "Organization\022 .toit.api.GetOrganizationR" +
-      "equest\032!.toit.api.GetOrganizationRespons" +
-      "e\"\000\022I\n\tListUsers\022\032.toit.api.ListUsersReq" +
-      "uest\032\033.toit.api.ListUsersResponse\"\003\210\002\001\022L" +
-      "\n\nCreateUser\022\033.toit.api.CreateUserReques" +
-      "t\032\034.toit.api.CreateUserResponse\"\003\210\002\001\022v\n\031" +
-      "CreatePaymentSubscription\022*.toit.api.Cre" +
-      "atePaymentSubscriptionRequest\032+.toit.api" +
-      ".CreatePaymentSubscriptionResponse\"\000\022f\n\023" +
-      "ListPaymentInvoices\022$.toit.api.ListPayme" +
-      "ntInvoicesRequest\032%.toit.api.ListPayment" +
-      "InvoicesResponse\"\0000\001\022v\n\031CancelPaymentSub" +
-      "scription\022*.toit.api.CancelPaymentSubscr" +
-      "iptionRequest\032+.toit.api.CancelPaymentSu" +
-      "bscriptionResponse\"\000BZ\n\026io.toit.proto.to" +
-      "it.apiB\tUserProtoZ$github.com/toitware/a" +
-      "pi.git/toit/api\252\002\016Toit.Proto.APIb\006proto3"
+      "gle.protobuf.Timestamp\022\027\n\017receipt_pdf_ur" +
+      "l\030\007 \001(\t\022\023\n\013amount_paid\030\010 \001(\003\"\"\n CancelPa" +
+      "ymentSubscriptionRequest\"#\n!CancelPaymen" +
+      "tSubscriptionResponse2\272\010\n\004User\022L\n\013SetPas" +
+      "sword\022\034.toit.api.SetPasswordRequest\032\035.to" +
+      "it.api.SetPasswordResponse\"\000\022j\n\025Initiate" +
+      "ResetPassword\022&.toit.api.InitiateResetPa" +
+      "sswordRequest\032\'.toit.api.InitiateResetPa" +
+      "sswordResponse\"\000\022v\n\031ChangePasswordWithRP" +
+      "Token\022*.toit.api.ChangePasswordWithRPTok" +
+      "enRequest\032+.toit.api.ChangePasswordWithR" +
+      "PTokenResponse\"\000\022U\n\016GetCurrentUser\022\037.toi" +
+      "t.api.GetCurrentUserRequest\032 .toit.api.G" +
+      "etCurrentUserResponse\"\000\022^\n\021ListOrganizat" +
+      "ions\022\".toit.api.ListOrganizationsRequest" +
+      "\032#.toit.api.ListOrganizationsResponse\"\000\022" +
+      "X\n\017GetOrganization\022 .toit.api.GetOrganiz" +
+      "ationRequest\032!.toit.api.GetOrganizationR" +
+      "esponse\"\000\022I\n\tListUsers\022\032.toit.api.ListUs" +
+      "ersRequest\032\033.toit.api.ListUsersResponse\"" +
+      "\003\210\002\001\022L\n\nCreateUser\022\033.toit.api.CreateUser" +
+      "Request\032\034.toit.api.CreateUserResponse\"\003\210" +
+      "\002\001\022v\n\031CreatePaymentSubscription\022*.toit.a" +
+      "pi.CreatePaymentSubscriptionRequest\032+.to" +
+      "it.api.CreatePaymentSubscriptionResponse" +
+      "\"\000\022f\n\023ListPaymentInvoices\022$.toit.api.Lis" +
+      "tPaymentInvoicesRequest\032%.toit.api.ListP" +
+      "aymentInvoicesResponse\"\0000\001\022v\n\031CancelPaym" +
+      "entSubscription\022*.toit.api.CancelPayment" +
+      "SubscriptionRequest\032+.toit.api.CancelPay" +
+      "mentSubscriptionResponse\"\000BZ\n\026io.toit.pr" +
+      "oto.toit.apiB\tUserProtoZ$github.com/toit" +
+      "ware/api.git/toit/api\252\002\016Toit.Proto.APIb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12477,7 +12696,7 @@ public final class UserProto {
     internal_static_toit_api_Invoice_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_Invoice_descriptor,
-        new java.lang.String[] { "InvoiceId", "InvoiceNumber", "CreatedAt", "PdfUrl", "Status", "DueDate", });
+        new java.lang.String[] { "InvoiceId", "InvoiceNumber", "CreatedAt", "PdfUrl", "Status", "DueDate", "ReceiptPdfUrl", "AmountPaid", });
     internal_static_toit_api_CancelPaymentSubscriptionRequest_descriptor =
       getDescriptor().getMessageTypes().get(17);
     internal_static_toit_api_CancelPaymentSubscriptionRequest_fieldAccessorTable = new
