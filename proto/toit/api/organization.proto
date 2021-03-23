@@ -22,6 +22,7 @@ service OrganizationService {
   rpc GetAPIKeySecret(GetAPIKeySecretRequest) returns (GetAPIKeySecretResponse) {}
 
   rpc UpdateOrganization(UpdateOrganizationRequest) returns (UpdateOrganizationResponse) {}
+  rpc UpdateUser(UpdateUserRequest) returns (UpdateUserResponse) {}
 
   rpc ClaimHardwareIdentity(ClaimHardwareIdentityRequest) returns (ClaimHardwareIdentityResponse) {}
   rpc SetHardwareIdentityInfo(SetHardwareIdentityInfoRequest) returns (SetHardwareIdentityInfoResponse) {}
@@ -109,3 +110,15 @@ message UpdateOrganizationRequest {
 }
 
 message UpdateOrganizationResponse {}
+
+message UserChange {
+  oneof change {
+    bool welcome_open = 1;
+  }
+}
+
+message UpdateUserRequest {
+  repeated UserChange changes = 1;
+}
+
+message UpdateUserResponse {}
