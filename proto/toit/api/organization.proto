@@ -113,7 +113,7 @@ message UpdateOrganizationResponse {}
 
 message UserChange {
   oneof change {
-    bool welcome_closed = 1;
+    bool set_settings_welcome_closed = 1;
   }
 }
 
