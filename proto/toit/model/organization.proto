@@ -40,7 +40,7 @@ message PaymentDetails {
 
 message User {
     message Settings {
-        bool welcome_open = 1;
+        bool welcome_closed = 1;
     }
     bytes id = 1;
     bytes organization_id = 2;
