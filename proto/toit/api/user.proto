@@ -29,6 +29,8 @@ service User {
     rpc CreatePaymentSubscription(CreatePaymentSubscriptionRequest) returns (CreatePaymentSubscriptionResponse) {}
     rpc ListPaymentInvoices(ListPaymentInvoicesRequest) returns (stream ListPaymentInvoicesResponse) {}
     rpc CancelPaymentSubscription(CancelPaymentSubscriptionRequest) returns (CancelPaymentSubscriptionResponse) {}
+
+    rpc UpdateUser(UpdateUserRequest) returns (UpdateUserResponse) {}
 }
 
 message SetPasswordRequest {
@@ -113,3 +115,15 @@ message Invoice {
 message CancelPaymentSubscriptionRequest {}
 
 message CancelPaymentSubscriptionResponse {}
+
+message UserChange {
+  oneof change {
+    bool set_settings_welcome_closed = 1;
+  }
+}
+
+message UpdateUserRequest {
+  repeated UserChange changes = 1;
+}
+
+message UpdateUserResponse {}
