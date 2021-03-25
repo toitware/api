@@ -37,22 +37,24 @@ namespace Toit.Proto.Model {
             "cGUSEgoKaHdpZF9xdW90YRgQIAEoBCKSAQoOUGF5bWVudERldGFpbHMSDQoF",
             "bGFzdDQYASABKAkSDgoGZXhwaXJ5GAIgASgJEhQKDGV4cGlyeV9tb250aBgD",
             "IAEoCRITCgtleHBpcnlfeWVhchgEIAEoCRINCgVicmFuZBgFIAEoCRIUCgxj",
-            "b3VudHJ5X2NvZGUYBiABKAkSEQoJY3ZjX2NoZWNrGAcgASgJIkgKBFVzZXIS",
-            "CgoCaWQYASABKAwSFwoPb3JnYW5pemF0aW9uX2lkGAIgASgMEg0KBWVtYWls",
-            "GAMgASgJEgwKBG5hbWUYBCABKAkiawoGQVBJS2V5EgoKAmlkGAEgASgMEhcK",
-            "D29yZ2FuaXphdGlvbl9pZBgCIAEoDBIMCgRuYW1lGAMgASgJEi4KCmNyZWF0",
-            "ZWRfYXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIi8KBFRp",
-            "ZXIiJwoEVHlwZRILCgdVTktOT1dOEAASCAoERlJFRRABEggKBFBBSUQQAiI9",
-            "CghDdXN0b21lciIxCgRUeXBlEgsKB1VOS05PV04QABIKCgZQRVJTT04QARIQ",
-            "CgxPUkdBTklaQVRJT04QAkJoChhpby50b2l0LnByb3RvLnRvaXQubW9kZWxC",
-            "EU9yZ2FuaXphdGlvblByb3RvWiZnaXRodWIuY29tL3RvaXR3YXJlL2FwaS5n",
-            "aXQvdG9pdC9tb2RlbKoCEFRvaXQuUHJvdG8uTW9kZWxiBnByb3RvMw=="));
+            "b3VudHJ5X2NvZGUYBiABKAkSEQoJY3ZjX2NoZWNrGAcgASgJIpkBCgRVc2Vy",
+            "EgoKAmlkGAEgASgMEhcKD29yZ2FuaXphdGlvbl9pZBgCIAEoDBINCgVlbWFp",
+            "bBgDIAEoCRIMCgRuYW1lGAQgASgJEisKCHNldHRpbmdzGAUgASgLMhkudG9p",
+            "dC5tb2RlbC5Vc2VyLlNldHRpbmdzGiIKCFNldHRpbmdzEhYKDndlbGNvbWVf",
+            "Y2xvc2VkGAEgASgIImsKBkFQSUtleRIKCgJpZBgBIAEoDBIXCg9vcmdhbml6",
+            "YXRpb25faWQYAiABKAwSDAoEbmFtZRgDIAEoCRIuCgpjcmVhdGVkX2F0GAQg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCIvCgRUaWVyIicKBFR5",
+            "cGUSCwoHVU5LTk9XThAAEggKBEZSRUUQARIICgRQQUlEEAIiPQoIQ3VzdG9t",
+            "ZXIiMQoEVHlwZRILCgdVTktOT1dOEAASCgoGUEVSU09OEAESEAoMT1JHQU5J",
+            "WkFUSU9OEAJCaAoYaW8udG9pdC5wcm90by50b2l0Lm1vZGVsQhFPcmdhbml6",
+            "YXRpb25Qcm90b1omZ2l0aHViLmNvbS90b2l0d2FyZS9hcGkuZ2l0L3RvaXQv",
+            "bW9kZWyqAhBUb2l0LlByb3RvLk1vZGVsYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.Organization), global::Toit.Proto.Model.Organization.Parser, new[]{ "Id", "Name", "DefaultSdk", "Email", "City", "Country", "PhoneNumber", "CvrNumber", "Tier", "PaymentDetails", "AddressLine", "PostalCode", "VatNumber", "VatCountryCode", "Customer", "HwidQuota" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.PaymentDetails), global::Toit.Proto.Model.PaymentDetails.Parser, new[]{ "Last4", "Expiry", "ExpiryMonth", "ExpiryYear", "Brand", "CountryCode", "CvcCheck" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.User), global::Toit.Proto.Model.User.Parser, new[]{ "Id", "OrganizationId", "Email", "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.User), global::Toit.Proto.Model.User.Parser, new[]{ "Id", "OrganizationId", "Email", "Name", "Settings" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.User.Types.Settings), global::Toit.Proto.Model.User.Types.Settings.Parser, new[]{ "WelcomeClosed" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.APIKey), global::Toit.Proto.Model.APIKey.Parser, new[]{ "Id", "OrganizationId", "Name", "CreatedAt" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.Tier), global::Toit.Proto.Model.Tier.Parser, null, null, new[]{ typeof(global::Toit.Proto.Model.Tier.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.Customer), global::Toit.Proto.Model.Customer.Parser, null, null, new[]{ typeof(global::Toit.Proto.Model.Customer.Types.Type) }, null, null)
@@ -1210,6 +1212,7 @@ namespace Toit.Proto.Model {
       organizationId_ = other.organizationId_;
       email_ = other.email_;
       name_ = other.name_;
+      settings_ = other.settings_ != null ? other.settings_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1262,6 +1265,17 @@ namespace Toit.Proto.Model {
       }
     }
 
+    /// <summary>Field number for the "settings" field.</summary>
+    public const int SettingsFieldNumber = 5;
+    private global::Toit.Proto.Model.User.Types.Settings settings_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Toit.Proto.Model.User.Types.Settings Settings {
+      get { return settings_; }
+      set {
+        settings_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as User);
@@ -1279,6 +1293,7 @@ namespace Toit.Proto.Model {
       if (OrganizationId != other.OrganizationId) return false;
       if (Email != other.Email) return false;
       if (Name != other.Name) return false;
+      if (!object.Equals(Settings, other.Settings)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1289,6 +1304,7 @@ namespace Toit.Proto.Model {
       if (OrganizationId.Length != 0) hash ^= OrganizationId.GetHashCode();
       if (Email.Length != 0) hash ^= Email.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (settings_ != null) hash ^= Settings.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1321,6 +1337,10 @@ namespace Toit.Proto.Model {
         output.WriteRawTag(34);
         output.WriteString(Name);
       }
+      if (settings_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Settings);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1346,6 +1366,10 @@ namespace Toit.Proto.Model {
         output.WriteRawTag(34);
         output.WriteString(Name);
       }
+      if (settings_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Settings);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1366,6 +1390,9 @@ namespace Toit.Proto.Model {
       }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (settings_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Settings);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1389,6 +1416,12 @@ namespace Toit.Proto.Model {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.settings_ != null) {
+        if (settings_ == null) {
+          Settings = new global::Toit.Proto.Model.User.Types.Settings();
+        }
+        Settings.MergeFrom(other.Settings);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1418,6 +1451,13 @@ namespace Toit.Proto.Model {
           }
           case 34: {
             Name = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (settings_ == null) {
+              Settings = new global::Toit.Proto.Model.User.Types.Settings();
+            }
+            input.ReadMessage(Settings);
             break;
           }
         }
@@ -1450,10 +1490,196 @@ namespace Toit.Proto.Model {
             Name = input.ReadString();
             break;
           }
+          case 42: {
+            if (settings_ == null) {
+              Settings = new global::Toit.Proto.Model.User.Types.Settings();
+            }
+            input.ReadMessage(Settings);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the User message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      public sealed partial class Settings : pb::IMessage<Settings>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Settings> _parser = new pb::MessageParser<Settings>(() => new Settings());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<Settings> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Toit.Proto.Model.User.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Settings() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Settings(Settings other) : this() {
+          welcomeClosed_ = other.welcomeClosed_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Settings Clone() {
+          return new Settings(this);
+        }
+
+        /// <summary>Field number for the "welcome_closed" field.</summary>
+        public const int WelcomeClosedFieldNumber = 1;
+        private bool welcomeClosed_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool WelcomeClosed {
+          get { return welcomeClosed_; }
+          set {
+            welcomeClosed_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as Settings);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(Settings other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (WelcomeClosed != other.WelcomeClosed) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (WelcomeClosed != false) hash ^= WelcomeClosed.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (WelcomeClosed != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(WelcomeClosed);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (WelcomeClosed != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(WelcomeClosed);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (WelcomeClosed != false) {
+            size += 1 + 1;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(Settings other) {
+          if (other == null) {
+            return;
+          }
+          if (other.WelcomeClosed != false) {
+            WelcomeClosed = other.WelcomeClosed;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                WelcomeClosed = input.ReadBool();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                WelcomeClosed = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
