@@ -4176,6 +4176,21 @@ public final class OrganizationProto {
      */
     com.google.protobuf.ByteString
         getNameBytes();
+
+    /**
+     * <code>.toit.model.User.Settings settings = 5;</code>
+     * @return Whether the settings field is set.
+     */
+    boolean hasSettings();
+    /**
+     * <code>.toit.model.User.Settings settings = 5;</code>
+     * @return The settings.
+     */
+    io.toit.proto.toit.model.OrganizationProto.User.Settings getSettings();
+    /**
+     * <code>.toit.model.User.Settings settings = 5;</code>
+     */
+    io.toit.proto.toit.model.OrganizationProto.User.SettingsOrBuilder getSettingsOrBuilder();
   }
   /**
    * Protobuf type {@code toit.model.User}
@@ -4248,6 +4263,19 @@ public final class OrganizationProto {
               name_ = s;
               break;
             }
+            case 42: {
+              io.toit.proto.toit.model.OrganizationProto.User.Settings.Builder subBuilder = null;
+              if (settings_ != null) {
+                subBuilder = settings_.toBuilder();
+              }
+              settings_ = input.readMessage(io.toit.proto.toit.model.OrganizationProto.User.Settings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(settings_);
+                settings_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4278,6 +4306,493 @@ public final class OrganizationProto {
       return io.toit.proto.toit.model.OrganizationProto.internal_static_toit_model_User_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.toit.proto.toit.model.OrganizationProto.User.class, io.toit.proto.toit.model.OrganizationProto.User.Builder.class);
+    }
+
+    public interface SettingsOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:toit.model.User.Settings)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>bool welcome_closed = 1;</code>
+       * @return The welcomeClosed.
+       */
+      boolean getWelcomeClosed();
+    }
+    /**
+     * Protobuf type {@code toit.model.User.Settings}
+     */
+    public  static final class Settings extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:toit.model.User.Settings)
+        SettingsOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Settings.newBuilder() to construct.
+      private Settings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Settings() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Settings();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Settings(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                welcomeClosed_ = input.readBool();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.model.OrganizationProto.internal_static_toit_model_User_Settings_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.model.OrganizationProto.internal_static_toit_model_User_Settings_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.model.OrganizationProto.User.Settings.class, io.toit.proto.toit.model.OrganizationProto.User.Settings.Builder.class);
+      }
+
+      public static final int WELCOME_CLOSED_FIELD_NUMBER = 1;
+      private boolean welcomeClosed_;
+      /**
+       * <code>bool welcome_closed = 1;</code>
+       * @return The welcomeClosed.
+       */
+      public boolean getWelcomeClosed() {
+        return welcomeClosed_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (welcomeClosed_ != false) {
+          output.writeBool(1, welcomeClosed_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (welcomeClosed_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(1, welcomeClosed_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof io.toit.proto.toit.model.OrganizationProto.User.Settings)) {
+          return super.equals(obj);
+        }
+        io.toit.proto.toit.model.OrganizationProto.User.Settings other = (io.toit.proto.toit.model.OrganizationProto.User.Settings) obj;
+
+        if (getWelcomeClosed()
+            != other.getWelcomeClosed()) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + WELCOME_CLOSED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getWelcomeClosed());
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static io.toit.proto.toit.model.OrganizationProto.User.Settings parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.toit.proto.toit.model.OrganizationProto.User.Settings parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.toit.proto.toit.model.OrganizationProto.User.Settings parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.toit.proto.toit.model.OrganizationProto.User.Settings parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.toit.proto.toit.model.OrganizationProto.User.Settings parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.toit.proto.toit.model.OrganizationProto.User.Settings parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.toit.proto.toit.model.OrganizationProto.User.Settings parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static io.toit.proto.toit.model.OrganizationProto.User.Settings parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static io.toit.proto.toit.model.OrganizationProto.User.Settings parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static io.toit.proto.toit.model.OrganizationProto.User.Settings parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static io.toit.proto.toit.model.OrganizationProto.User.Settings parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static io.toit.proto.toit.model.OrganizationProto.User.Settings parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(io.toit.proto.toit.model.OrganizationProto.User.Settings prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code toit.model.User.Settings}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:toit.model.User.Settings)
+          io.toit.proto.toit.model.OrganizationProto.User.SettingsOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return io.toit.proto.toit.model.OrganizationProto.internal_static_toit_model_User_Settings_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return io.toit.proto.toit.model.OrganizationProto.internal_static_toit_model_User_Settings_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  io.toit.proto.toit.model.OrganizationProto.User.Settings.class, io.toit.proto.toit.model.OrganizationProto.User.Settings.Builder.class);
+        }
+
+        // Construct using io.toit.proto.toit.model.OrganizationProto.User.Settings.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          welcomeClosed_ = false;
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return io.toit.proto.toit.model.OrganizationProto.internal_static_toit_model_User_Settings_descriptor;
+        }
+
+        @java.lang.Override
+        public io.toit.proto.toit.model.OrganizationProto.User.Settings getDefaultInstanceForType() {
+          return io.toit.proto.toit.model.OrganizationProto.User.Settings.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public io.toit.proto.toit.model.OrganizationProto.User.Settings build() {
+          io.toit.proto.toit.model.OrganizationProto.User.Settings result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public io.toit.proto.toit.model.OrganizationProto.User.Settings buildPartial() {
+          io.toit.proto.toit.model.OrganizationProto.User.Settings result = new io.toit.proto.toit.model.OrganizationProto.User.Settings(this);
+          result.welcomeClosed_ = welcomeClosed_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof io.toit.proto.toit.model.OrganizationProto.User.Settings) {
+            return mergeFrom((io.toit.proto.toit.model.OrganizationProto.User.Settings)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(io.toit.proto.toit.model.OrganizationProto.User.Settings other) {
+          if (other == io.toit.proto.toit.model.OrganizationProto.User.Settings.getDefaultInstance()) return this;
+          if (other.getWelcomeClosed() != false) {
+            setWelcomeClosed(other.getWelcomeClosed());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          io.toit.proto.toit.model.OrganizationProto.User.Settings parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (io.toit.proto.toit.model.OrganizationProto.User.Settings) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private boolean welcomeClosed_ ;
+        /**
+         * <code>bool welcome_closed = 1;</code>
+         * @return The welcomeClosed.
+         */
+        public boolean getWelcomeClosed() {
+          return welcomeClosed_;
+        }
+        /**
+         * <code>bool welcome_closed = 1;</code>
+         * @param value The welcomeClosed to set.
+         * @return This builder for chaining.
+         */
+        public Builder setWelcomeClosed(boolean value) {
+          
+          welcomeClosed_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>bool welcome_closed = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearWelcomeClosed() {
+          
+          welcomeClosed_ = false;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:toit.model.User.Settings)
+      }
+
+      // @@protoc_insertion_point(class_scope:toit.model.User.Settings)
+      private static final io.toit.proto.toit.model.OrganizationProto.User.Settings DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new io.toit.proto.toit.model.OrganizationProto.User.Settings();
+      }
+
+      public static io.toit.proto.toit.model.OrganizationProto.User.Settings getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Settings>
+          PARSER = new com.google.protobuf.AbstractParser<Settings>() {
+        @java.lang.Override
+        public Settings parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Settings(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Settings> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Settings> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.model.OrganizationProto.User.Settings getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -4372,6 +4887,29 @@ public final class OrganizationProto {
       }
     }
 
+    public static final int SETTINGS_FIELD_NUMBER = 5;
+    private io.toit.proto.toit.model.OrganizationProto.User.Settings settings_;
+    /**
+     * <code>.toit.model.User.Settings settings = 5;</code>
+     * @return Whether the settings field is set.
+     */
+    public boolean hasSettings() {
+      return settings_ != null;
+    }
+    /**
+     * <code>.toit.model.User.Settings settings = 5;</code>
+     * @return The settings.
+     */
+    public io.toit.proto.toit.model.OrganizationProto.User.Settings getSettings() {
+      return settings_ == null ? io.toit.proto.toit.model.OrganizationProto.User.Settings.getDefaultInstance() : settings_;
+    }
+    /**
+     * <code>.toit.model.User.Settings settings = 5;</code>
+     */
+    public io.toit.proto.toit.model.OrganizationProto.User.SettingsOrBuilder getSettingsOrBuilder() {
+      return getSettings();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4398,6 +4936,9 @@ public final class OrganizationProto {
       if (!getNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
       }
+      if (settings_ != null) {
+        output.writeMessage(5, getSettings());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4420,6 +4961,10 @@ public final class OrganizationProto {
       }
       if (!getNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
+      }
+      if (settings_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getSettings());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4444,6 +4989,11 @@ public final class OrganizationProto {
           .equals(other.getEmail())) return false;
       if (!getName()
           .equals(other.getName())) return false;
+      if (hasSettings() != other.hasSettings()) return false;
+      if (hasSettings()) {
+        if (!getSettings()
+            .equals(other.getSettings())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4463,6 +5013,10 @@ public final class OrganizationProto {
       hash = (53 * hash) + getEmail().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
+      if (hasSettings()) {
+        hash = (37 * hash) + SETTINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getSettings().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4604,6 +5158,12 @@ public final class OrganizationProto {
 
         name_ = "";
 
+        if (settingsBuilder_ == null) {
+          settings_ = null;
+        } else {
+          settings_ = null;
+          settingsBuilder_ = null;
+        }
         return this;
       }
 
@@ -4634,6 +5194,11 @@ public final class OrganizationProto {
         result.organizationId_ = organizationId_;
         result.email_ = email_;
         result.name_ = name_;
+        if (settingsBuilder_ == null) {
+          result.settings_ = settings_;
+        } else {
+          result.settings_ = settingsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -4695,6 +5260,9 @@ public final class OrganizationProto {
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
           onChanged();
+        }
+        if (other.hasSettings()) {
+          mergeSettings(other.getSettings());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4941,6 +5509,125 @@ public final class OrganizationProto {
         name_ = value;
         onChanged();
         return this;
+      }
+
+      private io.toit.proto.toit.model.OrganizationProto.User.Settings settings_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.model.OrganizationProto.User.Settings, io.toit.proto.toit.model.OrganizationProto.User.Settings.Builder, io.toit.proto.toit.model.OrganizationProto.User.SettingsOrBuilder> settingsBuilder_;
+      /**
+       * <code>.toit.model.User.Settings settings = 5;</code>
+       * @return Whether the settings field is set.
+       */
+      public boolean hasSettings() {
+        return settingsBuilder_ != null || settings_ != null;
+      }
+      /**
+       * <code>.toit.model.User.Settings settings = 5;</code>
+       * @return The settings.
+       */
+      public io.toit.proto.toit.model.OrganizationProto.User.Settings getSettings() {
+        if (settingsBuilder_ == null) {
+          return settings_ == null ? io.toit.proto.toit.model.OrganizationProto.User.Settings.getDefaultInstance() : settings_;
+        } else {
+          return settingsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.toit.model.User.Settings settings = 5;</code>
+       */
+      public Builder setSettings(io.toit.proto.toit.model.OrganizationProto.User.Settings value) {
+        if (settingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          settings_ = value;
+          onChanged();
+        } else {
+          settingsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.User.Settings settings = 5;</code>
+       */
+      public Builder setSettings(
+          io.toit.proto.toit.model.OrganizationProto.User.Settings.Builder builderForValue) {
+        if (settingsBuilder_ == null) {
+          settings_ = builderForValue.build();
+          onChanged();
+        } else {
+          settingsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.User.Settings settings = 5;</code>
+       */
+      public Builder mergeSettings(io.toit.proto.toit.model.OrganizationProto.User.Settings value) {
+        if (settingsBuilder_ == null) {
+          if (settings_ != null) {
+            settings_ =
+              io.toit.proto.toit.model.OrganizationProto.User.Settings.newBuilder(settings_).mergeFrom(value).buildPartial();
+          } else {
+            settings_ = value;
+          }
+          onChanged();
+        } else {
+          settingsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.User.Settings settings = 5;</code>
+       */
+      public Builder clearSettings() {
+        if (settingsBuilder_ == null) {
+          settings_ = null;
+          onChanged();
+        } else {
+          settings_ = null;
+          settingsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.User.Settings settings = 5;</code>
+       */
+      public io.toit.proto.toit.model.OrganizationProto.User.Settings.Builder getSettingsBuilder() {
+        
+        onChanged();
+        return getSettingsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.toit.model.User.Settings settings = 5;</code>
+       */
+      public io.toit.proto.toit.model.OrganizationProto.User.SettingsOrBuilder getSettingsOrBuilder() {
+        if (settingsBuilder_ != null) {
+          return settingsBuilder_.getMessageOrBuilder();
+        } else {
+          return settings_ == null ?
+              io.toit.proto.toit.model.OrganizationProto.User.Settings.getDefaultInstance() : settings_;
+        }
+      }
+      /**
+       * <code>.toit.model.User.Settings settings = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.model.OrganizationProto.User.Settings, io.toit.proto.toit.model.OrganizationProto.User.Settings.Builder, io.toit.proto.toit.model.OrganizationProto.User.SettingsOrBuilder> 
+          getSettingsFieldBuilder() {
+        if (settingsBuilder_ == null) {
+          settingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.toit.proto.toit.model.OrganizationProto.User.Settings, io.toit.proto.toit.model.OrganizationProto.User.Settings.Builder, io.toit.proto.toit.model.OrganizationProto.User.SettingsOrBuilder>(
+                  getSettings(),
+                  getParentForChildren(),
+                  isClean());
+          settings_ = null;
+        }
+        return settingsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -6983,6 +7670,11 @@ public final class OrganizationProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_toit_model_User_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_model_User_Settings_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_model_User_Settings_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_toit_model_APIKey_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -7021,17 +7713,19 @@ public final class OrganizationProto {
       "mentDetails\022\r\n\005last4\030\001 \001(\t\022\016\n\006expiry\030\002 \001" +
       "(\t\022\024\n\014expiry_month\030\003 \001(\t\022\023\n\013expiry_year\030" +
       "\004 \001(\t\022\r\n\005brand\030\005 \001(\t\022\024\n\014country_code\030\006 \001" +
-      "(\t\022\021\n\tcvc_check\030\007 \001(\t\"H\n\004User\022\n\n\002id\030\001 \001(" +
-      "\014\022\027\n\017organization_id\030\002 \001(\014\022\r\n\005email\030\003 \001(" +
-      "\t\022\014\n\004name\030\004 \001(\t\"k\n\006APIKey\022\n\n\002id\030\001 \001(\014\022\027\n" +
-      "\017organization_id\030\002 \001(\014\022\014\n\004name\030\003 \001(\t\022.\n\n" +
-      "created_at\030\004 \001(\0132\032.google.protobuf.Times" +
-      "tamp\"/\n\004Tier\"\'\n\004Type\022\013\n\007UNKNOWN\020\000\022\010\n\004FRE" +
-      "E\020\001\022\010\n\004PAID\020\002\"=\n\010Customer\"1\n\004Type\022\013\n\007UNK" +
-      "NOWN\020\000\022\n\n\006PERSON\020\001\022\020\n\014ORGANIZATION\020\002Bh\n\030" +
-      "io.toit.proto.toit.modelB\021OrganizationPr" +
-      "otoZ&github.com/toitware/api.git/toit/mo" +
-      "del\252\002\020Toit.Proto.Modelb\006proto3"
+      "(\t\022\021\n\tcvc_check\030\007 \001(\t\"\231\001\n\004User\022\n\n\002id\030\001 \001" +
+      "(\014\022\027\n\017organization_id\030\002 \001(\014\022\r\n\005email\030\003 \001" +
+      "(\t\022\014\n\004name\030\004 \001(\t\022+\n\010settings\030\005 \001(\0132\031.toi" +
+      "t.model.User.Settings\032\"\n\010Settings\022\026\n\016wel" +
+      "come_closed\030\001 \001(\010\"k\n\006APIKey\022\n\n\002id\030\001 \001(\014\022" +
+      "\027\n\017organization_id\030\002 \001(\014\022\014\n\004name\030\003 \001(\t\022." +
+      "\n\ncreated_at\030\004 \001(\0132\032.google.protobuf.Tim" +
+      "estamp\"/\n\004Tier\"\'\n\004Type\022\013\n\007UNKNOWN\020\000\022\010\n\004F" +
+      "REE\020\001\022\010\n\004PAID\020\002\"=\n\010Customer\"1\n\004Type\022\013\n\007U" +
+      "NKNOWN\020\000\022\n\n\006PERSON\020\001\022\020\n\014ORGANIZATION\020\002Bh" +
+      "\n\030io.toit.proto.toit.modelB\021Organization" +
+      "ProtoZ&github.com/toitware/api.git/toit/" +
+      "model\252\002\020Toit.Proto.Modelb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7055,7 +7749,13 @@ public final class OrganizationProto {
     internal_static_toit_model_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_User_descriptor,
-        new java.lang.String[] { "Id", "OrganizationId", "Email", "Name", });
+        new java.lang.String[] { "Id", "OrganizationId", "Email", "Name", "Settings", });
+    internal_static_toit_model_User_Settings_descriptor =
+      internal_static_toit_model_User_descriptor.getNestedTypes().get(0);
+    internal_static_toit_model_User_Settings_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_model_User_Settings_descriptor,
+        new java.lang.String[] { "WelcomeClosed", });
     internal_static_toit_model_APIKey_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_toit_model_APIKey_fieldAccessorTable = new

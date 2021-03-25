@@ -12415,6 +12415,1785 @@ public final class UserProto {
 
   }
 
+  public interface UserChangeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.UserChange)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bool set_settings_welcome_closed = 1;</code>
+     * @return The setSettingsWelcomeClosed.
+     */
+    boolean getSetSettingsWelcomeClosed();
+
+    public io.toit.proto.toit.api.UserProto.UserChange.ChangeCase getChangeCase();
+  }
+  /**
+   * Protobuf type {@code toit.api.UserChange}
+   */
+  public  static final class UserChange extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.api.UserChange)
+      UserChangeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UserChange.newBuilder() to construct.
+    private UserChange(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UserChange() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UserChange();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UserChange(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              changeCase_ = 1;
+              change_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.api.UserProto.internal_static_toit_api_UserChange_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.api.UserProto.internal_static_toit_api_UserChange_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.api.UserProto.UserChange.class, io.toit.proto.toit.api.UserProto.UserChange.Builder.class);
+    }
+
+    private int changeCase_ = 0;
+    private java.lang.Object change_;
+    public enum ChangeCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      SET_SETTINGS_WELCOME_CLOSED(1),
+      CHANGE_NOT_SET(0);
+      private final int value;
+      private ChangeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ChangeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ChangeCase forNumber(int value) {
+        switch (value) {
+          case 1: return SET_SETTINGS_WELCOME_CLOSED;
+          case 0: return CHANGE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ChangeCase
+    getChangeCase() {
+      return ChangeCase.forNumber(
+          changeCase_);
+    }
+
+    public static final int SET_SETTINGS_WELCOME_CLOSED_FIELD_NUMBER = 1;
+    /**
+     * <code>bool set_settings_welcome_closed = 1;</code>
+     * @return The setSettingsWelcomeClosed.
+     */
+    public boolean getSetSettingsWelcomeClosed() {
+      if (changeCase_ == 1) {
+        return (java.lang.Boolean) change_;
+      }
+      return false;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (changeCase_ == 1) {
+        output.writeBool(
+            1, (boolean)((java.lang.Boolean) change_));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (changeCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(
+              1, (boolean)((java.lang.Boolean) change_));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.api.UserProto.UserChange)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.api.UserProto.UserChange other = (io.toit.proto.toit.api.UserProto.UserChange) obj;
+
+      if (!getChangeCase().equals(other.getChangeCase())) return false;
+      switch (changeCase_) {
+        case 1:
+          if (getSetSettingsWelcomeClosed()
+              != other.getSetSettingsWelcomeClosed()) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (changeCase_) {
+        case 1:
+          hash = (37 * hash) + SET_SETTINGS_WELCOME_CLOSED_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getSetSettingsWelcomeClosed());
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.api.UserProto.UserChange parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.UserProto.UserChange parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.UserChange parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.UserProto.UserChange parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.UserChange parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.UserProto.UserChange parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.UserChange parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.UserProto.UserChange parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.UserChange parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.UserProto.UserChange parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.UserChange parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.UserProto.UserChange parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.api.UserProto.UserChange prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.api.UserChange}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.api.UserChange)
+        io.toit.proto.toit.api.UserProto.UserChangeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.UserProto.internal_static_toit_api_UserChange_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.UserProto.internal_static_toit_api_UserChange_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.UserProto.UserChange.class, io.toit.proto.toit.api.UserProto.UserChange.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.api.UserProto.UserChange.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        changeCase_ = 0;
+        change_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.api.UserProto.internal_static_toit_api_UserChange_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.UserProto.UserChange getDefaultInstanceForType() {
+        return io.toit.proto.toit.api.UserProto.UserChange.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.UserProto.UserChange build() {
+        io.toit.proto.toit.api.UserProto.UserChange result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.UserProto.UserChange buildPartial() {
+        io.toit.proto.toit.api.UserProto.UserChange result = new io.toit.proto.toit.api.UserProto.UserChange(this);
+        if (changeCase_ == 1) {
+          result.change_ = change_;
+        }
+        result.changeCase_ = changeCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.api.UserProto.UserChange) {
+          return mergeFrom((io.toit.proto.toit.api.UserProto.UserChange)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.api.UserProto.UserChange other) {
+        if (other == io.toit.proto.toit.api.UserProto.UserChange.getDefaultInstance()) return this;
+        switch (other.getChangeCase()) {
+          case SET_SETTINGS_WELCOME_CLOSED: {
+            setSetSettingsWelcomeClosed(other.getSetSettingsWelcomeClosed());
+            break;
+          }
+          case CHANGE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.api.UserProto.UserChange parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.api.UserProto.UserChange) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int changeCase_ = 0;
+      private java.lang.Object change_;
+      public ChangeCase
+          getChangeCase() {
+        return ChangeCase.forNumber(
+            changeCase_);
+      }
+
+      public Builder clearChange() {
+        changeCase_ = 0;
+        change_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      /**
+       * <code>bool set_settings_welcome_closed = 1;</code>
+       * @return The setSettingsWelcomeClosed.
+       */
+      public boolean getSetSettingsWelcomeClosed() {
+        if (changeCase_ == 1) {
+          return (java.lang.Boolean) change_;
+        }
+        return false;
+      }
+      /**
+       * <code>bool set_settings_welcome_closed = 1;</code>
+       * @param value The setSettingsWelcomeClosed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSetSettingsWelcomeClosed(boolean value) {
+        changeCase_ = 1;
+        change_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool set_settings_welcome_closed = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSetSettingsWelcomeClosed() {
+        if (changeCase_ == 1) {
+          changeCase_ = 0;
+          change_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.api.UserChange)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.api.UserChange)
+    private static final io.toit.proto.toit.api.UserProto.UserChange DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.api.UserProto.UserChange();
+    }
+
+    public static io.toit.proto.toit.api.UserProto.UserChange getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UserChange>
+        PARSER = new com.google.protobuf.AbstractParser<UserChange>() {
+      @java.lang.Override
+      public UserChange parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UserChange(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UserChange> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UserChange> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.api.UserProto.UserChange getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateUserRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.UpdateUserRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .toit.api.UserChange changes = 1;</code>
+     */
+    java.util.List<io.toit.proto.toit.api.UserProto.UserChange> 
+        getChangesList();
+    /**
+     * <code>repeated .toit.api.UserChange changes = 1;</code>
+     */
+    io.toit.proto.toit.api.UserProto.UserChange getChanges(int index);
+    /**
+     * <code>repeated .toit.api.UserChange changes = 1;</code>
+     */
+    int getChangesCount();
+    /**
+     * <code>repeated .toit.api.UserChange changes = 1;</code>
+     */
+    java.util.List<? extends io.toit.proto.toit.api.UserProto.UserChangeOrBuilder> 
+        getChangesOrBuilderList();
+    /**
+     * <code>repeated .toit.api.UserChange changes = 1;</code>
+     */
+    io.toit.proto.toit.api.UserProto.UserChangeOrBuilder getChangesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code toit.api.UpdateUserRequest}
+   */
+  public  static final class UpdateUserRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.api.UpdateUserRequest)
+      UpdateUserRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateUserRequest.newBuilder() to construct.
+    private UpdateUserRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateUserRequest() {
+      changes_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateUserRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateUserRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                changes_ = new java.util.ArrayList<io.toit.proto.toit.api.UserProto.UserChange>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              changes_.add(
+                  input.readMessage(io.toit.proto.toit.api.UserProto.UserChange.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          changes_ = java.util.Collections.unmodifiableList(changes_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.api.UserProto.internal_static_toit_api_UpdateUserRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.api.UserProto.internal_static_toit_api_UpdateUserRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.api.UserProto.UpdateUserRequest.class, io.toit.proto.toit.api.UserProto.UpdateUserRequest.Builder.class);
+    }
+
+    public static final int CHANGES_FIELD_NUMBER = 1;
+    private java.util.List<io.toit.proto.toit.api.UserProto.UserChange> changes_;
+    /**
+     * <code>repeated .toit.api.UserChange changes = 1;</code>
+     */
+    public java.util.List<io.toit.proto.toit.api.UserProto.UserChange> getChangesList() {
+      return changes_;
+    }
+    /**
+     * <code>repeated .toit.api.UserChange changes = 1;</code>
+     */
+    public java.util.List<? extends io.toit.proto.toit.api.UserProto.UserChangeOrBuilder> 
+        getChangesOrBuilderList() {
+      return changes_;
+    }
+    /**
+     * <code>repeated .toit.api.UserChange changes = 1;</code>
+     */
+    public int getChangesCount() {
+      return changes_.size();
+    }
+    /**
+     * <code>repeated .toit.api.UserChange changes = 1;</code>
+     */
+    public io.toit.proto.toit.api.UserProto.UserChange getChanges(int index) {
+      return changes_.get(index);
+    }
+    /**
+     * <code>repeated .toit.api.UserChange changes = 1;</code>
+     */
+    public io.toit.proto.toit.api.UserProto.UserChangeOrBuilder getChangesOrBuilder(
+        int index) {
+      return changes_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < changes_.size(); i++) {
+        output.writeMessage(1, changes_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < changes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, changes_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.api.UserProto.UpdateUserRequest)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.api.UserProto.UpdateUserRequest other = (io.toit.proto.toit.api.UserProto.UpdateUserRequest) obj;
+
+      if (!getChangesList()
+          .equals(other.getChangesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getChangesCount() > 0) {
+        hash = (37 * hash) + CHANGES_FIELD_NUMBER;
+        hash = (53 * hash) + getChangesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.api.UserProto.UpdateUserRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.UserProto.UpdateUserRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.UpdateUserRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.UserProto.UpdateUserRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.UpdateUserRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.UserProto.UpdateUserRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.UpdateUserRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.UserProto.UpdateUserRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.UpdateUserRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.UserProto.UpdateUserRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.UpdateUserRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.UserProto.UpdateUserRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.api.UserProto.UpdateUserRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.api.UpdateUserRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.api.UpdateUserRequest)
+        io.toit.proto.toit.api.UserProto.UpdateUserRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.UserProto.internal_static_toit_api_UpdateUserRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.UserProto.internal_static_toit_api_UpdateUserRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.UserProto.UpdateUserRequest.class, io.toit.proto.toit.api.UserProto.UpdateUserRequest.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.api.UserProto.UpdateUserRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getChangesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (changesBuilder_ == null) {
+          changes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          changesBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.api.UserProto.internal_static_toit_api_UpdateUserRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.UserProto.UpdateUserRequest getDefaultInstanceForType() {
+        return io.toit.proto.toit.api.UserProto.UpdateUserRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.UserProto.UpdateUserRequest build() {
+        io.toit.proto.toit.api.UserProto.UpdateUserRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.UserProto.UpdateUserRequest buildPartial() {
+        io.toit.proto.toit.api.UserProto.UpdateUserRequest result = new io.toit.proto.toit.api.UserProto.UpdateUserRequest(this);
+        int from_bitField0_ = bitField0_;
+        if (changesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            changes_ = java.util.Collections.unmodifiableList(changes_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.changes_ = changes_;
+        } else {
+          result.changes_ = changesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.api.UserProto.UpdateUserRequest) {
+          return mergeFrom((io.toit.proto.toit.api.UserProto.UpdateUserRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.api.UserProto.UpdateUserRequest other) {
+        if (other == io.toit.proto.toit.api.UserProto.UpdateUserRequest.getDefaultInstance()) return this;
+        if (changesBuilder_ == null) {
+          if (!other.changes_.isEmpty()) {
+            if (changes_.isEmpty()) {
+              changes_ = other.changes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureChangesIsMutable();
+              changes_.addAll(other.changes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.changes_.isEmpty()) {
+            if (changesBuilder_.isEmpty()) {
+              changesBuilder_.dispose();
+              changesBuilder_ = null;
+              changes_ = other.changes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              changesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getChangesFieldBuilder() : null;
+            } else {
+              changesBuilder_.addAllMessages(other.changes_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.api.UserProto.UpdateUserRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.api.UserProto.UpdateUserRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<io.toit.proto.toit.api.UserProto.UserChange> changes_ =
+        java.util.Collections.emptyList();
+      private void ensureChangesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          changes_ = new java.util.ArrayList<io.toit.proto.toit.api.UserProto.UserChange>(changes_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          io.toit.proto.toit.api.UserProto.UserChange, io.toit.proto.toit.api.UserProto.UserChange.Builder, io.toit.proto.toit.api.UserProto.UserChangeOrBuilder> changesBuilder_;
+
+      /**
+       * <code>repeated .toit.api.UserChange changes = 1;</code>
+       */
+      public java.util.List<io.toit.proto.toit.api.UserProto.UserChange> getChangesList() {
+        if (changesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(changes_);
+        } else {
+          return changesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .toit.api.UserChange changes = 1;</code>
+       */
+      public int getChangesCount() {
+        if (changesBuilder_ == null) {
+          return changes_.size();
+        } else {
+          return changesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .toit.api.UserChange changes = 1;</code>
+       */
+      public io.toit.proto.toit.api.UserProto.UserChange getChanges(int index) {
+        if (changesBuilder_ == null) {
+          return changes_.get(index);
+        } else {
+          return changesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .toit.api.UserChange changes = 1;</code>
+       */
+      public Builder setChanges(
+          int index, io.toit.proto.toit.api.UserProto.UserChange value) {
+        if (changesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureChangesIsMutable();
+          changes_.set(index, value);
+          onChanged();
+        } else {
+          changesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .toit.api.UserChange changes = 1;</code>
+       */
+      public Builder setChanges(
+          int index, io.toit.proto.toit.api.UserProto.UserChange.Builder builderForValue) {
+        if (changesBuilder_ == null) {
+          ensureChangesIsMutable();
+          changes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          changesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .toit.api.UserChange changes = 1;</code>
+       */
+      public Builder addChanges(io.toit.proto.toit.api.UserProto.UserChange value) {
+        if (changesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureChangesIsMutable();
+          changes_.add(value);
+          onChanged();
+        } else {
+          changesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .toit.api.UserChange changes = 1;</code>
+       */
+      public Builder addChanges(
+          int index, io.toit.proto.toit.api.UserProto.UserChange value) {
+        if (changesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureChangesIsMutable();
+          changes_.add(index, value);
+          onChanged();
+        } else {
+          changesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .toit.api.UserChange changes = 1;</code>
+       */
+      public Builder addChanges(
+          io.toit.proto.toit.api.UserProto.UserChange.Builder builderForValue) {
+        if (changesBuilder_ == null) {
+          ensureChangesIsMutable();
+          changes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          changesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .toit.api.UserChange changes = 1;</code>
+       */
+      public Builder addChanges(
+          int index, io.toit.proto.toit.api.UserProto.UserChange.Builder builderForValue) {
+        if (changesBuilder_ == null) {
+          ensureChangesIsMutable();
+          changes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          changesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .toit.api.UserChange changes = 1;</code>
+       */
+      public Builder addAllChanges(
+          java.lang.Iterable<? extends io.toit.proto.toit.api.UserProto.UserChange> values) {
+        if (changesBuilder_ == null) {
+          ensureChangesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, changes_);
+          onChanged();
+        } else {
+          changesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .toit.api.UserChange changes = 1;</code>
+       */
+      public Builder clearChanges() {
+        if (changesBuilder_ == null) {
+          changes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          changesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .toit.api.UserChange changes = 1;</code>
+       */
+      public Builder removeChanges(int index) {
+        if (changesBuilder_ == null) {
+          ensureChangesIsMutable();
+          changes_.remove(index);
+          onChanged();
+        } else {
+          changesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .toit.api.UserChange changes = 1;</code>
+       */
+      public io.toit.proto.toit.api.UserProto.UserChange.Builder getChangesBuilder(
+          int index) {
+        return getChangesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .toit.api.UserChange changes = 1;</code>
+       */
+      public io.toit.proto.toit.api.UserProto.UserChangeOrBuilder getChangesOrBuilder(
+          int index) {
+        if (changesBuilder_ == null) {
+          return changes_.get(index);  } else {
+          return changesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .toit.api.UserChange changes = 1;</code>
+       */
+      public java.util.List<? extends io.toit.proto.toit.api.UserProto.UserChangeOrBuilder> 
+           getChangesOrBuilderList() {
+        if (changesBuilder_ != null) {
+          return changesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(changes_);
+        }
+      }
+      /**
+       * <code>repeated .toit.api.UserChange changes = 1;</code>
+       */
+      public io.toit.proto.toit.api.UserProto.UserChange.Builder addChangesBuilder() {
+        return getChangesFieldBuilder().addBuilder(
+            io.toit.proto.toit.api.UserProto.UserChange.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .toit.api.UserChange changes = 1;</code>
+       */
+      public io.toit.proto.toit.api.UserProto.UserChange.Builder addChangesBuilder(
+          int index) {
+        return getChangesFieldBuilder().addBuilder(
+            index, io.toit.proto.toit.api.UserProto.UserChange.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .toit.api.UserChange changes = 1;</code>
+       */
+      public java.util.List<io.toit.proto.toit.api.UserProto.UserChange.Builder> 
+           getChangesBuilderList() {
+        return getChangesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          io.toit.proto.toit.api.UserProto.UserChange, io.toit.proto.toit.api.UserProto.UserChange.Builder, io.toit.proto.toit.api.UserProto.UserChangeOrBuilder> 
+          getChangesFieldBuilder() {
+        if (changesBuilder_ == null) {
+          changesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              io.toit.proto.toit.api.UserProto.UserChange, io.toit.proto.toit.api.UserProto.UserChange.Builder, io.toit.proto.toit.api.UserProto.UserChangeOrBuilder>(
+                  changes_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          changes_ = null;
+        }
+        return changesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.api.UpdateUserRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.api.UpdateUserRequest)
+    private static final io.toit.proto.toit.api.UserProto.UpdateUserRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.api.UserProto.UpdateUserRequest();
+    }
+
+    public static io.toit.proto.toit.api.UserProto.UpdateUserRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateUserRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateUserRequest>() {
+      @java.lang.Override
+      public UpdateUserRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateUserRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateUserRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateUserRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.api.UserProto.UpdateUserRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateUserResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.UpdateUserResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code toit.api.UpdateUserResponse}
+   */
+  public  static final class UpdateUserResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.api.UpdateUserResponse)
+      UpdateUserResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateUserResponse.newBuilder() to construct.
+    private UpdateUserResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateUserResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateUserResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateUserResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.api.UserProto.internal_static_toit_api_UpdateUserResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.api.UserProto.internal_static_toit_api_UpdateUserResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.api.UserProto.UpdateUserResponse.class, io.toit.proto.toit.api.UserProto.UpdateUserResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.api.UserProto.UpdateUserResponse)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.api.UserProto.UpdateUserResponse other = (io.toit.proto.toit.api.UserProto.UpdateUserResponse) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.api.UserProto.UpdateUserResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.UserProto.UpdateUserResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.UpdateUserResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.UserProto.UpdateUserResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.UpdateUserResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.UserProto.UpdateUserResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.UpdateUserResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.UserProto.UpdateUserResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.UpdateUserResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.UserProto.UpdateUserResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.UserProto.UpdateUserResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.UserProto.UpdateUserResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.api.UserProto.UpdateUserResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.api.UpdateUserResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.api.UpdateUserResponse)
+        io.toit.proto.toit.api.UserProto.UpdateUserResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.UserProto.internal_static_toit_api_UpdateUserResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.UserProto.internal_static_toit_api_UpdateUserResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.UserProto.UpdateUserResponse.class, io.toit.proto.toit.api.UserProto.UpdateUserResponse.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.api.UserProto.UpdateUserResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.api.UserProto.internal_static_toit_api_UpdateUserResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.UserProto.UpdateUserResponse getDefaultInstanceForType() {
+        return io.toit.proto.toit.api.UserProto.UpdateUserResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.UserProto.UpdateUserResponse build() {
+        io.toit.proto.toit.api.UserProto.UpdateUserResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.UserProto.UpdateUserResponse buildPartial() {
+        io.toit.proto.toit.api.UserProto.UpdateUserResponse result = new io.toit.proto.toit.api.UserProto.UpdateUserResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.api.UserProto.UpdateUserResponse) {
+          return mergeFrom((io.toit.proto.toit.api.UserProto.UpdateUserResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.api.UserProto.UpdateUserResponse other) {
+        if (other == io.toit.proto.toit.api.UserProto.UpdateUserResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.api.UserProto.UpdateUserResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.api.UserProto.UpdateUserResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.api.UpdateUserResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.api.UpdateUserResponse)
+    private static final io.toit.proto.toit.api.UserProto.UpdateUserResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.api.UserProto.UpdateUserResponse();
+    }
+
+    public static io.toit.proto.toit.api.UserProto.UpdateUserResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateUserResponse>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateUserResponse>() {
+      @java.lang.Override
+      public UpdateUserResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateUserResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateUserResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateUserResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.api.UserProto.UpdateUserResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_toit_api_SetPasswordRequest_descriptor;
   private static final 
@@ -12510,6 +14289,21 @@ public final class UserProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_toit_api_CancelPaymentSubscriptionResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_UserChange_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_UserChange_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_UpdateUserRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_UpdateUserRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_UpdateUserResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_UpdateUserResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -12556,37 +14350,42 @@ public final class UserProto {
       "gle.protobuf.Timestamp\022\027\n\017receipt_pdf_ur" +
       "l\030\007 \001(\t\022\023\n\013amount_paid\030\010 \001(\003\"\"\n CancelPa" +
       "ymentSubscriptionRequest\"#\n!CancelPaymen" +
-      "tSubscriptionResponse2\272\010\n\004User\022L\n\013SetPas" +
-      "sword\022\034.toit.api.SetPasswordRequest\032\035.to" +
-      "it.api.SetPasswordResponse\"\000\022j\n\025Initiate" +
-      "ResetPassword\022&.toit.api.InitiateResetPa" +
-      "sswordRequest\032\'.toit.api.InitiateResetPa" +
-      "sswordResponse\"\000\022v\n\031ChangePasswordWithRP" +
-      "Token\022*.toit.api.ChangePasswordWithRPTok" +
-      "enRequest\032+.toit.api.ChangePasswordWithR" +
-      "PTokenResponse\"\000\022U\n\016GetCurrentUser\022\037.toi" +
-      "t.api.GetCurrentUserRequest\032 .toit.api.G" +
-      "etCurrentUserResponse\"\000\022^\n\021ListOrganizat" +
-      "ions\022\".toit.api.ListOrganizationsRequest" +
-      "\032#.toit.api.ListOrganizationsResponse\"\000\022" +
-      "X\n\017GetOrganization\022 .toit.api.GetOrganiz" +
-      "ationRequest\032!.toit.api.GetOrganizationR" +
-      "esponse\"\000\022I\n\tListUsers\022\032.toit.api.ListUs" +
-      "ersRequest\032\033.toit.api.ListUsersResponse\"" +
-      "\003\210\002\001\022L\n\nCreateUser\022\033.toit.api.CreateUser" +
-      "Request\032\034.toit.api.CreateUserResponse\"\003\210" +
-      "\002\001\022v\n\031CreatePaymentSubscription\022*.toit.a" +
-      "pi.CreatePaymentSubscriptionRequest\032+.to" +
-      "it.api.CreatePaymentSubscriptionResponse" +
-      "\"\000\022f\n\023ListPaymentInvoices\022$.toit.api.Lis" +
-      "tPaymentInvoicesRequest\032%.toit.api.ListP" +
-      "aymentInvoicesResponse\"\0000\001\022v\n\031CancelPaym" +
-      "entSubscription\022*.toit.api.CancelPayment" +
-      "SubscriptionRequest\032+.toit.api.CancelPay" +
-      "mentSubscriptionResponse\"\000BZ\n\026io.toit.pr" +
-      "oto.toit.apiB\tUserProtoZ$github.com/toit" +
-      "ware/api.git/toit/api\252\002\016Toit.Proto.APIb\006" +
-      "proto3"
+      "tSubscriptionResponse\"=\n\nUserChange\022%\n\033s" +
+      "et_settings_welcome_closed\030\001 \001(\010H\000B\010\n\006ch" +
+      "ange\":\n\021UpdateUserRequest\022%\n\007changes\030\001 \003" +
+      "(\0132\024.toit.api.UserChange\"\024\n\022UpdateUserRe" +
+      "sponse2\205\t\n\004User\022L\n\013SetPassword\022\034.toit.ap" +
+      "i.SetPasswordRequest\032\035.toit.api.SetPassw" +
+      "ordResponse\"\000\022j\n\025InitiateResetPassword\022&" +
+      ".toit.api.InitiateResetPasswordRequest\032\'" +
+      ".toit.api.InitiateResetPasswordResponse\"" +
+      "\000\022v\n\031ChangePasswordWithRPToken\022*.toit.ap" +
+      "i.ChangePasswordWithRPTokenRequest\032+.toi" +
+      "t.api.ChangePasswordWithRPTokenResponse\"" +
+      "\000\022U\n\016GetCurrentUser\022\037.toit.api.GetCurren" +
+      "tUserRequest\032 .toit.api.GetCurrentUserRe" +
+      "sponse\"\000\022^\n\021ListOrganizations\022\".toit.api" +
+      ".ListOrganizationsRequest\032#.toit.api.Lis" +
+      "tOrganizationsResponse\"\000\022X\n\017GetOrganizat" +
+      "ion\022 .toit.api.GetOrganizationRequest\032!." +
+      "toit.api.GetOrganizationResponse\"\000\022I\n\tLi" +
+      "stUsers\022\032.toit.api.ListUsersRequest\032\033.to" +
+      "it.api.ListUsersResponse\"\003\210\002\001\022L\n\nCreateU" +
+      "ser\022\033.toit.api.CreateUserRequest\032\034.toit." +
+      "api.CreateUserResponse\"\003\210\002\001\022v\n\031CreatePay" +
+      "mentSubscription\022*.toit.api.CreatePaymen" +
+      "tSubscriptionRequest\032+.toit.api.CreatePa" +
+      "ymentSubscriptionResponse\"\000\022f\n\023ListPayme" +
+      "ntInvoices\022$.toit.api.ListPaymentInvoice" +
+      "sRequest\032%.toit.api.ListPaymentInvoicesR" +
+      "esponse\"\0000\001\022v\n\031CancelPaymentSubscription" +
+      "\022*.toit.api.CancelPaymentSubscriptionReq" +
+      "uest\032+.toit.api.CancelPaymentSubscriptio" +
+      "nResponse\"\000\022I\n\nUpdateUser\022\033.toit.api.Upd" +
+      "ateUserRequest\032\034.toit.api.UpdateUserResp" +
+      "onse\"\000BZ\n\026io.toit.proto.toit.apiB\tUserPr" +
+      "otoZ$github.com/toitware/api.git/toit/ap" +
+      "i\252\002\016Toit.Proto.APIb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12708,6 +14507,24 @@ public final class UserProto {
     internal_static_toit_api_CancelPaymentSubscriptionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_CancelPaymentSubscriptionResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_toit_api_UserChange_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_toit_api_UserChange_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_UserChange_descriptor,
+        new java.lang.String[] { "SetSettingsWelcomeClosed", "Change", });
+    internal_static_toit_api_UpdateUserRequest_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_toit_api_UpdateUserRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_UpdateUserRequest_descriptor,
+        new java.lang.String[] { "Changes", });
+    internal_static_toit_api_UpdateUserResponse_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_toit_api_UpdateUserResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_UpdateUserResponse_descriptor,
         new java.lang.String[] { });
     io.toit.proto.toit.model.OrganizationProto.getDescriptor();
     io.toit.proto.toit.api.OrgProto.getDescriptor();
