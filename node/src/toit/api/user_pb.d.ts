@@ -466,3 +466,69 @@ export namespace CancelPaymentSubscriptionResponse {
   }
 }
 
+export class UserChange extends jspb.Message {
+  hasSetSettingsWelcomeClosed(): boolean;
+  clearSetSettingsWelcomeClosed(): void;
+  getSetSettingsWelcomeClosed(): boolean;
+  setSetSettingsWelcomeClosed(value: boolean): void;
+
+  getChangeCase(): UserChange.ChangeCase;
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): UserChange.AsObject;
+  static toObject(includeInstance: boolean, msg: UserChange): UserChange.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: UserChange, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): UserChange;
+  static deserializeBinaryFromReader(message: UserChange, reader: jspb.BinaryReader): UserChange;
+}
+
+export namespace UserChange {
+  export type AsObject = {
+    setSettingsWelcomeClosed: boolean,
+  }
+
+  export enum ChangeCase {
+    CHANGE_NOT_SET = 0,
+    SET_SETTINGS_WELCOME_CLOSED = 1,
+  }
+}
+
+export class UpdateUserRequest extends jspb.Message {
+  clearChangesList(): void;
+  getChangesList(): Array<UserChange>;
+  setChangesList(value: Array<UserChange>): void;
+  addChanges(value?: UserChange, index?: number): UserChange;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): UpdateUserRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: UpdateUserRequest): UpdateUserRequest.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: UpdateUserRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): UpdateUserRequest;
+  static deserializeBinaryFromReader(message: UpdateUserRequest, reader: jspb.BinaryReader): UpdateUserRequest;
+}
+
+export namespace UpdateUserRequest {
+  export type AsObject = {
+    changesList: Array<UserChange.AsObject>,
+  }
+}
+
+export class UpdateUserResponse extends jspb.Message {
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): UpdateUserResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: UpdateUserResponse): UpdateUserResponse.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: UpdateUserResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): UpdateUserResponse;
+  static deserializeBinaryFromReader(message: UpdateUserResponse, reader: jspb.BinaryReader): UpdateUserResponse;
+}
+
+export namespace UpdateUserResponse {
+  export type AsObject = {
+  }
+}
+

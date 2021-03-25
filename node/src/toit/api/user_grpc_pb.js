@@ -249,6 +249,28 @@ function deserialize_toit_api_SetPasswordResponse(buffer_arg) {
   return toit_api_user_pb.SetPasswordResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_toit_api_UpdateUserRequest(arg) {
+  if (!(arg instanceof toit_api_user_pb.UpdateUserRequest)) {
+    throw new Error('Expected argument of type toit.api.UpdateUserRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_UpdateUserRequest(buffer_arg) {
+  return toit_api_user_pb.UpdateUserRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_toit_api_UpdateUserResponse(arg) {
+  if (!(arg instanceof toit_api_user_pb.UpdateUserResponse)) {
+    throw new Error('Expected argument of type toit.api.UpdateUserResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_UpdateUserResponse(buffer_arg) {
+  return toit_api_user_pb.UpdateUserResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 
 var UserService = exports.UserService = {
   setPassword: {
@@ -371,6 +393,17 @@ var UserService = exports.UserService = {
     requestDeserialize: deserialize_toit_api_CancelPaymentSubscriptionRequest,
     responseSerialize: serialize_toit_api_CancelPaymentSubscriptionResponse,
     responseDeserialize: deserialize_toit_api_CancelPaymentSubscriptionResponse,
+  },
+  updateUser: {
+    path: '/toit.api.User/UpdateUser',
+    requestStream: false,
+    responseStream: false,
+    requestType: toit_api_user_pb.UpdateUserRequest,
+    responseType: toit_api_user_pb.UpdateUserResponse,
+    requestSerialize: serialize_toit_api_UpdateUserRequest,
+    requestDeserialize: deserialize_toit_api_UpdateUserRequest,
+    responseSerialize: serialize_toit_api_UpdateUserResponse,
+    responseDeserialize: deserialize_toit_api_UpdateUserResponse,
   },
 };
 

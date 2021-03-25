@@ -19,6 +19,7 @@ interface IUserService extends grpc.ServiceDefinition<grpc.UntypedServiceImpleme
   createPaymentSubscription: grpc.MethodDefinition<toit_api_user_pb.CreatePaymentSubscriptionRequest, toit_api_user_pb.CreatePaymentSubscriptionResponse>;
   listPaymentInvoices: grpc.MethodDefinition<toit_api_user_pb.ListPaymentInvoicesRequest, toit_api_user_pb.ListPaymentInvoicesResponse>;
   cancelPaymentSubscription: grpc.MethodDefinition<toit_api_user_pb.CancelPaymentSubscriptionRequest, toit_api_user_pb.CancelPaymentSubscriptionResponse>;
+  updateUser: grpc.MethodDefinition<toit_api_user_pb.UpdateUserRequest, toit_api_user_pb.UpdateUserResponse>;
 }
 
 export const UserService: IUserService;
@@ -57,4 +58,7 @@ export class UserClient extends grpc.Client {
   cancelPaymentSubscription(argument: toit_api_user_pb.CancelPaymentSubscriptionRequest, callback: grpc.requestCallback<toit_api_user_pb.CancelPaymentSubscriptionResponse>): grpc.ClientUnaryCall;
   cancelPaymentSubscription(argument: toit_api_user_pb.CancelPaymentSubscriptionRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_user_pb.CancelPaymentSubscriptionResponse>): grpc.ClientUnaryCall;
   cancelPaymentSubscription(argument: toit_api_user_pb.CancelPaymentSubscriptionRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_user_pb.CancelPaymentSubscriptionResponse>): grpc.ClientUnaryCall;
+  updateUser(argument: toit_api_user_pb.UpdateUserRequest, callback: grpc.requestCallback<toit_api_user_pb.UpdateUserResponse>): grpc.ClientUnaryCall;
+  updateUser(argument: toit_api_user_pb.UpdateUserRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_user_pb.UpdateUserResponse>): grpc.ClientUnaryCall;
+  updateUser(argument: toit_api_user_pb.UpdateUserRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_user_pb.UpdateUserResponse>): grpc.ClientUnaryCall;
 }
