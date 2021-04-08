@@ -4,6 +4,7 @@ package toit.api;
 
 import "toit/model/organization.proto";
 import "toit/api/hardware.proto";
+import "toit/api/auth.proto";
 
 option go_package = "github.com/toitware/api.git/toit/api";
 option java_package = "io.toit.proto.toit.api";
