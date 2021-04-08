@@ -110,12 +110,3 @@ message UpdateOrganizationRequest {
 }
 
 message UpdateOrganizationResponse {}
-
-message CreateOrganizationRequest {
-  string name = 1;
-}
-
-message CreateOrganizationResponse {
-  bytes organization_id = 1;
-  string name = 2;
-}
