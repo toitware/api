@@ -117,5 +117,5 @@ message CreateNewOrganizationRequest {
 }
 
 message CreateNewOrganizationResponse {
-
+  bytes organization_id = 1;
 }
