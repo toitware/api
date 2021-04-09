@@ -37,24 +37,25 @@ namespace Toit.Proto.Model {
             "cGUSEgoKaHdpZF9xdW90YRgQIAEoBCKSAQoOUGF5bWVudERldGFpbHMSDQoF",
             "bGFzdDQYASABKAkSDgoGZXhwaXJ5GAIgASgJEhQKDGV4cGlyeV9tb250aBgD",
             "IAEoCRITCgtleHBpcnlfeWVhchgEIAEoCRINCgVicmFuZBgFIAEoCRIUCgxj",
-            "b3VudHJ5X2NvZGUYBiABKAkSEQoJY3ZjX2NoZWNrGAcgASgJIpkBCgRVc2Vy",
+            "b3VudHJ5X2NvZGUYBiABKAkSEQoJY3ZjX2NoZWNrGAcgASgJIq0BCgRVc2Vy",
             "EgoKAmlkGAEgASgMEhcKD29yZ2FuaXphdGlvbl9pZBgCIAEoDBINCgVlbWFp",
             "bBgDIAEoCRIMCgRuYW1lGAQgASgJEisKCHNldHRpbmdzGAUgASgLMhkudG9p",
-            "dC5tb2RlbC5Vc2VyLlNldHRpbmdzGiIKCFNldHRpbmdzEhYKDndlbGNvbWVf",
-            "Y2xvc2VkGAEgASgIImsKBkFQSUtleRIKCgJpZBgBIAEoDBIXCg9vcmdhbml6",
-            "YXRpb25faWQYAiABKAwSDAoEbmFtZRgDIAEoCRIuCgpjcmVhdGVkX2F0GAQg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCIvCgRUaWVyIicKBFR5",
-            "cGUSCwoHVU5LTk9XThAAEggKBEZSRUUQARIICgRQQUlEEAIiPQoIQ3VzdG9t",
-            "ZXIiMQoEVHlwZRILCgdVTktOT1dOEAASCgoGUEVSU09OEAESEAoMT1JHQU5J",
-            "WkFUSU9OEAJCaAoYaW8udG9pdC5wcm90by50b2l0Lm1vZGVsQhFPcmdhbml6",
-            "YXRpb25Qcm90b1omZ2l0aHViLmNvbS90b2l0d2FyZS9hcGkuZ2l0L3RvaXQv",
-            "bW9kZWyqAhBUb2l0LlByb3RvLk1vZGVsYgZwcm90bzM="));
+            "dC5tb2RlbC5Vc2VyLlNldHRpbmdzGjYKCFNldHRpbmdzEhYKDndlbGNvbWVf",
+            "Y2xvc2VkGAEgASgIEhIKCm5ld3NsZXR0ZXIYAiABKAgiawoGQVBJS2V5EgoK",
+            "AmlkGAEgASgMEhcKD29yZ2FuaXphdGlvbl9pZBgCIAEoDBIMCgRuYW1lGAMg",
+            "ASgJEi4KCmNyZWF0ZWRfYXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wIi8KBFRpZXIiJwoEVHlwZRILCgdVTktOT1dOEAASCAoERlJFRRAB",
+            "EggKBFBBSUQQAiI9CghDdXN0b21lciIxCgRUeXBlEgsKB1VOS05PV04QABIK",
+            "CgZQRVJTT04QARIQCgxPUkdBTklaQVRJT04QAkJoChhpby50b2l0LnByb3Rv",
+            "LnRvaXQubW9kZWxCEU9yZ2FuaXphdGlvblByb3RvWiZnaXRodWIuY29tL3Rv",
+            "aXR3YXJlL2FwaS5naXQvdG9pdC9tb2RlbKoCEFRvaXQuUHJvdG8uTW9kZWxi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.Organization), global::Toit.Proto.Model.Organization.Parser, new[]{ "Id", "Name", "DefaultSdk", "Email", "City", "Country", "PhoneNumber", "CvrNumber", "Tier", "PaymentDetails", "AddressLine", "PostalCode", "VatNumber", "VatCountryCode", "Customer", "HwidQuota" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.PaymentDetails), global::Toit.Proto.Model.PaymentDetails.Parser, new[]{ "Last4", "Expiry", "ExpiryMonth", "ExpiryYear", "Brand", "CountryCode", "CvcCheck" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.User), global::Toit.Proto.Model.User.Parser, new[]{ "Id", "OrganizationId", "Email", "Name", "Settings" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.User.Types.Settings), global::Toit.Proto.Model.User.Types.Settings.Parser, new[]{ "WelcomeClosed" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.User), global::Toit.Proto.Model.User.Parser, new[]{ "Id", "OrganizationId", "Email", "Name", "Settings" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.User.Types.Settings), global::Toit.Proto.Model.User.Types.Settings.Parser, new[]{ "WelcomeClosed", "Newsletter" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.APIKey), global::Toit.Proto.Model.APIKey.Parser, new[]{ "Id", "OrganizationId", "Name", "CreatedAt" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.Tier), global::Toit.Proto.Model.Tier.Parser, null, null, new[]{ typeof(global::Toit.Proto.Model.Tier.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.Customer), global::Toit.Proto.Model.Customer.Parser, null, null, new[]{ typeof(global::Toit.Proto.Model.Customer.Types.Type) }, null, null)
@@ -1536,6 +1537,7 @@ namespace Toit.Proto.Model {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public Settings(Settings other) : this() {
           welcomeClosed_ = other.welcomeClosed_;
+          newsletter_ = other.newsletter_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1555,6 +1557,17 @@ namespace Toit.Proto.Model {
           }
         }
 
+        /// <summary>Field number for the "newsletter" field.</summary>
+        public const int NewsletterFieldNumber = 2;
+        private bool newsletter_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Newsletter {
+          get { return newsletter_; }
+          set {
+            newsletter_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
           return Equals(other as Settings);
@@ -1569,6 +1582,7 @@ namespace Toit.Proto.Model {
             return true;
           }
           if (WelcomeClosed != other.WelcomeClosed) return false;
+          if (Newsletter != other.Newsletter) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1576,6 +1590,7 @@ namespace Toit.Proto.Model {
         public override int GetHashCode() {
           int hash = 1;
           if (WelcomeClosed != false) hash ^= WelcomeClosed.GetHashCode();
+          if (Newsletter != false) hash ^= Newsletter.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1596,6 +1611,10 @@ namespace Toit.Proto.Model {
             output.WriteRawTag(8);
             output.WriteBool(WelcomeClosed);
           }
+          if (Newsletter != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(Newsletter);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1609,6 +1628,10 @@ namespace Toit.Proto.Model {
             output.WriteRawTag(8);
             output.WriteBool(WelcomeClosed);
           }
+          if (Newsletter != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(Newsletter);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1619,6 +1642,9 @@ namespace Toit.Proto.Model {
         public int CalculateSize() {
           int size = 0;
           if (WelcomeClosed != false) {
+            size += 1 + 1;
+          }
+          if (Newsletter != false) {
             size += 1 + 1;
           }
           if (_unknownFields != null) {
@@ -1634,6 +1660,9 @@ namespace Toit.Proto.Model {
           }
           if (other.WelcomeClosed != false) {
             WelcomeClosed = other.WelcomeClosed;
+          }
+          if (other.Newsletter != false) {
+            Newsletter = other.Newsletter;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -1653,6 +1682,10 @@ namespace Toit.Proto.Model {
                 WelcomeClosed = input.ReadBool();
                 break;
               }
+              case 16: {
+                Newsletter = input.ReadBool();
+                break;
+              }
             }
           }
         #endif
@@ -1669,6 +1702,10 @@ namespace Toit.Proto.Model {
                 break;
               case 8: {
                 WelcomeClosed = input.ReadBool();
+                break;
+              }
+              case 16: {
+                Newsletter = input.ReadBool();
                 break;
               }
             }

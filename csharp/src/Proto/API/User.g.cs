@@ -57,38 +57,39 @@ namespace Toit.Proto.API {
             "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASFwoPcmVjZWlwdF9w",
             "ZGZfdXJsGAcgASgJEhMKC2Ftb3VudF9wYWlkGAggASgDIiIKIENhbmNlbFBh",
             "eW1lbnRTdWJzY3JpcHRpb25SZXF1ZXN0IiMKIUNhbmNlbFBheW1lbnRTdWJz",
-            "Y3JpcHRpb25SZXNwb25zZSI9CgpVc2VyQ2hhbmdlEiUKG3NldF9zZXR0aW5n",
-            "c193ZWxjb21lX2Nsb3NlZBgBIAEoCEgAQggKBmNoYW5nZSI6ChFVcGRhdGVV",
-            "c2VyUmVxdWVzdBIlCgdjaGFuZ2VzGAEgAygLMhQudG9pdC5hcGkuVXNlckNo",
-            "YW5nZSIUChJVcGRhdGVVc2VyUmVzcG9uc2UyhQkKBFVzZXISTAoLU2V0UGFz",
-            "c3dvcmQSHC50b2l0LmFwaS5TZXRQYXNzd29yZFJlcXVlc3QaHS50b2l0LmFw",
-            "aS5TZXRQYXNzd29yZFJlc3BvbnNlIgASagoVSW5pdGlhdGVSZXNldFBhc3N3",
-            "b3JkEiYudG9pdC5hcGkuSW5pdGlhdGVSZXNldFBhc3N3b3JkUmVxdWVzdBon",
-            "LnRvaXQuYXBpLkluaXRpYXRlUmVzZXRQYXNzd29yZFJlc3BvbnNlIgASdgoZ",
-            "Q2hhbmdlUGFzc3dvcmRXaXRoUlBUb2tlbhIqLnRvaXQuYXBpLkNoYW5nZVBh",
-            "c3N3b3JkV2l0aFJQVG9rZW5SZXF1ZXN0GisudG9pdC5hcGkuQ2hhbmdlUGFz",
-            "c3dvcmRXaXRoUlBUb2tlblJlc3BvbnNlIgASVQoOR2V0Q3VycmVudFVzZXIS",
-            "Hy50b2l0LmFwaS5HZXRDdXJyZW50VXNlclJlcXVlc3QaIC50b2l0LmFwaS5H",
-            "ZXRDdXJyZW50VXNlclJlc3BvbnNlIgASXgoRTGlzdE9yZ2FuaXphdGlvbnMS",
-            "Ii50b2l0LmFwaS5MaXN0T3JnYW5pemF0aW9uc1JlcXVlc3QaIy50b2l0LmFw",
-            "aS5MaXN0T3JnYW5pemF0aW9uc1Jlc3BvbnNlIgASWAoPR2V0T3JnYW5pemF0",
-            "aW9uEiAudG9pdC5hcGkuR2V0T3JnYW5pemF0aW9uUmVxdWVzdBohLnRvaXQu",
-            "YXBpLkdldE9yZ2FuaXphdGlvblJlc3BvbnNlIgASSQoJTGlzdFVzZXJzEhou",
-            "dG9pdC5hcGkuTGlzdFVzZXJzUmVxdWVzdBobLnRvaXQuYXBpLkxpc3RVc2Vy",
-            "c1Jlc3BvbnNlIgOIAgESTAoKQ3JlYXRlVXNlchIbLnRvaXQuYXBpLkNyZWF0",
-            "ZVVzZXJSZXF1ZXN0GhwudG9pdC5hcGkuQ3JlYXRlVXNlclJlc3BvbnNlIgOI",
-            "AgESdgoZQ3JlYXRlUGF5bWVudFN1YnNjcmlwdGlvbhIqLnRvaXQuYXBpLkNy",
-            "ZWF0ZVBheW1lbnRTdWJzY3JpcHRpb25SZXF1ZXN0GisudG9pdC5hcGkuQ3Jl",
-            "YXRlUGF5bWVudFN1YnNjcmlwdGlvblJlc3BvbnNlIgASZgoTTGlzdFBheW1l",
-            "bnRJbnZvaWNlcxIkLnRvaXQuYXBpLkxpc3RQYXltZW50SW52b2ljZXNSZXF1",
-            "ZXN0GiUudG9pdC5hcGkuTGlzdFBheW1lbnRJbnZvaWNlc1Jlc3BvbnNlIgAw",
-            "ARJ2ChlDYW5jZWxQYXltZW50U3Vic2NyaXB0aW9uEioudG9pdC5hcGkuQ2Fu",
-            "Y2VsUGF5bWVudFN1YnNjcmlwdGlvblJlcXVlc3QaKy50b2l0LmFwaS5DYW5j",
-            "ZWxQYXltZW50U3Vic2NyaXB0aW9uUmVzcG9uc2UiABJJCgpVcGRhdGVVc2Vy",
-            "EhsudG9pdC5hcGkuVXBkYXRlVXNlclJlcXVlc3QaHC50b2l0LmFwaS5VcGRh",
-            "dGVVc2VyUmVzcG9uc2UiAEJaChZpby50b2l0LnByb3RvLnRvaXQuYXBpQglV",
-            "c2VyUHJvdG9aJGdpdGh1Yi5jb20vdG9pdHdhcmUvYXBpLmdpdC90b2l0L2Fw",
-            "aaoCDlRvaXQuUHJvdG8uQVBJYgZwcm90bzM="));
+            "Y3JpcHRpb25SZXNwb25zZSJgCgpVc2VyQ2hhbmdlEiUKG3NldF9zZXR0aW5n",
+            "c193ZWxjb21lX2Nsb3NlZBgBIAEoCEgAEiEKF3NldF9zZXR0aW5nc19uZXdz",
+            "bGV0dGVyGAIgASgISABCCAoGY2hhbmdlIjoKEVVwZGF0ZVVzZXJSZXF1ZXN0",
+            "EiUKB2NoYW5nZXMYASADKAsyFC50b2l0LmFwaS5Vc2VyQ2hhbmdlIhQKElVw",
+            "ZGF0ZVVzZXJSZXNwb25zZTKFCQoEVXNlchJMCgtTZXRQYXNzd29yZBIcLnRv",
+            "aXQuYXBpLlNldFBhc3N3b3JkUmVxdWVzdBodLnRvaXQuYXBpLlNldFBhc3N3",
+            "b3JkUmVzcG9uc2UiABJqChVJbml0aWF0ZVJlc2V0UGFzc3dvcmQSJi50b2l0",
+            "LmFwaS5Jbml0aWF0ZVJlc2V0UGFzc3dvcmRSZXF1ZXN0GicudG9pdC5hcGku",
+            "SW5pdGlhdGVSZXNldFBhc3N3b3JkUmVzcG9uc2UiABJ2ChlDaGFuZ2VQYXNz",
+            "d29yZFdpdGhSUFRva2VuEioudG9pdC5hcGkuQ2hhbmdlUGFzc3dvcmRXaXRo",
+            "UlBUb2tlblJlcXVlc3QaKy50b2l0LmFwaS5DaGFuZ2VQYXNzd29yZFdpdGhS",
+            "UFRva2VuUmVzcG9uc2UiABJVCg5HZXRDdXJyZW50VXNlchIfLnRvaXQuYXBp",
+            "LkdldEN1cnJlbnRVc2VyUmVxdWVzdBogLnRvaXQuYXBpLkdldEN1cnJlbnRV",
+            "c2VyUmVzcG9uc2UiABJeChFMaXN0T3JnYW5pemF0aW9ucxIiLnRvaXQuYXBp",
+            "Lkxpc3RPcmdhbml6YXRpb25zUmVxdWVzdBojLnRvaXQuYXBpLkxpc3RPcmdh",
+            "bml6YXRpb25zUmVzcG9uc2UiABJYCg9HZXRPcmdhbml6YXRpb24SIC50b2l0",
+            "LmFwaS5HZXRPcmdhbml6YXRpb25SZXF1ZXN0GiEudG9pdC5hcGkuR2V0T3Jn",
+            "YW5pemF0aW9uUmVzcG9uc2UiABJJCglMaXN0VXNlcnMSGi50b2l0LmFwaS5M",
+            "aXN0VXNlcnNSZXF1ZXN0GhsudG9pdC5hcGkuTGlzdFVzZXJzUmVzcG9uc2Ui",
+            "A4gCARJMCgpDcmVhdGVVc2VyEhsudG9pdC5hcGkuQ3JlYXRlVXNlclJlcXVl",
+            "c3QaHC50b2l0LmFwaS5DcmVhdGVVc2VyUmVzcG9uc2UiA4gCARJ2ChlDcmVh",
+            "dGVQYXltZW50U3Vic2NyaXB0aW9uEioudG9pdC5hcGkuQ3JlYXRlUGF5bWVu",
+            "dFN1YnNjcmlwdGlvblJlcXVlc3QaKy50b2l0LmFwaS5DcmVhdGVQYXltZW50",
+            "U3Vic2NyaXB0aW9uUmVzcG9uc2UiABJmChNMaXN0UGF5bWVudEludm9pY2Vz",
+            "EiQudG9pdC5hcGkuTGlzdFBheW1lbnRJbnZvaWNlc1JlcXVlc3QaJS50b2l0",
+            "LmFwaS5MaXN0UGF5bWVudEludm9pY2VzUmVzcG9uc2UiADABEnYKGUNhbmNl",
+            "bFBheW1lbnRTdWJzY3JpcHRpb24SKi50b2l0LmFwaS5DYW5jZWxQYXltZW50",
+            "U3Vic2NyaXB0aW9uUmVxdWVzdBorLnRvaXQuYXBpLkNhbmNlbFBheW1lbnRT",
+            "dWJzY3JpcHRpb25SZXNwb25zZSIAEkkKClVwZGF0ZVVzZXISGy50b2l0LmFw",
+            "aS5VcGRhdGVVc2VyUmVxdWVzdBocLnRvaXQuYXBpLlVwZGF0ZVVzZXJSZXNw",
+            "b25zZSIAQloKFmlvLnRvaXQucHJvdG8udG9pdC5hcGlCCVVzZXJQcm90b1ok",
+            "Z2l0aHViLmNvbS90b2l0d2FyZS9hcGkuZ2l0L3RvaXQvYXBpqgIOVG9pdC5Q",
+            "cm90by5BUEliBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Toit.Proto.Model.OrganizationReflection.Descriptor, global::Toit.Proto.API.OrganizationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -111,7 +112,7 @@ namespace Toit.Proto.API {
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.Invoice), global::Toit.Proto.API.Invoice.Parser, new[]{ "InvoiceId", "InvoiceNumber", "CreatedAt", "PdfUrl", "Status", "DueDate", "ReceiptPdfUrl", "AmountPaid" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.CancelPaymentSubscriptionRequest), global::Toit.Proto.API.CancelPaymentSubscriptionRequest.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.CancelPaymentSubscriptionResponse), global::Toit.Proto.API.CancelPaymentSubscriptionResponse.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.UserChange), global::Toit.Proto.API.UserChange.Parser, new[]{ "SetSettingsWelcomeClosed" }, new[]{ "Change" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.UserChange), global::Toit.Proto.API.UserChange.Parser, new[]{ "SetSettingsWelcomeClosed", "SetSettingsNewsletter" }, new[]{ "Change" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.UpdateUserRequest), global::Toit.Proto.API.UpdateUserRequest.Parser, new[]{ "Changes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.UpdateUserResponse), global::Toit.Proto.API.UpdateUserResponse.Parser, null, null, null, null, null)
           }));
@@ -3974,6 +3975,9 @@ namespace Toit.Proto.API {
         case ChangeOneofCase.SetSettingsWelcomeClosed:
           SetSettingsWelcomeClosed = other.SetSettingsWelcomeClosed;
           break;
+        case ChangeOneofCase.SetSettingsNewsletter:
+          SetSettingsNewsletter = other.SetSettingsNewsletter;
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -3995,11 +3999,23 @@ namespace Toit.Proto.API {
       }
     }
 
+    /// <summary>Field number for the "set_settings_newsletter" field.</summary>
+    public const int SetSettingsNewsletterFieldNumber = 2;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool SetSettingsNewsletter {
+      get { return changeCase_ == ChangeOneofCase.SetSettingsNewsletter ? (bool) change_ : false; }
+      set {
+        change_ = value;
+        changeCase_ = ChangeOneofCase.SetSettingsNewsletter;
+      }
+    }
+
     private object change_;
     /// <summary>Enum of possible cases for the "change" oneof.</summary>
     public enum ChangeOneofCase {
       None = 0,
       SetSettingsWelcomeClosed = 1,
+      SetSettingsNewsletter = 2,
     }
     private ChangeOneofCase changeCase_ = ChangeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4027,6 +4043,7 @@ namespace Toit.Proto.API {
         return true;
       }
       if (SetSettingsWelcomeClosed != other.SetSettingsWelcomeClosed) return false;
+      if (SetSettingsNewsletter != other.SetSettingsNewsletter) return false;
       if (ChangeCase != other.ChangeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -4035,6 +4052,7 @@ namespace Toit.Proto.API {
     public override int GetHashCode() {
       int hash = 1;
       if (changeCase_ == ChangeOneofCase.SetSettingsWelcomeClosed) hash ^= SetSettingsWelcomeClosed.GetHashCode();
+      if (changeCase_ == ChangeOneofCase.SetSettingsNewsletter) hash ^= SetSettingsNewsletter.GetHashCode();
       hash ^= (int) changeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -4056,6 +4074,10 @@ namespace Toit.Proto.API {
         output.WriteRawTag(8);
         output.WriteBool(SetSettingsWelcomeClosed);
       }
+      if (changeCase_ == ChangeOneofCase.SetSettingsNewsletter) {
+        output.WriteRawTag(16);
+        output.WriteBool(SetSettingsNewsletter);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4069,6 +4091,10 @@ namespace Toit.Proto.API {
         output.WriteRawTag(8);
         output.WriteBool(SetSettingsWelcomeClosed);
       }
+      if (changeCase_ == ChangeOneofCase.SetSettingsNewsletter) {
+        output.WriteRawTag(16);
+        output.WriteBool(SetSettingsNewsletter);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4079,6 +4105,9 @@ namespace Toit.Proto.API {
     public int CalculateSize() {
       int size = 0;
       if (changeCase_ == ChangeOneofCase.SetSettingsWelcomeClosed) {
+        size += 1 + 1;
+      }
+      if (changeCase_ == ChangeOneofCase.SetSettingsNewsletter) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -4095,6 +4124,9 @@ namespace Toit.Proto.API {
       switch (other.ChangeCase) {
         case ChangeOneofCase.SetSettingsWelcomeClosed:
           SetSettingsWelcomeClosed = other.SetSettingsWelcomeClosed;
+          break;
+        case ChangeOneofCase.SetSettingsNewsletter:
+          SetSettingsNewsletter = other.SetSettingsNewsletter;
           break;
       }
 
@@ -4116,6 +4148,10 @@ namespace Toit.Proto.API {
             SetSettingsWelcomeClosed = input.ReadBool();
             break;
           }
+          case 16: {
+            SetSettingsNewsletter = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -4132,6 +4168,10 @@ namespace Toit.Proto.API {
             break;
           case 8: {
             SetSettingsWelcomeClosed = input.ReadBool();
+            break;
+          }
+          case 16: {
+            SetSettingsNewsletter = input.ReadBool();
             break;
           }
         }
