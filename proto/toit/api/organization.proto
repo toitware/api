@@ -4,7 +4,6 @@ package toit.api;
 
 import "toit/model/organization.proto";
 import "toit/api/hardware.proto";
-import "toit/api/auth.proto";
 
 option go_package = "github.com/toitware/api.git/toit/api";
 option java_package = "io.toit.proto.toit.api";
@@ -23,7 +22,7 @@ service OrganizationService {
   rpc GetAPIKeySecret(GetAPIKeySecretRequest) returns (GetAPIKeySecretResponse) {}
 
   rpc UpdateOrganization(UpdateOrganizationRequest) returns (UpdateOrganizationResponse) {}
-  rpc CreateOrganization(CreateOrganizationRequest) returns (CreateOrganizationResponse) {}
+  rpc CreateNewOrganization(CreateNewOrganizationRequest) returns (CreateNewOrganizationResponse) {}
 
   rpc ClaimHardwareIdentity(ClaimHardwareIdentityRequest) returns (ClaimHardwareIdentityResponse) {}
   rpc SetHardwareIdentityInfo(SetHardwareIdentityInfoRequest) returns (SetHardwareIdentityInfoResponse) {}
@@ -111,3 +110,12 @@ message UpdateOrganizationRequest {
 }
 
 message UpdateOrganizationResponse {}
+
+message CreateNewOrganizationRequest {
+  string name = 1;
+  string email = 2;
+}
+
+message CreateNewOrganizationResponse {
+
+}
