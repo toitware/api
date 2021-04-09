@@ -306,6 +306,37 @@ public final class OrganizationServiceGrpc {
     return getUpdateOrganizationMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<io.toit.proto.toit.api.OrgProto.CreateNewOrganizationRequest,
+      io.toit.proto.toit.api.OrgProto.CreateNewOrganizationResponse> getCreateNewOrganizationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateNewOrganization",
+      requestType = io.toit.proto.toit.api.OrgProto.CreateNewOrganizationRequest.class,
+      responseType = io.toit.proto.toit.api.OrgProto.CreateNewOrganizationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.toit.proto.toit.api.OrgProto.CreateNewOrganizationRequest,
+      io.toit.proto.toit.api.OrgProto.CreateNewOrganizationResponse> getCreateNewOrganizationMethod() {
+    io.grpc.MethodDescriptor<io.toit.proto.toit.api.OrgProto.CreateNewOrganizationRequest, io.toit.proto.toit.api.OrgProto.CreateNewOrganizationResponse> getCreateNewOrganizationMethod;
+    if ((getCreateNewOrganizationMethod = OrganizationServiceGrpc.getCreateNewOrganizationMethod) == null) {
+      synchronized (OrganizationServiceGrpc.class) {
+        if ((getCreateNewOrganizationMethod = OrganizationServiceGrpc.getCreateNewOrganizationMethod) == null) {
+          OrganizationServiceGrpc.getCreateNewOrganizationMethod = getCreateNewOrganizationMethod =
+              io.grpc.MethodDescriptor.<io.toit.proto.toit.api.OrgProto.CreateNewOrganizationRequest, io.toit.proto.toit.api.OrgProto.CreateNewOrganizationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateNewOrganization"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.toit.proto.toit.api.OrgProto.CreateNewOrganizationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.toit.proto.toit.api.OrgProto.CreateNewOrganizationResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrganizationServiceMethodDescriptorSupplier("CreateNewOrganization"))
+              .build();
+        }
+      }
+    }
+    return getCreateNewOrganizationMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityRequest,
       io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityResponse> getClaimHardwareIdentityMethod;
 
@@ -481,6 +512,13 @@ public final class OrganizationServiceGrpc {
 
     /**
      */
+    public void createNewOrganization(io.toit.proto.toit.api.OrgProto.CreateNewOrganizationRequest request,
+        io.grpc.stub.StreamObserver<io.toit.proto.toit.api.OrgProto.CreateNewOrganizationResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getCreateNewOrganizationMethod(), responseObserver);
+    }
+
+    /**
+     */
     public void claimHardwareIdentity(io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityRequest request,
         io.grpc.stub.StreamObserver<io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getClaimHardwareIdentityMethod(), responseObserver);
@@ -558,6 +596,13 @@ public final class OrganizationServiceGrpc {
                 io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest,
                 io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse>(
                   this, METHODID_UPDATE_ORGANIZATION)))
+          .addMethod(
+            getCreateNewOrganizationMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.toit.proto.toit.api.OrgProto.CreateNewOrganizationRequest,
+                io.toit.proto.toit.api.OrgProto.CreateNewOrganizationResponse>(
+                  this, METHODID_CREATE_NEW_ORGANIZATION)))
           .addMethod(
             getClaimHardwareIdentityMethod(),
             asyncUnaryCall(
@@ -664,6 +709,14 @@ public final class OrganizationServiceGrpc {
 
     /**
      */
+    public void createNewOrganization(io.toit.proto.toit.api.OrgProto.CreateNewOrganizationRequest request,
+        io.grpc.stub.StreamObserver<io.toit.proto.toit.api.OrgProto.CreateNewOrganizationResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getCreateNewOrganizationMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
     public void claimHardwareIdentity(io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityRequest request,
         io.grpc.stub.StreamObserver<io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityResponse> responseObserver) {
       asyncUnaryCall(
@@ -755,6 +808,13 @@ public final class OrganizationServiceGrpc {
     public io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse updateOrganization(io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest request) {
       return blockingUnaryCall(
           getChannel(), getUpdateOrganizationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public io.toit.proto.toit.api.OrgProto.CreateNewOrganizationResponse createNewOrganization(io.toit.proto.toit.api.OrgProto.CreateNewOrganizationRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getCreateNewOrganizationMethod(), getCallOptions(), request);
     }
 
     /**
@@ -852,6 +912,14 @@ public final class OrganizationServiceGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<io.toit.proto.toit.api.OrgProto.CreateNewOrganizationResponse> createNewOrganization(
+        io.toit.proto.toit.api.OrgProto.CreateNewOrganizationRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getCreateNewOrganizationMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityResponse> claimHardwareIdentity(
         io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityRequest request) {
       return futureUnaryCall(
@@ -876,8 +944,9 @@ public final class OrganizationServiceGrpc {
   private static final int METHODID_DELETE_APIKEY = 6;
   private static final int METHODID_GET_APIKEY_SECRET = 7;
   private static final int METHODID_UPDATE_ORGANIZATION = 8;
-  private static final int METHODID_CLAIM_HARDWARE_IDENTITY = 9;
-  private static final int METHODID_SET_HARDWARE_IDENTITY_INFO = 10;
+  private static final int METHODID_CREATE_NEW_ORGANIZATION = 9;
+  private static final int METHODID_CLAIM_HARDWARE_IDENTITY = 10;
+  private static final int METHODID_SET_HARDWARE_IDENTITY_INFO = 11;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -931,6 +1000,10 @@ public final class OrganizationServiceGrpc {
         case METHODID_UPDATE_ORGANIZATION:
           serviceImpl.updateOrganization((io.toit.proto.toit.api.OrgProto.UpdateOrganizationRequest) request,
               (io.grpc.stub.StreamObserver<io.toit.proto.toit.api.OrgProto.UpdateOrganizationResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_NEW_ORGANIZATION:
+          serviceImpl.createNewOrganization((io.toit.proto.toit.api.OrgProto.CreateNewOrganizationRequest) request,
+              (io.grpc.stub.StreamObserver<io.toit.proto.toit.api.OrgProto.CreateNewOrganizationResponse>) responseObserver);
           break;
         case METHODID_CLAIM_HARDWARE_IDENTITY:
           serviceImpl.claimHardwareIdentity((io.toit.proto.toit.api.HardwareProto.ClaimHardwareIdentityRequest) request,
@@ -1010,6 +1083,7 @@ public final class OrganizationServiceGrpc {
               .addMethod(getDeleteAPIKeyMethod())
               .addMethod(getGetAPIKeySecretMethod())
               .addMethod(getUpdateOrganizationMethod())
+              .addMethod(getCreateNewOrganizationMethod())
               .addMethod(getClaimHardwareIdentityMethod())
               .addMethod(getSetHardwareIdentityInfoMethod())
               .build();

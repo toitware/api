@@ -513,3 +513,49 @@ export namespace UpdateOrganizationResponse {
   }
 }
 
+export class CreateNewOrganizationRequest extends jspb.Message {
+  getName(): string;
+  setName(value: string): void;
+
+  getEmail(): string;
+  setEmail(value: string): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): CreateNewOrganizationRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: CreateNewOrganizationRequest): CreateNewOrganizationRequest.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: CreateNewOrganizationRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): CreateNewOrganizationRequest;
+  static deserializeBinaryFromReader(message: CreateNewOrganizationRequest, reader: jspb.BinaryReader): CreateNewOrganizationRequest;
+}
+
+export namespace CreateNewOrganizationRequest {
+  export type AsObject = {
+    name: string,
+    email: string,
+  }
+}
+
+export class CreateNewOrganizationResponse extends jspb.Message {
+  getOrganizationId(): Uint8Array | string;
+  getOrganizationId_asU8(): Uint8Array;
+  getOrganizationId_asB64(): string;
+  setOrganizationId(value: Uint8Array | string): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): CreateNewOrganizationResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: CreateNewOrganizationResponse): CreateNewOrganizationResponse.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: CreateNewOrganizationResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): CreateNewOrganizationResponse;
+  static deserializeBinaryFromReader(message: CreateNewOrganizationResponse, reader: jspb.BinaryReader): CreateNewOrganizationResponse;
+}
+
+export namespace CreateNewOrganizationResponse {
+  export type AsObject = {
+    organizationId: Uint8Array | string,
+  }
+}
+

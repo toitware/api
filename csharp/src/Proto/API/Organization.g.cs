@@ -52,31 +52,36 @@ namespace Toit.Proto.API {
             "Y29kZRgKIAEoCUgAEi0KCGN1c3RvbWVyGAsgASgOMhkudG9pdC5tb2RlbC5D",
             "dXN0b21lci5UeXBlSABCCAoGY2hhbmdlIkoKGVVwZGF0ZU9yZ2FuaXphdGlv",
             "blJlcXVlc3QSLQoHY2hhbmdlcxgBIAMoCzIcLnRvaXQuYXBpLk9yZ2FuaXph",
-            "dGlvbkNoYW5nZSIcChpVcGRhdGVPcmdhbml6YXRpb25SZXNwb25zZTLCBwoT",
-            "T3JnYW5pemF0aW9uU2VydmljZRJACgdHZXRVc2VyEhgudG9pdC5hcGkuR2V0",
-            "VXNlclJlcXVlc3QaGS50b2l0LmFwaS5HZXRVc2VyUmVzcG9uc2UiABJGCglM",
-            "aXN0VXNlcnMSGi50b2l0LmFwaS5MaXN0VXNlcnNSZXF1ZXN0GhsudG9pdC5h",
-            "cGkuTGlzdFVzZXJzUmVzcG9uc2UiABJJCgpDcmVhdGVVc2VyEhsudG9pdC5h",
-            "cGkuQ3JlYXRlVXNlclJlcXVlc3QaHC50b2l0LmFwaS5DcmVhdGVVc2VyUmVz",
-            "cG9uc2UiABJJCgpEZWxldGVVc2VyEhsudG9pdC5hcGkuRGVsZXRlVXNlclJl",
-            "cXVlc3QaHC50b2l0LmFwaS5EZWxldGVVc2VyUmVzcG9uc2UiABJPCgxDcmVh",
-            "dGVBUElLZXkSHS50b2l0LmFwaS5DcmVhdGVBUElLZXlSZXF1ZXN0Gh4udG9p",
-            "dC5hcGkuQ3JlYXRlQVBJS2V5UmVzcG9uc2UiABJOCgtMaXN0QVBJS2V5cxIc",
-            "LnRvaXQuYXBpLkxpc3RBUElLZXlzUmVxdWVzdBodLnRvaXQuYXBpLkxpc3RB",
-            "UElLZXlzUmVzcG9uc2UiADABEk8KDERlbGV0ZUFQSUtleRIdLnRvaXQuYXBp",
-            "LkRlbGV0ZUFQSUtleVJlcXVlc3QaHi50b2l0LmFwaS5EZWxldGVBUElLZXlS",
-            "ZXNwb25zZSIAElgKD0dldEFQSUtleVNlY3JldBIgLnRvaXQuYXBpLkdldEFQ",
-            "SUtleVNlY3JldFJlcXVlc3QaIS50b2l0LmFwaS5HZXRBUElLZXlTZWNyZXRS",
-            "ZXNwb25zZSIAEmEKElVwZGF0ZU9yZ2FuaXphdGlvbhIjLnRvaXQuYXBpLlVw",
-            "ZGF0ZU9yZ2FuaXphdGlvblJlcXVlc3QaJC50b2l0LmFwaS5VcGRhdGVPcmdh",
-            "bml6YXRpb25SZXNwb25zZSIAEmoKFUNsYWltSGFyZHdhcmVJZGVudGl0eRIm",
-            "LnRvaXQuYXBpLkNsYWltSGFyZHdhcmVJZGVudGl0eVJlcXVlc3QaJy50b2l0",
-            "LmFwaS5DbGFpbUhhcmR3YXJlSWRlbnRpdHlSZXNwb25zZSIAEnAKF1NldEhh",
-            "cmR3YXJlSWRlbnRpdHlJbmZvEigudG9pdC5hcGkuU2V0SGFyZHdhcmVJZGVu",
-            "dGl0eUluZm9SZXF1ZXN0GikudG9pdC5hcGkuU2V0SGFyZHdhcmVJZGVudGl0",
-            "eUluZm9SZXNwb25zZSIAQlkKFmlvLnRvaXQucHJvdG8udG9pdC5hcGlCCE9y",
-            "Z1Byb3RvWiRnaXRodWIuY29tL3RvaXR3YXJlL2FwaS5naXQvdG9pdC9hcGmq",
-            "Ag5Ub2l0LlByb3RvLkFQSWIGcHJvdG8z"));
+            "dGlvbkNoYW5nZSIcChpVcGRhdGVPcmdhbml6YXRpb25SZXNwb25zZSI7ChxD",
+            "cmVhdGVOZXdPcmdhbml6YXRpb25SZXF1ZXN0EgwKBG5hbWUYASABKAkSDQoF",
+            "ZW1haWwYAiABKAkiOAodQ3JlYXRlTmV3T3JnYW5pemF0aW9uUmVzcG9uc2US",
+            "FwoPb3JnYW5pemF0aW9uX2lkGAEgASgMMq4IChNPcmdhbml6YXRpb25TZXJ2",
+            "aWNlEkAKB0dldFVzZXISGC50b2l0LmFwaS5HZXRVc2VyUmVxdWVzdBoZLnRv",
+            "aXQuYXBpLkdldFVzZXJSZXNwb25zZSIAEkYKCUxpc3RVc2VycxIaLnRvaXQu",
+            "YXBpLkxpc3RVc2Vyc1JlcXVlc3QaGy50b2l0LmFwaS5MaXN0VXNlcnNSZXNw",
+            "b25zZSIAEkkKCkNyZWF0ZVVzZXISGy50b2l0LmFwaS5DcmVhdGVVc2VyUmVx",
+            "dWVzdBocLnRvaXQuYXBpLkNyZWF0ZVVzZXJSZXNwb25zZSIAEkkKCkRlbGV0",
+            "ZVVzZXISGy50b2l0LmFwaS5EZWxldGVVc2VyUmVxdWVzdBocLnRvaXQuYXBp",
+            "LkRlbGV0ZVVzZXJSZXNwb25zZSIAEk8KDENyZWF0ZUFQSUtleRIdLnRvaXQu",
+            "YXBpLkNyZWF0ZUFQSUtleVJlcXVlc3QaHi50b2l0LmFwaS5DcmVhdGVBUElL",
+            "ZXlSZXNwb25zZSIAEk4KC0xpc3RBUElLZXlzEhwudG9pdC5hcGkuTGlzdEFQ",
+            "SUtleXNSZXF1ZXN0Gh0udG9pdC5hcGkuTGlzdEFQSUtleXNSZXNwb25zZSIA",
+            "MAESTwoMRGVsZXRlQVBJS2V5Eh0udG9pdC5hcGkuRGVsZXRlQVBJS2V5UmVx",
+            "dWVzdBoeLnRvaXQuYXBpLkRlbGV0ZUFQSUtleVJlc3BvbnNlIgASWAoPR2V0",
+            "QVBJS2V5U2VjcmV0EiAudG9pdC5hcGkuR2V0QVBJS2V5U2VjcmV0UmVxdWVz",
+            "dBohLnRvaXQuYXBpLkdldEFQSUtleVNlY3JldFJlc3BvbnNlIgASYQoSVXBk",
+            "YXRlT3JnYW5pemF0aW9uEiMudG9pdC5hcGkuVXBkYXRlT3JnYW5pemF0aW9u",
+            "UmVxdWVzdBokLnRvaXQuYXBpLlVwZGF0ZU9yZ2FuaXphdGlvblJlc3BvbnNl",
+            "IgASagoVQ3JlYXRlTmV3T3JnYW5pemF0aW9uEiYudG9pdC5hcGkuQ3JlYXRl",
+            "TmV3T3JnYW5pemF0aW9uUmVxdWVzdBonLnRvaXQuYXBpLkNyZWF0ZU5ld09y",
+            "Z2FuaXphdGlvblJlc3BvbnNlIgASagoVQ2xhaW1IYXJkd2FyZUlkZW50aXR5",
+            "EiYudG9pdC5hcGkuQ2xhaW1IYXJkd2FyZUlkZW50aXR5UmVxdWVzdBonLnRv",
+            "aXQuYXBpLkNsYWltSGFyZHdhcmVJZGVudGl0eVJlc3BvbnNlIgAScAoXU2V0",
+            "SGFyZHdhcmVJZGVudGl0eUluZm8SKC50b2l0LmFwaS5TZXRIYXJkd2FyZUlk",
+            "ZW50aXR5SW5mb1JlcXVlc3QaKS50b2l0LmFwaS5TZXRIYXJkd2FyZUlkZW50",
+            "aXR5SW5mb1Jlc3BvbnNlIgBCWQoWaW8udG9pdC5wcm90by50b2l0LmFwaUII",
+            "T3JnUHJvdG9aJGdpdGh1Yi5jb20vdG9pdHdhcmUvYXBpLmdpdC90b2l0L2Fw",
+            "aaoCDlRvaXQuUHJvdG8uQVBJYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Toit.Proto.Model.OrganizationReflection.Descriptor, global::Toit.Proto.API.HardwareReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -98,7 +103,9 @@ namespace Toit.Proto.API {
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.GetAPIKeySecretResponse), global::Toit.Proto.API.GetAPIKeySecretResponse.Parser, new[]{ "Secret" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.OrganizationChange), global::Toit.Proto.API.OrganizationChange.Parser, new[]{ "City", "Country", "PhoneNumber", "CvrNumber", "Name", "Email", "VatNumber", "VatCountryCode", "AddressLine", "PostalCode", "Customer" }, new[]{ "Change" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.UpdateOrganizationRequest), global::Toit.Proto.API.UpdateOrganizationRequest.Parser, new[]{ "Changes" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.UpdateOrganizationResponse), global::Toit.Proto.API.UpdateOrganizationResponse.Parser, null, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.UpdateOrganizationResponse), global::Toit.Proto.API.UpdateOrganizationResponse.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.CreateNewOrganizationRequest), global::Toit.Proto.API.CreateNewOrganizationRequest.Parser, new[]{ "Name", "Email" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.CreateNewOrganizationResponse), global::Toit.Proto.API.CreateNewOrganizationResponse.Parser, new[]{ "OrganizationId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -4019,6 +4026,386 @@ namespace Toit.Proto.API {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class CreateNewOrganizationRequest : pb::IMessage<CreateNewOrganizationRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreateNewOrganizationRequest> _parser = new pb::MessageParser<CreateNewOrganizationRequest>(() => new CreateNewOrganizationRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CreateNewOrganizationRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Toit.Proto.API.OrganizationReflection.Descriptor.MessageTypes[19]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateNewOrganizationRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateNewOrganizationRequest(CreateNewOrganizationRequest other) : this() {
+      name_ = other.name_;
+      email_ = other.email_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateNewOrganizationRequest Clone() {
+      return new CreateNewOrganizationRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "email" field.</summary>
+    public const int EmailFieldNumber = 2;
+    private string email_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Email {
+      get { return email_; }
+      set {
+        email_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CreateNewOrganizationRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CreateNewOrganizationRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (Email != other.Email) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Email.Length != 0) hash ^= Email.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Email.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Email);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Email.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Email);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Email.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Email);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CreateNewOrganizationRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Email.Length != 0) {
+        Email = other.Email;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Email = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Email = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class CreateNewOrganizationResponse : pb::IMessage<CreateNewOrganizationResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreateNewOrganizationResponse> _parser = new pb::MessageParser<CreateNewOrganizationResponse>(() => new CreateNewOrganizationResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CreateNewOrganizationResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Toit.Proto.API.OrganizationReflection.Descriptor.MessageTypes[20]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateNewOrganizationResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateNewOrganizationResponse(CreateNewOrganizationResponse other) : this() {
+      organizationId_ = other.organizationId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateNewOrganizationResponse Clone() {
+      return new CreateNewOrganizationResponse(this);
+    }
+
+    /// <summary>Field number for the "organization_id" field.</summary>
+    public const int OrganizationIdFieldNumber = 1;
+    private pb::ByteString organizationId_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString OrganizationId {
+      get { return organizationId_; }
+      set {
+        organizationId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CreateNewOrganizationResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CreateNewOrganizationResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (OrganizationId != other.OrganizationId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (OrganizationId.Length != 0) hash ^= OrganizationId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (OrganizationId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(OrganizationId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (OrganizationId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(OrganizationId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (OrganizationId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(OrganizationId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CreateNewOrganizationResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.OrganizationId.Length != 0) {
+        OrganizationId = other.OrganizationId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            OrganizationId = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            OrganizationId = input.ReadBytes();
+            break;
+          }
         }
       }
     }

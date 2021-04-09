@@ -50,6 +50,28 @@ function deserialize_toit_api_CreateAPIKeyResponse(buffer_arg) {
   return toit_api_organization_pb.CreateAPIKeyResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_toit_api_CreateNewOrganizationRequest(arg) {
+  if (!(arg instanceof toit_api_organization_pb.CreateNewOrganizationRequest)) {
+    throw new Error('Expected argument of type toit.api.CreateNewOrganizationRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_CreateNewOrganizationRequest(buffer_arg) {
+  return toit_api_organization_pb.CreateNewOrganizationRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_toit_api_CreateNewOrganizationResponse(arg) {
+  if (!(arg instanceof toit_api_organization_pb.CreateNewOrganizationResponse)) {
+    throw new Error('Expected argument of type toit.api.CreateNewOrganizationResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_CreateNewOrganizationResponse(buffer_arg) {
+  return toit_api_organization_pb.CreateNewOrganizationResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_toit_api_CreateUserRequest(arg) {
   if (!(arg instanceof toit_api_organization_pb.CreateUserRequest)) {
     throw new Error('Expected argument of type toit.api.CreateUserRequest');
@@ -348,6 +370,17 @@ var OrganizationServiceService = exports.OrganizationServiceService = {
     requestDeserialize: deserialize_toit_api_UpdateOrganizationRequest,
     responseSerialize: serialize_toit_api_UpdateOrganizationResponse,
     responseDeserialize: deserialize_toit_api_UpdateOrganizationResponse,
+  },
+  createNewOrganization: {
+    path: '/toit.api.OrganizationService/CreateNewOrganization',
+    requestStream: false,
+    responseStream: false,
+    requestType: toit_api_organization_pb.CreateNewOrganizationRequest,
+    responseType: toit_api_organization_pb.CreateNewOrganizationResponse,
+    requestSerialize: serialize_toit_api_CreateNewOrganizationRequest,
+    requestDeserialize: deserialize_toit_api_CreateNewOrganizationRequest,
+    responseSerialize: serialize_toit_api_CreateNewOrganizationResponse,
+    responseDeserialize: deserialize_toit_api_CreateNewOrganizationResponse,
   },
   claimHardwareIdentity: {
     path: '/toit.api.OrganizationService/ClaimHardwareIdentity',
