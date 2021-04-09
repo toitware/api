@@ -177,6 +177,9 @@ export namespace User {
     getWelcomeClosed(): boolean;
     setWelcomeClosed(value: boolean): void;
 
+    getNewsletter(): boolean;
+    setNewsletter(value: boolean): void;
+
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Settings.AsObject;
     static toObject(includeInstance: boolean, msg: Settings): Settings.AsObject;
@@ -190,6 +193,7 @@ export namespace User {
   export namespace Settings {
     export type AsObject = {
       welcomeClosed: boolean,
+      newsletter: boolean,
     }
   }
 }

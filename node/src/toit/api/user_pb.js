@@ -3685,14 +3685,15 @@ proto.toit.api.CancelPaymentSubscriptionResponse.serializeBinaryToWriter = funct
  * @private {!Array<!Array<number>>}
  * @const
  */
-proto.toit.api.UserChange.oneofGroups_ = [[1]];
+proto.toit.api.UserChange.oneofGroups_ = [[1,2]];
 
 /**
  * @enum {number}
  */
 proto.toit.api.UserChange.ChangeCase = {
   CHANGE_NOT_SET: 0,
-  SET_SETTINGS_WELCOME_CLOSED: 1
+  SET_SETTINGS_WELCOME_CLOSED: 1,
+  SET_SETTINGS_NEWSLETTER: 2
 };
 
 /**
@@ -3733,7 +3734,8 @@ proto.toit.api.UserChange.prototype.toObject = function(opt_includeInstance) {
  */
 proto.toit.api.UserChange.toObject = function(includeInstance, msg) {
   var f, obj = {
-    setSettingsWelcomeClosed: jspb.Message.getBooleanFieldWithDefault(msg, 1, false)
+    setSettingsWelcomeClosed: jspb.Message.getBooleanFieldWithDefault(msg, 1, false),
+    setSettingsNewsletter: jspb.Message.getBooleanFieldWithDefault(msg, 2, false)
   };
 
   if (includeInstance) {
@@ -3774,6 +3776,10 @@ proto.toit.api.UserChange.deserializeBinaryFromReader = function(msg, reader) {
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setSetSettingsWelcomeClosed(value);
       break;
+    case 2:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setSetSettingsNewsletter(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -3807,6 +3813,13 @@ proto.toit.api.UserChange.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeBool(
       1,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 2));
+  if (f != null) {
+    writer.writeBool(
+      2,
       f
     );
   }
@@ -3846,6 +3859,42 @@ proto.toit.api.UserChange.prototype.clearSetSettingsWelcomeClosed = function() {
  */
 proto.toit.api.UserChange.prototype.hasSetSettingsWelcomeClosed = function() {
   return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional bool set_settings_newsletter = 2;
+ * @return {boolean}
+ */
+proto.toit.api.UserChange.prototype.getSetSettingsNewsletter = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.toit.api.UserChange} returns this
+ */
+proto.toit.api.UserChange.prototype.setSetSettingsNewsletter = function(value) {
+  return jspb.Message.setOneofField(this, 2, proto.toit.api.UserChange.oneofGroups_[0], value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.toit.api.UserChange} returns this
+ */
+proto.toit.api.UserChange.prototype.clearSetSettingsNewsletter = function() {
+  return jspb.Message.setOneofField(this, 2, proto.toit.api.UserChange.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.toit.api.UserChange.prototype.hasSetSettingsNewsletter = function() {
+  return jspb.Message.getField(this, 2) != null;
 };
 
 

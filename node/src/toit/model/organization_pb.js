@@ -1299,7 +1299,8 @@ proto.toit.model.User.Settings.prototype.toObject = function(opt_includeInstance
  */
 proto.toit.model.User.Settings.toObject = function(includeInstance, msg) {
   var f, obj = {
-    welcomeClosed: jspb.Message.getBooleanFieldWithDefault(msg, 1, false)
+    welcomeClosed: jspb.Message.getBooleanFieldWithDefault(msg, 1, false),
+    newsletter: jspb.Message.getBooleanFieldWithDefault(msg, 2, false)
   };
 
   if (includeInstance) {
@@ -1340,6 +1341,10 @@ proto.toit.model.User.Settings.deserializeBinaryFromReader = function(msg, reade
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setWelcomeClosed(value);
       break;
+    case 2:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setNewsletter(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -1376,6 +1381,13 @@ proto.toit.model.User.Settings.serializeBinaryToWriter = function(message, write
       f
     );
   }
+  f = message.getNewsletter();
+  if (f) {
+    writer.writeBool(
+      2,
+      f
+    );
+  }
 };
 
 
@@ -1394,6 +1406,24 @@ proto.toit.model.User.Settings.prototype.getWelcomeClosed = function() {
  */
 proto.toit.model.User.Settings.prototype.setWelcomeClosed = function(value) {
   return jspb.Message.setProto3BooleanField(this, 1, value);
+};
+
+
+/**
+ * optional bool newsletter = 2;
+ * @return {boolean}
+ */
+proto.toit.model.User.Settings.prototype.getNewsletter = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.toit.model.User.Settings} returns this
+ */
+proto.toit.model.User.Settings.prototype.setNewsletter = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 2, value);
 };
 
 
