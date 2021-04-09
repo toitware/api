@@ -22,6 +22,7 @@ service OrganizationService {
   rpc GetAPIKeySecret(GetAPIKeySecretRequest) returns (GetAPIKeySecretResponse) {}
 
   rpc UpdateOrganization(UpdateOrganizationRequest) returns (UpdateOrganizationResponse) {}
+  rpc CreateNewOrganization(CreateNewOrganizationRequest) returns (CreateNewOrganizationResponse) {}
 
   rpc ClaimHardwareIdentity(ClaimHardwareIdentityRequest) returns (ClaimHardwareIdentityResponse) {}
   rpc SetHardwareIdentityInfo(SetHardwareIdentityInfoRequest) returns (SetHardwareIdentityInfoResponse) {}
@@ -109,3 +110,12 @@ message UpdateOrganizationRequest {
 }
 
 message UpdateOrganizationResponse {}
+
+message CreateNewOrganizationRequest {
+  string name = 1;
+  string email = 2;
+}
+
+message CreateNewOrganizationResponse {
+  bytes organization_id = 1;
+}
