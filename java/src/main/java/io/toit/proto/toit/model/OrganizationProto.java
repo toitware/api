@@ -4317,6 +4317,12 @@ public final class OrganizationProto {
        * @return The welcomeClosed.
        */
       boolean getWelcomeClosed();
+
+      /**
+       * <code>bool newsletter = 2;</code>
+       * @return The newsletter.
+       */
+      boolean getNewsletter();
     }
     /**
      * Protobuf type {@code toit.model.User.Settings}
@@ -4368,6 +4374,11 @@ public final class OrganizationProto {
                 welcomeClosed_ = input.readBool();
                 break;
               }
+              case 16: {
+
+                newsletter_ = input.readBool();
+                break;
+              }
               default: {
                 if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -4410,6 +4421,16 @@ public final class OrganizationProto {
         return welcomeClosed_;
       }
 
+      public static final int NEWSLETTER_FIELD_NUMBER = 2;
+      private boolean newsletter_;
+      /**
+       * <code>bool newsletter = 2;</code>
+       * @return The newsletter.
+       */
+      public boolean getNewsletter() {
+        return newsletter_;
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -4427,6 +4448,9 @@ public final class OrganizationProto {
         if (welcomeClosed_ != false) {
           output.writeBool(1, welcomeClosed_);
         }
+        if (newsletter_ != false) {
+          output.writeBool(2, newsletter_);
+        }
         unknownFields.writeTo(output);
       }
 
@@ -4439,6 +4463,10 @@ public final class OrganizationProto {
         if (welcomeClosed_ != false) {
           size += com.google.protobuf.CodedOutputStream
             .computeBoolSize(1, welcomeClosed_);
+        }
+        if (newsletter_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(2, newsletter_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -4457,6 +4485,8 @@ public final class OrganizationProto {
 
         if (getWelcomeClosed()
             != other.getWelcomeClosed()) return false;
+        if (getNewsletter()
+            != other.getNewsletter()) return false;
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -4471,6 +4501,9 @@ public final class OrganizationProto {
         hash = (37 * hash) + WELCOME_CLOSED_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getWelcomeClosed());
+        hash = (37 * hash) + NEWSLETTER_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getNewsletter());
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -4606,6 +4639,8 @@ public final class OrganizationProto {
           super.clear();
           welcomeClosed_ = false;
 
+          newsletter_ = false;
+
           return this;
         }
 
@@ -4633,6 +4668,7 @@ public final class OrganizationProto {
         public io.toit.proto.toit.model.OrganizationProto.User.Settings buildPartial() {
           io.toit.proto.toit.model.OrganizationProto.User.Settings result = new io.toit.proto.toit.model.OrganizationProto.User.Settings(this);
           result.welcomeClosed_ = welcomeClosed_;
+          result.newsletter_ = newsletter_;
           onBuilt();
           return result;
         }
@@ -4683,6 +4719,9 @@ public final class OrganizationProto {
           if (other == io.toit.proto.toit.model.OrganizationProto.User.Settings.getDefaultInstance()) return this;
           if (other.getWelcomeClosed() != false) {
             setWelcomeClosed(other.getWelcomeClosed());
+          }
+          if (other.getNewsletter() != false) {
+            setNewsletter(other.getNewsletter());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -4739,6 +4778,36 @@ public final class OrganizationProto {
         public Builder clearWelcomeClosed() {
           
           welcomeClosed_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean newsletter_ ;
+        /**
+         * <code>bool newsletter = 2;</code>
+         * @return The newsletter.
+         */
+        public boolean getNewsletter() {
+          return newsletter_;
+        }
+        /**
+         * <code>bool newsletter = 2;</code>
+         * @param value The newsletter to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNewsletter(boolean value) {
+          
+          newsletter_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>bool newsletter = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearNewsletter() {
+          
+          newsletter_ = false;
           onChanged();
           return this;
         }
@@ -7713,19 +7782,20 @@ public final class OrganizationProto {
       "mentDetails\022\r\n\005last4\030\001 \001(\t\022\016\n\006expiry\030\002 \001" +
       "(\t\022\024\n\014expiry_month\030\003 \001(\t\022\023\n\013expiry_year\030" +
       "\004 \001(\t\022\r\n\005brand\030\005 \001(\t\022\024\n\014country_code\030\006 \001" +
-      "(\t\022\021\n\tcvc_check\030\007 \001(\t\"\231\001\n\004User\022\n\n\002id\030\001 \001" +
+      "(\t\022\021\n\tcvc_check\030\007 \001(\t\"\255\001\n\004User\022\n\n\002id\030\001 \001" +
       "(\014\022\027\n\017organization_id\030\002 \001(\014\022\r\n\005email\030\003 \001" +
       "(\t\022\014\n\004name\030\004 \001(\t\022+\n\010settings\030\005 \001(\0132\031.toi" +
-      "t.model.User.Settings\032\"\n\010Settings\022\026\n\016wel" +
-      "come_closed\030\001 \001(\010\"k\n\006APIKey\022\n\n\002id\030\001 \001(\014\022" +
-      "\027\n\017organization_id\030\002 \001(\014\022\014\n\004name\030\003 \001(\t\022." +
-      "\n\ncreated_at\030\004 \001(\0132\032.google.protobuf.Tim" +
-      "estamp\"/\n\004Tier\"\'\n\004Type\022\013\n\007UNKNOWN\020\000\022\010\n\004F" +
-      "REE\020\001\022\010\n\004PAID\020\002\"=\n\010Customer\"1\n\004Type\022\013\n\007U" +
-      "NKNOWN\020\000\022\n\n\006PERSON\020\001\022\020\n\014ORGANIZATION\020\002Bh" +
-      "\n\030io.toit.proto.toit.modelB\021Organization" +
-      "ProtoZ&github.com/toitware/api.git/toit/" +
-      "model\252\002\020Toit.Proto.Modelb\006proto3"
+      "t.model.User.Settings\0326\n\010Settings\022\026\n\016wel" +
+      "come_closed\030\001 \001(\010\022\022\n\nnewsletter\030\002 \001(\010\"k\n" +
+      "\006APIKey\022\n\n\002id\030\001 \001(\014\022\027\n\017organization_id\030\002" +
+      " \001(\014\022\014\n\004name\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132\032" +
+      ".google.protobuf.Timestamp\"/\n\004Tier\"\'\n\004Ty" +
+      "pe\022\013\n\007UNKNOWN\020\000\022\010\n\004FREE\020\001\022\010\n\004PAID\020\002\"=\n\010C" +
+      "ustomer\"1\n\004Type\022\013\n\007UNKNOWN\020\000\022\n\n\006PERSON\020\001" +
+      "\022\020\n\014ORGANIZATION\020\002Bh\n\030io.toit.proto.toit" +
+      ".modelB\021OrganizationProtoZ&github.com/to" +
+      "itware/api.git/toit/model\252\002\020Toit.Proto.M" +
+      "odelb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7755,7 +7825,7 @@ public final class OrganizationProto {
     internal_static_toit_model_User_Settings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_User_Settings_descriptor,
-        new java.lang.String[] { "WelcomeClosed", });
+        new java.lang.String[] { "WelcomeClosed", "Newsletter", });
     internal_static_toit_model_APIKey_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_toit_model_APIKey_fieldAccessorTable = new

@@ -12425,6 +12425,12 @@ public final class UserProto {
      */
     boolean getSetSettingsWelcomeClosed();
 
+    /**
+     * <code>bool set_settings_newsletter = 2;</code>
+     * @return The setSettingsNewsletter.
+     */
+    boolean getSetSettingsNewsletter();
+
     public io.toit.proto.toit.api.UserProto.UserChange.ChangeCase getChangeCase();
   }
   /**
@@ -12477,6 +12483,11 @@ public final class UserProto {
               change_ = input.readBool();
               break;
             }
+            case 16: {
+              changeCase_ = 2;
+              change_ = input.readBool();
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -12515,6 +12526,7 @@ public final class UserProto {
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       SET_SETTINGS_WELCOME_CLOSED(1),
+      SET_SETTINGS_NEWSLETTER(2),
       CHANGE_NOT_SET(0);
       private final int value;
       private ChangeCase(int value) {
@@ -12533,6 +12545,7 @@ public final class UserProto {
       public static ChangeCase forNumber(int value) {
         switch (value) {
           case 1: return SET_SETTINGS_WELCOME_CLOSED;
+          case 2: return SET_SETTINGS_NEWSLETTER;
           case 0: return CHANGE_NOT_SET;
           default: return null;
         }
@@ -12560,6 +12573,18 @@ public final class UserProto {
       return false;
     }
 
+    public static final int SET_SETTINGS_NEWSLETTER_FIELD_NUMBER = 2;
+    /**
+     * <code>bool set_settings_newsletter = 2;</code>
+     * @return The setSettingsNewsletter.
+     */
+    public boolean getSetSettingsNewsletter() {
+      if (changeCase_ == 2) {
+        return (java.lang.Boolean) change_;
+      }
+      return false;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12578,6 +12603,10 @@ public final class UserProto {
         output.writeBool(
             1, (boolean)((java.lang.Boolean) change_));
       }
+      if (changeCase_ == 2) {
+        output.writeBool(
+            2, (boolean)((java.lang.Boolean) change_));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -12591,6 +12620,11 @@ public final class UserProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(
               1, (boolean)((java.lang.Boolean) change_));
+      }
+      if (changeCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(
+              2, (boolean)((java.lang.Boolean) change_));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -12613,6 +12647,10 @@ public final class UserProto {
           if (getSetSettingsWelcomeClosed()
               != other.getSetSettingsWelcomeClosed()) return false;
           break;
+        case 2:
+          if (getSetSettingsNewsletter()
+              != other.getSetSettingsNewsletter()) return false;
+          break;
         case 0:
         default:
       }
@@ -12632,6 +12670,11 @@ public final class UserProto {
           hash = (37 * hash) + SET_SETTINGS_WELCOME_CLOSED_FIELD_NUMBER;
           hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
               getSetSettingsWelcomeClosed());
+          break;
+        case 2:
+          hash = (37 * hash) + SET_SETTINGS_NEWSLETTER_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getSetSettingsNewsletter());
           break;
         case 0:
         default:
@@ -12800,6 +12843,9 @@ public final class UserProto {
         if (changeCase_ == 1) {
           result.change_ = change_;
         }
+        if (changeCase_ == 2) {
+          result.change_ = change_;
+        }
         result.changeCase_ = changeCase_;
         onBuilt();
         return result;
@@ -12852,6 +12898,10 @@ public final class UserProto {
         switch (other.getChangeCase()) {
           case SET_SETTINGS_WELCOME_CLOSED: {
             setSetSettingsWelcomeClosed(other.getSetSettingsWelcomeClosed());
+            break;
+          }
+          case SET_SETTINGS_NEWSLETTER: {
+            setSetSettingsNewsletter(other.getSetSettingsNewsletter());
             break;
           }
           case CHANGE_NOT_SET: {
@@ -12929,6 +12979,40 @@ public final class UserProto {
        */
       public Builder clearSetSettingsWelcomeClosed() {
         if (changeCase_ == 1) {
+          changeCase_ = 0;
+          change_ = null;
+          onChanged();
+        }
+        return this;
+      }
+
+      /**
+       * <code>bool set_settings_newsletter = 2;</code>
+       * @return The setSettingsNewsletter.
+       */
+      public boolean getSetSettingsNewsletter() {
+        if (changeCase_ == 2) {
+          return (java.lang.Boolean) change_;
+        }
+        return false;
+      }
+      /**
+       * <code>bool set_settings_newsletter = 2;</code>
+       * @param value The setSettingsNewsletter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSetSettingsNewsletter(boolean value) {
+        changeCase_ = 2;
+        change_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool set_settings_newsletter = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSetSettingsNewsletter() {
+        if (changeCase_ == 2) {
           changeCase_ = 0;
           change_ = null;
           onChanged();
@@ -14350,42 +14434,43 @@ public final class UserProto {
       "gle.protobuf.Timestamp\022\027\n\017receipt_pdf_ur" +
       "l\030\007 \001(\t\022\023\n\013amount_paid\030\010 \001(\003\"\"\n CancelPa" +
       "ymentSubscriptionRequest\"#\n!CancelPaymen" +
-      "tSubscriptionResponse\"=\n\nUserChange\022%\n\033s" +
-      "et_settings_welcome_closed\030\001 \001(\010H\000B\010\n\006ch" +
-      "ange\":\n\021UpdateUserRequest\022%\n\007changes\030\001 \003" +
-      "(\0132\024.toit.api.UserChange\"\024\n\022UpdateUserRe" +
-      "sponse2\205\t\n\004User\022L\n\013SetPassword\022\034.toit.ap" +
-      "i.SetPasswordRequest\032\035.toit.api.SetPassw" +
-      "ordResponse\"\000\022j\n\025InitiateResetPassword\022&" +
-      ".toit.api.InitiateResetPasswordRequest\032\'" +
-      ".toit.api.InitiateResetPasswordResponse\"" +
-      "\000\022v\n\031ChangePasswordWithRPToken\022*.toit.ap" +
-      "i.ChangePasswordWithRPTokenRequest\032+.toi" +
-      "t.api.ChangePasswordWithRPTokenResponse\"" +
-      "\000\022U\n\016GetCurrentUser\022\037.toit.api.GetCurren" +
-      "tUserRequest\032 .toit.api.GetCurrentUserRe" +
-      "sponse\"\000\022^\n\021ListOrganizations\022\".toit.api" +
-      ".ListOrganizationsRequest\032#.toit.api.Lis" +
-      "tOrganizationsResponse\"\000\022X\n\017GetOrganizat" +
-      "ion\022 .toit.api.GetOrganizationRequest\032!." +
-      "toit.api.GetOrganizationResponse\"\000\022I\n\tLi" +
-      "stUsers\022\032.toit.api.ListUsersRequest\032\033.to" +
-      "it.api.ListUsersResponse\"\003\210\002\001\022L\n\nCreateU" +
-      "ser\022\033.toit.api.CreateUserRequest\032\034.toit." +
-      "api.CreateUserResponse\"\003\210\002\001\022v\n\031CreatePay" +
-      "mentSubscription\022*.toit.api.CreatePaymen" +
-      "tSubscriptionRequest\032+.toit.api.CreatePa" +
-      "ymentSubscriptionResponse\"\000\022f\n\023ListPayme" +
-      "ntInvoices\022$.toit.api.ListPaymentInvoice" +
-      "sRequest\032%.toit.api.ListPaymentInvoicesR" +
-      "esponse\"\0000\001\022v\n\031CancelPaymentSubscription" +
-      "\022*.toit.api.CancelPaymentSubscriptionReq" +
-      "uest\032+.toit.api.CancelPaymentSubscriptio" +
-      "nResponse\"\000\022I\n\nUpdateUser\022\033.toit.api.Upd" +
-      "ateUserRequest\032\034.toit.api.UpdateUserResp" +
-      "onse\"\000BZ\n\026io.toit.proto.toit.apiB\tUserPr" +
-      "otoZ$github.com/toitware/api.git/toit/ap" +
-      "i\252\002\016Toit.Proto.APIb\006proto3"
+      "tSubscriptionResponse\"`\n\nUserChange\022%\n\033s" +
+      "et_settings_welcome_closed\030\001 \001(\010H\000\022!\n\027se" +
+      "t_settings_newsletter\030\002 \001(\010H\000B\010\n\006change\"" +
+      ":\n\021UpdateUserRequest\022%\n\007changes\030\001 \003(\0132\024." +
+      "toit.api.UserChange\"\024\n\022UpdateUserRespons" +
+      "e2\205\t\n\004User\022L\n\013SetPassword\022\034.toit.api.Set" +
+      "PasswordRequest\032\035.toit.api.SetPasswordRe" +
+      "sponse\"\000\022j\n\025InitiateResetPassword\022&.toit" +
+      ".api.InitiateResetPasswordRequest\032\'.toit" +
+      ".api.InitiateResetPasswordResponse\"\000\022v\n\031" +
+      "ChangePasswordWithRPToken\022*.toit.api.Cha" +
+      "ngePasswordWithRPTokenRequest\032+.toit.api" +
+      ".ChangePasswordWithRPTokenResponse\"\000\022U\n\016" +
+      "GetCurrentUser\022\037.toit.api.GetCurrentUser" +
+      "Request\032 .toit.api.GetCurrentUserRespons" +
+      "e\"\000\022^\n\021ListOrganizations\022\".toit.api.List" +
+      "OrganizationsRequest\032#.toit.api.ListOrga" +
+      "nizationsResponse\"\000\022X\n\017GetOrganization\022 " +
+      ".toit.api.GetOrganizationRequest\032!.toit." +
+      "api.GetOrganizationResponse\"\000\022I\n\tListUse" +
+      "rs\022\032.toit.api.ListUsersRequest\032\033.toit.ap" +
+      "i.ListUsersResponse\"\003\210\002\001\022L\n\nCreateUser\022\033" +
+      ".toit.api.CreateUserRequest\032\034.toit.api.C" +
+      "reateUserResponse\"\003\210\002\001\022v\n\031CreatePaymentS" +
+      "ubscription\022*.toit.api.CreatePaymentSubs" +
+      "criptionRequest\032+.toit.api.CreatePayment" +
+      "SubscriptionResponse\"\000\022f\n\023ListPaymentInv" +
+      "oices\022$.toit.api.ListPaymentInvoicesRequ" +
+      "est\032%.toit.api.ListPaymentInvoicesRespon" +
+      "se\"\0000\001\022v\n\031CancelPaymentSubscription\022*.to" +
+      "it.api.CancelPaymentSubscriptionRequest\032" +
+      "+.toit.api.CancelPaymentSubscriptionResp" +
+      "onse\"\000\022I\n\nUpdateUser\022\033.toit.api.UpdateUs" +
+      "erRequest\032\034.toit.api.UpdateUserResponse\"" +
+      "\000BZ\n\026io.toit.proto.toit.apiB\tUserProtoZ$" +
+      "github.com/toitware/api.git/toit/api\252\002\016T" +
+      "oit.Proto.APIb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14513,7 +14598,7 @@ public final class UserProto {
     internal_static_toit_api_UserChange_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_UserChange_descriptor,
-        new java.lang.String[] { "SetSettingsWelcomeClosed", "Change", });
+        new java.lang.String[] { "SetSettingsWelcomeClosed", "SetSettingsNewsletter", "Change", });
     internal_static_toit_api_UpdateUserRequest_descriptor =
       getDescriptor().getMessageTypes().get(20);
     internal_static_toit_api_UpdateUserRequest_fieldAccessorTable = new
