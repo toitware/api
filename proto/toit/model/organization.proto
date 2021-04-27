@@ -4,7 +4,7 @@ package toit.model;
 
 import "google/protobuf/timestamp.proto";
 
-option go_package = "github.com/toitware/api.git/toit/model";
+option go_package = "github.com/toitware/api/golang/toit/model";
 option java_package = "io.toit.proto.toit.model";
 option java_outer_classname = "OrganizationProto";
 option csharp_namespace = "Toit.Proto.Model";

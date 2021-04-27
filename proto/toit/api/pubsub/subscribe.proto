@@ -5,7 +5,7 @@ package toit.api.pubsub;
 
 import "toit/model/pubsub/message.proto";
 
-option go_package = "github.com/toitware/api.git/toit/api/pubsub";
+option go_package = "github.com/toitware/api/golang/toit/api/pubsub";
 option java_package = "io.toit.proto.toit.api.pubsub";
 option java_outer_classname = "SubscribeProto";
 option csharp_namespace = "Toit.Proto.API.PubSub";

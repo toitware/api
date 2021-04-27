@@ -5,7 +5,7 @@ package toit.api;
 import "toit/model/organization.proto";
 import "toit/api/hardware.proto";
 
-option go_package = "github.com/toitware/api.git/toit/api";
+option go_package = "github.com/toitware/api/golang/toit/api";
 option java_package = "io.toit.proto.toit.api";
 option java_outer_classname = "OrgProto";
 option csharp_namespace = "Toit.Proto.API";
