@@ -4,7 +4,7 @@ on:
   push:
     branches: [master]
   pull_request:
-    branches: [master, golang]
+    branches: [master]
   release:
     types: [published]
 
@@ -29,7 +29,7 @@ jobs:
 
       - name: Build protobuf
         working-directory: ./golang
-        run: make protobuf
+        run: make go_bootstrap protobuf
 
       - name: Add & Commit
         if: github.event_name == 'push'
