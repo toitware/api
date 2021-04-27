@@ -1,4 +1,4 @@
-module github.com/toitware/api.git
+module github.com/toitware/api/golang
 
 go 1.15
 
