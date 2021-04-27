@@ -1,0 +1,43 @@
+name: Golang
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  release:
+    types: [published]
+
+jobs:
+  golang:
+    name: Build golang
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup protoc
+        uses: arduino/setup-protoc@v1.1.0
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+
+      - name: Install Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.15.x
+
+      - name: Build protobuf
+        working-directory: ./golang
+        run: make protobuf
+
+      - name: Add & Commit
+        if: github.event_name == 'push'
+        uses: EndBug/add-and-commit@v5.1.0
+        with:
+          author_name: Leon Gungadin Mogensen
+          author_email: leon@toitware.com
+          message: built golang source files
+          branch: master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
