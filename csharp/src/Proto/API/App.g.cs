@@ -57,9 +57,10 @@ namespace Toit.Proto.API {
             "dC5hcGkuR2V0QXBwUmVzcG9uc2UiABJMCgtHZXRBcHBGaWxlcxIcLnRvaXQu",
             "YXBpLkdldEFwcEZpbGVzUmVxdWVzdBodLnRvaXQuYXBpLkdldEFwcEZpbGVz",
             "UmVzcG9uc2UiABJFCghMaXN0QXBwcxIZLnRvaXQuYXBpLkxpc3RBcHBzUmVx",
-            "dWVzdBoaLnRvaXQuYXBpLkxpc3RBcHBzUmVzcG9uc2UiADABQlkKFmlvLnRv",
-            "aXQucHJvdG8udG9pdC5hcGlCCEFwcFByb3RvWiRnaXRodWIuY29tL3RvaXR3",
-            "YXJlL2FwaS5naXQvdG9pdC9hcGmqAg5Ub2l0LlByb3RvLkFQSWIGcHJvdG8z"));
+            "dWVzdBoaLnRvaXQuYXBpLkxpc3RBcHBzUmVzcG9uc2UiADABQlwKFmlvLnRv",
+            "aXQucHJvdG8udG9pdC5hcGlCCEFwcFByb3RvWidnaXRodWIuY29tL3RvaXR3",
+            "YXJlL2FwaS9nb2xhbmcvdG9pdC9hcGmqAg5Ub2l0LlByb3RvLkFQSWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Toit.Proto.Model.AppReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

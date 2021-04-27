@@ -65,10 +65,10 @@ namespace Toit.Proto.Model {
             "U1NfU1RBUlQQAhIQCgxQUk9DRVNTX1NUT1AQAxIPCgtTVEFDS19UUkFDRRAE",
             "EggKBEJPT1QQBRIMCghTSFVURE9XThAGImsKBUxldmVsEg8KC1BSSU5UX0xF",
             "VkVMEAASDwoLREVCVUdfTEVWRUwQARIOCgpJTkZPX0xFVkVMEAISDgoKV0FS",
-            "Tl9MRVZFTBADEg8KC0VSUk9SX0xFVkVMEAQSDwoLRkFUQUxfTEVWRUwQBUJg",
-            "Chhpby50b2l0LnByb3RvLnRvaXQubW9kZWxCCURhdGFQcm90b1omZ2l0aHVi",
-            "LmNvbS90b2l0d2FyZS9hcGkuZ2l0L3RvaXQvbW9kZWyqAhBUb2l0LlByb3Rv",
-            "Lk1vZGVsYgZwcm90bzM="));
+            "Tl9MRVZFTBADEg8KC0VSUk9SX0xFVkVMEAQSDwoLRkFUQUxfTEVWRUwQBUJj",
+            "Chhpby50b2l0LnByb3RvLnRvaXQubW9kZWxCCURhdGFQcm90b1opZ2l0aHVi",
+            "LmNvbS90b2l0d2FyZS9hcGkvZ29sYW5nL3RvaXQvbW9kZWyqAhBUb2l0LlBy",
+            "b3RvLk1vZGVsYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

@@ -29,9 +29,9 @@ namespace Toit.Proto.Model.PubSub {
             "c3ViLlRvcGljVHlwZRIMCgRuYW1lGAIgASgJKm4KCVRvcGljVHlwZRIWChJU",
             "T1BJQ19UWVBFX1VOS05PV04QABIUChBUT1BJQ19UWVBFX0NMT1VEEAESFQoR",
             "VE9QSUNfVFlQRV9ERVZJQ0UQAhIcChhUT1BJQ19UWVBFX0RFVklDRV9NRU1P",
-            "UlkQA0J2Ch9pby50b2l0LnByb3RvLnRvaXQubW9kZWwucHVic3ViQgpUb3Bp",
-            "Y1Byb3RvWi1naXRodWIuY29tL3RvaXR3YXJlL2FwaS5naXQvdG9pdC9tb2Rl",
-            "bC9wdWJzdWKqAhdUb2l0LlByb3RvLk1vZGVsLlB1YlN1YmIGcHJvdG8z"));
+            "UlkQA0J5Ch9pby50b2l0LnByb3RvLnRvaXQubW9kZWwucHVic3ViQgpUb3Bp",
+            "Y1Byb3RvWjBnaXRodWIuY29tL3RvaXR3YXJlL2FwaS9nb2xhbmcvdG9pdC9t",
+            "b2RlbC9wdWJzdWKqAhdUb2l0LlByb3RvLk1vZGVsLlB1YlN1YmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Toit.Proto.Model.PubSub.TopicType), }, null, new pbr::GeneratedClrTypeInfo[] {

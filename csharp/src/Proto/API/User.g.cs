@@ -87,9 +87,9 @@ namespace Toit.Proto.API {
             "U3Vic2NyaXB0aW9uUmVxdWVzdBorLnRvaXQuYXBpLkNhbmNlbFBheW1lbnRT",
             "dWJzY3JpcHRpb25SZXNwb25zZSIAEkkKClVwZGF0ZVVzZXISGy50b2l0LmFw",
             "aS5VcGRhdGVVc2VyUmVxdWVzdBocLnRvaXQuYXBpLlVwZGF0ZVVzZXJSZXNw",
-            "b25zZSIAQloKFmlvLnRvaXQucHJvdG8udG9pdC5hcGlCCVVzZXJQcm90b1ok",
-            "Z2l0aHViLmNvbS90b2l0d2FyZS9hcGkuZ2l0L3RvaXQvYXBpqgIOVG9pdC5Q",
-            "cm90by5BUEliBnByb3RvMw=="));
+            "b25zZSIAQl0KFmlvLnRvaXQucHJvdG8udG9pdC5hcGlCCVVzZXJQcm90b1on",
+            "Z2l0aHViLmNvbS90b2l0d2FyZS9hcGkvZ29sYW5nL3RvaXQvYXBpqgIOVG9p",
+            "dC5Qcm90by5BUEliBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Toit.Proto.Model.OrganizationReflection.Descriptor, global::Toit.Proto.API.OrganizationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

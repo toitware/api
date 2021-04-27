@@ -57,10 +57,10 @@ namespace Toit.Proto.API.PubSub {
             "YW0SHi50b2l0LmFwaS5wdWJzdWIuU3RyZWFtUmVxdWVzdBofLnRvaXQuYXBp",
             "LnB1YnN1Yi5TdHJlYW1SZXNwb25zZSIAMAESWgoLQWNrbm93bGVkZ2USIy50",
             "b2l0LmFwaS5wdWJzdWIuQWNrbm93bGVkZ2VSZXF1ZXN0GiQudG9pdC5hcGku",
-            "cHVic3ViLkFja25vd2xlZGdlUmVzcG9uc2UiAEJ0Ch1pby50b2l0LnByb3Rv",
-            "LnRvaXQuYXBpLnB1YnN1YkIOU3Vic2NyaWJlUHJvdG9aK2dpdGh1Yi5jb20v",
-            "dG9pdHdhcmUvYXBpLmdpdC90b2l0L2FwaS9wdWJzdWKqAhVUb2l0LlByb3Rv",
-            "LkFQSS5QdWJTdWJiBnByb3RvMw=="));
+            "cHVic3ViLkFja25vd2xlZGdlUmVzcG9uc2UiAEJ3Ch1pby50b2l0LnByb3Rv",
+            "LnRvaXQuYXBpLnB1YnN1YkIOU3Vic2NyaWJlUHJvdG9aLmdpdGh1Yi5jb20v",
+            "dG9pdHdhcmUvYXBpL2dvbGFuZy90b2l0L2FwaS9wdWJzdWKqAhVUb2l0LlBy",
+            "b3RvLkFQSS5QdWJTdWJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Toit.Proto.Model.PubSub.MessageReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

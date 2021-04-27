@@ -83,10 +83,10 @@ namespace Toit.Proto.Model {
             "QUxMSU5HEAISFwoTSk9CX1NUQVRFX0lOU1RBTExFRBADEhQKEEpPQl9TVEFU",
             "RV9GQUlMRUQQBCptCg1Kb2JDaGFuZ2VUeXBlEhYKEkpPQl9DSEFOR0VfVU5L",
             "Tk9XThAAEhQKEEpPQl9DSEFOR0VfQURERUQQARIWChJKT0JfQ0hBTkdFX0RF",
-            "TEVURUQQAhIWChJKT0JfQ0hBTkdFX0NIQU5HRUQQA0JfChhpby50b2l0LnBy",
-            "b3RvLnRvaXQubW9kZWxCCEpvYlByb3RvWiZnaXRodWIuY29tL3RvaXR3YXJl",
-            "L2FwaS5naXQvdG9pdC9tb2RlbKoCEFRvaXQuUHJvdG8uTW9kZWxiBnByb3Rv",
-            "Mw=="));
+            "TEVURUQQAhIWChJKT0JfQ0hBTkdFX0NIQU5HRUQQA0JiChhpby50b2l0LnBy",
+            "b3RvLnRvaXQubW9kZWxCCEpvYlByb3RvWilnaXRodWIuY29tL3RvaXR3YXJl",
+            "L2FwaS9nb2xhbmcvdG9pdC9tb2RlbKoCEFRvaXQuUHJvdG8uTW9kZWxiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Toit.Proto.Model.PubSub.TopicReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Toit.Proto.Model.JobGoalState), typeof(global::Toit.Proto.Model.JobFileType), typeof(global::Toit.Proto.Model.JobState), typeof(global::Toit.Proto.Model.JobChangeType), }, null, new pbr::GeneratedClrTypeInfo[] {

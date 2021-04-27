@@ -28,9 +28,9 @@ namespace Toit.Proto.API {
             "cXVlc3QiPAoOSGVhbHRoUmVzcG9uc2USDgoGYmVhdmVyGAIgASgIEg0KBWdy",
             "YXNzGAMgASgIEgsKA29haxgEIAEoCDJTCg1Eb2N0b3JTZXJ2aWNlEkIKC0hl",
             "YWx0aENoZWNrEhcudG9pdC5hcGkuSGVhbHRoUmVxdWVzdBoYLnRvaXQuYXBp",
-            "LkhlYWx0aFJlc3BvbnNlIgBCXAoWaW8udG9pdC5wcm90by50b2l0LmFwaUIL",
-            "RG9jdG9yUHJvdG9aJGdpdGh1Yi5jb20vdG9pdHdhcmUvYXBpLmdpdC90b2l0",
-            "L2FwaaoCDlRvaXQuUHJvdG8uQVBJYgZwcm90bzM="));
+            "LkhlYWx0aFJlc3BvbnNlIgBCXwoWaW8udG9pdC5wcm90by50b2l0LmFwaUIL",
+            "RG9jdG9yUHJvdG9aJ2dpdGh1Yi5jb20vdG9pdHdhcmUvYXBpL2dvbGFuZy90",
+            "b2l0L2FwaaoCDlRvaXQuUHJvdG8uQVBJYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

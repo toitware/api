@@ -79,9 +79,9 @@ namespace Toit.Proto.API {
             "aXQuYXBpLkNsYWltSGFyZHdhcmVJZGVudGl0eVJlc3BvbnNlIgAScAoXU2V0",
             "SGFyZHdhcmVJZGVudGl0eUluZm8SKC50b2l0LmFwaS5TZXRIYXJkd2FyZUlk",
             "ZW50aXR5SW5mb1JlcXVlc3QaKS50b2l0LmFwaS5TZXRIYXJkd2FyZUlkZW50",
-            "aXR5SW5mb1Jlc3BvbnNlIgBCWQoWaW8udG9pdC5wcm90by50b2l0LmFwaUII",
-            "T3JnUHJvdG9aJGdpdGh1Yi5jb20vdG9pdHdhcmUvYXBpLmdpdC90b2l0L2Fw",
-            "aaoCDlRvaXQuUHJvdG8uQVBJYgZwcm90bzM="));
+            "aXR5SW5mb1Jlc3BvbnNlIgBCXAoWaW8udG9pdC5wcm90by50b2l0LmFwaUII",
+            "T3JnUHJvdG9aJ2dpdGh1Yi5jb20vdG9pdHdhcmUvYXBpL2dvbGFuZy90b2l0",
+            "L2FwaaoCDlRvaXQuUHJvdG8uQVBJYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Toit.Proto.Model.OrganizationReflection.Descriptor, global::Toit.Proto.API.HardwareReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

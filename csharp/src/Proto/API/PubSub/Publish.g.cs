@@ -29,9 +29,9 @@ namespace Toit.Proto.API.PubSub {
             "c2hlcl9uYW1lGAIgASgJEgwKBGRhdGEYAyADKAwiEQoPUHVibGlzaFJlc3Bv",
             "bnNlMlkKB1B1Ymxpc2gSTgoHUHVibGlzaBIfLnRvaXQuYXBpLnB1YnN1Yi5Q",
             "dWJsaXNoUmVxdWVzdBogLnRvaXQuYXBpLnB1YnN1Yi5QdWJsaXNoUmVzcG9u",
-            "c2UiAEJxCh1pby50b2l0LnByb3RvLnRvaXQuYXBpLnB1YnN1YkILUHViU3Vi",
-            "UHJvdG9aK2dpdGh1Yi5jb20vdG9pdHdhcmUvYXBpLmdpdC90b2l0L2FwaS9w",
-            "dWJzdWKqAhVUb2l0LlByb3RvLkFQSS5QdWJTdWJiBnByb3RvMw=="));
+            "c2UiAEJ0Ch1pby50b2l0LnByb3RvLnRvaXQuYXBpLnB1YnN1YkILUHViU3Vi",
+            "UHJvdG9aLmdpdGh1Yi5jb20vdG9pdHdhcmUvYXBpL2dvbGFuZy90b2l0L2Fw",
+            "aS9wdWJzdWKqAhVUb2l0LlByb3RvLkFQSS5QdWJTdWJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

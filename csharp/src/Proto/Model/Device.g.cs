@@ -152,9 +152,9 @@ namespace Toit.Proto.Model {
             "VElBTF9GSVJNV0FSRRAKEiAKHERFVklDRV9BQ1RJT05fUkVQT1JUX01PRFVM",
             "RVMQCxIoCiRERVZJQ0VfQUNUSU9OX1VQREFURV9NT0RVTEVfQ0VMTFVMQVIQ",
             "DCotChBEZXZpY2VNb2R1bGVUeXBlEgsKB1Vua25vd24QABIMCghDZWxsdWxh",
-            "chABQmIKGGlvLnRvaXQucHJvdG8udG9pdC5tb2RlbEILRGV2aWNlUHJvdG9a",
-            "JmdpdGh1Yi5jb20vdG9pdHdhcmUvYXBpLmdpdC90b2l0L21vZGVsqgIQVG9p",
-            "dC5Qcm90by5Nb2RlbGIGcHJvdG8z"));
+            "chABQmUKGGlvLnRvaXQucHJvdG8udG9pdC5tb2RlbEILRGV2aWNlUHJvdG9a",
+            "KWdpdGh1Yi5jb20vdG9pdHdhcmUvYXBpL2dvbGFuZy90b2l0L21vZGVsqgIQ",
+            "VG9pdC5Qcm90by5Nb2RlbGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Toit.Proto.Model.DataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Toit.Proto.Model.DeviceConnectionType), typeof(global::Toit.Proto.Model.DeviceChangeType), typeof(global::Toit.Proto.Model.DeviceSessionChangeType), typeof(global::Toit.Proto.Model.DeviceAction), typeof(global::Toit.Proto.Model.DeviceModuleType), }, null, new pbr::GeneratedClrTypeInfo[] {

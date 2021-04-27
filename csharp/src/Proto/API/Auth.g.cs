@@ -48,9 +48,9 @@ namespace Toit.Proto.API {
             "bnNlIgASPQoGTG9nb3V0EhcudG9pdC5hcGkuTG9nb3V0UmVxdWVzdBoYLnRv",
             "aXQuYXBpLkxvZ291dFJlc3BvbnNlIgASYQoSQ3JlYXRlT3JnYW5pemF0aW9u",
             "EiMudG9pdC5hcGkuQ3JlYXRlT3JnYW5pemF0aW9uUmVxdWVzdBokLnRvaXQu",
-            "YXBpLkNyZWF0ZU9yZ2FuaXphdGlvblJlc3BvbnNlIgBCWgoWaW8udG9pdC5w",
-            "cm90by50b2l0LmFwaUIJQXV0aFByb3RvWiRnaXRodWIuY29tL3RvaXR3YXJl",
-            "L2FwaS5naXQvdG9pdC9hcGmqAg5Ub2l0LlByb3RvLkFQSWIGcHJvdG8z"));
+            "YXBpLkNyZWF0ZU9yZ2FuaXphdGlvblJlc3BvbnNlIgBCXQoWaW8udG9pdC5w",
+            "cm90by50b2l0LmFwaUIJQXV0aFByb3RvWidnaXRodWIuY29tL3RvaXR3YXJl",
+            "L2FwaS9nb2xhbmcvdG9pdC9hcGmqAg5Ub2l0LlByb3RvLkFQSWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
