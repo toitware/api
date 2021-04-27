@@ -34157,9 +34157,9 @@ public final class DeviceProto {
       "\022 \n\034DEVICE_ACTION_REPORT_MODULES\020\013\022(\n$DE" +
       "VICE_ACTION_UPDATE_MODULE_CELLULAR\020\014*-\n\020" +
       "DeviceModuleType\022\013\n\007Unknown\020\000\022\014\n\010Cellula" +
-      "r\020\001Bb\n\030io.toit.proto.toit.modelB\013DeviceP" +
-      "rotoZ&github.com/toitware/api.git/toit/m" +
-      "odel\252\002\020Toit.Proto.Modelb\006proto3"
+      "r\020\001Be\n\030io.toit.proto.toit.modelB\013DeviceP" +
+      "rotoZ)github.com/toitware/api/golang/toi" +
+      "t/model\252\002\020Toit.Proto.Modelb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

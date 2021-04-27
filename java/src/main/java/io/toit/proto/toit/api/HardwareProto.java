@@ -10589,9 +10589,9 @@ public final class HardwareProto {
       "nse\"\000\022p\n\027SetHardwareIdentityInfo\022(.toit." +
       "api.SetHardwareIdentityInfoRequest\032).toi" +
       "t.api.SetHardwareIdentityInfoResponse\"\000B" +
-      "^\n\026io.toit.proto.toit.apiB\rHardwareProto" +
-      "Z$github.com/toitware/api.git/toit/api\252\002" +
-      "\016Toit.Proto.APIb\006proto3"
+      "a\n\026io.toit.proto.toit.apiB\rHardwareProto" +
+      "Z\'github.com/toitware/api/golang/toit/ap" +
+      "i\252\002\016Toit.Proto.APIb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

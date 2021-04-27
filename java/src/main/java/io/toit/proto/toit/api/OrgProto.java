@@ -14676,9 +14676,9 @@ public final class OrgProto {
       "IdentityResponse\"\000\022p\n\027SetHardwareIdentit" +
       "yInfo\022(.toit.api.SetHardwareIdentityInfo" +
       "Request\032).toit.api.SetHardwareIdentityIn" +
-      "foResponse\"\000BY\n\026io.toit.proto.toit.apiB\010" +
-      "OrgProtoZ$github.com/toitware/api.git/to" +
-      "it/api\252\002\016Toit.Proto.APIb\006proto3"
+      "foResponse\"\000B\\\n\026io.toit.proto.toit.apiB\010" +
+      "OrgProtoZ\'github.com/toitware/api/golang" +
+      "/toit/api\252\002\016Toit.Proto.APIb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

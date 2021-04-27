@@ -8551,10 +8551,11 @@ public final class SubscribeProto {
       "api.pubsub.StreamRequest\032\037.toit.api.pubs" +
       "ub.StreamResponse\"\0000\001\022Z\n\013Acknowledge\022#.t" +
       "oit.api.pubsub.AcknowledgeRequest\032$.toit" +
-      ".api.pubsub.AcknowledgeResponse\"\000Bt\n\035io." +
+      ".api.pubsub.AcknowledgeResponse\"\000Bw\n\035io." +
       "toit.proto.toit.api.pubsubB\016SubscribePro" +
-      "toZ+github.com/toitware/api.git/toit/api" +
-      "/pubsub\252\002\025Toit.Proto.API.PubSubb\006proto3"
+      "toZ.github.com/toitware/api/golang/toit/" +
+      "api/pubsub\252\002\025Toit.Proto.API.PubSubb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

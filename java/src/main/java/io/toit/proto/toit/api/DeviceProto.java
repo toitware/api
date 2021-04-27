@@ -41878,10 +41878,10 @@ public final class DeviceProto {
       "ime\022\037.toit.api.GetCurrentTimeRequest\032 .t" +
       "oit.api.GetCurrentTimeResponse\"\000\022R\n\rUncl" +
       "aimDevice\022\036.toit.api.UnclaimDeviceReques" +
-      "t\032\037.toit.api.UnclaimDeviceResponse\"\000B\\\n\026" +
-      "io.toit.proto.toit.apiB\013DeviceProtoZ$git" +
-      "hub.com/toitware/api.git/toit/api\252\002\016Toit" +
-      ".Proto.APIb\006proto3"
+      "t\032\037.toit.api.UnclaimDeviceResponse\"\000B_\n\026" +
+      "io.toit.proto.toit.apiB\013DeviceProtoZ\'git" +
+      "hub.com/toitware/api/golang/toit/api\252\002\016T" +
+      "oit.Proto.APIb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -7239,10 +7239,10 @@ public final class ProgramProto {
       "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"f\n\014Re" +
       "leaseLevel\"V\n\004Type\022\013\n\007UNKNOWN\020\000\022\014\n\010RELEA" +
       "SED\020\n\022\010\n\004BETA\020\024\022\t\n\005ALPHA\020\036\022\010\n\004EDGE\020(\022\n\n\006" +
-      "LATEST\0202\022\010\n\003ALL\020\377\001Bc\n\030io.toit.proto.toit" +
-      ".modelB\014ProgramProtoZ&github.com/toitwar" +
-      "e/api.git/toit/model\252\002\020Toit.Proto.Modelb" +
-      "\006proto3"
+      "LATEST\0202\022\010\n\003ALL\020\377\001Bf\n\030io.toit.proto.toit" +
+      ".modelB\014ProgramProtoZ)github.com/toitwar" +
+      "e/api/golang/toit/model\252\002\020Toit.Proto.Mod" +
+      "elb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

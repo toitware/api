@@ -7792,10 +7792,10 @@ public final class OrganizationProto {
       ".google.protobuf.Timestamp\"/\n\004Tier\"\'\n\004Ty" +
       "pe\022\013\n\007UNKNOWN\020\000\022\010\n\004FREE\020\001\022\010\n\004PAID\020\002\"=\n\010C" +
       "ustomer\"1\n\004Type\022\013\n\007UNKNOWN\020\000\022\n\n\006PERSON\020\001" +
-      "\022\020\n\014ORGANIZATION\020\002Bh\n\030io.toit.proto.toit" +
-      ".modelB\021OrganizationProtoZ&github.com/to" +
-      "itware/api.git/toit/model\252\002\020Toit.Proto.M" +
-      "odelb\006proto3"
+      "\022\020\n\014ORGANIZATION\020\002Bk\n\030io.toit.proto.toit" +
+      ".modelB\021OrganizationProtoZ)github.com/to" +
+      "itware/api/golang/toit/model\252\002\020Toit.Prot" +
+      "o.Modelb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

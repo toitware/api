@@ -1348,10 +1348,10 @@ public final class PubSubProto {
       "\t\022\026\n\016publisher_name\030\002 \001(\t\022\014\n\004data\030\003 \003(\014\"" +
       "\021\n\017PublishResponse2Y\n\007Publish\022N\n\007Publish" +
       "\022\037.toit.api.pubsub.PublishRequest\032 .toit" +
-      ".api.pubsub.PublishResponse\"\000Bq\n\035io.toit" +
-      ".proto.toit.api.pubsubB\013PubSubProtoZ+git" +
-      "hub.com/toitware/api.git/toit/api/pubsub" +
-      "\252\002\025Toit.Proto.API.PubSubb\006proto3"
+      ".api.pubsub.PublishResponse\"\000Bt\n\035io.toit" +
+      ".proto.toit.api.pubsubB\013PubSubProtoZ.git" +
+      "hub.com/toitware/api/golang/toit/api/pub" +
+      "sub\252\002\025Toit.Proto.API.PubSubb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

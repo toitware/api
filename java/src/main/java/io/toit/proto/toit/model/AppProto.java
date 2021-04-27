@@ -4040,10 +4040,10 @@ public final class AppProto {
       "ers\022*\n\006pubsub\030\005 \001(\0132\032.toit.model.JobSpec" +
       ".PubSub\022\"\n\005files\030\006 \003(\0132\023.toit.model.JobF" +
       "ile\0329\n\006PubSub\022/\n\rsubscriptions\030\001 \003(\0132\030.t" +
-      "oit.model.pubsub.TopicB_\n\030io.toit.proto." +
-      "toit.modelB\010AppProtoZ&github.com/toitwar" +
-      "e/api.git/toit/model\252\002\020Toit.Proto.Modelb" +
-      "\006proto3"
+      "oit.model.pubsub.TopicBb\n\030io.toit.proto." +
+      "toit.modelB\010AppProtoZ)github.com/toitwar" +
+      "e/api/golang/toit/model\252\002\020Toit.Proto.Mod" +
+      "elb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

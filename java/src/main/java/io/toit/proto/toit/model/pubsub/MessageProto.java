@@ -4197,11 +4197,11 @@ public final class MessageProto {
       "pB\013\n\tpublisher\"\207\001\n\007Message\022\r\n\005topic\030\001 \001(" +
       "\t\022/\n\tpublisher\030\002 \001(\0132\034.toit.model.pubsub" +
       ".Publisher\022.\n\ncreated_at\030\003 \001(\0132\032.google." +
-      "protobuf.Timestamp\022\014\n\004data\030\004 \001(\014Bx\n\037io.t" +
+      "protobuf.Timestamp\022\014\n\004data\030\004 \001(\014B{\n\037io.t" +
       "oit.proto.toit.model.pubsubB\014MessageProt" +
-      "oZ-github.com/toitware/api.git/toit/mode" +
-      "l/pubsub\252\002\027Toit.Proto.Model.PubSubb\006prot" +
-      "o3"
+      "oZ0github.com/toitware/api/golang/toit/m" +
+      "odel/pubsub\252\002\027Toit.Proto.Model.PubSubb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

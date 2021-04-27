@@ -14468,9 +14468,9 @@ public final class UserProto {
       "+.toit.api.CancelPaymentSubscriptionResp" +
       "onse\"\000\022I\n\nUpdateUser\022\033.toit.api.UpdateUs" +
       "erRequest\032\034.toit.api.UpdateUserResponse\"" +
-      "\000BZ\n\026io.toit.proto.toit.apiB\tUserProtoZ$" +
-      "github.com/toitware/api.git/toit/api\252\002\016T" +
-      "oit.Proto.APIb\006proto3"
+      "\000B]\n\026io.toit.proto.toit.apiB\tUserProtoZ\'" +
+      "github.com/toitware/api/golang/toit/api\252" +
+      "\002\016Toit.Proto.APIb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
