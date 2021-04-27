@@ -6,7 +6,7 @@ import "google/protobuf/timestamp.proto";
 import "google/protobuf/duration.proto";
 import "toit/model/pubsub/topic.proto";
 
-option go_package = "github.com/toitware/api.git/toit/model";
+option go_package = "github.com/toitware/api/golang/toit/model";
 option java_package = "io.toit.proto.toit.model";
 option java_outer_classname = "JobProto";
 option csharp_namespace = "Toit.Proto.Model";

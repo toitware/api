@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package toit.api.pubsub;
 
-option go_package = "github.com/toitware/api.git/toit/api/pubsub";
+option go_package = "github.com/toitware/api/golang/toit/api/pubsub";
 option java_package = "io.toit.proto.toit.api.pubsub";
 option java_outer_classname = "PubSubProto";
 option csharp_namespace = "Toit.Proto.API.PubSub";
