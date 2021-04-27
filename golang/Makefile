@@ -26,7 +26,7 @@ protobuf: $(BUILD_DIR) $(PROTO_FILES)
 
 go_bootstrap:
 	go mod download
-#	go get google.golang.org/protobuf/cmd/protoc-gen-go google.golang.org/grpc/cmd/protoc-gen-go-grpc
+	go get google.golang.org/protobuf/cmd/protoc-gen-go google.golang.org/grpc/cmd/protoc-gen-go-grpc
 
 clean:
 	go install google.golang.org/protobuf/cmd/protoc-gen-go
