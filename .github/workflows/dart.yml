@@ -1,0 +1,39 @@
+name: Dart
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master, dart]
+  release:
+    types: [published]
+
+jobs:
+  dart:
+    name: Build Dart
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - uses: abelfodil/protoc-action@v1
+        with:
+          protoc-version: "3.13.0"
+          enable-dart: true
+          dart-version: "2.12.0"
+
+      - name: Build protobuf
+        working-directory: ./dart
+        run: make protobuf
+
+      - name: Add & Commit
+        if: github.event_name == 'push'
+        uses: EndBug/add-and-commit@v5.1.0
+        with:
+          author_name: Leon Gungadin Mogensen
+          author_email: leon@toitware.com
+          message: built dart source files
+          branch: master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
