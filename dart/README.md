@@ -10,7 +10,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 import 'package:grpc/grpc.dart';
-import 'package:toit_api/generated/toit/api/auth.pbgrpc.dart';
+import 'package:toit_api/toit/api/auth.pbgrpc.dart';
 /**
  * This application demonstrates logging in with a user-name password.
  */
@@ -48,7 +48,7 @@ The documentation for the Toit API is [here](https://docs.toit.io/infrastructure
 
 ## Known limitations
 This package currently only exposes the generated protobuf APIs. No effort has been made to create a nicer layer around
-it. This might come in the future.
+it.
 
 ## Issues and feedback
 Please file [issues](https://github.com/toitware/api/issues) to send feedback or report a bug. Thank you!.
