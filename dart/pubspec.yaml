@@ -1,0 +1,10 @@
+name: toit_api
+description: A library to access Toit's APIs.
+  All communication is done using gRPC calls. This package
+  contains automatically generated files that used the protobuf
+  files from the Toit APIs.
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+dependencies:
+  grpc: ^3.0.0
