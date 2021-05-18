@@ -1,6 +1,6 @@
 PROTO_DIR := ./../proto
 
-BUILD_DIR := src
+BUILD_DIR := lib
 $(BUILD_DIR):
 	@mkdir -p $(BUILD_DIR)
 
@@ -20,13 +20,14 @@ PROTO_TOIT_FILES := $(PROTO_TOIT_SOURCES:$(PROTO_DIR)/%.proto=$(BUILD_DIR)/%.pb.
 PROTO_FILES := $(PROTO_CORE_FILES) $(PROTO_TOIT_FILES)
 PROTOC := protoc
 
-src/%.pb.dart: $(PROTO_DIR)/%.proto
+$(BUILD_DIR)/%.pb.dart: $(PROTO_DIR)/%.proto
 	$(PROTOC) $< --dart_out=grpc:$(BUILD_DIR) $(PROTO_FLAGS)
 
-src/%.pb.dart: $(PROTO_CORE_IMPORT_DIR)/%.proto
+$(BUILD_DIR)/%.pb.dart: $(PROTO_CORE_IMPORT_DIR)/%.proto
 	$(PROTOC) $< --dart_out=grpc:$(BUILD_DIR) $(PROTO_FLAGS)
 
 protobuf: $(BUILD_DIR) $(PROTO_FILES)
+	dartfmt -w .
 
 clean:
-	rm -rf src/
+	rm -rf $(BUILD_DIR)/

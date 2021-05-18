@@ -3,8 +3,13 @@ description: A library to access Toit's APIs.
   All communication is done using gRPC calls. This package
   contains automatically generated files that used the protobuf
   files from the Toit APIs.
+repository: https://github.com/toitware/api
+version: 1.0.0
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
+
 dependencies:
+  fixnum: ^1.0.0
   grpc: ^3.0.0
+  protobuf: ^2.0.0
