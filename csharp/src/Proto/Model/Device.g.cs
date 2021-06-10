@@ -249,19 +249,23 @@ namespace Toit.Proto.Model {
     private static readonly pb::MessageParser<DeviceConfig> _parser = new pb::MessageParser<DeviceConfig>(() => new DeviceConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DeviceConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceConfig() {
       OnConstruction();
     }
@@ -269,6 +273,7 @@ namespace Toit.Proto.Model {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceConfig(DeviceConfig other) : this() {
       name_ = other.name_;
       startedAfter_ = other.startedAfter_ != null ? other.startedAfter_.Clone() : null;
@@ -284,6 +289,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceConfig Clone() {
       return new DeviceConfig(this);
     }
@@ -292,6 +298,7 @@ namespace Toit.Proto.Model {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -303,6 +310,7 @@ namespace Toit.Proto.Model {
     public const int StartedAfterFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp startedAfter_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp StartedAfter {
       get { return startedAfter_; }
       set {
@@ -314,6 +322,7 @@ namespace Toit.Proto.Model {
     public const int SdkFieldNumber = 3;
     private string sdk_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Sdk {
       get { return sdk_; }
       set {
@@ -325,6 +334,7 @@ namespace Toit.Proto.Model {
     public const int BrokerFieldNumber = 4;
     private global::Toit.Proto.Model.DeviceBrokerSettings broker_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Toit.Proto.Model.DeviceBrokerSettings Broker {
       get { return broker_; }
       set {
@@ -336,6 +346,7 @@ namespace Toit.Proto.Model {
     public const int ConnectionFieldNumber = 5;
     private global::Toit.Proto.Model.DeviceConnectionSettings connection_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Toit.Proto.Model.DeviceConnectionSettings Connection {
       get { return connection_; }
       set {
@@ -347,6 +358,7 @@ namespace Toit.Proto.Model {
     public const int ModelFieldNumber = 6;
     private string model_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Model {
       get { return model_; }
       set {
@@ -358,6 +370,7 @@ namespace Toit.Proto.Model {
     public const int FactoryAfterFieldNumber = 7;
     private global::Google.Protobuf.WellKnownTypes.Timestamp factoryAfter_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp FactoryAfter {
       get { return factoryAfter_; }
       set {
@@ -369,6 +382,7 @@ namespace Toit.Proto.Model {
     public const int RuntimeFieldNumber = 8;
     private global::Toit.Proto.Model.DeviceRuntimeSettings runtime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Toit.Proto.Model.DeviceRuntimeSettings Runtime {
       get { return runtime_; }
       set {
@@ -380,6 +394,7 @@ namespace Toit.Proto.Model {
     public const int ModulesFieldNumber = 9;
     private global::Toit.Proto.Model.DeviceModulesConfig modules_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Toit.Proto.Model.DeviceModulesConfig Modules {
       get { return modules_; }
       set {
@@ -391,6 +406,7 @@ namespace Toit.Proto.Model {
     public const int ModelSettingsFieldNumber = 10;
     private global::Toit.Proto.Model.DeviceModelSettings modelSettings_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Toit.Proto.Model.DeviceModelSettings ModelSettings {
       get { return modelSettings_; }
       set {
@@ -399,11 +415,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DeviceConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DeviceConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -425,6 +443,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -444,11 +463,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -501,6 +522,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -549,6 +571,7 @@ namespace Toit.Proto.Model {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -588,6 +611,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeviceConfig other) {
       if (other == null) {
         return;
@@ -647,6 +671,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -725,6 +750,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -808,19 +834,23 @@ namespace Toit.Proto.Model {
     private static readonly pb::MessageParser<DeviceModulesConfig> _parser = new pb::MessageParser<DeviceModulesConfig>(() => new DeviceModulesConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DeviceModulesConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceModulesConfig() {
       OnConstruction();
     }
@@ -828,6 +858,7 @@ namespace Toit.Proto.Model {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceModulesConfig(DeviceModulesConfig other) : this() {
       syncRequested_ = other.syncRequested_ != null ? other.syncRequested_.Clone() : null;
       modules_ = other.modules_ != null ? other.modules_.Clone() : null;
@@ -835,6 +866,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceModulesConfig Clone() {
       return new DeviceModulesConfig(this);
     }
@@ -843,6 +875,7 @@ namespace Toit.Proto.Model {
     public const int SyncRequestedFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Timestamp syncRequested_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp SyncRequested {
       get { return syncRequested_; }
       set {
@@ -854,6 +887,7 @@ namespace Toit.Proto.Model {
     public const int ModulesFieldNumber = 2;
     private global::Toit.Proto.Model.DeviceModules modules_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Toit.Proto.Model.DeviceModules Modules {
       get { return modules_; }
       set {
@@ -862,11 +896,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DeviceModulesConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DeviceModulesConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -880,6 +916,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (syncRequested_ != null) hash ^= SyncRequested.GetHashCode();
@@ -891,11 +928,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -916,6 +955,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (syncRequested_ != null) {
         output.WriteRawTag(10);
@@ -932,6 +972,7 @@ namespace Toit.Proto.Model {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (syncRequested_ != null) {
@@ -947,6 +988,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeviceModulesConfig other) {
       if (other == null) {
         return;
@@ -967,6 +1009,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -998,6 +1041,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1034,19 +1078,23 @@ namespace Toit.Proto.Model {
     private static readonly pb::MessageParser<DeviceRuntimeSettings> _parser = new pb::MessageParser<DeviceRuntimeSettings>(() => new DeviceRuntimeSettings());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DeviceRuntimeSettings> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceRuntimeSettings() {
       OnConstruction();
     }
@@ -1054,6 +1102,7 @@ namespace Toit.Proto.Model {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceRuntimeSettings(DeviceRuntimeSettings other) : this() {
       logging_ = other.logging_ != null ? other.logging_.Clone() : null;
       metrics_ = other.metrics_ != null ? other.metrics_.Clone() : null;
@@ -1061,6 +1110,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceRuntimeSettings Clone() {
       return new DeviceRuntimeSettings(this);
     }
@@ -1069,6 +1119,7 @@ namespace Toit.Proto.Model {
     public const int LoggingFieldNumber = 1;
     private global::Toit.Proto.Model.LoggingSettings logging_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Toit.Proto.Model.LoggingSettings Logging {
       get { return logging_; }
       set {
@@ -1080,6 +1131,7 @@ namespace Toit.Proto.Model {
     public const int MetricsFieldNumber = 2;
     private global::Toit.Proto.Model.MetricsSettings metrics_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Toit.Proto.Model.MetricsSettings Metrics {
       get { return metrics_; }
       set {
@@ -1088,11 +1140,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DeviceRuntimeSettings);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DeviceRuntimeSettings other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1106,6 +1160,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (logging_ != null) hash ^= Logging.GetHashCode();
@@ -1117,11 +1172,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1142,6 +1199,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (logging_ != null) {
         output.WriteRawTag(10);
@@ -1158,6 +1216,7 @@ namespace Toit.Proto.Model {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (logging_ != null) {
@@ -1173,6 +1232,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeviceRuntimeSettings other) {
       if (other == null) {
         return;
@@ -1193,6 +1253,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1224,6 +1285,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1260,19 +1322,23 @@ namespace Toit.Proto.Model {
     private static readonly pb::MessageParser<LoggingSettings> _parser = new pb::MessageParser<LoggingSettings>(() => new LoggingSettings());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<LoggingSettings> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LoggingSettings() {
       OnConstruction();
     }
@@ -1280,12 +1346,14 @@ namespace Toit.Proto.Model {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LoggingSettings(LoggingSettings other) : this() {
       level_ = other.level_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LoggingSettings Clone() {
       return new LoggingSettings(this);
     }
@@ -1294,6 +1362,7 @@ namespace Toit.Proto.Model {
     public const int LevelFieldNumber = 1;
     private global::Toit.Proto.Model.LogData.Types.Level level_ = global::Toit.Proto.Model.LogData.Types.Level.PrintLevel;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Toit.Proto.Model.LogData.Types.Level Level {
       get { return level_; }
       set {
@@ -1302,11 +1371,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as LoggingSettings);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(LoggingSettings other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1319,6 +1390,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Level != global::Toit.Proto.Model.LogData.Types.Level.PrintLevel) hash ^= Level.GetHashCode();
@@ -1329,11 +1401,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1350,6 +1424,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Level != global::Toit.Proto.Model.LogData.Types.Level.PrintLevel) {
         output.WriteRawTag(8);
@@ -1362,6 +1437,7 @@ namespace Toit.Proto.Model {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Level != global::Toit.Proto.Model.LogData.Types.Level.PrintLevel) {
@@ -1374,6 +1450,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(LoggingSettings other) {
       if (other == null) {
         return;
@@ -1385,6 +1462,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1406,6 +1484,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1432,19 +1511,23 @@ namespace Toit.Proto.Model {
     private static readonly pb::MessageParser<MetricsSettings> _parser = new pb::MessageParser<MetricsSettings>(() => new MetricsSettings());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<MetricsSettings> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MetricsSettings() {
       OnConstruction();
     }
@@ -1452,12 +1535,14 @@ namespace Toit.Proto.Model {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MetricsSettings(MetricsSettings other) : this() {
       level_ = other.level_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MetricsSettings Clone() {
       return new MetricsSettings(this);
     }
@@ -1466,6 +1551,7 @@ namespace Toit.Proto.Model {
     public const int LevelFieldNumber = 1;
     private global::Toit.Proto.Model.MetricsData.Types.Level level_ = global::Toit.Proto.Model.MetricsData.Types.Level.DebugLevel;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Toit.Proto.Model.MetricsData.Types.Level Level {
       get { return level_; }
       set {
@@ -1474,11 +1560,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as MetricsSettings);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(MetricsSettings other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1491,6 +1579,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Level != global::Toit.Proto.Model.MetricsData.Types.Level.DebugLevel) hash ^= Level.GetHashCode();
@@ -1501,11 +1590,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1522,6 +1613,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Level != global::Toit.Proto.Model.MetricsData.Types.Level.DebugLevel) {
         output.WriteRawTag(8);
@@ -1534,6 +1626,7 @@ namespace Toit.Proto.Model {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Level != global::Toit.Proto.Model.MetricsData.Types.Level.DebugLevel) {
@@ -1546,6 +1639,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(MetricsSettings other) {
       if (other == null) {
         return;
@@ -1557,6 +1651,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1578,6 +1673,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1604,19 +1700,23 @@ namespace Toit.Proto.Model {
     private static readonly pb::MessageParser<DeviceConnectionSettings> _parser = new pb::MessageParser<DeviceConnectionSettings>(() => new DeviceConnectionSettings());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DeviceConnectionSettings> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceConnectionSettings() {
       OnConstruction();
     }
@@ -1624,6 +1724,7 @@ namespace Toit.Proto.Model {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceConnectionSettings(DeviceConnectionSettings other) : this() {
       maxOffline_ = other.maxOffline_ != null ? other.maxOffline_.Clone() : null;
       connections_ = other.connections_.Clone();
@@ -1632,6 +1733,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceConnectionSettings Clone() {
       return new DeviceConnectionSettings(this);
     }
@@ -1640,6 +1742,7 @@ namespace Toit.Proto.Model {
     public const int MaxOfflineFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Duration maxOffline_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration MaxOffline {
       get { return maxOffline_; }
       set {
@@ -1653,6 +1756,7 @@ namespace Toit.Proto.Model {
         = pb::FieldCodec.ForMessage(18, global::Toit.Proto.Model.ConnectionSetting.Parser);
     private readonly pbc::RepeatedField<global::Toit.Proto.Model.ConnectionSetting> connections_ = new pbc::RepeatedField<global::Toit.Proto.Model.ConnectionSetting>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Toit.Proto.Model.ConnectionSetting> Connections {
       get { return connections_; }
     }
@@ -1664,6 +1768,7 @@ namespace Toit.Proto.Model {
     /// Must be between 0-100
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint EventQueueThreshold {
       get { return eventQueueThreshold_; }
       set {
@@ -1672,11 +1777,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DeviceConnectionSettings);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DeviceConnectionSettings other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1691,6 +1798,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (maxOffline_ != null) hash ^= MaxOffline.GetHashCode();
@@ -1703,11 +1811,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1729,6 +1839,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (maxOffline_ != null) {
         output.WriteRawTag(10);
@@ -1746,6 +1857,7 @@ namespace Toit.Proto.Model {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (maxOffline_ != null) {
@@ -1762,6 +1874,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeviceConnectionSettings other) {
       if (other == null) {
         return;
@@ -1780,6 +1893,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1812,6 +1926,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1849,19 +1964,23 @@ namespace Toit.Proto.Model {
     private static readonly pb::MessageParser<ConnectionSetting> _parser = new pb::MessageParser<ConnectionSetting>(() => new ConnectionSetting());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ConnectionSetting> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConnectionSetting() {
       OnConstruction();
     }
@@ -1869,6 +1988,7 @@ namespace Toit.Proto.Model {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConnectionSetting(ConnectionSetting other) : this() {
       wifi_ = other.wifi_ != null ? other.wifi_.Clone() : null;
       nbiot_ = other.nbiot_ != null ? other.nbiot_.Clone() : null;
@@ -1876,6 +1996,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConnectionSetting Clone() {
       return new ConnectionSetting(this);
     }
@@ -1888,6 +2009,7 @@ namespace Toit.Proto.Model {
     /// encoding as done between the device and the console.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Toit.Proto.Model.WifiSetting Wifi {
       get { return wifi_; }
       set {
@@ -1899,6 +2021,7 @@ namespace Toit.Proto.Model {
     public const int NbiotFieldNumber = 2;
     private global::Toit.Proto.Model.NBIoTSetting nbiot_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Toit.Proto.Model.NBIoTSetting Nbiot {
       get { return nbiot_; }
       set {
@@ -1907,11 +2030,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ConnectionSetting);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ConnectionSetting other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1925,6 +2050,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (wifi_ != null) hash ^= Wifi.GetHashCode();
@@ -1936,11 +2062,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1961,6 +2089,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (wifi_ != null) {
         output.WriteRawTag(10);
@@ -1977,6 +2106,7 @@ namespace Toit.Proto.Model {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (wifi_ != null) {
@@ -1992,6 +2122,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ConnectionSetting other) {
       if (other == null) {
         return;
@@ -2012,6 +2143,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2043,6 +2175,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2079,19 +2212,23 @@ namespace Toit.Proto.Model {
     private static readonly pb::MessageParser<WifiSetting> _parser = new pb::MessageParser<WifiSetting>(() => new WifiSetting());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<WifiSetting> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WifiSetting() {
       OnConstruction();
     }
@@ -2099,6 +2236,7 @@ namespace Toit.Proto.Model {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WifiSetting(WifiSetting other) : this() {
       ssid_ = other.ssid_;
       password_ = other.password_;
@@ -2106,6 +2244,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WifiSetting Clone() {
       return new WifiSetting(this);
     }
@@ -2114,6 +2253,7 @@ namespace Toit.Proto.Model {
     public const int SsidFieldNumber = 1;
     private string ssid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Ssid {
       get { return ssid_; }
       set {
@@ -2125,6 +2265,7 @@ namespace Toit.Proto.Model {
     public const int PasswordFieldNumber = 2;
     private string password_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Password {
       get { return password_; }
       set {
@@ -2133,11 +2274,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as WifiSetting);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(WifiSetting other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2151,6 +2294,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Ssid.Length != 0) hash ^= Ssid.GetHashCode();
@@ -2162,11 +2306,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2187,6 +2333,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Ssid.Length != 0) {
         output.WriteRawTag(10);
@@ -2203,6 +2350,7 @@ namespace Toit.Proto.Model {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Ssid.Length != 0) {
@@ -2218,6 +2366,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(WifiSetting other) {
       if (other == null) {
         return;
@@ -2232,6 +2381,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2257,6 +2407,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2287,19 +2438,23 @@ namespace Toit.Proto.Model {
     private static readonly pb::MessageParser<NBIoTSetting> _parser = new pb::MessageParser<NBIoTSetting>(() => new NBIoTSetting());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<NBIoTSetting> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NBIoTSetting() {
       OnConstruction();
     }
@@ -2307,6 +2462,7 @@ namespace Toit.Proto.Model {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NBIoTSetting(NBIoTSetting other) : this() {
       apn_ = other.apn_;
       bands_ = other.bands_.Clone();
@@ -2316,6 +2472,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NBIoTSetting Clone() {
       return new NBIoTSetting(this);
     }
@@ -2324,6 +2481,7 @@ namespace Toit.Proto.Model {
     public const int ApnFieldNumber = 1;
     private string apn_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Apn {
       get { return apn_; }
       set {
@@ -2337,6 +2495,7 @@ namespace Toit.Proto.Model {
         = pb::FieldCodec.ForInt64(18);
     private readonly pbc::RepeatedField<long> bands_ = new pbc::RepeatedField<long>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<long> Bands {
       get { return bands_; }
     }
@@ -2345,6 +2504,7 @@ namespace Toit.Proto.Model {
     public const int OperatorFieldNumber = 3;
     private string operator_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Operator {
       get { return operator_; }
       set {
@@ -2356,6 +2516,7 @@ namespace Toit.Proto.Model {
     public const int PinFieldNumber = 4;
     private string pin_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Pin {
       get { return pin_; }
       set {
@@ -2364,11 +2525,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as NBIoTSetting);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(NBIoTSetting other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2384,6 +2547,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Apn.Length != 0) hash ^= Apn.GetHashCode();
@@ -2397,11 +2561,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2427,6 +2593,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Apn.Length != 0) {
         output.WriteRawTag(10);
@@ -2448,6 +2615,7 @@ namespace Toit.Proto.Model {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Apn.Length != 0) {
@@ -2467,6 +2635,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(NBIoTSetting other) {
       if (other == null) {
         return;
@@ -2485,6 +2654,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2519,6 +2689,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2558,19 +2729,23 @@ namespace Toit.Proto.Model {
     private static readonly pb::MessageParser<DeviceBrokerSettings> _parser = new pb::MessageParser<DeviceBrokerSettings>(() => new DeviceBrokerSettings());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DeviceBrokerSettings> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceBrokerSettings() {
       OnConstruction();
     }
@@ -2578,6 +2753,7 @@ namespace Toit.Proto.Model {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceBrokerSettings(DeviceBrokerSettings other) : this() {
       host_ = other.host_;
       port_ = other.port_;
@@ -2587,6 +2763,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceBrokerSettings Clone() {
       return new DeviceBrokerSettings(this);
     }
@@ -2595,6 +2772,7 @@ namespace Toit.Proto.Model {
     public const int HostFieldNumber = 1;
     private string host_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Host {
       get { return host_; }
       set {
@@ -2606,6 +2784,7 @@ namespace Toit.Proto.Model {
     public const int PortFieldNumber = 2;
     private long port_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Port {
       get { return port_; }
       set {
@@ -2617,6 +2796,7 @@ namespace Toit.Proto.Model {
     public const int CnFieldNumber = 3;
     private string cn_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Cn {
       get { return cn_; }
       set {
@@ -2629,6 +2809,7 @@ namespace Toit.Proto.Model {
     private string protocol_ = "";
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Protocol {
       get { return protocol_; }
       set {
@@ -2637,11 +2818,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DeviceBrokerSettings);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DeviceBrokerSettings other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2657,6 +2840,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Host.Length != 0) hash ^= Host.GetHashCode();
@@ -2670,11 +2854,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2703,6 +2889,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Host.Length != 0) {
         output.WriteRawTag(10);
@@ -2727,6 +2914,7 @@ namespace Toit.Proto.Model {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Host.Length != 0) {
@@ -2748,6 +2936,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeviceBrokerSettings other) {
       if (other == null) {
         return;
@@ -2768,6 +2957,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2801,6 +2991,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2839,19 +3030,23 @@ namespace Toit.Proto.Model {
     private static readonly pb::MessageParser<DeviceStatus> _parser = new pb::MessageParser<DeviceStatus>(() => new DeviceStatus());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DeviceStatus> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceStatus() {
       OnConstruction();
     }
@@ -2859,6 +3054,7 @@ namespace Toit.Proto.Model {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceStatus(DeviceStatus other) : this() {
       revision_ = other.revision_;
       epoch_ = other.epoch_;
@@ -2877,6 +3073,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceStatus Clone() {
       return new DeviceStatus(this);
     }
@@ -2886,6 +3083,7 @@ namespace Toit.Proto.Model {
     private long revision_;
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Revision {
       get { return revision_; }
       set {
@@ -2897,6 +3095,7 @@ namespace Toit.Proto.Model {
     public const int EpochFieldNumber = 6;
     private pb::ByteString epoch_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Epoch {
       get { return epoch_; }
       set {
@@ -2908,6 +3107,7 @@ namespace Toit.Proto.Model {
     public const int StateRevisionFieldNumber = 5;
     private long stateRevision_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long StateRevision {
       get { return stateRevision_; }
       set {
@@ -2919,6 +3119,7 @@ namespace Toit.Proto.Model {
     public const int UpdatedFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updated_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp Updated {
       get { return updated_; }
       set {
@@ -2930,6 +3131,7 @@ namespace Toit.Proto.Model {
     public const int ConfigRevisionFieldNumber = 3;
     private long configRevision_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long ConfigRevision {
       get { return configRevision_; }
       set {
@@ -2941,6 +3143,7 @@ namespace Toit.Proto.Model {
     public const int SdkFieldNumber = 4;
     private string sdk_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Sdk {
       get { return sdk_; }
       set {
@@ -2952,6 +3155,7 @@ namespace Toit.Proto.Model {
     public const int ModelFieldNumber = 7;
     private string model_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Model {
       get { return model_; }
       set {
@@ -2963,6 +3167,7 @@ namespace Toit.Proto.Model {
     public const int ConfigFieldNumber = 8;
     private global::Toit.Proto.Model.DeviceConfig config_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Toit.Proto.Model.DeviceConfig Config {
       get { return config_; }
       set {
@@ -2974,6 +3179,7 @@ namespace Toit.Proto.Model {
     public const int ConnectedFieldNumber = 9;
     private bool connected_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Connected {
       get { return connected_; }
       set {
@@ -2985,6 +3191,7 @@ namespace Toit.Proto.Model {
     public const int BootFieldNumber = 10;
     private global::Toit.Proto.Model.DeviceBootStatus boot_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Toit.Proto.Model.DeviceBootStatus Boot {
       get { return boot_; }
       set {
@@ -2996,6 +3203,7 @@ namespace Toit.Proto.Model {
     public const int HealthFieldNumber = 11;
     private global::Toit.Proto.Model.DeviceHealth health_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Toit.Proto.Model.DeviceHealth Health {
       get { return health_; }
       set {
@@ -3007,6 +3215,7 @@ namespace Toit.Proto.Model {
     public const int ConnectionFieldNumber = 12;
     private global::Toit.Proto.Model.DeviceConnectionStatus connection_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Toit.Proto.Model.DeviceConnectionStatus Connection {
       get { return connection_; }
       set {
@@ -3018,6 +3227,7 @@ namespace Toit.Proto.Model {
     public const int ModulesFieldNumber = 13;
     private global::Toit.Proto.Model.DeviceModulesStatus modules_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Toit.Proto.Model.DeviceModulesStatus Modules {
       get { return modules_; }
       set {
@@ -3026,11 +3236,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DeviceStatus);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DeviceStatus other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3055,6 +3267,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Revision != 0L) hash ^= Revision.GetHashCode();
@@ -3077,11 +3290,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3146,6 +3361,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Revision != 0L) {
         output.WriteRawTag(8);
@@ -3206,6 +3422,7 @@ namespace Toit.Proto.Model {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Revision != 0L) {
@@ -3254,6 +3471,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeviceStatus other) {
       if (other == null) {
         return;
@@ -3319,6 +3537,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3406,6 +3625,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3498,19 +3718,23 @@ namespace Toit.Proto.Model {
     private static readonly pb::MessageParser<DeviceModulesStatus> _parser = new pb::MessageParser<DeviceModulesStatus>(() => new DeviceModulesStatus());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DeviceModulesStatus> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceModulesStatus() {
       OnConstruction();
     }
@@ -3518,6 +3742,7 @@ namespace Toit.Proto.Model {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceModulesStatus(DeviceModulesStatus other) : this() {
       lastUpdated_ = other.lastUpdated_ != null ? other.lastUpdated_.Clone() : null;
       modules_ = other.modules_ != null ? other.modules_.Clone() : null;
@@ -3525,6 +3750,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceModulesStatus Clone() {
       return new DeviceModulesStatus(this);
     }
@@ -3533,6 +3759,7 @@ namespace Toit.Proto.Model {
     public const int LastUpdatedFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Timestamp lastUpdated_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp LastUpdated {
       get { return lastUpdated_; }
       set {
@@ -3544,6 +3771,7 @@ namespace Toit.Proto.Model {
     public const int ModulesFieldNumber = 2;
     private global::Toit.Proto.Model.DeviceModules modules_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Toit.Proto.Model.DeviceModules Modules {
       get { return modules_; }
       set {
@@ -3552,11 +3780,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DeviceModulesStatus);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DeviceModulesStatus other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3570,6 +3800,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (lastUpdated_ != null) hash ^= LastUpdated.GetHashCode();
@@ -3581,11 +3812,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3606,6 +3839,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (lastUpdated_ != null) {
         output.WriteRawTag(10);
@@ -3622,6 +3856,7 @@ namespace Toit.Proto.Model {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (lastUpdated_ != null) {
@@ -3637,6 +3872,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeviceModulesStatus other) {
       if (other == null) {
         return;
@@ -3657,6 +3893,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3688,6 +3925,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3724,19 +3962,23 @@ namespace Toit.Proto.Model {
     private static readonly pb::MessageParser<DeviceModules> _parser = new pb::MessageParser<DeviceModules>(() => new DeviceModules());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DeviceModules> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceModules() {
       OnConstruction();
     }
@@ -3744,12 +3986,14 @@ namespace Toit.Proto.Model {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceModules(DeviceModules other) : this() {
       cellular_ = other.cellular_ != null ? other.cellular_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceModules Clone() {
       return new DeviceModules(this);
     }
@@ -3758,6 +4002,7 @@ namespace Toit.Proto.Model {
     public const int CellularFieldNumber = 1;
     private global::Toit.Proto.Model.DeviceModule cellular_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Toit.Proto.Model.DeviceModule Cellular {
       get { return cellular_; }
       set {
@@ -3766,11 +4011,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DeviceModules);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DeviceModules other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3783,6 +4030,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (cellular_ != null) hash ^= Cellular.GetHashCode();
@@ -3793,11 +4041,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3814,6 +4064,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (cellular_ != null) {
         output.WriteRawTag(10);
@@ -3826,6 +4077,7 @@ namespace Toit.Proto.Model {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (cellular_ != null) {
@@ -3838,6 +4090,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeviceModules other) {
       if (other == null) {
         return;
@@ -3852,6 +4105,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3876,6 +4130,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3905,19 +4160,23 @@ namespace Toit.Proto.Model {
     private static readonly pb::MessageParser<DeviceModule> _parser = new pb::MessageParser<DeviceModule>(() => new DeviceModule());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DeviceModule> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceModule() {
       OnConstruction();
     }
@@ -3925,6 +4184,7 @@ namespace Toit.Proto.Model {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceModule(DeviceModule other) : this() {
       model_ = other.model_;
       version_ = other.version_;
@@ -3932,6 +4192,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceModule Clone() {
       return new DeviceModule(this);
     }
@@ -3940,6 +4201,7 @@ namespace Toit.Proto.Model {
     public const int ModelFieldNumber = 1;
     private string model_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Model {
       get { return model_; }
       set {
@@ -3951,6 +4213,7 @@ namespace Toit.Proto.Model {
     public const int VersionFieldNumber = 2;
     private string version_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Version {
       get { return version_; }
       set {
@@ -3959,11 +4222,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DeviceModule);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DeviceModule other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3977,6 +4242,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Model.Length != 0) hash ^= Model.GetHashCode();
@@ -3988,11 +4254,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4013,6 +4281,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Model.Length != 0) {
         output.WriteRawTag(10);
@@ -4029,6 +4298,7 @@ namespace Toit.Proto.Model {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Model.Length != 0) {
@@ -4044,6 +4314,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeviceModule other) {
       if (other == null) {
         return;
@@ -4058,6 +4329,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4083,6 +4355,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4113,19 +4386,23 @@ namespace Toit.Proto.Model {
     private static readonly pb::MessageParser<DeviceConnectionStatus> _parser = new pb::MessageParser<DeviceConnectionStatus>(() => new DeviceConnectionStatus());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DeviceConnectionStatus> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceConnectionStatus() {
       OnConstruction();
     }
@@ -4133,6 +4410,7 @@ namespace Toit.Proto.Model {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceConnectionStatus(DeviceConnectionStatus other) : this() {
       index_ = other.index_;
       type_ = other.type_;
@@ -4140,6 +4418,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceConnectionStatus Clone() {
       return new DeviceConnectionStatus(this);
     }
@@ -4148,6 +4427,7 @@ namespace Toit.Proto.Model {
     public const int IndexFieldNumber = 1;
     private long index_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Index {
       get { return index_; }
       set {
@@ -4159,6 +4439,7 @@ namespace Toit.Proto.Model {
     public const int TypeFieldNumber = 2;
     private global::Toit.Proto.Model.DeviceConnectionType type_ = global::Toit.Proto.Model.DeviceConnectionType.Unknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Toit.Proto.Model.DeviceConnectionType Type {
       get { return type_; }
       set {
@@ -4167,11 +4448,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DeviceConnectionStatus);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DeviceConnectionStatus other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4185,6 +4468,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Index != 0L) hash ^= Index.GetHashCode();
@@ -4196,11 +4480,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4221,6 +4507,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Index != 0L) {
         output.WriteRawTag(8);
@@ -4237,6 +4524,7 @@ namespace Toit.Proto.Model {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Index != 0L) {
@@ -4252,6 +4540,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeviceConnectionStatus other) {
       if (other == null) {
         return;
@@ -4266,6 +4555,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4291,6 +4581,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4321,19 +4612,23 @@ namespace Toit.Proto.Model {
     private static readonly pb::MessageParser<DeviceBootStatus> _parser = new pb::MessageParser<DeviceBootStatus>(() => new DeviceBootStatus());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DeviceBootStatus> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceBootStatus() {
       OnConstruction();
     }
@@ -4341,6 +4636,7 @@ namespace Toit.Proto.Model {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceBootStatus(DeviceBootStatus other) : this() {
       lastBoot_ = other.lastBoot_ != null ? other.lastBoot_.Clone() : null;
       inFactory_ = other.inFactory_;
@@ -4349,6 +4645,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceBootStatus Clone() {
       return new DeviceBootStatus(this);
     }
@@ -4357,6 +4654,7 @@ namespace Toit.Proto.Model {
     public const int LastBootFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Timestamp lastBoot_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp LastBoot {
       get { return lastBoot_; }
       set {
@@ -4368,6 +4666,7 @@ namespace Toit.Proto.Model {
     public const int InFactoryFieldNumber = 2;
     private bool inFactory_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool InFactory {
       get { return inFactory_; }
       set {
@@ -4379,6 +4678,7 @@ namespace Toit.Proto.Model {
     public const int LastFactoryBootFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Timestamp lastFactoryBoot_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp LastFactoryBoot {
       get { return lastFactoryBoot_; }
       set {
@@ -4387,11 +4687,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DeviceBootStatus);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DeviceBootStatus other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4406,6 +4708,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (lastBoot_ != null) hash ^= LastBoot.GetHashCode();
@@ -4418,11 +4721,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4447,6 +4752,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (lastBoot_ != null) {
         output.WriteRawTag(10);
@@ -4467,6 +4773,7 @@ namespace Toit.Proto.Model {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (lastBoot_ != null) {
@@ -4485,6 +4792,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeviceBootStatus other) {
       if (other == null) {
         return;
@@ -4508,6 +4816,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4543,6 +4852,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4583,19 +4893,23 @@ namespace Toit.Proto.Model {
     private static readonly pb::MessageParser<DeviceHealth> _parser = new pb::MessageParser<DeviceHealth>(() => new DeviceHealth());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DeviceHealth> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceHealth() {
       OnConstruction();
     }
@@ -4603,6 +4917,7 @@ namespace Toit.Proto.Model {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceHealth(DeviceHealth other) : this() {
       power_ = other.power_ != null ? other.power_.Clone() : null;
       batteryCurve_ = other.batteryCurve_ != null ? other.batteryCurve_.Clone() : null;
@@ -4611,6 +4926,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceHealth Clone() {
       return new DeviceHealth(this);
     }
@@ -4619,6 +4935,7 @@ namespace Toit.Proto.Model {
     public const int PowerFieldNumber = 1;
     private global::Toit.Proto.Model.DeviceHealth.Types.Power power_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Toit.Proto.Model.DeviceHealth.Types.Power Power {
       get { return power_; }
       set {
@@ -4630,6 +4947,7 @@ namespace Toit.Proto.Model {
     public const int BatteryCurveFieldNumber = 2;
     private global::Toit.Proto.Model.DeviceHealth.Types.BatteryCurve batteryCurve_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Toit.Proto.Model.DeviceHealth.Types.BatteryCurve BatteryCurve {
       get { return batteryCurve_; }
       set {
@@ -4641,6 +4959,7 @@ namespace Toit.Proto.Model {
     public const int ConnectivityFieldNumber = 3;
     private global::Toit.Proto.Model.DeviceHealth.Types.Connectivity connectivity_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Toit.Proto.Model.DeviceHealth.Types.Connectivity Connectivity {
       get { return connectivity_; }
       set {
@@ -4649,11 +4968,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DeviceHealth);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DeviceHealth other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4668,6 +4989,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (power_ != null) hash ^= Power.GetHashCode();
@@ -4680,11 +5002,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4709,6 +5033,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (power_ != null) {
         output.WriteRawTag(10);
@@ -4729,6 +5054,7 @@ namespace Toit.Proto.Model {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (power_ != null) {
@@ -4747,6 +5073,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeviceHealth other) {
       if (other == null) {
         return;
@@ -4773,6 +5100,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4811,6 +5139,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4847,6 +5176,7 @@ namespace Toit.Proto.Model {
     #region Nested types
     /// <summary>Container for nested types declared in the DeviceHealth message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       public sealed partial class Power : pb::IMessage<Power>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4856,19 +5186,23 @@ namespace Toit.Proto.Model {
         private static readonly pb::MessageParser<Power> _parser = new pb::MessageParser<Power>(() => new Power());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Power> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Toit.Proto.Model.DeviceHealth.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Power() {
           OnConstruction();
         }
@@ -4876,6 +5210,7 @@ namespace Toit.Proto.Model {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Power(Power other) : this() {
           value_ = other.value_ != null ? other.value_.Clone() : null;
           lastUpdated_ = other.lastUpdated_ != null ? other.lastUpdated_.Clone() : null;
@@ -4883,6 +5218,7 @@ namespace Toit.Proto.Model {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Power Clone() {
           return new Power(this);
         }
@@ -4891,6 +5227,7 @@ namespace Toit.Proto.Model {
         public const int ValueFieldNumber = 1;
         private global::Toit.Proto.Model.DeviceHealth.Types.Power.Types.Value value_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Toit.Proto.Model.DeviceHealth.Types.Power.Types.Value Value {
           get { return value_; }
           set {
@@ -4902,6 +5239,7 @@ namespace Toit.Proto.Model {
         public const int LastUpdatedFieldNumber = 2;
         private global::Google.Protobuf.WellKnownTypes.Timestamp lastUpdated_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Protobuf.WellKnownTypes.Timestamp LastUpdated {
           get { return lastUpdated_; }
           set {
@@ -4910,11 +5248,13 @@ namespace Toit.Proto.Model {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Power);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Power other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -4928,6 +5268,7 @@ namespace Toit.Proto.Model {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (value_ != null) hash ^= Value.GetHashCode();
@@ -4939,11 +5280,13 @@ namespace Toit.Proto.Model {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -4964,6 +5307,7 @@ namespace Toit.Proto.Model {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (value_ != null) {
             output.WriteRawTag(10);
@@ -4980,6 +5324,7 @@ namespace Toit.Proto.Model {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (value_ != null) {
@@ -4995,6 +5340,7 @@ namespace Toit.Proto.Model {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Power other) {
           if (other == null) {
             return;
@@ -5015,6 +5361,7 @@ namespace Toit.Proto.Model {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -5046,6 +5393,7 @@ namespace Toit.Proto.Model {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -5075,6 +5423,7 @@ namespace Toit.Proto.Model {
         #region Nested types
         /// <summary>Container for nested types declared in the Power message type.</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           public sealed partial class Value : pb::IMessage<Value>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5084,19 +5433,23 @@ namespace Toit.Proto.Model {
             private static readonly pb::MessageParser<Value> _parser = new pb::MessageParser<Value>(() => new Value());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<Value> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Toit.Proto.Model.DeviceHealth.Types.Power.Descriptor.NestedTypes[0]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Value() {
               OnConstruction();
             }
@@ -5104,6 +5457,7 @@ namespace Toit.Proto.Model {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Value(Value other) : this() {
               switch (other.PowerCase) {
                 case PowerOneofCase.Battery:
@@ -5118,6 +5472,7 @@ namespace Toit.Proto.Model {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Value Clone() {
               return new Value(this);
             }
@@ -5125,6 +5480,7 @@ namespace Toit.Proto.Model {
             /// <summary>Field number for the "battery" field.</summary>
             public const int BatteryFieldNumber = 1;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public double Battery {
               get { return powerCase_ == PowerOneofCase.Battery ? (double) power_ : 0D; }
               set {
@@ -5136,6 +5492,7 @@ namespace Toit.Proto.Model {
             /// <summary>Field number for the "pluggedin" field.</summary>
             public const int PluggedinFieldNumber = 2;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public global::Google.Protobuf.WellKnownTypes.Empty Pluggedin {
               get { return powerCase_ == PowerOneofCase.Pluggedin ? (global::Google.Protobuf.WellKnownTypes.Empty) power_ : null; }
               set {
@@ -5153,22 +5510,26 @@ namespace Toit.Proto.Model {
             }
             private PowerOneofCase powerCase_ = PowerOneofCase.None;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public PowerOneofCase PowerCase {
               get { return powerCase_; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void ClearPower() {
               powerCase_ = PowerOneofCase.None;
               power_ = null;
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as Value);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(Value other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -5183,6 +5544,7 @@ namespace Toit.Proto.Model {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (powerCase_ == PowerOneofCase.Battery) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Battery);
@@ -5195,11 +5557,13 @@ namespace Toit.Proto.Model {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -5220,6 +5584,7 @@ namespace Toit.Proto.Model {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (powerCase_ == PowerOneofCase.Battery) {
                 output.WriteRawTag(9);
@@ -5236,6 +5601,7 @@ namespace Toit.Proto.Model {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (powerCase_ == PowerOneofCase.Battery) {
@@ -5251,6 +5617,7 @@ namespace Toit.Proto.Model {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(Value other) {
               if (other == null) {
                 return;
@@ -5271,6 +5638,7 @@ namespace Toit.Proto.Model {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -5301,6 +5669,7 @@ namespace Toit.Proto.Model {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -5341,19 +5710,23 @@ namespace Toit.Proto.Model {
         private static readonly pb::MessageParser<BatteryCurve> _parser = new pb::MessageParser<BatteryCurve>(() => new BatteryCurve());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<BatteryCurve> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Toit.Proto.Model.DeviceHealth.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public BatteryCurve() {
           OnConstruction();
         }
@@ -5361,6 +5734,7 @@ namespace Toit.Proto.Model {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public BatteryCurve(BatteryCurve other) : this() {
           slope_ = other.slope_;
           lastUpdated_ = other.lastUpdated_ != null ? other.lastUpdated_.Clone() : null;
@@ -5368,6 +5742,7 @@ namespace Toit.Proto.Model {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public BatteryCurve Clone() {
           return new BatteryCurve(this);
         }
@@ -5376,6 +5751,7 @@ namespace Toit.Proto.Model {
         public const int SlopeFieldNumber = 1;
         private double slope_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double Slope {
           get { return slope_; }
           set {
@@ -5387,6 +5763,7 @@ namespace Toit.Proto.Model {
         public const int LastUpdatedFieldNumber = 2;
         private global::Google.Protobuf.WellKnownTypes.Timestamp lastUpdated_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Protobuf.WellKnownTypes.Timestamp LastUpdated {
           get { return lastUpdated_; }
           set {
@@ -5395,11 +5772,13 @@ namespace Toit.Proto.Model {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as BatteryCurve);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(BatteryCurve other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -5413,6 +5792,7 @@ namespace Toit.Proto.Model {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Slope != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Slope);
@@ -5424,11 +5804,13 @@ namespace Toit.Proto.Model {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -5449,6 +5831,7 @@ namespace Toit.Proto.Model {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Slope != 0D) {
             output.WriteRawTag(9);
@@ -5465,6 +5848,7 @@ namespace Toit.Proto.Model {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Slope != 0D) {
@@ -5480,6 +5864,7 @@ namespace Toit.Proto.Model {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(BatteryCurve other) {
           if (other == null) {
             return;
@@ -5497,6 +5882,7 @@ namespace Toit.Proto.Model {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -5525,6 +5911,7 @@ namespace Toit.Proto.Model {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -5558,19 +5945,23 @@ namespace Toit.Proto.Model {
         private static readonly pb::MessageParser<Connectivity> _parser = new pb::MessageParser<Connectivity>(() => new Connectivity());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Connectivity> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Toit.Proto.Model.DeviceHealth.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Connectivity() {
           OnConstruction();
         }
@@ -5578,6 +5969,7 @@ namespace Toit.Proto.Model {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Connectivity(Connectivity other) : this() {
           lastSeen_ = other.lastSeen_ != null ? other.lastSeen_.Clone() : null;
           connected_ = other.connected_;
@@ -5586,6 +5978,7 @@ namespace Toit.Proto.Model {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Connectivity Clone() {
           return new Connectivity(this);
         }
@@ -5594,6 +5987,7 @@ namespace Toit.Proto.Model {
         public const int LastSeenFieldNumber = 1;
         private global::Google.Protobuf.WellKnownTypes.Timestamp lastSeen_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Protobuf.WellKnownTypes.Timestamp LastSeen {
           get { return lastSeen_; }
           set {
@@ -5605,6 +5999,7 @@ namespace Toit.Proto.Model {
         public const int ConnectedFieldNumber = 2;
         private bool connected_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Connected {
           get { return connected_; }
           set {
@@ -5618,16 +6013,19 @@ namespace Toit.Proto.Model {
             = pb::FieldCodec.ForMessage(26, global::Toit.Proto.Model.DeviceHealth.Types.Connectivity.Types.Checkin.Parser);
         private readonly pbc::RepeatedField<global::Toit.Proto.Model.DeviceHealth.Types.Connectivity.Types.Checkin> checkins_ = new pbc::RepeatedField<global::Toit.Proto.Model.DeviceHealth.Types.Connectivity.Types.Checkin>();
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Toit.Proto.Model.DeviceHealth.Types.Connectivity.Types.Checkin> Checkins {
           get { return checkins_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Connectivity);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Connectivity other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -5642,6 +6040,7 @@ namespace Toit.Proto.Model {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (lastSeen_ != null) hash ^= LastSeen.GetHashCode();
@@ -5654,11 +6053,13 @@ namespace Toit.Proto.Model {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -5680,6 +6081,7 @@ namespace Toit.Proto.Model {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (lastSeen_ != null) {
             output.WriteRawTag(10);
@@ -5697,6 +6099,7 @@ namespace Toit.Proto.Model {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (lastSeen_ != null) {
@@ -5713,6 +6116,7 @@ namespace Toit.Proto.Model {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Connectivity other) {
           if (other == null) {
             return;
@@ -5731,6 +6135,7 @@ namespace Toit.Proto.Model {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -5763,6 +6168,7 @@ namespace Toit.Proto.Model {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -5793,6 +6199,7 @@ namespace Toit.Proto.Model {
         #region Nested types
         /// <summary>Container for nested types declared in the Connectivity message type.</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           public sealed partial class Checkin : pb::IMessage<Checkin>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5802,19 +6209,23 @@ namespace Toit.Proto.Model {
             private static readonly pb::MessageParser<Checkin> _parser = new pb::MessageParser<Checkin>(() => new Checkin());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<Checkin> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Toit.Proto.Model.DeviceHealth.Types.Connectivity.Descriptor.NestedTypes[0]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Checkin() {
               OnConstruction();
             }
@@ -5822,12 +6233,14 @@ namespace Toit.Proto.Model {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Checkin(Checkin other) : this() {
               missed_ = other.missed_;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Checkin Clone() {
               return new Checkin(this);
             }
@@ -5836,6 +6249,7 @@ namespace Toit.Proto.Model {
             public const int MissedFieldNumber = 1;
             private bool missed_;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Missed {
               get { return missed_; }
               set {
@@ -5844,11 +6258,13 @@ namespace Toit.Proto.Model {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as Checkin);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(Checkin other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -5861,6 +6277,7 @@ namespace Toit.Proto.Model {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (Missed != false) hash ^= Missed.GetHashCode();
@@ -5871,11 +6288,13 @@ namespace Toit.Proto.Model {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -5892,6 +6311,7 @@ namespace Toit.Proto.Model {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (Missed != false) {
                 output.WriteRawTag(8);
@@ -5904,6 +6324,7 @@ namespace Toit.Proto.Model {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (Missed != false) {
@@ -5916,6 +6337,7 @@ namespace Toit.Proto.Model {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(Checkin other) {
               if (other == null) {
                 return;
@@ -5927,6 +6349,7 @@ namespace Toit.Proto.Model {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -5948,6 +6371,7 @@ namespace Toit.Proto.Model {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -5984,19 +6408,23 @@ namespace Toit.Proto.Model {
     private static readonly pb::MessageParser<HardwareIdentity> _parser = new pb::MessageParser<HardwareIdentity>(() => new HardwareIdentity());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<HardwareIdentity> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HardwareIdentity() {
       OnConstruction();
     }
@@ -6004,6 +6432,7 @@ namespace Toit.Proto.Model {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HardwareIdentity(HardwareIdentity other) : this() {
       hardwareId_ = other.hardwareId_;
       sequenceNumber_ = other.sequenceNumber_;
@@ -6014,6 +6443,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HardwareIdentity Clone() {
       return new HardwareIdentity(this);
     }
@@ -6022,6 +6452,7 @@ namespace Toit.Proto.Model {
     public const int HardwareIdFieldNumber = 1;
     private pb::ByteString hardwareId_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString HardwareId {
       get { return hardwareId_; }
       set {
@@ -6033,6 +6464,7 @@ namespace Toit.Proto.Model {
     public const int SequenceNumberFieldNumber = 2;
     private long sequenceNumber_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long SequenceNumber {
       get { return sequenceNumber_; }
       set {
@@ -6044,6 +6476,7 @@ namespace Toit.Proto.Model {
     public const int BatchFieldNumber = 3;
     private string batch_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Batch {
       get { return batch_; }
       set {
@@ -6055,6 +6488,7 @@ namespace Toit.Proto.Model {
     public const int PrivateKeyFieldNumber = 4;
     private pb::ByteString privateKey_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString PrivateKey {
       get { return privateKey_; }
       set {
@@ -6066,6 +6500,7 @@ namespace Toit.Proto.Model {
     public const int CertificateFieldNumber = 5;
     private pb::ByteString certificate_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Certificate {
       get { return certificate_; }
       set {
@@ -6074,11 +6509,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as HardwareIdentity);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(HardwareIdentity other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6095,6 +6532,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (HardwareId.Length != 0) hash ^= HardwareId.GetHashCode();
@@ -6109,11 +6547,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6146,6 +6586,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (HardwareId.Length != 0) {
         output.WriteRawTag(10);
@@ -6174,6 +6615,7 @@ namespace Toit.Proto.Model {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (HardwareId.Length != 0) {
@@ -6198,6 +6640,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(HardwareIdentity other) {
       if (other == null) {
         return;
@@ -6221,6 +6664,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6258,6 +6702,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6300,19 +6745,23 @@ namespace Toit.Proto.Model {
     private static readonly pb::MessageParser<HardwareIdentityInfo> _parser = new pb::MessageParser<HardwareIdentityInfo>(() => new HardwareIdentityInfo());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<HardwareIdentityInfo> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HardwareIdentityInfo() {
       OnConstruction();
     }
@@ -6320,6 +6769,7 @@ namespace Toit.Proto.Model {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HardwareIdentityInfo(HardwareIdentityInfo other) : this() {
       factorySdkVersion_ = other.factorySdkVersion_;
       flashedBy_ = other.flashedBy_;
@@ -6330,6 +6780,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HardwareIdentityInfo Clone() {
       return new HardwareIdentityInfo(this);
     }
@@ -6338,6 +6789,7 @@ namespace Toit.Proto.Model {
     public const int FactorySdkVersionFieldNumber = 1;
     private string factorySdkVersion_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string FactorySdkVersion {
       get { return factorySdkVersion_; }
       set {
@@ -6349,6 +6801,7 @@ namespace Toit.Proto.Model {
     public const int FlashedByFieldNumber = 2;
     private pb::ByteString flashedBy_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString FlashedBy {
       get { return flashedBy_; }
       set {
@@ -6360,6 +6813,7 @@ namespace Toit.Proto.Model {
     public const int IccidFieldNumber = 3;
     private string iccid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Iccid {
       get { return iccid_; }
       set {
@@ -6371,6 +6825,7 @@ namespace Toit.Proto.Model {
     public const int ChipIdFieldNumber = 4;
     private string chipId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ChipId {
       get { return chipId_; }
       set {
@@ -6382,6 +6837,7 @@ namespace Toit.Proto.Model {
     public const int FactoryDeviceModelFieldNumber = 5;
     private string factoryDeviceModel_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string FactoryDeviceModel {
       get { return factoryDeviceModel_; }
       set {
@@ -6390,11 +6846,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as HardwareIdentityInfo);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(HardwareIdentityInfo other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6411,6 +6869,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (FactorySdkVersion.Length != 0) hash ^= FactorySdkVersion.GetHashCode();
@@ -6425,11 +6884,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6462,6 +6923,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (FactorySdkVersion.Length != 0) {
         output.WriteRawTag(10);
@@ -6490,6 +6952,7 @@ namespace Toit.Proto.Model {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (FactorySdkVersion.Length != 0) {
@@ -6514,6 +6977,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(HardwareIdentityInfo other) {
       if (other == null) {
         return;
@@ -6537,6 +7001,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6574,6 +7039,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6616,19 +7082,23 @@ namespace Toit.Proto.Model {
     private static readonly pb::MessageParser<HardwareInfo> _parser = new pb::MessageParser<HardwareInfo>(() => new HardwareInfo());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<HardwareInfo> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HardwareInfo() {
       OnConstruction();
     }
@@ -6636,6 +7106,7 @@ namespace Toit.Proto.Model {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HardwareInfo(HardwareInfo other) : this() {
       hardwareId_ = other.hardwareId_;
       hardwareFqdn_ = other.hardwareFqdn_;
@@ -6644,6 +7115,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HardwareInfo Clone() {
       return new HardwareInfo(this);
     }
@@ -6652,6 +7124,7 @@ namespace Toit.Proto.Model {
     public const int HardwareIdFieldNumber = 1;
     private pb::ByteString hardwareId_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString HardwareId {
       get { return hardwareId_; }
       set {
@@ -6663,6 +7136,7 @@ namespace Toit.Proto.Model {
     public const int HardwareFqdnFieldNumber = 2;
     private string hardwareFqdn_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string HardwareFqdn {
       get { return hardwareFqdn_; }
       set {
@@ -6674,6 +7148,7 @@ namespace Toit.Proto.Model {
     public const int OrganizationIdFieldNumber = 4;
     private pb::ByteString organizationId_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString OrganizationId {
       get { return organizationId_; }
       set {
@@ -6682,11 +7157,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as HardwareInfo);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(HardwareInfo other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6701,6 +7178,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (HardwareId.Length != 0) hash ^= HardwareId.GetHashCode();
@@ -6713,11 +7191,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6742,6 +7222,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (HardwareId.Length != 0) {
         output.WriteRawTag(10);
@@ -6762,6 +7243,7 @@ namespace Toit.Proto.Model {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (HardwareId.Length != 0) {
@@ -6780,6 +7262,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(HardwareInfo other) {
       if (other == null) {
         return;
@@ -6797,6 +7280,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6826,6 +7310,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6860,19 +7345,23 @@ namespace Toit.Proto.Model {
     private static readonly pb::MessageParser<HardwareToDeviceInfo> _parser = new pb::MessageParser<HardwareToDeviceInfo>(() => new HardwareToDeviceInfo());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<HardwareToDeviceInfo> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HardwareToDeviceInfo() {
       OnConstruction();
     }
@@ -6880,6 +7369,7 @@ namespace Toit.Proto.Model {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HardwareToDeviceInfo(HardwareToDeviceInfo other) : this() {
       hardwareId_ = other.hardwareId_;
       deviceId_ = other.deviceId_;
@@ -6889,6 +7379,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HardwareToDeviceInfo Clone() {
       return new HardwareToDeviceInfo(this);
     }
@@ -6897,6 +7388,7 @@ namespace Toit.Proto.Model {
     public const int HardwareIdFieldNumber = 1;
     private pb::ByteString hardwareId_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString HardwareId {
       get { return hardwareId_; }
       set {
@@ -6908,6 +7400,7 @@ namespace Toit.Proto.Model {
     public const int DeviceIdFieldNumber = 2;
     private pb::ByteString deviceId_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString DeviceId {
       get { return deviceId_; }
       set {
@@ -6919,6 +7412,7 @@ namespace Toit.Proto.Model {
     public const int BoundFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Timestamp bound_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp Bound {
       get { return bound_; }
       set {
@@ -6930,6 +7424,7 @@ namespace Toit.Proto.Model {
     public const int UnboundFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Timestamp unbound_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp Unbound {
       get { return unbound_; }
       set {
@@ -6938,11 +7433,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as HardwareToDeviceInfo);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(HardwareToDeviceInfo other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6958,6 +7455,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (HardwareId.Length != 0) hash ^= HardwareId.GetHashCode();
@@ -6971,11 +7469,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7004,6 +7504,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (HardwareId.Length != 0) {
         output.WriteRawTag(10);
@@ -7028,6 +7529,7 @@ namespace Toit.Proto.Model {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (HardwareId.Length != 0) {
@@ -7049,6 +7551,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(HardwareToDeviceInfo other) {
       if (other == null) {
         return;
@@ -7075,6 +7578,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -7114,6 +7618,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -7158,19 +7663,23 @@ namespace Toit.Proto.Model {
     private static readonly pb::MessageParser<DeviceEvent> _parser = new pb::MessageParser<DeviceEvent>(() => new DeviceEvent());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DeviceEvent> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceEvent() {
       OnConstruction();
     }
@@ -7178,6 +7687,7 @@ namespace Toit.Proto.Model {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceEvent(DeviceEvent other) : this() {
       deviceId_ = other.deviceId_;
       eventId_ = other.eventId_;
@@ -7191,6 +7701,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceEvent Clone() {
       return new DeviceEvent(this);
     }
@@ -7199,6 +7710,7 @@ namespace Toit.Proto.Model {
     public const int DeviceIdFieldNumber = 1;
     private pb::ByteString deviceId_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString DeviceId {
       get { return deviceId_; }
       set {
@@ -7214,6 +7726,7 @@ namespace Toit.Proto.Model {
     /// events can be sorted, and will always be returned in increasing order.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString EventId {
       get { return eventId_; }
       set {
@@ -7225,6 +7738,7 @@ namespace Toit.Proto.Model {
     public const int CreatedFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Timestamp created_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp Created {
       get { return created_; }
       set {
@@ -7236,6 +7750,7 @@ namespace Toit.Proto.Model {
     public const int TypeFieldNumber = 4;
     private global::Toit.Proto.Model.DeviceEvent.Types.Type type_ = global::Toit.Proto.Model.DeviceEvent.Types.Type.Unknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Toit.Proto.Model.DeviceEvent.Types.Type Type {
       get { return type_; }
       set {
@@ -7247,6 +7762,7 @@ namespace Toit.Proto.Model {
     public const int MsgFieldNumber = 5;
     private string msg_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Msg {
       get { return msg_; }
       set {
@@ -7258,6 +7774,7 @@ namespace Toit.Proto.Model {
     public const int DataFieldNumber = 6;
     private pb::ByteString data_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Data {
       get { return data_; }
       set {
@@ -7269,6 +7786,7 @@ namespace Toit.Proto.Model {
     public const int InitiaterFieldNumber = 7;
     private global::Toit.Proto.Model.DeviceEvent.Types.Initiater initiater_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Toit.Proto.Model.DeviceEvent.Types.Initiater Initiater {
       get { return initiater_; }
       set {
@@ -7282,16 +7800,19 @@ namespace Toit.Proto.Model {
         = pb::FieldCodec.ForMessage(66, global::Toit.Proto.Model.DeviceEvent.Types.Info.Parser);
     private readonly pbc::RepeatedField<global::Toit.Proto.Model.DeviceEvent.Types.Info> information_ = new pbc::RepeatedField<global::Toit.Proto.Model.DeviceEvent.Types.Info>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Toit.Proto.Model.DeviceEvent.Types.Info> Information {
       get { return information_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DeviceEvent);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DeviceEvent other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7311,6 +7832,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (DeviceId.Length != 0) hash ^= DeviceId.GetHashCode();
@@ -7328,11 +7850,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7374,6 +7898,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (DeviceId.Length != 0) {
         output.WriteRawTag(10);
@@ -7411,6 +7936,7 @@ namespace Toit.Proto.Model {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (DeviceId.Length != 0) {
@@ -7442,6 +7968,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeviceEvent other) {
       if (other == null) {
         return;
@@ -7478,6 +8005,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -7533,6 +8061,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -7586,6 +8115,7 @@ namespace Toit.Proto.Model {
     #region Nested types
     /// <summary>Container for nested types declared in the DeviceEvent message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       public enum Type {
         [pbr::OriginalName("UNKNOWN")] Unknown = 0,
@@ -7605,19 +8135,23 @@ namespace Toit.Proto.Model {
         private static readonly pb::MessageParser<Initiater> _parser = new pb::MessageParser<Initiater>(() => new Initiater());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Initiater> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Toit.Proto.Model.DeviceEvent.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Initiater() {
           OnConstruction();
         }
@@ -7625,6 +8159,7 @@ namespace Toit.Proto.Model {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Initiater(Initiater other) : this() {
           switch (other.InitiaterCase) {
             case InitiaterOneofCase.Device:
@@ -7642,6 +8177,7 @@ namespace Toit.Proto.Model {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Initiater Clone() {
           return new Initiater(this);
         }
@@ -7649,6 +8185,7 @@ namespace Toit.Proto.Model {
         /// <summary>Field number for the "device" field.</summary>
         public const int DeviceFieldNumber = 1;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Toit.Proto.Model.DeviceEvent.Types.Initiater.Types.Device Device {
           get { return initiaterCase_ == InitiaterOneofCase.Device ? (global::Toit.Proto.Model.DeviceEvent.Types.Initiater.Types.Device) initiater_ : null; }
           set {
@@ -7660,6 +8197,7 @@ namespace Toit.Proto.Model {
         /// <summary>Field number for the "console" field.</summary>
         public const int ConsoleFieldNumber = 2;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Toit.Proto.Model.DeviceEvent.Types.Initiater.Types.Console Console {
           get { return initiaterCase_ == InitiaterOneofCase.Console ? (global::Toit.Proto.Model.DeviceEvent.Types.Initiater.Types.Console) initiater_ : null; }
           set {
@@ -7671,6 +8209,7 @@ namespace Toit.Proto.Model {
         /// <summary>Field number for the "user" field.</summary>
         public const int UserFieldNumber = 3;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Toit.Proto.Model.DeviceEvent.Types.Initiater.Types.User User {
           get { return initiaterCase_ == InitiaterOneofCase.User ? (global::Toit.Proto.Model.DeviceEvent.Types.Initiater.Types.User) initiater_ : null; }
           set {
@@ -7689,22 +8228,26 @@ namespace Toit.Proto.Model {
         }
         private InitiaterOneofCase initiaterCase_ = InitiaterOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public InitiaterOneofCase InitiaterCase {
           get { return initiaterCase_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void ClearInitiater() {
           initiaterCase_ = InitiaterOneofCase.None;
           initiater_ = null;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Initiater);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Initiater other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -7720,6 +8263,7 @@ namespace Toit.Proto.Model {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (initiaterCase_ == InitiaterOneofCase.Device) hash ^= Device.GetHashCode();
@@ -7733,11 +8277,13 @@ namespace Toit.Proto.Model {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -7762,6 +8308,7 @@ namespace Toit.Proto.Model {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (initiaterCase_ == InitiaterOneofCase.Device) {
             output.WriteRawTag(10);
@@ -7782,6 +8329,7 @@ namespace Toit.Proto.Model {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (initiaterCase_ == InitiaterOneofCase.Device) {
@@ -7800,6 +8348,7 @@ namespace Toit.Proto.Model {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Initiater other) {
           if (other == null) {
             return;
@@ -7829,6 +8378,7 @@ namespace Toit.Proto.Model {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -7873,6 +8423,7 @@ namespace Toit.Proto.Model {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -7915,6 +8466,7 @@ namespace Toit.Proto.Model {
         #region Nested types
         /// <summary>Container for nested types declared in the Initiater message type.</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           public sealed partial class Device : pb::IMessage<Device>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7924,19 +8476,23 @@ namespace Toit.Proto.Model {
             private static readonly pb::MessageParser<Device> _parser = new pb::MessageParser<Device>(() => new Device());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<Device> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Toit.Proto.Model.DeviceEvent.Types.Initiater.Descriptor.NestedTypes[0]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Device() {
               OnConstruction();
             }
@@ -7944,12 +8500,14 @@ namespace Toit.Proto.Model {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Device(Device other) : this() {
               deviceId_ = other.deviceId_;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Device Clone() {
               return new Device(this);
             }
@@ -7958,6 +8516,7 @@ namespace Toit.Proto.Model {
             public const int DeviceIdFieldNumber = 1;
             private pb::ByteString deviceId_ = pb::ByteString.Empty;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public pb::ByteString DeviceId {
               get { return deviceId_; }
               set {
@@ -7966,11 +8525,13 @@ namespace Toit.Proto.Model {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as Device);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(Device other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -7983,6 +8544,7 @@ namespace Toit.Proto.Model {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (DeviceId.Length != 0) hash ^= DeviceId.GetHashCode();
@@ -7993,11 +8555,13 @@ namespace Toit.Proto.Model {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -8014,6 +8578,7 @@ namespace Toit.Proto.Model {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (DeviceId.Length != 0) {
                 output.WriteRawTag(10);
@@ -8026,6 +8591,7 @@ namespace Toit.Proto.Model {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (DeviceId.Length != 0) {
@@ -8038,6 +8604,7 @@ namespace Toit.Proto.Model {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(Device other) {
               if (other == null) {
                 return;
@@ -8049,6 +8616,7 @@ namespace Toit.Proto.Model {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -8070,6 +8638,7 @@ namespace Toit.Proto.Model {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -8096,19 +8665,23 @@ namespace Toit.Proto.Model {
             private static readonly pb::MessageParser<Console> _parser = new pb::MessageParser<Console>(() => new Console());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<Console> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Toit.Proto.Model.DeviceEvent.Types.Initiater.Descriptor.NestedTypes[1]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Console() {
               OnConstruction();
             }
@@ -8116,21 +8689,25 @@ namespace Toit.Proto.Model {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Console(Console other) : this() {
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Console Clone() {
               return new Console(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as Console);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(Console other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -8142,6 +8719,7 @@ namespace Toit.Proto.Model {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (_unknownFields != null) {
@@ -8151,11 +8729,13 @@ namespace Toit.Proto.Model {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -8168,6 +8748,7 @@ namespace Toit.Proto.Model {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(ref output);
@@ -8176,6 +8757,7 @@ namespace Toit.Proto.Model {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (_unknownFields != null) {
@@ -8185,6 +8767,7 @@ namespace Toit.Proto.Model {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(Console other) {
               if (other == null) {
                 return;
@@ -8193,6 +8776,7 @@ namespace Toit.Proto.Model {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -8210,6 +8794,7 @@ namespace Toit.Proto.Model {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -8232,19 +8817,23 @@ namespace Toit.Proto.Model {
             private static readonly pb::MessageParser<User> _parser = new pb::MessageParser<User>(() => new User());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<User> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Toit.Proto.Model.DeviceEvent.Types.Initiater.Descriptor.NestedTypes[2]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public User() {
               OnConstruction();
             }
@@ -8252,12 +8841,14 @@ namespace Toit.Proto.Model {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public User(User other) : this() {
               userId_ = other.userId_;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public User Clone() {
               return new User(this);
             }
@@ -8266,6 +8857,7 @@ namespace Toit.Proto.Model {
             public const int UserIdFieldNumber = 1;
             private pb::ByteString userId_ = pb::ByteString.Empty;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public pb::ByteString UserId {
               get { return userId_; }
               set {
@@ -8274,11 +8866,13 @@ namespace Toit.Proto.Model {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as User);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(User other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -8291,6 +8885,7 @@ namespace Toit.Proto.Model {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (UserId.Length != 0) hash ^= UserId.GetHashCode();
@@ -8301,11 +8896,13 @@ namespace Toit.Proto.Model {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -8322,6 +8919,7 @@ namespace Toit.Proto.Model {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (UserId.Length != 0) {
                 output.WriteRawTag(10);
@@ -8334,6 +8932,7 @@ namespace Toit.Proto.Model {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (UserId.Length != 0) {
@@ -8346,6 +8945,7 @@ namespace Toit.Proto.Model {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(User other) {
               if (other == null) {
                 return;
@@ -8357,6 +8957,7 @@ namespace Toit.Proto.Model {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -8378,6 +8979,7 @@ namespace Toit.Proto.Model {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -8409,19 +9011,23 @@ namespace Toit.Proto.Model {
         private static readonly pb::MessageParser<Info> _parser = new pb::MessageParser<Info>(() => new Info());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Info> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Toit.Proto.Model.DeviceEvent.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Info() {
           OnConstruction();
         }
@@ -8429,6 +9035,7 @@ namespace Toit.Proto.Model {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Info(Info other) : this() {
           key_ = other.key_;
           value_ = other.value_ != null ? other.value_.Clone() : null;
@@ -8436,6 +9043,7 @@ namespace Toit.Proto.Model {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Info Clone() {
           return new Info(this);
         }
@@ -8444,6 +9052,7 @@ namespace Toit.Proto.Model {
         public const int KeyFieldNumber = 1;
         private string key_ = "";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Key {
           get { return key_; }
           set {
@@ -8455,6 +9064,7 @@ namespace Toit.Proto.Model {
         public const int ValueFieldNumber = 2;
         private global::Toit.Proto.Model.DeviceEvent.Types.Info.Types.Value value_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Toit.Proto.Model.DeviceEvent.Types.Info.Types.Value Value {
           get { return value_; }
           set {
@@ -8463,11 +9073,13 @@ namespace Toit.Proto.Model {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Info);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Info other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -8481,6 +9093,7 @@ namespace Toit.Proto.Model {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Key.Length != 0) hash ^= Key.GetHashCode();
@@ -8492,11 +9105,13 @@ namespace Toit.Proto.Model {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -8517,6 +9132,7 @@ namespace Toit.Proto.Model {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Key.Length != 0) {
             output.WriteRawTag(10);
@@ -8533,6 +9149,7 @@ namespace Toit.Proto.Model {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Key.Length != 0) {
@@ -8548,6 +9165,7 @@ namespace Toit.Proto.Model {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Info other) {
           if (other == null) {
             return;
@@ -8565,6 +9183,7 @@ namespace Toit.Proto.Model {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -8593,6 +9212,7 @@ namespace Toit.Proto.Model {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -8619,6 +9239,7 @@ namespace Toit.Proto.Model {
         #region Nested types
         /// <summary>Container for nested types declared in the Info message type.</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           public sealed partial class Value : pb::IMessage<Value>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8628,19 +9249,23 @@ namespace Toit.Proto.Model {
             private static readonly pb::MessageParser<Value> _parser = new pb::MessageParser<Value>(() => new Value());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<Value> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Toit.Proto.Model.DeviceEvent.Types.Info.Descriptor.NestedTypes[0]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Value() {
               OnConstruction();
             }
@@ -8648,6 +9273,7 @@ namespace Toit.Proto.Model {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Value(Value other) : this() {
               switch (other.ValueCase) {
                 case ValueOneofCase.Primitive:
@@ -8665,6 +9291,7 @@ namespace Toit.Proto.Model {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Value Clone() {
               return new Value(this);
             }
@@ -8672,6 +9299,7 @@ namespace Toit.Proto.Model {
             /// <summary>Field number for the "primitive" field.</summary>
             public const int PrimitiveFieldNumber = 1;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public global::Toit.Proto.Model.DeviceEvent.Types.Info.Types.Value.Types.Primitive Primitive {
               get { return valueCase_ == ValueOneofCase.Primitive ? (global::Toit.Proto.Model.DeviceEvent.Types.Info.Types.Value.Types.Primitive) value_ : null; }
               set {
@@ -8683,6 +9311,7 @@ namespace Toit.Proto.Model {
             /// <summary>Field number for the "diff" field.</summary>
             public const int DiffFieldNumber = 2;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public global::Toit.Proto.Model.DeviceEvent.Types.Info.Types.Value.Types.Diff Diff {
               get { return valueCase_ == ValueOneofCase.Diff ? (global::Toit.Proto.Model.DeviceEvent.Types.Info.Types.Value.Types.Diff) value_ : null; }
               set {
@@ -8694,6 +9323,7 @@ namespace Toit.Proto.Model {
             /// <summary>Field number for the "error" field.</summary>
             public const int ErrorFieldNumber = 3;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public global::Toit.Proto.Model.DeviceEvent.Types.Info.Types.Value.Types.Error Error {
               get { return valueCase_ == ValueOneofCase.Error ? (global::Toit.Proto.Model.DeviceEvent.Types.Info.Types.Value.Types.Error) value_ : null; }
               set {
@@ -8712,22 +9342,26 @@ namespace Toit.Proto.Model {
             }
             private ValueOneofCase valueCase_ = ValueOneofCase.None;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public ValueOneofCase ValueCase {
               get { return valueCase_; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void ClearValue() {
               valueCase_ = ValueOneofCase.None;
               value_ = null;
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as Value);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(Value other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -8743,6 +9377,7 @@ namespace Toit.Proto.Model {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (valueCase_ == ValueOneofCase.Primitive) hash ^= Primitive.GetHashCode();
@@ -8756,11 +9391,13 @@ namespace Toit.Proto.Model {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -8785,6 +9422,7 @@ namespace Toit.Proto.Model {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (valueCase_ == ValueOneofCase.Primitive) {
                 output.WriteRawTag(10);
@@ -8805,6 +9443,7 @@ namespace Toit.Proto.Model {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (valueCase_ == ValueOneofCase.Primitive) {
@@ -8823,6 +9462,7 @@ namespace Toit.Proto.Model {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(Value other) {
               if (other == null) {
                 return;
@@ -8852,6 +9492,7 @@ namespace Toit.Proto.Model {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -8896,6 +9537,7 @@ namespace Toit.Proto.Model {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -8938,6 +9580,7 @@ namespace Toit.Proto.Model {
             #region Nested types
             /// <summary>Container for nested types declared in the Value message type.</summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static partial class Types {
               public sealed partial class Primitive : pb::IMessage<Primitive>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8947,19 +9590,23 @@ namespace Toit.Proto.Model {
                 private static readonly pb::MessageParser<Primitive> _parser = new pb::MessageParser<Primitive>(() => new Primitive());
                 private pb::UnknownFieldSet _unknownFields;
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static pb::MessageParser<Primitive> Parser { get { return _parser; } }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static pbr::MessageDescriptor Descriptor {
                   get { return global::Toit.Proto.Model.DeviceEvent.Types.Info.Types.Value.Descriptor.NestedTypes[0]; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 pbr::MessageDescriptor pb::IMessage.Descriptor {
                   get { return Descriptor; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public Primitive() {
                   OnConstruction();
                 }
@@ -8967,6 +9614,7 @@ namespace Toit.Proto.Model {
                 partial void OnConstruction();
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public Primitive(Primitive other) : this() {
                   type_ = other.type_;
                   value_ = other.value_;
@@ -8974,6 +9622,7 @@ namespace Toit.Proto.Model {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public Primitive Clone() {
                   return new Primitive(this);
                 }
@@ -8982,6 +9631,7 @@ namespace Toit.Proto.Model {
                 public const int TypeFieldNumber = 1;
                 private global::Toit.Proto.Model.DeviceEvent.Types.Info.Types.Value.Types.Primitive.Types.Type type_ = global::Toit.Proto.Model.DeviceEvent.Types.Info.Types.Value.Types.Primitive.Types.Type.Invalid;
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public global::Toit.Proto.Model.DeviceEvent.Types.Info.Types.Value.Types.Primitive.Types.Type Type {
                   get { return type_; }
                   set {
@@ -8993,6 +9643,7 @@ namespace Toit.Proto.Model {
                 public const int ValueFieldNumber = 2;
                 private pb::ByteString value_ = pb::ByteString.Empty;
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public pb::ByteString Value {
                   get { return value_; }
                   set {
@@ -9001,11 +9652,13 @@ namespace Toit.Proto.Model {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override bool Equals(object other) {
                   return Equals(other as Primitive);
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public bool Equals(Primitive other) {
                   if (ReferenceEquals(other, null)) {
                     return false;
@@ -9019,6 +9672,7 @@ namespace Toit.Proto.Model {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override int GetHashCode() {
                   int hash = 1;
                   if (Type != global::Toit.Proto.Model.DeviceEvent.Types.Info.Types.Value.Types.Primitive.Types.Type.Invalid) hash ^= Type.GetHashCode();
@@ -9030,11 +9684,13 @@ namespace Toit.Proto.Model {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override string ToString() {
                   return pb::JsonFormatter.ToDiagnosticString(this);
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void WriteTo(pb::CodedOutputStream output) {
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   output.WriteRawMessage(this);
@@ -9055,6 +9711,7 @@ namespace Toit.Proto.Model {
 
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
                   if (Type != global::Toit.Proto.Model.DeviceEvent.Types.Info.Types.Value.Types.Primitive.Types.Type.Invalid) {
                     output.WriteRawTag(8);
@@ -9071,6 +9728,7 @@ namespace Toit.Proto.Model {
                 #endif
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public int CalculateSize() {
                   int size = 0;
                   if (Type != global::Toit.Proto.Model.DeviceEvent.Types.Info.Types.Value.Types.Primitive.Types.Type.Invalid) {
@@ -9086,6 +9744,7 @@ namespace Toit.Proto.Model {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void MergeFrom(Primitive other) {
                   if (other == null) {
                     return;
@@ -9100,6 +9759,7 @@ namespace Toit.Proto.Model {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void MergeFrom(pb::CodedInputStream input) {
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   input.ReadRawMessage(this);
@@ -9125,6 +9785,7 @@ namespace Toit.Proto.Model {
 
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
                   uint tag;
                   while ((tag = input.ReadTag()) != 0) {
@@ -9148,6 +9809,7 @@ namespace Toit.Proto.Model {
                 #region Nested types
                 /// <summary>Container for nested types declared in the Primitive message type.</summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static partial class Types {
                   public enum Type {
                     [pbr::OriginalName("INVALID")] Invalid = 0,
@@ -9168,19 +9830,23 @@ namespace Toit.Proto.Model {
                 private static readonly pb::MessageParser<Diff> _parser = new pb::MessageParser<Diff>(() => new Diff());
                 private pb::UnknownFieldSet _unknownFields;
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static pb::MessageParser<Diff> Parser { get { return _parser; } }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static pbr::MessageDescriptor Descriptor {
                   get { return global::Toit.Proto.Model.DeviceEvent.Types.Info.Types.Value.Descriptor.NestedTypes[1]; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 pbr::MessageDescriptor pb::IMessage.Descriptor {
                   get { return Descriptor; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public Diff() {
                   OnConstruction();
                 }
@@ -9188,6 +9854,7 @@ namespace Toit.Proto.Model {
                 partial void OnConstruction();
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public Diff(Diff other) : this() {
                   from_ = other.from_ != null ? other.from_.Clone() : null;
                   to_ = other.to_ != null ? other.to_.Clone() : null;
@@ -9195,6 +9862,7 @@ namespace Toit.Proto.Model {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public Diff Clone() {
                   return new Diff(this);
                 }
@@ -9203,6 +9871,7 @@ namespace Toit.Proto.Model {
                 public const int FromFieldNumber = 1;
                 private global::Toit.Proto.Model.DeviceEvent.Types.Info.Types.Value.Types.Primitive from_;
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public global::Toit.Proto.Model.DeviceEvent.Types.Info.Types.Value.Types.Primitive From {
                   get { return from_; }
                   set {
@@ -9214,6 +9883,7 @@ namespace Toit.Proto.Model {
                 public const int ToFieldNumber = 2;
                 private global::Toit.Proto.Model.DeviceEvent.Types.Info.Types.Value.Types.Primitive to_;
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public global::Toit.Proto.Model.DeviceEvent.Types.Info.Types.Value.Types.Primitive To {
                   get { return to_; }
                   set {
@@ -9222,11 +9892,13 @@ namespace Toit.Proto.Model {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override bool Equals(object other) {
                   return Equals(other as Diff);
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public bool Equals(Diff other) {
                   if (ReferenceEquals(other, null)) {
                     return false;
@@ -9240,6 +9912,7 @@ namespace Toit.Proto.Model {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override int GetHashCode() {
                   int hash = 1;
                   if (from_ != null) hash ^= From.GetHashCode();
@@ -9251,11 +9924,13 @@ namespace Toit.Proto.Model {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override string ToString() {
                   return pb::JsonFormatter.ToDiagnosticString(this);
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void WriteTo(pb::CodedOutputStream output) {
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   output.WriteRawMessage(this);
@@ -9276,6 +9951,7 @@ namespace Toit.Proto.Model {
 
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
                   if (from_ != null) {
                     output.WriteRawTag(10);
@@ -9292,6 +9968,7 @@ namespace Toit.Proto.Model {
                 #endif
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public int CalculateSize() {
                   int size = 0;
                   if (from_ != null) {
@@ -9307,6 +9984,7 @@ namespace Toit.Proto.Model {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void MergeFrom(Diff other) {
                   if (other == null) {
                     return;
@@ -9327,6 +10005,7 @@ namespace Toit.Proto.Model {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void MergeFrom(pb::CodedInputStream input) {
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   input.ReadRawMessage(this);
@@ -9358,6 +10037,7 @@ namespace Toit.Proto.Model {
 
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
                   uint tag;
                   while ((tag = input.ReadTag()) != 0) {
@@ -9394,19 +10074,23 @@ namespace Toit.Proto.Model {
                 private static readonly pb::MessageParser<Error> _parser = new pb::MessageParser<Error>(() => new Error());
                 private pb::UnknownFieldSet _unknownFields;
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static pb::MessageParser<Error> Parser { get { return _parser; } }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static pbr::MessageDescriptor Descriptor {
                   get { return global::Toit.Proto.Model.DeviceEvent.Types.Info.Types.Value.Descriptor.NestedTypes[2]; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 pbr::MessageDescriptor pb::IMessage.Descriptor {
                   get { return Descriptor; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public Error() {
                   OnConstruction();
                 }
@@ -9414,12 +10098,14 @@ namespace Toit.Proto.Model {
                 partial void OnConstruction();
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public Error(Error other) : this() {
                   error_ = other.error_;
                   _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public Error Clone() {
                   return new Error(this);
                 }
@@ -9428,6 +10114,7 @@ namespace Toit.Proto.Model {
                 public const int Error_FieldNumber = 1;
                 private string error_ = "";
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public string Error_ {
                   get { return error_; }
                   set {
@@ -9436,11 +10123,13 @@ namespace Toit.Proto.Model {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override bool Equals(object other) {
                   return Equals(other as Error);
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public bool Equals(Error other) {
                   if (ReferenceEquals(other, null)) {
                     return false;
@@ -9453,6 +10142,7 @@ namespace Toit.Proto.Model {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override int GetHashCode() {
                   int hash = 1;
                   if (Error_.Length != 0) hash ^= Error_.GetHashCode();
@@ -9463,11 +10153,13 @@ namespace Toit.Proto.Model {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override string ToString() {
                   return pb::JsonFormatter.ToDiagnosticString(this);
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void WriteTo(pb::CodedOutputStream output) {
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   output.WriteRawMessage(this);
@@ -9484,6 +10176,7 @@ namespace Toit.Proto.Model {
 
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
                   if (Error_.Length != 0) {
                     output.WriteRawTag(10);
@@ -9496,6 +10189,7 @@ namespace Toit.Proto.Model {
                 #endif
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public int CalculateSize() {
                   int size = 0;
                   if (Error_.Length != 0) {
@@ -9508,6 +10202,7 @@ namespace Toit.Proto.Model {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void MergeFrom(Error other) {
                   if (other == null) {
                     return;
@@ -9519,6 +10214,7 @@ namespace Toit.Proto.Model {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void MergeFrom(pb::CodedInputStream input) {
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   input.ReadRawMessage(this);
@@ -9540,6 +10236,7 @@ namespace Toit.Proto.Model {
 
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
                   uint tag;
                   while ((tag = input.ReadTag()) != 0) {
@@ -9581,19 +10278,23 @@ namespace Toit.Proto.Model {
     private static readonly pb::MessageParser<DeviceModelSettings> _parser = new pb::MessageParser<DeviceModelSettings>(() => new DeviceModelSettings());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DeviceModelSettings> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceModelSettings() {
       OnConstruction();
     }
@@ -9601,12 +10302,14 @@ namespace Toit.Proto.Model {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceModelSettings(DeviceModelSettings other) : this() {
       parameters_ = other.parameters_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceModelSettings Clone() {
       return new DeviceModelSettings(this);
     }
@@ -9617,16 +10320,19 @@ namespace Toit.Proto.Model {
         = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt32(16, 0), 10);
     private readonly pbc::MapField<string, int> parameters_ = new pbc::MapField<string, int>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, int> Parameters {
       get { return parameters_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DeviceModelSettings);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DeviceModelSettings other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -9639,6 +10345,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= Parameters.GetHashCode();
@@ -9649,11 +10356,13 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -9667,6 +10376,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       parameters_.WriteTo(ref output, _map_parameters_codec);
       if (_unknownFields != null) {
@@ -9676,6 +10386,7 @@ namespace Toit.Proto.Model {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += parameters_.CalculateSize(_map_parameters_codec);
@@ -9686,6 +10397,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeviceModelSettings other) {
       if (other == null) {
         return;
@@ -9695,6 +10407,7 @@ namespace Toit.Proto.Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -9716,6 +10429,7 @@ namespace Toit.Proto.Model {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
