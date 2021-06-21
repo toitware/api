@@ -1,6 +1,6 @@
 {
-  "name": "@toitware/api",
-  "version": "0.1.0",
+  "name": "@toit/api",
+  "version": "0.11.2",
   "description": "Toitware API library",
   "main": "index.js",
   "scripts": {
@@ -25,9 +25,9 @@
     "typescript-grpc": "0.0.2"
   },
   "keywords": [
-    "toitware",
-    "toitware client",
-    "toitware api",
-    "toitware library"
+    "toit",
+    "toit client",
+    "toit api",
+    "toit library"
   ]
 }
