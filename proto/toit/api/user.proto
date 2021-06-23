@@ -120,8 +120,8 @@ message UserChange {
   oneof change {
     bool set_settings_welcome_closed = 1;
     bool set_settings_newsletter = 2;
-    bool set_settings_role = 3;
-    bool set_settings_username = 4; 
+    string role = 3;
+    string name = 4; 
   }
 }
 
