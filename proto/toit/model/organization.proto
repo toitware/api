@@ -42,6 +42,9 @@ message User {
     message Settings {
         bool welcome_closed = 1;
         bool newsletter = 2;
+        string role = 3;
+        string username = 4;
+
     }
     bytes id = 1;
     bytes organization_id = 2;
