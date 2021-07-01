@@ -37,25 +37,25 @@ namespace Toit.Proto.Model {
             "cGUSEgoKaHdpZF9xdW90YRgQIAEoBCKSAQoOUGF5bWVudERldGFpbHMSDQoF",
             "bGFzdDQYASABKAkSDgoGZXhwaXJ5GAIgASgJEhQKDGV4cGlyeV9tb250aBgD",
             "IAEoCRITCgtleHBpcnlfeWVhchgEIAEoCRINCgVicmFuZBgFIAEoCRIUCgxj",
-            "b3VudHJ5X2NvZGUYBiABKAkSEQoJY3ZjX2NoZWNrGAcgASgJIq0BCgRVc2Vy",
+            "b3VudHJ5X2NvZGUYBiABKAkSEQoJY3ZjX2NoZWNrGAcgASgJIrsBCgRVc2Vy",
             "EgoKAmlkGAEgASgMEhcKD29yZ2FuaXphdGlvbl9pZBgCIAEoDBINCgVlbWFp",
             "bBgDIAEoCRIMCgRuYW1lGAQgASgJEisKCHNldHRpbmdzGAUgASgLMhkudG9p",
-            "dC5tb2RlbC5Vc2VyLlNldHRpbmdzGjYKCFNldHRpbmdzEhYKDndlbGNvbWVf",
-            "Y2xvc2VkGAEgASgIEhIKCm5ld3NsZXR0ZXIYAiABKAgiawoGQVBJS2V5EgoK",
-            "AmlkGAEgASgMEhcKD29yZ2FuaXphdGlvbl9pZBgCIAEoDBIMCgRuYW1lGAMg",
-            "ASgJEi4KCmNyZWF0ZWRfYXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wIi8KBFRpZXIiJwoEVHlwZRILCgdVTktOT1dOEAASCAoERlJFRRAB",
-            "EggKBFBBSUQQAiI9CghDdXN0b21lciIxCgRUeXBlEgsKB1VOS05PV04QABIK",
-            "CgZQRVJTT04QARIQCgxPUkdBTklaQVRJT04QAkJrChhpby50b2l0LnByb3Rv",
-            "LnRvaXQubW9kZWxCEU9yZ2FuaXphdGlvblByb3RvWilnaXRodWIuY29tL3Rv",
-            "aXR3YXJlL2FwaS9nb2xhbmcvdG9pdC9tb2RlbKoCEFRvaXQuUHJvdG8uTW9k",
-            "ZWxiBnByb3RvMw=="));
+            "dC5tb2RlbC5Vc2VyLlNldHRpbmdzEgwKBHJvbGUYBiABKAkaNgoIU2V0dGlu",
+            "Z3MSFgoOd2VsY29tZV9jbG9zZWQYASABKAgSEgoKbmV3c2xldHRlchgCIAEo",
+            "CCJrCgZBUElLZXkSCgoCaWQYASABKAwSFwoPb3JnYW5pemF0aW9uX2lkGAIg",
+            "ASgMEgwKBG5hbWUYAyABKAkSLgoKY3JlYXRlZF9hdBgEIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXAiLwoEVGllciInCgRUeXBlEgsKB1VOS05P",
+            "V04QABIICgRGUkVFEAESCAoEUEFJRBACIj0KCEN1c3RvbWVyIjEKBFR5cGUS",
+            "CwoHVU5LTk9XThAAEgoKBlBFUlNPThABEhAKDE9SR0FOSVpBVElPThACQmsK",
+            "GGlvLnRvaXQucHJvdG8udG9pdC5tb2RlbEIRT3JnYW5pemF0aW9uUHJvdG9a",
+            "KWdpdGh1Yi5jb20vdG9pdHdhcmUvYXBpL2dvbGFuZy90b2l0L21vZGVsqgIQ",
+            "VG9pdC5Qcm90by5Nb2RlbGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.Organization), global::Toit.Proto.Model.Organization.Parser, new[]{ "Id", "Name", "DefaultSdk", "Email", "City", "Country", "PhoneNumber", "CvrNumber", "Tier", "PaymentDetails", "AddressLine", "PostalCode", "VatNumber", "VatCountryCode", "Customer", "HwidQuota" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.PaymentDetails), global::Toit.Proto.Model.PaymentDetails.Parser, new[]{ "Last4", "Expiry", "ExpiryMonth", "ExpiryYear", "Brand", "CountryCode", "CvcCheck" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.User), global::Toit.Proto.Model.User.Parser, new[]{ "Id", "OrganizationId", "Email", "Name", "Settings" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.User.Types.Settings), global::Toit.Proto.Model.User.Types.Settings.Parser, new[]{ "WelcomeClosed", "Newsletter" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.User), global::Toit.Proto.Model.User.Parser, new[]{ "Id", "OrganizationId", "Email", "Name", "Settings", "Role" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.User.Types.Settings), global::Toit.Proto.Model.User.Types.Settings.Parser, new[]{ "WelcomeClosed", "Newsletter" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.APIKey), global::Toit.Proto.Model.APIKey.Parser, new[]{ "Id", "OrganizationId", "Name", "CreatedAt" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.Tier), global::Toit.Proto.Model.Tier.Parser, null, null, new[]{ typeof(global::Toit.Proto.Model.Tier.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.Customer), global::Toit.Proto.Model.Customer.Parser, null, null, new[]{ typeof(global::Toit.Proto.Model.Customer.Types.Type) }, null, null)
@@ -1274,6 +1274,7 @@ namespace Toit.Proto.Model {
       email_ = other.email_;
       name_ = other.name_;
       settings_ = other.settings_ != null ? other.settings_.Clone() : null;
+      role_ = other.role_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1343,6 +1344,18 @@ namespace Toit.Proto.Model {
       }
     }
 
+    /// <summary>Field number for the "role" field.</summary>
+    public const int RoleFieldNumber = 6;
+    private string role_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Role {
+      get { return role_; }
+      set {
+        role_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1363,6 +1376,7 @@ namespace Toit.Proto.Model {
       if (Email != other.Email) return false;
       if (Name != other.Name) return false;
       if (!object.Equals(Settings, other.Settings)) return false;
+      if (Role != other.Role) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1375,6 +1389,7 @@ namespace Toit.Proto.Model {
       if (Email.Length != 0) hash ^= Email.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (settings_ != null) hash ^= Settings.GetHashCode();
+      if (Role.Length != 0) hash ^= Role.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1413,6 +1428,10 @@ namespace Toit.Proto.Model {
         output.WriteRawTag(42);
         output.WriteMessage(Settings);
       }
+      if (Role.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Role);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1443,6 +1462,10 @@ namespace Toit.Proto.Model {
         output.WriteRawTag(42);
         output.WriteMessage(Settings);
       }
+      if (Role.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Role);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1467,6 +1490,9 @@ namespace Toit.Proto.Model {
       }
       if (settings_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Settings);
+      }
+      if (Role.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Role);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1497,6 +1523,9 @@ namespace Toit.Proto.Model {
           Settings = new global::Toit.Proto.Model.User.Types.Settings();
         }
         Settings.MergeFrom(other.Settings);
+      }
+      if (other.Role.Length != 0) {
+        Role = other.Role;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1536,6 +1565,10 @@ namespace Toit.Proto.Model {
             input.ReadMessage(Settings);
             break;
           }
+          case 50: {
+            Role = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1572,6 +1605,10 @@ namespace Toit.Proto.Model {
               Settings = new global::Toit.Proto.Model.User.Types.Settings();
             }
             input.ReadMessage(Settings);
+            break;
+          }
+          case 50: {
+            Role = input.ReadString();
             break;
           }
         }

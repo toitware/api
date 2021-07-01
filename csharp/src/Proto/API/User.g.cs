@@ -57,39 +57,40 @@ namespace Toit.Proto.API {
             "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASFwoPcmVjZWlwdF9w",
             "ZGZfdXJsGAcgASgJEhMKC2Ftb3VudF9wYWlkGAggASgDIiIKIENhbmNlbFBh",
             "eW1lbnRTdWJzY3JpcHRpb25SZXF1ZXN0IiMKIUNhbmNlbFBheW1lbnRTdWJz",
-            "Y3JpcHRpb25SZXNwb25zZSJgCgpVc2VyQ2hhbmdlEiUKG3NldF9zZXR0aW5n",
-            "c193ZWxjb21lX2Nsb3NlZBgBIAEoCEgAEiEKF3NldF9zZXR0aW5nc19uZXdz",
-            "bGV0dGVyGAIgASgISABCCAoGY2hhbmdlIjoKEVVwZGF0ZVVzZXJSZXF1ZXN0",
-            "EiUKB2NoYW5nZXMYASADKAsyFC50b2l0LmFwaS5Vc2VyQ2hhbmdlIhQKElVw",
-            "ZGF0ZVVzZXJSZXNwb25zZTKFCQoEVXNlchJMCgtTZXRQYXNzd29yZBIcLnRv",
-            "aXQuYXBpLlNldFBhc3N3b3JkUmVxdWVzdBodLnRvaXQuYXBpLlNldFBhc3N3",
-            "b3JkUmVzcG9uc2UiABJqChVJbml0aWF0ZVJlc2V0UGFzc3dvcmQSJi50b2l0",
-            "LmFwaS5Jbml0aWF0ZVJlc2V0UGFzc3dvcmRSZXF1ZXN0GicudG9pdC5hcGku",
-            "SW5pdGlhdGVSZXNldFBhc3N3b3JkUmVzcG9uc2UiABJ2ChlDaGFuZ2VQYXNz",
-            "d29yZFdpdGhSUFRva2VuEioudG9pdC5hcGkuQ2hhbmdlUGFzc3dvcmRXaXRo",
-            "UlBUb2tlblJlcXVlc3QaKy50b2l0LmFwaS5DaGFuZ2VQYXNzd29yZFdpdGhS",
-            "UFRva2VuUmVzcG9uc2UiABJVCg5HZXRDdXJyZW50VXNlchIfLnRvaXQuYXBp",
-            "LkdldEN1cnJlbnRVc2VyUmVxdWVzdBogLnRvaXQuYXBpLkdldEN1cnJlbnRV",
-            "c2VyUmVzcG9uc2UiABJeChFMaXN0T3JnYW5pemF0aW9ucxIiLnRvaXQuYXBp",
-            "Lkxpc3RPcmdhbml6YXRpb25zUmVxdWVzdBojLnRvaXQuYXBpLkxpc3RPcmdh",
-            "bml6YXRpb25zUmVzcG9uc2UiABJYCg9HZXRPcmdhbml6YXRpb24SIC50b2l0",
-            "LmFwaS5HZXRPcmdhbml6YXRpb25SZXF1ZXN0GiEudG9pdC5hcGkuR2V0T3Jn",
-            "YW5pemF0aW9uUmVzcG9uc2UiABJJCglMaXN0VXNlcnMSGi50b2l0LmFwaS5M",
-            "aXN0VXNlcnNSZXF1ZXN0GhsudG9pdC5hcGkuTGlzdFVzZXJzUmVzcG9uc2Ui",
-            "A4gCARJMCgpDcmVhdGVVc2VyEhsudG9pdC5hcGkuQ3JlYXRlVXNlclJlcXVl",
-            "c3QaHC50b2l0LmFwaS5DcmVhdGVVc2VyUmVzcG9uc2UiA4gCARJ2ChlDcmVh",
-            "dGVQYXltZW50U3Vic2NyaXB0aW9uEioudG9pdC5hcGkuQ3JlYXRlUGF5bWVu",
-            "dFN1YnNjcmlwdGlvblJlcXVlc3QaKy50b2l0LmFwaS5DcmVhdGVQYXltZW50",
-            "U3Vic2NyaXB0aW9uUmVzcG9uc2UiABJmChNMaXN0UGF5bWVudEludm9pY2Vz",
-            "EiQudG9pdC5hcGkuTGlzdFBheW1lbnRJbnZvaWNlc1JlcXVlc3QaJS50b2l0",
-            "LmFwaS5MaXN0UGF5bWVudEludm9pY2VzUmVzcG9uc2UiADABEnYKGUNhbmNl",
-            "bFBheW1lbnRTdWJzY3JpcHRpb24SKi50b2l0LmFwaS5DYW5jZWxQYXltZW50",
-            "U3Vic2NyaXB0aW9uUmVxdWVzdBorLnRvaXQuYXBpLkNhbmNlbFBheW1lbnRT",
-            "dWJzY3JpcHRpb25SZXNwb25zZSIAEkkKClVwZGF0ZVVzZXISGy50b2l0LmFw",
-            "aS5VcGRhdGVVc2VyUmVxdWVzdBocLnRvaXQuYXBpLlVwZGF0ZVVzZXJSZXNw",
-            "b25zZSIAQl0KFmlvLnRvaXQucHJvdG8udG9pdC5hcGlCCVVzZXJQcm90b1on",
-            "Z2l0aHViLmNvbS90b2l0d2FyZS9hcGkvZ29sYW5nL3RvaXQvYXBpqgIOVG9p",
-            "dC5Qcm90by5BUEliBnByb3RvMw=="));
+            "Y3JpcHRpb25SZXNwb25zZSKAAQoKVXNlckNoYW5nZRIlChtzZXRfc2V0dGlu",
+            "Z3Nfd2VsY29tZV9jbG9zZWQYASABKAhIABIhChdzZXRfc2V0dGluZ3NfbmV3",
+            "c2xldHRlchgCIAEoCEgAEg4KBHJvbGUYAyABKAlIABIOCgRuYW1lGAQgASgJ",
+            "SABCCAoGY2hhbmdlIjoKEVVwZGF0ZVVzZXJSZXF1ZXN0EiUKB2NoYW5nZXMY",
+            "ASADKAsyFC50b2l0LmFwaS5Vc2VyQ2hhbmdlIhQKElVwZGF0ZVVzZXJSZXNw",
+            "b25zZTKFCQoEVXNlchJMCgtTZXRQYXNzd29yZBIcLnRvaXQuYXBpLlNldFBh",
+            "c3N3b3JkUmVxdWVzdBodLnRvaXQuYXBpLlNldFBhc3N3b3JkUmVzcG9uc2Ui",
+            "ABJqChVJbml0aWF0ZVJlc2V0UGFzc3dvcmQSJi50b2l0LmFwaS5Jbml0aWF0",
+            "ZVJlc2V0UGFzc3dvcmRSZXF1ZXN0GicudG9pdC5hcGkuSW5pdGlhdGVSZXNl",
+            "dFBhc3N3b3JkUmVzcG9uc2UiABJ2ChlDaGFuZ2VQYXNzd29yZFdpdGhSUFRv",
+            "a2VuEioudG9pdC5hcGkuQ2hhbmdlUGFzc3dvcmRXaXRoUlBUb2tlblJlcXVl",
+            "c3QaKy50b2l0LmFwaS5DaGFuZ2VQYXNzd29yZFdpdGhSUFRva2VuUmVzcG9u",
+            "c2UiABJVCg5HZXRDdXJyZW50VXNlchIfLnRvaXQuYXBpLkdldEN1cnJlbnRV",
+            "c2VyUmVxdWVzdBogLnRvaXQuYXBpLkdldEN1cnJlbnRVc2VyUmVzcG9uc2Ui",
+            "ABJeChFMaXN0T3JnYW5pemF0aW9ucxIiLnRvaXQuYXBpLkxpc3RPcmdhbml6",
+            "YXRpb25zUmVxdWVzdBojLnRvaXQuYXBpLkxpc3RPcmdhbml6YXRpb25zUmVz",
+            "cG9uc2UiABJYCg9HZXRPcmdhbml6YXRpb24SIC50b2l0LmFwaS5HZXRPcmdh",
+            "bml6YXRpb25SZXF1ZXN0GiEudG9pdC5hcGkuR2V0T3JnYW5pemF0aW9uUmVz",
+            "cG9uc2UiABJJCglMaXN0VXNlcnMSGi50b2l0LmFwaS5MaXN0VXNlcnNSZXF1",
+            "ZXN0GhsudG9pdC5hcGkuTGlzdFVzZXJzUmVzcG9uc2UiA4gCARJMCgpDcmVh",
+            "dGVVc2VyEhsudG9pdC5hcGkuQ3JlYXRlVXNlclJlcXVlc3QaHC50b2l0LmFw",
+            "aS5DcmVhdGVVc2VyUmVzcG9uc2UiA4gCARJ2ChlDcmVhdGVQYXltZW50U3Vi",
+            "c2NyaXB0aW9uEioudG9pdC5hcGkuQ3JlYXRlUGF5bWVudFN1YnNjcmlwdGlv",
+            "blJlcXVlc3QaKy50b2l0LmFwaS5DcmVhdGVQYXltZW50U3Vic2NyaXB0aW9u",
+            "UmVzcG9uc2UiABJmChNMaXN0UGF5bWVudEludm9pY2VzEiQudG9pdC5hcGku",
+            "TGlzdFBheW1lbnRJbnZvaWNlc1JlcXVlc3QaJS50b2l0LmFwaS5MaXN0UGF5",
+            "bWVudEludm9pY2VzUmVzcG9uc2UiADABEnYKGUNhbmNlbFBheW1lbnRTdWJz",
+            "Y3JpcHRpb24SKi50b2l0LmFwaS5DYW5jZWxQYXltZW50U3Vic2NyaXB0aW9u",
+            "UmVxdWVzdBorLnRvaXQuYXBpLkNhbmNlbFBheW1lbnRTdWJzY3JpcHRpb25S",
+            "ZXNwb25zZSIAEkkKClVwZGF0ZVVzZXISGy50b2l0LmFwaS5VcGRhdGVVc2Vy",
+            "UmVxdWVzdBocLnRvaXQuYXBpLlVwZGF0ZVVzZXJSZXNwb25zZSIAQl0KFmlv",
+            "LnRvaXQucHJvdG8udG9pdC5hcGlCCVVzZXJQcm90b1onZ2l0aHViLmNvbS90",
+            "b2l0d2FyZS9hcGkvZ29sYW5nL3RvaXQvYXBpqgIOVG9pdC5Qcm90by5BUEli",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Toit.Proto.Model.OrganizationReflection.Descriptor, global::Toit.Proto.API.OrganizationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -112,7 +113,7 @@ namespace Toit.Proto.API {
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.Invoice), global::Toit.Proto.API.Invoice.Parser, new[]{ "InvoiceId", "InvoiceNumber", "CreatedAt", "PdfUrl", "Status", "DueDate", "ReceiptPdfUrl", "AmountPaid" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.CancelPaymentSubscriptionRequest), global::Toit.Proto.API.CancelPaymentSubscriptionRequest.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.CancelPaymentSubscriptionResponse), global::Toit.Proto.API.CancelPaymentSubscriptionResponse.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.UserChange), global::Toit.Proto.API.UserChange.Parser, new[]{ "SetSettingsWelcomeClosed", "SetSettingsNewsletter" }, new[]{ "Change" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.UserChange), global::Toit.Proto.API.UserChange.Parser, new[]{ "SetSettingsWelcomeClosed", "SetSettingsNewsletter", "Role", "Name" }, new[]{ "Change" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.UpdateUserRequest), global::Toit.Proto.API.UpdateUserRequest.Parser, new[]{ "Changes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.UpdateUserResponse), global::Toit.Proto.API.UpdateUserResponse.Parser, null, null, null, null, null)
           }));
@@ -4320,6 +4321,12 @@ namespace Toit.Proto.API {
         case ChangeOneofCase.SetSettingsNewsletter:
           SetSettingsNewsletter = other.SetSettingsNewsletter;
           break;
+        case ChangeOneofCase.Role:
+          Role = other.Role;
+          break;
+        case ChangeOneofCase.Name:
+          Name = other.Name;
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -4355,12 +4362,38 @@ namespace Toit.Proto.API {
       }
     }
 
+    /// <summary>Field number for the "role" field.</summary>
+    public const int RoleFieldNumber = 3;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Role {
+      get { return changeCase_ == ChangeOneofCase.Role ? (string) change_ : ""; }
+      set {
+        change_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        changeCase_ = ChangeOneofCase.Role;
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 4;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return changeCase_ == ChangeOneofCase.Name ? (string) change_ : ""; }
+      set {
+        change_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        changeCase_ = ChangeOneofCase.Name;
+      }
+    }
+
     private object change_;
     /// <summary>Enum of possible cases for the "change" oneof.</summary>
     public enum ChangeOneofCase {
       None = 0,
       SetSettingsWelcomeClosed = 1,
       SetSettingsNewsletter = 2,
+      Role = 3,
+      Name = 4,
     }
     private ChangeOneofCase changeCase_ = ChangeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4393,6 +4426,8 @@ namespace Toit.Proto.API {
       }
       if (SetSettingsWelcomeClosed != other.SetSettingsWelcomeClosed) return false;
       if (SetSettingsNewsletter != other.SetSettingsNewsletter) return false;
+      if (Role != other.Role) return false;
+      if (Name != other.Name) return false;
       if (ChangeCase != other.ChangeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -4403,6 +4438,8 @@ namespace Toit.Proto.API {
       int hash = 1;
       if (changeCase_ == ChangeOneofCase.SetSettingsWelcomeClosed) hash ^= SetSettingsWelcomeClosed.GetHashCode();
       if (changeCase_ == ChangeOneofCase.SetSettingsNewsletter) hash ^= SetSettingsNewsletter.GetHashCode();
+      if (changeCase_ == ChangeOneofCase.Role) hash ^= Role.GetHashCode();
+      if (changeCase_ == ChangeOneofCase.Name) hash ^= Name.GetHashCode();
       hash ^= (int) changeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -4430,6 +4467,14 @@ namespace Toit.Proto.API {
         output.WriteRawTag(16);
         output.WriteBool(SetSettingsNewsletter);
       }
+      if (changeCase_ == ChangeOneofCase.Role) {
+        output.WriteRawTag(26);
+        output.WriteString(Role);
+      }
+      if (changeCase_ == ChangeOneofCase.Name) {
+        output.WriteRawTag(34);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4448,6 +4493,14 @@ namespace Toit.Proto.API {
         output.WriteRawTag(16);
         output.WriteBool(SetSettingsNewsletter);
       }
+      if (changeCase_ == ChangeOneofCase.Role) {
+        output.WriteRawTag(26);
+        output.WriteString(Role);
+      }
+      if (changeCase_ == ChangeOneofCase.Name) {
+        output.WriteRawTag(34);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4463,6 +4516,12 @@ namespace Toit.Proto.API {
       }
       if (changeCase_ == ChangeOneofCase.SetSettingsNewsletter) {
         size += 1 + 1;
+      }
+      if (changeCase_ == ChangeOneofCase.Role) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Role);
+      }
+      if (changeCase_ == ChangeOneofCase.Name) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4482,6 +4541,12 @@ namespace Toit.Proto.API {
           break;
         case ChangeOneofCase.SetSettingsNewsletter:
           SetSettingsNewsletter = other.SetSettingsNewsletter;
+          break;
+        case ChangeOneofCase.Role:
+          Role = other.Role;
+          break;
+        case ChangeOneofCase.Name:
+          Name = other.Name;
           break;
       }
 
@@ -4508,6 +4573,14 @@ namespace Toit.Proto.API {
             SetSettingsNewsletter = input.ReadBool();
             break;
           }
+          case 26: {
+            Role = input.ReadString();
+            break;
+          }
+          case 34: {
+            Name = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -4529,6 +4602,14 @@ namespace Toit.Proto.API {
           }
           case 16: {
             SetSettingsNewsletter = input.ReadBool();
+            break;
+          }
+          case 26: {
+            Role = input.ReadString();
+            break;
+          }
+          case 34: {
+            Name = input.ReadString();
             break;
           }
         }
