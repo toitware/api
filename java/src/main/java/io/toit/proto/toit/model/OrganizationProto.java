@@ -4191,6 +4191,18 @@ public final class OrganizationProto {
      * <code>.toit.model.User.Settings settings = 5;</code>
      */
     io.toit.proto.toit.model.OrganizationProto.User.SettingsOrBuilder getSettingsOrBuilder();
+
+    /**
+     * <code>string role = 6;</code>
+     * @return The role.
+     */
+    java.lang.String getRole();
+    /**
+     * <code>string role = 6;</code>
+     * @return The bytes for role.
+     */
+    com.google.protobuf.ByteString
+        getRoleBytes();
   }
   /**
    * Protobuf type {@code toit.model.User}
@@ -4209,6 +4221,7 @@ public final class OrganizationProto {
       organizationId_ = com.google.protobuf.ByteString.EMPTY;
       email_ = "";
       name_ = "";
+      role_ = "";
     }
 
     @java.lang.Override
@@ -4274,6 +4287,12 @@ public final class OrganizationProto {
                 settings_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              role_ = s;
               break;
             }
             default: {
@@ -4979,6 +4998,42 @@ public final class OrganizationProto {
       return getSettings();
     }
 
+    public static final int ROLE_FIELD_NUMBER = 6;
+    private volatile java.lang.Object role_;
+    /**
+     * <code>string role = 6;</code>
+     * @return The role.
+     */
+    public java.lang.String getRole() {
+      java.lang.Object ref = role_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        role_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string role = 6;</code>
+     * @return The bytes for role.
+     */
+    public com.google.protobuf.ByteString
+        getRoleBytes() {
+      java.lang.Object ref = role_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        role_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5008,6 +5063,9 @@ public final class OrganizationProto {
       if (settings_ != null) {
         output.writeMessage(5, getSettings());
       }
+      if (!getRoleBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, role_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5034,6 +5092,9 @@ public final class OrganizationProto {
       if (settings_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getSettings());
+      }
+      if (!getRoleBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, role_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5063,6 +5124,8 @@ public final class OrganizationProto {
         if (!getSettings()
             .equals(other.getSettings())) return false;
       }
+      if (!getRole()
+          .equals(other.getRole())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5086,6 +5149,8 @@ public final class OrganizationProto {
         hash = (37 * hash) + SETTINGS_FIELD_NUMBER;
         hash = (53 * hash) + getSettings().hashCode();
       }
+      hash = (37 * hash) + ROLE_FIELD_NUMBER;
+      hash = (53 * hash) + getRole().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5233,6 +5298,8 @@ public final class OrganizationProto {
           settings_ = null;
           settingsBuilder_ = null;
         }
+        role_ = "";
+
         return this;
       }
 
@@ -5268,6 +5335,7 @@ public final class OrganizationProto {
         } else {
           result.settings_ = settingsBuilder_.build();
         }
+        result.role_ = role_;
         onBuilt();
         return result;
       }
@@ -5332,6 +5400,10 @@ public final class OrganizationProto {
         }
         if (other.hasSettings()) {
           mergeSettings(other.getSettings());
+        }
+        if (!other.getRole().isEmpty()) {
+          role_ = other.role_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5697,6 +5769,82 @@ public final class OrganizationProto {
           settings_ = null;
         }
         return settingsBuilder_;
+      }
+
+      private java.lang.Object role_ = "";
+      /**
+       * <code>string role = 6;</code>
+       * @return The role.
+       */
+      public java.lang.String getRole() {
+        java.lang.Object ref = role_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          role_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string role = 6;</code>
+       * @return The bytes for role.
+       */
+      public com.google.protobuf.ByteString
+          getRoleBytes() {
+        java.lang.Object ref = role_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          role_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string role = 6;</code>
+       * @param value The role to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRole(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        role_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string role = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRole() {
+        
+        role_ = getDefaultInstance().getRole();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string role = 6;</code>
+       * @param value The bytes for role to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        role_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -7782,20 +7930,20 @@ public final class OrganizationProto {
       "mentDetails\022\r\n\005last4\030\001 \001(\t\022\016\n\006expiry\030\002 \001" +
       "(\t\022\024\n\014expiry_month\030\003 \001(\t\022\023\n\013expiry_year\030" +
       "\004 \001(\t\022\r\n\005brand\030\005 \001(\t\022\024\n\014country_code\030\006 \001" +
-      "(\t\022\021\n\tcvc_check\030\007 \001(\t\"\255\001\n\004User\022\n\n\002id\030\001 \001" +
+      "(\t\022\021\n\tcvc_check\030\007 \001(\t\"\273\001\n\004User\022\n\n\002id\030\001 \001" +
       "(\014\022\027\n\017organization_id\030\002 \001(\014\022\r\n\005email\030\003 \001" +
       "(\t\022\014\n\004name\030\004 \001(\t\022+\n\010settings\030\005 \001(\0132\031.toi" +
-      "t.model.User.Settings\0326\n\010Settings\022\026\n\016wel" +
-      "come_closed\030\001 \001(\010\022\022\n\nnewsletter\030\002 \001(\010\"k\n" +
-      "\006APIKey\022\n\n\002id\030\001 \001(\014\022\027\n\017organization_id\030\002" +
-      " \001(\014\022\014\n\004name\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132\032" +
-      ".google.protobuf.Timestamp\"/\n\004Tier\"\'\n\004Ty" +
-      "pe\022\013\n\007UNKNOWN\020\000\022\010\n\004FREE\020\001\022\010\n\004PAID\020\002\"=\n\010C" +
-      "ustomer\"1\n\004Type\022\013\n\007UNKNOWN\020\000\022\n\n\006PERSON\020\001" +
-      "\022\020\n\014ORGANIZATION\020\002Bk\n\030io.toit.proto.toit" +
-      ".modelB\021OrganizationProtoZ)github.com/to" +
-      "itware/api/golang/toit/model\252\002\020Toit.Prot" +
-      "o.Modelb\006proto3"
+      "t.model.User.Settings\022\014\n\004role\030\006 \001(\t\0326\n\010S" +
+      "ettings\022\026\n\016welcome_closed\030\001 \001(\010\022\022\n\nnewsl" +
+      "etter\030\002 \001(\010\"k\n\006APIKey\022\n\n\002id\030\001 \001(\014\022\027\n\017org" +
+      "anization_id\030\002 \001(\014\022\014\n\004name\030\003 \001(\t\022.\n\ncrea" +
+      "ted_at\030\004 \001(\0132\032.google.protobuf.Timestamp" +
+      "\"/\n\004Tier\"\'\n\004Type\022\013\n\007UNKNOWN\020\000\022\010\n\004FREE\020\001\022" +
+      "\010\n\004PAID\020\002\"=\n\010Customer\"1\n\004Type\022\013\n\007UNKNOWN" +
+      "\020\000\022\n\n\006PERSON\020\001\022\020\n\014ORGANIZATION\020\002Bk\n\030io.t" +
+      "oit.proto.toit.modelB\021OrganizationProtoZ" +
+      ")github.com/toitware/api/golang/toit/mod" +
+      "el\252\002\020Toit.Proto.Modelb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7819,7 +7967,7 @@ public final class OrganizationProto {
     internal_static_toit_model_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_User_descriptor,
-        new java.lang.String[] { "Id", "OrganizationId", "Email", "Name", "Settings", });
+        new java.lang.String[] { "Id", "OrganizationId", "Email", "Name", "Settings", "Role", });
     internal_static_toit_model_User_Settings_descriptor =
       internal_static_toit_model_User_descriptor.getNestedTypes().get(0);
     internal_static_toit_model_User_Settings_fieldAccessorTable = new

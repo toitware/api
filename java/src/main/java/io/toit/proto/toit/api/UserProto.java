@@ -12431,6 +12431,30 @@ public final class UserProto {
      */
     boolean getSetSettingsNewsletter();
 
+    /**
+     * <code>string role = 3;</code>
+     * @return The role.
+     */
+    java.lang.String getRole();
+    /**
+     * <code>string role = 3;</code>
+     * @return The bytes for role.
+     */
+    com.google.protobuf.ByteString
+        getRoleBytes();
+
+    /**
+     * <code>string name = 4;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 4;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
     public io.toit.proto.toit.api.UserProto.UserChange.ChangeCase getChangeCase();
   }
   /**
@@ -12488,6 +12512,18 @@ public final class UserProto {
               change_ = input.readBool();
               break;
             }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              changeCase_ = 3;
+              change_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+              changeCase_ = 4;
+              change_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -12527,6 +12563,8 @@ public final class UserProto {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       SET_SETTINGS_WELCOME_CLOSED(1),
       SET_SETTINGS_NEWSLETTER(2),
+      ROLE(3),
+      NAME(4),
       CHANGE_NOT_SET(0);
       private final int value;
       private ChangeCase(int value) {
@@ -12546,6 +12584,8 @@ public final class UserProto {
         switch (value) {
           case 1: return SET_SETTINGS_WELCOME_CLOSED;
           case 2: return SET_SETTINGS_NEWSLETTER;
+          case 3: return ROLE;
+          case 4: return NAME;
           case 0: return CHANGE_NOT_SET;
           default: return null;
         }
@@ -12585,6 +12625,96 @@ public final class UserProto {
       return false;
     }
 
+    public static final int ROLE_FIELD_NUMBER = 3;
+    /**
+     * <code>string role = 3;</code>
+     * @return The role.
+     */
+    public java.lang.String getRole() {
+      java.lang.Object ref = "";
+      if (changeCase_ == 3) {
+        ref = change_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (changeCase_ == 3) {
+          change_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>string role = 3;</code>
+     * @return The bytes for role.
+     */
+    public com.google.protobuf.ByteString
+        getRoleBytes() {
+      java.lang.Object ref = "";
+      if (changeCase_ == 3) {
+        ref = change_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (changeCase_ == 3) {
+          change_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 4;
+    /**
+     * <code>string name = 4;</code>
+     * @return The name.
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = "";
+      if (changeCase_ == 4) {
+        ref = change_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (changeCase_ == 4) {
+          change_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 4;</code>
+     * @return The bytes for name.
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = "";
+      if (changeCase_ == 4) {
+        ref = change_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (changeCase_ == 4) {
+          change_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12607,6 +12737,12 @@ public final class UserProto {
         output.writeBool(
             2, (boolean)((java.lang.Boolean) change_));
       }
+      if (changeCase_ == 3) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, change_);
+      }
+      if (changeCase_ == 4) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, change_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -12625,6 +12761,12 @@ public final class UserProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(
               2, (boolean)((java.lang.Boolean) change_));
+      }
+      if (changeCase_ == 3) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, change_);
+      }
+      if (changeCase_ == 4) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, change_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -12651,6 +12793,14 @@ public final class UserProto {
           if (getSetSettingsNewsletter()
               != other.getSetSettingsNewsletter()) return false;
           break;
+        case 3:
+          if (!getRole()
+              .equals(other.getRole())) return false;
+          break;
+        case 4:
+          if (!getName()
+              .equals(other.getName())) return false;
+          break;
         case 0:
         default:
       }
@@ -12675,6 +12825,14 @@ public final class UserProto {
           hash = (37 * hash) + SET_SETTINGS_NEWSLETTER_FIELD_NUMBER;
           hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
               getSetSettingsNewsletter());
+          break;
+        case 3:
+          hash = (37 * hash) + ROLE_FIELD_NUMBER;
+          hash = (53 * hash) + getRole().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + NAME_FIELD_NUMBER;
+          hash = (53 * hash) + getName().hashCode();
           break;
         case 0:
         default:
@@ -12846,6 +13004,12 @@ public final class UserProto {
         if (changeCase_ == 2) {
           result.change_ = change_;
         }
+        if (changeCase_ == 3) {
+          result.change_ = change_;
+        }
+        if (changeCase_ == 4) {
+          result.change_ = change_;
+        }
         result.changeCase_ = changeCase_;
         onBuilt();
         return result;
@@ -12902,6 +13066,18 @@ public final class UserProto {
           }
           case SET_SETTINGS_NEWSLETTER: {
             setSetSettingsNewsletter(other.getSetSettingsNewsletter());
+            break;
+          }
+          case ROLE: {
+            changeCase_ = 3;
+            change_ = other.change_;
+            onChanged();
+            break;
+          }
+          case NAME: {
+            changeCase_ = 4;
+            change_ = other.change_;
+            onChanged();
             break;
           }
           case CHANGE_NOT_SET: {
@@ -13017,6 +13193,180 @@ public final class UserProto {
           change_ = null;
           onChanged();
         }
+        return this;
+      }
+
+      /**
+       * <code>string role = 3;</code>
+       * @return The role.
+       */
+      public java.lang.String getRole() {
+        java.lang.Object ref = "";
+        if (changeCase_ == 3) {
+          ref = change_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (changeCase_ == 3) {
+            change_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string role = 3;</code>
+       * @return The bytes for role.
+       */
+      public com.google.protobuf.ByteString
+          getRoleBytes() {
+        java.lang.Object ref = "";
+        if (changeCase_ == 3) {
+          ref = change_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (changeCase_ == 3) {
+            change_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string role = 3;</code>
+       * @param value The role to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRole(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  changeCase_ = 3;
+        change_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string role = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRole() {
+        if (changeCase_ == 3) {
+          changeCase_ = 0;
+          change_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>string role = 3;</code>
+       * @param value The bytes for role to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        changeCase_ = 3;
+        change_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>string name = 4;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = "";
+        if (changeCase_ == 4) {
+          ref = change_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (changeCase_ == 4) {
+            change_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 4;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = "";
+        if (changeCase_ == 4) {
+          ref = change_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (changeCase_ == 4) {
+            change_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 4;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  changeCase_ = 4;
+        change_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        if (changeCase_ == 4) {
+          changeCase_ = 0;
+          change_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>string name = 4;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        changeCase_ = 4;
+        change_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -14434,43 +14784,44 @@ public final class UserProto {
       "gle.protobuf.Timestamp\022\027\n\017receipt_pdf_ur" +
       "l\030\007 \001(\t\022\023\n\013amount_paid\030\010 \001(\003\"\"\n CancelPa" +
       "ymentSubscriptionRequest\"#\n!CancelPaymen" +
-      "tSubscriptionResponse\"`\n\nUserChange\022%\n\033s" +
-      "et_settings_welcome_closed\030\001 \001(\010H\000\022!\n\027se" +
-      "t_settings_newsletter\030\002 \001(\010H\000B\010\n\006change\"" +
-      ":\n\021UpdateUserRequest\022%\n\007changes\030\001 \003(\0132\024." +
-      "toit.api.UserChange\"\024\n\022UpdateUserRespons" +
-      "e2\205\t\n\004User\022L\n\013SetPassword\022\034.toit.api.Set" +
-      "PasswordRequest\032\035.toit.api.SetPasswordRe" +
-      "sponse\"\000\022j\n\025InitiateResetPassword\022&.toit" +
-      ".api.InitiateResetPasswordRequest\032\'.toit" +
-      ".api.InitiateResetPasswordResponse\"\000\022v\n\031" +
-      "ChangePasswordWithRPToken\022*.toit.api.Cha" +
-      "ngePasswordWithRPTokenRequest\032+.toit.api" +
-      ".ChangePasswordWithRPTokenResponse\"\000\022U\n\016" +
-      "GetCurrentUser\022\037.toit.api.GetCurrentUser" +
-      "Request\032 .toit.api.GetCurrentUserRespons" +
-      "e\"\000\022^\n\021ListOrganizations\022\".toit.api.List" +
-      "OrganizationsRequest\032#.toit.api.ListOrga" +
-      "nizationsResponse\"\000\022X\n\017GetOrganization\022 " +
-      ".toit.api.GetOrganizationRequest\032!.toit." +
-      "api.GetOrganizationResponse\"\000\022I\n\tListUse" +
-      "rs\022\032.toit.api.ListUsersRequest\032\033.toit.ap" +
-      "i.ListUsersResponse\"\003\210\002\001\022L\n\nCreateUser\022\033" +
-      ".toit.api.CreateUserRequest\032\034.toit.api.C" +
-      "reateUserResponse\"\003\210\002\001\022v\n\031CreatePaymentS" +
-      "ubscription\022*.toit.api.CreatePaymentSubs" +
-      "criptionRequest\032+.toit.api.CreatePayment" +
-      "SubscriptionResponse\"\000\022f\n\023ListPaymentInv" +
-      "oices\022$.toit.api.ListPaymentInvoicesRequ" +
-      "est\032%.toit.api.ListPaymentInvoicesRespon" +
-      "se\"\0000\001\022v\n\031CancelPaymentSubscription\022*.to" +
-      "it.api.CancelPaymentSubscriptionRequest\032" +
-      "+.toit.api.CancelPaymentSubscriptionResp" +
-      "onse\"\000\022I\n\nUpdateUser\022\033.toit.api.UpdateUs" +
-      "erRequest\032\034.toit.api.UpdateUserResponse\"" +
-      "\000B]\n\026io.toit.proto.toit.apiB\tUserProtoZ\'" +
-      "github.com/toitware/api/golang/toit/api\252" +
-      "\002\016Toit.Proto.APIb\006proto3"
+      "tSubscriptionResponse\"\200\001\n\nUserChange\022%\n\033" +
+      "set_settings_welcome_closed\030\001 \001(\010H\000\022!\n\027s" +
+      "et_settings_newsletter\030\002 \001(\010H\000\022\016\n\004role\030\003" +
+      " \001(\tH\000\022\016\n\004name\030\004 \001(\tH\000B\010\n\006change\":\n\021Upda" +
+      "teUserRequest\022%\n\007changes\030\001 \003(\0132\024.toit.ap" +
+      "i.UserChange\"\024\n\022UpdateUserResponse2\205\t\n\004U" +
+      "ser\022L\n\013SetPassword\022\034.toit.api.SetPasswor" +
+      "dRequest\032\035.toit.api.SetPasswordResponse\"" +
+      "\000\022j\n\025InitiateResetPassword\022&.toit.api.In" +
+      "itiateResetPasswordRequest\032\'.toit.api.In" +
+      "itiateResetPasswordResponse\"\000\022v\n\031ChangeP" +
+      "asswordWithRPToken\022*.toit.api.ChangePass" +
+      "wordWithRPTokenRequest\032+.toit.api.Change" +
+      "PasswordWithRPTokenResponse\"\000\022U\n\016GetCurr" +
+      "entUser\022\037.toit.api.GetCurrentUserRequest" +
+      "\032 .toit.api.GetCurrentUserResponse\"\000\022^\n\021" +
+      "ListOrganizations\022\".toit.api.ListOrganiz" +
+      "ationsRequest\032#.toit.api.ListOrganizatio" +
+      "nsResponse\"\000\022X\n\017GetOrganization\022 .toit.a" +
+      "pi.GetOrganizationRequest\032!.toit.api.Get" +
+      "OrganizationResponse\"\000\022I\n\tListUsers\022\032.to" +
+      "it.api.ListUsersRequest\032\033.toit.api.ListU" +
+      "sersResponse\"\003\210\002\001\022L\n\nCreateUser\022\033.toit.a" +
+      "pi.CreateUserRequest\032\034.toit.api.CreateUs" +
+      "erResponse\"\003\210\002\001\022v\n\031CreatePaymentSubscrip" +
+      "tion\022*.toit.api.CreatePaymentSubscriptio" +
+      "nRequest\032+.toit.api.CreatePaymentSubscri" +
+      "ptionResponse\"\000\022f\n\023ListPaymentInvoices\022$" +
+      ".toit.api.ListPaymentInvoicesRequest\032%.t" +
+      "oit.api.ListPaymentInvoicesResponse\"\0000\001\022" +
+      "v\n\031CancelPaymentSubscription\022*.toit.api." +
+      "CancelPaymentSubscriptionRequest\032+.toit." +
+      "api.CancelPaymentSubscriptionResponse\"\000\022" +
+      "I\n\nUpdateUser\022\033.toit.api.UpdateUserReque" +
+      "st\032\034.toit.api.UpdateUserResponse\"\000B]\n\026io" +
+      ".toit.proto.toit.apiB\tUserProtoZ\'github." +
+      "com/toitware/api/golang/toit/api\252\002\016Toit." +
+      "Proto.APIb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14598,7 +14949,7 @@ public final class UserProto {
     internal_static_toit_api_UserChange_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_UserChange_descriptor,
-        new java.lang.String[] { "SetSettingsWelcomeClosed", "SetSettingsNewsletter", "Change", });
+        new java.lang.String[] { "SetSettingsWelcomeClosed", "SetSettingsNewsletter", "Role", "Name", "Change", });
     internal_static_toit_api_UpdateUserRequest_descriptor =
       getDescriptor().getMessageTypes().get(20);
     internal_static_toit_api_UpdateUserRequest_fieldAccessorTable = new
