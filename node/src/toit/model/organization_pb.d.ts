@@ -154,6 +154,9 @@ export class User extends jspb.Message {
   getSettings(): User.Settings | undefined;
   setSettings(value?: User.Settings): void;
 
+  getRole(): string;
+  setRole(value: string): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): User.AsObject;
   static toObject(includeInstance: boolean, msg: User): User.AsObject;
@@ -171,6 +174,7 @@ export namespace User {
     email: string,
     name: string,
     settings?: User.Settings.AsObject,
+    role: string,
   }
 
   export class Settings extends jspb.Message {

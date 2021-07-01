@@ -477,6 +477,16 @@ export class UserChange extends jspb.Message {
   getSetSettingsNewsletter(): boolean;
   setSetSettingsNewsletter(value: boolean): void;
 
+  hasRole(): boolean;
+  clearRole(): void;
+  getRole(): string;
+  setRole(value: string): void;
+
+  hasName(): boolean;
+  clearName(): void;
+  getName(): string;
+  setName(value: string): void;
+
   getChangeCase(): UserChange.ChangeCase;
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UserChange.AsObject;
@@ -492,12 +502,16 @@ export namespace UserChange {
   export type AsObject = {
     setSettingsWelcomeClosed: boolean,
     setSettingsNewsletter: boolean,
+    role: string,
+    name: string,
   }
 
   export enum ChangeCase {
     CHANGE_NOT_SET = 0,
     SET_SETTINGS_WELCOME_CLOSED = 1,
     SET_SETTINGS_NEWSLETTER = 2,
+    ROLE = 3,
+    NAME = 4,
   }
 }
 

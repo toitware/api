@@ -1141,7 +1141,8 @@ proto.toit.model.User.toObject = function(includeInstance, msg) {
     organizationId: msg.getOrganizationId_asB64(),
     email: jspb.Message.getFieldWithDefault(msg, 3, ""),
     name: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    settings: (f = msg.getSettings()) && proto.toit.model.User.Settings.toObject(includeInstance, f)
+    settings: (f = msg.getSettings()) && proto.toit.model.User.Settings.toObject(includeInstance, f),
+    role: jspb.Message.getFieldWithDefault(msg, 6, "")
   };
 
   if (includeInstance) {
@@ -1198,6 +1199,10 @@ proto.toit.model.User.deserializeBinaryFromReader = function(msg, reader) {
       var value = new proto.toit.model.User.Settings;
       reader.readMessage(value,proto.toit.model.User.Settings.deserializeBinaryFromReader);
       msg.setSettings(value);
+      break;
+    case 6:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setRole(value);
       break;
     default:
       reader.skipField();
@@ -1262,6 +1267,13 @@ proto.toit.model.User.serializeBinaryToWriter = function(message, writer) {
       5,
       f,
       proto.toit.model.User.Settings.serializeBinaryToWriter
+    );
+  }
+  f = message.getRole();
+  if (f.length > 0) {
+    writer.writeString(
+      6,
+      f
     );
   }
 };
@@ -1581,6 +1593,24 @@ proto.toit.model.User.prototype.clearSettings = function() {
  */
 proto.toit.model.User.prototype.hasSettings = function() {
   return jspb.Message.getField(this, 5) != null;
+};
+
+
+/**
+ * optional string role = 6;
+ * @return {string}
+ */
+proto.toit.model.User.prototype.getRole = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.toit.model.User} returns this
+ */
+proto.toit.model.User.prototype.setRole = function(value) {
+  return jspb.Message.setProto3StringField(this, 6, value);
 };
 
 

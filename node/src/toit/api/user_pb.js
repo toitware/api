@@ -3685,7 +3685,7 @@ proto.toit.api.CancelPaymentSubscriptionResponse.serializeBinaryToWriter = funct
  * @private {!Array<!Array<number>>}
  * @const
  */
-proto.toit.api.UserChange.oneofGroups_ = [[1,2]];
+proto.toit.api.UserChange.oneofGroups_ = [[1,2,3,4]];
 
 /**
  * @enum {number}
@@ -3693,7 +3693,9 @@ proto.toit.api.UserChange.oneofGroups_ = [[1,2]];
 proto.toit.api.UserChange.ChangeCase = {
   CHANGE_NOT_SET: 0,
   SET_SETTINGS_WELCOME_CLOSED: 1,
-  SET_SETTINGS_NEWSLETTER: 2
+  SET_SETTINGS_NEWSLETTER: 2,
+  ROLE: 3,
+  NAME: 4
 };
 
 /**
@@ -3735,7 +3737,9 @@ proto.toit.api.UserChange.prototype.toObject = function(opt_includeInstance) {
 proto.toit.api.UserChange.toObject = function(includeInstance, msg) {
   var f, obj = {
     setSettingsWelcomeClosed: jspb.Message.getBooleanFieldWithDefault(msg, 1, false),
-    setSettingsNewsletter: jspb.Message.getBooleanFieldWithDefault(msg, 2, false)
+    setSettingsNewsletter: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
+    role: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    name: jspb.Message.getFieldWithDefault(msg, 4, "")
   };
 
   if (includeInstance) {
@@ -3780,6 +3784,14 @@ proto.toit.api.UserChange.deserializeBinaryFromReader = function(msg, reader) {
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setSetSettingsNewsletter(value);
       break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setRole(value);
+      break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setName(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -3820,6 +3832,20 @@ proto.toit.api.UserChange.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeBool(
       2,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 3));
+  if (f != null) {
+    writer.writeString(
+      3,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 4));
+  if (f != null) {
+    writer.writeString(
+      4,
       f
     );
   }
@@ -3895,6 +3921,78 @@ proto.toit.api.UserChange.prototype.clearSetSettingsNewsletter = function() {
  */
 proto.toit.api.UserChange.prototype.hasSetSettingsNewsletter = function() {
   return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional string role = 3;
+ * @return {string}
+ */
+proto.toit.api.UserChange.prototype.getRole = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.toit.api.UserChange} returns this
+ */
+proto.toit.api.UserChange.prototype.setRole = function(value) {
+  return jspb.Message.setOneofField(this, 3, proto.toit.api.UserChange.oneofGroups_[0], value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.toit.api.UserChange} returns this
+ */
+proto.toit.api.UserChange.prototype.clearRole = function() {
+  return jspb.Message.setOneofField(this, 3, proto.toit.api.UserChange.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.toit.api.UserChange.prototype.hasRole = function() {
+  return jspb.Message.getField(this, 3) != null;
+};
+
+
+/**
+ * optional string name = 4;
+ * @return {string}
+ */
+proto.toit.api.UserChange.prototype.getName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.toit.api.UserChange} returns this
+ */
+proto.toit.api.UserChange.prototype.setName = function(value) {
+  return jspb.Message.setOneofField(this, 4, proto.toit.api.UserChange.oneofGroups_[0], value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.toit.api.UserChange} returns this
+ */
+proto.toit.api.UserChange.prototype.clearName = function() {
+  return jspb.Message.setOneofField(this, 4, proto.toit.api.UserChange.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.toit.api.UserChange.prototype.hasName = function() {
+  return jspb.Message.getField(this, 4) != null;
 };
 
 
