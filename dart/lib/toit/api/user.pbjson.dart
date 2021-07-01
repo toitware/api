@@ -326,6 +326,8 @@ const UserChange$json = const {
       '9': 0,
       '10': 'setSettingsNewsletter'
     },
+    const {'1': 'role', '3': 3, '4': 1, '5': 9, '9': 0, '10': 'role'},
+    const {'1': 'name', '3': 4, '4': 1, '5': 9, '9': 0, '10': 'name'},
   ],
   '8': const [
     const {'1': 'change'},
@@ -334,7 +336,7 @@ const UserChange$json = const {
 
 /// Descriptor for `UserChange`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List userChangeDescriptor = $convert.base64Decode(
-    'CgpVc2VyQ2hhbmdlEj8KG3NldF9zZXR0aW5nc193ZWxjb21lX2Nsb3NlZBgBIAEoCEgAUhhzZXRTZXR0aW5nc1dlbGNvbWVDbG9zZWQSOAoXc2V0X3NldHRpbmdzX25ld3NsZXR0ZXIYAiABKAhIAFIVc2V0U2V0dGluZ3NOZXdzbGV0dGVyQggKBmNoYW5nZQ==');
+    'CgpVc2VyQ2hhbmdlEj8KG3NldF9zZXR0aW5nc193ZWxjb21lX2Nsb3NlZBgBIAEoCEgAUhhzZXRTZXR0aW5nc1dlbGNvbWVDbG9zZWQSOAoXc2V0X3NldHRpbmdzX25ld3NsZXR0ZXIYAiABKAhIAFIVc2V0U2V0dGluZ3NOZXdzbGV0dGVyEhQKBHJvbGUYAyABKAlIAFIEcm9sZRIUCgRuYW1lGAQgASgJSABSBG5hbWVCCAoGY2hhbmdl');
 @$core.Deprecated('Use updateUserRequestDescriptor instead')
 const UpdateUserRequest$json = const {
   '1': 'UpdateUserRequest',

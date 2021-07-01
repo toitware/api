@@ -1580,6 +1580,8 @@ class CancelPaymentSubscriptionResponse extends $pb.GeneratedMessage {
 enum UserChange_Change {
   setSettingsWelcomeClosed,
   setSettingsNewsletter,
+  role,
+  name,
   notSet
 }
 
@@ -1588,6 +1590,8 @@ class UserChange extends $pb.GeneratedMessage {
       {
     1: UserChange_Change.setSettingsWelcomeClosed,
     2: UserChange_Change.setSettingsNewsletter,
+    3: UserChange_Change.role,
+    4: UserChange_Change.name,
     0: UserChange_Change.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -1599,7 +1603,7 @@ class UserChange extends $pb.GeneratedMessage {
               ? ''
               : 'toit.api'),
       createEmptyInstance: create)
-    ..oo(0, [1, 2])
+    ..oo(0, [1, 2, 3, 4])
     ..aOB(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -1610,12 +1614,21 @@ class UserChange extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'setSettingsNewsletter')
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'role')
+    ..aOS(
+        4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
     ..hasRequiredFields = false;
 
   UserChange._() : super();
   factory UserChange({
     $core.bool? setSettingsWelcomeClosed,
     $core.bool? setSettingsNewsletter,
+    $core.String? role,
+    $core.String? name,
   }) {
     final _result = create();
     if (setSettingsWelcomeClosed != null) {
@@ -1623,6 +1636,12 @@ class UserChange extends $pb.GeneratedMessage {
     }
     if (setSettingsNewsletter != null) {
       _result.setSettingsNewsletter = setSettingsNewsletter;
+    }
+    if (role != null) {
+      _result.role = role;
+    }
+    if (name != null) {
+      _result.name = name;
     }
     return _result;
   }
@@ -1678,6 +1697,30 @@ class UserChange extends $pb.GeneratedMessage {
   $core.bool hasSetSettingsNewsletter() => $_has(1);
   @$pb.TagNumber(2)
   void clearSetSettingsNewsletter() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get role => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set role($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasRole() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearRole() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get name => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set name($core.String v) {
+    $_setString(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasName() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearName() => clearField(4);
 }
 
 class UpdateUserRequest extends $pb.GeneratedMessage {

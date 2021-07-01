@@ -101,6 +101,7 @@ const User$json = const {
       '6': '.toit.model.User.Settings',
       '10': 'settings'
     },
+    const {'1': 'role', '3': 6, '4': 1, '5': 9, '10': 'role'},
   ],
   '3': const [User_Settings$json],
 };
@@ -122,7 +123,7 @@ const User_Settings$json = const {
 
 /// Descriptor for `User`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List userDescriptor = $convert.base64Decode(
-    'CgRVc2VyEg4KAmlkGAEgASgMUgJpZBInCg9vcmdhbml6YXRpb25faWQYAiABKAxSDm9yZ2FuaXphdGlvbklkEhQKBWVtYWlsGAMgASgJUgVlbWFpbBISCgRuYW1lGAQgASgJUgRuYW1lEjUKCHNldHRpbmdzGAUgASgLMhkudG9pdC5tb2RlbC5Vc2VyLlNldHRpbmdzUghzZXR0aW5ncxpRCghTZXR0aW5ncxIlCg53ZWxjb21lX2Nsb3NlZBgBIAEoCFINd2VsY29tZUNsb3NlZBIeCgpuZXdzbGV0dGVyGAIgASgIUgpuZXdzbGV0dGVy');
+    'CgRVc2VyEg4KAmlkGAEgASgMUgJpZBInCg9vcmdhbml6YXRpb25faWQYAiABKAxSDm9yZ2FuaXphdGlvbklkEhQKBWVtYWlsGAMgASgJUgVlbWFpbBISCgRuYW1lGAQgASgJUgRuYW1lEjUKCHNldHRpbmdzGAUgASgLMhkudG9pdC5tb2RlbC5Vc2VyLlNldHRpbmdzUghzZXR0aW5ncxISCgRyb2xlGAYgASgJUgRyb2xlGlEKCFNldHRpbmdzEiUKDndlbGNvbWVfY2xvc2VkGAEgASgIUg13ZWxjb21lQ2xvc2VkEh4KCm5ld3NsZXR0ZXIYAiABKAhSCm5ld3NsZXR0ZXI=');
 @$core.Deprecated('Use aPIKeyDescriptor instead')
 const APIKey$json = const {
   '1': 'APIKey',

@@ -638,6 +638,7 @@ class User extends $pb.GeneratedMessage {
         3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'email')
     ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
     ..aOM<User_Settings>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'settings', subBuilder: User_Settings.create)
+    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'role')
     ..hasRequiredFields = false;
 
   User._() : super();
@@ -647,6 +648,7 @@ class User extends $pb.GeneratedMessage {
     $core.String? email,
     $core.String? name,
     User_Settings? settings,
+    $core.String? role,
   }) {
     final _result = create();
     if (id != null) {
@@ -663,6 +665,9 @@ class User extends $pb.GeneratedMessage {
     }
     if (settings != null) {
       _result.settings = settings;
+    }
+    if (role != null) {
+      _result.role = role;
     }
     return _result;
   }
@@ -753,6 +758,18 @@ class User extends $pb.GeneratedMessage {
   void clearSettings() => clearField(5);
   @$pb.TagNumber(5)
   User_Settings ensureSettings() => $_ensure(4);
+
+  @$pb.TagNumber(6)
+  $core.String get role => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set role($core.String v) {
+    $_setString(5, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasRole() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearRole() => clearField(6);
 }
 
 class APIKey extends $pb.GeneratedMessage {
