@@ -49,7 +49,6 @@ message User {
     string name = 4;
     Settings settings = 5;
     string role = 6;
-    
 }
 
 message APIKey {
