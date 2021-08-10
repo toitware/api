@@ -52,6 +52,7 @@ message CreateOrganizationRequest {
   message User {
     string email = 1;
     string name = 2;
+    bool newsletter = 3;
   }
   Organization organization = 1;
   User user = 2;
