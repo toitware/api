@@ -216,6 +216,9 @@ export namespace CreateOrganizationRequest {
     getName(): string;
     setName(value: string): void;
 
+    getNewsletter(): boolean;
+    setNewsletter(value: boolean): void;
+
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): User.AsObject;
     static toObject(includeInstance: boolean, msg: User): User.AsObject;
@@ -230,6 +233,7 @@ export namespace CreateOrganizationRequest {
     export type AsObject = {
       email: string,
       name: string,
+      newsletter: boolean,
     }
   }
 }

@@ -1652,7 +1652,8 @@ proto.toit.api.CreateOrganizationRequest.User.prototype.toObject = function(opt_
 proto.toit.api.CreateOrganizationRequest.User.toObject = function(includeInstance, msg) {
   var f, obj = {
     email: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    name: jspb.Message.getFieldWithDefault(msg, 2, "")
+    name: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    newsletter: jspb.Message.getBooleanFieldWithDefault(msg, 3, false)
   };
 
   if (includeInstance) {
@@ -1697,6 +1698,10 @@ proto.toit.api.CreateOrganizationRequest.User.deserializeBinaryFromReader = func
       var value = /** @type {string} */ (reader.readString());
       msg.setName(value);
       break;
+    case 3:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setNewsletter(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -1740,6 +1745,13 @@ proto.toit.api.CreateOrganizationRequest.User.serializeBinaryToWriter = function
       f
     );
   }
+  f = message.getNewsletter();
+  if (f) {
+    writer.writeBool(
+      3,
+      f
+    );
+  }
 };
 
 
@@ -1776,6 +1788,24 @@ proto.toit.api.CreateOrganizationRequest.User.prototype.getName = function() {
  */
 proto.toit.api.CreateOrganizationRequest.User.prototype.setName = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+/**
+ * optional bool newsletter = 3;
+ * @return {boolean}
+ */
+proto.toit.api.CreateOrganizationRequest.User.prototype.getNewsletter = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.toit.api.CreateOrganizationRequest.User} returns this
+ */
+proto.toit.api.CreateOrganizationRequest.User.prototype.setNewsletter = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 3, value);
 };
 
 
