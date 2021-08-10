@@ -625,12 +625,18 @@ class CreateOrganizationRequest_User extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'name')
+    ..aOB(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'newsletter')
     ..hasRequiredFields = false;
 
   CreateOrganizationRequest_User._() : super();
   factory CreateOrganizationRequest_User({
     $core.String? email,
     $core.String? name,
+    $core.bool? newsletter,
   }) {
     final _result = create();
     if (email != null) {
@@ -638,6 +644,9 @@ class CreateOrganizationRequest_User extends $pb.GeneratedMessage {
     }
     if (name != null) {
       _result.name = name;
+    }
+    if (newsletter != null) {
+      _result.newsletter = newsletter;
     }
     return _result;
   }
@@ -695,6 +704,18 @@ class CreateOrganizationRequest_User extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(1);
   @$pb.TagNumber(2)
   void clearName() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.bool get newsletter => $_getBF(2);
+  @$pb.TagNumber(3)
+  set newsletter($core.bool v) {
+    $_setBool(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasNewsletter() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearNewsletter() => clearField(3);
 }
 
 class CreateOrganizationRequest extends $pb.GeneratedMessage {

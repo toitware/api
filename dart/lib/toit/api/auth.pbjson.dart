@@ -138,13 +138,14 @@ const CreateOrganizationRequest_User$json = const {
   '2': const [
     const {'1': 'email', '3': 1, '4': 1, '5': 9, '10': 'email'},
     const {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
+    const {'1': 'newsletter', '3': 3, '4': 1, '5': 8, '10': 'newsletter'},
   ],
 };
 
 /// Descriptor for `CreateOrganizationRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List createOrganizationRequestDescriptor =
     $convert.base64Decode(
-        'ChlDcmVhdGVPcmdhbml6YXRpb25SZXF1ZXN0ElQKDG9yZ2FuaXphdGlvbhgBIAEoCzIwLnRvaXQuYXBpLkNyZWF0ZU9yZ2FuaXphdGlvblJlcXVlc3QuT3JnYW5pemF0aW9uUgxvcmdhbml6YXRpb24SPAoEdXNlchgCIAEoCzIoLnRvaXQuYXBpLkNyZWF0ZU9yZ2FuaXphdGlvblJlcXVlc3QuVXNlclIEdXNlcho4CgxPcmdhbml6YXRpb24SEgoEbmFtZRgBIAEoCVIEbmFtZRIUCgVlbWFpbBgCIAEoCVIFZW1haWwaMAoEVXNlchIUCgVlbWFpbBgBIAEoCVIFZW1haWwSEgoEbmFtZRgCIAEoCVIEbmFtZQ==');
+        'ChlDcmVhdGVPcmdhbml6YXRpb25SZXF1ZXN0ElQKDG9yZ2FuaXphdGlvbhgBIAEoCzIwLnRvaXQuYXBpLkNyZWF0ZU9yZ2FuaXphdGlvblJlcXVlc3QuT3JnYW5pemF0aW9uUgxvcmdhbml6YXRpb24SPAoEdXNlchgCIAEoCzIoLnRvaXQuYXBpLkNyZWF0ZU9yZ2FuaXphdGlvblJlcXVlc3QuVXNlclIEdXNlcho4CgxPcmdhbml6YXRpb24SEgoEbmFtZRgBIAEoCVIEbmFtZRIUCgVlbWFpbBgCIAEoCVIFZW1haWwaUAoEVXNlchIUCgVlbWFpbBgBIAEoCVIFZW1haWwSEgoEbmFtZRgCIAEoCVIEbmFtZRIeCgpuZXdzbGV0dGVyGAMgASgIUgpuZXdzbGV0dGVy');
 @$core.Deprecated('Use createOrganizationResponseDescriptor instead')
 const CreateOrganizationResponse$json = const {
   '1': 'CreateOrganizationResponse',
