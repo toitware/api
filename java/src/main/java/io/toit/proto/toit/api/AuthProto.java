@@ -4585,6 +4585,12 @@ public final class AuthProto {
        */
       com.google.protobuf.ByteString
           getNameBytes();
+
+      /**
+       * <code>bool newsletter = 3;</code>
+       * @return The newsletter.
+       */
+      boolean getNewsletter();
     }
     /**
      * Protobuf type {@code toit.api.CreateOrganizationRequest.User}
@@ -4643,6 +4649,11 @@ public final class AuthProto {
                 java.lang.String s = input.readStringRequireUtf8();
 
                 name_ = s;
+                break;
+              }
+              case 24: {
+
+                newsletter_ = input.readBool();
                 break;
               }
               default: {
@@ -4749,6 +4760,16 @@ public final class AuthProto {
         }
       }
 
+      public static final int NEWSLETTER_FIELD_NUMBER = 3;
+      private boolean newsletter_;
+      /**
+       * <code>bool newsletter = 3;</code>
+       * @return The newsletter.
+       */
+      public boolean getNewsletter() {
+        return newsletter_;
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -4769,6 +4790,9 @@ public final class AuthProto {
         if (!getNameBytes().isEmpty()) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
         }
+        if (newsletter_ != false) {
+          output.writeBool(3, newsletter_);
+        }
         unknownFields.writeTo(output);
       }
 
@@ -4783,6 +4807,10 @@ public final class AuthProto {
         }
         if (!getNameBytes().isEmpty()) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+        }
+        if (newsletter_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(3, newsletter_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -4803,6 +4831,8 @@ public final class AuthProto {
             .equals(other.getEmail())) return false;
         if (!getName()
             .equals(other.getName())) return false;
+        if (getNewsletter()
+            != other.getNewsletter()) return false;
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -4818,6 +4848,9 @@ public final class AuthProto {
         hash = (53 * hash) + getEmail().hashCode();
         hash = (37 * hash) + NAME_FIELD_NUMBER;
         hash = (53 * hash) + getName().hashCode();
+        hash = (37 * hash) + NEWSLETTER_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getNewsletter());
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -4955,6 +4988,8 @@ public final class AuthProto {
 
           name_ = "";
 
+          newsletter_ = false;
+
           return this;
         }
 
@@ -4983,6 +5018,7 @@ public final class AuthProto {
           io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User result = new io.toit.proto.toit.api.AuthProto.CreateOrganizationRequest.User(this);
           result.email_ = email_;
           result.name_ = name_;
+          result.newsletter_ = newsletter_;
           onBuilt();
           return result;
         }
@@ -5038,6 +5074,9 @@ public final class AuthProto {
           if (!other.getName().isEmpty()) {
             name_ = other.name_;
             onChanged();
+          }
+          if (other.getNewsletter() != false) {
+            setNewsletter(other.getNewsletter());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -5216,6 +5255,36 @@ public final class AuthProto {
   checkByteStringIsUtf8(value);
           
           name_ = value;
+          onChanged();
+          return this;
+        }
+
+        private boolean newsletter_ ;
+        /**
+         * <code>bool newsletter = 3;</code>
+         * @return The newsletter.
+         */
+        public boolean getNewsletter() {
+          return newsletter_;
+        }
+        /**
+         * <code>bool newsletter = 3;</code>
+         * @param value The newsletter to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNewsletter(boolean value) {
+          
+          newsletter_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>bool newsletter = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearNewsletter() {
+          
+          newsletter_ = false;
           onChanged();
           return this;
         }
@@ -6513,26 +6582,26 @@ public final class AuthProto {
       "n\030\004 \001(\014\"\017\n\rLogoutRequest\"\020\n\016LogoutRespon" +
       "se\"K\n\031ChangeOrganizationRequest\022\027\n\017organ" +
       "ization_id\030\001 \001(\014\022\025\n\rrefresh_token\030\002 \001(\014\"" +
-      "\355\001\n\031CreateOrganizationRequest\022F\n\014organiz" +
+      "\201\002\n\031CreateOrganizationRequest\022F\n\014organiz" +
       "ation\030\001 \001(\01320.toit.api.CreateOrganizatio" +
       "nRequest.Organization\0226\n\004user\030\002 \001(\0132(.to" +
       "it.api.CreateOrganizationRequest.User\032+\n" +
       "\014Organization\022\014\n\004name\030\001 \001(\t\022\r\n\005email\030\002 \001" +
-      "(\t\032#\n\004User\022\r\n\005email\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\"" +
-      "5\n\032CreateOrganizationResponse\022\027\n\017organiz" +
-      "ation_id\030\001 \001(\0142\367\002\n\004Auth\0229\n\005Login\022\026.toit." +
-      "api.LoginRequest\032\026.toit.api.AuthResponse" +
-      "\"\000\022=\n\007Refresh\022\030.toit.api.RefreshRequest\032" +
-      "\026.toit.api.AuthResponse\"\000\022S\n\022ChangeOrgan" +
-      "ization\022#.toit.api.ChangeOrganizationReq" +
-      "uest\032\026.toit.api.AuthResponse\"\000\022=\n\006Logout" +
-      "\022\027.toit.api.LogoutRequest\032\030.toit.api.Log" +
-      "outResponse\"\000\022a\n\022CreateOrganization\022#.to" +
-      "it.api.CreateOrganizationRequest\032$.toit." +
-      "api.CreateOrganizationResponse\"\000B]\n\026io.t" +
-      "oit.proto.toit.apiB\tAuthProtoZ\'github.co" +
-      "m/toitware/api/golang/toit/api\252\002\016Toit.Pr" +
-      "oto.APIb\006proto3"
+      "(\t\0327\n\004User\022\r\n\005email\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022" +
+      "\022\n\nnewsletter\030\003 \001(\010\"5\n\032CreateOrganizatio" +
+      "nResponse\022\027\n\017organization_id\030\001 \001(\0142\367\002\n\004A" +
+      "uth\0229\n\005Login\022\026.toit.api.LoginRequest\032\026.t" +
+      "oit.api.AuthResponse\"\000\022=\n\007Refresh\022\030.toit" +
+      ".api.RefreshRequest\032\026.toit.api.AuthRespo" +
+      "nse\"\000\022S\n\022ChangeOrganization\022#.toit.api.C" +
+      "hangeOrganizationRequest\032\026.toit.api.Auth" +
+      "Response\"\000\022=\n\006Logout\022\027.toit.api.LogoutRe" +
+      "quest\032\030.toit.api.LogoutResponse\"\000\022a\n\022Cre" +
+      "ateOrganization\022#.toit.api.CreateOrganiz" +
+      "ationRequest\032$.toit.api.CreateOrganizati" +
+      "onResponse\"\000B]\n\026io.toit.proto.toit.apiB\t" +
+      "AuthProtoZ\'github.com/toitware/api/golan" +
+      "g/toit/api\252\002\016Toit.Proto.APIb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6592,7 +6661,7 @@ public final class AuthProto {
     internal_static_toit_api_CreateOrganizationRequest_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_CreateOrganizationRequest_User_descriptor,
-        new java.lang.String[] { "Email", "Name", });
+        new java.lang.String[] { "Email", "Name", "Newsletter", });
     internal_static_toit_api_CreateOrganizationResponse_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_toit_api_CreateOrganizationResponse_fieldAccessorTable = new
