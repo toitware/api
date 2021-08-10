@@ -33,24 +33,25 @@ namespace Toit.Proto.API {
             "bhgDIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIVCg1yZWZyZXNo",
             "X3Rva2VuGAQgASgMIg8KDUxvZ291dFJlcXVlc3QiEAoOTG9nb3V0UmVzcG9u",
             "c2UiSwoZQ2hhbmdlT3JnYW5pemF0aW9uUmVxdWVzdBIXCg9vcmdhbml6YXRp",
-            "b25faWQYASABKAwSFQoNcmVmcmVzaF90b2tlbhgCIAEoDCLtAQoZQ3JlYXRl",
+            "b25faWQYASABKAwSFQoNcmVmcmVzaF90b2tlbhgCIAEoDCKBAgoZQ3JlYXRl",
             "T3JnYW5pemF0aW9uUmVxdWVzdBJGCgxvcmdhbml6YXRpb24YASABKAsyMC50",
             "b2l0LmFwaS5DcmVhdGVPcmdhbml6YXRpb25SZXF1ZXN0Lk9yZ2FuaXphdGlv",
             "bhI2CgR1c2VyGAIgASgLMigudG9pdC5hcGkuQ3JlYXRlT3JnYW5pemF0aW9u",
             "UmVxdWVzdC5Vc2VyGisKDE9yZ2FuaXphdGlvbhIMCgRuYW1lGAEgASgJEg0K",
-            "BWVtYWlsGAIgASgJGiMKBFVzZXISDQoFZW1haWwYASABKAkSDAoEbmFtZRgC",
-            "IAEoCSI1ChpDcmVhdGVPcmdhbml6YXRpb25SZXNwb25zZRIXCg9vcmdhbml6",
-            "YXRpb25faWQYASABKAwy9wIKBEF1dGgSOQoFTG9naW4SFi50b2l0LmFwaS5M",
-            "b2dpblJlcXVlc3QaFi50b2l0LmFwaS5BdXRoUmVzcG9uc2UiABI9CgdSZWZy",
-            "ZXNoEhgudG9pdC5hcGkuUmVmcmVzaFJlcXVlc3QaFi50b2l0LmFwaS5BdXRo",
-            "UmVzcG9uc2UiABJTChJDaGFuZ2VPcmdhbml6YXRpb24SIy50b2l0LmFwaS5D",
-            "aGFuZ2VPcmdhbml6YXRpb25SZXF1ZXN0GhYudG9pdC5hcGkuQXV0aFJlc3Bv",
-            "bnNlIgASPQoGTG9nb3V0EhcudG9pdC5hcGkuTG9nb3V0UmVxdWVzdBoYLnRv",
-            "aXQuYXBpLkxvZ291dFJlc3BvbnNlIgASYQoSQ3JlYXRlT3JnYW5pemF0aW9u",
-            "EiMudG9pdC5hcGkuQ3JlYXRlT3JnYW5pemF0aW9uUmVxdWVzdBokLnRvaXQu",
-            "YXBpLkNyZWF0ZU9yZ2FuaXphdGlvblJlc3BvbnNlIgBCXQoWaW8udG9pdC5w",
-            "cm90by50b2l0LmFwaUIJQXV0aFByb3RvWidnaXRodWIuY29tL3RvaXR3YXJl",
-            "L2FwaS9nb2xhbmcvdG9pdC9hcGmqAg5Ub2l0LlByb3RvLkFQSWIGcHJvdG8z"));
+            "BWVtYWlsGAIgASgJGjcKBFVzZXISDQoFZW1haWwYASABKAkSDAoEbmFtZRgC",
+            "IAEoCRISCgpuZXdzbGV0dGVyGAMgASgIIjUKGkNyZWF0ZU9yZ2FuaXphdGlv",
+            "blJlc3BvbnNlEhcKD29yZ2FuaXphdGlvbl9pZBgBIAEoDDL3AgoEQXV0aBI5",
+            "CgVMb2dpbhIWLnRvaXQuYXBpLkxvZ2luUmVxdWVzdBoWLnRvaXQuYXBpLkF1",
+            "dGhSZXNwb25zZSIAEj0KB1JlZnJlc2gSGC50b2l0LmFwaS5SZWZyZXNoUmVx",
+            "dWVzdBoWLnRvaXQuYXBpLkF1dGhSZXNwb25zZSIAElMKEkNoYW5nZU9yZ2Fu",
+            "aXphdGlvbhIjLnRvaXQuYXBpLkNoYW5nZU9yZ2FuaXphdGlvblJlcXVlc3Qa",
+            "Fi50b2l0LmFwaS5BdXRoUmVzcG9uc2UiABI9CgZMb2dvdXQSFy50b2l0LmFw",
+            "aS5Mb2dvdXRSZXF1ZXN0GhgudG9pdC5hcGkuTG9nb3V0UmVzcG9uc2UiABJh",
+            "ChJDcmVhdGVPcmdhbml6YXRpb24SIy50b2l0LmFwaS5DcmVhdGVPcmdhbml6",
+            "YXRpb25SZXF1ZXN0GiQudG9pdC5hcGkuQ3JlYXRlT3JnYW5pemF0aW9uUmVz",
+            "cG9uc2UiAEJdChZpby50b2l0LnByb3RvLnRvaXQuYXBpQglBdXRoUHJvdG9a",
+            "J2dpdGh1Yi5jb20vdG9pdHdhcmUvYXBpL2dvbGFuZy90b2l0L2FwaaoCDlRv",
+            "aXQuUHJvdG8uQVBJYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -61,7 +62,7 @@ namespace Toit.Proto.API {
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.LogoutResponse), global::Toit.Proto.API.LogoutResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.ChangeOrganizationRequest), global::Toit.Proto.API.ChangeOrganizationRequest.Parser, new[]{ "OrganizationId", "RefreshToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.CreateOrganizationRequest), global::Toit.Proto.API.CreateOrganizationRequest.Parser, new[]{ "Organization", "User" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.CreateOrganizationRequest.Types.Organization), global::Toit.Proto.API.CreateOrganizationRequest.Types.Organization.Parser, new[]{ "Name", "Email" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.CreateOrganizationRequest.Types.User), global::Toit.Proto.API.CreateOrganizationRequest.Types.User.Parser, new[]{ "Email", "Name" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.CreateOrganizationRequest.Types.User), global::Toit.Proto.API.CreateOrganizationRequest.Types.User.Parser, new[]{ "Email", "Name", "Newsletter" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.CreateOrganizationResponse), global::Toit.Proto.API.CreateOrganizationResponse.Parser, new[]{ "OrganizationId" }, null, null, null, null)
           }));
     }
@@ -1912,6 +1913,7 @@ namespace Toit.Proto.API {
         public User(User other) : this() {
           email_ = other.email_;
           name_ = other.name_;
+          newsletter_ = other.newsletter_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1945,6 +1947,18 @@ namespace Toit.Proto.API {
           }
         }
 
+        /// <summary>Field number for the "newsletter" field.</summary>
+        public const int NewsletterFieldNumber = 3;
+        private bool newsletter_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Newsletter {
+          get { return newsletter_; }
+          set {
+            newsletter_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -1962,6 +1976,7 @@ namespace Toit.Proto.API {
           }
           if (Email != other.Email) return false;
           if (Name != other.Name) return false;
+          if (Newsletter != other.Newsletter) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1971,6 +1986,7 @@ namespace Toit.Proto.API {
           int hash = 1;
           if (Email.Length != 0) hash ^= Email.GetHashCode();
           if (Name.Length != 0) hash ^= Name.GetHashCode();
+          if (Newsletter != false) hash ^= Newsletter.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1997,6 +2013,10 @@ namespace Toit.Proto.API {
             output.WriteRawTag(18);
             output.WriteString(Name);
           }
+          if (Newsletter != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(Newsletter);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -2015,6 +2035,10 @@ namespace Toit.Proto.API {
             output.WriteRawTag(18);
             output.WriteString(Name);
           }
+          if (Newsletter != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(Newsletter);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -2030,6 +2054,9 @@ namespace Toit.Proto.API {
           }
           if (Name.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+          }
+          if (Newsletter != false) {
+            size += 1 + 1;
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -2048,6 +2075,9 @@ namespace Toit.Proto.API {
           }
           if (other.Name.Length != 0) {
             Name = other.Name;
+          }
+          if (other.Newsletter != false) {
+            Newsletter = other.Newsletter;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -2072,6 +2102,10 @@ namespace Toit.Proto.API {
                 Name = input.ReadString();
                 break;
               }
+              case 24: {
+                Newsletter = input.ReadBool();
+                break;
+              }
             }
           }
         #endif
@@ -2093,6 +2127,10 @@ namespace Toit.Proto.API {
               }
               case 18: {
                 Name = input.ReadString();
+                break;
+              }
+              case 24: {
+                Newsletter = input.ReadBool();
                 break;
               }
             }
