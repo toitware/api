@@ -4,6 +4,7 @@ package toit.model;
 
 import "google/protobuf/struct.proto";
 import "google/protobuf/timestamp.proto";
+import "google/protobuf/duration.proto";
 
 option go_package = "github.com/toitware/api/golang/toit/model";
 option java_package = "io.toit.proto.toit.model";
@@ -75,6 +76,9 @@ message LogData {
     STACK_TRACE = 4;
     BOOT = 5;
     SHUTDOWN = 6;
+    CONNECTED = 7;
+    DISCONNECTED = 8;
+    CONNECT_FAILED = 9;
   }
 
   enum Level {
@@ -92,4 +96,5 @@ message LogData {
   Level level = 4;
   repeated string names = 5;
   map<string, google.protobuf.Value> tags = 6;
+  google.protobuf.Duration duration = 7;
 }
