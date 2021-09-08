@@ -6725,34 +6725,34 @@ public final class JobProto {
     io.toit.proto.toit.model.JobProto.CronTriggerOrBuilder getCronOrBuilder();
 
     /**
-     * <code>.toit.model.MovementTrigger movement = 5;</code>
+     * <code>.toit.model.MovementTrigger movement = 5 [deprecated = true];</code>
      * @return Whether the movement field is set.
      */
-    boolean hasMovement();
+    @java.lang.Deprecated boolean hasMovement();
     /**
-     * <code>.toit.model.MovementTrigger movement = 5;</code>
+     * <code>.toit.model.MovementTrigger movement = 5 [deprecated = true];</code>
      * @return The movement.
      */
-    io.toit.proto.toit.model.JobProto.MovementTrigger getMovement();
+    @java.lang.Deprecated io.toit.proto.toit.model.JobProto.MovementTrigger getMovement();
     /**
-     * <code>.toit.model.MovementTrigger movement = 5;</code>
+     * <code>.toit.model.MovementTrigger movement = 5 [deprecated = true];</code>
      */
-    io.toit.proto.toit.model.JobProto.MovementTriggerOrBuilder getMovementOrBuilder();
+    @java.lang.Deprecated io.toit.proto.toit.model.JobProto.MovementTriggerOrBuilder getMovementOrBuilder();
 
     /**
-     * <code>.toit.model.ButtonTrigger button = 6;</code>
+     * <code>.toit.model.ButtonTrigger button = 6 [deprecated = true];</code>
      * @return Whether the button field is set.
      */
-    boolean hasButton();
+    @java.lang.Deprecated boolean hasButton();
     /**
-     * <code>.toit.model.ButtonTrigger button = 6;</code>
+     * <code>.toit.model.ButtonTrigger button = 6 [deprecated = true];</code>
      * @return The button.
      */
-    io.toit.proto.toit.model.JobProto.ButtonTrigger getButton();
+    @java.lang.Deprecated io.toit.proto.toit.model.JobProto.ButtonTrigger getButton();
     /**
-     * <code>.toit.model.ButtonTrigger button = 6;</code>
+     * <code>.toit.model.ButtonTrigger button = 6 [deprecated = true];</code>
      */
-    io.toit.proto.toit.model.JobProto.ButtonTriggerOrBuilder getButtonOrBuilder();
+    @java.lang.Deprecated io.toit.proto.toit.model.JobProto.ButtonTriggerOrBuilder getButtonOrBuilder();
 
     /**
      * <code>.toit.model.NetworkTrigger network = 7;</code>
@@ -7060,46 +7060,46 @@ public final class JobProto {
     public static final int MOVEMENT_FIELD_NUMBER = 5;
     private io.toit.proto.toit.model.JobProto.MovementTrigger movement_;
     /**
-     * <code>.toit.model.MovementTrigger movement = 5;</code>
+     * <code>.toit.model.MovementTrigger movement = 5 [deprecated = true];</code>
      * @return Whether the movement field is set.
      */
-    public boolean hasMovement() {
+    @java.lang.Deprecated public boolean hasMovement() {
       return movement_ != null;
     }
     /**
-     * <code>.toit.model.MovementTrigger movement = 5;</code>
+     * <code>.toit.model.MovementTrigger movement = 5 [deprecated = true];</code>
      * @return The movement.
      */
-    public io.toit.proto.toit.model.JobProto.MovementTrigger getMovement() {
+    @java.lang.Deprecated public io.toit.proto.toit.model.JobProto.MovementTrigger getMovement() {
       return movement_ == null ? io.toit.proto.toit.model.JobProto.MovementTrigger.getDefaultInstance() : movement_;
     }
     /**
-     * <code>.toit.model.MovementTrigger movement = 5;</code>
+     * <code>.toit.model.MovementTrigger movement = 5 [deprecated = true];</code>
      */
-    public io.toit.proto.toit.model.JobProto.MovementTriggerOrBuilder getMovementOrBuilder() {
+    @java.lang.Deprecated public io.toit.proto.toit.model.JobProto.MovementTriggerOrBuilder getMovementOrBuilder() {
       return getMovement();
     }
 
     public static final int BUTTON_FIELD_NUMBER = 6;
     private io.toit.proto.toit.model.JobProto.ButtonTrigger button_;
     /**
-     * <code>.toit.model.ButtonTrigger button = 6;</code>
+     * <code>.toit.model.ButtonTrigger button = 6 [deprecated = true];</code>
      * @return Whether the button field is set.
      */
-    public boolean hasButton() {
+    @java.lang.Deprecated public boolean hasButton() {
       return button_ != null;
     }
     /**
-     * <code>.toit.model.ButtonTrigger button = 6;</code>
+     * <code>.toit.model.ButtonTrigger button = 6 [deprecated = true];</code>
      * @return The button.
      */
-    public io.toit.proto.toit.model.JobProto.ButtonTrigger getButton() {
+    @java.lang.Deprecated public io.toit.proto.toit.model.JobProto.ButtonTrigger getButton() {
       return button_ == null ? io.toit.proto.toit.model.JobProto.ButtonTrigger.getDefaultInstance() : button_;
     }
     /**
-     * <code>.toit.model.ButtonTrigger button = 6;</code>
+     * <code>.toit.model.ButtonTrigger button = 6 [deprecated = true];</code>
      */
-    public io.toit.proto.toit.model.JobProto.ButtonTriggerOrBuilder getButtonOrBuilder() {
+    @java.lang.Deprecated public io.toit.proto.toit.model.JobProto.ButtonTriggerOrBuilder getButtonOrBuilder() {
       return getButton();
     }
 
@@ -8154,17 +8154,17 @@ public final class JobProto {
       private com.google.protobuf.SingleFieldBuilderV3<
           io.toit.proto.toit.model.JobProto.MovementTrigger, io.toit.proto.toit.model.JobProto.MovementTrigger.Builder, io.toit.proto.toit.model.JobProto.MovementTriggerOrBuilder> movementBuilder_;
       /**
-       * <code>.toit.model.MovementTrigger movement = 5;</code>
+       * <code>.toit.model.MovementTrigger movement = 5 [deprecated = true];</code>
        * @return Whether the movement field is set.
        */
-      public boolean hasMovement() {
+      @java.lang.Deprecated public boolean hasMovement() {
         return movementBuilder_ != null || movement_ != null;
       }
       /**
-       * <code>.toit.model.MovementTrigger movement = 5;</code>
+       * <code>.toit.model.MovementTrigger movement = 5 [deprecated = true];</code>
        * @return The movement.
        */
-      public io.toit.proto.toit.model.JobProto.MovementTrigger getMovement() {
+      @java.lang.Deprecated public io.toit.proto.toit.model.JobProto.MovementTrigger getMovement() {
         if (movementBuilder_ == null) {
           return movement_ == null ? io.toit.proto.toit.model.JobProto.MovementTrigger.getDefaultInstance() : movement_;
         } else {
@@ -8172,9 +8172,9 @@ public final class JobProto {
         }
       }
       /**
-       * <code>.toit.model.MovementTrigger movement = 5;</code>
+       * <code>.toit.model.MovementTrigger movement = 5 [deprecated = true];</code>
        */
-      public Builder setMovement(io.toit.proto.toit.model.JobProto.MovementTrigger value) {
+      @java.lang.Deprecated public Builder setMovement(io.toit.proto.toit.model.JobProto.MovementTrigger value) {
         if (movementBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8188,9 +8188,9 @@ public final class JobProto {
         return this;
       }
       /**
-       * <code>.toit.model.MovementTrigger movement = 5;</code>
+       * <code>.toit.model.MovementTrigger movement = 5 [deprecated = true];</code>
        */
-      public Builder setMovement(
+      @java.lang.Deprecated public Builder setMovement(
           io.toit.proto.toit.model.JobProto.MovementTrigger.Builder builderForValue) {
         if (movementBuilder_ == null) {
           movement_ = builderForValue.build();
@@ -8202,9 +8202,9 @@ public final class JobProto {
         return this;
       }
       /**
-       * <code>.toit.model.MovementTrigger movement = 5;</code>
+       * <code>.toit.model.MovementTrigger movement = 5 [deprecated = true];</code>
        */
-      public Builder mergeMovement(io.toit.proto.toit.model.JobProto.MovementTrigger value) {
+      @java.lang.Deprecated public Builder mergeMovement(io.toit.proto.toit.model.JobProto.MovementTrigger value) {
         if (movementBuilder_ == null) {
           if (movement_ != null) {
             movement_ =
@@ -8220,9 +8220,9 @@ public final class JobProto {
         return this;
       }
       /**
-       * <code>.toit.model.MovementTrigger movement = 5;</code>
+       * <code>.toit.model.MovementTrigger movement = 5 [deprecated = true];</code>
        */
-      public Builder clearMovement() {
+      @java.lang.Deprecated public Builder clearMovement() {
         if (movementBuilder_ == null) {
           movement_ = null;
           onChanged();
@@ -8234,17 +8234,17 @@ public final class JobProto {
         return this;
       }
       /**
-       * <code>.toit.model.MovementTrigger movement = 5;</code>
+       * <code>.toit.model.MovementTrigger movement = 5 [deprecated = true];</code>
        */
-      public io.toit.proto.toit.model.JobProto.MovementTrigger.Builder getMovementBuilder() {
+      @java.lang.Deprecated public io.toit.proto.toit.model.JobProto.MovementTrigger.Builder getMovementBuilder() {
         
         onChanged();
         return getMovementFieldBuilder().getBuilder();
       }
       /**
-       * <code>.toit.model.MovementTrigger movement = 5;</code>
+       * <code>.toit.model.MovementTrigger movement = 5 [deprecated = true];</code>
        */
-      public io.toit.proto.toit.model.JobProto.MovementTriggerOrBuilder getMovementOrBuilder() {
+      @java.lang.Deprecated public io.toit.proto.toit.model.JobProto.MovementTriggerOrBuilder getMovementOrBuilder() {
         if (movementBuilder_ != null) {
           return movementBuilder_.getMessageOrBuilder();
         } else {
@@ -8253,7 +8253,7 @@ public final class JobProto {
         }
       }
       /**
-       * <code>.toit.model.MovementTrigger movement = 5;</code>
+       * <code>.toit.model.MovementTrigger movement = 5 [deprecated = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.toit.proto.toit.model.JobProto.MovementTrigger, io.toit.proto.toit.model.JobProto.MovementTrigger.Builder, io.toit.proto.toit.model.JobProto.MovementTriggerOrBuilder> 
@@ -8273,17 +8273,17 @@ public final class JobProto {
       private com.google.protobuf.SingleFieldBuilderV3<
           io.toit.proto.toit.model.JobProto.ButtonTrigger, io.toit.proto.toit.model.JobProto.ButtonTrigger.Builder, io.toit.proto.toit.model.JobProto.ButtonTriggerOrBuilder> buttonBuilder_;
       /**
-       * <code>.toit.model.ButtonTrigger button = 6;</code>
+       * <code>.toit.model.ButtonTrigger button = 6 [deprecated = true];</code>
        * @return Whether the button field is set.
        */
-      public boolean hasButton() {
+      @java.lang.Deprecated public boolean hasButton() {
         return buttonBuilder_ != null || button_ != null;
       }
       /**
-       * <code>.toit.model.ButtonTrigger button = 6;</code>
+       * <code>.toit.model.ButtonTrigger button = 6 [deprecated = true];</code>
        * @return The button.
        */
-      public io.toit.proto.toit.model.JobProto.ButtonTrigger getButton() {
+      @java.lang.Deprecated public io.toit.proto.toit.model.JobProto.ButtonTrigger getButton() {
         if (buttonBuilder_ == null) {
           return button_ == null ? io.toit.proto.toit.model.JobProto.ButtonTrigger.getDefaultInstance() : button_;
         } else {
@@ -8291,9 +8291,9 @@ public final class JobProto {
         }
       }
       /**
-       * <code>.toit.model.ButtonTrigger button = 6;</code>
+       * <code>.toit.model.ButtonTrigger button = 6 [deprecated = true];</code>
        */
-      public Builder setButton(io.toit.proto.toit.model.JobProto.ButtonTrigger value) {
+      @java.lang.Deprecated public Builder setButton(io.toit.proto.toit.model.JobProto.ButtonTrigger value) {
         if (buttonBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8307,9 +8307,9 @@ public final class JobProto {
         return this;
       }
       /**
-       * <code>.toit.model.ButtonTrigger button = 6;</code>
+       * <code>.toit.model.ButtonTrigger button = 6 [deprecated = true];</code>
        */
-      public Builder setButton(
+      @java.lang.Deprecated public Builder setButton(
           io.toit.proto.toit.model.JobProto.ButtonTrigger.Builder builderForValue) {
         if (buttonBuilder_ == null) {
           button_ = builderForValue.build();
@@ -8321,9 +8321,9 @@ public final class JobProto {
         return this;
       }
       /**
-       * <code>.toit.model.ButtonTrigger button = 6;</code>
+       * <code>.toit.model.ButtonTrigger button = 6 [deprecated = true];</code>
        */
-      public Builder mergeButton(io.toit.proto.toit.model.JobProto.ButtonTrigger value) {
+      @java.lang.Deprecated public Builder mergeButton(io.toit.proto.toit.model.JobProto.ButtonTrigger value) {
         if (buttonBuilder_ == null) {
           if (button_ != null) {
             button_ =
@@ -8339,9 +8339,9 @@ public final class JobProto {
         return this;
       }
       /**
-       * <code>.toit.model.ButtonTrigger button = 6;</code>
+       * <code>.toit.model.ButtonTrigger button = 6 [deprecated = true];</code>
        */
-      public Builder clearButton() {
+      @java.lang.Deprecated public Builder clearButton() {
         if (buttonBuilder_ == null) {
           button_ = null;
           onChanged();
@@ -8353,17 +8353,17 @@ public final class JobProto {
         return this;
       }
       /**
-       * <code>.toit.model.ButtonTrigger button = 6;</code>
+       * <code>.toit.model.ButtonTrigger button = 6 [deprecated = true];</code>
        */
-      public io.toit.proto.toit.model.JobProto.ButtonTrigger.Builder getButtonBuilder() {
+      @java.lang.Deprecated public io.toit.proto.toit.model.JobProto.ButtonTrigger.Builder getButtonBuilder() {
         
         onChanged();
         return getButtonFieldBuilder().getBuilder();
       }
       /**
-       * <code>.toit.model.ButtonTrigger button = 6;</code>
+       * <code>.toit.model.ButtonTrigger button = 6 [deprecated = true];</code>
        */
-      public io.toit.proto.toit.model.JobProto.ButtonTriggerOrBuilder getButtonOrBuilder() {
+      @java.lang.Deprecated public io.toit.proto.toit.model.JobProto.ButtonTriggerOrBuilder getButtonOrBuilder() {
         if (buttonBuilder_ != null) {
           return buttonBuilder_.getMessageOrBuilder();
         } else {
@@ -8372,7 +8372,7 @@ public final class JobProto {
         }
       }
       /**
-       * <code>.toit.model.ButtonTrigger button = 6;</code>
+       * <code>.toit.model.ButtonTrigger button = 6 [deprecated = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.toit.proto.toit.model.JobProto.ButtonTrigger, io.toit.proto.toit.model.JobProto.ButtonTrigger.Builder, io.toit.proto.toit.model.JobProto.ButtonTriggerOrBuilder> 
@@ -18858,54 +18858,55 @@ public final class JobProto {
       "it.model.GPSFeature\">\n\007JobFile\022%\n\004type\030\001" +
       " \001(\0162\027.toit.model.JobFileType\022\014\n\004path\030\002 " +
       "\001(\t\"\035\n\nGPSFeature\022\017\n\007enabled\030\001 \001(\010\" \n\016Me" +
-      "moryResource\022\016\n\006memory\030\001 \001(\003\"\363\002\n\013JobTrig" +
+      "moryResource\022\016\n\006memory\030\001 \001(\003\"\373\002\n\013JobTrig" +
       "gers\0220\n\non_install\030\001 \001(\0132\034.toit.model.On" +
       "InstallTrigger\022*\n\007on_boot\030\002 \001(\0132\031.toit.m" +
       "odel.OnBootTrigger\022-\n\010interval\030\003 \001(\0132\033.t" +
       "oit.model.IntervalTrigger\022%\n\004cron\030\004 \001(\0132" +
-      "\027.toit.model.CronTrigger\022-\n\010movement\030\005 \001" +
-      "(\0132\033.toit.model.MovementTrigger\022)\n\006butto" +
-      "n\030\006 \001(\0132\031.toit.model.ButtonTrigger\022+\n\007ne" +
-      "twork\030\007 \001(\0132\032.toit.model.NetworkTrigger\022" +
-      ")\n\006pubsub\030\010 \001(\0132\031.toit.model.PubSubTrigg" +
-      "er\"#\n\020OnInstallTrigger\022\017\n\007enabled\030\001 \001(\010\"" +
-      " \n\rOnBootTrigger\022\017\n\007enabled\030\001 \001(\010\">\n\017Int" +
-      "ervalTrigger\022+\n\010interval\030\001 \001(\0132\031.google." +
-      "protobuf.Duration\"2\n\013CronTrigger\022#\n\005spec" +
-      "s\030\001 \003(\0132\024.toit.model.CronSpec\"!\n\017Movemen" +
-      "tTrigger\022\016\n\006shaken\030\001 \001(\010\" \n\rButtonTrigge" +
-      "r\022\017\n\007buttons\030\001 \003(\t\"#\n\016NetworkTrigger\022\021\n\t" +
-      "connected\030\001 \001(\010\"9\n\rPubSubTrigger\022(\n\006topi" +
-      "cs\030\001 \003(\0132\030.toit.model.pubsub.Topic\"L\n\010Cr" +
-      "onSpec\022\023\n\013cron_string\030\001 \001(\t\022+\n\tschedules" +
-      "\030\002 \003(\0132\030.toit.model.CronSchedule\"\324\001\n\014Cro" +
-      "nSchedule\022\016\n\006second\030\001 \001(\020\022\016\n\006minute\030\002 \001(" +
-      "\020\022\014\n\004hour\030\003 \001(\020\022\024\n\014day_of_month\030\004 \001(\020\022\r\n" +
-      "\005month\030\005 \001(\020\022\023\n\013day_of_week\030\006 \001(\020\022.\n\nval" +
-      "id_from\030\007 \001(\0132\032.google.protobuf.Timestam" +
-      "p\022,\n\010valid_to\030\010 \001(\0132\032.google.protobuf.Ti" +
-      "mestamp\"\213\001\n\tJobPubSub\0229\n\rsubscriptions\030\001" +
-      " \003(\0132\".toit.model.JobPubSub.Subscription" +
-      "\032C\n\014Subscription\022\'\n\005topic\030\001 \001(\0132\030.toit.m" +
-      "odel.pubsub.Topic\022\n\n\002id\030\002 \001(\014\"m\n\tJobStat" +
-      "us\022\016\n\006job_id\030\003 \001(\014\022#\n\005state\030\001 \001(\0162\024.toit" +
-      ".model.JobState\022+\n\007updated\030\002 \001(\0132\032.googl" +
-      "e.protobuf.Timestamp\"W\n\007JobInfo\022%\n\006confi" +
-      "g\030\001 \001(\0132\025.toit.model.JobConfig\022%\n\006status" +
-      "\030\002 \001(\0132\025.toit.model.JobStatus*d\n\014JobGoal" +
-      "State\022\032\n\026JOB_GOAL_STATE_UNKNOWN\020\000\022\032\n\026JOB" +
-      "_GOAL_STATE_INSTALL\020\001\022\034\n\030JOB_GOAL_STATE_" +
-      "UNINSTALL\020\002*B\n\013JobFileType\022\031\n\025JOB_FILE_T" +
-      "YPE_UNKNOWN\020\000\022\030\n\024JOB_FILE_TYPE_SYSTEM\020\001*" +
-      "\205\001\n\010JobState\022\025\n\021JOB_STATE_UNKNOWN\020\000\022\031\n\025J" +
-      "OB_STATE_UNINSTALLED\020\001\022\030\n\024JOB_STATE_INST" +
-      "ALLING\020\002\022\027\n\023JOB_STATE_INSTALLED\020\003\022\024\n\020JOB" +
-      "_STATE_FAILED\020\004*m\n\rJobChangeType\022\026\n\022JOB_" +
-      "CHANGE_UNKNOWN\020\000\022\024\n\020JOB_CHANGE_ADDED\020\001\022\026" +
-      "\n\022JOB_CHANGE_DELETED\020\002\022\026\n\022JOB_CHANGE_CHA" +
-      "NGED\020\003Bb\n\030io.toit.proto.toit.modelB\010JobP" +
-      "rotoZ)github.com/toitware/api/golang/toi" +
-      "t/model\252\002\020Toit.Proto.Modelb\006proto3"
+      "\027.toit.model.CronTrigger\0221\n\010movement\030\005 \001" +
+      "(\0132\033.toit.model.MovementTriggerB\002\030\001\022-\n\006b" +
+      "utton\030\006 \001(\0132\031.toit.model.ButtonTriggerB\002" +
+      "\030\001\022+\n\007network\030\007 \001(\0132\032.toit.model.Network" +
+      "Trigger\022)\n\006pubsub\030\010 \001(\0132\031.toit.model.Pub" +
+      "SubTrigger\"#\n\020OnInstallTrigger\022\017\n\007enable" +
+      "d\030\001 \001(\010\" \n\rOnBootTrigger\022\017\n\007enabled\030\001 \001(" +
+      "\010\">\n\017IntervalTrigger\022+\n\010interval\030\001 \001(\0132\031" +
+      ".google.protobuf.Duration\"2\n\013CronTrigger" +
+      "\022#\n\005specs\030\001 \003(\0132\024.toit.model.CronSpec\"!\n" +
+      "\017MovementTrigger\022\016\n\006shaken\030\001 \001(\010\" \n\rButt" +
+      "onTrigger\022\017\n\007buttons\030\001 \003(\t\"#\n\016NetworkTri" +
+      "gger\022\021\n\tconnected\030\001 \001(\010\"9\n\rPubSubTrigger" +
+      "\022(\n\006topics\030\001 \003(\0132\030.toit.model.pubsub.Top" +
+      "ic\"L\n\010CronSpec\022\023\n\013cron_string\030\001 \001(\t\022+\n\ts" +
+      "chedules\030\002 \003(\0132\030.toit.model.CronSchedule" +
+      "\"\324\001\n\014CronSchedule\022\016\n\006second\030\001 \001(\020\022\016\n\006min" +
+      "ute\030\002 \001(\020\022\014\n\004hour\030\003 \001(\020\022\024\n\014day_of_month\030" +
+      "\004 \001(\020\022\r\n\005month\030\005 \001(\020\022\023\n\013day_of_week\030\006 \001(" +
+      "\020\022.\n\nvalid_from\030\007 \001(\0132\032.google.protobuf." +
+      "Timestamp\022,\n\010valid_to\030\010 \001(\0132\032.google.pro" +
+      "tobuf.Timestamp\"\213\001\n\tJobPubSub\0229\n\rsubscri" +
+      "ptions\030\001 \003(\0132\".toit.model.JobPubSub.Subs" +
+      "cription\032C\n\014Subscription\022\'\n\005topic\030\001 \001(\0132" +
+      "\030.toit.model.pubsub.Topic\022\n\n\002id\030\002 \001(\014\"m\n" +
+      "\tJobStatus\022\016\n\006job_id\030\003 \001(\014\022#\n\005state\030\001 \001(" +
+      "\0162\024.toit.model.JobState\022+\n\007updated\030\002 \001(\013" +
+      "2\032.google.protobuf.Timestamp\"W\n\007JobInfo\022" +
+      "%\n\006config\030\001 \001(\0132\025.toit.model.JobConfig\022%" +
+      "\n\006status\030\002 \001(\0132\025.toit.model.JobStatus*d\n" +
+      "\014JobGoalState\022\032\n\026JOB_GOAL_STATE_UNKNOWN\020" +
+      "\000\022\032\n\026JOB_GOAL_STATE_INSTALL\020\001\022\034\n\030JOB_GOA" +
+      "L_STATE_UNINSTALL\020\002*B\n\013JobFileType\022\031\n\025JO" +
+      "B_FILE_TYPE_UNKNOWN\020\000\022\030\n\024JOB_FILE_TYPE_S" +
+      "YSTEM\020\001*\205\001\n\010JobState\022\025\n\021JOB_STATE_UNKNOW" +
+      "N\020\000\022\031\n\025JOB_STATE_UNINSTALLED\020\001\022\030\n\024JOB_ST" +
+      "ATE_INSTALLING\020\002\022\027\n\023JOB_STATE_INSTALLED\020" +
+      "\003\022\024\n\020JOB_STATE_FAILED\020\004*m\n\rJobChangeType" +
+      "\022\026\n\022JOB_CHANGE_UNKNOWN\020\000\022\024\n\020JOB_CHANGE_A" +
+      "DDED\020\001\022\026\n\022JOB_CHANGE_DELETED\020\002\022\026\n\022JOB_CH" +
+      "ANGE_CHANGED\020\003Bb\n\030io.toit.proto.toit.mod" +
+      "elB\010JobProtoZ)github.com/toitware/api/go" +
+      "lang/toit/model\252\002\020Toit.Proto.Modelb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
