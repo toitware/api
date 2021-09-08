@@ -71,8 +71,8 @@ message JobTriggers {
   OnBootTrigger on_boot = 2;
   IntervalTrigger interval = 3;
   CronTrigger cron = 4;
-  MovementTrigger movement = 5;
-  ButtonTrigger button = 6;
+  MovementTrigger movement = 5 [deprecated = true];
+  ButtonTrigger button = 6 [deprecated = true];
   NetworkTrigger network = 7;
   PubSubTrigger pubsub = 8;
 }
