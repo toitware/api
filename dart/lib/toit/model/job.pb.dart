@@ -786,8 +786,8 @@ class JobTriggers extends $pb.GeneratedMessage {
     OnBootTrigger? onBoot,
     IntervalTrigger? interval,
     CronTrigger? cron,
-    MovementTrigger? movement,
-    ButtonTrigger? button,
+    @$core.Deprecated('This field is deprecated.') MovementTrigger? movement,
+    @$core.Deprecated('This field is deprecated.') ButtonTrigger? button,
     NetworkTrigger? network,
     PubSubTrigger? pubsub,
   }) {
@@ -805,9 +805,11 @@ class JobTriggers extends $pb.GeneratedMessage {
       _result.cron = cron;
     }
     if (movement != null) {
+      // ignore: deprecated_member_use_from_same_package
       _result.movement = movement;
     }
     if (button != null) {
+      // ignore: deprecated_member_use_from_same_package
       _result.button = button;
     }
     if (network != null) {
@@ -900,31 +902,41 @@ class JobTriggers extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   CronTrigger ensureCron() => $_ensure(3);
 
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
   MovementTrigger get movement => $_getN(4);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
   set movement(MovementTrigger v) {
     setField(5, v);
   }
 
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
   $core.bool hasMovement() => $_has(4);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
   void clearMovement() => clearField(5);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
   MovementTrigger ensureMovement() => $_ensure(4);
 
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(6)
   ButtonTrigger get button => $_getN(5);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(6)
   set button(ButtonTrigger v) {
     setField(6, v);
   }
 
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(6)
   $core.bool hasButton() => $_has(5);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(6)
   void clearButton() => clearField(6);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(6)
   ButtonTrigger ensureButton() => $_ensure(5);
 

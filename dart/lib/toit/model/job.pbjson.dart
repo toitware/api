@@ -286,7 +286,8 @@ const JobTriggers$json = const {
       '4': 1,
       '5': 11,
       '6': '.toit.model.MovementTrigger',
-      '10': 'movement'
+      '8': const {'3': true},
+      '10': 'movement',
     },
     const {
       '1': 'button',
@@ -294,7 +295,8 @@ const JobTriggers$json = const {
       '4': 1,
       '5': 11,
       '6': '.toit.model.ButtonTrigger',
-      '10': 'button'
+      '8': const {'3': true},
+      '10': 'button',
     },
     const {
       '1': 'network',
@@ -317,7 +319,7 @@ const JobTriggers$json = const {
 
 /// Descriptor for `JobTriggers`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List jobTriggersDescriptor = $convert.base64Decode(
-    'CgtKb2JUcmlnZ2VycxI7Cgpvbl9pbnN0YWxsGAEgASgLMhwudG9pdC5tb2RlbC5Pbkluc3RhbGxUcmlnZ2VyUglvbkluc3RhbGwSMgoHb25fYm9vdBgCIAEoCzIZLnRvaXQubW9kZWwuT25Cb290VHJpZ2dlclIGb25Cb290EjcKCGludGVydmFsGAMgASgLMhsudG9pdC5tb2RlbC5JbnRlcnZhbFRyaWdnZXJSCGludGVydmFsEisKBGNyb24YBCABKAsyFy50b2l0Lm1vZGVsLkNyb25UcmlnZ2VyUgRjcm9uEjcKCG1vdmVtZW50GAUgASgLMhsudG9pdC5tb2RlbC5Nb3ZlbWVudFRyaWdnZXJSCG1vdmVtZW50EjEKBmJ1dHRvbhgGIAEoCzIZLnRvaXQubW9kZWwuQnV0dG9uVHJpZ2dlclIGYnV0dG9uEjQKB25ldHdvcmsYByABKAsyGi50b2l0Lm1vZGVsLk5ldHdvcmtUcmlnZ2VyUgduZXR3b3JrEjEKBnB1YnN1YhgIIAEoCzIZLnRvaXQubW9kZWwuUHViU3ViVHJpZ2dlclIGcHVic3Vi');
+    'CgtKb2JUcmlnZ2VycxI7Cgpvbl9pbnN0YWxsGAEgASgLMhwudG9pdC5tb2RlbC5Pbkluc3RhbGxUcmlnZ2VyUglvbkluc3RhbGwSMgoHb25fYm9vdBgCIAEoCzIZLnRvaXQubW9kZWwuT25Cb290VHJpZ2dlclIGb25Cb290EjcKCGludGVydmFsGAMgASgLMhsudG9pdC5tb2RlbC5JbnRlcnZhbFRyaWdnZXJSCGludGVydmFsEisKBGNyb24YBCABKAsyFy50b2l0Lm1vZGVsLkNyb25UcmlnZ2VyUgRjcm9uEjsKCG1vdmVtZW50GAUgASgLMhsudG9pdC5tb2RlbC5Nb3ZlbWVudFRyaWdnZXJCAhgBUghtb3ZlbWVudBI1CgZidXR0b24YBiABKAsyGS50b2l0Lm1vZGVsLkJ1dHRvblRyaWdnZXJCAhgBUgZidXR0b24SNAoHbmV0d29yaxgHIAEoCzIaLnRvaXQubW9kZWwuTmV0d29ya1RyaWdnZXJSB25ldHdvcmsSMQoGcHVic3ViGAggASgLMhkudG9pdC5tb2RlbC5QdWJTdWJUcmlnZ2VyUgZwdWJzdWI=');
 @$core.Deprecated('Use onInstallTriggerDescriptor instead')
 const OnInstallTrigger$json = const {
   '1': 'OnInstallTrigger',
