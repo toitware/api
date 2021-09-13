@@ -34,12 +34,19 @@ class DeviceConnectionType extends $pb.ProtobufEnum {
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
               : 'DEVICE_CONNECTION_TYPE_OS');
+  static const DeviceConnectionType DEVICE_CONNECTION_TYPE_ETHERNET =
+      DeviceConnectionType._(
+          4,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'DEVICE_CONNECTION_TYPE_ETHERNET');
 
   static const $core.List<DeviceConnectionType> values = <DeviceConnectionType>[
     DEVICE_CONNECTION_TYPE_UNKNOWN,
     DEVICE_CONNECTION_TYPE_WIFI,
     DEVICE_CONNECTION_TYPE_NBIOT,
     DEVICE_CONNECTION_TYPE_OS,
+    DEVICE_CONNECTION_TYPE_ETHERNET,
   ];
 
   static final $core.Map<$core.int, DeviceConnectionType> _byValue =

@@ -17,12 +17,13 @@ const DeviceConnectionType$json = const {
     const {'1': 'DEVICE_CONNECTION_TYPE_WIFI', '2': 1},
     const {'1': 'DEVICE_CONNECTION_TYPE_NBIOT', '2': 2},
     const {'1': 'DEVICE_CONNECTION_TYPE_OS', '2': 3},
+    const {'1': 'DEVICE_CONNECTION_TYPE_ETHERNET', '2': 4},
   ],
 };
 
 /// Descriptor for `DeviceConnectionType`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List deviceConnectionTypeDescriptor = $convert.base64Decode(
-    'ChREZXZpY2VDb25uZWN0aW9uVHlwZRIiCh5ERVZJQ0VfQ09OTkVDVElPTl9UWVBFX1VOS05PV04QABIfChtERVZJQ0VfQ09OTkVDVElPTl9UWVBFX1dJRkkQARIgChxERVZJQ0VfQ09OTkVDVElPTl9UWVBFX05CSU9UEAISHQoZREVWSUNFX0NPTk5FQ1RJT05fVFlQRV9PUxAD');
+    'ChREZXZpY2VDb25uZWN0aW9uVHlwZRIiCh5ERVZJQ0VfQ09OTkVDVElPTl9UWVBFX1VOS05PV04QABIfChtERVZJQ0VfQ09OTkVDVElPTl9UWVBFX1dJRkkQARIgChxERVZJQ0VfQ09OTkVDVElPTl9UWVBFX05CSU9UEAISHQoZREVWSUNFX0NPTk5FQ1RJT05fVFlQRV9PUxADEiMKH0RFVklDRV9DT05ORUNUSU9OX1RZUEVfRVRIRVJORVQQBA==');
 @$core.Deprecated('Use deviceChangeTypeDescriptor instead')
 const DeviceChangeType$json = const {
   '1': 'DeviceChangeType',
@@ -304,12 +305,20 @@ const ConnectionSetting$json = const {
       '6': '.toit.model.NBIoTSetting',
       '10': 'nbiot'
     },
+    const {
+      '1': 'ethernet',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.toit.model.EthernetSetting',
+      '10': 'ethernet'
+    },
   ],
 };
 
 /// Descriptor for `ConnectionSetting`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List connectionSettingDescriptor = $convert.base64Decode(
-    'ChFDb25uZWN0aW9uU2V0dGluZxIrCgR3aWZpGAEgASgLMhcudG9pdC5tb2RlbC5XaWZpU2V0dGluZ1IEd2lmaRIuCgVuYmlvdBgCIAEoCzIYLnRvaXQubW9kZWwuTkJJb1RTZXR0aW5nUgVuYmlvdA==');
+    'ChFDb25uZWN0aW9uU2V0dGluZxIrCgR3aWZpGAEgASgLMhcudG9pdC5tb2RlbC5XaWZpU2V0dGluZ1IEd2lmaRIuCgVuYmlvdBgCIAEoCzIYLnRvaXQubW9kZWwuTkJJb1RTZXR0aW5nUgVuYmlvdBI3CghldGhlcm5ldBgDIAEoCzIbLnRvaXQubW9kZWwuRXRoZXJuZXRTZXR0aW5nUghldGhlcm5ldA==');
 @$core.Deprecated('Use wifiSettingDescriptor instead')
 const WifiSetting$json = const {
   '1': 'WifiSetting',
@@ -322,6 +331,14 @@ const WifiSetting$json = const {
 /// Descriptor for `WifiSetting`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List wifiSettingDescriptor = $convert.base64Decode(
     'CgtXaWZpU2V0dGluZxISCgRzc2lkGAEgASgJUgRzc2lkEhoKCHBhc3N3b3JkGAIgASgJUghwYXNzd29yZA==');
+@$core.Deprecated('Use ethernetSettingDescriptor instead')
+const EthernetSetting$json = const {
+  '1': 'EthernetSetting',
+};
+
+/// Descriptor for `EthernetSetting`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List ethernetSettingDescriptor =
+    $convert.base64Decode('Cg9FdGhlcm5ldFNldHRpbmc=');
 @$core.Deprecated('Use nBIoTSettingDescriptor instead')
 const NBIoTSetting$json = const {
   '1': 'NBIoTSetting',

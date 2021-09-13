@@ -691,21 +691,21 @@ class ConnectionSetting extends $pb.GeneratedMessage {
               ? ''
               : 'toit.model'),
       createEmptyInstance: create)
-    ..aOM<WifiSetting>(
-        1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'wifi',
+    ..aOM<WifiSetting>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'wifi',
         subBuilder: WifiSetting.create)
     ..aOM<NBIoTSetting>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nbiot',
+        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nbiot',
         subBuilder: NBIoTSetting.create)
+    ..aOM<EthernetSetting>(
+        3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ethernet',
+        subBuilder: EthernetSetting.create)
     ..hasRequiredFields = false;
 
   ConnectionSetting._() : super();
   factory ConnectionSetting({
     WifiSetting? wifi,
     NBIoTSetting? nbiot,
+    EthernetSetting? ethernet,
   }) {
     final _result = create();
     if (wifi != null) {
@@ -713,6 +713,9 @@ class ConnectionSetting extends $pb.GeneratedMessage {
     }
     if (nbiot != null) {
       _result.nbiot = nbiot;
+    }
+    if (ethernet != null) {
+      _result.ethernet = ethernet;
     }
     return _result;
   }
@@ -770,6 +773,20 @@ class ConnectionSetting extends $pb.GeneratedMessage {
   void clearNbiot() => clearField(2);
   @$pb.TagNumber(2)
   NBIoTSetting ensureNbiot() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  EthernetSetting get ethernet => $_getN(2);
+  @$pb.TagNumber(3)
+  set ethernet(EthernetSetting v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasEthernet() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearEthernet() => clearField(3);
+  @$pb.TagNumber(3)
+  EthernetSetting ensureEthernet() => $_ensure(2);
 }
 
 class WifiSetting extends $pb.GeneratedMessage {
@@ -857,6 +874,48 @@ class WifiSetting extends $pb.GeneratedMessage {
   $core.bool hasPassword() => $_has(1);
   @$pb.TagNumber(2)
   void clearPassword() => clearField(2);
+}
+
+class EthernetSetting extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'EthernetSetting',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'toit.model'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  EthernetSetting._() : super();
+  factory EthernetSetting() => create();
+  factory EthernetSetting.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory EthernetSetting.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  EthernetSetting clone() => EthernetSetting()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  EthernetSetting copyWith(void Function(EthernetSetting) updates) =>
+      super.copyWith((message) => updates(message as EthernetSetting))
+          as EthernetSetting; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static EthernetSetting create() => EthernetSetting._();
+  EthernetSetting createEmptyInstance() => create();
+  static $pb.PbList<EthernetSetting> createRepeated() =>
+      $pb.PbList<EthernetSetting>();
+  @$core.pragma('dart2js:noInline')
+  static EthernetSetting getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<EthernetSetting>(create);
+  static EthernetSetting? _defaultInstance;
 }
 
 class NBIoTSetting extends $pb.GeneratedMessage {
