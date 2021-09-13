@@ -35,6 +35,10 @@ public final class DeviceProto {
      * <code>DEVICE_CONNECTION_TYPE_OS = 3;</code>
      */
     DEVICE_CONNECTION_TYPE_OS(3),
+    /**
+     * <code>DEVICE_CONNECTION_TYPE_ETHERNET = 4;</code>
+     */
+    DEVICE_CONNECTION_TYPE_ETHERNET(4),
     UNRECOGNIZED(-1),
     ;
 
@@ -54,6 +58,10 @@ public final class DeviceProto {
      * <code>DEVICE_CONNECTION_TYPE_OS = 3;</code>
      */
     public static final int DEVICE_CONNECTION_TYPE_OS_VALUE = 3;
+    /**
+     * <code>DEVICE_CONNECTION_TYPE_ETHERNET = 4;</code>
+     */
+    public static final int DEVICE_CONNECTION_TYPE_ETHERNET_VALUE = 4;
 
 
     public final int getNumber() {
@@ -84,6 +92,7 @@ public final class DeviceProto {
         case 1: return DEVICE_CONNECTION_TYPE_WIFI;
         case 2: return DEVICE_CONNECTION_TYPE_NBIOT;
         case 3: return DEVICE_CONNECTION_TYPE_OS;
+        case 4: return DEVICE_CONNECTION_TYPE_ETHERNET;
         default: return null;
       }
     }
@@ -6774,6 +6783,21 @@ public final class DeviceProto {
      * <code>.toit.model.NBIoTSetting nbiot = 2;</code>
      */
     io.toit.proto.toit.model.DeviceProto.NBIoTSettingOrBuilder getNbiotOrBuilder();
+
+    /**
+     * <code>.toit.model.EthernetSetting ethernet = 3;</code>
+     * @return Whether the ethernet field is set.
+     */
+    boolean hasEthernet();
+    /**
+     * <code>.toit.model.EthernetSetting ethernet = 3;</code>
+     * @return The ethernet.
+     */
+    io.toit.proto.toit.model.DeviceProto.EthernetSetting getEthernet();
+    /**
+     * <code>.toit.model.EthernetSetting ethernet = 3;</code>
+     */
+    io.toit.proto.toit.model.DeviceProto.EthernetSettingOrBuilder getEthernetOrBuilder();
   }
   /**
    * Protobuf type {@code toit.model.ConnectionSetting}
@@ -6842,6 +6866,19 @@ public final class DeviceProto {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(nbiot_);
                 nbiot_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              io.toit.proto.toit.model.DeviceProto.EthernetSetting.Builder subBuilder = null;
+              if (ethernet_ != null) {
+                subBuilder = ethernet_.toBuilder();
+              }
+              ethernet_ = input.readMessage(io.toit.proto.toit.model.DeviceProto.EthernetSetting.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(ethernet_);
+                ethernet_ = subBuilder.buildPartial();
               }
 
               break;
@@ -6939,6 +6976,29 @@ public final class DeviceProto {
       return getNbiot();
     }
 
+    public static final int ETHERNET_FIELD_NUMBER = 3;
+    private io.toit.proto.toit.model.DeviceProto.EthernetSetting ethernet_;
+    /**
+     * <code>.toit.model.EthernetSetting ethernet = 3;</code>
+     * @return Whether the ethernet field is set.
+     */
+    public boolean hasEthernet() {
+      return ethernet_ != null;
+    }
+    /**
+     * <code>.toit.model.EthernetSetting ethernet = 3;</code>
+     * @return The ethernet.
+     */
+    public io.toit.proto.toit.model.DeviceProto.EthernetSetting getEthernet() {
+      return ethernet_ == null ? io.toit.proto.toit.model.DeviceProto.EthernetSetting.getDefaultInstance() : ethernet_;
+    }
+    /**
+     * <code>.toit.model.EthernetSetting ethernet = 3;</code>
+     */
+    public io.toit.proto.toit.model.DeviceProto.EthernetSettingOrBuilder getEthernetOrBuilder() {
+      return getEthernet();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6959,6 +7019,9 @@ public final class DeviceProto {
       if (nbiot_ != null) {
         output.writeMessage(2, getNbiot());
       }
+      if (ethernet_ != null) {
+        output.writeMessage(3, getEthernet());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -6975,6 +7038,10 @@ public final class DeviceProto {
       if (nbiot_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getNbiot());
+      }
+      if (ethernet_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getEthernet());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7001,6 +7068,11 @@ public final class DeviceProto {
         if (!getNbiot()
             .equals(other.getNbiot())) return false;
       }
+      if (hasEthernet() != other.hasEthernet()) return false;
+      if (hasEthernet()) {
+        if (!getEthernet()
+            .equals(other.getEthernet())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7019,6 +7091,10 @@ public final class DeviceProto {
       if (hasNbiot()) {
         hash = (37 * hash) + NBIOT_FIELD_NUMBER;
         hash = (53 * hash) + getNbiot().hashCode();
+      }
+      if (hasEthernet()) {
+        hash = (37 * hash) + ETHERNET_FIELD_NUMBER;
+        hash = (53 * hash) + getEthernet().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -7165,6 +7241,12 @@ public final class DeviceProto {
           nbiot_ = null;
           nbiotBuilder_ = null;
         }
+        if (ethernetBuilder_ == null) {
+          ethernet_ = null;
+        } else {
+          ethernet_ = null;
+          ethernetBuilder_ = null;
+        }
         return this;
       }
 
@@ -7200,6 +7282,11 @@ public final class DeviceProto {
           result.nbiot_ = nbiot_;
         } else {
           result.nbiot_ = nbiotBuilder_.build();
+        }
+        if (ethernetBuilder_ == null) {
+          result.ethernet_ = ethernet_;
+        } else {
+          result.ethernet_ = ethernetBuilder_.build();
         }
         onBuilt();
         return result;
@@ -7254,6 +7341,9 @@ public final class DeviceProto {
         }
         if (other.hasNbiot()) {
           mergeNbiot(other.getNbiot());
+        }
+        if (other.hasEthernet()) {
+          mergeEthernet(other.getEthernet());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7565,6 +7655,125 @@ public final class DeviceProto {
           nbiot_ = null;
         }
         return nbiotBuilder_;
+      }
+
+      private io.toit.proto.toit.model.DeviceProto.EthernetSetting ethernet_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.model.DeviceProto.EthernetSetting, io.toit.proto.toit.model.DeviceProto.EthernetSetting.Builder, io.toit.proto.toit.model.DeviceProto.EthernetSettingOrBuilder> ethernetBuilder_;
+      /**
+       * <code>.toit.model.EthernetSetting ethernet = 3;</code>
+       * @return Whether the ethernet field is set.
+       */
+      public boolean hasEthernet() {
+        return ethernetBuilder_ != null || ethernet_ != null;
+      }
+      /**
+       * <code>.toit.model.EthernetSetting ethernet = 3;</code>
+       * @return The ethernet.
+       */
+      public io.toit.proto.toit.model.DeviceProto.EthernetSetting getEthernet() {
+        if (ethernetBuilder_ == null) {
+          return ethernet_ == null ? io.toit.proto.toit.model.DeviceProto.EthernetSetting.getDefaultInstance() : ethernet_;
+        } else {
+          return ethernetBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.toit.model.EthernetSetting ethernet = 3;</code>
+       */
+      public Builder setEthernet(io.toit.proto.toit.model.DeviceProto.EthernetSetting value) {
+        if (ethernetBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ethernet_ = value;
+          onChanged();
+        } else {
+          ethernetBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.EthernetSetting ethernet = 3;</code>
+       */
+      public Builder setEthernet(
+          io.toit.proto.toit.model.DeviceProto.EthernetSetting.Builder builderForValue) {
+        if (ethernetBuilder_ == null) {
+          ethernet_ = builderForValue.build();
+          onChanged();
+        } else {
+          ethernetBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.EthernetSetting ethernet = 3;</code>
+       */
+      public Builder mergeEthernet(io.toit.proto.toit.model.DeviceProto.EthernetSetting value) {
+        if (ethernetBuilder_ == null) {
+          if (ethernet_ != null) {
+            ethernet_ =
+              io.toit.proto.toit.model.DeviceProto.EthernetSetting.newBuilder(ethernet_).mergeFrom(value).buildPartial();
+          } else {
+            ethernet_ = value;
+          }
+          onChanged();
+        } else {
+          ethernetBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.EthernetSetting ethernet = 3;</code>
+       */
+      public Builder clearEthernet() {
+        if (ethernetBuilder_ == null) {
+          ethernet_ = null;
+          onChanged();
+        } else {
+          ethernet_ = null;
+          ethernetBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.EthernetSetting ethernet = 3;</code>
+       */
+      public io.toit.proto.toit.model.DeviceProto.EthernetSetting.Builder getEthernetBuilder() {
+        
+        onChanged();
+        return getEthernetFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.toit.model.EthernetSetting ethernet = 3;</code>
+       */
+      public io.toit.proto.toit.model.DeviceProto.EthernetSettingOrBuilder getEthernetOrBuilder() {
+        if (ethernetBuilder_ != null) {
+          return ethernetBuilder_.getMessageOrBuilder();
+        } else {
+          return ethernet_ == null ?
+              io.toit.proto.toit.model.DeviceProto.EthernetSetting.getDefaultInstance() : ethernet_;
+        }
+      }
+      /**
+       * <code>.toit.model.EthernetSetting ethernet = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.model.DeviceProto.EthernetSetting, io.toit.proto.toit.model.DeviceProto.EthernetSetting.Builder, io.toit.proto.toit.model.DeviceProto.EthernetSettingOrBuilder> 
+          getEthernetFieldBuilder() {
+        if (ethernetBuilder_ == null) {
+          ethernetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.toit.proto.toit.model.DeviceProto.EthernetSetting, io.toit.proto.toit.model.DeviceProto.EthernetSetting.Builder, io.toit.proto.toit.model.DeviceProto.EthernetSettingOrBuilder>(
+                  getEthernet(),
+                  getParentForChildren(),
+                  isClean());
+          ethernet_ = null;
+        }
+        return ethernetBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -8328,6 +8537,424 @@ public final class DeviceProto {
 
     @java.lang.Override
     public io.toit.proto.toit.model.DeviceProto.WifiSetting getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EthernetSettingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.model.EthernetSetting)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code toit.model.EthernetSetting}
+   */
+  public  static final class EthernetSetting extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.model.EthernetSetting)
+      EthernetSettingOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EthernetSetting.newBuilder() to construct.
+    private EthernetSetting(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EthernetSetting() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EthernetSetting();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EthernetSetting(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.model.DeviceProto.internal_static_toit_model_EthernetSetting_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.model.DeviceProto.internal_static_toit_model_EthernetSetting_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.model.DeviceProto.EthernetSetting.class, io.toit.proto.toit.model.DeviceProto.EthernetSetting.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.model.DeviceProto.EthernetSetting)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.model.DeviceProto.EthernetSetting other = (io.toit.proto.toit.model.DeviceProto.EthernetSetting) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.model.DeviceProto.EthernetSetting parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.model.DeviceProto.EthernetSetting parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.model.DeviceProto.EthernetSetting parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.model.DeviceProto.EthernetSetting parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.model.DeviceProto.EthernetSetting parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.model.DeviceProto.EthernetSetting parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.model.DeviceProto.EthernetSetting parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.model.DeviceProto.EthernetSetting parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.model.DeviceProto.EthernetSetting parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.model.DeviceProto.EthernetSetting parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.model.DeviceProto.EthernetSetting parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.model.DeviceProto.EthernetSetting parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.model.DeviceProto.EthernetSetting prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.model.EthernetSetting}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.model.EthernetSetting)
+        io.toit.proto.toit.model.DeviceProto.EthernetSettingOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.model.DeviceProto.internal_static_toit_model_EthernetSetting_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.model.DeviceProto.internal_static_toit_model_EthernetSetting_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.model.DeviceProto.EthernetSetting.class, io.toit.proto.toit.model.DeviceProto.EthernetSetting.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.model.DeviceProto.EthernetSetting.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.model.DeviceProto.internal_static_toit_model_EthernetSetting_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.model.DeviceProto.EthernetSetting getDefaultInstanceForType() {
+        return io.toit.proto.toit.model.DeviceProto.EthernetSetting.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.model.DeviceProto.EthernetSetting build() {
+        io.toit.proto.toit.model.DeviceProto.EthernetSetting result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.model.DeviceProto.EthernetSetting buildPartial() {
+        io.toit.proto.toit.model.DeviceProto.EthernetSetting result = new io.toit.proto.toit.model.DeviceProto.EthernetSetting(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.model.DeviceProto.EthernetSetting) {
+          return mergeFrom((io.toit.proto.toit.model.DeviceProto.EthernetSetting)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.model.DeviceProto.EthernetSetting other) {
+        if (other == io.toit.proto.toit.model.DeviceProto.EthernetSetting.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.model.DeviceProto.EthernetSetting parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.model.DeviceProto.EthernetSetting) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.model.EthernetSetting)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.model.EthernetSetting)
+    private static final io.toit.proto.toit.model.DeviceProto.EthernetSetting DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.model.DeviceProto.EthernetSetting();
+    }
+
+    public static io.toit.proto.toit.model.DeviceProto.EthernetSetting getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EthernetSetting>
+        PARSER = new com.google.protobuf.AbstractParser<EthernetSetting>() {
+      @java.lang.Override
+      public EthernetSetting parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new EthernetSetting(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<EthernetSetting> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EthernetSetting> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.model.DeviceProto.EthernetSetting getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -33855,6 +34482,11 @@ public final class DeviceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_toit_model_WifiSetting_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_model_EthernetSetting_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_model_EthernetSetting_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_toit_model_NBIoTSetting_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -34040,126 +34672,129 @@ public final class DeviceProto {
       "ctionSettings\022.\n\013max_offline\030\001 \001(\0132\031.goo" +
       "gle.protobuf.Duration\0222\n\013connections\030\002 \003" +
       "(\0132\035.toit.model.ConnectionSetting\022\035\n\025eve" +
-      "nt_queue_threshold\030\003 \001(\r\"c\n\021ConnectionSe" +
-      "tting\022%\n\004wifi\030\001 \001(\0132\027.toit.model.WifiSet" +
-      "ting\022\'\n\005nbiot\030\002 \001(\0132\030.toit.model.NBIoTSe" +
-      "tting\"-\n\013WifiSetting\022\014\n\004ssid\030\001 \001(\t\022\020\n\010pa" +
-      "ssword\030\002 \001(\t\"I\n\014NBIoTSetting\022\013\n\003apn\030\001 \001(" +
-      "\t\022\r\n\005bands\030\002 \003(\003\022\020\n\010operator\030\003 \001(\t\022\013\n\003pi" +
-      "n\030\004 \001(\t\"T\n\024DeviceBrokerSettings\022\014\n\004host\030" +
-      "\001 \001(\t\022\014\n\004port\030\002 \001(\003\022\n\n\002cn\030\003 \001(\t\022\024\n\010proto" +
-      "col\030\004 \001(\tB\002\030\001\"\252\003\n\014DeviceStatus\022\024\n\010revisi" +
-      "on\030\001 \001(\003B\002\030\001\022\r\n\005epoch\030\006 \001(\014\022\026\n\016state_rev" +
-      "ision\030\005 \001(\003\022+\n\007updated\030\002 \001(\0132\032.google.pr" +
-      "otobuf.Timestamp\022\027\n\017config_revision\030\003 \001(" +
-      "\003\022\013\n\003sdk\030\004 \001(\t\022\r\n\005model\030\007 \001(\t\022(\n\006config\030" +
-      "\010 \001(\0132\030.toit.model.DeviceConfig\022\021\n\tconne" +
-      "cted\030\t \001(\010\022*\n\004boot\030\n \001(\0132\034.toit.model.De" +
-      "viceBootStatus\022(\n\006health\030\013 \001(\0132\030.toit.mo" +
-      "del.DeviceHealth\0226\n\nconnection\030\014 \001(\0132\".t" +
-      "oit.model.DeviceConnectionStatus\0220\n\007modu" +
-      "les\030\r \001(\0132\037.toit.model.DeviceModulesStat" +
-      "us\"s\n\023DeviceModulesStatus\0220\n\014last_update" +
-      "d\030\001 \001(\0132\032.google.protobuf.Timestamp\022*\n\007m" +
-      "odules\030\002 \001(\0132\031.toit.model.DeviceModules\"" +
-      ";\n\rDeviceModules\022*\n\010cellular\030\001 \001(\0132\030.toi" +
-      "t.model.DeviceModule\".\n\014DeviceModule\022\r\n\005" +
-      "model\030\001 \001(\t\022\017\n\007version\030\002 \001(\t\"W\n\026DeviceCo" +
-      "nnectionStatus\022\r\n\005index\030\001 \001(\003\022.\n\004type\030\002 " +
-      "\001(\0162 .toit.model.DeviceConnectionType\"\214\001" +
-      "\n\020DeviceBootStatus\022-\n\tlast_boot\030\001 \001(\0132\032." +
-      "google.protobuf.Timestamp\022\022\n\nin_factory\030" +
-      "\002 \001(\010\0225\n\021last_factory_boot\030\003 \001(\0132\032.googl" +
-      "e.protobuf.Timestamp\"\373\004\n\014DeviceHealth\022-\n" +
-      "\005power\030\001 \001(\0132\036.toit.model.DeviceHealth.P" +
-      "ower\022<\n\rbattery_curve\030\002 \001(\0132%.toit.model" +
-      ".DeviceHealth.BatteryCurve\022;\n\014connectivi" +
-      "ty\030\003 \001(\0132%.toit.model.DeviceHealth.Conne" +
-      "ctivity\032\300\001\n\005Power\0223\n\005value\030\001 \001(\0132$.toit." +
-      "model.DeviceHealth.Power.Value\0220\n\014last_u" +
-      "pdated\030\002 \001(\0132\032.google.protobuf.Timestamp" +
-      "\032P\n\005Value\022\021\n\007battery\030\001 \001(\001H\000\022+\n\tpluggedi" +
-      "n\030\002 \001(\0132\026.google.protobuf.EmptyH\000B\007\n\005pow" +
-      "er\032O\n\014BatteryCurve\022\r\n\005slope\030\001 \001(\001\0220\n\014las" +
-      "t_updated\030\002 \001(\0132\032.google.protobuf.Timest" +
-      "amp\032\254\001\n\014Connectivity\022-\n\tlast_seen\030\001 \001(\0132" +
-      "\032.google.protobuf.Timestamp\022\021\n\tconnected" +
-      "\030\002 \001(\010\022?\n\010checkins\030\003 \003(\0132-.toit.model.De" +
-      "viceHealth.Connectivity.Checkin\032\031\n\007Check" +
-      "in\022\016\n\006missed\030\001 \001(\010\"y\n\020HardwareIdentity\022\023" +
-      "\n\013hardware_id\030\001 \001(\014\022\027\n\017sequence_number\030\002" +
-      " \001(\003\022\r\n\005batch\030\003 \001(\t\022\023\n\013private_key\030\004 \001(\014" +
-      "\022\023\n\013certificate\030\005 \001(\014\"\205\001\n\024HardwareIdenti" +
-      "tyInfo\022\033\n\023factory_sdk_version\030\001 \001(\t\022\022\n\nf" +
-      "lashed_by\030\002 \001(\014\022\r\n\005iccid\030\003 \001(\t\022\017\n\007chip_i" +
-      "d\030\004 \001(\t\022\034\n\024factory_device_model\030\005 \001(\t\"S\n" +
-      "\014HardwareInfo\022\023\n\013hardware_id\030\001 \001(\014\022\025\n\rha" +
-      "rdware_fqdn\030\002 \001(\t\022\027\n\017organization_id\030\004 \001" +
-      "(\014\"\226\001\n\024HardwareToDeviceInfo\022\023\n\013hardware_" +
-      "id\030\001 \001(\014\022\021\n\tdevice_id\030\002 \001(\014\022)\n\005bound\030\003 \001" +
-      "(\0132\032.google.protobuf.Timestamp\022+\n\007unboun" +
-      "d\030\004 \001(\0132\032.google.protobuf.Timestamp\"\325\t\n\013" +
-      "DeviceEvent\022\021\n\tdevice_id\030\001 \001(\014\022\020\n\010event_" +
-      "id\030\002 \001(\014\022+\n\007created\030\003 \001(\0132\032.google.proto" +
-      "buf.Timestamp\022*\n\004type\030\004 \001(\0162\034.toit.model" +
-      ".DeviceEvent.Type\022\013\n\003msg\030\005 \001(\t\022\014\n\004data\030\006" +
-      " \001(\014\0224\n\tinitiater\030\007 \001(\0132!.toit.model.Dev" +
-      "iceEvent.Initiater\0221\n\013information\030\010 \003(\0132" +
-      "\034.toit.model.DeviceEvent.Info\032\213\002\n\tInitia" +
-      "ter\022:\n\006device\030\001 \001(\0132(.toit.model.DeviceE" +
-      "vent.Initiater.DeviceH\000\022<\n\007console\030\002 \001(\013" +
-      "2).toit.model.DeviceEvent.Initiater.Cons" +
-      "oleH\000\0226\n\004user\030\003 \001(\0132&.toit.model.DeviceE" +
-      "vent.Initiater.UserH\000\032\033\n\006Device\022\021\n\tdevic" +
-      "e_id\030\001 \001(\014\032\t\n\007Console\032\027\n\004User\022\017\n\007user_id" +
-      "\030\001 \001(\014B\013\n\tinitiater\032\257\004\n\004Info\022\013\n\003key\030\001 \001(" +
-      "\t\0221\n\005value\030\002 \001(\0132\".toit.model.DeviceEven" +
-      "t.Info.Value\032\346\003\n\005Value\022A\n\tprimitive\030\001 \001(" +
-      "\0132,.toit.model.DeviceEvent.Info.Value.Pr" +
-      "imitiveH\000\0227\n\004diff\030\002 \001(\0132\'.toit.model.Dev" +
-      "iceEvent.Info.Value.DiffH\000\0229\n\005error\030\003 \001(" +
-      "\0132(.toit.model.DeviceEvent.Info.Value.Er" +
-      "rorH\000\032\206\001\n\tPrimitive\022?\n\004type\030\001 \001(\01621.toit" +
-      ".model.DeviceEvent.Info.Value.Primitive." +
-      "Type\022\r\n\005value\030\002 \001(\014\")\n\004Type\022\013\n\007INVALID\020\000" +
-      "\022\010\n\004JSON\020\001\022\n\n\006STRING\020\002\032|\n\004Diff\022:\n\004from\030\001" +
-      " \001(\0132,.toit.model.DeviceEvent.Info.Value" +
-      ".Primitive\0228\n\002to\030\002 \001(\0132,.toit.model.Devi" +
-      "ceEvent.Info.Value.Primitive\032\026\n\005Error\022\r\n" +
-      "\005error\030\001 \001(\tB\007\n\005value\"\203\001\n\004Type\022\013\n\007UNKNOW" +
-      "N\020\000\022\021\n\rCONFIG_CHANGE\020\001\022\021\n\rSTATUS_CHANGE\020" +
-      "\002\022\017\n\013NEXT_ACTION\020\003\022\021\n\rDEVICE_ACTION\020\004\022\022\n" +
-      "\016QUEUE_OVERFLOW\020\005\022\020\n\014REQUEST_FILE\020\006\"\215\001\n\023" +
-      "DeviceModelSettings\022C\n\nparameters\030\001 \003(\0132" +
-      "/.toit.model.DeviceModelSettings.Paramet" +
-      "ersEntry\0321\n\017ParametersEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\005:\0028\001*\234\001\n\024DeviceConnection" +
-      "Type\022\"\n\036DEVICE_CONNECTION_TYPE_UNKNOWN\020\000" +
-      "\022\037\n\033DEVICE_CONNECTION_TYPE_WIFI\020\001\022 \n\034DEV" +
-      "ICE_CONNECTION_TYPE_NBIOT\020\002\022\035\n\031DEVICE_CO" +
-      "NNECTION_TYPE_OS\020\003*\332\001\n\020DeviceChangeType\022" +
-      "\031\n\025DEVICE_CHANGE_UNKNOWN\020\000\022\027\n\023DEVICE_CHA" +
-      "NGE_ADDED\020\001\022\031\n\025DEVICE_CHANGE_DELETED\020\002\022\031" +
-      "\n\025DEVICE_CHANGE_CHANGED\020\003\022\037\n\027DEVICE_CHAN" +
-      "GE_HEARTBEAT\020\004\032\002\010\001\022\033\n\027DEVICE_CHANGE_CONN" +
-      "ECTED\020\005\022\036\n\032DEVICE_CHANGE_DISCONNECTED\020\006*" +
-      "L\n\027DeviceSessionChangeType\022\020\n\014UNKNOWN_TY" +
-      "PE\020\000\022\r\n\tCONNECTED\020\001\022\020\n\014DISCONNECTED\020\002*\264\003" +
-      "\n\014DeviceAction\022\031\n\025DEVICE_ACTION_UNKNOWN\020" +
-      "\000\022\025\n\021DEVICE_ACTION_NOP\020\001\022\030\n\024DEVICE_ACTIO" +
-      "N_REBOOT\020\002\022\033\n\027DEVICE_ACTION_NEW_EPOCH\020\003\022" +
-      "\037\n\033DEVICE_ACTION_REPORT_CONFIG\020\004\022!\n\035DEVI" +
-      "CE_ACTION_FACTORY_PROMOTE\020\005\022\037\n\033DEVICE_AC" +
-      "TION_UPDATE_CONFIG\020\006\022!\n\035DEVICE_ACTION_UP" +
-      "DATE_FIRMWARE\020\007\022\037\n\033DEVICE_ACTION_FACTORY" +
-      "_RESET\020\010\022\033\n\027DEVICE_ACTION_RECONCILE\020\t\022)\n" +
-      "%DEVICE_ACTION_UPDATE_PARTIAL_FIRMWARE\020\n" +
-      "\022 \n\034DEVICE_ACTION_REPORT_MODULES\020\013\022(\n$DE" +
-      "VICE_ACTION_UPDATE_MODULE_CELLULAR\020\014*-\n\020" +
-      "DeviceModuleType\022\013\n\007Unknown\020\000\022\014\n\010Cellula" +
-      "r\020\001Be\n\030io.toit.proto.toit.modelB\013DeviceP" +
-      "rotoZ)github.com/toitware/api/golang/toi" +
-      "t/model\252\002\020Toit.Proto.Modelb\006proto3"
+      "nt_queue_threshold\030\003 \001(\r\"\222\001\n\021ConnectionS" +
+      "etting\022%\n\004wifi\030\001 \001(\0132\027.toit.model.WifiSe" +
+      "tting\022\'\n\005nbiot\030\002 \001(\0132\030.toit.model.NBIoTS" +
+      "etting\022-\n\010ethernet\030\003 \001(\0132\033.toit.model.Et" +
+      "hernetSetting\"-\n\013WifiSetting\022\014\n\004ssid\030\001 \001" +
+      "(\t\022\020\n\010password\030\002 \001(\t\"\021\n\017EthernetSetting\"" +
+      "I\n\014NBIoTSetting\022\013\n\003apn\030\001 \001(\t\022\r\n\005bands\030\002 " +
+      "\003(\003\022\020\n\010operator\030\003 \001(\t\022\013\n\003pin\030\004 \001(\t\"T\n\024De" +
+      "viceBrokerSettings\022\014\n\004host\030\001 \001(\t\022\014\n\004port" +
+      "\030\002 \001(\003\022\n\n\002cn\030\003 \001(\t\022\024\n\010protocol\030\004 \001(\tB\002\030\001" +
+      "\"\252\003\n\014DeviceStatus\022\024\n\010revision\030\001 \001(\003B\002\030\001\022" +
+      "\r\n\005epoch\030\006 \001(\014\022\026\n\016state_revision\030\005 \001(\003\022+" +
+      "\n\007updated\030\002 \001(\0132\032.google.protobuf.Timest" +
+      "amp\022\027\n\017config_revision\030\003 \001(\003\022\013\n\003sdk\030\004 \001(" +
+      "\t\022\r\n\005model\030\007 \001(\t\022(\n\006config\030\010 \001(\0132\030.toit." +
+      "model.DeviceConfig\022\021\n\tconnected\030\t \001(\010\022*\n" +
+      "\004boot\030\n \001(\0132\034.toit.model.DeviceBootStatu" +
+      "s\022(\n\006health\030\013 \001(\0132\030.toit.model.DeviceHea" +
+      "lth\0226\n\nconnection\030\014 \001(\0132\".toit.model.Dev" +
+      "iceConnectionStatus\0220\n\007modules\030\r \001(\0132\037.t" +
+      "oit.model.DeviceModulesStatus\"s\n\023DeviceM" +
+      "odulesStatus\0220\n\014last_updated\030\001 \001(\0132\032.goo" +
+      "gle.protobuf.Timestamp\022*\n\007modules\030\002 \001(\0132" +
+      "\031.toit.model.DeviceModules\";\n\rDeviceModu" +
+      "les\022*\n\010cellular\030\001 \001(\0132\030.toit.model.Devic" +
+      "eModule\".\n\014DeviceModule\022\r\n\005model\030\001 \001(\t\022\017" +
+      "\n\007version\030\002 \001(\t\"W\n\026DeviceConnectionStatu" +
+      "s\022\r\n\005index\030\001 \001(\003\022.\n\004type\030\002 \001(\0162 .toit.mo" +
+      "del.DeviceConnectionType\"\214\001\n\020DeviceBootS" +
+      "tatus\022-\n\tlast_boot\030\001 \001(\0132\032.google.protob" +
+      "uf.Timestamp\022\022\n\nin_factory\030\002 \001(\010\0225\n\021last" +
+      "_factory_boot\030\003 \001(\0132\032.google.protobuf.Ti" +
+      "mestamp\"\373\004\n\014DeviceHealth\022-\n\005power\030\001 \001(\0132" +
+      "\036.toit.model.DeviceHealth.Power\022<\n\rbatte" +
+      "ry_curve\030\002 \001(\0132%.toit.model.DeviceHealth" +
+      ".BatteryCurve\022;\n\014connectivity\030\003 \001(\0132%.to" +
+      "it.model.DeviceHealth.Connectivity\032\300\001\n\005P" +
+      "ower\0223\n\005value\030\001 \001(\0132$.toit.model.DeviceH" +
+      "ealth.Power.Value\0220\n\014last_updated\030\002 \001(\0132" +
+      "\032.google.protobuf.Timestamp\032P\n\005Value\022\021\n\007" +
+      "battery\030\001 \001(\001H\000\022+\n\tpluggedin\030\002 \001(\0132\026.goo" +
+      "gle.protobuf.EmptyH\000B\007\n\005power\032O\n\014Battery" +
+      "Curve\022\r\n\005slope\030\001 \001(\001\0220\n\014last_updated\030\002 \001" +
+      "(\0132\032.google.protobuf.Timestamp\032\254\001\n\014Conne" +
+      "ctivity\022-\n\tlast_seen\030\001 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\022\021\n\tconnected\030\002 \001(\010\022?\n\010che" +
+      "ckins\030\003 \003(\0132-.toit.model.DeviceHealth.Co" +
+      "nnectivity.Checkin\032\031\n\007Checkin\022\016\n\006missed\030" +
+      "\001 \001(\010\"y\n\020HardwareIdentity\022\023\n\013hardware_id" +
+      "\030\001 \001(\014\022\027\n\017sequence_number\030\002 \001(\003\022\r\n\005batch" +
+      "\030\003 \001(\t\022\023\n\013private_key\030\004 \001(\014\022\023\n\013certifica" +
+      "te\030\005 \001(\014\"\205\001\n\024HardwareIdentityInfo\022\033\n\023fac" +
+      "tory_sdk_version\030\001 \001(\t\022\022\n\nflashed_by\030\002 \001" +
+      "(\014\022\r\n\005iccid\030\003 \001(\t\022\017\n\007chip_id\030\004 \001(\t\022\034\n\024fa" +
+      "ctory_device_model\030\005 \001(\t\"S\n\014HardwareInfo" +
+      "\022\023\n\013hardware_id\030\001 \001(\014\022\025\n\rhardware_fqdn\030\002" +
+      " \001(\t\022\027\n\017organization_id\030\004 \001(\014\"\226\001\n\024Hardwa" +
+      "reToDeviceInfo\022\023\n\013hardware_id\030\001 \001(\014\022\021\n\td" +
+      "evice_id\030\002 \001(\014\022)\n\005bound\030\003 \001(\0132\032.google.p" +
+      "rotobuf.Timestamp\022+\n\007unbound\030\004 \001(\0132\032.goo" +
+      "gle.protobuf.Timestamp\"\325\t\n\013DeviceEvent\022\021" +
+      "\n\tdevice_id\030\001 \001(\014\022\020\n\010event_id\030\002 \001(\014\022+\n\007c" +
+      "reated\030\003 \001(\0132\032.google.protobuf.Timestamp" +
+      "\022*\n\004type\030\004 \001(\0162\034.toit.model.DeviceEvent." +
+      "Type\022\013\n\003msg\030\005 \001(\t\022\014\n\004data\030\006 \001(\014\0224\n\tiniti" +
+      "ater\030\007 \001(\0132!.toit.model.DeviceEvent.Init" +
+      "iater\0221\n\013information\030\010 \003(\0132\034.toit.model." +
+      "DeviceEvent.Info\032\213\002\n\tInitiater\022:\n\006device" +
+      "\030\001 \001(\0132(.toit.model.DeviceEvent.Initiate" +
+      "r.DeviceH\000\022<\n\007console\030\002 \001(\0132).toit.model" +
+      ".DeviceEvent.Initiater.ConsoleH\000\0226\n\004user" +
+      "\030\003 \001(\0132&.toit.model.DeviceEvent.Initiate" +
+      "r.UserH\000\032\033\n\006Device\022\021\n\tdevice_id\030\001 \001(\014\032\t\n" +
+      "\007Console\032\027\n\004User\022\017\n\007user_id\030\001 \001(\014B\013\n\tini" +
+      "tiater\032\257\004\n\004Info\022\013\n\003key\030\001 \001(\t\0221\n\005value\030\002 " +
+      "\001(\0132\".toit.model.DeviceEvent.Info.Value\032" +
+      "\346\003\n\005Value\022A\n\tprimitive\030\001 \001(\0132,.toit.mode" +
+      "l.DeviceEvent.Info.Value.PrimitiveH\000\0227\n\004" +
+      "diff\030\002 \001(\0132\'.toit.model.DeviceEvent.Info" +
+      ".Value.DiffH\000\0229\n\005error\030\003 \001(\0132(.toit.mode" +
+      "l.DeviceEvent.Info.Value.ErrorH\000\032\206\001\n\tPri" +
+      "mitive\022?\n\004type\030\001 \001(\01621.toit.model.Device" +
+      "Event.Info.Value.Primitive.Type\022\r\n\005value" +
+      "\030\002 \001(\014\")\n\004Type\022\013\n\007INVALID\020\000\022\010\n\004JSON\020\001\022\n\n" +
+      "\006STRING\020\002\032|\n\004Diff\022:\n\004from\030\001 \001(\0132,.toit.m" +
+      "odel.DeviceEvent.Info.Value.Primitive\0228\n" +
+      "\002to\030\002 \001(\0132,.toit.model.DeviceEvent.Info." +
+      "Value.Primitive\032\026\n\005Error\022\r\n\005error\030\001 \001(\tB" +
+      "\007\n\005value\"\203\001\n\004Type\022\013\n\007UNKNOWN\020\000\022\021\n\rCONFIG" +
+      "_CHANGE\020\001\022\021\n\rSTATUS_CHANGE\020\002\022\017\n\013NEXT_ACT" +
+      "ION\020\003\022\021\n\rDEVICE_ACTION\020\004\022\022\n\016QUEUE_OVERFL" +
+      "OW\020\005\022\020\n\014REQUEST_FILE\020\006\"\215\001\n\023DeviceModelSe" +
+      "ttings\022C\n\nparameters\030\001 \003(\0132/.toit.model." +
+      "DeviceModelSettings.ParametersEntry\0321\n\017P" +
+      "arametersEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
+      "(\005:\0028\001*\301\001\n\024DeviceConnectionType\022\"\n\036DEVIC" +
+      "E_CONNECTION_TYPE_UNKNOWN\020\000\022\037\n\033DEVICE_CO" +
+      "NNECTION_TYPE_WIFI\020\001\022 \n\034DEVICE_CONNECTIO" +
+      "N_TYPE_NBIOT\020\002\022\035\n\031DEVICE_CONNECTION_TYPE" +
+      "_OS\020\003\022#\n\037DEVICE_CONNECTION_TYPE_ETHERNET" +
+      "\020\004*\332\001\n\020DeviceChangeType\022\031\n\025DEVICE_CHANGE" +
+      "_UNKNOWN\020\000\022\027\n\023DEVICE_CHANGE_ADDED\020\001\022\031\n\025D" +
+      "EVICE_CHANGE_DELETED\020\002\022\031\n\025DEVICE_CHANGE_" +
+      "CHANGED\020\003\022\037\n\027DEVICE_CHANGE_HEARTBEAT\020\004\032\002" +
+      "\010\001\022\033\n\027DEVICE_CHANGE_CONNECTED\020\005\022\036\n\032DEVIC" +
+      "E_CHANGE_DISCONNECTED\020\006*L\n\027DeviceSession" +
+      "ChangeType\022\020\n\014UNKNOWN_TYPE\020\000\022\r\n\tCONNECTE" +
+      "D\020\001\022\020\n\014DISCONNECTED\020\002*\264\003\n\014DeviceAction\022\031" +
+      "\n\025DEVICE_ACTION_UNKNOWN\020\000\022\025\n\021DEVICE_ACTI" +
+      "ON_NOP\020\001\022\030\n\024DEVICE_ACTION_REBOOT\020\002\022\033\n\027DE" +
+      "VICE_ACTION_NEW_EPOCH\020\003\022\037\n\033DEVICE_ACTION" +
+      "_REPORT_CONFIG\020\004\022!\n\035DEVICE_ACTION_FACTOR" +
+      "Y_PROMOTE\020\005\022\037\n\033DEVICE_ACTION_UPDATE_CONF" +
+      "IG\020\006\022!\n\035DEVICE_ACTION_UPDATE_FIRMWARE\020\007\022" +
+      "\037\n\033DEVICE_ACTION_FACTORY_RESET\020\010\022\033\n\027DEVI" +
+      "CE_ACTION_RECONCILE\020\t\022)\n%DEVICE_ACTION_U" +
+      "PDATE_PARTIAL_FIRMWARE\020\n\022 \n\034DEVICE_ACTIO" +
+      "N_REPORT_MODULES\020\013\022(\n$DEVICE_ACTION_UPDA" +
+      "TE_MODULE_CELLULAR\020\014*-\n\020DeviceModuleType" +
+      "\022\013\n\007Unknown\020\000\022\014\n\010Cellular\020\001Be\n\030io.toit.p" +
+      "roto.toit.modelB\013DeviceProtoZ)github.com" +
+      "/toitware/api/golang/toit/model\252\002\020Toit.P" +
+      "roto.Modelb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -34210,63 +34845,69 @@ public final class DeviceProto {
     internal_static_toit_model_ConnectionSetting_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_ConnectionSetting_descriptor,
-        new java.lang.String[] { "Wifi", "Nbiot", });
+        new java.lang.String[] { "Wifi", "Nbiot", "Ethernet", });
     internal_static_toit_model_WifiSetting_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_toit_model_WifiSetting_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_WifiSetting_descriptor,
         new java.lang.String[] { "Ssid", "Password", });
-    internal_static_toit_model_NBIoTSetting_descriptor =
+    internal_static_toit_model_EthernetSetting_descriptor =
       getDescriptor().getMessageTypes().get(8);
+    internal_static_toit_model_EthernetSetting_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_model_EthernetSetting_descriptor,
+        new java.lang.String[] { });
+    internal_static_toit_model_NBIoTSetting_descriptor =
+      getDescriptor().getMessageTypes().get(9);
     internal_static_toit_model_NBIoTSetting_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_NBIoTSetting_descriptor,
         new java.lang.String[] { "Apn", "Bands", "Operator", "Pin", });
     internal_static_toit_model_DeviceBrokerSettings_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_toit_model_DeviceBrokerSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_DeviceBrokerSettings_descriptor,
         new java.lang.String[] { "Host", "Port", "Cn", "Protocol", });
     internal_static_toit_model_DeviceStatus_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_toit_model_DeviceStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_DeviceStatus_descriptor,
         new java.lang.String[] { "Revision", "Epoch", "StateRevision", "Updated", "ConfigRevision", "Sdk", "Model", "Config", "Connected", "Boot", "Health", "Connection", "Modules", });
     internal_static_toit_model_DeviceModulesStatus_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_toit_model_DeviceModulesStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_DeviceModulesStatus_descriptor,
         new java.lang.String[] { "LastUpdated", "Modules", });
     internal_static_toit_model_DeviceModules_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_toit_model_DeviceModules_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_DeviceModules_descriptor,
         new java.lang.String[] { "Cellular", });
     internal_static_toit_model_DeviceModule_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_toit_model_DeviceModule_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_DeviceModule_descriptor,
         new java.lang.String[] { "Model", "Version", });
     internal_static_toit_model_DeviceConnectionStatus_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_toit_model_DeviceConnectionStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_DeviceConnectionStatus_descriptor,
         new java.lang.String[] { "Index", "Type", });
     internal_static_toit_model_DeviceBootStatus_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_toit_model_DeviceBootStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_DeviceBootStatus_descriptor,
         new java.lang.String[] { "LastBoot", "InFactory", "LastFactoryBoot", });
     internal_static_toit_model_DeviceHealth_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_toit_model_DeviceHealth_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_DeviceHealth_descriptor,
@@ -34302,31 +34943,31 @@ public final class DeviceProto {
         internal_static_toit_model_DeviceHealth_Connectivity_Checkin_descriptor,
         new java.lang.String[] { "Missed", });
     internal_static_toit_model_HardwareIdentity_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_toit_model_HardwareIdentity_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_HardwareIdentity_descriptor,
         new java.lang.String[] { "HardwareId", "SequenceNumber", "Batch", "PrivateKey", "Certificate", });
     internal_static_toit_model_HardwareIdentityInfo_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_toit_model_HardwareIdentityInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_HardwareIdentityInfo_descriptor,
         new java.lang.String[] { "FactorySdkVersion", "FlashedBy", "Iccid", "ChipId", "FactoryDeviceModel", });
     internal_static_toit_model_HardwareInfo_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_toit_model_HardwareInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_HardwareInfo_descriptor,
         new java.lang.String[] { "HardwareId", "HardwareFqdn", "OrganizationId", });
     internal_static_toit_model_HardwareToDeviceInfo_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_toit_model_HardwareToDeviceInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_HardwareToDeviceInfo_descriptor,
         new java.lang.String[] { "HardwareId", "DeviceId", "Bound", "Unbound", });
     internal_static_toit_model_DeviceEvent_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_toit_model_DeviceEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_DeviceEvent_descriptor,
@@ -34386,7 +35027,7 @@ public final class DeviceProto {
         internal_static_toit_model_DeviceEvent_Info_Value_Error_descriptor,
         new java.lang.String[] { "Error", });
     internal_static_toit_model_DeviceModelSettings_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_toit_model_DeviceModelSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_DeviceModelSettings_descriptor,
