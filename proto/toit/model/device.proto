@@ -55,6 +55,7 @@ message ConnectionSetting {
   // encoding as done between the device and the console.
   WifiSetting wifi = 1;
   NBIoTSetting nbiot = 2;
+  EthernetSetting ethernet = 3;
 }
 
 message WifiSetting {
@@ -78,6 +79,7 @@ enum DeviceConnectionType {
   DEVICE_CONNECTION_TYPE_WIFI = 1;
   DEVICE_CONNECTION_TYPE_NBIOT = 2;
   DEVICE_CONNECTION_TYPE_OS = 3;
+  DEVICE_CONNECTION_TYPE_ETHERNET = 4;
 }
 
 message DeviceBrokerSettings {
