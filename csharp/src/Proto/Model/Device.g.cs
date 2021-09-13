@@ -48,113 +48,115 @@ namespace Toit.Proto.Model {
             "nQEKGERldmljZUNvbm5lY3Rpb25TZXR0aW5ncxIuCgttYXhfb2ZmbGluZRgB",
             "IAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIyCgtjb25uZWN0aW9u",
             "cxgCIAMoCzIdLnRvaXQubW9kZWwuQ29ubmVjdGlvblNldHRpbmcSHQoVZXZl",
-            "bnRfcXVldWVfdGhyZXNob2xkGAMgASgNImMKEUNvbm5lY3Rpb25TZXR0aW5n",
-            "EiUKBHdpZmkYASABKAsyFy50b2l0Lm1vZGVsLldpZmlTZXR0aW5nEicKBW5i",
-            "aW90GAIgASgLMhgudG9pdC5tb2RlbC5OQklvVFNldHRpbmciLQoLV2lmaVNl",
-            "dHRpbmcSDAoEc3NpZBgBIAEoCRIQCghwYXNzd29yZBgCIAEoCSJJCgxOQklv",
-            "VFNldHRpbmcSCwoDYXBuGAEgASgJEg0KBWJhbmRzGAIgAygDEhAKCG9wZXJh",
-            "dG9yGAMgASgJEgsKA3BpbhgEIAEoCSJUChREZXZpY2VCcm9rZXJTZXR0aW5n",
-            "cxIMCgRob3N0GAEgASgJEgwKBHBvcnQYAiABKAMSCgoCY24YAyABKAkSFAoI",
-            "cHJvdG9jb2wYBCABKAlCAhgBIqoDCgxEZXZpY2VTdGF0dXMSFAoIcmV2aXNp",
-            "b24YASABKANCAhgBEg0KBWVwb2NoGAYgASgMEhYKDnN0YXRlX3JldmlzaW9u",
-            "GAUgASgDEisKB3VwZGF0ZWQYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wEhcKD2NvbmZpZ19yZXZpc2lvbhgDIAEoAxILCgNzZGsYBCABKAkS",
-            "DQoFbW9kZWwYByABKAkSKAoGY29uZmlnGAggASgLMhgudG9pdC5tb2RlbC5E",
-            "ZXZpY2VDb25maWcSEQoJY29ubmVjdGVkGAkgASgIEioKBGJvb3QYCiABKAsy",
-            "HC50b2l0Lm1vZGVsLkRldmljZUJvb3RTdGF0dXMSKAoGaGVhbHRoGAsgASgL",
-            "MhgudG9pdC5tb2RlbC5EZXZpY2VIZWFsdGgSNgoKY29ubmVjdGlvbhgMIAEo",
-            "CzIiLnRvaXQubW9kZWwuRGV2aWNlQ29ubmVjdGlvblN0YXR1cxIwCgdtb2R1",
-            "bGVzGA0gASgLMh8udG9pdC5tb2RlbC5EZXZpY2VNb2R1bGVzU3RhdHVzInMK",
-            "E0RldmljZU1vZHVsZXNTdGF0dXMSMAoMbGFzdF91cGRhdGVkGAEgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIqCgdtb2R1bGVzGAIgASgLMhku",
-            "dG9pdC5tb2RlbC5EZXZpY2VNb2R1bGVzIjsKDURldmljZU1vZHVsZXMSKgoI",
-            "Y2VsbHVsYXIYASABKAsyGC50b2l0Lm1vZGVsLkRldmljZU1vZHVsZSIuCgxE",
-            "ZXZpY2VNb2R1bGUSDQoFbW9kZWwYASABKAkSDwoHdmVyc2lvbhgCIAEoCSJX",
-            "ChZEZXZpY2VDb25uZWN0aW9uU3RhdHVzEg0KBWluZGV4GAEgASgDEi4KBHR5",
-            "cGUYAiABKA4yIC50b2l0Lm1vZGVsLkRldmljZUNvbm5lY3Rpb25UeXBlIowB",
-            "ChBEZXZpY2VCb290U3RhdHVzEi0KCWxhc3RfYm9vdBgBIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXASEgoKaW5fZmFjdG9yeRgCIAEoCBI1ChFs",
-            "YXN0X2ZhY3RvcnlfYm9vdBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXAi+wQKDERldmljZUhlYWx0aBItCgVwb3dlchgBIAEoCzIeLnRvaXQu",
-            "bW9kZWwuRGV2aWNlSGVhbHRoLlBvd2VyEjwKDWJhdHRlcnlfY3VydmUYAiAB",
-            "KAsyJS50b2l0Lm1vZGVsLkRldmljZUhlYWx0aC5CYXR0ZXJ5Q3VydmUSOwoM",
-            "Y29ubmVjdGl2aXR5GAMgASgLMiUudG9pdC5tb2RlbC5EZXZpY2VIZWFsdGgu",
-            "Q29ubmVjdGl2aXR5GsABCgVQb3dlchIzCgV2YWx1ZRgBIAEoCzIkLnRvaXQu",
-            "bW9kZWwuRGV2aWNlSGVhbHRoLlBvd2VyLlZhbHVlEjAKDGxhc3RfdXBkYXRl",
-            "ZBgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAaUAoFVmFsdWUS",
-            "EQoHYmF0dGVyeRgBIAEoAUgAEisKCXBsdWdnZWRpbhgCIAEoCzIWLmdvb2ds",
-            "ZS5wcm90b2J1Zi5FbXB0eUgAQgcKBXBvd2VyGk8KDEJhdHRlcnlDdXJ2ZRIN",
-            "CgVzbG9wZRgBIAEoARIwCgxsYXN0X3VwZGF0ZWQYAiABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wGqwBCgxDb25uZWN0aXZpdHkSLQoJbGFzdF9z",
-            "ZWVuGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIRCgljb25u",
-            "ZWN0ZWQYAiABKAgSPwoIY2hlY2tpbnMYAyADKAsyLS50b2l0Lm1vZGVsLkRl",
-            "dmljZUhlYWx0aC5Db25uZWN0aXZpdHkuQ2hlY2tpbhoZCgdDaGVja2luEg4K",
-            "Bm1pc3NlZBgBIAEoCCJ5ChBIYXJkd2FyZUlkZW50aXR5EhMKC2hhcmR3YXJl",
-            "X2lkGAEgASgMEhcKD3NlcXVlbmNlX251bWJlchgCIAEoAxINCgViYXRjaBgD",
-            "IAEoCRITCgtwcml2YXRlX2tleRgEIAEoDBITCgtjZXJ0aWZpY2F0ZRgFIAEo",
-            "DCKFAQoUSGFyZHdhcmVJZGVudGl0eUluZm8SGwoTZmFjdG9yeV9zZGtfdmVy",
-            "c2lvbhgBIAEoCRISCgpmbGFzaGVkX2J5GAIgASgMEg0KBWljY2lkGAMgASgJ",
-            "Eg8KB2NoaXBfaWQYBCABKAkSHAoUZmFjdG9yeV9kZXZpY2VfbW9kZWwYBSAB",
-            "KAkiUwoMSGFyZHdhcmVJbmZvEhMKC2hhcmR3YXJlX2lkGAEgASgMEhUKDWhh",
-            "cmR3YXJlX2ZxZG4YAiABKAkSFwoPb3JnYW5pemF0aW9uX2lkGAQgASgMIpYB",
-            "ChRIYXJkd2FyZVRvRGV2aWNlSW5mbxITCgtoYXJkd2FyZV9pZBgBIAEoDBIR",
-            "CglkZXZpY2VfaWQYAiABKAwSKQoFYm91bmQYAyABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wEisKB3VuYm91bmQYBCABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wItUJCgtEZXZpY2VFdmVudBIRCglkZXZpY2VfaWQY",
-            "ASABKAwSEAoIZXZlbnRfaWQYAiABKAwSKwoHY3JlYXRlZBgDIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKgoEdHlwZRgEIAEoDjIcLnRvaXQu",
-            "bW9kZWwuRGV2aWNlRXZlbnQuVHlwZRILCgNtc2cYBSABKAkSDAoEZGF0YRgG",
-            "IAEoDBI0Cglpbml0aWF0ZXIYByABKAsyIS50b2l0Lm1vZGVsLkRldmljZUV2",
-            "ZW50LkluaXRpYXRlchIxCgtpbmZvcm1hdGlvbhgIIAMoCzIcLnRvaXQubW9k",
-            "ZWwuRGV2aWNlRXZlbnQuSW5mbxqLAgoJSW5pdGlhdGVyEjoKBmRldmljZRgB",
-            "IAEoCzIoLnRvaXQubW9kZWwuRGV2aWNlRXZlbnQuSW5pdGlhdGVyLkRldmlj",
-            "ZUgAEjwKB2NvbnNvbGUYAiABKAsyKS50b2l0Lm1vZGVsLkRldmljZUV2ZW50",
-            "LkluaXRpYXRlci5Db25zb2xlSAASNgoEdXNlchgDIAEoCzImLnRvaXQubW9k",
-            "ZWwuRGV2aWNlRXZlbnQuSW5pdGlhdGVyLlVzZXJIABobCgZEZXZpY2USEQoJ",
-            "ZGV2aWNlX2lkGAEgASgMGgkKB0NvbnNvbGUaFwoEVXNlchIPCgd1c2VyX2lk",
-            "GAEgASgMQgsKCWluaXRpYXRlchqvBAoESW5mbxILCgNrZXkYASABKAkSMQoF",
-            "dmFsdWUYAiABKAsyIi50b2l0Lm1vZGVsLkRldmljZUV2ZW50LkluZm8uVmFs",
-            "dWUa5gMKBVZhbHVlEkEKCXByaW1pdGl2ZRgBIAEoCzIsLnRvaXQubW9kZWwu",
-            "RGV2aWNlRXZlbnQuSW5mby5WYWx1ZS5QcmltaXRpdmVIABI3CgRkaWZmGAIg",
-            "ASgLMicudG9pdC5tb2RlbC5EZXZpY2VFdmVudC5JbmZvLlZhbHVlLkRpZmZI",
-            "ABI5CgVlcnJvchgDIAEoCzIoLnRvaXQubW9kZWwuRGV2aWNlRXZlbnQuSW5m",
-            "by5WYWx1ZS5FcnJvckgAGoYBCglQcmltaXRpdmUSPwoEdHlwZRgBIAEoDjIx",
-            "LnRvaXQubW9kZWwuRGV2aWNlRXZlbnQuSW5mby5WYWx1ZS5QcmltaXRpdmUu",
-            "VHlwZRINCgV2YWx1ZRgCIAEoDCIpCgRUeXBlEgsKB0lOVkFMSUQQABIICgRK",
-            "U09OEAESCgoGU1RSSU5HEAIafAoERGlmZhI6CgRmcm9tGAEgASgLMiwudG9p",
-            "dC5tb2RlbC5EZXZpY2VFdmVudC5JbmZvLlZhbHVlLlByaW1pdGl2ZRI4CgJ0",
-            "bxgCIAEoCzIsLnRvaXQubW9kZWwuRGV2aWNlRXZlbnQuSW5mby5WYWx1ZS5Q",
-            "cmltaXRpdmUaFgoFRXJyb3ISDQoFZXJyb3IYASABKAlCBwoFdmFsdWUigwEK",
-            "BFR5cGUSCwoHVU5LTk9XThAAEhEKDUNPTkZJR19DSEFOR0UQARIRCg1TVEFU",
-            "VVNfQ0hBTkdFEAISDwoLTkVYVF9BQ1RJT04QAxIRCg1ERVZJQ0VfQUNUSU9O",
-            "EAQSEgoOUVVFVUVfT1ZFUkZMT1cQBRIQCgxSRVFVRVNUX0ZJTEUQBiKNAQoT",
-            "RGV2aWNlTW9kZWxTZXR0aW5ncxJDCgpwYXJhbWV0ZXJzGAEgAygLMi8udG9p",
-            "dC5tb2RlbC5EZXZpY2VNb2RlbFNldHRpbmdzLlBhcmFtZXRlcnNFbnRyeRox",
-            "Cg9QYXJhbWV0ZXJzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgF",
-            "OgI4ASqcAQoURGV2aWNlQ29ubmVjdGlvblR5cGUSIgoeREVWSUNFX0NPTk5F",
-            "Q1RJT05fVFlQRV9VTktOT1dOEAASHwobREVWSUNFX0NPTk5FQ1RJT05fVFlQ",
-            "RV9XSUZJEAESIAocREVWSUNFX0NPTk5FQ1RJT05fVFlQRV9OQklPVBACEh0K",
-            "GURFVklDRV9DT05ORUNUSU9OX1RZUEVfT1MQAyraAQoQRGV2aWNlQ2hhbmdl",
-            "VHlwZRIZChVERVZJQ0VfQ0hBTkdFX1VOS05PV04QABIXChNERVZJQ0VfQ0hB",
-            "TkdFX0FEREVEEAESGQoVREVWSUNFX0NIQU5HRV9ERUxFVEVEEAISGQoVREVW",
-            "SUNFX0NIQU5HRV9DSEFOR0VEEAMSHwoXREVWSUNFX0NIQU5HRV9IRUFSVEJF",
-            "QVQQBBoCCAESGwoXREVWSUNFX0NIQU5HRV9DT05ORUNURUQQBRIeChpERVZJ",
-            "Q0VfQ0hBTkdFX0RJU0NPTk5FQ1RFRBAGKkwKF0RldmljZVNlc3Npb25DaGFu",
-            "Z2VUeXBlEhAKDFVOS05PV05fVFlQRRAAEg0KCUNPTk5FQ1RFRBABEhAKDERJ",
-            "U0NPTk5FQ1RFRBACKrQDCgxEZXZpY2VBY3Rpb24SGQoVREVWSUNFX0FDVElP",
-            "Tl9VTktOT1dOEAASFQoRREVWSUNFX0FDVElPTl9OT1AQARIYChRERVZJQ0Vf",
-            "QUNUSU9OX1JFQk9PVBACEhsKF0RFVklDRV9BQ1RJT05fTkVXX0VQT0NIEAMS",
-            "HwobREVWSUNFX0FDVElPTl9SRVBPUlRfQ09ORklHEAQSIQodREVWSUNFX0FD",
-            "VElPTl9GQUNUT1JZX1BST01PVEUQBRIfChtERVZJQ0VfQUNUSU9OX1VQREFU",
-            "RV9DT05GSUcQBhIhCh1ERVZJQ0VfQUNUSU9OX1VQREFURV9GSVJNV0FSRRAH",
-            "Eh8KG0RFVklDRV9BQ1RJT05fRkFDVE9SWV9SRVNFVBAIEhsKF0RFVklDRV9B",
-            "Q1RJT05fUkVDT05DSUxFEAkSKQolREVWSUNFX0FDVElPTl9VUERBVEVfUEFS",
-            "VElBTF9GSVJNV0FSRRAKEiAKHERFVklDRV9BQ1RJT05fUkVQT1JUX01PRFVM",
-            "RVMQCxIoCiRERVZJQ0VfQUNUSU9OX1VQREFURV9NT0RVTEVfQ0VMTFVMQVIQ",
-            "DCotChBEZXZpY2VNb2R1bGVUeXBlEgsKB1Vua25vd24QABIMCghDZWxsdWxh",
-            "chABQmUKGGlvLnRvaXQucHJvdG8udG9pdC5tb2RlbEILRGV2aWNlUHJvdG9a",
-            "KWdpdGh1Yi5jb20vdG9pdHdhcmUvYXBpL2dvbGFuZy90b2l0L21vZGVsqgIQ",
-            "VG9pdC5Qcm90by5Nb2RlbGIGcHJvdG8z"));
+            "bnRfcXVldWVfdGhyZXNob2xkGAMgASgNIpIBChFDb25uZWN0aW9uU2V0dGlu",
+            "ZxIlCgR3aWZpGAEgASgLMhcudG9pdC5tb2RlbC5XaWZpU2V0dGluZxInCgVu",
+            "YmlvdBgCIAEoCzIYLnRvaXQubW9kZWwuTkJJb1RTZXR0aW5nEi0KCGV0aGVy",
+            "bmV0GAMgASgLMhsudG9pdC5tb2RlbC5FdGhlcm5ldFNldHRpbmciLQoLV2lm",
+            "aVNldHRpbmcSDAoEc3NpZBgBIAEoCRIQCghwYXNzd29yZBgCIAEoCSIRCg9F",
+            "dGhlcm5ldFNldHRpbmciSQoMTkJJb1RTZXR0aW5nEgsKA2FwbhgBIAEoCRIN",
+            "CgViYW5kcxgCIAMoAxIQCghvcGVyYXRvchgDIAEoCRILCgNwaW4YBCABKAki",
+            "VAoURGV2aWNlQnJva2VyU2V0dGluZ3MSDAoEaG9zdBgBIAEoCRIMCgRwb3J0",
+            "GAIgASgDEgoKAmNuGAMgASgJEhQKCHByb3RvY29sGAQgASgJQgIYASKqAwoM",
+            "RGV2aWNlU3RhdHVzEhQKCHJldmlzaW9uGAEgASgDQgIYARINCgVlcG9jaBgG",
+            "IAEoDBIWCg5zdGF0ZV9yZXZpc2lvbhgFIAEoAxIrCgd1cGRhdGVkGAIgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIXCg9jb25maWdfcmV2aXNp",
+            "b24YAyABKAMSCwoDc2RrGAQgASgJEg0KBW1vZGVsGAcgASgJEigKBmNvbmZp",
+            "ZxgIIAEoCzIYLnRvaXQubW9kZWwuRGV2aWNlQ29uZmlnEhEKCWNvbm5lY3Rl",
+            "ZBgJIAEoCBIqCgRib290GAogASgLMhwudG9pdC5tb2RlbC5EZXZpY2VCb290",
+            "U3RhdHVzEigKBmhlYWx0aBgLIAEoCzIYLnRvaXQubW9kZWwuRGV2aWNlSGVh",
+            "bHRoEjYKCmNvbm5lY3Rpb24YDCABKAsyIi50b2l0Lm1vZGVsLkRldmljZUNv",
+            "bm5lY3Rpb25TdGF0dXMSMAoHbW9kdWxlcxgNIAEoCzIfLnRvaXQubW9kZWwu",
+            "RGV2aWNlTW9kdWxlc1N0YXR1cyJzChNEZXZpY2VNb2R1bGVzU3RhdHVzEjAK",
+            "DGxhc3RfdXBkYXRlZBgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXASKgoHbW9kdWxlcxgCIAEoCzIZLnRvaXQubW9kZWwuRGV2aWNlTW9kdWxl",
+            "cyI7Cg1EZXZpY2VNb2R1bGVzEioKCGNlbGx1bGFyGAEgASgLMhgudG9pdC5t",
+            "b2RlbC5EZXZpY2VNb2R1bGUiLgoMRGV2aWNlTW9kdWxlEg0KBW1vZGVsGAEg",
+            "ASgJEg8KB3ZlcnNpb24YAiABKAkiVwoWRGV2aWNlQ29ubmVjdGlvblN0YXR1",
+            "cxINCgVpbmRleBgBIAEoAxIuCgR0eXBlGAIgASgOMiAudG9pdC5tb2RlbC5E",
+            "ZXZpY2VDb25uZWN0aW9uVHlwZSKMAQoQRGV2aWNlQm9vdFN0YXR1cxItCgls",
+            "YXN0X2Jvb3QYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhIK",
+            "CmluX2ZhY3RvcnkYAiABKAgSNQoRbGFzdF9mYWN0b3J5X2Jvb3QYAyABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIvsECgxEZXZpY2VIZWFsdGgS",
+            "LQoFcG93ZXIYASABKAsyHi50b2l0Lm1vZGVsLkRldmljZUhlYWx0aC5Qb3dl",
+            "chI8Cg1iYXR0ZXJ5X2N1cnZlGAIgASgLMiUudG9pdC5tb2RlbC5EZXZpY2VI",
+            "ZWFsdGguQmF0dGVyeUN1cnZlEjsKDGNvbm5lY3Rpdml0eRgDIAEoCzIlLnRv",
+            "aXQubW9kZWwuRGV2aWNlSGVhbHRoLkNvbm5lY3Rpdml0eRrAAQoFUG93ZXIS",
+            "MwoFdmFsdWUYASABKAsyJC50b2l0Lm1vZGVsLkRldmljZUhlYWx0aC5Qb3dl",
+            "ci5WYWx1ZRIwCgxsYXN0X3VwZGF0ZWQYAiABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wGlAKBVZhbHVlEhEKB2JhdHRlcnkYASABKAFIABIrCglw",
+            "bHVnZ2VkaW4YAiABKAsyFi5nb29nbGUucHJvdG9idWYuRW1wdHlIAEIHCgVw",
+            "b3dlchpPCgxCYXR0ZXJ5Q3VydmUSDQoFc2xvcGUYASABKAESMAoMbGFzdF91",
+            "cGRhdGVkGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBqsAQoM",
+            "Q29ubmVjdGl2aXR5Ei0KCWxhc3Rfc2VlbhgBIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXASEQoJY29ubmVjdGVkGAIgASgIEj8KCGNoZWNraW5z",
+            "GAMgAygLMi0udG9pdC5tb2RlbC5EZXZpY2VIZWFsdGguQ29ubmVjdGl2aXR5",
+            "LkNoZWNraW4aGQoHQ2hlY2tpbhIOCgZtaXNzZWQYASABKAgieQoQSGFyZHdh",
+            "cmVJZGVudGl0eRITCgtoYXJkd2FyZV9pZBgBIAEoDBIXCg9zZXF1ZW5jZV9u",
+            "dW1iZXIYAiABKAMSDQoFYmF0Y2gYAyABKAkSEwoLcHJpdmF0ZV9rZXkYBCAB",
+            "KAwSEwoLY2VydGlmaWNhdGUYBSABKAwihQEKFEhhcmR3YXJlSWRlbnRpdHlJ",
+            "bmZvEhsKE2ZhY3Rvcnlfc2RrX3ZlcnNpb24YASABKAkSEgoKZmxhc2hlZF9i",
+            "eRgCIAEoDBINCgVpY2NpZBgDIAEoCRIPCgdjaGlwX2lkGAQgASgJEhwKFGZh",
+            "Y3RvcnlfZGV2aWNlX21vZGVsGAUgASgJIlMKDEhhcmR3YXJlSW5mbxITCgto",
+            "YXJkd2FyZV9pZBgBIAEoDBIVCg1oYXJkd2FyZV9mcWRuGAIgASgJEhcKD29y",
+            "Z2FuaXphdGlvbl9pZBgEIAEoDCKWAQoUSGFyZHdhcmVUb0RldmljZUluZm8S",
+            "EwoLaGFyZHdhcmVfaWQYASABKAwSEQoJZGV2aWNlX2lkGAIgASgMEikKBWJv",
+            "dW5kGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIrCgd1bmJv",
+            "dW5kGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCLVCQoLRGV2",
+            "aWNlRXZlbnQSEQoJZGV2aWNlX2lkGAEgASgMEhAKCGV2ZW50X2lkGAIgASgM",
+            "EisKB2NyZWF0ZWQYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "EioKBHR5cGUYBCABKA4yHC50b2l0Lm1vZGVsLkRldmljZUV2ZW50LlR5cGUS",
+            "CwoDbXNnGAUgASgJEgwKBGRhdGEYBiABKAwSNAoJaW5pdGlhdGVyGAcgASgL",
+            "MiEudG9pdC5tb2RlbC5EZXZpY2VFdmVudC5Jbml0aWF0ZXISMQoLaW5mb3Jt",
+            "YXRpb24YCCADKAsyHC50b2l0Lm1vZGVsLkRldmljZUV2ZW50LkluZm8aiwIK",
+            "CUluaXRpYXRlchI6CgZkZXZpY2UYASABKAsyKC50b2l0Lm1vZGVsLkRldmlj",
+            "ZUV2ZW50LkluaXRpYXRlci5EZXZpY2VIABI8Cgdjb25zb2xlGAIgASgLMiku",
+            "dG9pdC5tb2RlbC5EZXZpY2VFdmVudC5Jbml0aWF0ZXIuQ29uc29sZUgAEjYK",
+            "BHVzZXIYAyABKAsyJi50b2l0Lm1vZGVsLkRldmljZUV2ZW50LkluaXRpYXRl",
+            "ci5Vc2VySAAaGwoGRGV2aWNlEhEKCWRldmljZV9pZBgBIAEoDBoJCgdDb25z",
+            "b2xlGhcKBFVzZXISDwoHdXNlcl9pZBgBIAEoDEILCglpbml0aWF0ZXIarwQK",
+            "BEluZm8SCwoDa2V5GAEgASgJEjEKBXZhbHVlGAIgASgLMiIudG9pdC5tb2Rl",
+            "bC5EZXZpY2VFdmVudC5JbmZvLlZhbHVlGuYDCgVWYWx1ZRJBCglwcmltaXRp",
+            "dmUYASABKAsyLC50b2l0Lm1vZGVsLkRldmljZUV2ZW50LkluZm8uVmFsdWUu",
+            "UHJpbWl0aXZlSAASNwoEZGlmZhgCIAEoCzInLnRvaXQubW9kZWwuRGV2aWNl",
+            "RXZlbnQuSW5mby5WYWx1ZS5EaWZmSAASOQoFZXJyb3IYAyABKAsyKC50b2l0",
+            "Lm1vZGVsLkRldmljZUV2ZW50LkluZm8uVmFsdWUuRXJyb3JIABqGAQoJUHJp",
+            "bWl0aXZlEj8KBHR5cGUYASABKA4yMS50b2l0Lm1vZGVsLkRldmljZUV2ZW50",
+            "LkluZm8uVmFsdWUuUHJpbWl0aXZlLlR5cGUSDQoFdmFsdWUYAiABKAwiKQoE",
+            "VHlwZRILCgdJTlZBTElEEAASCAoESlNPThABEgoKBlNUUklORxACGnwKBERp",
+            "ZmYSOgoEZnJvbRgBIAEoCzIsLnRvaXQubW9kZWwuRGV2aWNlRXZlbnQuSW5m",
+            "by5WYWx1ZS5QcmltaXRpdmUSOAoCdG8YAiABKAsyLC50b2l0Lm1vZGVsLkRl",
+            "dmljZUV2ZW50LkluZm8uVmFsdWUuUHJpbWl0aXZlGhYKBUVycm9yEg0KBWVy",
+            "cm9yGAEgASgJQgcKBXZhbHVlIoMBCgRUeXBlEgsKB1VOS05PV04QABIRCg1D",
+            "T05GSUdfQ0hBTkdFEAESEQoNU1RBVFVTX0NIQU5HRRACEg8KC05FWFRfQUNU",
+            "SU9OEAMSEQoNREVWSUNFX0FDVElPThAEEhIKDlFVRVVFX09WRVJGTE9XEAUS",
+            "EAoMUkVRVUVTVF9GSUxFEAYijQEKE0RldmljZU1vZGVsU2V0dGluZ3MSQwoK",
+            "cGFyYW1ldGVycxgBIAMoCzIvLnRvaXQubW9kZWwuRGV2aWNlTW9kZWxTZXR0",
+            "aW5ncy5QYXJhbWV0ZXJzRW50cnkaMQoPUGFyYW1ldGVyc0VudHJ5EgsKA2tl",
+            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoBToCOAEqwQEKFERldmljZUNvbm5lY3Rp",
+            "b25UeXBlEiIKHkRFVklDRV9DT05ORUNUSU9OX1RZUEVfVU5LTk9XThAAEh8K",
+            "G0RFVklDRV9DT05ORUNUSU9OX1RZUEVfV0lGSRABEiAKHERFVklDRV9DT05O",
+            "RUNUSU9OX1RZUEVfTkJJT1QQAhIdChlERVZJQ0VfQ09OTkVDVElPTl9UWVBF",
+            "X09TEAMSIwofREVWSUNFX0NPTk5FQ1RJT05fVFlQRV9FVEhFUk5FVBAEKtoB",
+            "ChBEZXZpY2VDaGFuZ2VUeXBlEhkKFURFVklDRV9DSEFOR0VfVU5LTk9XThAA",
+            "EhcKE0RFVklDRV9DSEFOR0VfQURERUQQARIZChVERVZJQ0VfQ0hBTkdFX0RF",
+            "TEVURUQQAhIZChVERVZJQ0VfQ0hBTkdFX0NIQU5HRUQQAxIfChdERVZJQ0Vf",
+            "Q0hBTkdFX0hFQVJUQkVBVBAEGgIIARIbChdERVZJQ0VfQ0hBTkdFX0NPTk5F",
+            "Q1RFRBAFEh4KGkRFVklDRV9DSEFOR0VfRElTQ09OTkVDVEVEEAYqTAoXRGV2",
+            "aWNlU2Vzc2lvbkNoYW5nZVR5cGUSEAoMVU5LTk9XTl9UWVBFEAASDQoJQ09O",
+            "TkVDVEVEEAESEAoMRElTQ09OTkVDVEVEEAIqtAMKDERldmljZUFjdGlvbhIZ",
+            "ChVERVZJQ0VfQUNUSU9OX1VOS05PV04QABIVChFERVZJQ0VfQUNUSU9OX05P",
+            "UBABEhgKFERFVklDRV9BQ1RJT05fUkVCT09UEAISGwoXREVWSUNFX0FDVElP",
+            "Tl9ORVdfRVBPQ0gQAxIfChtERVZJQ0VfQUNUSU9OX1JFUE9SVF9DT05GSUcQ",
+            "BBIhCh1ERVZJQ0VfQUNUSU9OX0ZBQ1RPUllfUFJPTU9URRAFEh8KG0RFVklD",
+            "RV9BQ1RJT05fVVBEQVRFX0NPTkZJRxAGEiEKHURFVklDRV9BQ1RJT05fVVBE",
+            "QVRFX0ZJUk1XQVJFEAcSHwobREVWSUNFX0FDVElPTl9GQUNUT1JZX1JFU0VU",
+            "EAgSGwoXREVWSUNFX0FDVElPTl9SRUNPTkNJTEUQCRIpCiVERVZJQ0VfQUNU",
+            "SU9OX1VQREFURV9QQVJUSUFMX0ZJUk1XQVJFEAoSIAocREVWSUNFX0FDVElP",
+            "Tl9SRVBPUlRfTU9EVUxFUxALEigKJERFVklDRV9BQ1RJT05fVVBEQVRFX01P",
+            "RFVMRV9DRUxMVUxBUhAMKi0KEERldmljZU1vZHVsZVR5cGUSCwoHVW5rbm93",
+            "bhAAEgwKCENlbGx1bGFyEAFCZQoYaW8udG9pdC5wcm90by50b2l0Lm1vZGVs",
+            "QgtEZXZpY2VQcm90b1opZ2l0aHViLmNvbS90b2l0d2FyZS9hcGkvZ29sYW5n",
+            "L3RvaXQvbW9kZWyqAhBUb2l0LlByb3RvLk1vZGVsYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Toit.Proto.Model.DataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Toit.Proto.Model.DeviceConnectionType), typeof(global::Toit.Proto.Model.DeviceChangeType), typeof(global::Toit.Proto.Model.DeviceSessionChangeType), typeof(global::Toit.Proto.Model.DeviceAction), typeof(global::Toit.Proto.Model.DeviceModuleType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -164,8 +166,9 @@ namespace Toit.Proto.Model {
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.LoggingSettings), global::Toit.Proto.Model.LoggingSettings.Parser, new[]{ "Level" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.MetricsSettings), global::Toit.Proto.Model.MetricsSettings.Parser, new[]{ "Level" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.DeviceConnectionSettings), global::Toit.Proto.Model.DeviceConnectionSettings.Parser, new[]{ "MaxOffline", "Connections", "EventQueueThreshold" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.ConnectionSetting), global::Toit.Proto.Model.ConnectionSetting.Parser, new[]{ "Wifi", "Nbiot" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.ConnectionSetting), global::Toit.Proto.Model.ConnectionSetting.Parser, new[]{ "Wifi", "Nbiot", "Ethernet" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.WifiSetting), global::Toit.Proto.Model.WifiSetting.Parser, new[]{ "Ssid", "Password" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.EthernetSetting), global::Toit.Proto.Model.EthernetSetting.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.NBIoTSetting), global::Toit.Proto.Model.NBIoTSetting.Parser, new[]{ "Apn", "Bands", "Operator", "Pin" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.DeviceBrokerSettings), global::Toit.Proto.Model.DeviceBrokerSettings.Parser, new[]{ "Host", "Port", "Cn", "Protocol" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.DeviceStatus), global::Toit.Proto.Model.DeviceStatus.Parser, new[]{ "Revision", "Epoch", "StateRevision", "Updated", "ConfigRevision", "Sdk", "Model", "Config", "Connected", "Boot", "Health", "Connection", "Modules" }, null, null, null, null),
@@ -199,6 +202,7 @@ namespace Toit.Proto.Model {
     [pbr::OriginalName("DEVICE_CONNECTION_TYPE_WIFI")] Wifi = 1,
     [pbr::OriginalName("DEVICE_CONNECTION_TYPE_NBIOT")] Nbiot = 2,
     [pbr::OriginalName("DEVICE_CONNECTION_TYPE_OS")] Os = 3,
+    [pbr::OriginalName("DEVICE_CONNECTION_TYPE_ETHERNET")] Ethernet = 4,
   }
 
   public enum DeviceChangeType {
@@ -1992,6 +1996,7 @@ namespace Toit.Proto.Model {
     public ConnectionSetting(ConnectionSetting other) : this() {
       wifi_ = other.wifi_ != null ? other.wifi_.Clone() : null;
       nbiot_ = other.nbiot_ != null ? other.nbiot_.Clone() : null;
+      ethernet_ = other.ethernet_ != null ? other.ethernet_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2029,6 +2034,18 @@ namespace Toit.Proto.Model {
       }
     }
 
+    /// <summary>Field number for the "ethernet" field.</summary>
+    public const int EthernetFieldNumber = 3;
+    private global::Toit.Proto.Model.EthernetSetting ethernet_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Toit.Proto.Model.EthernetSetting Ethernet {
+      get { return ethernet_; }
+      set {
+        ethernet_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2046,6 +2063,7 @@ namespace Toit.Proto.Model {
       }
       if (!object.Equals(Wifi, other.Wifi)) return false;
       if (!object.Equals(Nbiot, other.Nbiot)) return false;
+      if (!object.Equals(Ethernet, other.Ethernet)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2055,6 +2073,7 @@ namespace Toit.Proto.Model {
       int hash = 1;
       if (wifi_ != null) hash ^= Wifi.GetHashCode();
       if (nbiot_ != null) hash ^= Nbiot.GetHashCode();
+      if (ethernet_ != null) hash ^= Ethernet.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2081,6 +2100,10 @@ namespace Toit.Proto.Model {
         output.WriteRawTag(18);
         output.WriteMessage(Nbiot);
       }
+      if (ethernet_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Ethernet);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2099,6 +2122,10 @@ namespace Toit.Proto.Model {
         output.WriteRawTag(18);
         output.WriteMessage(Nbiot);
       }
+      if (ethernet_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Ethernet);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2114,6 +2141,9 @@ namespace Toit.Proto.Model {
       }
       if (nbiot_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Nbiot);
+      }
+      if (ethernet_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Ethernet);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2138,6 +2168,12 @@ namespace Toit.Proto.Model {
           Nbiot = new global::Toit.Proto.Model.NBIoTSetting();
         }
         Nbiot.MergeFrom(other.Nbiot);
+      }
+      if (other.ethernet_ != null) {
+        if (ethernet_ == null) {
+          Ethernet = new global::Toit.Proto.Model.EthernetSetting();
+        }
+        Ethernet.MergeFrom(other.Ethernet);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2168,6 +2204,13 @@ namespace Toit.Proto.Model {
             input.ReadMessage(Nbiot);
             break;
           }
+          case 26: {
+            if (ethernet_ == null) {
+              Ethernet = new global::Toit.Proto.Model.EthernetSetting();
+            }
+            input.ReadMessage(Ethernet);
+            break;
+          }
         }
       }
     #endif
@@ -2195,6 +2238,13 @@ namespace Toit.Proto.Model {
               Nbiot = new global::Toit.Proto.Model.NBIoTSetting();
             }
             input.ReadMessage(Nbiot);
+            break;
+          }
+          case 26: {
+            if (ethernet_ == null) {
+              Ethernet = new global::Toit.Proto.Model.EthernetSetting();
+            }
+            input.ReadMessage(Ethernet);
             break;
           }
         }
@@ -2430,6 +2480,158 @@ namespace Toit.Proto.Model {
 
   }
 
+  public sealed partial class EthernetSetting : pb::IMessage<EthernetSetting>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EthernetSetting> _parser = new pb::MessageParser<EthernetSetting>(() => new EthernetSetting());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EthernetSetting> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EthernetSetting() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EthernetSetting(EthernetSetting other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EthernetSetting Clone() {
+      return new EthernetSetting(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EthernetSetting);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EthernetSetting other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EthernetSetting other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
   public sealed partial class NBIoTSetting : pb::IMessage<NBIoTSetting>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2444,7 +2646,7 @@ namespace Toit.Proto.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2735,7 +2937,7 @@ namespace Toit.Proto.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3036,7 +3238,7 @@ namespace Toit.Proto.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3724,7 +3926,7 @@ namespace Toit.Proto.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3968,7 +4170,7 @@ namespace Toit.Proto.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4166,7 +4368,7 @@ namespace Toit.Proto.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4392,7 +4594,7 @@ namespace Toit.Proto.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4618,7 +4820,7 @@ namespace Toit.Proto.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4899,7 +5101,7 @@ namespace Toit.Proto.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6414,7 +6616,7 @@ namespace Toit.Proto.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6751,7 +6953,7 @@ namespace Toit.Proto.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7088,7 +7290,7 @@ namespace Toit.Proto.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7351,7 +7553,7 @@ namespace Toit.Proto.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7669,7 +7871,7 @@ namespace Toit.Proto.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10284,7 +10486,7 @@ namespace Toit.Proto.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Toit.Proto.Model.DeviceReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
