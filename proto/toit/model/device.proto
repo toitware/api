@@ -62,6 +62,10 @@ message WifiSetting {
   string password = 2;
 }
 
+message EthernetSetting {
+
+}
+
 message NBIoTSetting {
   string apn = 1;
   repeated int64 bands = 2;
