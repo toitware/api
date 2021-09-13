@@ -216,6 +216,11 @@ export class ConnectionSetting extends jspb.Message {
   getNbiot(): NBIoTSetting | undefined;
   setNbiot(value?: NBIoTSetting): void;
 
+  hasEthernet(): boolean;
+  clearEthernet(): void;
+  getEthernet(): EthernetSetting | undefined;
+  setEthernet(value?: EthernetSetting): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ConnectionSetting.AsObject;
   static toObject(includeInstance: boolean, msg: ConnectionSetting): ConnectionSetting.AsObject;
@@ -230,6 +235,7 @@ export namespace ConnectionSetting {
   export type AsObject = {
     wifi?: WifiSetting.AsObject,
     nbiot?: NBIoTSetting.AsObject,
+    ethernet?: EthernetSetting.AsObject,
   }
 }
 
@@ -254,6 +260,22 @@ export namespace WifiSetting {
   export type AsObject = {
     ssid: string,
     password: string,
+  }
+}
+
+export class EthernetSetting extends jspb.Message {
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): EthernetSetting.AsObject;
+  static toObject(includeInstance: boolean, msg: EthernetSetting): EthernetSetting.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: EthernetSetting, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): EthernetSetting;
+  static deserializeBinaryFromReader(message: EthernetSetting, reader: jspb.BinaryReader): EthernetSetting;
+}
+
+export namespace EthernetSetting {
+  export type AsObject = {
   }
 }
 
@@ -1210,6 +1232,7 @@ export interface DeviceConnectionTypeMap {
   DEVICE_CONNECTION_TYPE_WIFI: 1;
   DEVICE_CONNECTION_TYPE_NBIOT: 2;
   DEVICE_CONNECTION_TYPE_OS: 3;
+  DEVICE_CONNECTION_TYPE_ETHERNET: 4;
 }
 
 export const DeviceConnectionType: DeviceConnectionTypeMap;
