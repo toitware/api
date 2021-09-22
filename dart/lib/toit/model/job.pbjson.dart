@@ -314,12 +314,65 @@ const JobTriggers$json = const {
       '6': '.toit.model.PubSubTrigger',
       '10': 'pubsub'
     },
+    const {
+      '1': 'gpio',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.toit.model.GPIOTrigger',
+      '10': 'gpio'
+    },
   ],
 };
 
 /// Descriptor for `JobTriggers`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List jobTriggersDescriptor = $convert.base64Decode(
-    'CgtKb2JUcmlnZ2VycxI7Cgpvbl9pbnN0YWxsGAEgASgLMhwudG9pdC5tb2RlbC5Pbkluc3RhbGxUcmlnZ2VyUglvbkluc3RhbGwSMgoHb25fYm9vdBgCIAEoCzIZLnRvaXQubW9kZWwuT25Cb290VHJpZ2dlclIGb25Cb290EjcKCGludGVydmFsGAMgASgLMhsudG9pdC5tb2RlbC5JbnRlcnZhbFRyaWdnZXJSCGludGVydmFsEisKBGNyb24YBCABKAsyFy50b2l0Lm1vZGVsLkNyb25UcmlnZ2VyUgRjcm9uEjsKCG1vdmVtZW50GAUgASgLMhsudG9pdC5tb2RlbC5Nb3ZlbWVudFRyaWdnZXJCAhgBUghtb3ZlbWVudBI1CgZidXR0b24YBiABKAsyGS50b2l0Lm1vZGVsLkJ1dHRvblRyaWdnZXJCAhgBUgZidXR0b24SNAoHbmV0d29yaxgHIAEoCzIaLnRvaXQubW9kZWwuTmV0d29ya1RyaWdnZXJSB25ldHdvcmsSMQoGcHVic3ViGAggASgLMhkudG9pdC5tb2RlbC5QdWJTdWJUcmlnZ2VyUgZwdWJzdWI=');
+    'CgtKb2JUcmlnZ2VycxI7Cgpvbl9pbnN0YWxsGAEgASgLMhwudG9pdC5tb2RlbC5Pbkluc3RhbGxUcmlnZ2VyUglvbkluc3RhbGwSMgoHb25fYm9vdBgCIAEoCzIZLnRvaXQubW9kZWwuT25Cb290VHJpZ2dlclIGb25Cb290EjcKCGludGVydmFsGAMgASgLMhsudG9pdC5tb2RlbC5JbnRlcnZhbFRyaWdnZXJSCGludGVydmFsEisKBGNyb24YBCABKAsyFy50b2l0Lm1vZGVsLkNyb25UcmlnZ2VyUgRjcm9uEjsKCG1vdmVtZW50GAUgASgLMhsudG9pdC5tb2RlbC5Nb3ZlbWVudFRyaWdnZXJCAhgBUghtb3ZlbWVudBI1CgZidXR0b24YBiABKAsyGS50b2l0Lm1vZGVsLkJ1dHRvblRyaWdnZXJCAhgBUgZidXR0b24SNAoHbmV0d29yaxgHIAEoCzIaLnRvaXQubW9kZWwuTmV0d29ya1RyaWdnZXJSB25ldHdvcmsSMQoGcHVic3ViGAggASgLMhkudG9pdC5tb2RlbC5QdWJTdWJUcmlnZ2VyUgZwdWJzdWISKwoEZ3BpbxgJIAEoCzIXLnRvaXQubW9kZWwuR1BJT1RyaWdnZXJSBGdwaW8=');
+@$core.Deprecated('Use gPIOTriggerDescriptor instead')
+const GPIOTrigger$json = const {
+  '1': 'GPIOTrigger',
+  '2': const [
+    const {
+      '1': 'pins',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.toit.model.GPIOTrigger.Pin',
+      '10': 'pins'
+    },
+  ],
+  '3': const [GPIOTrigger_Pin$json],
+};
+
+@$core.Deprecated('Use gPIOTriggerDescriptor instead')
+const GPIOTrigger_Pin$json = const {
+  '1': 'Pin',
+  '2': const [
+    const {
+      '1': 'level',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.toit.model.GPIOTrigger.Pin.Level',
+      '10': 'level'
+    },
+    const {'1': 'pin', '3': 2, '4': 1, '5': 5, '10': 'pin'},
+  ],
+  '4': const [GPIOTrigger_Pin_Level$json],
+};
+
+@$core.Deprecated('Use gPIOTriggerDescriptor instead')
+const GPIOTrigger_Pin_Level$json = const {
+  '1': 'Level',
+  '2': const [
+    const {'1': 'HIGH', '2': 0},
+    const {'1': 'LOW', '2': 1},
+  ],
+};
+
+/// Descriptor for `GPIOTrigger`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List gPIOTriggerDescriptor = $convert.base64Decode(
+    'CgtHUElPVHJpZ2dlchIvCgRwaW5zGAEgAygLMhsudG9pdC5tb2RlbC5HUElPVHJpZ2dlci5QaW5SBHBpbnMabAoDUGluEjcKBWxldmVsGAEgASgOMiEudG9pdC5tb2RlbC5HUElPVHJpZ2dlci5QaW4uTGV2ZWxSBWxldmVsEhAKA3BpbhgCIAEoBVIDcGluIhoKBUxldmVsEggKBEhJR0gQABIHCgNMT1cQAQ==');
 @$core.Deprecated('Use onInstallTriggerDescriptor instead')
 const OnInstallTrigger$json = const {
   '1': 'OnInstallTrigger',

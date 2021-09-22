@@ -140,3 +140,28 @@ class JobChangeType extends $pb.ProtobufEnum {
 
   const JobChangeType._($core.int v, $core.String n) : super(v, n);
 }
+
+class GPIOTrigger_Pin_Level extends $pb.ProtobufEnum {
+  static const GPIOTrigger_Pin_Level HIGH = GPIOTrigger_Pin_Level._(
+      0,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'HIGH');
+  static const GPIOTrigger_Pin_Level LOW = GPIOTrigger_Pin_Level._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'LOW');
+
+  static const $core.List<GPIOTrigger_Pin_Level> values =
+      <GPIOTrigger_Pin_Level>[
+    HIGH,
+    LOW,
+  ];
+
+  static final $core.Map<$core.int, GPIOTrigger_Pin_Level> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static GPIOTrigger_Pin_Level? valueOf($core.int value) => _byValue[value];
+
+  const GPIOTrigger_Pin_Level._($core.int v, $core.String n) : super(v, n);
+}

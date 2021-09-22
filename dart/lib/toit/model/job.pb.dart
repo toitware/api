@@ -778,6 +778,7 @@ class JobTriggers extends $pb.GeneratedMessage {
     ..aOM<ButtonTrigger>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'button', subBuilder: ButtonTrigger.create)
     ..aOM<NetworkTrigger>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'network', subBuilder: NetworkTrigger.create)
     ..aOM<PubSubTrigger>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pubsub', subBuilder: PubSubTrigger.create)
+    ..aOM<GPIOTrigger>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'gpio', subBuilder: GPIOTrigger.create)
     ..hasRequiredFields = false;
 
   JobTriggers._() : super();
@@ -790,6 +791,7 @@ class JobTriggers extends $pb.GeneratedMessage {
     @$core.Deprecated('This field is deprecated.') ButtonTrigger? button,
     NetworkTrigger? network,
     PubSubTrigger? pubsub,
+    GPIOTrigger? gpio,
   }) {
     final _result = create();
     if (onInstall != null) {
@@ -817,6 +819,9 @@ class JobTriggers extends $pb.GeneratedMessage {
     }
     if (pubsub != null) {
       _result.pubsub = pubsub;
+    }
+    if (gpio != null) {
+      _result.gpio = gpio;
     }
     return _result;
   }
@@ -967,6 +972,169 @@ class JobTriggers extends $pb.GeneratedMessage {
   void clearPubsub() => clearField(8);
   @$pb.TagNumber(8)
   PubSubTrigger ensurePubsub() => $_ensure(7);
+
+  @$pb.TagNumber(9)
+  GPIOTrigger get gpio => $_getN(8);
+  @$pb.TagNumber(9)
+  set gpio(GPIOTrigger v) {
+    setField(9, v);
+  }
+
+  @$pb.TagNumber(9)
+  $core.bool hasGpio() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearGpio() => clearField(9);
+  @$pb.TagNumber(9)
+  GPIOTrigger ensureGpio() => $_ensure(8);
+}
+
+class GPIOTrigger_Pin extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'GPIOTrigger.Pin',
+      package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'toit.model'),
+      createEmptyInstance: create)
+    ..e<GPIOTrigger_Pin_Level>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'level',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: GPIOTrigger_Pin_Level.HIGH,
+        valueOf: GPIOTrigger_Pin_Level.valueOf,
+        enumValues: GPIOTrigger_Pin_Level.values)
+    ..a<$core.int>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pin',
+        $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
+  GPIOTrigger_Pin._() : super();
+  factory GPIOTrigger_Pin({
+    GPIOTrigger_Pin_Level? level,
+    $core.int? pin,
+  }) {
+    final _result = create();
+    if (level != null) {
+      _result.level = level;
+    }
+    if (pin != null) {
+      _result.pin = pin;
+    }
+    return _result;
+  }
+  factory GPIOTrigger_Pin.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GPIOTrigger_Pin.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  GPIOTrigger_Pin clone() => GPIOTrigger_Pin()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  GPIOTrigger_Pin copyWith(void Function(GPIOTrigger_Pin) updates) =>
+      super.copyWith((message) => updates(message as GPIOTrigger_Pin))
+          as GPIOTrigger_Pin; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static GPIOTrigger_Pin create() => GPIOTrigger_Pin._();
+  GPIOTrigger_Pin createEmptyInstance() => create();
+  static $pb.PbList<GPIOTrigger_Pin> createRepeated() =>
+      $pb.PbList<GPIOTrigger_Pin>();
+  @$core.pragma('dart2js:noInline')
+  static GPIOTrigger_Pin getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GPIOTrigger_Pin>(create);
+  static GPIOTrigger_Pin? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  GPIOTrigger_Pin_Level get level => $_getN(0);
+  @$pb.TagNumber(1)
+  set level(GPIOTrigger_Pin_Level v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasLevel() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearLevel() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get pin => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set pin($core.int v) {
+    $_setSignedInt32(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasPin() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPin() => clearField(2);
+}
+
+class GPIOTrigger extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'GPIOTrigger',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'toit.model'),
+      createEmptyInstance: create)
+    ..pc<GPIOTrigger_Pin>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'pins',
+        $pb.PbFieldType.PM,
+        subBuilder: GPIOTrigger_Pin.create)
+    ..hasRequiredFields = false;
+
+  GPIOTrigger._() : super();
+  factory GPIOTrigger({
+    $core.Iterable<GPIOTrigger_Pin>? pins,
+  }) {
+    final _result = create();
+    if (pins != null) {
+      _result.pins.addAll(pins);
+    }
+    return _result;
+  }
+  factory GPIOTrigger.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GPIOTrigger.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  GPIOTrigger clone() => GPIOTrigger()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  GPIOTrigger copyWith(void Function(GPIOTrigger) updates) =>
+      super.copyWith((message) => updates(message as GPIOTrigger))
+          as GPIOTrigger; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static GPIOTrigger create() => GPIOTrigger._();
+  GPIOTrigger createEmptyInstance() => create();
+  static $pb.PbList<GPIOTrigger> createRepeated() => $pb.PbList<GPIOTrigger>();
+  @$core.pragma('dart2js:noInline')
+  static GPIOTrigger getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GPIOTrigger>(create);
+  static GPIOTrigger? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<GPIOTrigger_Pin> get pins => $_getList(0);
 }
 
 class OnInstallTrigger extends $pb.GeneratedMessage {
