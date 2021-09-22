@@ -75,6 +75,20 @@ message JobTriggers {
   ButtonTrigger button = 6 [deprecated = true];
   NetworkTrigger network = 7;
   PubSubTrigger pubsub = 8;
+  GPIOTrigger gpio = 9;
+}
+
+message GPIOTrigger {
+  message Pin {
+    enum Level {
+      HIGH = 0;
+      LOW = 1;
+    }
+    Level level = 1;
+    int32 pin = 2;
+  }
+
+  repeated Pin pins = 1;
 }
 
 message OnInstallTrigger { bool enabled = 1; }
