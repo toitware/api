@@ -81,8 +81,8 @@ message JobTriggers {
 message GPIOTrigger {
   message Pin {
     enum Level {
-      high = 0;
-      low = 1;
+      HIGH = 0;
+      LOW = 1;
     }
     Level level = 1;
     int32 pin = 2;
