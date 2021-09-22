@@ -44,7 +44,7 @@ namespace Toit.Proto.Model {
             "ZGVsLkdQU0ZlYXR1cmUiPgoHSm9iRmlsZRIlCgR0eXBlGAEgASgOMhcudG9p",
             "dC5tb2RlbC5Kb2JGaWxlVHlwZRIMCgRwYXRoGAIgASgJIh0KCkdQU0ZlYXR1",
             "cmUSDwoHZW5hYmxlZBgBIAEoCCIgCg5NZW1vcnlSZXNvdXJjZRIOCgZtZW1v",
-            "cnkYASABKAMi+wIKC0pvYlRyaWdnZXJzEjAKCm9uX2luc3RhbGwYASABKAsy",
+            "cnkYASABKAMiogMKC0pvYlRyaWdnZXJzEjAKCm9uX2luc3RhbGwYASABKAsy",
             "HC50b2l0Lm1vZGVsLk9uSW5zdGFsbFRyaWdnZXISKgoHb25fYm9vdBgCIAEo",
             "CzIZLnRvaXQubW9kZWwuT25Cb290VHJpZ2dlchItCghpbnRlcnZhbBgDIAEo",
             "CzIbLnRvaXQubW9kZWwuSW50ZXJ2YWxUcmlnZ2VyEiUKBGNyb24YBCABKAsy",
@@ -52,41 +52,45 @@ namespace Toit.Proto.Model {
             "dG9pdC5tb2RlbC5Nb3ZlbWVudFRyaWdnZXJCAhgBEi0KBmJ1dHRvbhgGIAEo",
             "CzIZLnRvaXQubW9kZWwuQnV0dG9uVHJpZ2dlckICGAESKwoHbmV0d29yaxgH",
             "IAEoCzIaLnRvaXQubW9kZWwuTmV0d29ya1RyaWdnZXISKQoGcHVic3ViGAgg",
-            "ASgLMhkudG9pdC5tb2RlbC5QdWJTdWJUcmlnZ2VyIiMKEE9uSW5zdGFsbFRy",
-            "aWdnZXISDwoHZW5hYmxlZBgBIAEoCCIgCg1PbkJvb3RUcmlnZ2VyEg8KB2Vu",
-            "YWJsZWQYASABKAgiPgoPSW50ZXJ2YWxUcmlnZ2VyEisKCGludGVydmFsGAEg",
-            "ASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uIjIKC0Nyb25UcmlnZ2Vy",
-            "EiMKBXNwZWNzGAEgAygLMhQudG9pdC5tb2RlbC5Dcm9uU3BlYyIhCg9Nb3Zl",
-            "bWVudFRyaWdnZXISDgoGc2hha2VuGAEgASgIIiAKDUJ1dHRvblRyaWdnZXIS",
-            "DwoHYnV0dG9ucxgBIAMoCSIjCg5OZXR3b3JrVHJpZ2dlchIRCgljb25uZWN0",
-            "ZWQYASABKAgiOQoNUHViU3ViVHJpZ2dlchIoCgZ0b3BpY3MYASADKAsyGC50",
-            "b2l0Lm1vZGVsLnB1YnN1Yi5Ub3BpYyJMCghDcm9uU3BlYxITCgtjcm9uX3N0",
-            "cmluZxgBIAEoCRIrCglzY2hlZHVsZXMYAiADKAsyGC50b2l0Lm1vZGVsLkNy",
-            "b25TY2hlZHVsZSLUAQoMQ3JvblNjaGVkdWxlEg4KBnNlY29uZBgBIAEoEBIO",
-            "CgZtaW51dGUYAiABKBASDAoEaG91chgDIAEoEBIUCgxkYXlfb2ZfbW9udGgY",
-            "BCABKBASDQoFbW9udGgYBSABKBASEwoLZGF5X29mX3dlZWsYBiABKBASLgoK",
-            "dmFsaWRfZnJvbRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
-            "LAoIdmFsaWRfdG8YCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "IosBCglKb2JQdWJTdWISOQoNc3Vic2NyaXB0aW9ucxgBIAMoCzIiLnRvaXQu",
-            "bW9kZWwuSm9iUHViU3ViLlN1YnNjcmlwdGlvbhpDCgxTdWJzY3JpcHRpb24S",
-            "JwoFdG9waWMYASABKAsyGC50b2l0Lm1vZGVsLnB1YnN1Yi5Ub3BpYxIKCgJp",
-            "ZBgCIAEoDCJtCglKb2JTdGF0dXMSDgoGam9iX2lkGAMgASgMEiMKBXN0YXRl",
-            "GAEgASgOMhQudG9pdC5tb2RlbC5Kb2JTdGF0ZRIrCgd1cGRhdGVkGAIgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCJXCgdKb2JJbmZvEiUKBmNv",
-            "bmZpZxgBIAEoCzIVLnRvaXQubW9kZWwuSm9iQ29uZmlnEiUKBnN0YXR1cxgC",
-            "IAEoCzIVLnRvaXQubW9kZWwuSm9iU3RhdHVzKmQKDEpvYkdvYWxTdGF0ZRIa",
-            "ChZKT0JfR09BTF9TVEFURV9VTktOT1dOEAASGgoWSk9CX0dPQUxfU1RBVEVf",
-            "SU5TVEFMTBABEhwKGEpPQl9HT0FMX1NUQVRFX1VOSU5TVEFMTBACKkIKC0pv",
-            "YkZpbGVUeXBlEhkKFUpPQl9GSUxFX1RZUEVfVU5LTk9XThAAEhgKFEpPQl9G",
-            "SUxFX1RZUEVfU1lTVEVNEAEqhQEKCEpvYlN0YXRlEhUKEUpPQl9TVEFURV9V",
-            "TktOT1dOEAASGQoVSk9CX1NUQVRFX1VOSU5TVEFMTEVEEAESGAoUSk9CX1NU",
-            "QVRFX0lOU1RBTExJTkcQAhIXChNKT0JfU1RBVEVfSU5TVEFMTEVEEAMSFAoQ",
-            "Sk9CX1NUQVRFX0ZBSUxFRBAEKm0KDUpvYkNoYW5nZVR5cGUSFgoSSk9CX0NI",
-            "QU5HRV9VTktOT1dOEAASFAoQSk9CX0NIQU5HRV9BRERFRBABEhYKEkpPQl9D",
-            "SEFOR0VfREVMRVRFRBACEhYKEkpPQl9DSEFOR0VfQ0hBTkdFRBADQmIKGGlv",
-            "LnRvaXQucHJvdG8udG9pdC5tb2RlbEIISm9iUHJvdG9aKWdpdGh1Yi5jb20v",
-            "dG9pdHdhcmUvYXBpL2dvbGFuZy90b2l0L21vZGVsqgIQVG9pdC5Qcm90by5N",
-            "b2RlbGIGcHJvdG8z"));
+            "ASgLMhkudG9pdC5tb2RlbC5QdWJTdWJUcmlnZ2VyEiUKBGdwaW8YCSABKAsy",
+            "Fy50b2l0Lm1vZGVsLkdQSU9UcmlnZ2VyIpoBCgtHUElPVHJpZ2dlchIpCgRw",
+            "aW5zGAEgAygLMhsudG9pdC5tb2RlbC5HUElPVHJpZ2dlci5QaW4aYAoDUGlu",
+            "EjAKBWxldmVsGAEgASgOMiEudG9pdC5tb2RlbC5HUElPVHJpZ2dlci5QaW4u",
+            "TGV2ZWwSCwoDcGluGAIgASgFIhoKBUxldmVsEggKBEhJR0gQABIHCgNMT1cQ",
+            "ASIjChBPbkluc3RhbGxUcmlnZ2VyEg8KB2VuYWJsZWQYASABKAgiIAoNT25C",
+            "b290VHJpZ2dlchIPCgdlbmFibGVkGAEgASgIIj4KD0ludGVydmFsVHJpZ2dl",
+            "chIrCghpbnRlcnZhbBgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlv",
+            "biIyCgtDcm9uVHJpZ2dlchIjCgVzcGVjcxgBIAMoCzIULnRvaXQubW9kZWwu",
+            "Q3JvblNwZWMiIQoPTW92ZW1lbnRUcmlnZ2VyEg4KBnNoYWtlbhgBIAEoCCIg",
+            "Cg1CdXR0b25UcmlnZ2VyEg8KB2J1dHRvbnMYASADKAkiIwoOTmV0d29ya1Ry",
+            "aWdnZXISEQoJY29ubmVjdGVkGAEgASgIIjkKDVB1YlN1YlRyaWdnZXISKAoG",
+            "dG9waWNzGAEgAygLMhgudG9pdC5tb2RlbC5wdWJzdWIuVG9waWMiTAoIQ3Jv",
+            "blNwZWMSEwoLY3Jvbl9zdHJpbmcYASABKAkSKwoJc2NoZWR1bGVzGAIgAygL",
+            "MhgudG9pdC5tb2RlbC5Dcm9uU2NoZWR1bGUi1AEKDENyb25TY2hlZHVsZRIO",
+            "CgZzZWNvbmQYASABKBASDgoGbWludXRlGAIgASgQEgwKBGhvdXIYAyABKBAS",
+            "FAoMZGF5X29mX21vbnRoGAQgASgQEg0KBW1vbnRoGAUgASgQEhMKC2RheV9v",
+            "Zl93ZWVrGAYgASgQEi4KCnZhbGlkX2Zyb20YByABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wEiwKCHZhbGlkX3RvGAggASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcCKLAQoJSm9iUHViU3ViEjkKDXN1YnNjcmlwdGlv",
+            "bnMYASADKAsyIi50b2l0Lm1vZGVsLkpvYlB1YlN1Yi5TdWJzY3JpcHRpb24a",
+            "QwoMU3Vic2NyaXB0aW9uEicKBXRvcGljGAEgASgLMhgudG9pdC5tb2RlbC5w",
+            "dWJzdWIuVG9waWMSCgoCaWQYAiABKAwibQoJSm9iU3RhdHVzEg4KBmpvYl9p",
+            "ZBgDIAEoDBIjCgVzdGF0ZRgBIAEoDjIULnRvaXQubW9kZWwuSm9iU3RhdGUS",
+            "KwoHdXBkYXRlZBgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAi",
+            "VwoHSm9iSW5mbxIlCgZjb25maWcYASABKAsyFS50b2l0Lm1vZGVsLkpvYkNv",
+            "bmZpZxIlCgZzdGF0dXMYAiABKAsyFS50b2l0Lm1vZGVsLkpvYlN0YXR1cypk",
+            "CgxKb2JHb2FsU3RhdGUSGgoWSk9CX0dPQUxfU1RBVEVfVU5LTk9XThAAEhoK",
+            "FkpPQl9HT0FMX1NUQVRFX0lOU1RBTEwQARIcChhKT0JfR09BTF9TVEFURV9V",
+            "TklOU1RBTEwQAipCCgtKb2JGaWxlVHlwZRIZChVKT0JfRklMRV9UWVBFX1VO",
+            "S05PV04QABIYChRKT0JfRklMRV9UWVBFX1NZU1RFTRABKoUBCghKb2JTdGF0",
+            "ZRIVChFKT0JfU1RBVEVfVU5LTk9XThAAEhkKFUpPQl9TVEFURV9VTklOU1RB",
+            "TExFRBABEhgKFEpPQl9TVEFURV9JTlNUQUxMSU5HEAISFwoTSk9CX1NUQVRF",
+            "X0lOU1RBTExFRBADEhQKEEpPQl9TVEFURV9GQUlMRUQQBCptCg1Kb2JDaGFu",
+            "Z2VUeXBlEhYKEkpPQl9DSEFOR0VfVU5LTk9XThAAEhQKEEpPQl9DSEFOR0Vf",
+            "QURERUQQARIWChJKT0JfQ0hBTkdFX0RFTEVURUQQAhIWChJKT0JfQ0hBTkdF",
+            "X0NIQU5HRUQQA0JiChhpby50b2l0LnByb3RvLnRvaXQubW9kZWxCCEpvYlBy",
+            "b3RvWilnaXRodWIuY29tL3RvaXR3YXJlL2FwaS9nb2xhbmcvdG9pdC9tb2Rl",
+            "bKoCEFRvaXQuUHJvdG8uTW9kZWxiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Toit.Proto.Model.PubSub.TopicReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Toit.Proto.Model.JobGoalState), typeof(global::Toit.Proto.Model.JobFileType), typeof(global::Toit.Proto.Model.JobState), typeof(global::Toit.Proto.Model.JobChangeType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -97,7 +101,8 @@ namespace Toit.Proto.Model {
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.JobFile), global::Toit.Proto.Model.JobFile.Parser, new[]{ "Type", "Path" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.GPSFeature), global::Toit.Proto.Model.GPSFeature.Parser, new[]{ "Enabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.MemoryResource), global::Toit.Proto.Model.MemoryResource.Parser, new[]{ "Memory" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.JobTriggers), global::Toit.Proto.Model.JobTriggers.Parser, new[]{ "OnInstall", "OnBoot", "Interval", "Cron", "Movement", "Button", "Network", "Pubsub" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.JobTriggers), global::Toit.Proto.Model.JobTriggers.Parser, new[]{ "OnInstall", "OnBoot", "Interval", "Cron", "Movement", "Button", "Network", "Pubsub", "Gpio" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.GPIOTrigger), global::Toit.Proto.Model.GPIOTrigger.Parser, new[]{ "Pins" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.GPIOTrigger.Types.Pin), global::Toit.Proto.Model.GPIOTrigger.Types.Pin.Parser, new[]{ "Level", "Pin_" }, null, new[]{ typeof(global::Toit.Proto.Model.GPIOTrigger.Types.Pin.Types.Level) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.OnInstallTrigger), global::Toit.Proto.Model.OnInstallTrigger.Parser, new[]{ "Enabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.OnBootTrigger), global::Toit.Proto.Model.OnBootTrigger.Parser, new[]{ "Enabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.IntervalTrigger), global::Toit.Proto.Model.IntervalTrigger.Parser, new[]{ "Interval" }, null, null, null, null),
@@ -2099,6 +2104,7 @@ namespace Toit.Proto.Model {
       button_ = other.button_ != null ? other.button_.Clone() : null;
       network_ = other.network_ != null ? other.network_.Clone() : null;
       pubsub_ = other.pubsub_ != null ? other.pubsub_.Clone() : null;
+      gpio_ = other.gpio_ != null ? other.gpio_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2206,6 +2212,18 @@ namespace Toit.Proto.Model {
       }
     }
 
+    /// <summary>Field number for the "gpio" field.</summary>
+    public const int GpioFieldNumber = 9;
+    private global::Toit.Proto.Model.GPIOTrigger gpio_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Toit.Proto.Model.GPIOTrigger Gpio {
+      get { return gpio_; }
+      set {
+        gpio_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2229,6 +2247,7 @@ namespace Toit.Proto.Model {
       if (!object.Equals(Button, other.Button)) return false;
       if (!object.Equals(Network, other.Network)) return false;
       if (!object.Equals(Pubsub, other.Pubsub)) return false;
+      if (!object.Equals(Gpio, other.Gpio)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2244,6 +2263,7 @@ namespace Toit.Proto.Model {
       if (button_ != null) hash ^= Button.GetHashCode();
       if (network_ != null) hash ^= Network.GetHashCode();
       if (pubsub_ != null) hash ^= Pubsub.GetHashCode();
+      if (gpio_ != null) hash ^= Gpio.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2294,6 +2314,10 @@ namespace Toit.Proto.Model {
         output.WriteRawTag(66);
         output.WriteMessage(Pubsub);
       }
+      if (gpio_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(Gpio);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2336,6 +2360,10 @@ namespace Toit.Proto.Model {
         output.WriteRawTag(66);
         output.WriteMessage(Pubsub);
       }
+      if (gpio_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(Gpio);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2369,6 +2397,9 @@ namespace Toit.Proto.Model {
       }
       if (pubsub_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Pubsub);
+      }
+      if (gpio_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Gpio);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2429,6 +2460,12 @@ namespace Toit.Proto.Model {
           Pubsub = new global::Toit.Proto.Model.PubSubTrigger();
         }
         Pubsub.MergeFrom(other.Pubsub);
+      }
+      if (other.gpio_ != null) {
+        if (gpio_ == null) {
+          Gpio = new global::Toit.Proto.Model.GPIOTrigger();
+        }
+        Gpio.MergeFrom(other.Gpio);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2499,6 +2536,13 @@ namespace Toit.Proto.Model {
               Pubsub = new global::Toit.Proto.Model.PubSubTrigger();
             }
             input.ReadMessage(Pubsub);
+            break;
+          }
+          case 74: {
+            if (gpio_ == null) {
+              Gpio = new global::Toit.Proto.Model.GPIOTrigger();
+            }
+            input.ReadMessage(Gpio);
             break;
           }
         }
@@ -2572,10 +2616,442 @@ namespace Toit.Proto.Model {
             input.ReadMessage(Pubsub);
             break;
           }
+          case 74: {
+            if (gpio_ == null) {
+              Gpio = new global::Toit.Proto.Model.GPIOTrigger();
+            }
+            input.ReadMessage(Gpio);
+            break;
+          }
         }
       }
     }
     #endif
+
+  }
+
+  public sealed partial class GPIOTrigger : pb::IMessage<GPIOTrigger>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GPIOTrigger> _parser = new pb::MessageParser<GPIOTrigger>(() => new GPIOTrigger());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GPIOTrigger> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Toit.Proto.Model.JobReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GPIOTrigger() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GPIOTrigger(GPIOTrigger other) : this() {
+      pins_ = other.pins_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GPIOTrigger Clone() {
+      return new GPIOTrigger(this);
+    }
+
+    /// <summary>Field number for the "pins" field.</summary>
+    public const int PinsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Toit.Proto.Model.GPIOTrigger.Types.Pin> _repeated_pins_codec
+        = pb::FieldCodec.ForMessage(10, global::Toit.Proto.Model.GPIOTrigger.Types.Pin.Parser);
+    private readonly pbc::RepeatedField<global::Toit.Proto.Model.GPIOTrigger.Types.Pin> pins_ = new pbc::RepeatedField<global::Toit.Proto.Model.GPIOTrigger.Types.Pin>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Toit.Proto.Model.GPIOTrigger.Types.Pin> Pins {
+      get { return pins_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GPIOTrigger);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GPIOTrigger other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!pins_.Equals(other.pins_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= pins_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      pins_.WriteTo(output, _repeated_pins_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      pins_.WriteTo(ref output, _repeated_pins_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += pins_.CalculateSize(_repeated_pins_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GPIOTrigger other) {
+      if (other == null) {
+        return;
+      }
+      pins_.Add(other.pins_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            pins_.AddEntriesFrom(input, _repeated_pins_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            pins_.AddEntriesFrom(ref input, _repeated_pins_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the GPIOTrigger message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      public sealed partial class Pin : pb::IMessage<Pin>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Pin> _parser = new pb::MessageParser<Pin>(() => new Pin());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Pin> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Toit.Proto.Model.GPIOTrigger.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Pin() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Pin(Pin other) : this() {
+          level_ = other.level_;
+          pin_ = other.pin_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Pin Clone() {
+          return new Pin(this);
+        }
+
+        /// <summary>Field number for the "level" field.</summary>
+        public const int LevelFieldNumber = 1;
+        private global::Toit.Proto.Model.GPIOTrigger.Types.Pin.Types.Level level_ = global::Toit.Proto.Model.GPIOTrigger.Types.Pin.Types.Level.High;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Toit.Proto.Model.GPIOTrigger.Types.Pin.Types.Level Level {
+          get { return level_; }
+          set {
+            level_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "pin" field.</summary>
+        public const int Pin_FieldNumber = 2;
+        private int pin_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int Pin_ {
+          get { return pin_; }
+          set {
+            pin_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Pin);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Pin other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Level != other.Level) return false;
+          if (Pin_ != other.Pin_) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Level != global::Toit.Proto.Model.GPIOTrigger.Types.Pin.Types.Level.High) hash ^= Level.GetHashCode();
+          if (Pin_ != 0) hash ^= Pin_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Level != global::Toit.Proto.Model.GPIOTrigger.Types.Pin.Types.Level.High) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Level);
+          }
+          if (Pin_ != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(Pin_);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Level != global::Toit.Proto.Model.GPIOTrigger.Types.Pin.Types.Level.High) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Level);
+          }
+          if (Pin_ != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(Pin_);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Level != global::Toit.Proto.Model.GPIOTrigger.Types.Pin.Types.Level.High) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Level);
+          }
+          if (Pin_ != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(Pin_);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Pin other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Level != global::Toit.Proto.Model.GPIOTrigger.Types.Pin.Types.Level.High) {
+            Level = other.Level;
+          }
+          if (other.Pin_ != 0) {
+            Pin_ = other.Pin_;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                Level = (global::Toit.Proto.Model.GPIOTrigger.Types.Pin.Types.Level) input.ReadEnum();
+                break;
+              }
+              case 16: {
+                Pin_ = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Level = (global::Toit.Proto.Model.GPIOTrigger.Types.Pin.Types.Level) input.ReadEnum();
+                break;
+              }
+              case 16: {
+                Pin_ = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the Pin message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          public enum Level {
+            [pbr::OriginalName("HIGH")] High = 0,
+            [pbr::OriginalName("LOW")] Low = 1,
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
 
   }
 
@@ -2593,7 +3069,7 @@ namespace Toit.Proto.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Toit.Proto.Model.JobReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Toit.Proto.Model.JobReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2782,7 +3258,7 @@ namespace Toit.Proto.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Toit.Proto.Model.JobReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Toit.Proto.Model.JobReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2971,7 +3447,7 @@ namespace Toit.Proto.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Toit.Proto.Model.JobReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Toit.Proto.Model.JobReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3169,7 +3645,7 @@ namespace Toit.Proto.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Toit.Proto.Model.JobReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Toit.Proto.Model.JobReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3347,7 +3823,7 @@ namespace Toit.Proto.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Toit.Proto.Model.JobReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Toit.Proto.Model.JobReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3536,7 +4012,7 @@ namespace Toit.Proto.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Toit.Proto.Model.JobReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Toit.Proto.Model.JobReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3714,7 +4190,7 @@ namespace Toit.Proto.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Toit.Proto.Model.JobReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Toit.Proto.Model.JobReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3903,7 +4379,7 @@ namespace Toit.Proto.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Toit.Proto.Model.JobReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Toit.Proto.Model.JobReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4081,7 +4557,7 @@ namespace Toit.Proto.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Toit.Proto.Model.JobReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Toit.Proto.Model.JobReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4296,7 +4772,7 @@ namespace Toit.Proto.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Toit.Proto.Model.JobReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Toit.Proto.Model.JobReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4762,7 +5238,7 @@ namespace Toit.Proto.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Toit.Proto.Model.JobReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Toit.Proto.Model.JobReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5183,7 +5659,7 @@ namespace Toit.Proto.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Toit.Proto.Model.JobReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Toit.Proto.Model.JobReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5455,7 +5931,7 @@ namespace Toit.Proto.Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Toit.Proto.Model.JobReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Toit.Proto.Model.JobReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
