@@ -271,6 +271,11 @@ export class JobTriggers extends jspb.Message {
   getPubsub(): PubSubTrigger | undefined;
   setPubsub(value?: PubSubTrigger): void;
 
+  hasGpio(): boolean;
+  clearGpio(): void;
+  getGpio(): GPIOTrigger | undefined;
+  setGpio(value?: GPIOTrigger): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): JobTriggers.AsObject;
   static toObject(includeInstance: boolean, msg: JobTriggers): JobTriggers.AsObject;
@@ -291,6 +296,60 @@ export namespace JobTriggers {
     button?: ButtonTrigger.AsObject,
     network?: NetworkTrigger.AsObject,
     pubsub?: PubSubTrigger.AsObject,
+    gpio?: GPIOTrigger.AsObject,
+  }
+}
+
+export class GPIOTrigger extends jspb.Message {
+  clearPinsList(): void;
+  getPinsList(): Array<GPIOTrigger.Pin>;
+  setPinsList(value: Array<GPIOTrigger.Pin>): void;
+  addPins(value?: GPIOTrigger.Pin, index?: number): GPIOTrigger.Pin;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GPIOTrigger.AsObject;
+  static toObject(includeInstance: boolean, msg: GPIOTrigger): GPIOTrigger.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: GPIOTrigger, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GPIOTrigger;
+  static deserializeBinaryFromReader(message: GPIOTrigger, reader: jspb.BinaryReader): GPIOTrigger;
+}
+
+export namespace GPIOTrigger {
+  export type AsObject = {
+    pinsList: Array<GPIOTrigger.Pin.AsObject>,
+  }
+
+  export class Pin extends jspb.Message {
+    getLevel(): GPIOTrigger.Pin.LevelMap[keyof GPIOTrigger.Pin.LevelMap];
+    setLevel(value: GPIOTrigger.Pin.LevelMap[keyof GPIOTrigger.Pin.LevelMap]): void;
+
+    getPin(): number;
+    setPin(value: number): void;
+
+    serializeBinary(): Uint8Array;
+    toObject(includeInstance?: boolean): Pin.AsObject;
+    static toObject(includeInstance: boolean, msg: Pin): Pin.AsObject;
+    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+    static serializeBinaryToWriter(message: Pin, writer: jspb.BinaryWriter): void;
+    static deserializeBinary(bytes: Uint8Array): Pin;
+    static deserializeBinaryFromReader(message: Pin, reader: jspb.BinaryReader): Pin;
+  }
+
+  export namespace Pin {
+    export type AsObject = {
+      level: GPIOTrigger.Pin.LevelMap[keyof GPIOTrigger.Pin.LevelMap],
+      pin: number,
+    }
+
+    export interface LevelMap {
+      HIGH: 0;
+      LOW: 1;
+    }
+
+    export const Level: LevelMap;
   }
 }
 
