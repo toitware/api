@@ -6783,6 +6783,21 @@ public final class JobProto {
      * <code>.toit.model.PubSubTrigger pubsub = 8;</code>
      */
     io.toit.proto.toit.model.JobProto.PubSubTriggerOrBuilder getPubsubOrBuilder();
+
+    /**
+     * <code>.toit.model.GPIOTrigger gpio = 9;</code>
+     * @return Whether the gpio field is set.
+     */
+    boolean hasGpio();
+    /**
+     * <code>.toit.model.GPIOTrigger gpio = 9;</code>
+     * @return The gpio.
+     */
+    io.toit.proto.toit.model.JobProto.GPIOTrigger getGpio();
+    /**
+     * <code>.toit.model.GPIOTrigger gpio = 9;</code>
+     */
+    io.toit.proto.toit.model.JobProto.GPIOTriggerOrBuilder getGpioOrBuilder();
   }
   /**
    * Protobuf type {@code toit.model.JobTriggers}
@@ -6929,6 +6944,19 @@ public final class JobProto {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(pubsub_);
                 pubsub_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 74: {
+              io.toit.proto.toit.model.JobProto.GPIOTrigger.Builder subBuilder = null;
+              if (gpio_ != null) {
+                subBuilder = gpio_.toBuilder();
+              }
+              gpio_ = input.readMessage(io.toit.proto.toit.model.JobProto.GPIOTrigger.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(gpio_);
+                gpio_ = subBuilder.buildPartial();
               }
 
               break;
@@ -7149,6 +7177,29 @@ public final class JobProto {
       return getPubsub();
     }
 
+    public static final int GPIO_FIELD_NUMBER = 9;
+    private io.toit.proto.toit.model.JobProto.GPIOTrigger gpio_;
+    /**
+     * <code>.toit.model.GPIOTrigger gpio = 9;</code>
+     * @return Whether the gpio field is set.
+     */
+    public boolean hasGpio() {
+      return gpio_ != null;
+    }
+    /**
+     * <code>.toit.model.GPIOTrigger gpio = 9;</code>
+     * @return The gpio.
+     */
+    public io.toit.proto.toit.model.JobProto.GPIOTrigger getGpio() {
+      return gpio_ == null ? io.toit.proto.toit.model.JobProto.GPIOTrigger.getDefaultInstance() : gpio_;
+    }
+    /**
+     * <code>.toit.model.GPIOTrigger gpio = 9;</code>
+     */
+    public io.toit.proto.toit.model.JobProto.GPIOTriggerOrBuilder getGpioOrBuilder() {
+      return getGpio();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7186,6 +7237,9 @@ public final class JobProto {
       }
       if (pubsub_ != null) {
         output.writeMessage(8, getPubsub());
+      }
+      if (gpio_ != null) {
+        output.writeMessage(9, getGpio());
       }
       unknownFields.writeTo(output);
     }
@@ -7227,6 +7281,10 @@ public final class JobProto {
       if (pubsub_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getPubsub());
+      }
+      if (gpio_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getGpio());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7283,6 +7341,11 @@ public final class JobProto {
         if (!getPubsub()
             .equals(other.getPubsub())) return false;
       }
+      if (hasGpio() != other.hasGpio()) return false;
+      if (hasGpio()) {
+        if (!getGpio()
+            .equals(other.getGpio())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7325,6 +7388,10 @@ public final class JobProto {
       if (hasPubsub()) {
         hash = (37 * hash) + PUBSUB_FIELD_NUMBER;
         hash = (53 * hash) + getPubsub().hashCode();
+      }
+      if (hasGpio()) {
+        hash = (37 * hash) + GPIO_FIELD_NUMBER;
+        hash = (53 * hash) + getGpio().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -7507,6 +7574,12 @@ public final class JobProto {
           pubsub_ = null;
           pubsubBuilder_ = null;
         }
+        if (gpioBuilder_ == null) {
+          gpio_ = null;
+        } else {
+          gpio_ = null;
+          gpioBuilder_ = null;
+        }
         return this;
       }
 
@@ -7572,6 +7645,11 @@ public final class JobProto {
           result.pubsub_ = pubsub_;
         } else {
           result.pubsub_ = pubsubBuilder_.build();
+        }
+        if (gpioBuilder_ == null) {
+          result.gpio_ = gpio_;
+        } else {
+          result.gpio_ = gpioBuilder_.build();
         }
         onBuilt();
         return result;
@@ -7644,6 +7722,9 @@ public final class JobProto {
         }
         if (other.hasPubsub()) {
           mergePubsub(other.getPubsub());
+        }
+        if (other.hasGpio()) {
+          mergeGpio(other.getGpio());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8625,6 +8706,125 @@ public final class JobProto {
         }
         return pubsubBuilder_;
       }
+
+      private io.toit.proto.toit.model.JobProto.GPIOTrigger gpio_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.model.JobProto.GPIOTrigger, io.toit.proto.toit.model.JobProto.GPIOTrigger.Builder, io.toit.proto.toit.model.JobProto.GPIOTriggerOrBuilder> gpioBuilder_;
+      /**
+       * <code>.toit.model.GPIOTrigger gpio = 9;</code>
+       * @return Whether the gpio field is set.
+       */
+      public boolean hasGpio() {
+        return gpioBuilder_ != null || gpio_ != null;
+      }
+      /**
+       * <code>.toit.model.GPIOTrigger gpio = 9;</code>
+       * @return The gpio.
+       */
+      public io.toit.proto.toit.model.JobProto.GPIOTrigger getGpio() {
+        if (gpioBuilder_ == null) {
+          return gpio_ == null ? io.toit.proto.toit.model.JobProto.GPIOTrigger.getDefaultInstance() : gpio_;
+        } else {
+          return gpioBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.toit.model.GPIOTrigger gpio = 9;</code>
+       */
+      public Builder setGpio(io.toit.proto.toit.model.JobProto.GPIOTrigger value) {
+        if (gpioBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          gpio_ = value;
+          onChanged();
+        } else {
+          gpioBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.GPIOTrigger gpio = 9;</code>
+       */
+      public Builder setGpio(
+          io.toit.proto.toit.model.JobProto.GPIOTrigger.Builder builderForValue) {
+        if (gpioBuilder_ == null) {
+          gpio_ = builderForValue.build();
+          onChanged();
+        } else {
+          gpioBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.GPIOTrigger gpio = 9;</code>
+       */
+      public Builder mergeGpio(io.toit.proto.toit.model.JobProto.GPIOTrigger value) {
+        if (gpioBuilder_ == null) {
+          if (gpio_ != null) {
+            gpio_ =
+              io.toit.proto.toit.model.JobProto.GPIOTrigger.newBuilder(gpio_).mergeFrom(value).buildPartial();
+          } else {
+            gpio_ = value;
+          }
+          onChanged();
+        } else {
+          gpioBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.GPIOTrigger gpio = 9;</code>
+       */
+      public Builder clearGpio() {
+        if (gpioBuilder_ == null) {
+          gpio_ = null;
+          onChanged();
+        } else {
+          gpio_ = null;
+          gpioBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.GPIOTrigger gpio = 9;</code>
+       */
+      public io.toit.proto.toit.model.JobProto.GPIOTrigger.Builder getGpioBuilder() {
+        
+        onChanged();
+        return getGpioFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.toit.model.GPIOTrigger gpio = 9;</code>
+       */
+      public io.toit.proto.toit.model.JobProto.GPIOTriggerOrBuilder getGpioOrBuilder() {
+        if (gpioBuilder_ != null) {
+          return gpioBuilder_.getMessageOrBuilder();
+        } else {
+          return gpio_ == null ?
+              io.toit.proto.toit.model.JobProto.GPIOTrigger.getDefaultInstance() : gpio_;
+        }
+      }
+      /**
+       * <code>.toit.model.GPIOTrigger gpio = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.model.JobProto.GPIOTrigger, io.toit.proto.toit.model.JobProto.GPIOTrigger.Builder, io.toit.proto.toit.model.JobProto.GPIOTriggerOrBuilder> 
+          getGpioFieldBuilder() {
+        if (gpioBuilder_ == null) {
+          gpioBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.toit.proto.toit.model.JobProto.GPIOTrigger, io.toit.proto.toit.model.JobProto.GPIOTrigger.Builder, io.toit.proto.toit.model.JobProto.GPIOTriggerOrBuilder>(
+                  getGpio(),
+                  getParentForChildren(),
+                  isClean());
+          gpio_ = null;
+        }
+        return gpioBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8673,6 +8873,1489 @@ public final class JobProto {
 
     @java.lang.Override
     public io.toit.proto.toit.model.JobProto.JobTriggers getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GPIOTriggerOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.model.GPIOTrigger)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .toit.model.GPIOTrigger.Pin pins = 1;</code>
+     */
+    java.util.List<io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin> 
+        getPinsList();
+    /**
+     * <code>repeated .toit.model.GPIOTrigger.Pin pins = 1;</code>
+     */
+    io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin getPins(int index);
+    /**
+     * <code>repeated .toit.model.GPIOTrigger.Pin pins = 1;</code>
+     */
+    int getPinsCount();
+    /**
+     * <code>repeated .toit.model.GPIOTrigger.Pin pins = 1;</code>
+     */
+    java.util.List<? extends io.toit.proto.toit.model.JobProto.GPIOTrigger.PinOrBuilder> 
+        getPinsOrBuilderList();
+    /**
+     * <code>repeated .toit.model.GPIOTrigger.Pin pins = 1;</code>
+     */
+    io.toit.proto.toit.model.JobProto.GPIOTrigger.PinOrBuilder getPinsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code toit.model.GPIOTrigger}
+   */
+  public  static final class GPIOTrigger extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.model.GPIOTrigger)
+      GPIOTriggerOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GPIOTrigger.newBuilder() to construct.
+    private GPIOTrigger(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GPIOTrigger() {
+      pins_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GPIOTrigger();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GPIOTrigger(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                pins_ = new java.util.ArrayList<io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              pins_.add(
+                  input.readMessage(io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          pins_ = java.util.Collections.unmodifiableList(pins_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.model.JobProto.internal_static_toit_model_GPIOTrigger_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.model.JobProto.internal_static_toit_model_GPIOTrigger_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.model.JobProto.GPIOTrigger.class, io.toit.proto.toit.model.JobProto.GPIOTrigger.Builder.class);
+    }
+
+    public interface PinOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:toit.model.GPIOTrigger.Pin)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>.toit.model.GPIOTrigger.Pin.Level level = 1;</code>
+       * @return The enum numeric value on the wire for level.
+       */
+      int getLevelValue();
+      /**
+       * <code>.toit.model.GPIOTrigger.Pin.Level level = 1;</code>
+       * @return The level.
+       */
+      io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.Level getLevel();
+
+      /**
+       * <code>int32 pin = 2;</code>
+       * @return The pin.
+       */
+      int getPin();
+    }
+    /**
+     * Protobuf type {@code toit.model.GPIOTrigger.Pin}
+     */
+    public  static final class Pin extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:toit.model.GPIOTrigger.Pin)
+        PinOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Pin.newBuilder() to construct.
+      private Pin(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Pin() {
+        level_ = 0;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Pin();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Pin(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                int rawValue = input.readEnum();
+
+                level_ = rawValue;
+                break;
+              }
+              case 16: {
+
+                pin_ = input.readInt32();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.model.JobProto.internal_static_toit_model_GPIOTrigger_Pin_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.model.JobProto.internal_static_toit_model_GPIOTrigger_Pin_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.class, io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.Builder.class);
+      }
+
+      /**
+       * Protobuf enum {@code toit.model.GPIOTrigger.Pin.Level}
+       */
+      public enum Level
+          implements com.google.protobuf.ProtocolMessageEnum {
+        /**
+         * <code>HIGH = 0;</code>
+         */
+        HIGH(0),
+        /**
+         * <code>LOW = 1;</code>
+         */
+        LOW(1),
+        UNRECOGNIZED(-1),
+        ;
+
+        /**
+         * <code>HIGH = 0;</code>
+         */
+        public static final int HIGH_VALUE = 0;
+        /**
+         * <code>LOW = 1;</code>
+         */
+        public static final int LOW_VALUE = 1;
+
+
+        public final int getNumber() {
+          if (this == UNRECOGNIZED) {
+            throw new java.lang.IllegalArgumentException(
+                "Can't get the number of an unknown enum value.");
+          }
+          return value;
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static Level valueOf(int value) {
+          return forNumber(value);
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         */
+        public static Level forNumber(int value) {
+          switch (value) {
+            case 0: return HIGH;
+            case 1: return LOW;
+            default: return null;
+          }
+        }
+
+        public static com.google.protobuf.Internal.EnumLiteMap<Level>
+            internalGetValueMap() {
+          return internalValueMap;
+        }
+        private static final com.google.protobuf.Internal.EnumLiteMap<
+            Level> internalValueMap =
+              new com.google.protobuf.Internal.EnumLiteMap<Level>() {
+                public Level findValueByNumber(int number) {
+                  return Level.forNumber(number);
+                }
+              };
+
+        public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+          return getDescriptor().getValues().get(ordinal());
+        }
+        public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+          return getDescriptor();
+        }
+        public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+          return io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.getDescriptor().getEnumTypes().get(0);
+        }
+
+        private static final Level[] VALUES = values();
+
+        public static Level valueOf(
+            com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+          if (desc.getType() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "EnumValueDescriptor is not for this type.");
+          }
+          if (desc.getIndex() == -1) {
+            return UNRECOGNIZED;
+          }
+          return VALUES[desc.getIndex()];
+        }
+
+        private final int value;
+
+        private Level(int value) {
+          this.value = value;
+        }
+
+        // @@protoc_insertion_point(enum_scope:toit.model.GPIOTrigger.Pin.Level)
+      }
+
+      public static final int LEVEL_FIELD_NUMBER = 1;
+      private int level_;
+      /**
+       * <code>.toit.model.GPIOTrigger.Pin.Level level = 1;</code>
+       * @return The enum numeric value on the wire for level.
+       */
+      public int getLevelValue() {
+        return level_;
+      }
+      /**
+       * <code>.toit.model.GPIOTrigger.Pin.Level level = 1;</code>
+       * @return The level.
+       */
+      public io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.Level getLevel() {
+        @SuppressWarnings("deprecation")
+        io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.Level result = io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.Level.valueOf(level_);
+        return result == null ? io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.Level.UNRECOGNIZED : result;
+      }
+
+      public static final int PIN_FIELD_NUMBER = 2;
+      private int pin_;
+      /**
+       * <code>int32 pin = 2;</code>
+       * @return The pin.
+       */
+      public int getPin() {
+        return pin_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (level_ != io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.Level.HIGH.getNumber()) {
+          output.writeEnum(1, level_);
+        }
+        if (pin_ != 0) {
+          output.writeInt32(2, pin_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (level_ != io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.Level.HIGH.getNumber()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(1, level_);
+        }
+        if (pin_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(2, pin_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin)) {
+          return super.equals(obj);
+        }
+        io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin other = (io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin) obj;
+
+        if (level_ != other.level_) return false;
+        if (getPin()
+            != other.getPin()) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + LEVEL_FIELD_NUMBER;
+        hash = (53 * hash) + level_;
+        hash = (37 * hash) + PIN_FIELD_NUMBER;
+        hash = (53 * hash) + getPin();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code toit.model.GPIOTrigger.Pin}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:toit.model.GPIOTrigger.Pin)
+          io.toit.proto.toit.model.JobProto.GPIOTrigger.PinOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return io.toit.proto.toit.model.JobProto.internal_static_toit_model_GPIOTrigger_Pin_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return io.toit.proto.toit.model.JobProto.internal_static_toit_model_GPIOTrigger_Pin_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.class, io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.Builder.class);
+        }
+
+        // Construct using io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          level_ = 0;
+
+          pin_ = 0;
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return io.toit.proto.toit.model.JobProto.internal_static_toit_model_GPIOTrigger_Pin_descriptor;
+        }
+
+        @java.lang.Override
+        public io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin getDefaultInstanceForType() {
+          return io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin build() {
+          io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin buildPartial() {
+          io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin result = new io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin(this);
+          result.level_ = level_;
+          result.pin_ = pin_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin) {
+            return mergeFrom((io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin other) {
+          if (other == io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.getDefaultInstance()) return this;
+          if (other.level_ != 0) {
+            setLevelValue(other.getLevelValue());
+          }
+          if (other.getPin() != 0) {
+            setPin(other.getPin());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private int level_ = 0;
+        /**
+         * <code>.toit.model.GPIOTrigger.Pin.Level level = 1;</code>
+         * @return The enum numeric value on the wire for level.
+         */
+        public int getLevelValue() {
+          return level_;
+        }
+        /**
+         * <code>.toit.model.GPIOTrigger.Pin.Level level = 1;</code>
+         * @param value The enum numeric value on the wire for level to set.
+         * @return This builder for chaining.
+         */
+        public Builder setLevelValue(int value) {
+          level_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>.toit.model.GPIOTrigger.Pin.Level level = 1;</code>
+         * @return The level.
+         */
+        public io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.Level getLevel() {
+          @SuppressWarnings("deprecation")
+          io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.Level result = io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.Level.valueOf(level_);
+          return result == null ? io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.Level.UNRECOGNIZED : result;
+        }
+        /**
+         * <code>.toit.model.GPIOTrigger.Pin.Level level = 1;</code>
+         * @param value The level to set.
+         * @return This builder for chaining.
+         */
+        public Builder setLevel(io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.Level value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          
+          level_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>.toit.model.GPIOTrigger.Pin.Level level = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearLevel() {
+          
+          level_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int pin_ ;
+        /**
+         * <code>int32 pin = 2;</code>
+         * @return The pin.
+         */
+        public int getPin() {
+          return pin_;
+        }
+        /**
+         * <code>int32 pin = 2;</code>
+         * @param value The pin to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPin(int value) {
+          
+          pin_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>int32 pin = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearPin() {
+          
+          pin_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:toit.model.GPIOTrigger.Pin)
+      }
+
+      // @@protoc_insertion_point(class_scope:toit.model.GPIOTrigger.Pin)
+      private static final io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin();
+      }
+
+      public static io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Pin>
+          PARSER = new com.google.protobuf.AbstractParser<Pin>() {
+        @java.lang.Override
+        public Pin parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Pin(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Pin> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Pin> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int PINS_FIELD_NUMBER = 1;
+    private java.util.List<io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin> pins_;
+    /**
+     * <code>repeated .toit.model.GPIOTrigger.Pin pins = 1;</code>
+     */
+    public java.util.List<io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin> getPinsList() {
+      return pins_;
+    }
+    /**
+     * <code>repeated .toit.model.GPIOTrigger.Pin pins = 1;</code>
+     */
+    public java.util.List<? extends io.toit.proto.toit.model.JobProto.GPIOTrigger.PinOrBuilder> 
+        getPinsOrBuilderList() {
+      return pins_;
+    }
+    /**
+     * <code>repeated .toit.model.GPIOTrigger.Pin pins = 1;</code>
+     */
+    public int getPinsCount() {
+      return pins_.size();
+    }
+    /**
+     * <code>repeated .toit.model.GPIOTrigger.Pin pins = 1;</code>
+     */
+    public io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin getPins(int index) {
+      return pins_.get(index);
+    }
+    /**
+     * <code>repeated .toit.model.GPIOTrigger.Pin pins = 1;</code>
+     */
+    public io.toit.proto.toit.model.JobProto.GPIOTrigger.PinOrBuilder getPinsOrBuilder(
+        int index) {
+      return pins_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < pins_.size(); i++) {
+        output.writeMessage(1, pins_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < pins_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, pins_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.model.JobProto.GPIOTrigger)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.model.JobProto.GPIOTrigger other = (io.toit.proto.toit.model.JobProto.GPIOTrigger) obj;
+
+      if (!getPinsList()
+          .equals(other.getPinsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPinsCount() > 0) {
+        hash = (37 * hash) + PINS_FIELD_NUMBER;
+        hash = (53 * hash) + getPinsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.model.JobProto.GPIOTrigger parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.model.JobProto.GPIOTrigger parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.model.JobProto.GPIOTrigger parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.model.JobProto.GPIOTrigger parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.model.JobProto.GPIOTrigger parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.model.JobProto.GPIOTrigger parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.model.JobProto.GPIOTrigger parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.model.JobProto.GPIOTrigger parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.model.JobProto.GPIOTrigger parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.model.JobProto.GPIOTrigger parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.model.JobProto.GPIOTrigger parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.model.JobProto.GPIOTrigger parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.model.JobProto.GPIOTrigger prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.model.GPIOTrigger}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.model.GPIOTrigger)
+        io.toit.proto.toit.model.JobProto.GPIOTriggerOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.model.JobProto.internal_static_toit_model_GPIOTrigger_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.model.JobProto.internal_static_toit_model_GPIOTrigger_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.model.JobProto.GPIOTrigger.class, io.toit.proto.toit.model.JobProto.GPIOTrigger.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.model.JobProto.GPIOTrigger.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPinsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (pinsBuilder_ == null) {
+          pins_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          pinsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.model.JobProto.internal_static_toit_model_GPIOTrigger_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.model.JobProto.GPIOTrigger getDefaultInstanceForType() {
+        return io.toit.proto.toit.model.JobProto.GPIOTrigger.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.model.JobProto.GPIOTrigger build() {
+        io.toit.proto.toit.model.JobProto.GPIOTrigger result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.model.JobProto.GPIOTrigger buildPartial() {
+        io.toit.proto.toit.model.JobProto.GPIOTrigger result = new io.toit.proto.toit.model.JobProto.GPIOTrigger(this);
+        int from_bitField0_ = bitField0_;
+        if (pinsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            pins_ = java.util.Collections.unmodifiableList(pins_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.pins_ = pins_;
+        } else {
+          result.pins_ = pinsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.model.JobProto.GPIOTrigger) {
+          return mergeFrom((io.toit.proto.toit.model.JobProto.GPIOTrigger)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.model.JobProto.GPIOTrigger other) {
+        if (other == io.toit.proto.toit.model.JobProto.GPIOTrigger.getDefaultInstance()) return this;
+        if (pinsBuilder_ == null) {
+          if (!other.pins_.isEmpty()) {
+            if (pins_.isEmpty()) {
+              pins_ = other.pins_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePinsIsMutable();
+              pins_.addAll(other.pins_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.pins_.isEmpty()) {
+            if (pinsBuilder_.isEmpty()) {
+              pinsBuilder_.dispose();
+              pinsBuilder_ = null;
+              pins_ = other.pins_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              pinsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPinsFieldBuilder() : null;
+            } else {
+              pinsBuilder_.addAllMessages(other.pins_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.model.JobProto.GPIOTrigger parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.model.JobProto.GPIOTrigger) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin> pins_ =
+        java.util.Collections.emptyList();
+      private void ensurePinsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          pins_ = new java.util.ArrayList<io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin>(pins_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin, io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.Builder, io.toit.proto.toit.model.JobProto.GPIOTrigger.PinOrBuilder> pinsBuilder_;
+
+      /**
+       * <code>repeated .toit.model.GPIOTrigger.Pin pins = 1;</code>
+       */
+      public java.util.List<io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin> getPinsList() {
+        if (pinsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(pins_);
+        } else {
+          return pinsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .toit.model.GPIOTrigger.Pin pins = 1;</code>
+       */
+      public int getPinsCount() {
+        if (pinsBuilder_ == null) {
+          return pins_.size();
+        } else {
+          return pinsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .toit.model.GPIOTrigger.Pin pins = 1;</code>
+       */
+      public io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin getPins(int index) {
+        if (pinsBuilder_ == null) {
+          return pins_.get(index);
+        } else {
+          return pinsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .toit.model.GPIOTrigger.Pin pins = 1;</code>
+       */
+      public Builder setPins(
+          int index, io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin value) {
+        if (pinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePinsIsMutable();
+          pins_.set(index, value);
+          onChanged();
+        } else {
+          pinsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .toit.model.GPIOTrigger.Pin pins = 1;</code>
+       */
+      public Builder setPins(
+          int index, io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.Builder builderForValue) {
+        if (pinsBuilder_ == null) {
+          ensurePinsIsMutable();
+          pins_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          pinsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .toit.model.GPIOTrigger.Pin pins = 1;</code>
+       */
+      public Builder addPins(io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin value) {
+        if (pinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePinsIsMutable();
+          pins_.add(value);
+          onChanged();
+        } else {
+          pinsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .toit.model.GPIOTrigger.Pin pins = 1;</code>
+       */
+      public Builder addPins(
+          int index, io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin value) {
+        if (pinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePinsIsMutable();
+          pins_.add(index, value);
+          onChanged();
+        } else {
+          pinsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .toit.model.GPIOTrigger.Pin pins = 1;</code>
+       */
+      public Builder addPins(
+          io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.Builder builderForValue) {
+        if (pinsBuilder_ == null) {
+          ensurePinsIsMutable();
+          pins_.add(builderForValue.build());
+          onChanged();
+        } else {
+          pinsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .toit.model.GPIOTrigger.Pin pins = 1;</code>
+       */
+      public Builder addPins(
+          int index, io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.Builder builderForValue) {
+        if (pinsBuilder_ == null) {
+          ensurePinsIsMutable();
+          pins_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          pinsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .toit.model.GPIOTrigger.Pin pins = 1;</code>
+       */
+      public Builder addAllPins(
+          java.lang.Iterable<? extends io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin> values) {
+        if (pinsBuilder_ == null) {
+          ensurePinsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, pins_);
+          onChanged();
+        } else {
+          pinsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .toit.model.GPIOTrigger.Pin pins = 1;</code>
+       */
+      public Builder clearPins() {
+        if (pinsBuilder_ == null) {
+          pins_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          pinsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .toit.model.GPIOTrigger.Pin pins = 1;</code>
+       */
+      public Builder removePins(int index) {
+        if (pinsBuilder_ == null) {
+          ensurePinsIsMutable();
+          pins_.remove(index);
+          onChanged();
+        } else {
+          pinsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .toit.model.GPIOTrigger.Pin pins = 1;</code>
+       */
+      public io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.Builder getPinsBuilder(
+          int index) {
+        return getPinsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .toit.model.GPIOTrigger.Pin pins = 1;</code>
+       */
+      public io.toit.proto.toit.model.JobProto.GPIOTrigger.PinOrBuilder getPinsOrBuilder(
+          int index) {
+        if (pinsBuilder_ == null) {
+          return pins_.get(index);  } else {
+          return pinsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .toit.model.GPIOTrigger.Pin pins = 1;</code>
+       */
+      public java.util.List<? extends io.toit.proto.toit.model.JobProto.GPIOTrigger.PinOrBuilder> 
+           getPinsOrBuilderList() {
+        if (pinsBuilder_ != null) {
+          return pinsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(pins_);
+        }
+      }
+      /**
+       * <code>repeated .toit.model.GPIOTrigger.Pin pins = 1;</code>
+       */
+      public io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.Builder addPinsBuilder() {
+        return getPinsFieldBuilder().addBuilder(
+            io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .toit.model.GPIOTrigger.Pin pins = 1;</code>
+       */
+      public io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.Builder addPinsBuilder(
+          int index) {
+        return getPinsFieldBuilder().addBuilder(
+            index, io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .toit.model.GPIOTrigger.Pin pins = 1;</code>
+       */
+      public java.util.List<io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.Builder> 
+           getPinsBuilderList() {
+        return getPinsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin, io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.Builder, io.toit.proto.toit.model.JobProto.GPIOTrigger.PinOrBuilder> 
+          getPinsFieldBuilder() {
+        if (pinsBuilder_ == null) {
+          pinsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin, io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.Builder, io.toit.proto.toit.model.JobProto.GPIOTrigger.PinOrBuilder>(
+                  pins_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          pins_ = null;
+        }
+        return pinsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.model.GPIOTrigger)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.model.GPIOTrigger)
+    private static final io.toit.proto.toit.model.JobProto.GPIOTrigger DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.model.JobProto.GPIOTrigger();
+    }
+
+    public static io.toit.proto.toit.model.JobProto.GPIOTrigger getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GPIOTrigger>
+        PARSER = new com.google.protobuf.AbstractParser<GPIOTrigger>() {
+      @java.lang.Override
+      public GPIOTrigger parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GPIOTrigger(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GPIOTrigger> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GPIOTrigger> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.model.JobProto.GPIOTrigger getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -18758,6 +20441,16 @@ public final class JobProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_toit_model_JobTriggers_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_model_GPIOTrigger_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_model_GPIOTrigger_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_model_GPIOTrigger_Pin_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_model_GPIOTrigger_Pin_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_toit_model_OnInstallTrigger_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -18858,7 +20551,7 @@ public final class JobProto {
       "it.model.GPSFeature\">\n\007JobFile\022%\n\004type\030\001" +
       " \001(\0162\027.toit.model.JobFileType\022\014\n\004path\030\002 " +
       "\001(\t\"\035\n\nGPSFeature\022\017\n\007enabled\030\001 \001(\010\" \n\016Me" +
-      "moryResource\022\016\n\006memory\030\001 \001(\003\"\373\002\n\013JobTrig" +
+      "moryResource\022\016\n\006memory\030\001 \001(\003\"\242\003\n\013JobTrig" +
       "gers\0220\n\non_install\030\001 \001(\0132\034.toit.model.On" +
       "InstallTrigger\022*\n\007on_boot\030\002 \001(\0132\031.toit.m" +
       "odel.OnBootTrigger\022-\n\010interval\030\003 \001(\0132\033.t" +
@@ -18868,45 +20561,49 @@ public final class JobProto {
       "utton\030\006 \001(\0132\031.toit.model.ButtonTriggerB\002" +
       "\030\001\022+\n\007network\030\007 \001(\0132\032.toit.model.Network" +
       "Trigger\022)\n\006pubsub\030\010 \001(\0132\031.toit.model.Pub" +
-      "SubTrigger\"#\n\020OnInstallTrigger\022\017\n\007enable" +
-      "d\030\001 \001(\010\" \n\rOnBootTrigger\022\017\n\007enabled\030\001 \001(" +
-      "\010\">\n\017IntervalTrigger\022+\n\010interval\030\001 \001(\0132\031" +
-      ".google.protobuf.Duration\"2\n\013CronTrigger" +
-      "\022#\n\005specs\030\001 \003(\0132\024.toit.model.CronSpec\"!\n" +
-      "\017MovementTrigger\022\016\n\006shaken\030\001 \001(\010\" \n\rButt" +
-      "onTrigger\022\017\n\007buttons\030\001 \003(\t\"#\n\016NetworkTri" +
-      "gger\022\021\n\tconnected\030\001 \001(\010\"9\n\rPubSubTrigger" +
-      "\022(\n\006topics\030\001 \003(\0132\030.toit.model.pubsub.Top" +
-      "ic\"L\n\010CronSpec\022\023\n\013cron_string\030\001 \001(\t\022+\n\ts" +
-      "chedules\030\002 \003(\0132\030.toit.model.CronSchedule" +
-      "\"\324\001\n\014CronSchedule\022\016\n\006second\030\001 \001(\020\022\016\n\006min" +
-      "ute\030\002 \001(\020\022\014\n\004hour\030\003 \001(\020\022\024\n\014day_of_month\030" +
-      "\004 \001(\020\022\r\n\005month\030\005 \001(\020\022\023\n\013day_of_week\030\006 \001(" +
-      "\020\022.\n\nvalid_from\030\007 \001(\0132\032.google.protobuf." +
-      "Timestamp\022,\n\010valid_to\030\010 \001(\0132\032.google.pro" +
-      "tobuf.Timestamp\"\213\001\n\tJobPubSub\0229\n\rsubscri" +
-      "ptions\030\001 \003(\0132\".toit.model.JobPubSub.Subs" +
-      "cription\032C\n\014Subscription\022\'\n\005topic\030\001 \001(\0132" +
-      "\030.toit.model.pubsub.Topic\022\n\n\002id\030\002 \001(\014\"m\n" +
-      "\tJobStatus\022\016\n\006job_id\030\003 \001(\014\022#\n\005state\030\001 \001(" +
-      "\0162\024.toit.model.JobState\022+\n\007updated\030\002 \001(\013" +
-      "2\032.google.protobuf.Timestamp\"W\n\007JobInfo\022" +
-      "%\n\006config\030\001 \001(\0132\025.toit.model.JobConfig\022%" +
-      "\n\006status\030\002 \001(\0132\025.toit.model.JobStatus*d\n" +
-      "\014JobGoalState\022\032\n\026JOB_GOAL_STATE_UNKNOWN\020" +
-      "\000\022\032\n\026JOB_GOAL_STATE_INSTALL\020\001\022\034\n\030JOB_GOA" +
-      "L_STATE_UNINSTALL\020\002*B\n\013JobFileType\022\031\n\025JO" +
-      "B_FILE_TYPE_UNKNOWN\020\000\022\030\n\024JOB_FILE_TYPE_S" +
-      "YSTEM\020\001*\205\001\n\010JobState\022\025\n\021JOB_STATE_UNKNOW" +
-      "N\020\000\022\031\n\025JOB_STATE_UNINSTALLED\020\001\022\030\n\024JOB_ST" +
-      "ATE_INSTALLING\020\002\022\027\n\023JOB_STATE_INSTALLED\020" +
-      "\003\022\024\n\020JOB_STATE_FAILED\020\004*m\n\rJobChangeType" +
-      "\022\026\n\022JOB_CHANGE_UNKNOWN\020\000\022\024\n\020JOB_CHANGE_A" +
-      "DDED\020\001\022\026\n\022JOB_CHANGE_DELETED\020\002\022\026\n\022JOB_CH" +
-      "ANGE_CHANGED\020\003Bb\n\030io.toit.proto.toit.mod" +
-      "elB\010JobProtoZ)github.com/toitware/api/go" +
-      "lang/toit/model\252\002\020Toit.Proto.Modelb\006prot" +
-      "o3"
+      "SubTrigger\022%\n\004gpio\030\t \001(\0132\027.toit.model.GP" +
+      "IOTrigger\"\232\001\n\013GPIOTrigger\022)\n\004pins\030\001 \003(\0132" +
+      "\033.toit.model.GPIOTrigger.Pin\032`\n\003Pin\0220\n\005l" +
+      "evel\030\001 \001(\0162!.toit.model.GPIOTrigger.Pin." +
+      "Level\022\013\n\003pin\030\002 \001(\005\"\032\n\005Level\022\010\n\004HIGH\020\000\022\007\n" +
+      "\003LOW\020\001\"#\n\020OnInstallTrigger\022\017\n\007enabled\030\001 " +
+      "\001(\010\" \n\rOnBootTrigger\022\017\n\007enabled\030\001 \001(\010\">\n" +
+      "\017IntervalTrigger\022+\n\010interval\030\001 \001(\0132\031.goo" +
+      "gle.protobuf.Duration\"2\n\013CronTrigger\022#\n\005" +
+      "specs\030\001 \003(\0132\024.toit.model.CronSpec\"!\n\017Mov" +
+      "ementTrigger\022\016\n\006shaken\030\001 \001(\010\" \n\rButtonTr" +
+      "igger\022\017\n\007buttons\030\001 \003(\t\"#\n\016NetworkTrigger" +
+      "\022\021\n\tconnected\030\001 \001(\010\"9\n\rPubSubTrigger\022(\n\006" +
+      "topics\030\001 \003(\0132\030.toit.model.pubsub.Topic\"L" +
+      "\n\010CronSpec\022\023\n\013cron_string\030\001 \001(\t\022+\n\tsched" +
+      "ules\030\002 \003(\0132\030.toit.model.CronSchedule\"\324\001\n" +
+      "\014CronSchedule\022\016\n\006second\030\001 \001(\020\022\016\n\006minute\030" +
+      "\002 \001(\020\022\014\n\004hour\030\003 \001(\020\022\024\n\014day_of_month\030\004 \001(" +
+      "\020\022\r\n\005month\030\005 \001(\020\022\023\n\013day_of_week\030\006 \001(\020\022.\n" +
+      "\nvalid_from\030\007 \001(\0132\032.google.protobuf.Time" +
+      "stamp\022,\n\010valid_to\030\010 \001(\0132\032.google.protobu" +
+      "f.Timestamp\"\213\001\n\tJobPubSub\0229\n\rsubscriptio" +
+      "ns\030\001 \003(\0132\".toit.model.JobPubSub.Subscrip" +
+      "tion\032C\n\014Subscription\022\'\n\005topic\030\001 \001(\0132\030.to" +
+      "it.model.pubsub.Topic\022\n\n\002id\030\002 \001(\014\"m\n\tJob" +
+      "Status\022\016\n\006job_id\030\003 \001(\014\022#\n\005state\030\001 \001(\0162\024." +
+      "toit.model.JobState\022+\n\007updated\030\002 \001(\0132\032.g" +
+      "oogle.protobuf.Timestamp\"W\n\007JobInfo\022%\n\006c" +
+      "onfig\030\001 \001(\0132\025.toit.model.JobConfig\022%\n\006st" +
+      "atus\030\002 \001(\0132\025.toit.model.JobStatus*d\n\014Job" +
+      "GoalState\022\032\n\026JOB_GOAL_STATE_UNKNOWN\020\000\022\032\n" +
+      "\026JOB_GOAL_STATE_INSTALL\020\001\022\034\n\030JOB_GOAL_ST" +
+      "ATE_UNINSTALL\020\002*B\n\013JobFileType\022\031\n\025JOB_FI" +
+      "LE_TYPE_UNKNOWN\020\000\022\030\n\024JOB_FILE_TYPE_SYSTE" +
+      "M\020\001*\205\001\n\010JobState\022\025\n\021JOB_STATE_UNKNOWN\020\000\022" +
+      "\031\n\025JOB_STATE_UNINSTALLED\020\001\022\030\n\024JOB_STATE_" +
+      "INSTALLING\020\002\022\027\n\023JOB_STATE_INSTALLED\020\003\022\024\n" +
+      "\020JOB_STATE_FAILED\020\004*m\n\rJobChangeType\022\026\n\022" +
+      "JOB_CHANGE_UNKNOWN\020\000\022\024\n\020JOB_CHANGE_ADDED" +
+      "\020\001\022\026\n\022JOB_CHANGE_DELETED\020\002\022\026\n\022JOB_CHANGE" +
+      "_CHANGED\020\003Bb\n\030io.toit.proto.toit.modelB\010" +
+      "JobProtoZ)github.com/toitware/api/golang" +
+      "/toit/model\252\002\020Toit.Proto.Modelb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -18962,69 +20659,81 @@ public final class JobProto {
     internal_static_toit_model_JobTriggers_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_JobTriggers_descriptor,
-        new java.lang.String[] { "OnInstall", "OnBoot", "Interval", "Cron", "Movement", "Button", "Network", "Pubsub", });
-    internal_static_toit_model_OnInstallTrigger_descriptor =
+        new java.lang.String[] { "OnInstall", "OnBoot", "Interval", "Cron", "Movement", "Button", "Network", "Pubsub", "Gpio", });
+    internal_static_toit_model_GPIOTrigger_descriptor =
       getDescriptor().getMessageTypes().get(8);
+    internal_static_toit_model_GPIOTrigger_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_model_GPIOTrigger_descriptor,
+        new java.lang.String[] { "Pins", });
+    internal_static_toit_model_GPIOTrigger_Pin_descriptor =
+      internal_static_toit_model_GPIOTrigger_descriptor.getNestedTypes().get(0);
+    internal_static_toit_model_GPIOTrigger_Pin_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_model_GPIOTrigger_Pin_descriptor,
+        new java.lang.String[] { "Level", "Pin", });
+    internal_static_toit_model_OnInstallTrigger_descriptor =
+      getDescriptor().getMessageTypes().get(9);
     internal_static_toit_model_OnInstallTrigger_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_OnInstallTrigger_descriptor,
         new java.lang.String[] { "Enabled", });
     internal_static_toit_model_OnBootTrigger_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_toit_model_OnBootTrigger_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_OnBootTrigger_descriptor,
         new java.lang.String[] { "Enabled", });
     internal_static_toit_model_IntervalTrigger_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_toit_model_IntervalTrigger_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_IntervalTrigger_descriptor,
         new java.lang.String[] { "Interval", });
     internal_static_toit_model_CronTrigger_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_toit_model_CronTrigger_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_CronTrigger_descriptor,
         new java.lang.String[] { "Specs", });
     internal_static_toit_model_MovementTrigger_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_toit_model_MovementTrigger_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_MovementTrigger_descriptor,
         new java.lang.String[] { "Shaken", });
     internal_static_toit_model_ButtonTrigger_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_toit_model_ButtonTrigger_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_ButtonTrigger_descriptor,
         new java.lang.String[] { "Buttons", });
     internal_static_toit_model_NetworkTrigger_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_toit_model_NetworkTrigger_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_NetworkTrigger_descriptor,
         new java.lang.String[] { "Connected", });
     internal_static_toit_model_PubSubTrigger_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_toit_model_PubSubTrigger_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_PubSubTrigger_descriptor,
         new java.lang.String[] { "Topics", });
     internal_static_toit_model_CronSpec_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_toit_model_CronSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_CronSpec_descriptor,
         new java.lang.String[] { "CronString", "Schedules", });
     internal_static_toit_model_CronSchedule_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_toit_model_CronSchedule_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_CronSchedule_descriptor,
         new java.lang.String[] { "Second", "Minute", "Hour", "DayOfMonth", "Month", "DayOfWeek", "ValidFrom", "ValidTo", });
     internal_static_toit_model_JobPubSub_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_toit_model_JobPubSub_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_JobPubSub_descriptor,
@@ -19036,13 +20745,13 @@ public final class JobProto {
         internal_static_toit_model_JobPubSub_Subscription_descriptor,
         new java.lang.String[] { "Topic", "Id", });
     internal_static_toit_model_JobStatus_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_toit_model_JobStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_JobStatus_descriptor,
         new java.lang.String[] { "JobId", "State", "Updated", });
     internal_static_toit_model_JobInfo_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_toit_model_JobInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_JobInfo_descriptor,
