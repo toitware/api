@@ -56,7 +56,7 @@ namespace Toit.Proto.Model {
             "Fy50b2l0Lm1vZGVsLkdQSU9UcmlnZ2VyIpoBCgtHUElPVHJpZ2dlchIpCgRw",
             "aW5zGAEgAygLMhsudG9pdC5tb2RlbC5HUElPVHJpZ2dlci5QaW4aYAoDUGlu",
             "EjAKBWxldmVsGAEgASgOMiEudG9pdC5tb2RlbC5HUElPVHJpZ2dlci5QaW4u",
-            "TGV2ZWwSCwoDcGluGAIgASgFIhoKBUxldmVsEggKBEhJR0gQABIHCgNMT1cQ",
+            "TGV2ZWwSCwoDbnVtGAIgASgNIhoKBUxldmVsEggKBEhJR0gQABIHCgNMT1cQ",
             "ASIjChBPbkluc3RhbGxUcmlnZ2VyEg8KB2VuYWJsZWQYASABKAgiIAoNT25C",
             "b290VHJpZ2dlchIPCgdlbmFibGVkGAEgASgIIj4KD0ludGVydmFsVHJpZ2dl",
             "chIrCghpbnRlcnZhbBgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlv",
@@ -102,7 +102,7 @@ namespace Toit.Proto.Model {
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.GPSFeature), global::Toit.Proto.Model.GPSFeature.Parser, new[]{ "Enabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.MemoryResource), global::Toit.Proto.Model.MemoryResource.Parser, new[]{ "Memory" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.JobTriggers), global::Toit.Proto.Model.JobTriggers.Parser, new[]{ "OnInstall", "OnBoot", "Interval", "Cron", "Movement", "Button", "Network", "Pubsub", "Gpio" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.GPIOTrigger), global::Toit.Proto.Model.GPIOTrigger.Parser, new[]{ "Pins" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.GPIOTrigger.Types.Pin), global::Toit.Proto.Model.GPIOTrigger.Types.Pin.Parser, new[]{ "Level", "Pin_" }, null, new[]{ typeof(global::Toit.Proto.Model.GPIOTrigger.Types.Pin.Types.Level) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.GPIOTrigger), global::Toit.Proto.Model.GPIOTrigger.Parser, new[]{ "Pins" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.GPIOTrigger.Types.Pin), global::Toit.Proto.Model.GPIOTrigger.Types.Pin.Parser, new[]{ "Level", "Num" }, null, new[]{ typeof(global::Toit.Proto.Model.GPIOTrigger.Types.Pin.Types.Level) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.OnInstallTrigger), global::Toit.Proto.Model.OnInstallTrigger.Parser, new[]{ "Enabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.OnBootTrigger), global::Toit.Proto.Model.OnBootTrigger.Parser, new[]{ "Enabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.IntervalTrigger), global::Toit.Proto.Model.IntervalTrigger.Parser, new[]{ "Interval" }, null, null, null, null),
@@ -2846,7 +2846,7 @@ namespace Toit.Proto.Model {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Pin(Pin other) : this() {
           level_ = other.level_;
-          pin_ = other.pin_;
+          num_ = other.num_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -2868,15 +2868,15 @@ namespace Toit.Proto.Model {
           }
         }
 
-        /// <summary>Field number for the "pin" field.</summary>
-        public const int Pin_FieldNumber = 2;
-        private int pin_;
+        /// <summary>Field number for the "num" field.</summary>
+        public const int NumFieldNumber = 2;
+        private uint num_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public int Pin_ {
-          get { return pin_; }
+        public uint Num {
+          get { return num_; }
           set {
-            pin_ = value;
+            num_ = value;
           }
         }
 
@@ -2896,7 +2896,7 @@ namespace Toit.Proto.Model {
             return true;
           }
           if (Level != other.Level) return false;
-          if (Pin_ != other.Pin_) return false;
+          if (Num != other.Num) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -2905,7 +2905,7 @@ namespace Toit.Proto.Model {
         public override int GetHashCode() {
           int hash = 1;
           if (Level != global::Toit.Proto.Model.GPIOTrigger.Types.Pin.Types.Level.High) hash ^= Level.GetHashCode();
-          if (Pin_ != 0) hash ^= Pin_.GetHashCode();
+          if (Num != 0) hash ^= Num.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -2928,9 +2928,9 @@ namespace Toit.Proto.Model {
             output.WriteRawTag(8);
             output.WriteEnum((int) Level);
           }
-          if (Pin_ != 0) {
+          if (Num != 0) {
             output.WriteRawTag(16);
-            output.WriteInt32(Pin_);
+            output.WriteUInt32(Num);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
@@ -2946,9 +2946,9 @@ namespace Toit.Proto.Model {
             output.WriteRawTag(8);
             output.WriteEnum((int) Level);
           }
-          if (Pin_ != 0) {
+          if (Num != 0) {
             output.WriteRawTag(16);
-            output.WriteInt32(Pin_);
+            output.WriteUInt32(Num);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
@@ -2963,8 +2963,8 @@ namespace Toit.Proto.Model {
           if (Level != global::Toit.Proto.Model.GPIOTrigger.Types.Pin.Types.Level.High) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Level);
           }
-          if (Pin_ != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeInt32Size(Pin_);
+          if (Num != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Num);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -2981,8 +2981,8 @@ namespace Toit.Proto.Model {
           if (other.Level != global::Toit.Proto.Model.GPIOTrigger.Types.Pin.Types.Level.High) {
             Level = other.Level;
           }
-          if (other.Pin_ != 0) {
-            Pin_ = other.Pin_;
+          if (other.Num != 0) {
+            Num = other.Num;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -3004,7 +3004,7 @@ namespace Toit.Proto.Model {
                 break;
               }
               case 16: {
-                Pin_ = input.ReadInt32();
+                Num = input.ReadUInt32();
                 break;
               }
             }
@@ -3027,7 +3027,7 @@ namespace Toit.Proto.Model {
                 break;
               }
               case 16: {
-                Pin_ = input.ReadInt32();
+                Num = input.ReadUInt32();
                 break;
               }
             }
