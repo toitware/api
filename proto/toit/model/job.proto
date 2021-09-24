@@ -85,7 +85,7 @@ message GPIOTrigger {
       LOW = 1;
     }
     Level level = 1;
-    int32 pin = 2;
+    uint32 num = 2;
   }
 
   repeated Pin pins = 1;
