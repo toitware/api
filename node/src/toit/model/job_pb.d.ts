@@ -325,8 +325,8 @@ export namespace GPIOTrigger {
     getLevel(): GPIOTrigger.Pin.LevelMap[keyof GPIOTrigger.Pin.LevelMap];
     setLevel(value: GPIOTrigger.Pin.LevelMap[keyof GPIOTrigger.Pin.LevelMap]): void;
 
-    getPin(): number;
-    setPin(value: number): void;
+    getNum(): number;
+    setNum(value: number): void;
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Pin.AsObject;
@@ -341,7 +341,7 @@ export namespace GPIOTrigger {
   export namespace Pin {
     export type AsObject = {
       level: GPIOTrigger.Pin.LevelMap[keyof GPIOTrigger.Pin.LevelMap],
-      pin: number,
+      num: number,
     }
 
     export interface LevelMap {

@@ -2910,7 +2910,7 @@ proto.toit.model.GPIOTrigger.Pin.prototype.toObject = function(opt_includeInstan
 proto.toit.model.GPIOTrigger.Pin.toObject = function(includeInstance, msg) {
   var f, obj = {
     level: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    pin: jspb.Message.getFieldWithDefault(msg, 2, 0)
+    num: jspb.Message.getFieldWithDefault(msg, 2, 0)
   };
 
   if (includeInstance) {
@@ -2952,8 +2952,8 @@ proto.toit.model.GPIOTrigger.Pin.deserializeBinaryFromReader = function(msg, rea
       msg.setLevel(value);
       break;
     case 2:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setPin(value);
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setNum(value);
       break;
     default:
       reader.skipField();
@@ -2991,9 +2991,9 @@ proto.toit.model.GPIOTrigger.Pin.serializeBinaryToWriter = function(message, wri
       f
     );
   }
-  f = message.getPin();
+  f = message.getNum();
   if (f !== 0) {
-    writer.writeInt32(
+    writer.writeUint32(
       2,
       f
     );
@@ -3028,10 +3028,10 @@ proto.toit.model.GPIOTrigger.Pin.prototype.setLevel = function(value) {
 
 
 /**
- * optional int32 pin = 2;
+ * optional uint32 num = 2;
  * @return {number}
  */
-proto.toit.model.GPIOTrigger.Pin.prototype.getPin = function() {
+proto.toit.model.GPIOTrigger.Pin.prototype.getNum = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
@@ -3040,7 +3040,7 @@ proto.toit.model.GPIOTrigger.Pin.prototype.getPin = function() {
  * @param {number} value
  * @return {!proto.toit.model.GPIOTrigger.Pin} returns this
  */
-proto.toit.model.GPIOTrigger.Pin.prototype.setPin = function(value) {
+proto.toit.model.GPIOTrigger.Pin.prototype.setNum = function(value) {
   return jspb.Message.setProto3IntField(this, 2, value);
 };
 
