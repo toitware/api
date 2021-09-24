@@ -9013,10 +9013,10 @@ public final class JobProto {
       io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.Level getLevel();
 
       /**
-       * <code>int32 pin = 2;</code>
-       * @return The pin.
+       * <code>uint32 num = 2;</code>
+       * @return The num.
        */
-      int getPin();
+      int getNum();
     }
     /**
      * Protobuf type {@code toit.model.GPIOTrigger.Pin}
@@ -9072,7 +9072,7 @@ public final class JobProto {
               }
               case 16: {
 
-                pin_ = input.readInt32();
+                num_ = input.readUInt32();
                 break;
               }
               default: {
@@ -9230,14 +9230,14 @@ public final class JobProto {
         return result == null ? io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.Level.UNRECOGNIZED : result;
       }
 
-      public static final int PIN_FIELD_NUMBER = 2;
-      private int pin_;
+      public static final int NUM_FIELD_NUMBER = 2;
+      private int num_;
       /**
-       * <code>int32 pin = 2;</code>
-       * @return The pin.
+       * <code>uint32 num = 2;</code>
+       * @return The num.
        */
-      public int getPin() {
-        return pin_;
+      public int getNum() {
+        return num_;
       }
 
       private byte memoizedIsInitialized = -1;
@@ -9257,8 +9257,8 @@ public final class JobProto {
         if (level_ != io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin.Level.HIGH.getNumber()) {
           output.writeEnum(1, level_);
         }
-        if (pin_ != 0) {
-          output.writeInt32(2, pin_);
+        if (num_ != 0) {
+          output.writeUInt32(2, num_);
         }
         unknownFields.writeTo(output);
       }
@@ -9273,9 +9273,9 @@ public final class JobProto {
           size += com.google.protobuf.CodedOutputStream
             .computeEnumSize(1, level_);
         }
-        if (pin_ != 0) {
+        if (num_ != 0) {
           size += com.google.protobuf.CodedOutputStream
-            .computeInt32Size(2, pin_);
+            .computeUInt32Size(2, num_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -9293,8 +9293,8 @@ public final class JobProto {
         io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin other = (io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin) obj;
 
         if (level_ != other.level_) return false;
-        if (getPin()
-            != other.getPin()) return false;
+        if (getNum()
+            != other.getNum()) return false;
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -9308,8 +9308,8 @@ public final class JobProto {
         hash = (19 * hash) + getDescriptor().hashCode();
         hash = (37 * hash) + LEVEL_FIELD_NUMBER;
         hash = (53 * hash) + level_;
-        hash = (37 * hash) + PIN_FIELD_NUMBER;
-        hash = (53 * hash) + getPin();
+        hash = (37 * hash) + NUM_FIELD_NUMBER;
+        hash = (53 * hash) + getNum();
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -9445,7 +9445,7 @@ public final class JobProto {
           super.clear();
           level_ = 0;
 
-          pin_ = 0;
+          num_ = 0;
 
           return this;
         }
@@ -9474,7 +9474,7 @@ public final class JobProto {
         public io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin buildPartial() {
           io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin result = new io.toit.proto.toit.model.JobProto.GPIOTrigger.Pin(this);
           result.level_ = level_;
-          result.pin_ = pin_;
+          result.num_ = num_;
           onBuilt();
           return result;
         }
@@ -9526,8 +9526,8 @@ public final class JobProto {
           if (other.level_ != 0) {
             setLevelValue(other.getLevelValue());
           }
-          if (other.getPin() != 0) {
-            setPin(other.getPin());
+          if (other.getNum() != 0) {
+            setNum(other.getNum());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -9610,32 +9610,32 @@ public final class JobProto {
           return this;
         }
 
-        private int pin_ ;
+        private int num_ ;
         /**
-         * <code>int32 pin = 2;</code>
-         * @return The pin.
+         * <code>uint32 num = 2;</code>
+         * @return The num.
          */
-        public int getPin() {
-          return pin_;
+        public int getNum() {
+          return num_;
         }
         /**
-         * <code>int32 pin = 2;</code>
-         * @param value The pin to set.
+         * <code>uint32 num = 2;</code>
+         * @param value The num to set.
          * @return This builder for chaining.
          */
-        public Builder setPin(int value) {
+        public Builder setNum(int value) {
           
-          pin_ = value;
+          num_ = value;
           onChanged();
           return this;
         }
         /**
-         * <code>int32 pin = 2;</code>
+         * <code>uint32 num = 2;</code>
          * @return This builder for chaining.
          */
-        public Builder clearPin() {
+        public Builder clearNum() {
           
-          pin_ = 0;
+          num_ = 0;
           onChanged();
           return this;
         }
@@ -20565,7 +20565,7 @@ public final class JobProto {
       "IOTrigger\"\232\001\n\013GPIOTrigger\022)\n\004pins\030\001 \003(\0132" +
       "\033.toit.model.GPIOTrigger.Pin\032`\n\003Pin\0220\n\005l" +
       "evel\030\001 \001(\0162!.toit.model.GPIOTrigger.Pin." +
-      "Level\022\013\n\003pin\030\002 \001(\005\"\032\n\005Level\022\010\n\004HIGH\020\000\022\007\n" +
+      "Level\022\013\n\003num\030\002 \001(\r\"\032\n\005Level\022\010\n\004HIGH\020\000\022\007\n" +
       "\003LOW\020\001\"#\n\020OnInstallTrigger\022\017\n\007enabled\030\001 " +
       "\001(\010\" \n\rOnBootTrigger\022\017\n\007enabled\030\001 \001(\010\">\n" +
       "\017IntervalTrigger\022+\n\010interval\030\001 \001(\0132\031.goo" +
@@ -20671,7 +20671,7 @@ public final class JobProto {
     internal_static_toit_model_GPIOTrigger_Pin_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_GPIOTrigger_Pin_descriptor,
-        new java.lang.String[] { "Level", "Pin", });
+        new java.lang.String[] { "Level", "Num", });
     internal_static_toit_model_OnInstallTrigger_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_toit_model_OnInstallTrigger_fieldAccessorTable = new
