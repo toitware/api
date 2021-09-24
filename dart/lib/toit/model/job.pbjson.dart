@@ -356,7 +356,7 @@ const GPIOTrigger_Pin$json = const {
       '6': '.toit.model.GPIOTrigger.Pin.Level',
       '10': 'level'
     },
-    const {'1': 'pin', '3': 2, '4': 1, '5': 5, '10': 'pin'},
+    const {'1': 'num', '3': 2, '4': 1, '5': 13, '10': 'num'},
   ],
   '4': const [GPIOTrigger_Pin_Level$json],
 };
@@ -372,7 +372,7 @@ const GPIOTrigger_Pin_Level$json = const {
 
 /// Descriptor for `GPIOTrigger`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List gPIOTriggerDescriptor = $convert.base64Decode(
-    'CgtHUElPVHJpZ2dlchIvCgRwaW5zGAEgAygLMhsudG9pdC5tb2RlbC5HUElPVHJpZ2dlci5QaW5SBHBpbnMabAoDUGluEjcKBWxldmVsGAEgASgOMiEudG9pdC5tb2RlbC5HUElPVHJpZ2dlci5QaW4uTGV2ZWxSBWxldmVsEhAKA3BpbhgCIAEoBVIDcGluIhoKBUxldmVsEggKBEhJR0gQABIHCgNMT1cQAQ==');
+    'CgtHUElPVHJpZ2dlchIvCgRwaW5zGAEgAygLMhsudG9pdC5tb2RlbC5HUElPVHJpZ2dlci5QaW5SBHBpbnMabAoDUGluEjcKBWxldmVsGAEgASgOMiEudG9pdC5tb2RlbC5HUElPVHJpZ2dlci5QaW4uTGV2ZWxSBWxldmVsEhAKA251bRgCIAEoDVIDbnVtIhoKBUxldmVsEggKBEhJR0gQABIHCgNMT1cQAQ==');
 @$core.Deprecated('Use onInstallTriggerDescriptor instead')
 const OnInstallTrigger$json = const {
   '1': 'OnInstallTrigger',

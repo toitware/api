@@ -1008,21 +1008,21 @@ class GPIOTrigger_Pin extends $pb.GeneratedMessage {
         enumValues: GPIOTrigger_Pin_Level.values)
     ..a<$core.int>(
         2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pin',
-        $pb.PbFieldType.O3)
+        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'num',
+        $pb.PbFieldType.OU3)
     ..hasRequiredFields = false;
 
   GPIOTrigger_Pin._() : super();
   factory GPIOTrigger_Pin({
     GPIOTrigger_Pin_Level? level,
-    $core.int? pin,
+    $core.int? num,
   }) {
     final _result = create();
     if (level != null) {
       _result.level = level;
     }
-    if (pin != null) {
-      _result.pin = pin;
+    if (num != null) {
+      _result.num = num;
     }
     return _result;
   }
@@ -1066,16 +1066,16 @@ class GPIOTrigger_Pin extends $pb.GeneratedMessage {
   void clearLevel() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.int get pin => $_getIZ(1);
+  $core.int get num => $_getIZ(1);
   @$pb.TagNumber(2)
-  set pin($core.int v) {
-    $_setSignedInt32(1, v);
+  set num($core.int v) {
+    $_setUnsignedInt32(1, v);
   }
 
   @$pb.TagNumber(2)
-  $core.bool hasPin() => $_has(1);
+  $core.bool hasNum() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPin() => clearField(2);
+  void clearNum() => clearField(2);
 }
 
 class GPIOTrigger extends $pb.GeneratedMessage {
