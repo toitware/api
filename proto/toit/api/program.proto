@@ -19,8 +19,6 @@ service ProgramService {
 
   rpc SyntaxAnalyze(SyntaxAnalyzeRequest) returns (SyntaxAnalyzeResponse) {}
 
-  rpc LspAnalyze(stream LspRequest) returns (stream LspResponse) {}
-
   rpc GetProgram(GetProgramRequest) returns (GetProgramResponse) {}
 
   rpc GetCompilation(GetCompilationRequest) returns (GetCompilationResponse) {}
@@ -89,10 +87,6 @@ message AnalyzeResponse {
   bytes stderr = 1;
   Features features = 2;
 }
-
-message LspRequest { bytes input = 1; }
-
-message LspResponse { bytes output = 1; }
 
 message GetProgramRequest { bytes program_id = 1; }
 
