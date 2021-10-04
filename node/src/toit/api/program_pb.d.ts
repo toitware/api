@@ -322,50 +322,6 @@ export namespace AnalyzeResponse {
   }
 }
 
-export class LspRequest extends jspb.Message {
-  getInput(): Uint8Array | string;
-  getInput_asU8(): Uint8Array;
-  getInput_asB64(): string;
-  setInput(value: Uint8Array | string): void;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): LspRequest.AsObject;
-  static toObject(includeInstance: boolean, msg: LspRequest): LspRequest.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: LspRequest, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): LspRequest;
-  static deserializeBinaryFromReader(message: LspRequest, reader: jspb.BinaryReader): LspRequest;
-}
-
-export namespace LspRequest {
-  export type AsObject = {
-    input: Uint8Array | string,
-  }
-}
-
-export class LspResponse extends jspb.Message {
-  getOutput(): Uint8Array | string;
-  getOutput_asU8(): Uint8Array;
-  getOutput_asB64(): string;
-  setOutput(value: Uint8Array | string): void;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): LspResponse.AsObject;
-  static toObject(includeInstance: boolean, msg: LspResponse): LspResponse.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: LspResponse, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): LspResponse;
-  static deserializeBinaryFromReader(message: LspResponse, reader: jspb.BinaryReader): LspResponse;
-}
-
-export namespace LspResponse {
-  export type AsObject = {
-    output: Uint8Array | string,
-  }
-}
-
 export class GetProgramRequest extends jspb.Message {
   getProgramId(): Uint8Array | string;
   getProgramId_asU8(): Uint8Array;

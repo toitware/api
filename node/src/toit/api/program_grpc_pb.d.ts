@@ -12,7 +12,6 @@ interface IProgramServiceService extends grpc.ServiceDefinition<grpc.UntypedServ
   compile: grpc.MethodDefinition<toit_api_program_pb.CompileRequest, toit_api_program_pb.CompileResponse>;
   analyze: grpc.MethodDefinition<toit_api_program_pb.AnalyzeRequest, toit_api_program_pb.AnalyzeResponse>;
   syntaxAnalyze: grpc.MethodDefinition<toit_api_program_pb.SyntaxAnalyzeRequest, toit_api_program_pb.SyntaxAnalyzeResponse>;
-  lspAnalyze: grpc.MethodDefinition<toit_api_program_pb.LspRequest, toit_api_program_pb.LspResponse>;
   getProgram: grpc.MethodDefinition<toit_api_program_pb.GetProgramRequest, toit_api_program_pb.GetProgramResponse>;
   getCompilation: grpc.MethodDefinition<toit_api_program_pb.GetCompilationRequest, toit_api_program_pb.GetCompilationResponse>;
   lookupPrograms: grpc.MethodDefinition<toit_api_program_pb.LookupProgramsRequest, toit_api_program_pb.LookupProgramsResponse>;
@@ -37,8 +36,6 @@ export class ProgramServiceClient extends grpc.Client {
   syntaxAnalyze(argument: toit_api_program_pb.SyntaxAnalyzeRequest, callback: grpc.requestCallback<toit_api_program_pb.SyntaxAnalyzeResponse>): grpc.ClientUnaryCall;
   syntaxAnalyze(argument: toit_api_program_pb.SyntaxAnalyzeRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_program_pb.SyntaxAnalyzeResponse>): grpc.ClientUnaryCall;
   syntaxAnalyze(argument: toit_api_program_pb.SyntaxAnalyzeRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_program_pb.SyntaxAnalyzeResponse>): grpc.ClientUnaryCall;
-  lspAnalyze(metadataOrOptions?: grpc.Metadata | grpc.CallOptions | null): grpc.ClientDuplexStream<toit_api_program_pb.LspRequest, toit_api_program_pb.LspResponse>;
-  lspAnalyze(metadata?: grpc.Metadata | null, options?: grpc.CallOptions | null): grpc.ClientDuplexStream<toit_api_program_pb.LspRequest, toit_api_program_pb.LspResponse>;
   getProgram(argument: toit_api_program_pb.GetProgramRequest, callback: grpc.requestCallback<toit_api_program_pb.GetProgramResponse>): grpc.ClientUnaryCall;
   getProgram(argument: toit_api_program_pb.GetProgramRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_program_pb.GetProgramResponse>): grpc.ClientUnaryCall;
   getProgram(argument: toit_api_program_pb.GetProgramRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_program_pb.GetProgramResponse>): grpc.ClientUnaryCall;

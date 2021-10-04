@@ -159,28 +159,6 @@ function deserialize_toit_api_LookupProgramsResponse(buffer_arg) {
   return toit_api_program_pb.LookupProgramsResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
-function serialize_toit_api_LspRequest(arg) {
-  if (!(arg instanceof toit_api_program_pb.LspRequest)) {
-    throw new Error('Expected argument of type toit.api.LspRequest');
-  }
-  return Buffer.from(arg.serializeBinary());
-}
-
-function deserialize_toit_api_LspRequest(buffer_arg) {
-  return toit_api_program_pb.LspRequest.deserializeBinary(new Uint8Array(buffer_arg));
-}
-
-function serialize_toit_api_LspResponse(arg) {
-  if (!(arg instanceof toit_api_program_pb.LspResponse)) {
-    throw new Error('Expected argument of type toit.api.LspResponse');
-  }
-  return Buffer.from(arg.serializeBinary());
-}
-
-function deserialize_toit_api_LspResponse(buffer_arg) {
-  return toit_api_program_pb.LspResponse.deserializeBinary(new Uint8Array(buffer_arg));
-}
-
 function serialize_toit_api_RunRequest(arg) {
   if (!(arg instanceof toit_api_program_pb.RunRequest)) {
     throw new Error('Expected argument of type toit.api.RunRequest');
@@ -292,17 +270,6 @@ var ProgramServiceService = exports.ProgramServiceService = {
     requestDeserialize: deserialize_toit_api_SyntaxAnalyzeRequest,
     responseSerialize: serialize_toit_api_SyntaxAnalyzeResponse,
     responseDeserialize: deserialize_toit_api_SyntaxAnalyzeResponse,
-  },
-  lspAnalyze: {
-    path: '/toit.api.ProgramService/LspAnalyze',
-    requestStream: true,
-    responseStream: true,
-    requestType: toit_api_program_pb.LspRequest,
-    responseType: toit_api_program_pb.LspResponse,
-    requestSerialize: serialize_toit_api_LspRequest,
-    requestDeserialize: deserialize_toit_api_LspRequest,
-    responseSerialize: serialize_toit_api_LspResponse,
-    responseDeserialize: deserialize_toit_api_LspResponse,
   },
   getProgram: {
     path: '/toit.api.ProgramService/GetProgram',
