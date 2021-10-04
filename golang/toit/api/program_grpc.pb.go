@@ -23,7 +23,6 @@ type ProgramServiceClient interface {
 	Compile(ctx context.Context, in *CompileRequest, opts ...grpc.CallOption) (*CompileResponse, error)
 	Analyze(ctx context.Context, in *AnalyzeRequest, opts ...grpc.CallOption) (*AnalyzeResponse, error)
 	SyntaxAnalyze(ctx context.Context, in *SyntaxAnalyzeRequest, opts ...grpc.CallOption) (*SyntaxAnalyzeResponse, error)
-	LspAnalyze(ctx context.Context, opts ...grpc.CallOption) (ProgramService_LspAnalyzeClient, error)
 	GetProgram(ctx context.Context, in *GetProgramRequest, opts ...grpc.CallOption) (*GetProgramResponse, error)
 	GetCompilation(ctx context.Context, in *GetCompilationRequest, opts ...grpc.CallOption) (*GetCompilationResponse, error)
 	LookupPrograms(ctx context.Context, in *LookupProgramsRequest, opts ...grpc.CallOption) (*LookupProgramsResponse, error)
@@ -129,37 +128,6 @@ func (c *programServiceClient) SyntaxAnalyze(ctx context.Context, in *SyntaxAnal
 	return out, nil
 }
 
-func (c *programServiceClient) LspAnalyze(ctx context.Context, opts ...grpc.CallOption) (ProgramService_LspAnalyzeClient, error) {
-	stream, err := c.cc.NewStream(ctx, &ProgramService_ServiceDesc.Streams[2], "/toit.api.ProgramService/LspAnalyze", opts...)
-	if err != nil {
-		return nil, err
-	}
-	x := &programServiceLspAnalyzeClient{stream}
-	return x, nil
-}
-
-type ProgramService_LspAnalyzeClient interface {
-	Send(*LspRequest) error
-	Recv() (*LspResponse, error)
-	grpc.ClientStream
-}
-
-type programServiceLspAnalyzeClient struct {
-	grpc.ClientStream
-}
-
-func (x *programServiceLspAnalyzeClient) Send(m *LspRequest) error {
-	return x.ClientStream.SendMsg(m)
-}
-
-func (x *programServiceLspAnalyzeClient) Recv() (*LspResponse, error) {
-	m := new(LspResponse)
-	if err := x.ClientStream.RecvMsg(m); err != nil {
-		return nil, err
-	}
-	return m, nil
-}
-
 func (c *programServiceClient) GetProgram(ctx context.Context, in *GetProgramRequest, opts ...grpc.CallOption) (*GetProgramResponse, error) {
 	out := new(GetProgramResponse)
 	err := c.cc.Invoke(ctx, "/toit.api.ProgramService/GetProgram", in, out, opts...)
@@ -188,7 +156,7 @@ func (c *programServiceClient) LookupPrograms(ctx context.Context, in *LookupPro
 }
 
 func (c *programServiceClient) DeviceRun(ctx context.Context, in *DeviceRunRequest, opts ...grpc.CallOption) (ProgramService_DeviceRunClient, error) {
-	stream, err := c.cc.NewStream(ctx, &ProgramService_ServiceDesc.Streams[3], "/toit.api.ProgramService/DeviceRun", opts...)
+	stream, err := c.cc.NewStream(ctx, &ProgramService_ServiceDesc.Streams[2], "/toit.api.ProgramService/DeviceRun", opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -237,7 +205,6 @@ type ProgramServiceServer interface {
 	Compile(context.Context, *CompileRequest) (*CompileResponse, error)
 	Analyze(context.Context, *AnalyzeRequest) (*AnalyzeResponse, error)
 	SyntaxAnalyze(context.Context, *SyntaxAnalyzeRequest) (*SyntaxAnalyzeResponse, error)
-	LspAnalyze(ProgramService_LspAnalyzeServer) error
 	GetProgram(context.Context, *GetProgramRequest) (*GetProgramResponse, error)
 	GetCompilation(context.Context, *GetCompilationRequest) (*GetCompilationResponse, error)
 	LookupPrograms(context.Context, *LookupProgramsRequest) (*LookupProgramsResponse, error)
@@ -264,9 +231,6 @@ func (UnimplementedProgramServiceServer) Analyze(context.Context, *AnalyzeReques
 }
 func (UnimplementedProgramServiceServer) SyntaxAnalyze(context.Context, *SyntaxAnalyzeRequest) (*SyntaxAnalyzeResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SyntaxAnalyze not implemented")
-}
-func (UnimplementedProgramServiceServer) LspAnalyze(ProgramService_LspAnalyzeServer) error {
-	return status.Errorf(codes.Unimplemented, "method LspAnalyze not implemented")
 }
 func (UnimplementedProgramServiceServer) GetProgram(context.Context, *GetProgramRequest) (*GetProgramResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetProgram not implemented")
@@ -395,32 +359,6 @@ func _ProgramService_SyntaxAnalyze_Handler(srv interface{}, ctx context.Context,
 		return srv.(ProgramServiceServer).SyntaxAnalyze(ctx, req.(*SyntaxAnalyzeRequest))
 	}
 	return interceptor(ctx, in, info, handler)
-}
-
-func _ProgramService_LspAnalyze_Handler(srv interface{}, stream grpc.ServerStream) error {
-	return srv.(ProgramServiceServer).LspAnalyze(&programServiceLspAnalyzeServer{stream})
-}
-
-type ProgramService_LspAnalyzeServer interface {
-	Send(*LspResponse) error
-	Recv() (*LspRequest, error)
-	grpc.ServerStream
-}
-
-type programServiceLspAnalyzeServer struct {
-	grpc.ServerStream
-}
-
-func (x *programServiceLspAnalyzeServer) Send(m *LspResponse) error {
-	return x.ServerStream.SendMsg(m)
-}
-
-func (x *programServiceLspAnalyzeServer) Recv() (*LspRequest, error) {
-	m := new(LspRequest)
-	if err := x.ServerStream.RecvMsg(m); err != nil {
-		return nil, err
-	}
-	return m, nil
 }
 
 func _ProgramService_GetProgram_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
@@ -563,12 +501,6 @@ var ProgramService_ServiceDesc = grpc.ServiceDesc{
 			StreamName:    "RunStart",
 			Handler:       _ProgramService_RunStart_Handler,
 			ServerStreams: true,
-		},
-		{
-			StreamName:    "LspAnalyze",
-			Handler:       _ProgramService_LspAnalyze_Handler,
-			ServerStreams: true,
-			ClientStreams: true,
 		},
 		{
 			StreamName:    "DeviceRun",
