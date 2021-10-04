@@ -293,28 +293,6 @@ const AnalyzeResponse_Features$json = const {
 /// Descriptor for `AnalyzeResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List analyzeResponseDescriptor = $convert.base64Decode(
     'Cg9BbmFseXplUmVzcG9uc2USFgoGc3RkZXJyGAEgASgMUgZzdGRlcnISPgoIZmVhdHVyZXMYAiABKAsyIi50b2l0LmFwaS5BbmFseXplUmVzcG9uc2UuRmVhdHVyZXNSCGZlYXR1cmVzGk8KCEZlYXR1cmVzEhAKA2dwcxgBIAEoCFIDZ3BzEjEKFHB1YnN1Yl9zdWJzY3JpcHRpb25zGAIgAygJUhNwdWJzdWJTdWJzY3JpcHRpb25z');
-@$core.Deprecated('Use lspRequestDescriptor instead')
-const LspRequest$json = const {
-  '1': 'LspRequest',
-  '2': const [
-    const {'1': 'input', '3': 1, '4': 1, '5': 12, '10': 'input'},
-  ],
-};
-
-/// Descriptor for `LspRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List lspRequestDescriptor =
-    $convert.base64Decode('CgpMc3BSZXF1ZXN0EhQKBWlucHV0GAEgASgMUgVpbnB1dA==');
-@$core.Deprecated('Use lspResponseDescriptor instead')
-const LspResponse$json = const {
-  '1': 'LspResponse',
-  '2': const [
-    const {'1': 'output', '3': 1, '4': 1, '5': 12, '10': 'output'},
-  ],
-};
-
-/// Descriptor for `LspResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List lspResponseDescriptor = $convert
-    .base64Decode('CgtMc3BSZXNwb25zZRIWCgZvdXRwdXQYASABKAxSBm91dHB1dA==');
 @$core.Deprecated('Use getProgramRequestDescriptor instead')
 const GetProgramRequest$json = const {
   '1': 'GetProgramRequest',

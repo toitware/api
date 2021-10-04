@@ -41,10 +41,6 @@ class ProgramServiceClient extends $grpc.Client {
           ($0.SyntaxAnalyzeRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $0.SyntaxAnalyzeResponse.fromBuffer(value));
-  static final _$lspAnalyze = $grpc.ClientMethod<$0.LspRequest, $0.LspResponse>(
-      '/toit.api.ProgramService/LspAnalyze',
-      ($0.LspRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.LspResponse.fromBuffer(value));
   static final _$getProgram =
       $grpc.ClientMethod<$0.GetProgramRequest, $0.GetProgramResponse>(
           '/toit.api.ProgramService/GetProgram',
@@ -107,12 +103,6 @@ class ProgramServiceClient extends $grpc.Client {
       $0.SyntaxAnalyzeRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$syntaxAnalyze, request, options: options);
-  }
-
-  $grpc.ResponseStream<$0.LspResponse> lspAnalyze(
-      $async.Stream<$0.LspRequest> request,
-      {$grpc.CallOptions? options}) {
-    return $createStreamingCall(_$lspAnalyze, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.GetProgramResponse> getProgram(
@@ -189,13 +179,6 @@ abstract class ProgramServiceBase extends $grpc.Service {
             ($core.List<$core.int> value) =>
                 $0.SyntaxAnalyzeRequest.fromBuffer(value),
             ($0.SyntaxAnalyzeResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.LspRequest, $0.LspResponse>(
-        'LspAnalyze',
-        lspAnalyze,
-        true,
-        true,
-        ($core.List<$core.int> value) => $0.LspRequest.fromBuffer(value),
-        ($0.LspResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.GetProgramRequest, $0.GetProgramResponse>(
         'GetProgram',
         getProgram_Pre,
@@ -298,8 +281,6 @@ abstract class ProgramServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.AnalyzeRequest request);
   $async.Future<$0.SyntaxAnalyzeResponse> syntaxAnalyze(
       $grpc.ServiceCall call, $0.SyntaxAnalyzeRequest request);
-  $async.Stream<$0.LspResponse> lspAnalyze(
-      $grpc.ServiceCall call, $async.Stream<$0.LspRequest> request);
   $async.Future<$0.GetProgramResponse> getProgram(
       $grpc.ServiceCall call, $0.GetProgramRequest request);
   $async.Future<$0.GetCompilationResponse> getCompilation(
