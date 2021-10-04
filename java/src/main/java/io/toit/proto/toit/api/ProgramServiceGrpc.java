@@ -182,37 +182,6 @@ public final class ProgramServiceGrpc {
     return getSyntaxAnalyzeMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<io.toit.proto.toit.api.ProgramProto.LspRequest,
-      io.toit.proto.toit.api.ProgramProto.LspResponse> getLspAnalyzeMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "LspAnalyze",
-      requestType = io.toit.proto.toit.api.ProgramProto.LspRequest.class,
-      responseType = io.toit.proto.toit.api.ProgramProto.LspResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
-  public static io.grpc.MethodDescriptor<io.toit.proto.toit.api.ProgramProto.LspRequest,
-      io.toit.proto.toit.api.ProgramProto.LspResponse> getLspAnalyzeMethod() {
-    io.grpc.MethodDescriptor<io.toit.proto.toit.api.ProgramProto.LspRequest, io.toit.proto.toit.api.ProgramProto.LspResponse> getLspAnalyzeMethod;
-    if ((getLspAnalyzeMethod = ProgramServiceGrpc.getLspAnalyzeMethod) == null) {
-      synchronized (ProgramServiceGrpc.class) {
-        if ((getLspAnalyzeMethod = ProgramServiceGrpc.getLspAnalyzeMethod) == null) {
-          ProgramServiceGrpc.getLspAnalyzeMethod = getLspAnalyzeMethod =
-              io.grpc.MethodDescriptor.<io.toit.proto.toit.api.ProgramProto.LspRequest, io.toit.proto.toit.api.ProgramProto.LspResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "LspAnalyze"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  io.toit.proto.toit.api.ProgramProto.LspRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  io.toit.proto.toit.api.ProgramProto.LspResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new ProgramServiceMethodDescriptorSupplier("LspAnalyze"))
-              .build();
-        }
-      }
-    }
-    return getLspAnalyzeMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<io.toit.proto.toit.api.ProgramProto.GetProgramRequest,
       io.toit.proto.toit.api.ProgramProto.GetProgramResponse> getGetProgramMethod;
 
@@ -453,13 +422,6 @@ public final class ProgramServiceGrpc {
 
     /**
      */
-    public io.grpc.stub.StreamObserver<io.toit.proto.toit.api.ProgramProto.LspRequest> lspAnalyze(
-        io.grpc.stub.StreamObserver<io.toit.proto.toit.api.ProgramProto.LspResponse> responseObserver) {
-      return asyncUnimplementedStreamingCall(getLspAnalyzeMethod(), responseObserver);
-    }
-
-    /**
-     */
     public void getProgram(io.toit.proto.toit.api.ProgramProto.GetProgramRequest request,
         io.grpc.stub.StreamObserver<io.toit.proto.toit.api.ProgramProto.GetProgramResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getGetProgramMethod(), responseObserver);
@@ -530,13 +492,6 @@ public final class ProgramServiceGrpc {
                 io.toit.proto.toit.api.ProgramProto.SyntaxAnalyzeRequest,
                 io.toit.proto.toit.api.ProgramProto.SyntaxAnalyzeResponse>(
                   this, METHODID_SYNTAX_ANALYZE)))
-          .addMethod(
-            getLspAnalyzeMethod(),
-            asyncBidiStreamingCall(
-              new MethodHandlers<
-                io.toit.proto.toit.api.ProgramProto.LspRequest,
-                io.toit.proto.toit.api.ProgramProto.LspResponse>(
-                  this, METHODID_LSP_ANALYZE)))
           .addMethod(
             getGetProgramMethod(),
             asyncUnaryCall(
@@ -628,14 +583,6 @@ public final class ProgramServiceGrpc {
         io.grpc.stub.StreamObserver<io.toit.proto.toit.api.ProgramProto.SyntaxAnalyzeResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getSyntaxAnalyzeMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public io.grpc.stub.StreamObserver<io.toit.proto.toit.api.ProgramProto.LspRequest> lspAnalyze(
-        io.grpc.stub.StreamObserver<io.toit.proto.toit.api.ProgramProto.LspResponse> responseObserver) {
-      return asyncBidiStreamingCall(
-          getChannel().newCall(getLspAnalyzeMethod(), getCallOptions()), responseObserver);
     }
 
     /**
@@ -840,7 +787,6 @@ public final class ProgramServiceGrpc {
   private static final int METHODID_DEVICE_RUN = 7;
   private static final int METHODID_DECODE_SYSTEM_MESSAGE = 8;
   private static final int METHODID_RUN = 9;
-  private static final int METHODID_LSP_ANALYZE = 10;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -908,9 +854,6 @@ public final class ProgramServiceGrpc {
         case METHODID_RUN:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.run(
               (io.grpc.stub.StreamObserver<io.toit.proto.toit.api.ProgramProto.RunResponse>) responseObserver);
-        case METHODID_LSP_ANALYZE:
-          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.lspAnalyze(
-              (io.grpc.stub.StreamObserver<io.toit.proto.toit.api.ProgramProto.LspResponse>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -967,7 +910,6 @@ public final class ProgramServiceGrpc {
               .addMethod(getCompileMethod())
               .addMethod(getAnalyzeMethod())
               .addMethod(getSyntaxAnalyzeMethod())
-              .addMethod(getLspAnalyzeMethod())
               .addMethod(getGetProgramMethod())
               .addMethod(getGetCompilationMethod())
               .addMethod(getLookupProgramsMethod())

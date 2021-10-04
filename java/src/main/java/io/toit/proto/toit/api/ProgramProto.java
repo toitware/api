@@ -9472,986 +9472,6 @@ public final class ProgramProto {
 
   }
 
-  public interface LspRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:toit.api.LspRequest)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>bytes input = 1;</code>
-     * @return The input.
-     */
-    com.google.protobuf.ByteString getInput();
-  }
-  /**
-   * Protobuf type {@code toit.api.LspRequest}
-   */
-  public  static final class LspRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:toit.api.LspRequest)
-      LspRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use LspRequest.newBuilder() to construct.
-    private LspRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private LspRequest() {
-      input_ = com.google.protobuf.ByteString.EMPTY;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new LspRequest();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private LspRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-
-              input_ = input.readBytes();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return io.toit.proto.toit.api.ProgramProto.internal_static_toit_api_LspRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return io.toit.proto.toit.api.ProgramProto.internal_static_toit_api_LspRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              io.toit.proto.toit.api.ProgramProto.LspRequest.class, io.toit.proto.toit.api.ProgramProto.LspRequest.Builder.class);
-    }
-
-    public static final int INPUT_FIELD_NUMBER = 1;
-    private com.google.protobuf.ByteString input_;
-    /**
-     * <code>bytes input = 1;</code>
-     * @return The input.
-     */
-    public com.google.protobuf.ByteString getInput() {
-      return input_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!input_.isEmpty()) {
-        output.writeBytes(1, input_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!input_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, input_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof io.toit.proto.toit.api.ProgramProto.LspRequest)) {
-        return super.equals(obj);
-      }
-      io.toit.proto.toit.api.ProgramProto.LspRequest other = (io.toit.proto.toit.api.ProgramProto.LspRequest) obj;
-
-      if (!getInput()
-          .equals(other.getInput())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + INPUT_FIELD_NUMBER;
-      hash = (53 * hash) + getInput().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static io.toit.proto.toit.api.ProgramProto.LspRequest parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static io.toit.proto.toit.api.ProgramProto.LspRequest parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static io.toit.proto.toit.api.ProgramProto.LspRequest parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static io.toit.proto.toit.api.ProgramProto.LspRequest parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static io.toit.proto.toit.api.ProgramProto.LspRequest parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static io.toit.proto.toit.api.ProgramProto.LspRequest parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static io.toit.proto.toit.api.ProgramProto.LspRequest parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static io.toit.proto.toit.api.ProgramProto.LspRequest parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static io.toit.proto.toit.api.ProgramProto.LspRequest parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static io.toit.proto.toit.api.ProgramProto.LspRequest parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static io.toit.proto.toit.api.ProgramProto.LspRequest parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static io.toit.proto.toit.api.ProgramProto.LspRequest parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(io.toit.proto.toit.api.ProgramProto.LspRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code toit.api.LspRequest}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:toit.api.LspRequest)
-        io.toit.proto.toit.api.ProgramProto.LspRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return io.toit.proto.toit.api.ProgramProto.internal_static_toit_api_LspRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return io.toit.proto.toit.api.ProgramProto.internal_static_toit_api_LspRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                io.toit.proto.toit.api.ProgramProto.LspRequest.class, io.toit.proto.toit.api.ProgramProto.LspRequest.Builder.class);
-      }
-
-      // Construct using io.toit.proto.toit.api.ProgramProto.LspRequest.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        input_ = com.google.protobuf.ByteString.EMPTY;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return io.toit.proto.toit.api.ProgramProto.internal_static_toit_api_LspRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public io.toit.proto.toit.api.ProgramProto.LspRequest getDefaultInstanceForType() {
-        return io.toit.proto.toit.api.ProgramProto.LspRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public io.toit.proto.toit.api.ProgramProto.LspRequest build() {
-        io.toit.proto.toit.api.ProgramProto.LspRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public io.toit.proto.toit.api.ProgramProto.LspRequest buildPartial() {
-        io.toit.proto.toit.api.ProgramProto.LspRequest result = new io.toit.proto.toit.api.ProgramProto.LspRequest(this);
-        result.input_ = input_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof io.toit.proto.toit.api.ProgramProto.LspRequest) {
-          return mergeFrom((io.toit.proto.toit.api.ProgramProto.LspRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(io.toit.proto.toit.api.ProgramProto.LspRequest other) {
-        if (other == io.toit.proto.toit.api.ProgramProto.LspRequest.getDefaultInstance()) return this;
-        if (other.getInput() != com.google.protobuf.ByteString.EMPTY) {
-          setInput(other.getInput());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        io.toit.proto.toit.api.ProgramProto.LspRequest parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (io.toit.proto.toit.api.ProgramProto.LspRequest) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private com.google.protobuf.ByteString input_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <code>bytes input = 1;</code>
-       * @return The input.
-       */
-      public com.google.protobuf.ByteString getInput() {
-        return input_;
-      }
-      /**
-       * <code>bytes input = 1;</code>
-       * @param value The input to set.
-       * @return This builder for chaining.
-       */
-      public Builder setInput(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        input_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bytes input = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearInput() {
-        
-        input_ = getDefaultInstance().getInput();
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:toit.api.LspRequest)
-    }
-
-    // @@protoc_insertion_point(class_scope:toit.api.LspRequest)
-    private static final io.toit.proto.toit.api.ProgramProto.LspRequest DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new io.toit.proto.toit.api.ProgramProto.LspRequest();
-    }
-
-    public static io.toit.proto.toit.api.ProgramProto.LspRequest getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<LspRequest>
-        PARSER = new com.google.protobuf.AbstractParser<LspRequest>() {
-      @java.lang.Override
-      public LspRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new LspRequest(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<LspRequest> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<LspRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public io.toit.proto.toit.api.ProgramProto.LspRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface LspResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:toit.api.LspResponse)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>bytes output = 1;</code>
-     * @return The output.
-     */
-    com.google.protobuf.ByteString getOutput();
-  }
-  /**
-   * Protobuf type {@code toit.api.LspResponse}
-   */
-  public  static final class LspResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:toit.api.LspResponse)
-      LspResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use LspResponse.newBuilder() to construct.
-    private LspResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private LspResponse() {
-      output_ = com.google.protobuf.ByteString.EMPTY;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new LspResponse();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private LspResponse(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-
-              output_ = input.readBytes();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return io.toit.proto.toit.api.ProgramProto.internal_static_toit_api_LspResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return io.toit.proto.toit.api.ProgramProto.internal_static_toit_api_LspResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              io.toit.proto.toit.api.ProgramProto.LspResponse.class, io.toit.proto.toit.api.ProgramProto.LspResponse.Builder.class);
-    }
-
-    public static final int OUTPUT_FIELD_NUMBER = 1;
-    private com.google.protobuf.ByteString output_;
-    /**
-     * <code>bytes output = 1;</code>
-     * @return The output.
-     */
-    public com.google.protobuf.ByteString getOutput() {
-      return output_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!output_.isEmpty()) {
-        output.writeBytes(1, output_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!output_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, output_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof io.toit.proto.toit.api.ProgramProto.LspResponse)) {
-        return super.equals(obj);
-      }
-      io.toit.proto.toit.api.ProgramProto.LspResponse other = (io.toit.proto.toit.api.ProgramProto.LspResponse) obj;
-
-      if (!getOutput()
-          .equals(other.getOutput())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + OUTPUT_FIELD_NUMBER;
-      hash = (53 * hash) + getOutput().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static io.toit.proto.toit.api.ProgramProto.LspResponse parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static io.toit.proto.toit.api.ProgramProto.LspResponse parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static io.toit.proto.toit.api.ProgramProto.LspResponse parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static io.toit.proto.toit.api.ProgramProto.LspResponse parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static io.toit.proto.toit.api.ProgramProto.LspResponse parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static io.toit.proto.toit.api.ProgramProto.LspResponse parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static io.toit.proto.toit.api.ProgramProto.LspResponse parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static io.toit.proto.toit.api.ProgramProto.LspResponse parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static io.toit.proto.toit.api.ProgramProto.LspResponse parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static io.toit.proto.toit.api.ProgramProto.LspResponse parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static io.toit.proto.toit.api.ProgramProto.LspResponse parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static io.toit.proto.toit.api.ProgramProto.LspResponse parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(io.toit.proto.toit.api.ProgramProto.LspResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code toit.api.LspResponse}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:toit.api.LspResponse)
-        io.toit.proto.toit.api.ProgramProto.LspResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return io.toit.proto.toit.api.ProgramProto.internal_static_toit_api_LspResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return io.toit.proto.toit.api.ProgramProto.internal_static_toit_api_LspResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                io.toit.proto.toit.api.ProgramProto.LspResponse.class, io.toit.proto.toit.api.ProgramProto.LspResponse.Builder.class);
-      }
-
-      // Construct using io.toit.proto.toit.api.ProgramProto.LspResponse.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        output_ = com.google.protobuf.ByteString.EMPTY;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return io.toit.proto.toit.api.ProgramProto.internal_static_toit_api_LspResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public io.toit.proto.toit.api.ProgramProto.LspResponse getDefaultInstanceForType() {
-        return io.toit.proto.toit.api.ProgramProto.LspResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public io.toit.proto.toit.api.ProgramProto.LspResponse build() {
-        io.toit.proto.toit.api.ProgramProto.LspResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public io.toit.proto.toit.api.ProgramProto.LspResponse buildPartial() {
-        io.toit.proto.toit.api.ProgramProto.LspResponse result = new io.toit.proto.toit.api.ProgramProto.LspResponse(this);
-        result.output_ = output_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof io.toit.proto.toit.api.ProgramProto.LspResponse) {
-          return mergeFrom((io.toit.proto.toit.api.ProgramProto.LspResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(io.toit.proto.toit.api.ProgramProto.LspResponse other) {
-        if (other == io.toit.proto.toit.api.ProgramProto.LspResponse.getDefaultInstance()) return this;
-        if (other.getOutput() != com.google.protobuf.ByteString.EMPTY) {
-          setOutput(other.getOutput());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        io.toit.proto.toit.api.ProgramProto.LspResponse parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (io.toit.proto.toit.api.ProgramProto.LspResponse) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private com.google.protobuf.ByteString output_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <code>bytes output = 1;</code>
-       * @return The output.
-       */
-      public com.google.protobuf.ByteString getOutput() {
-        return output_;
-      }
-      /**
-       * <code>bytes output = 1;</code>
-       * @param value The output to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOutput(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        output_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bytes output = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearOutput() {
-        
-        output_ = getDefaultInstance().getOutput();
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:toit.api.LspResponse)
-    }
-
-    // @@protoc_insertion_point(class_scope:toit.api.LspResponse)
-    private static final io.toit.proto.toit.api.ProgramProto.LspResponse DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new io.toit.proto.toit.api.ProgramProto.LspResponse();
-    }
-
-    public static io.toit.proto.toit.api.ProgramProto.LspResponse getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<LspResponse>
-        PARSER = new com.google.protobuf.AbstractParser<LspResponse>() {
-      @java.lang.Override
-      public LspResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new LspResponse(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<LspResponse> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<LspResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public io.toit.proto.toit.api.ProgramProto.LspResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface GetProgramRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:toit.api.GetProgramRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -22341,16 +21361,6 @@ public final class ProgramProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_toit_api_AnalyzeResponse_Features_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_toit_api_LspRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_toit_api_LspRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_toit_api_LspResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_toit_api_LspResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_toit_api_GetProgramRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -22481,68 +21491,65 @@ public final class ProgramProto {
       "ogram\"\216\001\n\017AnalyzeResponse\022\016\n\006stderr\030\001 \001(" +
       "\014\0224\n\010features\030\002 \001(\0132\".toit.api.AnalyzeRe" +
       "sponse.Features\0325\n\010Features\022\013\n\003gps\030\001 \001(\010" +
-      "\022\034\n\024pubsub_subscriptions\030\002 \003(\t\"\033\n\nLspReq" +
-      "uest\022\r\n\005input\030\001 \001(\014\"\035\n\013LspResponse\022\016\n\006ou" +
-      "tput\030\001 \001(\014\"\'\n\021GetProgramRequest\022\022\n\nprogr" +
-      "am_id\030\001 \001(\014\":\n\022GetProgramResponse\022$\n\007pro" +
-      "gram\030\001 \001(\0132\023.toit.model.Program\"/\n\025GetCo" +
-      "mpilationRequest\022\026\n\016compilation_id\030\001 \001(\014" +
-      "\"F\n\026GetCompilationResponse\022,\n\013compilatio" +
-      "n\030\001 \001(\0132\027.toit.model.Compilation\"-\n\025Look" +
-      "upProgramsRequest\022\024\n\014program_name\030\001 \001(\t\"" +
-      "-\n\026LookupProgramsResponse\022\023\n\013program_ids" +
-      "\030\001 \003(\014\"a\n\nRunRequest\022#\n\005start\030\001 \001(\0132\022.to" +
-      "it.api.RunStartH\000\022#\n\005input\030\002 \001(\0132\022.toit." +
-      "api.RunInputH\000B\t\n\007payload\"\325\001\n\010RunStart\022\020" +
-      "\n\010sdk_name\030\001 \001(\t\022\032\n\016entry_filename\030\002 \001(\t" +
-      "B\002\030\001\0224\n\007sources\030\003 \003(\0132\037.toit.api.RunStar" +
-      "t.SourcesEntryB\002\030\001\022\014\n\004args\030\004 \003(\t\022\'\n\006sour" +
-      "ce\030\005 \001(\0132\027.toit.api.ProgramSource\032.\n\014Sou" +
-      "rcesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\014:\0028" +
-      "\001\"\031\n\010RunInput\022\r\n\005input\030\001 \001(\014\"\343\001\n\017RunStar" +
-      "tRequest\022\020\n\010sdk_name\030\001 \001(\t\022\032\n\016entry_file" +
-      "name\030\002 \001(\tB\002\030\001\022;\n\007sources\030\003 \003(\0132&.toit.a" +
-      "pi.RunStartRequest.SourcesEntryB\002\030\001\022\014\n\004a" +
-      "rgs\030\004 \003(\t\022\'\n\006source\030\005 \001(\0132\027.toit.api.Pro" +
-      "gramSource\032.\n\014SourcesEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\014:\0028\001\"G\n\013RunResponse\022\r\n\003out" +
-      "\030\001 \001(\014H\000\022\r\n\003err\030\002 \001(\014H\000\022\016\n\004exit\030\003 \001(\003H\000B" +
-      "\n\n\010response\"\373\001\n\020DeviceRunRequest\022\021\n\tdevi" +
-      "ce_id\030\001 \001(\014\022\032\n\016entry_filename\030\003 \001(\tB\002\030\001\022" +
-      "<\n\007sources\030\004 \003(\0132\'.toit.api.DeviceRunReq" +
-      "uest.SourcesEntryB\002\030\001\022\014\n\004args\030\005 \003(\t\022\023\n\007i" +
-      "nstall\030\006 \001(\010B\002\030\001\022\'\n\006source\030\007 \001(\0132\027.toit." +
-      "api.ProgramSource\032.\n\014SourcesEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\014:\0028\001\"M\n\021DeviceRunRe" +
-      "sponse\022\r\n\003out\030\001 \001(\014H\000\022\r\n\003err\030\002 \001(\014H\000\022\016\n\004" +
-      "exit\030\003 \001(\003H\000B\n\n\010response\"@\n\032DecodeSystem" +
-      "MessageRequest\022\017\n\007message\030\001 \001(\014\022\021\n\005model" +
-      "\030\002 \001(\tB\002\030\001\".\n\033DecodeSystemMessageRespons" +
-      "e\022\017\n\007message\030\001 \001(\t2\316\006\n\016ProgramService\0228\n" +
-      "\003Run\022\024.toit.api.RunRequest\032\025.toit.api.Ru" +
-      "nResponse\"\000(\0010\001\022@\n\010RunStart\022\031.toit.api.R" +
-      "unStartRequest\032\025.toit.api.RunResponse\"\0000" +
-      "\001\022@\n\007Compile\022\030.toit.api.CompileRequest\032\031" +
-      ".toit.api.CompileResponse\"\000\022@\n\007Analyze\022\030" +
-      ".toit.api.AnalyzeRequest\032\031.toit.api.Anal" +
-      "yzeResponse\"\000\022R\n\rSyntaxAnalyze\022\036.toit.ap" +
-      "i.SyntaxAnalyzeRequest\032\037.toit.api.Syntax" +
-      "AnalyzeResponse\"\000\022?\n\nLspAnalyze\022\024.toit.a" +
-      "pi.LspRequest\032\025.toit.api.LspResponse\"\000(\001" +
-      "0\001\022I\n\nGetProgram\022\033.toit.api.GetProgramRe" +
-      "quest\032\034.toit.api.GetProgramResponse\"\000\022U\n" +
-      "\016GetCompilation\022\037.toit.api.GetCompilatio" +
-      "nRequest\032 .toit.api.GetCompilationRespon" +
-      "se\"\000\022U\n\016LookupPrograms\022\037.toit.api.Lookup" +
-      "ProgramsRequest\032 .toit.api.LookupProgram" +
-      "sResponse\"\000\022H\n\tDeviceRun\022\032.toit.api.Devi" +
-      "ceRunRequest\032\033.toit.api.DeviceRunRespons" +
-      "e\"\0000\001\022d\n\023DecodeSystemMessage\022$.toit.api." +
-      "DecodeSystemMessageRequest\032%.toit.api.De" +
-      "codeSystemMessageResponse\"\000B`\n\026io.toit.p" +
-      "roto.toit.apiB\014ProgramProtoZ\'github.com/" +
-      "toitware/api/golang/toit/api\252\002\016Toit.Prot" +
-      "o.APIb\006proto3"
+      "\022\034\n\024pubsub_subscriptions\030\002 \003(\t\"\'\n\021GetPro" +
+      "gramRequest\022\022\n\nprogram_id\030\001 \001(\014\":\n\022GetPr" +
+      "ogramResponse\022$\n\007program\030\001 \001(\0132\023.toit.mo" +
+      "del.Program\"/\n\025GetCompilationRequest\022\026\n\016" +
+      "compilation_id\030\001 \001(\014\"F\n\026GetCompilationRe" +
+      "sponse\022,\n\013compilation\030\001 \001(\0132\027.toit.model" +
+      ".Compilation\"-\n\025LookupProgramsRequest\022\024\n" +
+      "\014program_name\030\001 \001(\t\"-\n\026LookupProgramsRes" +
+      "ponse\022\023\n\013program_ids\030\001 \003(\014\"a\n\nRunRequest" +
+      "\022#\n\005start\030\001 \001(\0132\022.toit.api.RunStartH\000\022#\n" +
+      "\005input\030\002 \001(\0132\022.toit.api.RunInputH\000B\t\n\007pa" +
+      "yload\"\325\001\n\010RunStart\022\020\n\010sdk_name\030\001 \001(\t\022\032\n\016" +
+      "entry_filename\030\002 \001(\tB\002\030\001\0224\n\007sources\030\003 \003(" +
+      "\0132\037.toit.api.RunStart.SourcesEntryB\002\030\001\022\014" +
+      "\n\004args\030\004 \003(\t\022\'\n\006source\030\005 \001(\0132\027.toit.api." +
+      "ProgramSource\032.\n\014SourcesEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\014:\0028\001\"\031\n\010RunInput\022\r\n\005inp" +
+      "ut\030\001 \001(\014\"\343\001\n\017RunStartRequest\022\020\n\010sdk_name" +
+      "\030\001 \001(\t\022\032\n\016entry_filename\030\002 \001(\tB\002\030\001\022;\n\007so" +
+      "urces\030\003 \003(\0132&.toit.api.RunStartRequest.S" +
+      "ourcesEntryB\002\030\001\022\014\n\004args\030\004 \003(\t\022\'\n\006source\030" +
+      "\005 \001(\0132\027.toit.api.ProgramSource\032.\n\014Source" +
+      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\014:\0028\001\"G" +
+      "\n\013RunResponse\022\r\n\003out\030\001 \001(\014H\000\022\r\n\003err\030\002 \001(" +
+      "\014H\000\022\016\n\004exit\030\003 \001(\003H\000B\n\n\010response\"\373\001\n\020Devi" +
+      "ceRunRequest\022\021\n\tdevice_id\030\001 \001(\014\022\032\n\016entry" +
+      "_filename\030\003 \001(\tB\002\030\001\022<\n\007sources\030\004 \003(\0132\'.t" +
+      "oit.api.DeviceRunRequest.SourcesEntryB\002\030" +
+      "\001\022\014\n\004args\030\005 \003(\t\022\023\n\007install\030\006 \001(\010B\002\030\001\022\'\n\006" +
+      "source\030\007 \001(\0132\027.toit.api.ProgramSource\032.\n" +
+      "\014SourcesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
+      "\014:\0028\001\"M\n\021DeviceRunResponse\022\r\n\003out\030\001 \001(\014H" +
+      "\000\022\r\n\003err\030\002 \001(\014H\000\022\016\n\004exit\030\003 \001(\003H\000B\n\n\010resp" +
+      "onse\"@\n\032DecodeSystemMessageRequest\022\017\n\007me" +
+      "ssage\030\001 \001(\014\022\021\n\005model\030\002 \001(\tB\002\030\001\".\n\033Decode" +
+      "SystemMessageResponse\022\017\n\007message\030\001 \001(\t2\215" +
+      "\006\n\016ProgramService\0228\n\003Run\022\024.toit.api.RunR" +
+      "equest\032\025.toit.api.RunResponse\"\000(\0010\001\022@\n\010R" +
+      "unStart\022\031.toit.api.RunStartRequest\032\025.toi" +
+      "t.api.RunResponse\"\0000\001\022@\n\007Compile\022\030.toit." +
+      "api.CompileRequest\032\031.toit.api.CompileRes" +
+      "ponse\"\000\022@\n\007Analyze\022\030.toit.api.AnalyzeReq" +
+      "uest\032\031.toit.api.AnalyzeResponse\"\000\022R\n\rSyn" +
+      "taxAnalyze\022\036.toit.api.SyntaxAnalyzeReque" +
+      "st\032\037.toit.api.SyntaxAnalyzeResponse\"\000\022I\n" +
+      "\nGetProgram\022\033.toit.api.GetProgramRequest" +
+      "\032\034.toit.api.GetProgramResponse\"\000\022U\n\016GetC" +
+      "ompilation\022\037.toit.api.GetCompilationRequ" +
+      "est\032 .toit.api.GetCompilationResponse\"\000\022" +
+      "U\n\016LookupPrograms\022\037.toit.api.LookupProgr" +
+      "amsRequest\032 .toit.api.LookupProgramsResp" +
+      "onse\"\000\022H\n\tDeviceRun\022\032.toit.api.DeviceRun" +
+      "Request\032\033.toit.api.DeviceRunResponse\"\0000\001" +
+      "\022d\n\023DecodeSystemMessage\022$.toit.api.Decod" +
+      "eSystemMessageRequest\032%.toit.api.DecodeS" +
+      "ystemMessageResponse\"\000B`\n\026io.toit.proto." +
+      "toit.apiB\014ProgramProtoZ\'github.com/toitw" +
+      "are/api/golang/toit/api\252\002\016Toit.Proto.API" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -22639,62 +21646,50 @@ public final class ProgramProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_AnalyzeResponse_Features_descriptor,
         new java.lang.String[] { "Gps", "PubsubSubscriptions", });
-    internal_static_toit_api_LspRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_toit_api_LspRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_toit_api_LspRequest_descriptor,
-        new java.lang.String[] { "Input", });
-    internal_static_toit_api_LspResponse_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_toit_api_LspResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_toit_api_LspResponse_descriptor,
-        new java.lang.String[] { "Output", });
     internal_static_toit_api_GetProgramRequest_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_toit_api_GetProgramRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_GetProgramRequest_descriptor,
         new java.lang.String[] { "ProgramId", });
     internal_static_toit_api_GetProgramResponse_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_toit_api_GetProgramResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_GetProgramResponse_descriptor,
         new java.lang.String[] { "Program", });
     internal_static_toit_api_GetCompilationRequest_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_toit_api_GetCompilationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_GetCompilationRequest_descriptor,
         new java.lang.String[] { "CompilationId", });
     internal_static_toit_api_GetCompilationResponse_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_toit_api_GetCompilationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_GetCompilationResponse_descriptor,
         new java.lang.String[] { "Compilation", });
     internal_static_toit_api_LookupProgramsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_toit_api_LookupProgramsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_LookupProgramsRequest_descriptor,
         new java.lang.String[] { "ProgramName", });
     internal_static_toit_api_LookupProgramsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_toit_api_LookupProgramsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_LookupProgramsResponse_descriptor,
         new java.lang.String[] { "ProgramIds", });
     internal_static_toit_api_RunRequest_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_toit_api_RunRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_RunRequest_descriptor,
         new java.lang.String[] { "Start", "Input", "Payload", });
     internal_static_toit_api_RunStart_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_toit_api_RunStart_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_RunStart_descriptor,
@@ -22706,13 +21701,13 @@ public final class ProgramProto {
         internal_static_toit_api_RunStart_SourcesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_toit_api_RunInput_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_toit_api_RunInput_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_RunInput_descriptor,
         new java.lang.String[] { "Input", });
     internal_static_toit_api_RunStartRequest_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_toit_api_RunStartRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_RunStartRequest_descriptor,
@@ -22724,13 +21719,13 @@ public final class ProgramProto {
         internal_static_toit_api_RunStartRequest_SourcesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_toit_api_RunResponse_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_toit_api_RunResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_RunResponse_descriptor,
         new java.lang.String[] { "Out", "Err", "Exit", "Response", });
     internal_static_toit_api_DeviceRunRequest_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_toit_api_DeviceRunRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_DeviceRunRequest_descriptor,
@@ -22742,19 +21737,19 @@ public final class ProgramProto {
         internal_static_toit_api_DeviceRunRequest_SourcesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_toit_api_DeviceRunResponse_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_toit_api_DeviceRunResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_DeviceRunResponse_descriptor,
         new java.lang.String[] { "Out", "Err", "Exit", "Response", });
     internal_static_toit_api_DecodeSystemMessageRequest_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_toit_api_DecodeSystemMessageRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_DecodeSystemMessageRequest_descriptor,
         new java.lang.String[] { "Message", "Model", });
     internal_static_toit_api_DecodeSystemMessageResponse_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_toit_api_DecodeSystemMessageResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_DecodeSystemMessageResponse_descriptor,
