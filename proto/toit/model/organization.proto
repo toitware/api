@@ -43,12 +43,17 @@ message User {
         bool welcome_closed = 1;
         bool newsletter = 2;
     }
+    message State {
+        google.protobuf.Timestamp cli_updated_at = 1;
+        google.protobuf.Timestamp vscode_ext_updated_at = 2;
+    }
     bytes id = 1;
     bytes organization_id = 2;
     string email = 3;
     string name = 4;
     Settings settings = 5;
     string role = 6;
+    State state = 7;
 }
 
 message APIKey {
