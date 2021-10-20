@@ -37,25 +37,30 @@ namespace Toit.Proto.Model {
             "cGUSEgoKaHdpZF9xdW90YRgQIAEoBCKSAQoOUGF5bWVudERldGFpbHMSDQoF",
             "bGFzdDQYASABKAkSDgoGZXhwaXJ5GAIgASgJEhQKDGV4cGlyeV9tb250aBgD",
             "IAEoCRITCgtleHBpcnlfeWVhchgEIAEoCRINCgVicmFuZBgFIAEoCRIUCgxj",
-            "b3VudHJ5X2NvZGUYBiABKAkSEQoJY3ZjX2NoZWNrGAcgASgJIrsBCgRVc2Vy",
+            "b3VudHJ5X2NvZGUYBiABKAkSEQoJY3ZjX2NoZWNrGAcgASgJItoCCgRVc2Vy",
             "EgoKAmlkGAEgASgMEhcKD29yZ2FuaXphdGlvbl9pZBgCIAEoDBINCgVlbWFp",
             "bBgDIAEoCRIMCgRuYW1lGAQgASgJEisKCHNldHRpbmdzGAUgASgLMhkudG9p",
-            "dC5tb2RlbC5Vc2VyLlNldHRpbmdzEgwKBHJvbGUYBiABKAkaNgoIU2V0dGlu",
-            "Z3MSFgoOd2VsY29tZV9jbG9zZWQYASABKAgSEgoKbmV3c2xldHRlchgCIAEo",
-            "CCJrCgZBUElLZXkSCgoCaWQYASABKAwSFwoPb3JnYW5pemF0aW9uX2lkGAIg",
-            "ASgMEgwKBG5hbWUYAyABKAkSLgoKY3JlYXRlZF9hdBgEIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXAiLwoEVGllciInCgRUeXBlEgsKB1VOS05P",
-            "V04QABIICgRGUkVFEAESCAoEUEFJRBACIj0KCEN1c3RvbWVyIjEKBFR5cGUS",
-            "CwoHVU5LTk9XThAAEgoKBlBFUlNPThABEhAKDE9SR0FOSVpBVElPThACQmsK",
-            "GGlvLnRvaXQucHJvdG8udG9pdC5tb2RlbEIRT3JnYW5pemF0aW9uUHJvdG9a",
-            "KWdpdGh1Yi5jb20vdG9pdHdhcmUvYXBpL2dvbGFuZy90b2l0L21vZGVsqgIQ",
-            "VG9pdC5Qcm90by5Nb2RlbGIGcHJvdG8z"));
+            "dC5tb2RlbC5Vc2VyLlNldHRpbmdzEgwKBHJvbGUYBiABKAkSJQoFc3RhdGUY",
+            "ByABKAsyFi50b2l0Lm1vZGVsLlVzZXIuU3RhdGUaNgoIU2V0dGluZ3MSFgoO",
+            "d2VsY29tZV9jbG9zZWQYASABKAgSEgoKbmV3c2xldHRlchgCIAEoCBp2CgVT",
+            "dGF0ZRIyCg5jbGlfdXBkYXRlZF9hdBgBIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXASOQoVdnNjb2RlX2V4dF91cGRhdGVkX2F0GAIgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCJrCgZBUElLZXkSCgoCaWQYASAB",
+            "KAwSFwoPb3JnYW5pemF0aW9uX2lkGAIgASgMEgwKBG5hbWUYAyABKAkSLgoK",
+            "Y3JlYXRlZF9hdBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAi",
+            "LwoEVGllciInCgRUeXBlEgsKB1VOS05PV04QABIICgRGUkVFEAESCAoEUEFJ",
+            "RBACIj0KCEN1c3RvbWVyIjEKBFR5cGUSCwoHVU5LTk9XThAAEgoKBlBFUlNP",
+            "ThABEhAKDE9SR0FOSVpBVElPThACQmsKGGlvLnRvaXQucHJvdG8udG9pdC5t",
+            "b2RlbEIRT3JnYW5pemF0aW9uUHJvdG9aKWdpdGh1Yi5jb20vdG9pdHdhcmUv",
+            "YXBpL2dvbGFuZy90b2l0L21vZGVsqgIQVG9pdC5Qcm90by5Nb2RlbGIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.Organization), global::Toit.Proto.Model.Organization.Parser, new[]{ "Id", "Name", "DefaultSdk", "Email", "City", "Country", "PhoneNumber", "CvrNumber", "Tier", "PaymentDetails", "AddressLine", "PostalCode", "VatNumber", "VatCountryCode", "Customer", "HwidQuota" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.PaymentDetails), global::Toit.Proto.Model.PaymentDetails.Parser, new[]{ "Last4", "Expiry", "ExpiryMonth", "ExpiryYear", "Brand", "CountryCode", "CvcCheck" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.User), global::Toit.Proto.Model.User.Parser, new[]{ "Id", "OrganizationId", "Email", "Name", "Settings", "Role" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.User.Types.Settings), global::Toit.Proto.Model.User.Types.Settings.Parser, new[]{ "WelcomeClosed", "Newsletter" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.User), global::Toit.Proto.Model.User.Parser, new[]{ "Id", "OrganizationId", "Email", "Name", "Settings", "Role", "State" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.User.Types.Settings), global::Toit.Proto.Model.User.Types.Settings.Parser, new[]{ "WelcomeClosed", "Newsletter" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.User.Types.State), global::Toit.Proto.Model.User.Types.State.Parser, new[]{ "CliUpdatedAt", "VscodeExtUpdatedAt" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.APIKey), global::Toit.Proto.Model.APIKey.Parser, new[]{ "Id", "OrganizationId", "Name", "CreatedAt" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.Tier), global::Toit.Proto.Model.Tier.Parser, null, null, new[]{ typeof(global::Toit.Proto.Model.Tier.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.Customer), global::Toit.Proto.Model.Customer.Parser, null, null, new[]{ typeof(global::Toit.Proto.Model.Customer.Types.Type) }, null, null)
@@ -1275,6 +1280,7 @@ namespace Toit.Proto.Model {
       name_ = other.name_;
       settings_ = other.settings_ != null ? other.settings_.Clone() : null;
       role_ = other.role_;
+      state_ = other.state_ != null ? other.state_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1356,6 +1362,18 @@ namespace Toit.Proto.Model {
       }
     }
 
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 7;
+    private global::Toit.Proto.Model.User.Types.State state_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Toit.Proto.Model.User.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1377,6 +1395,7 @@ namespace Toit.Proto.Model {
       if (Name != other.Name) return false;
       if (!object.Equals(Settings, other.Settings)) return false;
       if (Role != other.Role) return false;
+      if (!object.Equals(State, other.State)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1390,6 +1409,7 @@ namespace Toit.Proto.Model {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (settings_ != null) hash ^= Settings.GetHashCode();
       if (Role.Length != 0) hash ^= Role.GetHashCode();
+      if (state_ != null) hash ^= State.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1432,6 +1452,10 @@ namespace Toit.Proto.Model {
         output.WriteRawTag(50);
         output.WriteString(Role);
       }
+      if (state_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(State);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1466,6 +1490,10 @@ namespace Toit.Proto.Model {
         output.WriteRawTag(50);
         output.WriteString(Role);
       }
+      if (state_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(State);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1493,6 +1521,9 @@ namespace Toit.Proto.Model {
       }
       if (Role.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Role);
+      }
+      if (state_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(State);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1526,6 +1557,12 @@ namespace Toit.Proto.Model {
       }
       if (other.Role.Length != 0) {
         Role = other.Role;
+      }
+      if (other.state_ != null) {
+        if (state_ == null) {
+          State = new global::Toit.Proto.Model.User.Types.State();
+        }
+        State.MergeFrom(other.State);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1569,6 +1606,13 @@ namespace Toit.Proto.Model {
             Role = input.ReadString();
             break;
           }
+          case 58: {
+            if (state_ == null) {
+              State = new global::Toit.Proto.Model.User.Types.State();
+            }
+            input.ReadMessage(State);
+            break;
+          }
         }
       }
     #endif
@@ -1609,6 +1653,13 @@ namespace Toit.Proto.Model {
           }
           case 50: {
             Role = input.ReadString();
+            break;
+          }
+          case 58: {
+            if (state_ == null) {
+              State = new global::Toit.Proto.Model.User.Types.State();
+            }
+            input.ReadMessage(State);
             break;
           }
         }
@@ -1838,6 +1889,250 @@ namespace Toit.Proto.Model {
               }
               case 16: {
                 Newsletter = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      public sealed partial class State : pb::IMessage<State>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<State> _parser = new pb::MessageParser<State>(() => new State());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<State> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Toit.Proto.Model.User.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public State() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public State(State other) : this() {
+          cliUpdatedAt_ = other.cliUpdatedAt_ != null ? other.cliUpdatedAt_.Clone() : null;
+          vscodeExtUpdatedAt_ = other.vscodeExtUpdatedAt_ != null ? other.vscodeExtUpdatedAt_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public State Clone() {
+          return new State(this);
+        }
+
+        /// <summary>Field number for the "cli_updated_at" field.</summary>
+        public const int CliUpdatedAtFieldNumber = 1;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp cliUpdatedAt_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp CliUpdatedAt {
+          get { return cliUpdatedAt_; }
+          set {
+            cliUpdatedAt_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "vscode_ext_updated_at" field.</summary>
+        public const int VscodeExtUpdatedAtFieldNumber = 2;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp vscodeExtUpdatedAt_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp VscodeExtUpdatedAt {
+          get { return vscodeExtUpdatedAt_; }
+          set {
+            vscodeExtUpdatedAt_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as State);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(State other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(CliUpdatedAt, other.CliUpdatedAt)) return false;
+          if (!object.Equals(VscodeExtUpdatedAt, other.VscodeExtUpdatedAt)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (cliUpdatedAt_ != null) hash ^= CliUpdatedAt.GetHashCode();
+          if (vscodeExtUpdatedAt_ != null) hash ^= VscodeExtUpdatedAt.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (cliUpdatedAt_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(CliUpdatedAt);
+          }
+          if (vscodeExtUpdatedAt_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(VscodeExtUpdatedAt);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (cliUpdatedAt_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(CliUpdatedAt);
+          }
+          if (vscodeExtUpdatedAt_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(VscodeExtUpdatedAt);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (cliUpdatedAt_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(CliUpdatedAt);
+          }
+          if (vscodeExtUpdatedAt_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(VscodeExtUpdatedAt);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(State other) {
+          if (other == null) {
+            return;
+          }
+          if (other.cliUpdatedAt_ != null) {
+            if (cliUpdatedAt_ == null) {
+              CliUpdatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            CliUpdatedAt.MergeFrom(other.CliUpdatedAt);
+          }
+          if (other.vscodeExtUpdatedAt_ != null) {
+            if (vscodeExtUpdatedAt_ == null) {
+              VscodeExtUpdatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            VscodeExtUpdatedAt.MergeFrom(other.VscodeExtUpdatedAt);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (cliUpdatedAt_ == null) {
+                  CliUpdatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(CliUpdatedAt);
+                break;
+              }
+              case 18: {
+                if (vscodeExtUpdatedAt_ == null) {
+                  VscodeExtUpdatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(VscodeExtUpdatedAt);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (cliUpdatedAt_ == null) {
+                  CliUpdatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(CliUpdatedAt);
+                break;
+              }
+              case 18: {
+                if (vscodeExtUpdatedAt_ == null) {
+                  VscodeExtUpdatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(VscodeExtUpdatedAt);
                 break;
               }
             }
