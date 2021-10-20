@@ -157,6 +157,11 @@ export class User extends jspb.Message {
   getRole(): string;
   setRole(value: string): void;
 
+  hasState(): boolean;
+  clearState(): void;
+  getState(): User.State | undefined;
+  setState(value?: User.State): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): User.AsObject;
   static toObject(includeInstance: boolean, msg: User): User.AsObject;
@@ -175,6 +180,7 @@ export namespace User {
     name: string,
     settings?: User.Settings.AsObject,
     role: string,
+    state?: User.State.AsObject,
   }
 
   export class Settings extends jspb.Message {
@@ -198,6 +204,34 @@ export namespace User {
     export type AsObject = {
       welcomeClosed: boolean,
       newsletter: boolean,
+    }
+  }
+
+  export class State extends jspb.Message {
+    hasCliUpdatedAt(): boolean;
+    clearCliUpdatedAt(): void;
+    getCliUpdatedAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
+    setCliUpdatedAt(value?: google_protobuf_timestamp_pb.Timestamp): void;
+
+    hasVscodeExtUpdatedAt(): boolean;
+    clearVscodeExtUpdatedAt(): void;
+    getVscodeExtUpdatedAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
+    setVscodeExtUpdatedAt(value?: google_protobuf_timestamp_pb.Timestamp): void;
+
+    serializeBinary(): Uint8Array;
+    toObject(includeInstance?: boolean): State.AsObject;
+    static toObject(includeInstance: boolean, msg: State): State.AsObject;
+    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+    static serializeBinaryToWriter(message: State, writer: jspb.BinaryWriter): void;
+    static deserializeBinary(bytes: Uint8Array): State;
+    static deserializeBinaryFromReader(message: State, reader: jspb.BinaryReader): State;
+  }
+
+  export namespace State {
+    export type AsObject = {
+      cliUpdatedAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+      vscodeExtUpdatedAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
     }
   }
 }
