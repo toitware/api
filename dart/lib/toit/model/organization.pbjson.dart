@@ -102,8 +102,16 @@ const User$json = const {
       '10': 'settings'
     },
     const {'1': 'role', '3': 6, '4': 1, '5': 9, '10': 'role'},
+    const {
+      '1': 'state',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.toit.model.User.State',
+      '10': 'state'
+    },
   ],
-  '3': const [User_Settings$json],
+  '3': const [User_Settings$json, User_State$json],
 };
 
 @$core.Deprecated('Use userDescriptor instead')
@@ -121,9 +129,32 @@ const User_Settings$json = const {
   ],
 };
 
+@$core.Deprecated('Use userDescriptor instead')
+const User_State$json = const {
+  '1': 'State',
+  '2': const [
+    const {
+      '1': 'cli_updated_at',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'cliUpdatedAt'
+    },
+    const {
+      '1': 'vscode_ext_updated_at',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'vscodeExtUpdatedAt'
+    },
+  ],
+};
+
 /// Descriptor for `User`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List userDescriptor = $convert.base64Decode(
-    'CgRVc2VyEg4KAmlkGAEgASgMUgJpZBInCg9vcmdhbml6YXRpb25faWQYAiABKAxSDm9yZ2FuaXphdGlvbklkEhQKBWVtYWlsGAMgASgJUgVlbWFpbBISCgRuYW1lGAQgASgJUgRuYW1lEjUKCHNldHRpbmdzGAUgASgLMhkudG9pdC5tb2RlbC5Vc2VyLlNldHRpbmdzUghzZXR0aW5ncxISCgRyb2xlGAYgASgJUgRyb2xlGlEKCFNldHRpbmdzEiUKDndlbGNvbWVfY2xvc2VkGAEgASgIUg13ZWxjb21lQ2xvc2VkEh4KCm5ld3NsZXR0ZXIYAiABKAhSCm5ld3NsZXR0ZXI=');
+    'CgRVc2VyEg4KAmlkGAEgASgMUgJpZBInCg9vcmdhbml6YXRpb25faWQYAiABKAxSDm9yZ2FuaXphdGlvbklkEhQKBWVtYWlsGAMgASgJUgVlbWFpbBISCgRuYW1lGAQgASgJUgRuYW1lEjUKCHNldHRpbmdzGAUgASgLMhkudG9pdC5tb2RlbC5Vc2VyLlNldHRpbmdzUghzZXR0aW5ncxISCgRyb2xlGAYgASgJUgRyb2xlEiwKBXN0YXRlGAcgASgLMhYudG9pdC5tb2RlbC5Vc2VyLlN0YXRlUgVzdGF0ZRpRCghTZXR0aW5ncxIlCg53ZWxjb21lX2Nsb3NlZBgBIAEoCFINd2VsY29tZUNsb3NlZBIeCgpuZXdzbGV0dGVyGAIgASgIUgpuZXdzbGV0dGVyGpgBCgVTdGF0ZRJACg5jbGlfdXBkYXRlZF9hdBgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSDGNsaVVwZGF0ZWRBdBJNChV2c2NvZGVfZXh0X3VwZGF0ZWRfYXQYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUhJ2c2NvZGVFeHRVcGRhdGVkQXQ=');
 @$core.Deprecated('Use aPIKeyDescriptor instead')
 const APIKey$json = const {
   '1': 'APIKey',

@@ -612,6 +612,96 @@ class User_Settings extends $pb.GeneratedMessage {
   void clearNewsletter() => clearField(2);
 }
 
+class User_State extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'User.State',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'toit.model'),
+      createEmptyInstance: create)
+    ..aOM<$0.Timestamp>(
+        1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cliUpdatedAt',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'vscodeExtUpdatedAt',
+        subBuilder: $0.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  User_State._() : super();
+  factory User_State({
+    $0.Timestamp? cliUpdatedAt,
+    $0.Timestamp? vscodeExtUpdatedAt,
+  }) {
+    final _result = create();
+    if (cliUpdatedAt != null) {
+      _result.cliUpdatedAt = cliUpdatedAt;
+    }
+    if (vscodeExtUpdatedAt != null) {
+      _result.vscodeExtUpdatedAt = vscodeExtUpdatedAt;
+    }
+    return _result;
+  }
+  factory User_State.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory User_State.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  User_State clone() => User_State()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  User_State copyWith(void Function(User_State) updates) =>
+      super.copyWith((message) => updates(message as User_State))
+          as User_State; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static User_State create() => User_State._();
+  User_State createEmptyInstance() => create();
+  static $pb.PbList<User_State> createRepeated() => $pb.PbList<User_State>();
+  @$core.pragma('dart2js:noInline')
+  static User_State getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<User_State>(create);
+  static User_State? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.Timestamp get cliUpdatedAt => $_getN(0);
+  @$pb.TagNumber(1)
+  set cliUpdatedAt($0.Timestamp v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasCliUpdatedAt() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearCliUpdatedAt() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.Timestamp ensureCliUpdatedAt() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $0.Timestamp get vscodeExtUpdatedAt => $_getN(1);
+  @$pb.TagNumber(2)
+  set vscodeExtUpdatedAt($0.Timestamp v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasVscodeExtUpdatedAt() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearVscodeExtUpdatedAt() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.Timestamp ensureVscodeExtUpdatedAt() => $_ensure(1);
+}
+
 class User extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -639,6 +729,7 @@ class User extends $pb.GeneratedMessage {
     ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
     ..aOM<User_Settings>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'settings', subBuilder: User_Settings.create)
     ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'role')
+    ..aOM<User_State>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'state', subBuilder: User_State.create)
     ..hasRequiredFields = false;
 
   User._() : super();
@@ -649,6 +740,7 @@ class User extends $pb.GeneratedMessage {
     $core.String? name,
     User_Settings? settings,
     $core.String? role,
+    User_State? state,
   }) {
     final _result = create();
     if (id != null) {
@@ -668,6 +760,9 @@ class User extends $pb.GeneratedMessage {
     }
     if (role != null) {
       _result.role = role;
+    }
+    if (state != null) {
+      _result.state = state;
     }
     return _result;
   }
@@ -770,6 +865,20 @@ class User extends $pb.GeneratedMessage {
   $core.bool hasRole() => $_has(5);
   @$pb.TagNumber(6)
   void clearRole() => clearField(6);
+
+  @$pb.TagNumber(7)
+  User_State get state => $_getN(6);
+  @$pb.TagNumber(7)
+  set state(User_State v) {
+    setField(7, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasState() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearState() => clearField(7);
+  @$pb.TagNumber(7)
+  User_State ensureState() => $_ensure(6);
 }
 
 class APIKey extends $pb.GeneratedMessage {
