@@ -4203,6 +4203,21 @@ public final class OrganizationProto {
      */
     com.google.protobuf.ByteString
         getRoleBytes();
+
+    /**
+     * <code>.toit.model.User.State state = 7;</code>
+     * @return Whether the state field is set.
+     */
+    boolean hasState();
+    /**
+     * <code>.toit.model.User.State state = 7;</code>
+     * @return The state.
+     */
+    io.toit.proto.toit.model.OrganizationProto.User.State getState();
+    /**
+     * <code>.toit.model.User.State state = 7;</code>
+     */
+    io.toit.proto.toit.model.OrganizationProto.User.StateOrBuilder getStateOrBuilder();
   }
   /**
    * Protobuf type {@code toit.model.User}
@@ -4293,6 +4308,19 @@ public final class OrganizationProto {
               java.lang.String s = input.readStringRequireUtf8();
 
               role_ = s;
+              break;
+            }
+            case 58: {
+              io.toit.proto.toit.model.OrganizationProto.User.State.Builder subBuilder = null;
+              if (state_ != null) {
+                subBuilder = state_.toBuilder();
+              }
+              state_ = input.readMessage(io.toit.proto.toit.model.OrganizationProto.User.State.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(state_);
+                state_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -4883,6 +4911,824 @@ public final class OrganizationProto {
 
     }
 
+    public interface StateOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:toit.model.User.State)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>.google.protobuf.Timestamp cli_updated_at = 1;</code>
+       * @return Whether the cliUpdatedAt field is set.
+       */
+      boolean hasCliUpdatedAt();
+      /**
+       * <code>.google.protobuf.Timestamp cli_updated_at = 1;</code>
+       * @return The cliUpdatedAt.
+       */
+      com.google.protobuf.Timestamp getCliUpdatedAt();
+      /**
+       * <code>.google.protobuf.Timestamp cli_updated_at = 1;</code>
+       */
+      com.google.protobuf.TimestampOrBuilder getCliUpdatedAtOrBuilder();
+
+      /**
+       * <code>.google.protobuf.Timestamp vscode_ext_updated_at = 2;</code>
+       * @return Whether the vscodeExtUpdatedAt field is set.
+       */
+      boolean hasVscodeExtUpdatedAt();
+      /**
+       * <code>.google.protobuf.Timestamp vscode_ext_updated_at = 2;</code>
+       * @return The vscodeExtUpdatedAt.
+       */
+      com.google.protobuf.Timestamp getVscodeExtUpdatedAt();
+      /**
+       * <code>.google.protobuf.Timestamp vscode_ext_updated_at = 2;</code>
+       */
+      com.google.protobuf.TimestampOrBuilder getVscodeExtUpdatedAtOrBuilder();
+    }
+    /**
+     * Protobuf type {@code toit.model.User.State}
+     */
+    public  static final class State extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:toit.model.User.State)
+        StateOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use State.newBuilder() to construct.
+      private State(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private State() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new State();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private State(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.protobuf.Timestamp.Builder subBuilder = null;
+                if (cliUpdatedAt_ != null) {
+                  subBuilder = cliUpdatedAt_.toBuilder();
+                }
+                cliUpdatedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(cliUpdatedAt_);
+                  cliUpdatedAt_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 18: {
+                com.google.protobuf.Timestamp.Builder subBuilder = null;
+                if (vscodeExtUpdatedAt_ != null) {
+                  subBuilder = vscodeExtUpdatedAt_.toBuilder();
+                }
+                vscodeExtUpdatedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(vscodeExtUpdatedAt_);
+                  vscodeExtUpdatedAt_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.model.OrganizationProto.internal_static_toit_model_User_State_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.model.OrganizationProto.internal_static_toit_model_User_State_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.model.OrganizationProto.User.State.class, io.toit.proto.toit.model.OrganizationProto.User.State.Builder.class);
+      }
+
+      public static final int CLI_UPDATED_AT_FIELD_NUMBER = 1;
+      private com.google.protobuf.Timestamp cliUpdatedAt_;
+      /**
+       * <code>.google.protobuf.Timestamp cli_updated_at = 1;</code>
+       * @return Whether the cliUpdatedAt field is set.
+       */
+      public boolean hasCliUpdatedAt() {
+        return cliUpdatedAt_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp cli_updated_at = 1;</code>
+       * @return The cliUpdatedAt.
+       */
+      public com.google.protobuf.Timestamp getCliUpdatedAt() {
+        return cliUpdatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : cliUpdatedAt_;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp cli_updated_at = 1;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCliUpdatedAtOrBuilder() {
+        return getCliUpdatedAt();
+      }
+
+      public static final int VSCODE_EXT_UPDATED_AT_FIELD_NUMBER = 2;
+      private com.google.protobuf.Timestamp vscodeExtUpdatedAt_;
+      /**
+       * <code>.google.protobuf.Timestamp vscode_ext_updated_at = 2;</code>
+       * @return Whether the vscodeExtUpdatedAt field is set.
+       */
+      public boolean hasVscodeExtUpdatedAt() {
+        return vscodeExtUpdatedAt_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp vscode_ext_updated_at = 2;</code>
+       * @return The vscodeExtUpdatedAt.
+       */
+      public com.google.protobuf.Timestamp getVscodeExtUpdatedAt() {
+        return vscodeExtUpdatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : vscodeExtUpdatedAt_;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp vscode_ext_updated_at = 2;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getVscodeExtUpdatedAtOrBuilder() {
+        return getVscodeExtUpdatedAt();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (cliUpdatedAt_ != null) {
+          output.writeMessage(1, getCliUpdatedAt());
+        }
+        if (vscodeExtUpdatedAt_ != null) {
+          output.writeMessage(2, getVscodeExtUpdatedAt());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (cliUpdatedAt_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getCliUpdatedAt());
+        }
+        if (vscodeExtUpdatedAt_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getVscodeExtUpdatedAt());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof io.toit.proto.toit.model.OrganizationProto.User.State)) {
+          return super.equals(obj);
+        }
+        io.toit.proto.toit.model.OrganizationProto.User.State other = (io.toit.proto.toit.model.OrganizationProto.User.State) obj;
+
+        if (hasCliUpdatedAt() != other.hasCliUpdatedAt()) return false;
+        if (hasCliUpdatedAt()) {
+          if (!getCliUpdatedAt()
+              .equals(other.getCliUpdatedAt())) return false;
+        }
+        if (hasVscodeExtUpdatedAt() != other.hasVscodeExtUpdatedAt()) return false;
+        if (hasVscodeExtUpdatedAt()) {
+          if (!getVscodeExtUpdatedAt()
+              .equals(other.getVscodeExtUpdatedAt())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasCliUpdatedAt()) {
+          hash = (37 * hash) + CLI_UPDATED_AT_FIELD_NUMBER;
+          hash = (53 * hash) + getCliUpdatedAt().hashCode();
+        }
+        if (hasVscodeExtUpdatedAt()) {
+          hash = (37 * hash) + VSCODE_EXT_UPDATED_AT_FIELD_NUMBER;
+          hash = (53 * hash) + getVscodeExtUpdatedAt().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static io.toit.proto.toit.model.OrganizationProto.User.State parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.toit.proto.toit.model.OrganizationProto.User.State parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.toit.proto.toit.model.OrganizationProto.User.State parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.toit.proto.toit.model.OrganizationProto.User.State parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.toit.proto.toit.model.OrganizationProto.User.State parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.toit.proto.toit.model.OrganizationProto.User.State parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.toit.proto.toit.model.OrganizationProto.User.State parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static io.toit.proto.toit.model.OrganizationProto.User.State parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static io.toit.proto.toit.model.OrganizationProto.User.State parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static io.toit.proto.toit.model.OrganizationProto.User.State parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static io.toit.proto.toit.model.OrganizationProto.User.State parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static io.toit.proto.toit.model.OrganizationProto.User.State parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(io.toit.proto.toit.model.OrganizationProto.User.State prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code toit.model.User.State}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:toit.model.User.State)
+          io.toit.proto.toit.model.OrganizationProto.User.StateOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return io.toit.proto.toit.model.OrganizationProto.internal_static_toit_model_User_State_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return io.toit.proto.toit.model.OrganizationProto.internal_static_toit_model_User_State_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  io.toit.proto.toit.model.OrganizationProto.User.State.class, io.toit.proto.toit.model.OrganizationProto.User.State.Builder.class);
+        }
+
+        // Construct using io.toit.proto.toit.model.OrganizationProto.User.State.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (cliUpdatedAtBuilder_ == null) {
+            cliUpdatedAt_ = null;
+          } else {
+            cliUpdatedAt_ = null;
+            cliUpdatedAtBuilder_ = null;
+          }
+          if (vscodeExtUpdatedAtBuilder_ == null) {
+            vscodeExtUpdatedAt_ = null;
+          } else {
+            vscodeExtUpdatedAt_ = null;
+            vscodeExtUpdatedAtBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return io.toit.proto.toit.model.OrganizationProto.internal_static_toit_model_User_State_descriptor;
+        }
+
+        @java.lang.Override
+        public io.toit.proto.toit.model.OrganizationProto.User.State getDefaultInstanceForType() {
+          return io.toit.proto.toit.model.OrganizationProto.User.State.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public io.toit.proto.toit.model.OrganizationProto.User.State build() {
+          io.toit.proto.toit.model.OrganizationProto.User.State result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public io.toit.proto.toit.model.OrganizationProto.User.State buildPartial() {
+          io.toit.proto.toit.model.OrganizationProto.User.State result = new io.toit.proto.toit.model.OrganizationProto.User.State(this);
+          if (cliUpdatedAtBuilder_ == null) {
+            result.cliUpdatedAt_ = cliUpdatedAt_;
+          } else {
+            result.cliUpdatedAt_ = cliUpdatedAtBuilder_.build();
+          }
+          if (vscodeExtUpdatedAtBuilder_ == null) {
+            result.vscodeExtUpdatedAt_ = vscodeExtUpdatedAt_;
+          } else {
+            result.vscodeExtUpdatedAt_ = vscodeExtUpdatedAtBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof io.toit.proto.toit.model.OrganizationProto.User.State) {
+            return mergeFrom((io.toit.proto.toit.model.OrganizationProto.User.State)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(io.toit.proto.toit.model.OrganizationProto.User.State other) {
+          if (other == io.toit.proto.toit.model.OrganizationProto.User.State.getDefaultInstance()) return this;
+          if (other.hasCliUpdatedAt()) {
+            mergeCliUpdatedAt(other.getCliUpdatedAt());
+          }
+          if (other.hasVscodeExtUpdatedAt()) {
+            mergeVscodeExtUpdatedAt(other.getVscodeExtUpdatedAt());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          io.toit.proto.toit.model.OrganizationProto.User.State parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (io.toit.proto.toit.model.OrganizationProto.User.State) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private com.google.protobuf.Timestamp cliUpdatedAt_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> cliUpdatedAtBuilder_;
+        /**
+         * <code>.google.protobuf.Timestamp cli_updated_at = 1;</code>
+         * @return Whether the cliUpdatedAt field is set.
+         */
+        public boolean hasCliUpdatedAt() {
+          return cliUpdatedAtBuilder_ != null || cliUpdatedAt_ != null;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp cli_updated_at = 1;</code>
+         * @return The cliUpdatedAt.
+         */
+        public com.google.protobuf.Timestamp getCliUpdatedAt() {
+          if (cliUpdatedAtBuilder_ == null) {
+            return cliUpdatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : cliUpdatedAt_;
+          } else {
+            return cliUpdatedAtBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>.google.protobuf.Timestamp cli_updated_at = 1;</code>
+         */
+        public Builder setCliUpdatedAt(com.google.protobuf.Timestamp value) {
+          if (cliUpdatedAtBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            cliUpdatedAt_ = value;
+            onChanged();
+          } else {
+            cliUpdatedAtBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp cli_updated_at = 1;</code>
+         */
+        public Builder setCliUpdatedAt(
+            com.google.protobuf.Timestamp.Builder builderForValue) {
+          if (cliUpdatedAtBuilder_ == null) {
+            cliUpdatedAt_ = builderForValue.build();
+            onChanged();
+          } else {
+            cliUpdatedAtBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp cli_updated_at = 1;</code>
+         */
+        public Builder mergeCliUpdatedAt(com.google.protobuf.Timestamp value) {
+          if (cliUpdatedAtBuilder_ == null) {
+            if (cliUpdatedAt_ != null) {
+              cliUpdatedAt_ =
+                com.google.protobuf.Timestamp.newBuilder(cliUpdatedAt_).mergeFrom(value).buildPartial();
+            } else {
+              cliUpdatedAt_ = value;
+            }
+            onChanged();
+          } else {
+            cliUpdatedAtBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp cli_updated_at = 1;</code>
+         */
+        public Builder clearCliUpdatedAt() {
+          if (cliUpdatedAtBuilder_ == null) {
+            cliUpdatedAt_ = null;
+            onChanged();
+          } else {
+            cliUpdatedAt_ = null;
+            cliUpdatedAtBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp cli_updated_at = 1;</code>
+         */
+        public com.google.protobuf.Timestamp.Builder getCliUpdatedAtBuilder() {
+          
+          onChanged();
+          return getCliUpdatedAtFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.google.protobuf.Timestamp cli_updated_at = 1;</code>
+         */
+        public com.google.protobuf.TimestampOrBuilder getCliUpdatedAtOrBuilder() {
+          if (cliUpdatedAtBuilder_ != null) {
+            return cliUpdatedAtBuilder_.getMessageOrBuilder();
+          } else {
+            return cliUpdatedAt_ == null ?
+                com.google.protobuf.Timestamp.getDefaultInstance() : cliUpdatedAt_;
+          }
+        }
+        /**
+         * <code>.google.protobuf.Timestamp cli_updated_at = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+            getCliUpdatedAtFieldBuilder() {
+          if (cliUpdatedAtBuilder_ == null) {
+            cliUpdatedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                    getCliUpdatedAt(),
+                    getParentForChildren(),
+                    isClean());
+            cliUpdatedAt_ = null;
+          }
+          return cliUpdatedAtBuilder_;
+        }
+
+        private com.google.protobuf.Timestamp vscodeExtUpdatedAt_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> vscodeExtUpdatedAtBuilder_;
+        /**
+         * <code>.google.protobuf.Timestamp vscode_ext_updated_at = 2;</code>
+         * @return Whether the vscodeExtUpdatedAt field is set.
+         */
+        public boolean hasVscodeExtUpdatedAt() {
+          return vscodeExtUpdatedAtBuilder_ != null || vscodeExtUpdatedAt_ != null;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp vscode_ext_updated_at = 2;</code>
+         * @return The vscodeExtUpdatedAt.
+         */
+        public com.google.protobuf.Timestamp getVscodeExtUpdatedAt() {
+          if (vscodeExtUpdatedAtBuilder_ == null) {
+            return vscodeExtUpdatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : vscodeExtUpdatedAt_;
+          } else {
+            return vscodeExtUpdatedAtBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>.google.protobuf.Timestamp vscode_ext_updated_at = 2;</code>
+         */
+        public Builder setVscodeExtUpdatedAt(com.google.protobuf.Timestamp value) {
+          if (vscodeExtUpdatedAtBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            vscodeExtUpdatedAt_ = value;
+            onChanged();
+          } else {
+            vscodeExtUpdatedAtBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp vscode_ext_updated_at = 2;</code>
+         */
+        public Builder setVscodeExtUpdatedAt(
+            com.google.protobuf.Timestamp.Builder builderForValue) {
+          if (vscodeExtUpdatedAtBuilder_ == null) {
+            vscodeExtUpdatedAt_ = builderForValue.build();
+            onChanged();
+          } else {
+            vscodeExtUpdatedAtBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp vscode_ext_updated_at = 2;</code>
+         */
+        public Builder mergeVscodeExtUpdatedAt(com.google.protobuf.Timestamp value) {
+          if (vscodeExtUpdatedAtBuilder_ == null) {
+            if (vscodeExtUpdatedAt_ != null) {
+              vscodeExtUpdatedAt_ =
+                com.google.protobuf.Timestamp.newBuilder(vscodeExtUpdatedAt_).mergeFrom(value).buildPartial();
+            } else {
+              vscodeExtUpdatedAt_ = value;
+            }
+            onChanged();
+          } else {
+            vscodeExtUpdatedAtBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp vscode_ext_updated_at = 2;</code>
+         */
+        public Builder clearVscodeExtUpdatedAt() {
+          if (vscodeExtUpdatedAtBuilder_ == null) {
+            vscodeExtUpdatedAt_ = null;
+            onChanged();
+          } else {
+            vscodeExtUpdatedAt_ = null;
+            vscodeExtUpdatedAtBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp vscode_ext_updated_at = 2;</code>
+         */
+        public com.google.protobuf.Timestamp.Builder getVscodeExtUpdatedAtBuilder() {
+          
+          onChanged();
+          return getVscodeExtUpdatedAtFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.google.protobuf.Timestamp vscode_ext_updated_at = 2;</code>
+         */
+        public com.google.protobuf.TimestampOrBuilder getVscodeExtUpdatedAtOrBuilder() {
+          if (vscodeExtUpdatedAtBuilder_ != null) {
+            return vscodeExtUpdatedAtBuilder_.getMessageOrBuilder();
+          } else {
+            return vscodeExtUpdatedAt_ == null ?
+                com.google.protobuf.Timestamp.getDefaultInstance() : vscodeExtUpdatedAt_;
+          }
+        }
+        /**
+         * <code>.google.protobuf.Timestamp vscode_ext_updated_at = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+            getVscodeExtUpdatedAtFieldBuilder() {
+          if (vscodeExtUpdatedAtBuilder_ == null) {
+            vscodeExtUpdatedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                    getVscodeExtUpdatedAt(),
+                    getParentForChildren(),
+                    isClean());
+            vscodeExtUpdatedAt_ = null;
+          }
+          return vscodeExtUpdatedAtBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:toit.model.User.State)
+      }
+
+      // @@protoc_insertion_point(class_scope:toit.model.User.State)
+      private static final io.toit.proto.toit.model.OrganizationProto.User.State DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new io.toit.proto.toit.model.OrganizationProto.User.State();
+      }
+
+      public static io.toit.proto.toit.model.OrganizationProto.User.State getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<State>
+          PARSER = new com.google.protobuf.AbstractParser<State>() {
+        @java.lang.Override
+        public State parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new State(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<State> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<State> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.model.OrganizationProto.User.State getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     public static final int ID_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString id_;
     /**
@@ -5034,6 +5880,29 @@ public final class OrganizationProto {
       }
     }
 
+    public static final int STATE_FIELD_NUMBER = 7;
+    private io.toit.proto.toit.model.OrganizationProto.User.State state_;
+    /**
+     * <code>.toit.model.User.State state = 7;</code>
+     * @return Whether the state field is set.
+     */
+    public boolean hasState() {
+      return state_ != null;
+    }
+    /**
+     * <code>.toit.model.User.State state = 7;</code>
+     * @return The state.
+     */
+    public io.toit.proto.toit.model.OrganizationProto.User.State getState() {
+      return state_ == null ? io.toit.proto.toit.model.OrganizationProto.User.State.getDefaultInstance() : state_;
+    }
+    /**
+     * <code>.toit.model.User.State state = 7;</code>
+     */
+    public io.toit.proto.toit.model.OrganizationProto.User.StateOrBuilder getStateOrBuilder() {
+      return getState();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5066,6 +5935,9 @@ public final class OrganizationProto {
       if (!getRoleBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, role_);
       }
+      if (state_ != null) {
+        output.writeMessage(7, getState());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5095,6 +5967,10 @@ public final class OrganizationProto {
       }
       if (!getRoleBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, role_);
+      }
+      if (state_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getState());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5126,6 +6002,11 @@ public final class OrganizationProto {
       }
       if (!getRole()
           .equals(other.getRole())) return false;
+      if (hasState() != other.hasState()) return false;
+      if (hasState()) {
+        if (!getState()
+            .equals(other.getState())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5151,6 +6032,10 @@ public final class OrganizationProto {
       }
       hash = (37 * hash) + ROLE_FIELD_NUMBER;
       hash = (53 * hash) + getRole().hashCode();
+      if (hasState()) {
+        hash = (37 * hash) + STATE_FIELD_NUMBER;
+        hash = (53 * hash) + getState().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5300,6 +6185,12 @@ public final class OrganizationProto {
         }
         role_ = "";
 
+        if (stateBuilder_ == null) {
+          state_ = null;
+        } else {
+          state_ = null;
+          stateBuilder_ = null;
+        }
         return this;
       }
 
@@ -5336,6 +6227,11 @@ public final class OrganizationProto {
           result.settings_ = settingsBuilder_.build();
         }
         result.role_ = role_;
+        if (stateBuilder_ == null) {
+          result.state_ = state_;
+        } else {
+          result.state_ = stateBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -5404,6 +6300,9 @@ public final class OrganizationProto {
         if (!other.getRole().isEmpty()) {
           role_ = other.role_;
           onChanged();
+        }
+        if (other.hasState()) {
+          mergeState(other.getState());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5845,6 +6744,125 @@ public final class OrganizationProto {
         role_ = value;
         onChanged();
         return this;
+      }
+
+      private io.toit.proto.toit.model.OrganizationProto.User.State state_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.model.OrganizationProto.User.State, io.toit.proto.toit.model.OrganizationProto.User.State.Builder, io.toit.proto.toit.model.OrganizationProto.User.StateOrBuilder> stateBuilder_;
+      /**
+       * <code>.toit.model.User.State state = 7;</code>
+       * @return Whether the state field is set.
+       */
+      public boolean hasState() {
+        return stateBuilder_ != null || state_ != null;
+      }
+      /**
+       * <code>.toit.model.User.State state = 7;</code>
+       * @return The state.
+       */
+      public io.toit.proto.toit.model.OrganizationProto.User.State getState() {
+        if (stateBuilder_ == null) {
+          return state_ == null ? io.toit.proto.toit.model.OrganizationProto.User.State.getDefaultInstance() : state_;
+        } else {
+          return stateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.toit.model.User.State state = 7;</code>
+       */
+      public Builder setState(io.toit.proto.toit.model.OrganizationProto.User.State value) {
+        if (stateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          state_ = value;
+          onChanged();
+        } else {
+          stateBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.User.State state = 7;</code>
+       */
+      public Builder setState(
+          io.toit.proto.toit.model.OrganizationProto.User.State.Builder builderForValue) {
+        if (stateBuilder_ == null) {
+          state_ = builderForValue.build();
+          onChanged();
+        } else {
+          stateBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.User.State state = 7;</code>
+       */
+      public Builder mergeState(io.toit.proto.toit.model.OrganizationProto.User.State value) {
+        if (stateBuilder_ == null) {
+          if (state_ != null) {
+            state_ =
+              io.toit.proto.toit.model.OrganizationProto.User.State.newBuilder(state_).mergeFrom(value).buildPartial();
+          } else {
+            state_ = value;
+          }
+          onChanged();
+        } else {
+          stateBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.User.State state = 7;</code>
+       */
+      public Builder clearState() {
+        if (stateBuilder_ == null) {
+          state_ = null;
+          onChanged();
+        } else {
+          state_ = null;
+          stateBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.User.State state = 7;</code>
+       */
+      public io.toit.proto.toit.model.OrganizationProto.User.State.Builder getStateBuilder() {
+        
+        onChanged();
+        return getStateFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.toit.model.User.State state = 7;</code>
+       */
+      public io.toit.proto.toit.model.OrganizationProto.User.StateOrBuilder getStateOrBuilder() {
+        if (stateBuilder_ != null) {
+          return stateBuilder_.getMessageOrBuilder();
+        } else {
+          return state_ == null ?
+              io.toit.proto.toit.model.OrganizationProto.User.State.getDefaultInstance() : state_;
+        }
+      }
+      /**
+       * <code>.toit.model.User.State state = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.model.OrganizationProto.User.State, io.toit.proto.toit.model.OrganizationProto.User.State.Builder, io.toit.proto.toit.model.OrganizationProto.User.StateOrBuilder> 
+          getStateFieldBuilder() {
+        if (stateBuilder_ == null) {
+          stateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.toit.proto.toit.model.OrganizationProto.User.State, io.toit.proto.toit.model.OrganizationProto.User.State.Builder, io.toit.proto.toit.model.OrganizationProto.User.StateOrBuilder>(
+                  getState(),
+                  getParentForChildren(),
+                  isClean());
+          state_ = null;
+        }
+        return stateBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -7892,6 +8910,11 @@ public final class OrganizationProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_toit_model_User_Settings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_model_User_State_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_model_User_State_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_toit_model_APIKey_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -7930,20 +8953,24 @@ public final class OrganizationProto {
       "mentDetails\022\r\n\005last4\030\001 \001(\t\022\016\n\006expiry\030\002 \001" +
       "(\t\022\024\n\014expiry_month\030\003 \001(\t\022\023\n\013expiry_year\030" +
       "\004 \001(\t\022\r\n\005brand\030\005 \001(\t\022\024\n\014country_code\030\006 \001" +
-      "(\t\022\021\n\tcvc_check\030\007 \001(\t\"\273\001\n\004User\022\n\n\002id\030\001 \001" +
+      "(\t\022\021\n\tcvc_check\030\007 \001(\t\"\332\002\n\004User\022\n\n\002id\030\001 \001" +
       "(\014\022\027\n\017organization_id\030\002 \001(\014\022\r\n\005email\030\003 \001" +
       "(\t\022\014\n\004name\030\004 \001(\t\022+\n\010settings\030\005 \001(\0132\031.toi" +
-      "t.model.User.Settings\022\014\n\004role\030\006 \001(\t\0326\n\010S" +
-      "ettings\022\026\n\016welcome_closed\030\001 \001(\010\022\022\n\nnewsl" +
-      "etter\030\002 \001(\010\"k\n\006APIKey\022\n\n\002id\030\001 \001(\014\022\027\n\017org" +
-      "anization_id\030\002 \001(\014\022\014\n\004name\030\003 \001(\t\022.\n\ncrea" +
-      "ted_at\030\004 \001(\0132\032.google.protobuf.Timestamp" +
-      "\"/\n\004Tier\"\'\n\004Type\022\013\n\007UNKNOWN\020\000\022\010\n\004FREE\020\001\022" +
-      "\010\n\004PAID\020\002\"=\n\010Customer\"1\n\004Type\022\013\n\007UNKNOWN" +
-      "\020\000\022\n\n\006PERSON\020\001\022\020\n\014ORGANIZATION\020\002Bk\n\030io.t" +
-      "oit.proto.toit.modelB\021OrganizationProtoZ" +
-      ")github.com/toitware/api/golang/toit/mod" +
-      "el\252\002\020Toit.Proto.Modelb\006proto3"
+      "t.model.User.Settings\022\014\n\004role\030\006 \001(\t\022%\n\005s" +
+      "tate\030\007 \001(\0132\026.toit.model.User.State\0326\n\010Se" +
+      "ttings\022\026\n\016welcome_closed\030\001 \001(\010\022\022\n\nnewsle" +
+      "tter\030\002 \001(\010\032v\n\005State\0222\n\016cli_updated_at\030\001 " +
+      "\001(\0132\032.google.protobuf.Timestamp\0229\n\025vscod" +
+      "e_ext_updated_at\030\002 \001(\0132\032.google.protobuf" +
+      ".Timestamp\"k\n\006APIKey\022\n\n\002id\030\001 \001(\014\022\027\n\017orga" +
+      "nization_id\030\002 \001(\014\022\014\n\004name\030\003 \001(\t\022.\n\ncreat" +
+      "ed_at\030\004 \001(\0132\032.google.protobuf.Timestamp\"" +
+      "/\n\004Tier\"\'\n\004Type\022\013\n\007UNKNOWN\020\000\022\010\n\004FREE\020\001\022\010" +
+      "\n\004PAID\020\002\"=\n\010Customer\"1\n\004Type\022\013\n\007UNKNOWN\020" +
+      "\000\022\n\n\006PERSON\020\001\022\020\n\014ORGANIZATION\020\002Bk\n\030io.to" +
+      "it.proto.toit.modelB\021OrganizationProtoZ)" +
+      "github.com/toitware/api/golang/toit/mode" +
+      "l\252\002\020Toit.Proto.Modelb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7967,13 +8994,19 @@ public final class OrganizationProto {
     internal_static_toit_model_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_User_descriptor,
-        new java.lang.String[] { "Id", "OrganizationId", "Email", "Name", "Settings", "Role", });
+        new java.lang.String[] { "Id", "OrganizationId", "Email", "Name", "Settings", "Role", "State", });
     internal_static_toit_model_User_Settings_descriptor =
       internal_static_toit_model_User_descriptor.getNestedTypes().get(0);
     internal_static_toit_model_User_Settings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_User_Settings_descriptor,
         new java.lang.String[] { "WelcomeClosed", "Newsletter", });
+    internal_static_toit_model_User_State_descriptor =
+      internal_static_toit_model_User_descriptor.getNestedTypes().get(1);
+    internal_static_toit_model_User_State_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_model_User_State_descriptor,
+        new java.lang.String[] { "CliUpdatedAt", "VscodeExtUpdatedAt", });
     internal_static_toit_model_APIKey_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_toit_model_APIKey_fieldAccessorTable = new
