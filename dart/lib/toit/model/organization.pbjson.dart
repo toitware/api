@@ -134,27 +134,27 @@ const User_State$json = const {
   '1': 'State',
   '2': const [
     const {
-      '1': 'cli_updated_at',
+      '1': 'cli_installed_at',
       '3': 1,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
-      '10': 'cliUpdatedAt'
+      '10': 'cliInstalledAt'
     },
     const {
-      '1': 'vscode_ext_updated_at',
+      '1': 'vscode_ext_installed_at',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
-      '10': 'vscodeExtUpdatedAt'
+      '10': 'vscodeExtInstalledAt'
     },
   ],
 };
 
 /// Descriptor for `User`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List userDescriptor = $convert.base64Decode(
-    'CgRVc2VyEg4KAmlkGAEgASgMUgJpZBInCg9vcmdhbml6YXRpb25faWQYAiABKAxSDm9yZ2FuaXphdGlvbklkEhQKBWVtYWlsGAMgASgJUgVlbWFpbBISCgRuYW1lGAQgASgJUgRuYW1lEjUKCHNldHRpbmdzGAUgASgLMhkudG9pdC5tb2RlbC5Vc2VyLlNldHRpbmdzUghzZXR0aW5ncxISCgRyb2xlGAYgASgJUgRyb2xlEiwKBXN0YXRlGAcgASgLMhYudG9pdC5tb2RlbC5Vc2VyLlN0YXRlUgVzdGF0ZRpRCghTZXR0aW5ncxIlCg53ZWxjb21lX2Nsb3NlZBgBIAEoCFINd2VsY29tZUNsb3NlZBIeCgpuZXdzbGV0dGVyGAIgASgIUgpuZXdzbGV0dGVyGpgBCgVTdGF0ZRJACg5jbGlfdXBkYXRlZF9hdBgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSDGNsaVVwZGF0ZWRBdBJNChV2c2NvZGVfZXh0X3VwZGF0ZWRfYXQYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUhJ2c2NvZGVFeHRVcGRhdGVkQXQ=');
+    'CgRVc2VyEg4KAmlkGAEgASgMUgJpZBInCg9vcmdhbml6YXRpb25faWQYAiABKAxSDm9yZ2FuaXphdGlvbklkEhQKBWVtYWlsGAMgASgJUgVlbWFpbBISCgRuYW1lGAQgASgJUgRuYW1lEjUKCHNldHRpbmdzGAUgASgLMhkudG9pdC5tb2RlbC5Vc2VyLlNldHRpbmdzUghzZXR0aW5ncxISCgRyb2xlGAYgASgJUgRyb2xlEiwKBXN0YXRlGAcgASgLMhYudG9pdC5tb2RlbC5Vc2VyLlN0YXRlUgVzdGF0ZRpRCghTZXR0aW5ncxIlCg53ZWxjb21lX2Nsb3NlZBgBIAEoCFINd2VsY29tZUNsb3NlZBIeCgpuZXdzbGV0dGVyGAIgASgIUgpuZXdzbGV0dGVyGqABCgVTdGF0ZRJEChBjbGlfaW5zdGFsbGVkX2F0GAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIOY2xpSW5zdGFsbGVkQXQSUQoXdnNjb2RlX2V4dF9pbnN0YWxsZWRfYXQYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUhR2c2NvZGVFeHRJbnN0YWxsZWRBdA==');
 @$core.Deprecated('Use aPIKeyDescriptor instead')
 const APIKey$json = const {
   '1': 'APIKey',

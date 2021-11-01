@@ -623,27 +623,27 @@ class User_State extends $pb.GeneratedMessage {
               : 'toit.model'),
       createEmptyInstance: create)
     ..aOM<$0.Timestamp>(
-        1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cliUpdatedAt',
+        1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cliInstalledAt',
         subBuilder: $0.Timestamp.create)
     ..aOM<$0.Timestamp>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
-            : 'vscodeExtUpdatedAt',
+            : 'vscodeExtInstalledAt',
         subBuilder: $0.Timestamp.create)
     ..hasRequiredFields = false;
 
   User_State._() : super();
   factory User_State({
-    $0.Timestamp? cliUpdatedAt,
-    $0.Timestamp? vscodeExtUpdatedAt,
+    $0.Timestamp? cliInstalledAt,
+    $0.Timestamp? vscodeExtInstalledAt,
   }) {
     final _result = create();
-    if (cliUpdatedAt != null) {
-      _result.cliUpdatedAt = cliUpdatedAt;
+    if (cliInstalledAt != null) {
+      _result.cliInstalledAt = cliInstalledAt;
     }
-    if (vscodeExtUpdatedAt != null) {
-      _result.vscodeExtUpdatedAt = vscodeExtUpdatedAt;
+    if (vscodeExtInstalledAt != null) {
+      _result.vscodeExtInstalledAt = vscodeExtInstalledAt;
     }
     return _result;
   }
@@ -674,32 +674,32 @@ class User_State extends $pb.GeneratedMessage {
   static User_State? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $0.Timestamp get cliUpdatedAt => $_getN(0);
+  $0.Timestamp get cliInstalledAt => $_getN(0);
   @$pb.TagNumber(1)
-  set cliUpdatedAt($0.Timestamp v) {
+  set cliInstalledAt($0.Timestamp v) {
     setField(1, v);
   }
 
   @$pb.TagNumber(1)
-  $core.bool hasCliUpdatedAt() => $_has(0);
+  $core.bool hasCliInstalledAt() => $_has(0);
   @$pb.TagNumber(1)
-  void clearCliUpdatedAt() => clearField(1);
+  void clearCliInstalledAt() => clearField(1);
   @$pb.TagNumber(1)
-  $0.Timestamp ensureCliUpdatedAt() => $_ensure(0);
+  $0.Timestamp ensureCliInstalledAt() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $0.Timestamp get vscodeExtUpdatedAt => $_getN(1);
+  $0.Timestamp get vscodeExtInstalledAt => $_getN(1);
   @$pb.TagNumber(2)
-  set vscodeExtUpdatedAt($0.Timestamp v) {
+  set vscodeExtInstalledAt($0.Timestamp v) {
     setField(2, v);
   }
 
   @$pb.TagNumber(2)
-  $core.bool hasVscodeExtUpdatedAt() => $_has(1);
+  $core.bool hasVscodeExtInstalledAt() => $_has(1);
   @$pb.TagNumber(2)
-  void clearVscodeExtUpdatedAt() => clearField(2);
+  void clearVscodeExtInstalledAt() => clearField(2);
   @$pb.TagNumber(2)
-  $0.Timestamp ensureVscodeExtUpdatedAt() => $_ensure(1);
+  $0.Timestamp ensureVscodeExtInstalledAt() => $_ensure(1);
 }
 
 class User extends $pb.GeneratedMessage {
