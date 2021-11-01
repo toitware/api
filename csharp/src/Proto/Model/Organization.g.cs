@@ -37,30 +37,30 @@ namespace Toit.Proto.Model {
             "cGUSEgoKaHdpZF9xdW90YRgQIAEoBCKSAQoOUGF5bWVudERldGFpbHMSDQoF",
             "bGFzdDQYASABKAkSDgoGZXhwaXJ5GAIgASgJEhQKDGV4cGlyeV9tb250aBgD",
             "IAEoCRITCgtleHBpcnlfeWVhchgEIAEoCRINCgVicmFuZBgFIAEoCRIUCgxj",
-            "b3VudHJ5X2NvZGUYBiABKAkSEQoJY3ZjX2NoZWNrGAcgASgJItoCCgRVc2Vy",
+            "b3VudHJ5X2NvZGUYBiABKAkSEQoJY3ZjX2NoZWNrGAcgASgJIt4CCgRVc2Vy",
             "EgoKAmlkGAEgASgMEhcKD29yZ2FuaXphdGlvbl9pZBgCIAEoDBINCgVlbWFp",
             "bBgDIAEoCRIMCgRuYW1lGAQgASgJEisKCHNldHRpbmdzGAUgASgLMhkudG9p",
             "dC5tb2RlbC5Vc2VyLlNldHRpbmdzEgwKBHJvbGUYBiABKAkSJQoFc3RhdGUY",
             "ByABKAsyFi50b2l0Lm1vZGVsLlVzZXIuU3RhdGUaNgoIU2V0dGluZ3MSFgoO",
-            "d2VsY29tZV9jbG9zZWQYASABKAgSEgoKbmV3c2xldHRlchgCIAEoCBp2CgVT",
-            "dGF0ZRIyCg5jbGlfdXBkYXRlZF9hdBgBIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXASOQoVdnNjb2RlX2V4dF91cGRhdGVkX2F0GAIgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCJrCgZBUElLZXkSCgoCaWQYASAB",
-            "KAwSFwoPb3JnYW5pemF0aW9uX2lkGAIgASgMEgwKBG5hbWUYAyABKAkSLgoK",
-            "Y3JlYXRlZF9hdBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAi",
-            "LwoEVGllciInCgRUeXBlEgsKB1VOS05PV04QABIICgRGUkVFEAESCAoEUEFJ",
-            "RBACIj0KCEN1c3RvbWVyIjEKBFR5cGUSCwoHVU5LTk9XThAAEgoKBlBFUlNP",
-            "ThABEhAKDE9SR0FOSVpBVElPThACQmsKGGlvLnRvaXQucHJvdG8udG9pdC5t",
-            "b2RlbEIRT3JnYW5pemF0aW9uUHJvdG9aKWdpdGh1Yi5jb20vdG9pdHdhcmUv",
-            "YXBpL2dvbGFuZy90b2l0L21vZGVsqgIQVG9pdC5Qcm90by5Nb2RlbGIGcHJv",
-            "dG8z"));
+            "d2VsY29tZV9jbG9zZWQYASABKAgSEgoKbmV3c2xldHRlchgCIAEoCBp6CgVT",
+            "dGF0ZRI0ChBjbGlfaW5zdGFsbGVkX2F0GAEgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcBI7Chd2c2NvZGVfZXh0X2luc3RhbGxlZF9hdBgCIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiawoGQVBJS2V5EgoKAmlk",
+            "GAEgASgMEhcKD29yZ2FuaXphdGlvbl9pZBgCIAEoDBIMCgRuYW1lGAMgASgJ",
+            "Ei4KCmNyZWF0ZWRfYXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wIi8KBFRpZXIiJwoEVHlwZRILCgdVTktOT1dOEAASCAoERlJFRRABEggK",
+            "BFBBSUQQAiI9CghDdXN0b21lciIxCgRUeXBlEgsKB1VOS05PV04QABIKCgZQ",
+            "RVJTT04QARIQCgxPUkdBTklaQVRJT04QAkJrChhpby50b2l0LnByb3RvLnRv",
+            "aXQubW9kZWxCEU9yZ2FuaXphdGlvblByb3RvWilnaXRodWIuY29tL3RvaXR3",
+            "YXJlL2FwaS9nb2xhbmcvdG9pdC9tb2RlbKoCEFRvaXQuUHJvdG8uTW9kZWxi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.Organization), global::Toit.Proto.Model.Organization.Parser, new[]{ "Id", "Name", "DefaultSdk", "Email", "City", "Country", "PhoneNumber", "CvrNumber", "Tier", "PaymentDetails", "AddressLine", "PostalCode", "VatNumber", "VatCountryCode", "Customer", "HwidQuota" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.PaymentDetails), global::Toit.Proto.Model.PaymentDetails.Parser, new[]{ "Last4", "Expiry", "ExpiryMonth", "ExpiryYear", "Brand", "CountryCode", "CvcCheck" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.User), global::Toit.Proto.Model.User.Parser, new[]{ "Id", "OrganizationId", "Email", "Name", "Settings", "Role", "State" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.User.Types.Settings), global::Toit.Proto.Model.User.Types.Settings.Parser, new[]{ "WelcomeClosed", "Newsletter" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.User.Types.State), global::Toit.Proto.Model.User.Types.State.Parser, new[]{ "CliUpdatedAt", "VscodeExtUpdatedAt" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.User.Types.State), global::Toit.Proto.Model.User.Types.State.Parser, new[]{ "CliInstalledAt", "VscodeExtInstalledAt" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.APIKey), global::Toit.Proto.Model.APIKey.Parser, new[]{ "Id", "OrganizationId", "Name", "CreatedAt" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.Tier), global::Toit.Proto.Model.Tier.Parser, null, null, new[]{ typeof(global::Toit.Proto.Model.Tier.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.Customer), global::Toit.Proto.Model.Customer.Parser, null, null, new[]{ typeof(global::Toit.Proto.Model.Customer.Types.Type) }, null, null)
@@ -1932,8 +1932,8 @@ namespace Toit.Proto.Model {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public State(State other) : this() {
-          cliUpdatedAt_ = other.cliUpdatedAt_ != null ? other.cliUpdatedAt_.Clone() : null;
-          vscodeExtUpdatedAt_ = other.vscodeExtUpdatedAt_ != null ? other.vscodeExtUpdatedAt_.Clone() : null;
+          cliInstalledAt_ = other.cliInstalledAt_ != null ? other.cliInstalledAt_.Clone() : null;
+          vscodeExtInstalledAt_ = other.vscodeExtInstalledAt_ != null ? other.vscodeExtInstalledAt_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1943,27 +1943,27 @@ namespace Toit.Proto.Model {
           return new State(this);
         }
 
-        /// <summary>Field number for the "cli_updated_at" field.</summary>
-        public const int CliUpdatedAtFieldNumber = 1;
-        private global::Google.Protobuf.WellKnownTypes.Timestamp cliUpdatedAt_;
+        /// <summary>Field number for the "cli_installed_at" field.</summary>
+        public const int CliInstalledAtFieldNumber = 1;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp cliInstalledAt_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Google.Protobuf.WellKnownTypes.Timestamp CliUpdatedAt {
-          get { return cliUpdatedAt_; }
+        public global::Google.Protobuf.WellKnownTypes.Timestamp CliInstalledAt {
+          get { return cliInstalledAt_; }
           set {
-            cliUpdatedAt_ = value;
+            cliInstalledAt_ = value;
           }
         }
 
-        /// <summary>Field number for the "vscode_ext_updated_at" field.</summary>
-        public const int VscodeExtUpdatedAtFieldNumber = 2;
-        private global::Google.Protobuf.WellKnownTypes.Timestamp vscodeExtUpdatedAt_;
+        /// <summary>Field number for the "vscode_ext_installed_at" field.</summary>
+        public const int VscodeExtInstalledAtFieldNumber = 2;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp vscodeExtInstalledAt_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Google.Protobuf.WellKnownTypes.Timestamp VscodeExtUpdatedAt {
-          get { return vscodeExtUpdatedAt_; }
+        public global::Google.Protobuf.WellKnownTypes.Timestamp VscodeExtInstalledAt {
+          get { return vscodeExtInstalledAt_; }
           set {
-            vscodeExtUpdatedAt_ = value;
+            vscodeExtInstalledAt_ = value;
           }
         }
 
@@ -1982,8 +1982,8 @@ namespace Toit.Proto.Model {
           if (ReferenceEquals(other, this)) {
             return true;
           }
-          if (!object.Equals(CliUpdatedAt, other.CliUpdatedAt)) return false;
-          if (!object.Equals(VscodeExtUpdatedAt, other.VscodeExtUpdatedAt)) return false;
+          if (!object.Equals(CliInstalledAt, other.CliInstalledAt)) return false;
+          if (!object.Equals(VscodeExtInstalledAt, other.VscodeExtInstalledAt)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1991,8 +1991,8 @@ namespace Toit.Proto.Model {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (cliUpdatedAt_ != null) hash ^= CliUpdatedAt.GetHashCode();
-          if (vscodeExtUpdatedAt_ != null) hash ^= VscodeExtUpdatedAt.GetHashCode();
+          if (cliInstalledAt_ != null) hash ^= CliInstalledAt.GetHashCode();
+          if (vscodeExtInstalledAt_ != null) hash ^= VscodeExtInstalledAt.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -2011,13 +2011,13 @@ namespace Toit.Proto.Model {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
-          if (cliUpdatedAt_ != null) {
+          if (cliInstalledAt_ != null) {
             output.WriteRawTag(10);
-            output.WriteMessage(CliUpdatedAt);
+            output.WriteMessage(CliInstalledAt);
           }
-          if (vscodeExtUpdatedAt_ != null) {
+          if (vscodeExtInstalledAt_ != null) {
             output.WriteRawTag(18);
-            output.WriteMessage(VscodeExtUpdatedAt);
+            output.WriteMessage(VscodeExtInstalledAt);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
@@ -2029,13 +2029,13 @@ namespace Toit.Proto.Model {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (cliUpdatedAt_ != null) {
+          if (cliInstalledAt_ != null) {
             output.WriteRawTag(10);
-            output.WriteMessage(CliUpdatedAt);
+            output.WriteMessage(CliInstalledAt);
           }
-          if (vscodeExtUpdatedAt_ != null) {
+          if (vscodeExtInstalledAt_ != null) {
             output.WriteRawTag(18);
-            output.WriteMessage(VscodeExtUpdatedAt);
+            output.WriteMessage(VscodeExtInstalledAt);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
@@ -2047,11 +2047,11 @@ namespace Toit.Proto.Model {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (cliUpdatedAt_ != null) {
-            size += 1 + pb::CodedOutputStream.ComputeMessageSize(CliUpdatedAt);
+          if (cliInstalledAt_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(CliInstalledAt);
           }
-          if (vscodeExtUpdatedAt_ != null) {
-            size += 1 + pb::CodedOutputStream.ComputeMessageSize(VscodeExtUpdatedAt);
+          if (vscodeExtInstalledAt_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(VscodeExtInstalledAt);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -2065,17 +2065,17 @@ namespace Toit.Proto.Model {
           if (other == null) {
             return;
           }
-          if (other.cliUpdatedAt_ != null) {
-            if (cliUpdatedAt_ == null) {
-              CliUpdatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          if (other.cliInstalledAt_ != null) {
+            if (cliInstalledAt_ == null) {
+              CliInstalledAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            CliUpdatedAt.MergeFrom(other.CliUpdatedAt);
+            CliInstalledAt.MergeFrom(other.CliInstalledAt);
           }
-          if (other.vscodeExtUpdatedAt_ != null) {
-            if (vscodeExtUpdatedAt_ == null) {
-              VscodeExtUpdatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          if (other.vscodeExtInstalledAt_ != null) {
+            if (vscodeExtInstalledAt_ == null) {
+              VscodeExtInstalledAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            VscodeExtUpdatedAt.MergeFrom(other.VscodeExtUpdatedAt);
+            VscodeExtInstalledAt.MergeFrom(other.VscodeExtInstalledAt);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -2093,17 +2093,17 @@ namespace Toit.Proto.Model {
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
               case 10: {
-                if (cliUpdatedAt_ == null) {
-                  CliUpdatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                if (cliInstalledAt_ == null) {
+                  CliInstalledAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
                 }
-                input.ReadMessage(CliUpdatedAt);
+                input.ReadMessage(CliInstalledAt);
                 break;
               }
               case 18: {
-                if (vscodeExtUpdatedAt_ == null) {
-                  VscodeExtUpdatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                if (vscodeExtInstalledAt_ == null) {
+                  VscodeExtInstalledAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
                 }
-                input.ReadMessage(VscodeExtUpdatedAt);
+                input.ReadMessage(VscodeExtInstalledAt);
                 break;
               }
             }
@@ -2122,17 +2122,17 @@ namespace Toit.Proto.Model {
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
                 break;
               case 10: {
-                if (cliUpdatedAt_ == null) {
-                  CliUpdatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                if (cliInstalledAt_ == null) {
+                  CliInstalledAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
                 }
-                input.ReadMessage(CliUpdatedAt);
+                input.ReadMessage(CliInstalledAt);
                 break;
               }
               case 18: {
-                if (vscodeExtUpdatedAt_ == null) {
-                  VscodeExtUpdatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                if (vscodeExtInstalledAt_ == null) {
+                  VscodeExtInstalledAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
                 }
-                input.ReadMessage(VscodeExtUpdatedAt);
+                input.ReadMessage(VscodeExtInstalledAt);
                 break;
               }
             }
