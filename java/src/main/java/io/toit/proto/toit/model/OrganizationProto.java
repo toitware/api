@@ -4916,34 +4916,34 @@ public final class OrganizationProto {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>.google.protobuf.Timestamp cli_updated_at = 1;</code>
-       * @return Whether the cliUpdatedAt field is set.
+       * <code>.google.protobuf.Timestamp cli_installed_at = 1;</code>
+       * @return Whether the cliInstalledAt field is set.
        */
-      boolean hasCliUpdatedAt();
+      boolean hasCliInstalledAt();
       /**
-       * <code>.google.protobuf.Timestamp cli_updated_at = 1;</code>
-       * @return The cliUpdatedAt.
+       * <code>.google.protobuf.Timestamp cli_installed_at = 1;</code>
+       * @return The cliInstalledAt.
        */
-      com.google.protobuf.Timestamp getCliUpdatedAt();
+      com.google.protobuf.Timestamp getCliInstalledAt();
       /**
-       * <code>.google.protobuf.Timestamp cli_updated_at = 1;</code>
+       * <code>.google.protobuf.Timestamp cli_installed_at = 1;</code>
        */
-      com.google.protobuf.TimestampOrBuilder getCliUpdatedAtOrBuilder();
+      com.google.protobuf.TimestampOrBuilder getCliInstalledAtOrBuilder();
 
       /**
-       * <code>.google.protobuf.Timestamp vscode_ext_updated_at = 2;</code>
-       * @return Whether the vscodeExtUpdatedAt field is set.
+       * <code>.google.protobuf.Timestamp vscode_ext_installed_at = 2;</code>
+       * @return Whether the vscodeExtInstalledAt field is set.
        */
-      boolean hasVscodeExtUpdatedAt();
+      boolean hasVscodeExtInstalledAt();
       /**
-       * <code>.google.protobuf.Timestamp vscode_ext_updated_at = 2;</code>
-       * @return The vscodeExtUpdatedAt.
+       * <code>.google.protobuf.Timestamp vscode_ext_installed_at = 2;</code>
+       * @return The vscodeExtInstalledAt.
        */
-      com.google.protobuf.Timestamp getVscodeExtUpdatedAt();
+      com.google.protobuf.Timestamp getVscodeExtInstalledAt();
       /**
-       * <code>.google.protobuf.Timestamp vscode_ext_updated_at = 2;</code>
+       * <code>.google.protobuf.Timestamp vscode_ext_installed_at = 2;</code>
        */
-      com.google.protobuf.TimestampOrBuilder getVscodeExtUpdatedAtOrBuilder();
+      com.google.protobuf.TimestampOrBuilder getVscodeExtInstalledAtOrBuilder();
     }
     /**
      * Protobuf type {@code toit.model.User.State}
@@ -4992,26 +4992,26 @@ public final class OrganizationProto {
                 break;
               case 10: {
                 com.google.protobuf.Timestamp.Builder subBuilder = null;
-                if (cliUpdatedAt_ != null) {
-                  subBuilder = cliUpdatedAt_.toBuilder();
+                if (cliInstalledAt_ != null) {
+                  subBuilder = cliInstalledAt_.toBuilder();
                 }
-                cliUpdatedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+                cliInstalledAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
                 if (subBuilder != null) {
-                  subBuilder.mergeFrom(cliUpdatedAt_);
-                  cliUpdatedAt_ = subBuilder.buildPartial();
+                  subBuilder.mergeFrom(cliInstalledAt_);
+                  cliInstalledAt_ = subBuilder.buildPartial();
                 }
 
                 break;
               }
               case 18: {
                 com.google.protobuf.Timestamp.Builder subBuilder = null;
-                if (vscodeExtUpdatedAt_ != null) {
-                  subBuilder = vscodeExtUpdatedAt_.toBuilder();
+                if (vscodeExtInstalledAt_ != null) {
+                  subBuilder = vscodeExtInstalledAt_.toBuilder();
                 }
-                vscodeExtUpdatedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+                vscodeExtInstalledAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
                 if (subBuilder != null) {
-                  subBuilder.mergeFrom(vscodeExtUpdatedAt_);
-                  vscodeExtUpdatedAt_ = subBuilder.buildPartial();
+                  subBuilder.mergeFrom(vscodeExtInstalledAt_);
+                  vscodeExtInstalledAt_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -5048,50 +5048,50 @@ public final class OrganizationProto {
                 io.toit.proto.toit.model.OrganizationProto.User.State.class, io.toit.proto.toit.model.OrganizationProto.User.State.Builder.class);
       }
 
-      public static final int CLI_UPDATED_AT_FIELD_NUMBER = 1;
-      private com.google.protobuf.Timestamp cliUpdatedAt_;
+      public static final int CLI_INSTALLED_AT_FIELD_NUMBER = 1;
+      private com.google.protobuf.Timestamp cliInstalledAt_;
       /**
-       * <code>.google.protobuf.Timestamp cli_updated_at = 1;</code>
-       * @return Whether the cliUpdatedAt field is set.
+       * <code>.google.protobuf.Timestamp cli_installed_at = 1;</code>
+       * @return Whether the cliInstalledAt field is set.
        */
-      public boolean hasCliUpdatedAt() {
-        return cliUpdatedAt_ != null;
+      public boolean hasCliInstalledAt() {
+        return cliInstalledAt_ != null;
       }
       /**
-       * <code>.google.protobuf.Timestamp cli_updated_at = 1;</code>
-       * @return The cliUpdatedAt.
+       * <code>.google.protobuf.Timestamp cli_installed_at = 1;</code>
+       * @return The cliInstalledAt.
        */
-      public com.google.protobuf.Timestamp getCliUpdatedAt() {
-        return cliUpdatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : cliUpdatedAt_;
+      public com.google.protobuf.Timestamp getCliInstalledAt() {
+        return cliInstalledAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : cliInstalledAt_;
       }
       /**
-       * <code>.google.protobuf.Timestamp cli_updated_at = 1;</code>
+       * <code>.google.protobuf.Timestamp cli_installed_at = 1;</code>
        */
-      public com.google.protobuf.TimestampOrBuilder getCliUpdatedAtOrBuilder() {
-        return getCliUpdatedAt();
+      public com.google.protobuf.TimestampOrBuilder getCliInstalledAtOrBuilder() {
+        return getCliInstalledAt();
       }
 
-      public static final int VSCODE_EXT_UPDATED_AT_FIELD_NUMBER = 2;
-      private com.google.protobuf.Timestamp vscodeExtUpdatedAt_;
+      public static final int VSCODE_EXT_INSTALLED_AT_FIELD_NUMBER = 2;
+      private com.google.protobuf.Timestamp vscodeExtInstalledAt_;
       /**
-       * <code>.google.protobuf.Timestamp vscode_ext_updated_at = 2;</code>
-       * @return Whether the vscodeExtUpdatedAt field is set.
+       * <code>.google.protobuf.Timestamp vscode_ext_installed_at = 2;</code>
+       * @return Whether the vscodeExtInstalledAt field is set.
        */
-      public boolean hasVscodeExtUpdatedAt() {
-        return vscodeExtUpdatedAt_ != null;
+      public boolean hasVscodeExtInstalledAt() {
+        return vscodeExtInstalledAt_ != null;
       }
       /**
-       * <code>.google.protobuf.Timestamp vscode_ext_updated_at = 2;</code>
-       * @return The vscodeExtUpdatedAt.
+       * <code>.google.protobuf.Timestamp vscode_ext_installed_at = 2;</code>
+       * @return The vscodeExtInstalledAt.
        */
-      public com.google.protobuf.Timestamp getVscodeExtUpdatedAt() {
-        return vscodeExtUpdatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : vscodeExtUpdatedAt_;
+      public com.google.protobuf.Timestamp getVscodeExtInstalledAt() {
+        return vscodeExtInstalledAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : vscodeExtInstalledAt_;
       }
       /**
-       * <code>.google.protobuf.Timestamp vscode_ext_updated_at = 2;</code>
+       * <code>.google.protobuf.Timestamp vscode_ext_installed_at = 2;</code>
        */
-      public com.google.protobuf.TimestampOrBuilder getVscodeExtUpdatedAtOrBuilder() {
-        return getVscodeExtUpdatedAt();
+      public com.google.protobuf.TimestampOrBuilder getVscodeExtInstalledAtOrBuilder() {
+        return getVscodeExtInstalledAt();
       }
 
       private byte memoizedIsInitialized = -1;
@@ -5108,11 +5108,11 @@ public final class OrganizationProto {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (cliUpdatedAt_ != null) {
-          output.writeMessage(1, getCliUpdatedAt());
+        if (cliInstalledAt_ != null) {
+          output.writeMessage(1, getCliInstalledAt());
         }
-        if (vscodeExtUpdatedAt_ != null) {
-          output.writeMessage(2, getVscodeExtUpdatedAt());
+        if (vscodeExtInstalledAt_ != null) {
+          output.writeMessage(2, getVscodeExtInstalledAt());
         }
         unknownFields.writeTo(output);
       }
@@ -5123,13 +5123,13 @@ public final class OrganizationProto {
         if (size != -1) return size;
 
         size = 0;
-        if (cliUpdatedAt_ != null) {
+        if (cliInstalledAt_ != null) {
           size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1, getCliUpdatedAt());
+            .computeMessageSize(1, getCliInstalledAt());
         }
-        if (vscodeExtUpdatedAt_ != null) {
+        if (vscodeExtInstalledAt_ != null) {
           size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(2, getVscodeExtUpdatedAt());
+            .computeMessageSize(2, getVscodeExtInstalledAt());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -5146,15 +5146,15 @@ public final class OrganizationProto {
         }
         io.toit.proto.toit.model.OrganizationProto.User.State other = (io.toit.proto.toit.model.OrganizationProto.User.State) obj;
 
-        if (hasCliUpdatedAt() != other.hasCliUpdatedAt()) return false;
-        if (hasCliUpdatedAt()) {
-          if (!getCliUpdatedAt()
-              .equals(other.getCliUpdatedAt())) return false;
+        if (hasCliInstalledAt() != other.hasCliInstalledAt()) return false;
+        if (hasCliInstalledAt()) {
+          if (!getCliInstalledAt()
+              .equals(other.getCliInstalledAt())) return false;
         }
-        if (hasVscodeExtUpdatedAt() != other.hasVscodeExtUpdatedAt()) return false;
-        if (hasVscodeExtUpdatedAt()) {
-          if (!getVscodeExtUpdatedAt()
-              .equals(other.getVscodeExtUpdatedAt())) return false;
+        if (hasVscodeExtInstalledAt() != other.hasVscodeExtInstalledAt()) return false;
+        if (hasVscodeExtInstalledAt()) {
+          if (!getVscodeExtInstalledAt()
+              .equals(other.getVscodeExtInstalledAt())) return false;
         }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
@@ -5167,13 +5167,13 @@ public final class OrganizationProto {
         }
         int hash = 41;
         hash = (19 * hash) + getDescriptor().hashCode();
-        if (hasCliUpdatedAt()) {
-          hash = (37 * hash) + CLI_UPDATED_AT_FIELD_NUMBER;
-          hash = (53 * hash) + getCliUpdatedAt().hashCode();
+        if (hasCliInstalledAt()) {
+          hash = (37 * hash) + CLI_INSTALLED_AT_FIELD_NUMBER;
+          hash = (53 * hash) + getCliInstalledAt().hashCode();
         }
-        if (hasVscodeExtUpdatedAt()) {
-          hash = (37 * hash) + VSCODE_EXT_UPDATED_AT_FIELD_NUMBER;
-          hash = (53 * hash) + getVscodeExtUpdatedAt().hashCode();
+        if (hasVscodeExtInstalledAt()) {
+          hash = (37 * hash) + VSCODE_EXT_INSTALLED_AT_FIELD_NUMBER;
+          hash = (53 * hash) + getVscodeExtInstalledAt().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -5308,17 +5308,17 @@ public final class OrganizationProto {
         @java.lang.Override
         public Builder clear() {
           super.clear();
-          if (cliUpdatedAtBuilder_ == null) {
-            cliUpdatedAt_ = null;
+          if (cliInstalledAtBuilder_ == null) {
+            cliInstalledAt_ = null;
           } else {
-            cliUpdatedAt_ = null;
-            cliUpdatedAtBuilder_ = null;
+            cliInstalledAt_ = null;
+            cliInstalledAtBuilder_ = null;
           }
-          if (vscodeExtUpdatedAtBuilder_ == null) {
-            vscodeExtUpdatedAt_ = null;
+          if (vscodeExtInstalledAtBuilder_ == null) {
+            vscodeExtInstalledAt_ = null;
           } else {
-            vscodeExtUpdatedAt_ = null;
-            vscodeExtUpdatedAtBuilder_ = null;
+            vscodeExtInstalledAt_ = null;
+            vscodeExtInstalledAtBuilder_ = null;
           }
           return this;
         }
@@ -5346,15 +5346,15 @@ public final class OrganizationProto {
         @java.lang.Override
         public io.toit.proto.toit.model.OrganizationProto.User.State buildPartial() {
           io.toit.proto.toit.model.OrganizationProto.User.State result = new io.toit.proto.toit.model.OrganizationProto.User.State(this);
-          if (cliUpdatedAtBuilder_ == null) {
-            result.cliUpdatedAt_ = cliUpdatedAt_;
+          if (cliInstalledAtBuilder_ == null) {
+            result.cliInstalledAt_ = cliInstalledAt_;
           } else {
-            result.cliUpdatedAt_ = cliUpdatedAtBuilder_.build();
+            result.cliInstalledAt_ = cliInstalledAtBuilder_.build();
           }
-          if (vscodeExtUpdatedAtBuilder_ == null) {
-            result.vscodeExtUpdatedAt_ = vscodeExtUpdatedAt_;
+          if (vscodeExtInstalledAtBuilder_ == null) {
+            result.vscodeExtInstalledAt_ = vscodeExtInstalledAt_;
           } else {
-            result.vscodeExtUpdatedAt_ = vscodeExtUpdatedAtBuilder_.build();
+            result.vscodeExtInstalledAt_ = vscodeExtInstalledAtBuilder_.build();
           }
           onBuilt();
           return result;
@@ -5404,11 +5404,11 @@ public final class OrganizationProto {
 
         public Builder mergeFrom(io.toit.proto.toit.model.OrganizationProto.User.State other) {
           if (other == io.toit.proto.toit.model.OrganizationProto.User.State.getDefaultInstance()) return this;
-          if (other.hasCliUpdatedAt()) {
-            mergeCliUpdatedAt(other.getCliUpdatedAt());
+          if (other.hasCliInstalledAt()) {
+            mergeCliInstalledAt(other.getCliInstalledAt());
           }
-          if (other.hasVscodeExtUpdatedAt()) {
-            mergeVscodeExtUpdatedAt(other.getVscodeExtUpdatedAt());
+          if (other.hasVscodeExtInstalledAt()) {
+            mergeVscodeExtInstalledAt(other.getVscodeExtInstalledAt());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -5439,242 +5439,242 @@ public final class OrganizationProto {
           return this;
         }
 
-        private com.google.protobuf.Timestamp cliUpdatedAt_;
+        private com.google.protobuf.Timestamp cliInstalledAt_;
         private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> cliUpdatedAtBuilder_;
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> cliInstalledAtBuilder_;
         /**
-         * <code>.google.protobuf.Timestamp cli_updated_at = 1;</code>
-         * @return Whether the cliUpdatedAt field is set.
+         * <code>.google.protobuf.Timestamp cli_installed_at = 1;</code>
+         * @return Whether the cliInstalledAt field is set.
          */
-        public boolean hasCliUpdatedAt() {
-          return cliUpdatedAtBuilder_ != null || cliUpdatedAt_ != null;
+        public boolean hasCliInstalledAt() {
+          return cliInstalledAtBuilder_ != null || cliInstalledAt_ != null;
         }
         /**
-         * <code>.google.protobuf.Timestamp cli_updated_at = 1;</code>
-         * @return The cliUpdatedAt.
+         * <code>.google.protobuf.Timestamp cli_installed_at = 1;</code>
+         * @return The cliInstalledAt.
          */
-        public com.google.protobuf.Timestamp getCliUpdatedAt() {
-          if (cliUpdatedAtBuilder_ == null) {
-            return cliUpdatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : cliUpdatedAt_;
+        public com.google.protobuf.Timestamp getCliInstalledAt() {
+          if (cliInstalledAtBuilder_ == null) {
+            return cliInstalledAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : cliInstalledAt_;
           } else {
-            return cliUpdatedAtBuilder_.getMessage();
+            return cliInstalledAtBuilder_.getMessage();
           }
         }
         /**
-         * <code>.google.protobuf.Timestamp cli_updated_at = 1;</code>
+         * <code>.google.protobuf.Timestamp cli_installed_at = 1;</code>
          */
-        public Builder setCliUpdatedAt(com.google.protobuf.Timestamp value) {
-          if (cliUpdatedAtBuilder_ == null) {
+        public Builder setCliInstalledAt(com.google.protobuf.Timestamp value) {
+          if (cliInstalledAtBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
             }
-            cliUpdatedAt_ = value;
+            cliInstalledAt_ = value;
             onChanged();
           } else {
-            cliUpdatedAtBuilder_.setMessage(value);
+            cliInstalledAtBuilder_.setMessage(value);
           }
 
           return this;
         }
         /**
-         * <code>.google.protobuf.Timestamp cli_updated_at = 1;</code>
+         * <code>.google.protobuf.Timestamp cli_installed_at = 1;</code>
          */
-        public Builder setCliUpdatedAt(
+        public Builder setCliInstalledAt(
             com.google.protobuf.Timestamp.Builder builderForValue) {
-          if (cliUpdatedAtBuilder_ == null) {
-            cliUpdatedAt_ = builderForValue.build();
+          if (cliInstalledAtBuilder_ == null) {
+            cliInstalledAt_ = builderForValue.build();
             onChanged();
           } else {
-            cliUpdatedAtBuilder_.setMessage(builderForValue.build());
+            cliInstalledAtBuilder_.setMessage(builderForValue.build());
           }
 
           return this;
         }
         /**
-         * <code>.google.protobuf.Timestamp cli_updated_at = 1;</code>
+         * <code>.google.protobuf.Timestamp cli_installed_at = 1;</code>
          */
-        public Builder mergeCliUpdatedAt(com.google.protobuf.Timestamp value) {
-          if (cliUpdatedAtBuilder_ == null) {
-            if (cliUpdatedAt_ != null) {
-              cliUpdatedAt_ =
-                com.google.protobuf.Timestamp.newBuilder(cliUpdatedAt_).mergeFrom(value).buildPartial();
+        public Builder mergeCliInstalledAt(com.google.protobuf.Timestamp value) {
+          if (cliInstalledAtBuilder_ == null) {
+            if (cliInstalledAt_ != null) {
+              cliInstalledAt_ =
+                com.google.protobuf.Timestamp.newBuilder(cliInstalledAt_).mergeFrom(value).buildPartial();
             } else {
-              cliUpdatedAt_ = value;
+              cliInstalledAt_ = value;
             }
             onChanged();
           } else {
-            cliUpdatedAtBuilder_.mergeFrom(value);
+            cliInstalledAtBuilder_.mergeFrom(value);
           }
 
           return this;
         }
         /**
-         * <code>.google.protobuf.Timestamp cli_updated_at = 1;</code>
+         * <code>.google.protobuf.Timestamp cli_installed_at = 1;</code>
          */
-        public Builder clearCliUpdatedAt() {
-          if (cliUpdatedAtBuilder_ == null) {
-            cliUpdatedAt_ = null;
+        public Builder clearCliInstalledAt() {
+          if (cliInstalledAtBuilder_ == null) {
+            cliInstalledAt_ = null;
             onChanged();
           } else {
-            cliUpdatedAt_ = null;
-            cliUpdatedAtBuilder_ = null;
+            cliInstalledAt_ = null;
+            cliInstalledAtBuilder_ = null;
           }
 
           return this;
         }
         /**
-         * <code>.google.protobuf.Timestamp cli_updated_at = 1;</code>
+         * <code>.google.protobuf.Timestamp cli_installed_at = 1;</code>
          */
-        public com.google.protobuf.Timestamp.Builder getCliUpdatedAtBuilder() {
+        public com.google.protobuf.Timestamp.Builder getCliInstalledAtBuilder() {
           
           onChanged();
-          return getCliUpdatedAtFieldBuilder().getBuilder();
+          return getCliInstalledAtFieldBuilder().getBuilder();
         }
         /**
-         * <code>.google.protobuf.Timestamp cli_updated_at = 1;</code>
+         * <code>.google.protobuf.Timestamp cli_installed_at = 1;</code>
          */
-        public com.google.protobuf.TimestampOrBuilder getCliUpdatedAtOrBuilder() {
-          if (cliUpdatedAtBuilder_ != null) {
-            return cliUpdatedAtBuilder_.getMessageOrBuilder();
+        public com.google.protobuf.TimestampOrBuilder getCliInstalledAtOrBuilder() {
+          if (cliInstalledAtBuilder_ != null) {
+            return cliInstalledAtBuilder_.getMessageOrBuilder();
           } else {
-            return cliUpdatedAt_ == null ?
-                com.google.protobuf.Timestamp.getDefaultInstance() : cliUpdatedAt_;
+            return cliInstalledAt_ == null ?
+                com.google.protobuf.Timestamp.getDefaultInstance() : cliInstalledAt_;
           }
         }
         /**
-         * <code>.google.protobuf.Timestamp cli_updated_at = 1;</code>
+         * <code>.google.protobuf.Timestamp cli_installed_at = 1;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-            getCliUpdatedAtFieldBuilder() {
-          if (cliUpdatedAtBuilder_ == null) {
-            cliUpdatedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            getCliInstalledAtFieldBuilder() {
+          if (cliInstalledAtBuilder_ == null) {
+            cliInstalledAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
                 com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                    getCliUpdatedAt(),
+                    getCliInstalledAt(),
                     getParentForChildren(),
                     isClean());
-            cliUpdatedAt_ = null;
+            cliInstalledAt_ = null;
           }
-          return cliUpdatedAtBuilder_;
+          return cliInstalledAtBuilder_;
         }
 
-        private com.google.protobuf.Timestamp vscodeExtUpdatedAt_;
+        private com.google.protobuf.Timestamp vscodeExtInstalledAt_;
         private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> vscodeExtUpdatedAtBuilder_;
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> vscodeExtInstalledAtBuilder_;
         /**
-         * <code>.google.protobuf.Timestamp vscode_ext_updated_at = 2;</code>
-         * @return Whether the vscodeExtUpdatedAt field is set.
+         * <code>.google.protobuf.Timestamp vscode_ext_installed_at = 2;</code>
+         * @return Whether the vscodeExtInstalledAt field is set.
          */
-        public boolean hasVscodeExtUpdatedAt() {
-          return vscodeExtUpdatedAtBuilder_ != null || vscodeExtUpdatedAt_ != null;
+        public boolean hasVscodeExtInstalledAt() {
+          return vscodeExtInstalledAtBuilder_ != null || vscodeExtInstalledAt_ != null;
         }
         /**
-         * <code>.google.protobuf.Timestamp vscode_ext_updated_at = 2;</code>
-         * @return The vscodeExtUpdatedAt.
+         * <code>.google.protobuf.Timestamp vscode_ext_installed_at = 2;</code>
+         * @return The vscodeExtInstalledAt.
          */
-        public com.google.protobuf.Timestamp getVscodeExtUpdatedAt() {
-          if (vscodeExtUpdatedAtBuilder_ == null) {
-            return vscodeExtUpdatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : vscodeExtUpdatedAt_;
+        public com.google.protobuf.Timestamp getVscodeExtInstalledAt() {
+          if (vscodeExtInstalledAtBuilder_ == null) {
+            return vscodeExtInstalledAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : vscodeExtInstalledAt_;
           } else {
-            return vscodeExtUpdatedAtBuilder_.getMessage();
+            return vscodeExtInstalledAtBuilder_.getMessage();
           }
         }
         /**
-         * <code>.google.protobuf.Timestamp vscode_ext_updated_at = 2;</code>
+         * <code>.google.protobuf.Timestamp vscode_ext_installed_at = 2;</code>
          */
-        public Builder setVscodeExtUpdatedAt(com.google.protobuf.Timestamp value) {
-          if (vscodeExtUpdatedAtBuilder_ == null) {
+        public Builder setVscodeExtInstalledAt(com.google.protobuf.Timestamp value) {
+          if (vscodeExtInstalledAtBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
             }
-            vscodeExtUpdatedAt_ = value;
+            vscodeExtInstalledAt_ = value;
             onChanged();
           } else {
-            vscodeExtUpdatedAtBuilder_.setMessage(value);
+            vscodeExtInstalledAtBuilder_.setMessage(value);
           }
 
           return this;
         }
         /**
-         * <code>.google.protobuf.Timestamp vscode_ext_updated_at = 2;</code>
+         * <code>.google.protobuf.Timestamp vscode_ext_installed_at = 2;</code>
          */
-        public Builder setVscodeExtUpdatedAt(
+        public Builder setVscodeExtInstalledAt(
             com.google.protobuf.Timestamp.Builder builderForValue) {
-          if (vscodeExtUpdatedAtBuilder_ == null) {
-            vscodeExtUpdatedAt_ = builderForValue.build();
+          if (vscodeExtInstalledAtBuilder_ == null) {
+            vscodeExtInstalledAt_ = builderForValue.build();
             onChanged();
           } else {
-            vscodeExtUpdatedAtBuilder_.setMessage(builderForValue.build());
+            vscodeExtInstalledAtBuilder_.setMessage(builderForValue.build());
           }
 
           return this;
         }
         /**
-         * <code>.google.protobuf.Timestamp vscode_ext_updated_at = 2;</code>
+         * <code>.google.protobuf.Timestamp vscode_ext_installed_at = 2;</code>
          */
-        public Builder mergeVscodeExtUpdatedAt(com.google.protobuf.Timestamp value) {
-          if (vscodeExtUpdatedAtBuilder_ == null) {
-            if (vscodeExtUpdatedAt_ != null) {
-              vscodeExtUpdatedAt_ =
-                com.google.protobuf.Timestamp.newBuilder(vscodeExtUpdatedAt_).mergeFrom(value).buildPartial();
+        public Builder mergeVscodeExtInstalledAt(com.google.protobuf.Timestamp value) {
+          if (vscodeExtInstalledAtBuilder_ == null) {
+            if (vscodeExtInstalledAt_ != null) {
+              vscodeExtInstalledAt_ =
+                com.google.protobuf.Timestamp.newBuilder(vscodeExtInstalledAt_).mergeFrom(value).buildPartial();
             } else {
-              vscodeExtUpdatedAt_ = value;
+              vscodeExtInstalledAt_ = value;
             }
             onChanged();
           } else {
-            vscodeExtUpdatedAtBuilder_.mergeFrom(value);
+            vscodeExtInstalledAtBuilder_.mergeFrom(value);
           }
 
           return this;
         }
         /**
-         * <code>.google.protobuf.Timestamp vscode_ext_updated_at = 2;</code>
+         * <code>.google.protobuf.Timestamp vscode_ext_installed_at = 2;</code>
          */
-        public Builder clearVscodeExtUpdatedAt() {
-          if (vscodeExtUpdatedAtBuilder_ == null) {
-            vscodeExtUpdatedAt_ = null;
+        public Builder clearVscodeExtInstalledAt() {
+          if (vscodeExtInstalledAtBuilder_ == null) {
+            vscodeExtInstalledAt_ = null;
             onChanged();
           } else {
-            vscodeExtUpdatedAt_ = null;
-            vscodeExtUpdatedAtBuilder_ = null;
+            vscodeExtInstalledAt_ = null;
+            vscodeExtInstalledAtBuilder_ = null;
           }
 
           return this;
         }
         /**
-         * <code>.google.protobuf.Timestamp vscode_ext_updated_at = 2;</code>
+         * <code>.google.protobuf.Timestamp vscode_ext_installed_at = 2;</code>
          */
-        public com.google.protobuf.Timestamp.Builder getVscodeExtUpdatedAtBuilder() {
+        public com.google.protobuf.Timestamp.Builder getVscodeExtInstalledAtBuilder() {
           
           onChanged();
-          return getVscodeExtUpdatedAtFieldBuilder().getBuilder();
+          return getVscodeExtInstalledAtFieldBuilder().getBuilder();
         }
         /**
-         * <code>.google.protobuf.Timestamp vscode_ext_updated_at = 2;</code>
+         * <code>.google.protobuf.Timestamp vscode_ext_installed_at = 2;</code>
          */
-        public com.google.protobuf.TimestampOrBuilder getVscodeExtUpdatedAtOrBuilder() {
-          if (vscodeExtUpdatedAtBuilder_ != null) {
-            return vscodeExtUpdatedAtBuilder_.getMessageOrBuilder();
+        public com.google.protobuf.TimestampOrBuilder getVscodeExtInstalledAtOrBuilder() {
+          if (vscodeExtInstalledAtBuilder_ != null) {
+            return vscodeExtInstalledAtBuilder_.getMessageOrBuilder();
           } else {
-            return vscodeExtUpdatedAt_ == null ?
-                com.google.protobuf.Timestamp.getDefaultInstance() : vscodeExtUpdatedAt_;
+            return vscodeExtInstalledAt_ == null ?
+                com.google.protobuf.Timestamp.getDefaultInstance() : vscodeExtInstalledAt_;
           }
         }
         /**
-         * <code>.google.protobuf.Timestamp vscode_ext_updated_at = 2;</code>
+         * <code>.google.protobuf.Timestamp vscode_ext_installed_at = 2;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-            getVscodeExtUpdatedAtFieldBuilder() {
-          if (vscodeExtUpdatedAtBuilder_ == null) {
-            vscodeExtUpdatedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            getVscodeExtInstalledAtFieldBuilder() {
+          if (vscodeExtInstalledAtBuilder_ == null) {
+            vscodeExtInstalledAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
                 com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                    getVscodeExtUpdatedAt(),
+                    getVscodeExtInstalledAt(),
                     getParentForChildren(),
                     isClean());
-            vscodeExtUpdatedAt_ = null;
+            vscodeExtInstalledAt_ = null;
           }
-          return vscodeExtUpdatedAtBuilder_;
+          return vscodeExtInstalledAtBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -8953,24 +8953,24 @@ public final class OrganizationProto {
       "mentDetails\022\r\n\005last4\030\001 \001(\t\022\016\n\006expiry\030\002 \001" +
       "(\t\022\024\n\014expiry_month\030\003 \001(\t\022\023\n\013expiry_year\030" +
       "\004 \001(\t\022\r\n\005brand\030\005 \001(\t\022\024\n\014country_code\030\006 \001" +
-      "(\t\022\021\n\tcvc_check\030\007 \001(\t\"\332\002\n\004User\022\n\n\002id\030\001 \001" +
+      "(\t\022\021\n\tcvc_check\030\007 \001(\t\"\336\002\n\004User\022\n\n\002id\030\001 \001" +
       "(\014\022\027\n\017organization_id\030\002 \001(\014\022\r\n\005email\030\003 \001" +
       "(\t\022\014\n\004name\030\004 \001(\t\022+\n\010settings\030\005 \001(\0132\031.toi" +
       "t.model.User.Settings\022\014\n\004role\030\006 \001(\t\022%\n\005s" +
       "tate\030\007 \001(\0132\026.toit.model.User.State\0326\n\010Se" +
       "ttings\022\026\n\016welcome_closed\030\001 \001(\010\022\022\n\nnewsle" +
-      "tter\030\002 \001(\010\032v\n\005State\0222\n\016cli_updated_at\030\001 " +
-      "\001(\0132\032.google.protobuf.Timestamp\0229\n\025vscod" +
-      "e_ext_updated_at\030\002 \001(\0132\032.google.protobuf" +
-      ".Timestamp\"k\n\006APIKey\022\n\n\002id\030\001 \001(\014\022\027\n\017orga" +
-      "nization_id\030\002 \001(\014\022\014\n\004name\030\003 \001(\t\022.\n\ncreat" +
-      "ed_at\030\004 \001(\0132\032.google.protobuf.Timestamp\"" +
-      "/\n\004Tier\"\'\n\004Type\022\013\n\007UNKNOWN\020\000\022\010\n\004FREE\020\001\022\010" +
-      "\n\004PAID\020\002\"=\n\010Customer\"1\n\004Type\022\013\n\007UNKNOWN\020" +
-      "\000\022\n\n\006PERSON\020\001\022\020\n\014ORGANIZATION\020\002Bk\n\030io.to" +
-      "it.proto.toit.modelB\021OrganizationProtoZ)" +
-      "github.com/toitware/api/golang/toit/mode" +
-      "l\252\002\020Toit.Proto.Modelb\006proto3"
+      "tter\030\002 \001(\010\032z\n\005State\0224\n\020cli_installed_at\030" +
+      "\001 \001(\0132\032.google.protobuf.Timestamp\022;\n\027vsc" +
+      "ode_ext_installed_at\030\002 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\"k\n\006APIKey\022\n\n\002id\030\001 \001(\014\022\027\n\017" +
+      "organization_id\030\002 \001(\014\022\014\n\004name\030\003 \001(\t\022.\n\nc" +
+      "reated_at\030\004 \001(\0132\032.google.protobuf.Timest" +
+      "amp\"/\n\004Tier\"\'\n\004Type\022\013\n\007UNKNOWN\020\000\022\010\n\004FREE" +
+      "\020\001\022\010\n\004PAID\020\002\"=\n\010Customer\"1\n\004Type\022\013\n\007UNKN" +
+      "OWN\020\000\022\n\n\006PERSON\020\001\022\020\n\014ORGANIZATION\020\002Bk\n\030i" +
+      "o.toit.proto.toit.modelB\021OrganizationPro" +
+      "toZ)github.com/toitware/api/golang/toit/" +
+      "model\252\002\020Toit.Proto.Modelb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9006,7 +9006,7 @@ public final class OrganizationProto {
     internal_static_toit_model_User_State_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_User_State_descriptor,
-        new java.lang.String[] { "CliUpdatedAt", "VscodeExtUpdatedAt", });
+        new java.lang.String[] { "CliInstalledAt", "VscodeExtInstalledAt", });
     internal_static_toit_model_APIKey_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_toit_model_APIKey_fieldAccessorTable = new
