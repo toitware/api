@@ -208,15 +208,15 @@ export namespace User {
   }
 
   export class State extends jspb.Message {
-    hasCliUpdatedAt(): boolean;
-    clearCliUpdatedAt(): void;
-    getCliUpdatedAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
-    setCliUpdatedAt(value?: google_protobuf_timestamp_pb.Timestamp): void;
+    hasCliInstalledAt(): boolean;
+    clearCliInstalledAt(): void;
+    getCliInstalledAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
+    setCliInstalledAt(value?: google_protobuf_timestamp_pb.Timestamp): void;
 
-    hasVscodeExtUpdatedAt(): boolean;
-    clearVscodeExtUpdatedAt(): void;
-    getVscodeExtUpdatedAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
-    setVscodeExtUpdatedAt(value?: google_protobuf_timestamp_pb.Timestamp): void;
+    hasVscodeExtInstalledAt(): boolean;
+    clearVscodeExtInstalledAt(): void;
+    getVscodeExtInstalledAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
+    setVscodeExtInstalledAt(value?: google_protobuf_timestamp_pb.Timestamp): void;
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): State.AsObject;
@@ -230,8 +230,8 @@ export namespace User {
 
   export namespace State {
     export type AsObject = {
-      cliUpdatedAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
-      vscodeExtUpdatedAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+      cliInstalledAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+      vscodeExtInstalledAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
     }
   }
 }

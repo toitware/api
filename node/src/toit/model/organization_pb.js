@@ -1507,8 +1507,8 @@ proto.toit.model.User.State.prototype.toObject = function(opt_includeInstance) {
  */
 proto.toit.model.User.State.toObject = function(includeInstance, msg) {
   var f, obj = {
-    cliUpdatedAt: (f = msg.getCliUpdatedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
-    vscodeExtUpdatedAt: (f = msg.getVscodeExtUpdatedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f)
+    cliInstalledAt: (f = msg.getCliInstalledAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
+    vscodeExtInstalledAt: (f = msg.getVscodeExtInstalledAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1548,12 +1548,12 @@ proto.toit.model.User.State.deserializeBinaryFromReader = function(msg, reader) 
     case 1:
       var value = new google_protobuf_timestamp_pb.Timestamp;
       reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
-      msg.setCliUpdatedAt(value);
+      msg.setCliInstalledAt(value);
       break;
     case 2:
       var value = new google_protobuf_timestamp_pb.Timestamp;
       reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
-      msg.setVscodeExtUpdatedAt(value);
+      msg.setVscodeExtInstalledAt(value);
       break;
     default:
       reader.skipField();
@@ -1584,7 +1584,7 @@ proto.toit.model.User.State.prototype.serializeBinary = function() {
  */
 proto.toit.model.User.State.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getCliUpdatedAt();
+  f = message.getCliInstalledAt();
   if (f != null) {
     writer.writeMessage(
       1,
@@ -1592,7 +1592,7 @@ proto.toit.model.User.State.serializeBinaryToWriter = function(message, writer) 
       google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
     );
   }
-  f = message.getVscodeExtUpdatedAt();
+  f = message.getVscodeExtInstalledAt();
   if (f != null) {
     writer.writeMessage(
       2,
@@ -1604,10 +1604,10 @@ proto.toit.model.User.State.serializeBinaryToWriter = function(message, writer) 
 
 
 /**
- * optional google.protobuf.Timestamp cli_updated_at = 1;
+ * optional google.protobuf.Timestamp cli_installed_at = 1;
  * @return {?proto.google.protobuf.Timestamp}
  */
-proto.toit.model.User.State.prototype.getCliUpdatedAt = function() {
+proto.toit.model.User.State.prototype.getCliInstalledAt = function() {
   return /** @type{?proto.google.protobuf.Timestamp} */ (
     jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 1));
 };
@@ -1617,7 +1617,7 @@ proto.toit.model.User.State.prototype.getCliUpdatedAt = function() {
  * @param {?proto.google.protobuf.Timestamp|undefined} value
  * @return {!proto.toit.model.User.State} returns this
 */
-proto.toit.model.User.State.prototype.setCliUpdatedAt = function(value) {
+proto.toit.model.User.State.prototype.setCliInstalledAt = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
@@ -1626,8 +1626,8 @@ proto.toit.model.User.State.prototype.setCliUpdatedAt = function(value) {
  * Clears the message field making it undefined.
  * @return {!proto.toit.model.User.State} returns this
  */
-proto.toit.model.User.State.prototype.clearCliUpdatedAt = function() {
-  return this.setCliUpdatedAt(undefined);
+proto.toit.model.User.State.prototype.clearCliInstalledAt = function() {
+  return this.setCliInstalledAt(undefined);
 };
 
 
@@ -1635,16 +1635,16 @@ proto.toit.model.User.State.prototype.clearCliUpdatedAt = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.toit.model.User.State.prototype.hasCliUpdatedAt = function() {
+proto.toit.model.User.State.prototype.hasCliInstalledAt = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
 
 /**
- * optional google.protobuf.Timestamp vscode_ext_updated_at = 2;
+ * optional google.protobuf.Timestamp vscode_ext_installed_at = 2;
  * @return {?proto.google.protobuf.Timestamp}
  */
-proto.toit.model.User.State.prototype.getVscodeExtUpdatedAt = function() {
+proto.toit.model.User.State.prototype.getVscodeExtInstalledAt = function() {
   return /** @type{?proto.google.protobuf.Timestamp} */ (
     jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 2));
 };
@@ -1654,7 +1654,7 @@ proto.toit.model.User.State.prototype.getVscodeExtUpdatedAt = function() {
  * @param {?proto.google.protobuf.Timestamp|undefined} value
  * @return {!proto.toit.model.User.State} returns this
 */
-proto.toit.model.User.State.prototype.setVscodeExtUpdatedAt = function(value) {
+proto.toit.model.User.State.prototype.setVscodeExtInstalledAt = function(value) {
   return jspb.Message.setWrapperField(this, 2, value);
 };
 
@@ -1663,8 +1663,8 @@ proto.toit.model.User.State.prototype.setVscodeExtUpdatedAt = function(value) {
  * Clears the message field making it undefined.
  * @return {!proto.toit.model.User.State} returns this
  */
-proto.toit.model.User.State.prototype.clearVscodeExtUpdatedAt = function() {
-  return this.setVscodeExtUpdatedAt(undefined);
+proto.toit.model.User.State.prototype.clearVscodeExtInstalledAt = function() {
+  return this.setVscodeExtInstalledAt(undefined);
 };
 
 
@@ -1672,7 +1672,7 @@ proto.toit.model.User.State.prototype.clearVscodeExtUpdatedAt = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.toit.model.User.State.prototype.hasVscodeExtUpdatedAt = function() {
+proto.toit.model.User.State.prototype.hasVscodeExtInstalledAt = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 
