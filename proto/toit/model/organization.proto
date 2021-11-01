@@ -44,8 +44,8 @@ message User {
         bool newsletter = 2;
     }
     message State {
-        google.protobuf.Timestamp cli_updated_at = 1;
-        google.protobuf.Timestamp vscode_ext_updated_at = 2;
+        google.protobuf.Timestamp cli_installed_at = 1;
+        google.protobuf.Timestamp vscode_ext_installed_at = 2;
     }
     bytes id = 1;
     bytes organization_id = 2;
