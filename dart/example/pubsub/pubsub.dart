@@ -21,7 +21,7 @@ class PublishService {
 
   // We take a string here, but a message normally just receives bytes.
   Future<void> publish(String message) {
-    stub.publish(PublishRequest(
+    return stub.publish(PublishRequest(
         topic: subscription.topic,
         publisherName: "API Demo Publisher", // Hardcoded publisher name.
         data: [utf8.encode(message)]));
@@ -42,6 +42,10 @@ class SubscribeService {
   }
 
   Stream<List<Envelope>> stream() async* {
+    // Note that the streaming connection to the server may be interrupted.
+    // In this example this doesn't really matter as the connection is
+    // short-lived, but longer running applications should prepare to
+    // reconnect when necessary.
     await for (var response
         in stub.stream(StreamRequest(subscription: subscription))) {
       yield response.messages;
@@ -53,7 +57,7 @@ class SubscribeService {
   }
 
   Future<void> acknowledge(Iterable<List<int>> ids) async {
-    return stub.acknowledge(
+    await stub.acknowledge(
         AcknowledgeRequest(subscription: subscription, envelopeIds: ids));
   }
 
