@@ -1,0 +1,11 @@
+# Description for deploying the publish app.
+
+name: publish-demo
+
+triggers:
+  on_pubsub_topic:
+    - "cloud:toit-api/example"
+
+pubsub:
+  subscriptions:
+    - "cloud:toit-api/example"
