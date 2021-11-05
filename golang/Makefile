@@ -17,9 +17,6 @@ PROTOC_GEN_GRPC := $(BINS)/protoc-gen-go-grpc
 PROTO_FLAGS += --plugin=protoc-gen-go-grpc=$(PROTOC_GEN_GRPC)
 
 toit/%.pb.go: $(PROTO_DIR)/toit/%.proto
-	echo $<
-
-toit/%.pb.go: $(PROTO_DIR)/toit/%.proto
 	$(PROTOC) $< --go_out=$(BUILD_DIR) --go-grpc_out=$(BUILD_DIR) --go_opt=paths=source_relative --go-grpc_opt=paths=source_relative $(PROTO_FLAGS)
 
 protobuf: $(BUILD_DIR) $(PROTO_FILES)
@@ -29,5 +26,4 @@ go_bootstrap:
 	go get google.golang.org/protobuf/cmd/protoc-gen-go google.golang.org/grpc/cmd/protoc-gen-go-grpc
 
 clean:
-	go install google.golang.org/protobuf/cmd/protoc-gen-go
 	rm -rf toit
