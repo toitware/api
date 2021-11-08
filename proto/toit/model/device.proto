@@ -54,7 +54,7 @@ message ConnectionSetting {
   // This is essentially a one-of but that is not supported when using ubjson
   // encoding as done between the device and the console.
   WifiSetting wifi = 1;
-  NBIoTSetting nbiot = 2;
+  CellularSetting nbiot = 2;
   EthernetSetting ethernet = 3;
 }
 
@@ -67,7 +67,7 @@ message EthernetSetting {
 
 }
 
-message NBIoTSetting {
+message CellularSetting {
   enum Rat {
     RAT_UNKNOWN = 0;
     RAT_LTE_M = 1;
