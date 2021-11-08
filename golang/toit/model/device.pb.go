@@ -314,6 +314,58 @@ func (DeviceModuleType) EnumDescriptor() ([]byte, []int) {
 	return file_toit_model_device_proto_rawDescGZIP(), []int{4}
 }
 
+type CellularSetting_Rat int32
+
+const (
+	CellularSetting_RAT_UNKNOWN CellularSetting_Rat = 0
+	CellularSetting_RAT_LTE_M   CellularSetting_Rat = 1
+	CellularSetting_RAT_NB_IOT  CellularSetting_Rat = 2
+	CellularSetting_RAT_GSM     CellularSetting_Rat = 3
+)
+
+// Enum value maps for CellularSetting_Rat.
+var (
+	CellularSetting_Rat_name = map[int32]string{
+		0: "RAT_UNKNOWN",
+		1: "RAT_LTE_M",
+		2: "RAT_NB_IOT",
+		3: "RAT_GSM",
+	}
+	CellularSetting_Rat_value = map[string]int32{
+		"RAT_UNKNOWN": 0,
+		"RAT_LTE_M":   1,
+		"RAT_NB_IOT":  2,
+		"RAT_GSM":     3,
+	}
+)
+
+func (x CellularSetting_Rat) Enum() *CellularSetting_Rat {
+	p := new(CellularSetting_Rat)
+	*p = x
+	return p
+}
+
+func (x CellularSetting_Rat) String() string {
+	return protoimpl.X.EnumStringOf(x.Descriptor(), protoreflect.EnumNumber(x))
+}
+
+func (CellularSetting_Rat) Descriptor() protoreflect.EnumDescriptor {
+	return file_toit_model_device_proto_enumTypes[5].Descriptor()
+}
+
+func (CellularSetting_Rat) Type() protoreflect.EnumType {
+	return &file_toit_model_device_proto_enumTypes[5]
+}
+
+func (x CellularSetting_Rat) Number() protoreflect.EnumNumber {
+	return protoreflect.EnumNumber(x)
+}
+
+// Deprecated: Use CellularSetting_Rat.Descriptor instead.
+func (CellularSetting_Rat) EnumDescriptor() ([]byte, []int) {
+	return file_toit_model_device_proto_rawDescGZIP(), []int{9, 0}
+}
+
 type DeviceEvent_Type int32
 
 const (
@@ -359,11 +411,11 @@ func (x DeviceEvent_Type) String() string {
 }
 
 func (DeviceEvent_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_toit_model_device_proto_enumTypes[5].Descriptor()
+	return file_toit_model_device_proto_enumTypes[6].Descriptor()
 }
 
 func (DeviceEvent_Type) Type() protoreflect.EnumType {
-	return &file_toit_model_device_proto_enumTypes[5]
+	return &file_toit_model_device_proto_enumTypes[6]
 }
 
 func (x DeviceEvent_Type) Number() protoreflect.EnumNumber {
@@ -408,11 +460,11 @@ func (x DeviceEvent_Info_Value_Primitive_Type) String() string {
 }
 
 func (DeviceEvent_Info_Value_Primitive_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_toit_model_device_proto_enumTypes[6].Descriptor()
+	return file_toit_model_device_proto_enumTypes[7].Descriptor()
 }
 
 func (DeviceEvent_Info_Value_Primitive_Type) Type() protoreflect.EnumType {
-	return &file_toit_model_device_proto_enumTypes[6]
+	return &file_toit_model_device_proto_enumTypes[7]
 }
 
 func (x DeviceEvent_Info_Value_Primitive_Type) Number() protoreflect.EnumNumber {
@@ -819,7 +871,7 @@ type ConnectionSetting struct {
 	// This is essentially a one-of but that is not supported when using ubjson
 	// encoding as done between the device and the console.
 	Wifi     *WifiSetting     `protobuf:"bytes,1,opt,name=wifi,proto3" json:"wifi,omitempty"`
-	Nbiot    *NBIoTSetting    `protobuf:"bytes,2,opt,name=nbiot,proto3" json:"nbiot,omitempty"`
+	Nbiot    *CellularSetting `protobuf:"bytes,2,opt,name=nbiot,proto3" json:"nbiot,omitempty"`
 	Ethernet *EthernetSetting `protobuf:"bytes,3,opt,name=ethernet,proto3" json:"ethernet,omitempty"`
 }
 
@@ -862,7 +914,7 @@ func (x *ConnectionSetting) GetWifi() *WifiSetting {
 	return nil
 }
 
-func (x *ConnectionSetting) GetNbiot() *NBIoTSetting {
+func (x *ConnectionSetting) GetNbiot() *CellularSetting {
 	if x != nil {
 		return x.Nbiot
 	}
@@ -969,19 +1021,20 @@ func (*EthernetSetting) Descriptor() ([]byte, []int) {
 	return file_toit_model_device_proto_rawDescGZIP(), []int{8}
 }
 
-type NBIoTSetting struct {
+type CellularSetting struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Apn      string  `protobuf:"bytes,1,opt,name=apn,proto3" json:"apn,omitempty"`
-	Bands    []int64 `protobuf:"varint,2,rep,packed,name=bands,proto3" json:"bands,omitempty"`
-	Operator string  `protobuf:"bytes,3,opt,name=operator,proto3" json:"operator,omitempty"`
-	Pin      string  `protobuf:"bytes,4,opt,name=pin,proto3" json:"pin,omitempty"`
+	Apn      string                `protobuf:"bytes,1,opt,name=apn,proto3" json:"apn,omitempty"`
+	Bands    []int64               `protobuf:"varint,2,rep,packed,name=bands,proto3" json:"bands,omitempty"`
+	Operator string                `protobuf:"bytes,3,opt,name=operator,proto3" json:"operator,omitempty"`
+	Pin      string                `protobuf:"bytes,4,opt,name=pin,proto3" json:"pin,omitempty"`
+	Rats     []CellularSetting_Rat `protobuf:"varint,5,rep,packed,name=rats,proto3,enum=toit.model.CellularSetting_Rat" json:"rats,omitempty"`
 }
 
-func (x *NBIoTSetting) Reset() {
-	*x = NBIoTSetting{}
+func (x *CellularSetting) Reset() {
+	*x = CellularSetting{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_toit_model_device_proto_msgTypes[9]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -989,13 +1042,13 @@ func (x *NBIoTSetting) Reset() {
 	}
 }
 
-func (x *NBIoTSetting) String() string {
+func (x *CellularSetting) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*NBIoTSetting) ProtoMessage() {}
+func (*CellularSetting) ProtoMessage() {}
 
-func (x *NBIoTSetting) ProtoReflect() protoreflect.Message {
+func (x *CellularSetting) ProtoReflect() protoreflect.Message {
 	mi := &file_toit_model_device_proto_msgTypes[9]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -1007,37 +1060,44 @@ func (x *NBIoTSetting) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use NBIoTSetting.ProtoReflect.Descriptor instead.
-func (*NBIoTSetting) Descriptor() ([]byte, []int) {
+// Deprecated: Use CellularSetting.ProtoReflect.Descriptor instead.
+func (*CellularSetting) Descriptor() ([]byte, []int) {
 	return file_toit_model_device_proto_rawDescGZIP(), []int{9}
 }
 
-func (x *NBIoTSetting) GetApn() string {
+func (x *CellularSetting) GetApn() string {
 	if x != nil {
 		return x.Apn
 	}
 	return ""
 }
 
-func (x *NBIoTSetting) GetBands() []int64 {
+func (x *CellularSetting) GetBands() []int64 {
 	if x != nil {
 		return x.Bands
 	}
 	return nil
 }
 
-func (x *NBIoTSetting) GetOperator() string {
+func (x *CellularSetting) GetOperator() string {
 	if x != nil {
 		return x.Operator
 	}
 	return ""
 }
 
-func (x *NBIoTSetting) GetPin() string {
+func (x *CellularSetting) GetPin() string {
 	if x != nil {
 		return x.Pin
 	}
 	return ""
+}
+
+func (x *CellularSetting) GetRats() []CellularSetting_Rat {
+	if x != nil {
+		return x.Rats
+	}
+	return nil
 }
 
 type DeviceBrokerSettings struct {
@@ -2956,29 +3016,37 @@ var file_toit_model_device_proto_rawDesc = []byte{
 	0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x12, 0x32, 0x0a, 0x15, 0x65, 0x76, 0x65, 0x6e, 0x74,
 	0x5f, 0x71, 0x75, 0x65, 0x75, 0x65, 0x5f, 0x74, 0x68, 0x72, 0x65, 0x73, 0x68, 0x6f, 0x6c, 0x64,
 	0x18, 0x03, 0x20, 0x01, 0x28, 0x0d, 0x52, 0x13, 0x65, 0x76, 0x65, 0x6e, 0x74, 0x51, 0x75, 0x65,
-	0x75, 0x65, 0x54, 0x68, 0x72, 0x65, 0x73, 0x68, 0x6f, 0x6c, 0x64, 0x22, 0xa9, 0x01, 0x0a, 0x11,
+	0x75, 0x65, 0x54, 0x68, 0x72, 0x65, 0x73, 0x68, 0x6f, 0x6c, 0x64, 0x22, 0xac, 0x01, 0x0a, 0x11,
 	0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x53, 0x65, 0x74, 0x74, 0x69, 0x6e,
 	0x67, 0x12, 0x2b, 0x0a, 0x04, 0x77, 0x69, 0x66, 0x69, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32,
 	0x17, 0x2e, 0x74, 0x6f, 0x69, 0x74, 0x2e, 0x6d, 0x6f, 0x64, 0x65, 0x6c, 0x2e, 0x57, 0x69, 0x66,
-	0x69, 0x53, 0x65, 0x74, 0x74, 0x69, 0x6e, 0x67, 0x52, 0x04, 0x77, 0x69, 0x66, 0x69, 0x12, 0x2e,
-	0x0a, 0x05, 0x6e, 0x62, 0x69, 0x6f, 0x74, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x18, 0x2e,
-	0x74, 0x6f, 0x69, 0x74, 0x2e, 0x6d, 0x6f, 0x64, 0x65, 0x6c, 0x2e, 0x4e, 0x42, 0x49, 0x6f, 0x54,
-	0x53, 0x65, 0x74, 0x74, 0x69, 0x6e, 0x67, 0x52, 0x05, 0x6e, 0x62, 0x69, 0x6f, 0x74, 0x12, 0x37,
-	0x0a, 0x08, 0x65, 0x74, 0x68, 0x65, 0x72, 0x6e, 0x65, 0x74, 0x18, 0x03, 0x20, 0x01, 0x28, 0x0b,
-	0x32, 0x1b, 0x2e, 0x74, 0x6f, 0x69, 0x74, 0x2e, 0x6d, 0x6f, 0x64, 0x65, 0x6c, 0x2e, 0x45, 0x74,
-	0x68, 0x65, 0x72, 0x6e, 0x65, 0x74, 0x53, 0x65, 0x74, 0x74, 0x69, 0x6e, 0x67, 0x52, 0x08, 0x65,
-	0x74, 0x68, 0x65, 0x72, 0x6e, 0x65, 0x74, 0x22, 0x3d, 0x0a, 0x0b, 0x57, 0x69, 0x66, 0x69, 0x53,
-	0x65, 0x74, 0x74, 0x69, 0x6e, 0x67, 0x12, 0x12, 0x0a, 0x04, 0x73, 0x73, 0x69, 0x64, 0x18, 0x01,
-	0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x73, 0x73, 0x69, 0x64, 0x12, 0x1a, 0x0a, 0x08, 0x70, 0x61,
-	0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x70, 0x61,
-	0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x22, 0x11, 0x0a, 0x0f, 0x45, 0x74, 0x68, 0x65, 0x72, 0x6e,
-	0x65, 0x74, 0x53, 0x65, 0x74, 0x74, 0x69, 0x6e, 0x67, 0x22, 0x64, 0x0a, 0x0c, 0x4e, 0x42, 0x49,
-	0x6f, 0x54, 0x53, 0x65, 0x74, 0x74, 0x69, 0x6e, 0x67, 0x12, 0x10, 0x0a, 0x03, 0x61, 0x70, 0x6e,
-	0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03, 0x61, 0x70, 0x6e, 0x12, 0x14, 0x0a, 0x05, 0x62,
-	0x61, 0x6e, 0x64, 0x73, 0x18, 0x02, 0x20, 0x03, 0x28, 0x03, 0x52, 0x05, 0x62, 0x61, 0x6e, 0x64,
-	0x73, 0x12, 0x1a, 0x0a, 0x08, 0x6f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x6f, 0x72, 0x18, 0x03, 0x20,
-	0x01, 0x28, 0x09, 0x52, 0x08, 0x6f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x6f, 0x72, 0x12, 0x10, 0x0a,
-	0x03, 0x70, 0x69, 0x6e, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03, 0x70, 0x69, 0x6e, 0x22,
+	0x69, 0x53, 0x65, 0x74, 0x74, 0x69, 0x6e, 0x67, 0x52, 0x04, 0x77, 0x69, 0x66, 0x69, 0x12, 0x31,
+	0x0a, 0x05, 0x6e, 0x62, 0x69, 0x6f, 0x74, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1b, 0x2e,
+	0x74, 0x6f, 0x69, 0x74, 0x2e, 0x6d, 0x6f, 0x64, 0x65, 0x6c, 0x2e, 0x43, 0x65, 0x6c, 0x6c, 0x75,
+	0x6c, 0x61, 0x72, 0x53, 0x65, 0x74, 0x74, 0x69, 0x6e, 0x67, 0x52, 0x05, 0x6e, 0x62, 0x69, 0x6f,
+	0x74, 0x12, 0x37, 0x0a, 0x08, 0x65, 0x74, 0x68, 0x65, 0x72, 0x6e, 0x65, 0x74, 0x18, 0x03, 0x20,
+	0x01, 0x28, 0x0b, 0x32, 0x1b, 0x2e, 0x74, 0x6f, 0x69, 0x74, 0x2e, 0x6d, 0x6f, 0x64, 0x65, 0x6c,
+	0x2e, 0x45, 0x74, 0x68, 0x65, 0x72, 0x6e, 0x65, 0x74, 0x53, 0x65, 0x74, 0x74, 0x69, 0x6e, 0x67,
+	0x52, 0x08, 0x65, 0x74, 0x68, 0x65, 0x72, 0x6e, 0x65, 0x74, 0x22, 0x3d, 0x0a, 0x0b, 0x57, 0x69,
+	0x66, 0x69, 0x53, 0x65, 0x74, 0x74, 0x69, 0x6e, 0x67, 0x12, 0x12, 0x0a, 0x04, 0x73, 0x73, 0x69,
+	0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x73, 0x73, 0x69, 0x64, 0x12, 0x1a, 0x0a,
+	0x08, 0x70, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x08, 0x70, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x22, 0x11, 0x0a, 0x0f, 0x45, 0x74, 0x68,
+	0x65, 0x72, 0x6e, 0x65, 0x74, 0x53, 0x65, 0x74, 0x74, 0x69, 0x6e, 0x67, 0x22, 0xe0, 0x01, 0x0a,
+	0x0f, 0x43, 0x65, 0x6c, 0x6c, 0x75, 0x6c, 0x61, 0x72, 0x53, 0x65, 0x74, 0x74, 0x69, 0x6e, 0x67,
+	0x12, 0x10, 0x0a, 0x03, 0x61, 0x70, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03, 0x61,
+	0x70, 0x6e, 0x12, 0x14, 0x0a, 0x05, 0x62, 0x61, 0x6e, 0x64, 0x73, 0x18, 0x02, 0x20, 0x03, 0x28,
+	0x03, 0x52, 0x05, 0x62, 0x61, 0x6e, 0x64, 0x73, 0x12, 0x1a, 0x0a, 0x08, 0x6f, 0x70, 0x65, 0x72,
+	0x61, 0x74, 0x6f, 0x72, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x6f, 0x70, 0x65, 0x72,
+	0x61, 0x74, 0x6f, 0x72, 0x12, 0x10, 0x0a, 0x03, 0x70, 0x69, 0x6e, 0x18, 0x04, 0x20, 0x01, 0x28,
+	0x09, 0x52, 0x03, 0x70, 0x69, 0x6e, 0x12, 0x33, 0x0a, 0x04, 0x72, 0x61, 0x74, 0x73, 0x18, 0x05,
+	0x20, 0x03, 0x28, 0x0e, 0x32, 0x1f, 0x2e, 0x74, 0x6f, 0x69, 0x74, 0x2e, 0x6d, 0x6f, 0x64, 0x65,
+	0x6c, 0x2e, 0x43, 0x65, 0x6c, 0x6c, 0x75, 0x6c, 0x61, 0x72, 0x53, 0x65, 0x74, 0x74, 0x69, 0x6e,
+	0x67, 0x2e, 0x52, 0x61, 0x74, 0x52, 0x04, 0x72, 0x61, 0x74, 0x73, 0x22, 0x42, 0x0a, 0x03, 0x52,
+	0x61, 0x74, 0x12, 0x0f, 0x0a, 0x0b, 0x52, 0x41, 0x54, 0x5f, 0x55, 0x4e, 0x4b, 0x4e, 0x4f, 0x57,
+	0x4e, 0x10, 0x00, 0x12, 0x0d, 0x0a, 0x09, 0x52, 0x41, 0x54, 0x5f, 0x4c, 0x54, 0x45, 0x5f, 0x4d,
+	0x10, 0x01, 0x12, 0x0e, 0x0a, 0x0a, 0x52, 0x41, 0x54, 0x5f, 0x4e, 0x42, 0x5f, 0x49, 0x4f, 0x54,
+	0x10, 0x02, 0x12, 0x0b, 0x0a, 0x07, 0x52, 0x41, 0x54, 0x5f, 0x47, 0x53, 0x4d, 0x10, 0x03, 0x22,
 	0x6e, 0x0a, 0x14, 0x44, 0x65, 0x76, 0x69, 0x63, 0x65, 0x42, 0x72, 0x6f, 0x6b, 0x65, 0x72, 0x53,
 	0x65, 0x74, 0x74, 0x69, 0x6e, 0x67, 0x73, 0x12, 0x12, 0x0a, 0x04, 0x68, 0x6f, 0x73, 0x74, 0x18,
 	0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x68, 0x6f, 0x73, 0x74, 0x12, 0x12, 0x0a, 0x04, 0x70,
@@ -3329,7 +3397,7 @@ func file_toit_model_device_proto_rawDescGZIP() []byte {
 	return file_toit_model_device_proto_rawDescData
 }
 
-var file_toit_model_device_proto_enumTypes = make([]protoimpl.EnumInfo, 7)
+var file_toit_model_device_proto_enumTypes = make([]protoimpl.EnumInfo, 8)
 var file_toit_model_device_proto_msgTypes = make([]protoimpl.MessageInfo, 39)
 var file_toit_model_device_proto_goTypes = []interface{}{
 	(DeviceConnectionType)(0),                  // 0: toit.model.DeviceConnectionType
@@ -3337,115 +3405,117 @@ var file_toit_model_device_proto_goTypes = []interface{}{
 	(DeviceSessionChangeType)(0),               // 2: toit.model.DeviceSessionChangeType
 	(DeviceAction)(0),                          // 3: toit.model.DeviceAction
 	(DeviceModuleType)(0),                      // 4: toit.model.DeviceModuleType
-	(DeviceEvent_Type)(0),                      // 5: toit.model.DeviceEvent.Type
-	(DeviceEvent_Info_Value_Primitive_Type)(0), // 6: toit.model.DeviceEvent.Info.Value.Primitive.Type
-	(*DeviceConfig)(nil),                       // 7: toit.model.DeviceConfig
-	(*DeviceModulesConfig)(nil),                // 8: toit.model.DeviceModulesConfig
-	(*DeviceRuntimeSettings)(nil),              // 9: toit.model.DeviceRuntimeSettings
-	(*LoggingSettings)(nil),                    // 10: toit.model.LoggingSettings
-	(*MetricsSettings)(nil),                    // 11: toit.model.MetricsSettings
-	(*DeviceConnectionSettings)(nil),           // 12: toit.model.DeviceConnectionSettings
-	(*ConnectionSetting)(nil),                  // 13: toit.model.ConnectionSetting
-	(*WifiSetting)(nil),                        // 14: toit.model.WifiSetting
-	(*EthernetSetting)(nil),                    // 15: toit.model.EthernetSetting
-	(*NBIoTSetting)(nil),                       // 16: toit.model.NBIoTSetting
-	(*DeviceBrokerSettings)(nil),               // 17: toit.model.DeviceBrokerSettings
-	(*DeviceStatus)(nil),                       // 18: toit.model.DeviceStatus
-	(*DeviceModulesStatus)(nil),                // 19: toit.model.DeviceModulesStatus
-	(*DeviceModules)(nil),                      // 20: toit.model.DeviceModules
-	(*DeviceModule)(nil),                       // 21: toit.model.DeviceModule
-	(*DeviceConnectionStatus)(nil),             // 22: toit.model.DeviceConnectionStatus
-	(*DeviceBootStatus)(nil),                   // 23: toit.model.DeviceBootStatus
-	(*DeviceHealth)(nil),                       // 24: toit.model.DeviceHealth
-	(*HardwareIdentity)(nil),                   // 25: toit.model.HardwareIdentity
-	(*HardwareIdentityInfo)(nil),               // 26: toit.model.HardwareIdentityInfo
-	(*HardwareInfo)(nil),                       // 27: toit.model.HardwareInfo
-	(*HardwareToDeviceInfo)(nil),               // 28: toit.model.HardwareToDeviceInfo
-	(*DeviceEvent)(nil),                        // 29: toit.model.DeviceEvent
-	(*DeviceModelSettings)(nil),                // 30: toit.model.DeviceModelSettings
-	(*DeviceHealth_Power)(nil),                 // 31: toit.model.DeviceHealth.Power
-	(*DeviceHealth_BatteryCurve)(nil),          // 32: toit.model.DeviceHealth.BatteryCurve
-	(*DeviceHealth_Connectivity)(nil),          // 33: toit.model.DeviceHealth.Connectivity
-	(*DeviceHealth_Power_Value)(nil),           // 34: toit.model.DeviceHealth.Power.Value
-	(*DeviceHealth_Connectivity_Checkin)(nil),  // 35: toit.model.DeviceHealth.Connectivity.Checkin
-	(*DeviceEvent_Initiater)(nil),              // 36: toit.model.DeviceEvent.Initiater
-	(*DeviceEvent_Info)(nil),                   // 37: toit.model.DeviceEvent.Info
-	(*DeviceEvent_Initiater_Device)(nil),       // 38: toit.model.DeviceEvent.Initiater.Device
-	(*DeviceEvent_Initiater_Console)(nil),      // 39: toit.model.DeviceEvent.Initiater.Console
-	(*DeviceEvent_Initiater_User)(nil),         // 40: toit.model.DeviceEvent.Initiater.User
-	(*DeviceEvent_Info_Value)(nil),             // 41: toit.model.DeviceEvent.Info.Value
-	(*DeviceEvent_Info_Value_Primitive)(nil),   // 42: toit.model.DeviceEvent.Info.Value.Primitive
-	(*DeviceEvent_Info_Value_Diff)(nil),        // 43: toit.model.DeviceEvent.Info.Value.Diff
-	(*DeviceEvent_Info_Value_Error)(nil),       // 44: toit.model.DeviceEvent.Info.Value.Error
-	nil,                                        // 45: toit.model.DeviceModelSettings.ParametersEntry
-	(*timestamppb.Timestamp)(nil),              // 46: google.protobuf.Timestamp
-	(LogData_Level)(0),                         // 47: toit.model.LogData.Level
-	(MetricsData_Level)(0),                     // 48: toit.model.MetricsData.Level
-	(*durationpb.Duration)(nil),                // 49: google.protobuf.Duration
-	(*emptypb.Empty)(nil),                      // 50: google.protobuf.Empty
+	(CellularSetting_Rat)(0),                   // 5: toit.model.CellularSetting.Rat
+	(DeviceEvent_Type)(0),                      // 6: toit.model.DeviceEvent.Type
+	(DeviceEvent_Info_Value_Primitive_Type)(0), // 7: toit.model.DeviceEvent.Info.Value.Primitive.Type
+	(*DeviceConfig)(nil),                       // 8: toit.model.DeviceConfig
+	(*DeviceModulesConfig)(nil),                // 9: toit.model.DeviceModulesConfig
+	(*DeviceRuntimeSettings)(nil),              // 10: toit.model.DeviceRuntimeSettings
+	(*LoggingSettings)(nil),                    // 11: toit.model.LoggingSettings
+	(*MetricsSettings)(nil),                    // 12: toit.model.MetricsSettings
+	(*DeviceConnectionSettings)(nil),           // 13: toit.model.DeviceConnectionSettings
+	(*ConnectionSetting)(nil),                  // 14: toit.model.ConnectionSetting
+	(*WifiSetting)(nil),                        // 15: toit.model.WifiSetting
+	(*EthernetSetting)(nil),                    // 16: toit.model.EthernetSetting
+	(*CellularSetting)(nil),                    // 17: toit.model.CellularSetting
+	(*DeviceBrokerSettings)(nil),               // 18: toit.model.DeviceBrokerSettings
+	(*DeviceStatus)(nil),                       // 19: toit.model.DeviceStatus
+	(*DeviceModulesStatus)(nil),                // 20: toit.model.DeviceModulesStatus
+	(*DeviceModules)(nil),                      // 21: toit.model.DeviceModules
+	(*DeviceModule)(nil),                       // 22: toit.model.DeviceModule
+	(*DeviceConnectionStatus)(nil),             // 23: toit.model.DeviceConnectionStatus
+	(*DeviceBootStatus)(nil),                   // 24: toit.model.DeviceBootStatus
+	(*DeviceHealth)(nil),                       // 25: toit.model.DeviceHealth
+	(*HardwareIdentity)(nil),                   // 26: toit.model.HardwareIdentity
+	(*HardwareIdentityInfo)(nil),               // 27: toit.model.HardwareIdentityInfo
+	(*HardwareInfo)(nil),                       // 28: toit.model.HardwareInfo
+	(*HardwareToDeviceInfo)(nil),               // 29: toit.model.HardwareToDeviceInfo
+	(*DeviceEvent)(nil),                        // 30: toit.model.DeviceEvent
+	(*DeviceModelSettings)(nil),                // 31: toit.model.DeviceModelSettings
+	(*DeviceHealth_Power)(nil),                 // 32: toit.model.DeviceHealth.Power
+	(*DeviceHealth_BatteryCurve)(nil),          // 33: toit.model.DeviceHealth.BatteryCurve
+	(*DeviceHealth_Connectivity)(nil),          // 34: toit.model.DeviceHealth.Connectivity
+	(*DeviceHealth_Power_Value)(nil),           // 35: toit.model.DeviceHealth.Power.Value
+	(*DeviceHealth_Connectivity_Checkin)(nil),  // 36: toit.model.DeviceHealth.Connectivity.Checkin
+	(*DeviceEvent_Initiater)(nil),              // 37: toit.model.DeviceEvent.Initiater
+	(*DeviceEvent_Info)(nil),                   // 38: toit.model.DeviceEvent.Info
+	(*DeviceEvent_Initiater_Device)(nil),       // 39: toit.model.DeviceEvent.Initiater.Device
+	(*DeviceEvent_Initiater_Console)(nil),      // 40: toit.model.DeviceEvent.Initiater.Console
+	(*DeviceEvent_Initiater_User)(nil),         // 41: toit.model.DeviceEvent.Initiater.User
+	(*DeviceEvent_Info_Value)(nil),             // 42: toit.model.DeviceEvent.Info.Value
+	(*DeviceEvent_Info_Value_Primitive)(nil),   // 43: toit.model.DeviceEvent.Info.Value.Primitive
+	(*DeviceEvent_Info_Value_Diff)(nil),        // 44: toit.model.DeviceEvent.Info.Value.Diff
+	(*DeviceEvent_Info_Value_Error)(nil),       // 45: toit.model.DeviceEvent.Info.Value.Error
+	nil,                                        // 46: toit.model.DeviceModelSettings.ParametersEntry
+	(*timestamppb.Timestamp)(nil),              // 47: google.protobuf.Timestamp
+	(LogData_Level)(0),                         // 48: toit.model.LogData.Level
+	(MetricsData_Level)(0),                     // 49: toit.model.MetricsData.Level
+	(*durationpb.Duration)(nil),                // 50: google.protobuf.Duration
+	(*emptypb.Empty)(nil),                      // 51: google.protobuf.Empty
 }
 var file_toit_model_device_proto_depIdxs = []int32{
-	46, // 0: toit.model.DeviceConfig.started_after:type_name -> google.protobuf.Timestamp
-	17, // 1: toit.model.DeviceConfig.broker:type_name -> toit.model.DeviceBrokerSettings
-	12, // 2: toit.model.DeviceConfig.connection:type_name -> toit.model.DeviceConnectionSettings
-	46, // 3: toit.model.DeviceConfig.factory_after:type_name -> google.protobuf.Timestamp
-	9,  // 4: toit.model.DeviceConfig.runtime:type_name -> toit.model.DeviceRuntimeSettings
-	8,  // 5: toit.model.DeviceConfig.modules:type_name -> toit.model.DeviceModulesConfig
-	30, // 6: toit.model.DeviceConfig.model_settings:type_name -> toit.model.DeviceModelSettings
-	46, // 7: toit.model.DeviceModulesConfig.sync_requested:type_name -> google.protobuf.Timestamp
-	20, // 8: toit.model.DeviceModulesConfig.modules:type_name -> toit.model.DeviceModules
-	10, // 9: toit.model.DeviceRuntimeSettings.logging:type_name -> toit.model.LoggingSettings
-	11, // 10: toit.model.DeviceRuntimeSettings.metrics:type_name -> toit.model.MetricsSettings
-	47, // 11: toit.model.LoggingSettings.level:type_name -> toit.model.LogData.Level
-	48, // 12: toit.model.MetricsSettings.level:type_name -> toit.model.MetricsData.Level
-	49, // 13: toit.model.DeviceConnectionSettings.max_offline:type_name -> google.protobuf.Duration
-	13, // 14: toit.model.DeviceConnectionSettings.connections:type_name -> toit.model.ConnectionSetting
-	14, // 15: toit.model.ConnectionSetting.wifi:type_name -> toit.model.WifiSetting
-	16, // 16: toit.model.ConnectionSetting.nbiot:type_name -> toit.model.NBIoTSetting
-	15, // 17: toit.model.ConnectionSetting.ethernet:type_name -> toit.model.EthernetSetting
-	46, // 18: toit.model.DeviceStatus.updated:type_name -> google.protobuf.Timestamp
-	7,  // 19: toit.model.DeviceStatus.config:type_name -> toit.model.DeviceConfig
-	23, // 20: toit.model.DeviceStatus.boot:type_name -> toit.model.DeviceBootStatus
-	24, // 21: toit.model.DeviceStatus.health:type_name -> toit.model.DeviceHealth
-	22, // 22: toit.model.DeviceStatus.connection:type_name -> toit.model.DeviceConnectionStatus
-	19, // 23: toit.model.DeviceStatus.modules:type_name -> toit.model.DeviceModulesStatus
-	46, // 24: toit.model.DeviceModulesStatus.last_updated:type_name -> google.protobuf.Timestamp
-	20, // 25: toit.model.DeviceModulesStatus.modules:type_name -> toit.model.DeviceModules
-	21, // 26: toit.model.DeviceModules.cellular:type_name -> toit.model.DeviceModule
-	0,  // 27: toit.model.DeviceConnectionStatus.type:type_name -> toit.model.DeviceConnectionType
-	46, // 28: toit.model.DeviceBootStatus.last_boot:type_name -> google.protobuf.Timestamp
-	46, // 29: toit.model.DeviceBootStatus.last_factory_boot:type_name -> google.protobuf.Timestamp
-	31, // 30: toit.model.DeviceHealth.power:type_name -> toit.model.DeviceHealth.Power
-	32, // 31: toit.model.DeviceHealth.battery_curve:type_name -> toit.model.DeviceHealth.BatteryCurve
-	33, // 32: toit.model.DeviceHealth.connectivity:type_name -> toit.model.DeviceHealth.Connectivity
-	46, // 33: toit.model.HardwareToDeviceInfo.bound:type_name -> google.protobuf.Timestamp
-	46, // 34: toit.model.HardwareToDeviceInfo.unbound:type_name -> google.protobuf.Timestamp
-	46, // 35: toit.model.DeviceEvent.created:type_name -> google.protobuf.Timestamp
-	5,  // 36: toit.model.DeviceEvent.type:type_name -> toit.model.DeviceEvent.Type
-	36, // 37: toit.model.DeviceEvent.initiater:type_name -> toit.model.DeviceEvent.Initiater
-	37, // 38: toit.model.DeviceEvent.information:type_name -> toit.model.DeviceEvent.Info
-	45, // 39: toit.model.DeviceModelSettings.parameters:type_name -> toit.model.DeviceModelSettings.ParametersEntry
-	34, // 40: toit.model.DeviceHealth.Power.value:type_name -> toit.model.DeviceHealth.Power.Value
-	46, // 41: toit.model.DeviceHealth.Power.last_updated:type_name -> google.protobuf.Timestamp
-	46, // 42: toit.model.DeviceHealth.BatteryCurve.last_updated:type_name -> google.protobuf.Timestamp
-	46, // 43: toit.model.DeviceHealth.Connectivity.last_seen:type_name -> google.protobuf.Timestamp
-	35, // 44: toit.model.DeviceHealth.Connectivity.checkins:type_name -> toit.model.DeviceHealth.Connectivity.Checkin
-	50, // 45: toit.model.DeviceHealth.Power.Value.pluggedin:type_name -> google.protobuf.Empty
-	38, // 46: toit.model.DeviceEvent.Initiater.device:type_name -> toit.model.DeviceEvent.Initiater.Device
-	39, // 47: toit.model.DeviceEvent.Initiater.console:type_name -> toit.model.DeviceEvent.Initiater.Console
-	40, // 48: toit.model.DeviceEvent.Initiater.user:type_name -> toit.model.DeviceEvent.Initiater.User
-	41, // 49: toit.model.DeviceEvent.Info.value:type_name -> toit.model.DeviceEvent.Info.Value
-	42, // 50: toit.model.DeviceEvent.Info.Value.primitive:type_name -> toit.model.DeviceEvent.Info.Value.Primitive
-	43, // 51: toit.model.DeviceEvent.Info.Value.diff:type_name -> toit.model.DeviceEvent.Info.Value.Diff
-	44, // 52: toit.model.DeviceEvent.Info.Value.error:type_name -> toit.model.DeviceEvent.Info.Value.Error
-	6,  // 53: toit.model.DeviceEvent.Info.Value.Primitive.type:type_name -> toit.model.DeviceEvent.Info.Value.Primitive.Type
-	42, // 54: toit.model.DeviceEvent.Info.Value.Diff.from:type_name -> toit.model.DeviceEvent.Info.Value.Primitive
-	42, // 55: toit.model.DeviceEvent.Info.Value.Diff.to:type_name -> toit.model.DeviceEvent.Info.Value.Primitive
-	56, // [56:56] is the sub-list for method output_type
-	56, // [56:56] is the sub-list for method input_type
-	56, // [56:56] is the sub-list for extension type_name
-	56, // [56:56] is the sub-list for extension extendee
-	0,  // [0:56] is the sub-list for field type_name
+	47, // 0: toit.model.DeviceConfig.started_after:type_name -> google.protobuf.Timestamp
+	18, // 1: toit.model.DeviceConfig.broker:type_name -> toit.model.DeviceBrokerSettings
+	13, // 2: toit.model.DeviceConfig.connection:type_name -> toit.model.DeviceConnectionSettings
+	47, // 3: toit.model.DeviceConfig.factory_after:type_name -> google.protobuf.Timestamp
+	10, // 4: toit.model.DeviceConfig.runtime:type_name -> toit.model.DeviceRuntimeSettings
+	9,  // 5: toit.model.DeviceConfig.modules:type_name -> toit.model.DeviceModulesConfig
+	31, // 6: toit.model.DeviceConfig.model_settings:type_name -> toit.model.DeviceModelSettings
+	47, // 7: toit.model.DeviceModulesConfig.sync_requested:type_name -> google.protobuf.Timestamp
+	21, // 8: toit.model.DeviceModulesConfig.modules:type_name -> toit.model.DeviceModules
+	11, // 9: toit.model.DeviceRuntimeSettings.logging:type_name -> toit.model.LoggingSettings
+	12, // 10: toit.model.DeviceRuntimeSettings.metrics:type_name -> toit.model.MetricsSettings
+	48, // 11: toit.model.LoggingSettings.level:type_name -> toit.model.LogData.Level
+	49, // 12: toit.model.MetricsSettings.level:type_name -> toit.model.MetricsData.Level
+	50, // 13: toit.model.DeviceConnectionSettings.max_offline:type_name -> google.protobuf.Duration
+	14, // 14: toit.model.DeviceConnectionSettings.connections:type_name -> toit.model.ConnectionSetting
+	15, // 15: toit.model.ConnectionSetting.wifi:type_name -> toit.model.WifiSetting
+	17, // 16: toit.model.ConnectionSetting.nbiot:type_name -> toit.model.CellularSetting
+	16, // 17: toit.model.ConnectionSetting.ethernet:type_name -> toit.model.EthernetSetting
+	5,  // 18: toit.model.CellularSetting.rats:type_name -> toit.model.CellularSetting.Rat
+	47, // 19: toit.model.DeviceStatus.updated:type_name -> google.protobuf.Timestamp
+	8,  // 20: toit.model.DeviceStatus.config:type_name -> toit.model.DeviceConfig
+	24, // 21: toit.model.DeviceStatus.boot:type_name -> toit.model.DeviceBootStatus
+	25, // 22: toit.model.DeviceStatus.health:type_name -> toit.model.DeviceHealth
+	23, // 23: toit.model.DeviceStatus.connection:type_name -> toit.model.DeviceConnectionStatus
+	20, // 24: toit.model.DeviceStatus.modules:type_name -> toit.model.DeviceModulesStatus
+	47, // 25: toit.model.DeviceModulesStatus.last_updated:type_name -> google.protobuf.Timestamp
+	21, // 26: toit.model.DeviceModulesStatus.modules:type_name -> toit.model.DeviceModules
+	22, // 27: toit.model.DeviceModules.cellular:type_name -> toit.model.DeviceModule
+	0,  // 28: toit.model.DeviceConnectionStatus.type:type_name -> toit.model.DeviceConnectionType
+	47, // 29: toit.model.DeviceBootStatus.last_boot:type_name -> google.protobuf.Timestamp
+	47, // 30: toit.model.DeviceBootStatus.last_factory_boot:type_name -> google.protobuf.Timestamp
+	32, // 31: toit.model.DeviceHealth.power:type_name -> toit.model.DeviceHealth.Power
+	33, // 32: toit.model.DeviceHealth.battery_curve:type_name -> toit.model.DeviceHealth.BatteryCurve
+	34, // 33: toit.model.DeviceHealth.connectivity:type_name -> toit.model.DeviceHealth.Connectivity
+	47, // 34: toit.model.HardwareToDeviceInfo.bound:type_name -> google.protobuf.Timestamp
+	47, // 35: toit.model.HardwareToDeviceInfo.unbound:type_name -> google.protobuf.Timestamp
+	47, // 36: toit.model.DeviceEvent.created:type_name -> google.protobuf.Timestamp
+	6,  // 37: toit.model.DeviceEvent.type:type_name -> toit.model.DeviceEvent.Type
+	37, // 38: toit.model.DeviceEvent.initiater:type_name -> toit.model.DeviceEvent.Initiater
+	38, // 39: toit.model.DeviceEvent.information:type_name -> toit.model.DeviceEvent.Info
+	46, // 40: toit.model.DeviceModelSettings.parameters:type_name -> toit.model.DeviceModelSettings.ParametersEntry
+	35, // 41: toit.model.DeviceHealth.Power.value:type_name -> toit.model.DeviceHealth.Power.Value
+	47, // 42: toit.model.DeviceHealth.Power.last_updated:type_name -> google.protobuf.Timestamp
+	47, // 43: toit.model.DeviceHealth.BatteryCurve.last_updated:type_name -> google.protobuf.Timestamp
+	47, // 44: toit.model.DeviceHealth.Connectivity.last_seen:type_name -> google.protobuf.Timestamp
+	36, // 45: toit.model.DeviceHealth.Connectivity.checkins:type_name -> toit.model.DeviceHealth.Connectivity.Checkin
+	51, // 46: toit.model.DeviceHealth.Power.Value.pluggedin:type_name -> google.protobuf.Empty
+	39, // 47: toit.model.DeviceEvent.Initiater.device:type_name -> toit.model.DeviceEvent.Initiater.Device
+	40, // 48: toit.model.DeviceEvent.Initiater.console:type_name -> toit.model.DeviceEvent.Initiater.Console
+	41, // 49: toit.model.DeviceEvent.Initiater.user:type_name -> toit.model.DeviceEvent.Initiater.User
+	42, // 50: toit.model.DeviceEvent.Info.value:type_name -> toit.model.DeviceEvent.Info.Value
+	43, // 51: toit.model.DeviceEvent.Info.Value.primitive:type_name -> toit.model.DeviceEvent.Info.Value.Primitive
+	44, // 52: toit.model.DeviceEvent.Info.Value.diff:type_name -> toit.model.DeviceEvent.Info.Value.Diff
+	45, // 53: toit.model.DeviceEvent.Info.Value.error:type_name -> toit.model.DeviceEvent.Info.Value.Error
+	7,  // 54: toit.model.DeviceEvent.Info.Value.Primitive.type:type_name -> toit.model.DeviceEvent.Info.Value.Primitive.Type
+	43, // 55: toit.model.DeviceEvent.Info.Value.Diff.from:type_name -> toit.model.DeviceEvent.Info.Value.Primitive
+	43, // 56: toit.model.DeviceEvent.Info.Value.Diff.to:type_name -> toit.model.DeviceEvent.Info.Value.Primitive
+	57, // [57:57] is the sub-list for method output_type
+	57, // [57:57] is the sub-list for method input_type
+	57, // [57:57] is the sub-list for extension type_name
+	57, // [57:57] is the sub-list for extension extendee
+	0,  // [0:57] is the sub-list for field type_name
 }
 
 func init() { file_toit_model_device_proto_init() }
@@ -3564,7 +3634,7 @@ func file_toit_model_device_proto_init() {
 			}
 		}
 		file_toit_model_device_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*NBIoTSetting); i {
+			switch v := v.(*CellularSetting); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3931,7 +4001,7 @@ func file_toit_model_device_proto_init() {
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_toit_model_device_proto_rawDesc,
-			NumEnums:      7,
+			NumEnums:      8,
 			NumMessages:   39,
 			NumExtensions: 0,
 			NumServices:   0,
