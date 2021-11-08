@@ -1,0 +1,9 @@
+# Description for deploying the publish app.
+# The current demo-app is more suited for being executed with
+#   'toit run', but it can also be installed.
+
+name: publish-demo
+
+triggers:
+  on_install: true
+  on_boot: true
