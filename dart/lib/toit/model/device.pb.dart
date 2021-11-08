@@ -693,9 +693,9 @@ class ConnectionSetting extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOM<WifiSetting>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'wifi',
         subBuilder: WifiSetting.create)
-    ..aOM<NBIoTSetting>(
+    ..aOM<CellularSetting>(
         2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nbiot',
-        subBuilder: NBIoTSetting.create)
+        subBuilder: CellularSetting.create)
     ..aOM<EthernetSetting>(
         3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ethernet',
         subBuilder: EthernetSetting.create)
@@ -704,7 +704,7 @@ class ConnectionSetting extends $pb.GeneratedMessage {
   ConnectionSetting._() : super();
   factory ConnectionSetting({
     WifiSetting? wifi,
-    NBIoTSetting? nbiot,
+    CellularSetting? nbiot,
     EthernetSetting? ethernet,
   }) {
     final _result = create();
@@ -761,9 +761,9 @@ class ConnectionSetting extends $pb.GeneratedMessage {
   WifiSetting ensureWifi() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  NBIoTSetting get nbiot => $_getN(1);
+  CellularSetting get nbiot => $_getN(1);
   @$pb.TagNumber(2)
-  set nbiot(NBIoTSetting v) {
+  set nbiot(CellularSetting v) {
     setField(2, v);
   }
 
@@ -772,7 +772,7 @@ class ConnectionSetting extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearNbiot() => clearField(2);
   @$pb.TagNumber(2)
-  NBIoTSetting ensureNbiot() => $_ensure(1);
+  CellularSetting ensureNbiot() => $_ensure(1);
 
   @$pb.TagNumber(3)
   EthernetSetting get ethernet => $_getN(2);
@@ -918,11 +918,11 @@ class EthernetSetting extends $pb.GeneratedMessage {
   static EthernetSetting? _defaultInstance;
 }
 
-class NBIoTSetting extends $pb.GeneratedMessage {
+class CellularSetting extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
           ? ''
-          : 'NBIoTSetting',
+          : 'CellularSetting',
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
@@ -945,14 +945,16 @@ class NBIoTSetting extends $pb.GeneratedMessage {
             ? ''
             : 'operator')
     ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pin')
+    ..pc<CellularSetting_Rat>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'rats', $pb.PbFieldType.PE, valueOf: CellularSetting_Rat.valueOf, enumValues: CellularSetting_Rat.values)
     ..hasRequiredFields = false;
 
-  NBIoTSetting._() : super();
-  factory NBIoTSetting({
+  CellularSetting._() : super();
+  factory CellularSetting({
     $core.String? apn,
     $core.Iterable<$fixnum.Int64>? bands,
     $core.String? operator,
     $core.String? pin,
+    $core.Iterable<CellularSetting_Rat>? rats,
   }) {
     final _result = create();
     if (apn != null) {
@@ -967,34 +969,37 @@ class NBIoTSetting extends $pb.GeneratedMessage {
     if (pin != null) {
       _result.pin = pin;
     }
+    if (rats != null) {
+      _result.rats.addAll(rats);
+    }
     return _result;
   }
-  factory NBIoTSetting.fromBuffer($core.List<$core.int> i,
+  factory CellularSetting.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory NBIoTSetting.fromJson($core.String i,
+  factory CellularSetting.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  NBIoTSetting clone() => NBIoTSetting()..mergeFromMessage(this);
+  CellularSetting clone() => CellularSetting()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  NBIoTSetting copyWith(void Function(NBIoTSetting) updates) =>
-      super.copyWith((message) => updates(message as NBIoTSetting))
-          as NBIoTSetting; // ignore: deprecated_member_use
+  CellularSetting copyWith(void Function(CellularSetting) updates) =>
+      super.copyWith((message) => updates(message as CellularSetting))
+          as CellularSetting; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static NBIoTSetting create() => NBIoTSetting._();
-  NBIoTSetting createEmptyInstance() => create();
-  static $pb.PbList<NBIoTSetting> createRepeated() =>
-      $pb.PbList<NBIoTSetting>();
+  static CellularSetting create() => CellularSetting._();
+  CellularSetting createEmptyInstance() => create();
+  static $pb.PbList<CellularSetting> createRepeated() =>
+      $pb.PbList<CellularSetting>();
   @$core.pragma('dart2js:noInline')
-  static NBIoTSetting getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<NBIoTSetting>(create);
-  static NBIoTSetting? _defaultInstance;
+  static CellularSetting getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CellularSetting>(create);
+  static CellularSetting? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get apn => $_getSZ(0);
@@ -1034,6 +1039,9 @@ class NBIoTSetting extends $pb.GeneratedMessage {
   $core.bool hasPin() => $_has(3);
   @$pb.TagNumber(4)
   void clearPin() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.List<CellularSetting_Rat> get rats => $_getList(4);
 }
 
 class DeviceBrokerSettings extends $pb.GeneratedMessage {

@@ -257,6 +257,42 @@ class DeviceModuleType extends $pb.ProtobufEnum {
   const DeviceModuleType._($core.int v, $core.String n) : super(v, n);
 }
 
+class CellularSetting_Rat extends $pb.ProtobufEnum {
+  static const CellularSetting_Rat RAT_UNKNOWN = CellularSetting_Rat._(
+      0,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'RAT_UNKNOWN');
+  static const CellularSetting_Rat RAT_LTE_M = CellularSetting_Rat._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'RAT_LTE_M');
+  static const CellularSetting_Rat RAT_NB_IOT = CellularSetting_Rat._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'RAT_NB_IOT');
+  static const CellularSetting_Rat RAT_GSM = CellularSetting_Rat._(
+      3,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'RAT_GSM');
+
+  static const $core.List<CellularSetting_Rat> values = <CellularSetting_Rat>[
+    RAT_UNKNOWN,
+    RAT_LTE_M,
+    RAT_NB_IOT,
+    RAT_GSM,
+  ];
+
+  static final $core.Map<$core.int, CellularSetting_Rat> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static CellularSetting_Rat? valueOf($core.int value) => _byValue[value];
+
+  const CellularSetting_Rat._($core.int v, $core.String n) : super(v, n);
+}
+
 class DeviceEvent_Type extends $pb.ProtobufEnum {
   static const DeviceEvent_Type UNKNOWN = DeviceEvent_Type._(
       0,
