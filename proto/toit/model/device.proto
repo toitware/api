@@ -68,10 +68,17 @@ message EthernetSetting {
 }
 
 message NBIoTSetting {
+  enum Rat {
+    RAT_UNKNOWN = 0;
+    RAT_LTE_M = 1;
+    RAT_NB_IOT = 2;
+    RAT_GSM = 3;
+  }
   string apn = 1;
   repeated int64 bands = 2;
   string operator = 3;
   string pin = 4;
+  repeated Rat rats = 5;
 }
 
 enum DeviceConnectionType {
