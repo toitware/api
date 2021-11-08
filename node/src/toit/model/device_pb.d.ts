@@ -213,8 +213,8 @@ export class ConnectionSetting extends jspb.Message {
 
   hasNbiot(): boolean;
   clearNbiot(): void;
-  getNbiot(): NBIoTSetting | undefined;
-  setNbiot(value?: NBIoTSetting): void;
+  getNbiot(): CellularSetting | undefined;
+  setNbiot(value?: CellularSetting): void;
 
   hasEthernet(): boolean;
   clearEthernet(): void;
@@ -234,7 +234,7 @@ export class ConnectionSetting extends jspb.Message {
 export namespace ConnectionSetting {
   export type AsObject = {
     wifi?: WifiSetting.AsObject,
-    nbiot?: NBIoTSetting.AsObject,
+    nbiot?: CellularSetting.AsObject,
     ethernet?: EthernetSetting.AsObject,
   }
 }
@@ -279,7 +279,7 @@ export namespace EthernetSetting {
   }
 }
 
-export class NBIoTSetting extends jspb.Message {
+export class CellularSetting extends jspb.Message {
   getApn(): string;
   setApn(value: string): void;
 
@@ -294,23 +294,38 @@ export class NBIoTSetting extends jspb.Message {
   getPin(): string;
   setPin(value: string): void;
 
+  clearRatsList(): void;
+  getRatsList(): Array<CellularSetting.RatMap[keyof CellularSetting.RatMap]>;
+  setRatsList(value: Array<CellularSetting.RatMap[keyof CellularSetting.RatMap]>): void;
+  addRats(value: CellularSetting.RatMap[keyof CellularSetting.RatMap], index?: number): CellularSetting.RatMap[keyof CellularSetting.RatMap];
+
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): NBIoTSetting.AsObject;
-  static toObject(includeInstance: boolean, msg: NBIoTSetting): NBIoTSetting.AsObject;
+  toObject(includeInstance?: boolean): CellularSetting.AsObject;
+  static toObject(includeInstance: boolean, msg: CellularSetting): CellularSetting.AsObject;
   static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
   static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: NBIoTSetting, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): NBIoTSetting;
-  static deserializeBinaryFromReader(message: NBIoTSetting, reader: jspb.BinaryReader): NBIoTSetting;
+  static serializeBinaryToWriter(message: CellularSetting, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): CellularSetting;
+  static deserializeBinaryFromReader(message: CellularSetting, reader: jspb.BinaryReader): CellularSetting;
 }
 
-export namespace NBIoTSetting {
+export namespace CellularSetting {
   export type AsObject = {
     apn: string,
     bandsList: Array<number>,
     operator: string,
     pin: string,
+    ratsList: Array<CellularSetting.RatMap[keyof CellularSetting.RatMap]>,
   }
+
+  export interface RatMap {
+    RAT_UNKNOWN: 0;
+    RAT_LTE_M: 1;
+    RAT_NB_IOT: 2;
+    RAT_GSM: 3;
+  }
+
+  export const Rat: RatMap;
 }
 
 export class DeviceBrokerSettings extends jspb.Message {
