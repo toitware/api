@@ -24,8 +24,8 @@ data that is published while the subscription is alive. This can be used to
 
 Get an API Key from the Toit server:
 ``` shell
-  toit org api-keys add <name>
-  toit org api-keys print-secret <name>
+  toit project api-keys add <name>
+  toit project api-keys print-secret <api-key-id>
 ```
 The printed secret can then be used as API key.
 

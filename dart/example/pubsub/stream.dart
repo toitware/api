@@ -23,20 +23,19 @@ bool isRetryableGrpcError(GrpcError error) {
     case StatusCode.unknown:
     case StatusCode.deadlineExceeded:
     case StatusCode.unavailable:
+    case StatusCode.cancelled:
+    case StatusCode.resourceExhausted:
+    case StatusCode.internal:
       return true;
 
-    case StatusCode.cancelled:
     case StatusCode.invalidArgument:
     case StatusCode.notFound:
     case StatusCode.alreadyExists:
     case StatusCode.permissionDenied:
-    case StatusCode
-        .resourceExhausted: // Could also be acceptable for retry.case
     case StatusCode.failedPrecondition:
     case StatusCode.aborted:
     case StatusCode.outOfRange:
     case StatusCode.unimplemented:
-    case StatusCode.internal:
     case StatusCode.dataLoss:
     case StatusCode.unauthenticated:
     default:
