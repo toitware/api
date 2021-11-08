@@ -6770,19 +6770,19 @@ public final class DeviceProto {
     io.toit.proto.toit.model.DeviceProto.WifiSettingOrBuilder getWifiOrBuilder();
 
     /**
-     * <code>.toit.model.NBIoTSetting nbiot = 2;</code>
+     * <code>.toit.model.CellularSetting nbiot = 2;</code>
      * @return Whether the nbiot field is set.
      */
     boolean hasNbiot();
     /**
-     * <code>.toit.model.NBIoTSetting nbiot = 2;</code>
+     * <code>.toit.model.CellularSetting nbiot = 2;</code>
      * @return The nbiot.
      */
-    io.toit.proto.toit.model.DeviceProto.NBIoTSetting getNbiot();
+    io.toit.proto.toit.model.DeviceProto.CellularSetting getNbiot();
     /**
-     * <code>.toit.model.NBIoTSetting nbiot = 2;</code>
+     * <code>.toit.model.CellularSetting nbiot = 2;</code>
      */
-    io.toit.proto.toit.model.DeviceProto.NBIoTSettingOrBuilder getNbiotOrBuilder();
+    io.toit.proto.toit.model.DeviceProto.CellularSettingOrBuilder getNbiotOrBuilder();
 
     /**
      * <code>.toit.model.EthernetSetting ethernet = 3;</code>
@@ -6858,11 +6858,11 @@ public final class DeviceProto {
               break;
             }
             case 18: {
-              io.toit.proto.toit.model.DeviceProto.NBIoTSetting.Builder subBuilder = null;
+              io.toit.proto.toit.model.DeviceProto.CellularSetting.Builder subBuilder = null;
               if (nbiot_ != null) {
                 subBuilder = nbiot_.toBuilder();
               }
-              nbiot_ = input.readMessage(io.toit.proto.toit.model.DeviceProto.NBIoTSetting.parser(), extensionRegistry);
+              nbiot_ = input.readMessage(io.toit.proto.toit.model.DeviceProto.CellularSetting.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(nbiot_);
                 nbiot_ = subBuilder.buildPartial();
@@ -6954,25 +6954,25 @@ public final class DeviceProto {
     }
 
     public static final int NBIOT_FIELD_NUMBER = 2;
-    private io.toit.proto.toit.model.DeviceProto.NBIoTSetting nbiot_;
+    private io.toit.proto.toit.model.DeviceProto.CellularSetting nbiot_;
     /**
-     * <code>.toit.model.NBIoTSetting nbiot = 2;</code>
+     * <code>.toit.model.CellularSetting nbiot = 2;</code>
      * @return Whether the nbiot field is set.
      */
     public boolean hasNbiot() {
       return nbiot_ != null;
     }
     /**
-     * <code>.toit.model.NBIoTSetting nbiot = 2;</code>
+     * <code>.toit.model.CellularSetting nbiot = 2;</code>
      * @return The nbiot.
      */
-    public io.toit.proto.toit.model.DeviceProto.NBIoTSetting getNbiot() {
-      return nbiot_ == null ? io.toit.proto.toit.model.DeviceProto.NBIoTSetting.getDefaultInstance() : nbiot_;
+    public io.toit.proto.toit.model.DeviceProto.CellularSetting getNbiot() {
+      return nbiot_ == null ? io.toit.proto.toit.model.DeviceProto.CellularSetting.getDefaultInstance() : nbiot_;
     }
     /**
-     * <code>.toit.model.NBIoTSetting nbiot = 2;</code>
+     * <code>.toit.model.CellularSetting nbiot = 2;</code>
      */
-    public io.toit.proto.toit.model.DeviceProto.NBIoTSettingOrBuilder getNbiotOrBuilder() {
+    public io.toit.proto.toit.model.DeviceProto.CellularSettingOrBuilder getNbiotOrBuilder() {
       return getNbiot();
     }
 
@@ -7538,31 +7538,31 @@ public final class DeviceProto {
         return wifiBuilder_;
       }
 
-      private io.toit.proto.toit.model.DeviceProto.NBIoTSetting nbiot_;
+      private io.toit.proto.toit.model.DeviceProto.CellularSetting nbiot_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.toit.proto.toit.model.DeviceProto.NBIoTSetting, io.toit.proto.toit.model.DeviceProto.NBIoTSetting.Builder, io.toit.proto.toit.model.DeviceProto.NBIoTSettingOrBuilder> nbiotBuilder_;
+          io.toit.proto.toit.model.DeviceProto.CellularSetting, io.toit.proto.toit.model.DeviceProto.CellularSetting.Builder, io.toit.proto.toit.model.DeviceProto.CellularSettingOrBuilder> nbiotBuilder_;
       /**
-       * <code>.toit.model.NBIoTSetting nbiot = 2;</code>
+       * <code>.toit.model.CellularSetting nbiot = 2;</code>
        * @return Whether the nbiot field is set.
        */
       public boolean hasNbiot() {
         return nbiotBuilder_ != null || nbiot_ != null;
       }
       /**
-       * <code>.toit.model.NBIoTSetting nbiot = 2;</code>
+       * <code>.toit.model.CellularSetting nbiot = 2;</code>
        * @return The nbiot.
        */
-      public io.toit.proto.toit.model.DeviceProto.NBIoTSetting getNbiot() {
+      public io.toit.proto.toit.model.DeviceProto.CellularSetting getNbiot() {
         if (nbiotBuilder_ == null) {
-          return nbiot_ == null ? io.toit.proto.toit.model.DeviceProto.NBIoTSetting.getDefaultInstance() : nbiot_;
+          return nbiot_ == null ? io.toit.proto.toit.model.DeviceProto.CellularSetting.getDefaultInstance() : nbiot_;
         } else {
           return nbiotBuilder_.getMessage();
         }
       }
       /**
-       * <code>.toit.model.NBIoTSetting nbiot = 2;</code>
+       * <code>.toit.model.CellularSetting nbiot = 2;</code>
        */
-      public Builder setNbiot(io.toit.proto.toit.model.DeviceProto.NBIoTSetting value) {
+      public Builder setNbiot(io.toit.proto.toit.model.DeviceProto.CellularSetting value) {
         if (nbiotBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -7576,10 +7576,10 @@ public final class DeviceProto {
         return this;
       }
       /**
-       * <code>.toit.model.NBIoTSetting nbiot = 2;</code>
+       * <code>.toit.model.CellularSetting nbiot = 2;</code>
        */
       public Builder setNbiot(
-          io.toit.proto.toit.model.DeviceProto.NBIoTSetting.Builder builderForValue) {
+          io.toit.proto.toit.model.DeviceProto.CellularSetting.Builder builderForValue) {
         if (nbiotBuilder_ == null) {
           nbiot_ = builderForValue.build();
           onChanged();
@@ -7590,13 +7590,13 @@ public final class DeviceProto {
         return this;
       }
       /**
-       * <code>.toit.model.NBIoTSetting nbiot = 2;</code>
+       * <code>.toit.model.CellularSetting nbiot = 2;</code>
        */
-      public Builder mergeNbiot(io.toit.proto.toit.model.DeviceProto.NBIoTSetting value) {
+      public Builder mergeNbiot(io.toit.proto.toit.model.DeviceProto.CellularSetting value) {
         if (nbiotBuilder_ == null) {
           if (nbiot_ != null) {
             nbiot_ =
-              io.toit.proto.toit.model.DeviceProto.NBIoTSetting.newBuilder(nbiot_).mergeFrom(value).buildPartial();
+              io.toit.proto.toit.model.DeviceProto.CellularSetting.newBuilder(nbiot_).mergeFrom(value).buildPartial();
           } else {
             nbiot_ = value;
           }
@@ -7608,7 +7608,7 @@ public final class DeviceProto {
         return this;
       }
       /**
-       * <code>.toit.model.NBIoTSetting nbiot = 2;</code>
+       * <code>.toit.model.CellularSetting nbiot = 2;</code>
        */
       public Builder clearNbiot() {
         if (nbiotBuilder_ == null) {
@@ -7622,33 +7622,33 @@ public final class DeviceProto {
         return this;
       }
       /**
-       * <code>.toit.model.NBIoTSetting nbiot = 2;</code>
+       * <code>.toit.model.CellularSetting nbiot = 2;</code>
        */
-      public io.toit.proto.toit.model.DeviceProto.NBIoTSetting.Builder getNbiotBuilder() {
+      public io.toit.proto.toit.model.DeviceProto.CellularSetting.Builder getNbiotBuilder() {
         
         onChanged();
         return getNbiotFieldBuilder().getBuilder();
       }
       /**
-       * <code>.toit.model.NBIoTSetting nbiot = 2;</code>
+       * <code>.toit.model.CellularSetting nbiot = 2;</code>
        */
-      public io.toit.proto.toit.model.DeviceProto.NBIoTSettingOrBuilder getNbiotOrBuilder() {
+      public io.toit.proto.toit.model.DeviceProto.CellularSettingOrBuilder getNbiotOrBuilder() {
         if (nbiotBuilder_ != null) {
           return nbiotBuilder_.getMessageOrBuilder();
         } else {
           return nbiot_ == null ?
-              io.toit.proto.toit.model.DeviceProto.NBIoTSetting.getDefaultInstance() : nbiot_;
+              io.toit.proto.toit.model.DeviceProto.CellularSetting.getDefaultInstance() : nbiot_;
         }
       }
       /**
-       * <code>.toit.model.NBIoTSetting nbiot = 2;</code>
+       * <code>.toit.model.CellularSetting nbiot = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.toit.proto.toit.model.DeviceProto.NBIoTSetting, io.toit.proto.toit.model.DeviceProto.NBIoTSetting.Builder, io.toit.proto.toit.model.DeviceProto.NBIoTSettingOrBuilder> 
+          io.toit.proto.toit.model.DeviceProto.CellularSetting, io.toit.proto.toit.model.DeviceProto.CellularSetting.Builder, io.toit.proto.toit.model.DeviceProto.CellularSettingOrBuilder> 
           getNbiotFieldBuilder() {
         if (nbiotBuilder_ == null) {
           nbiotBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.toit.proto.toit.model.DeviceProto.NBIoTSetting, io.toit.proto.toit.model.DeviceProto.NBIoTSetting.Builder, io.toit.proto.toit.model.DeviceProto.NBIoTSettingOrBuilder>(
+              io.toit.proto.toit.model.DeviceProto.CellularSetting, io.toit.proto.toit.model.DeviceProto.CellularSetting.Builder, io.toit.proto.toit.model.DeviceProto.CellularSettingOrBuilder>(
                   getNbiot(),
                   getParentForChildren(),
                   isClean());
@@ -8960,8 +8960,8 @@ public final class DeviceProto {
 
   }
 
-  public interface NBIoTSettingOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:toit.model.NBIoTSetting)
+  public interface CellularSettingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.model.CellularSetting)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -9016,31 +9016,61 @@ public final class DeviceProto {
      */
     com.google.protobuf.ByteString
         getPinBytes();
+
+    /**
+     * <code>repeated .toit.model.CellularSetting.Rat rats = 5;</code>
+     * @return A list containing the rats.
+     */
+    java.util.List<io.toit.proto.toit.model.DeviceProto.CellularSetting.Rat> getRatsList();
+    /**
+     * <code>repeated .toit.model.CellularSetting.Rat rats = 5;</code>
+     * @return The count of rats.
+     */
+    int getRatsCount();
+    /**
+     * <code>repeated .toit.model.CellularSetting.Rat rats = 5;</code>
+     * @param index The index of the element to return.
+     * @return The rats at the given index.
+     */
+    io.toit.proto.toit.model.DeviceProto.CellularSetting.Rat getRats(int index);
+    /**
+     * <code>repeated .toit.model.CellularSetting.Rat rats = 5;</code>
+     * @return A list containing the enum numeric values on the wire for rats.
+     */
+    java.util.List<java.lang.Integer>
+    getRatsValueList();
+    /**
+     * <code>repeated .toit.model.CellularSetting.Rat rats = 5;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of rats at the given index.
+     */
+    int getRatsValue(int index);
   }
   /**
-   * Protobuf type {@code toit.model.NBIoTSetting}
+   * Protobuf type {@code toit.model.CellularSetting}
    */
-  public  static final class NBIoTSetting extends
+  public  static final class CellularSetting extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:toit.model.NBIoTSetting)
-      NBIoTSettingOrBuilder {
+      // @@protoc_insertion_point(message_implements:toit.model.CellularSetting)
+      CellularSettingOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use NBIoTSetting.newBuilder() to construct.
-    private NBIoTSetting(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use CellularSetting.newBuilder() to construct.
+    private CellularSetting(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private NBIoTSetting() {
+    private CellularSetting() {
       apn_ = "";
       bands_ = emptyLongList();
       operator_ = "";
       pin_ = "";
+      rats_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new NBIoTSetting();
+      return new CellularSetting();
     }
 
     @java.lang.Override
@@ -9048,7 +9078,7 @@ public final class DeviceProto {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private NBIoTSetting(
+    private CellularSetting(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -9106,6 +9136,29 @@ public final class DeviceProto {
               pin_ = s;
               break;
             }
+            case 40: {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                rats_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              rats_.add(rawValue);
+              break;
+            }
+            case 42: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                  rats_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00000002;
+                }
+                rats_.add(rawValue);
+              }
+              input.popLimit(oldLimit);
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -9124,21 +9177,146 @@ public final class DeviceProto {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           bands_.makeImmutable(); // C
         }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          rats_ = java.util.Collections.unmodifiableList(rats_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.toit.proto.toit.model.DeviceProto.internal_static_toit_model_NBIoTSetting_descriptor;
+      return io.toit.proto.toit.model.DeviceProto.internal_static_toit_model_CellularSetting_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.toit.proto.toit.model.DeviceProto.internal_static_toit_model_NBIoTSetting_fieldAccessorTable
+      return io.toit.proto.toit.model.DeviceProto.internal_static_toit_model_CellularSetting_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              io.toit.proto.toit.model.DeviceProto.NBIoTSetting.class, io.toit.proto.toit.model.DeviceProto.NBIoTSetting.Builder.class);
+              io.toit.proto.toit.model.DeviceProto.CellularSetting.class, io.toit.proto.toit.model.DeviceProto.CellularSetting.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code toit.model.CellularSetting.Rat}
+     */
+    public enum Rat
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>RAT_UNKNOWN = 0;</code>
+       */
+      RAT_UNKNOWN(0),
+      /**
+       * <code>RAT_LTE_M = 1;</code>
+       */
+      RAT_LTE_M(1),
+      /**
+       * <code>RAT_NB_IOT = 2;</code>
+       */
+      RAT_NB_IOT(2),
+      /**
+       * <code>RAT_GSM = 3;</code>
+       */
+      RAT_GSM(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>RAT_UNKNOWN = 0;</code>
+       */
+      public static final int RAT_UNKNOWN_VALUE = 0;
+      /**
+       * <code>RAT_LTE_M = 1;</code>
+       */
+      public static final int RAT_LTE_M_VALUE = 1;
+      /**
+       * <code>RAT_NB_IOT = 2;</code>
+       */
+      public static final int RAT_NB_IOT_VALUE = 2;
+      /**
+       * <code>RAT_GSM = 3;</code>
+       */
+      public static final int RAT_GSM_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Rat valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Rat forNumber(int value) {
+        switch (value) {
+          case 0: return RAT_UNKNOWN;
+          case 1: return RAT_LTE_M;
+          case 2: return RAT_NB_IOT;
+          case 3: return RAT_GSM;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Rat>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Rat> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Rat>() {
+              public Rat findValueByNumber(int number) {
+                return Rat.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return io.toit.proto.toit.model.DeviceProto.CellularSetting.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Rat[] VALUES = values();
+
+      public static Rat valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Rat(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:toit.model.CellularSetting.Rat)
     }
 
     public static final int APN_FIELD_NUMBER = 1;
@@ -9276,6 +9454,59 @@ public final class DeviceProto {
       }
     }
 
+    public static final int RATS_FIELD_NUMBER = 5;
+    private java.util.List<java.lang.Integer> rats_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, io.toit.proto.toit.model.DeviceProto.CellularSetting.Rat> rats_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, io.toit.proto.toit.model.DeviceProto.CellularSetting.Rat>() {
+              public io.toit.proto.toit.model.DeviceProto.CellularSetting.Rat convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
+                io.toit.proto.toit.model.DeviceProto.CellularSetting.Rat result = io.toit.proto.toit.model.DeviceProto.CellularSetting.Rat.valueOf(from);
+                return result == null ? io.toit.proto.toit.model.DeviceProto.CellularSetting.Rat.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <code>repeated .toit.model.CellularSetting.Rat rats = 5;</code>
+     * @return A list containing the rats.
+     */
+    public java.util.List<io.toit.proto.toit.model.DeviceProto.CellularSetting.Rat> getRatsList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, io.toit.proto.toit.model.DeviceProto.CellularSetting.Rat>(rats_, rats_converter_);
+    }
+    /**
+     * <code>repeated .toit.model.CellularSetting.Rat rats = 5;</code>
+     * @return The count of rats.
+     */
+    public int getRatsCount() {
+      return rats_.size();
+    }
+    /**
+     * <code>repeated .toit.model.CellularSetting.Rat rats = 5;</code>
+     * @param index The index of the element to return.
+     * @return The rats at the given index.
+     */
+    public io.toit.proto.toit.model.DeviceProto.CellularSetting.Rat getRats(int index) {
+      return rats_converter_.convert(rats_.get(index));
+    }
+    /**
+     * <code>repeated .toit.model.CellularSetting.Rat rats = 5;</code>
+     * @return A list containing the enum numeric values on the wire for rats.
+     */
+    public java.util.List<java.lang.Integer>
+    getRatsValueList() {
+      return rats_;
+    }
+    /**
+     * <code>repeated .toit.model.CellularSetting.Rat rats = 5;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of rats at the given index.
+     */
+    public int getRatsValue(int index) {
+      return rats_.get(index);
+    }
+    private int ratsMemoizedSerializedSize;
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9306,6 +9537,13 @@ public final class DeviceProto {
       }
       if (!getPinBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, pin_);
+      }
+      if (getRatsList().size() > 0) {
+        output.writeUInt32NoTag(42);
+        output.writeUInt32NoTag(ratsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < rats_.size(); i++) {
+        output.writeEnumNoTag(rats_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -9339,6 +9577,18 @@ public final class DeviceProto {
       if (!getPinBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, pin_);
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < rats_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(rats_.get(i));
+        }
+        size += dataSize;
+        if (!getRatsList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }ratsMemoizedSerializedSize = dataSize;
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -9349,10 +9599,10 @@ public final class DeviceProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof io.toit.proto.toit.model.DeviceProto.NBIoTSetting)) {
+      if (!(obj instanceof io.toit.proto.toit.model.DeviceProto.CellularSetting)) {
         return super.equals(obj);
       }
-      io.toit.proto.toit.model.DeviceProto.NBIoTSetting other = (io.toit.proto.toit.model.DeviceProto.NBIoTSetting) obj;
+      io.toit.proto.toit.model.DeviceProto.CellularSetting other = (io.toit.proto.toit.model.DeviceProto.CellularSetting) obj;
 
       if (!getApn()
           .equals(other.getApn())) return false;
@@ -9362,6 +9612,7 @@ public final class DeviceProto {
           .equals(other.getOperator())) return false;
       if (!getPin()
           .equals(other.getPin())) return false;
+      if (!rats_.equals(other.rats_)) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9383,74 +9634,78 @@ public final class DeviceProto {
       hash = (53 * hash) + getOperator().hashCode();
       hash = (37 * hash) + PIN_FIELD_NUMBER;
       hash = (53 * hash) + getPin().hashCode();
+      if (getRatsCount() > 0) {
+        hash = (37 * hash) + RATS_FIELD_NUMBER;
+        hash = (53 * hash) + rats_.hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static io.toit.proto.toit.model.DeviceProto.NBIoTSetting parseFrom(
+    public static io.toit.proto.toit.model.DeviceProto.CellularSetting parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.toit.proto.toit.model.DeviceProto.NBIoTSetting parseFrom(
+    public static io.toit.proto.toit.model.DeviceProto.CellularSetting parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.toit.proto.toit.model.DeviceProto.NBIoTSetting parseFrom(
+    public static io.toit.proto.toit.model.DeviceProto.CellularSetting parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.toit.proto.toit.model.DeviceProto.NBIoTSetting parseFrom(
+    public static io.toit.proto.toit.model.DeviceProto.CellularSetting parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.toit.proto.toit.model.DeviceProto.NBIoTSetting parseFrom(byte[] data)
+    public static io.toit.proto.toit.model.DeviceProto.CellularSetting parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.toit.proto.toit.model.DeviceProto.NBIoTSetting parseFrom(
+    public static io.toit.proto.toit.model.DeviceProto.CellularSetting parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.toit.proto.toit.model.DeviceProto.NBIoTSetting parseFrom(java.io.InputStream input)
+    public static io.toit.proto.toit.model.DeviceProto.CellularSetting parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static io.toit.proto.toit.model.DeviceProto.NBIoTSetting parseFrom(
+    public static io.toit.proto.toit.model.DeviceProto.CellularSetting parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static io.toit.proto.toit.model.DeviceProto.NBIoTSetting parseDelimitedFrom(java.io.InputStream input)
+    public static io.toit.proto.toit.model.DeviceProto.CellularSetting parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static io.toit.proto.toit.model.DeviceProto.NBIoTSetting parseDelimitedFrom(
+    public static io.toit.proto.toit.model.DeviceProto.CellularSetting parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static io.toit.proto.toit.model.DeviceProto.NBIoTSetting parseFrom(
+    public static io.toit.proto.toit.model.DeviceProto.CellularSetting parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static io.toit.proto.toit.model.DeviceProto.NBIoTSetting parseFrom(
+    public static io.toit.proto.toit.model.DeviceProto.CellularSetting parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -9463,7 +9718,7 @@ public final class DeviceProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(io.toit.proto.toit.model.DeviceProto.NBIoTSetting prototype) {
+    public static Builder newBuilder(io.toit.proto.toit.model.DeviceProto.CellularSetting prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -9479,26 +9734,26 @@ public final class DeviceProto {
       return builder;
     }
     /**
-     * Protobuf type {@code toit.model.NBIoTSetting}
+     * Protobuf type {@code toit.model.CellularSetting}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:toit.model.NBIoTSetting)
-        io.toit.proto.toit.model.DeviceProto.NBIoTSettingOrBuilder {
+        // @@protoc_insertion_point(builder_implements:toit.model.CellularSetting)
+        io.toit.proto.toit.model.DeviceProto.CellularSettingOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.toit.proto.toit.model.DeviceProto.internal_static_toit_model_NBIoTSetting_descriptor;
+        return io.toit.proto.toit.model.DeviceProto.internal_static_toit_model_CellularSetting_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.toit.proto.toit.model.DeviceProto.internal_static_toit_model_NBIoTSetting_fieldAccessorTable
+        return io.toit.proto.toit.model.DeviceProto.internal_static_toit_model_CellularSetting_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                io.toit.proto.toit.model.DeviceProto.NBIoTSetting.class, io.toit.proto.toit.model.DeviceProto.NBIoTSetting.Builder.class);
+                io.toit.proto.toit.model.DeviceProto.CellularSetting.class, io.toit.proto.toit.model.DeviceProto.CellularSetting.Builder.class);
       }
 
-      // Construct using io.toit.proto.toit.model.DeviceProto.NBIoTSetting.newBuilder()
+      // Construct using io.toit.proto.toit.model.DeviceProto.CellularSetting.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -9524,23 +9779,25 @@ public final class DeviceProto {
 
         pin_ = "";
 
+        rats_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.toit.proto.toit.model.DeviceProto.internal_static_toit_model_NBIoTSetting_descriptor;
+        return io.toit.proto.toit.model.DeviceProto.internal_static_toit_model_CellularSetting_descriptor;
       }
 
       @java.lang.Override
-      public io.toit.proto.toit.model.DeviceProto.NBIoTSetting getDefaultInstanceForType() {
-        return io.toit.proto.toit.model.DeviceProto.NBIoTSetting.getDefaultInstance();
+      public io.toit.proto.toit.model.DeviceProto.CellularSetting getDefaultInstanceForType() {
+        return io.toit.proto.toit.model.DeviceProto.CellularSetting.getDefaultInstance();
       }
 
       @java.lang.Override
-      public io.toit.proto.toit.model.DeviceProto.NBIoTSetting build() {
-        io.toit.proto.toit.model.DeviceProto.NBIoTSetting result = buildPartial();
+      public io.toit.proto.toit.model.DeviceProto.CellularSetting build() {
+        io.toit.proto.toit.model.DeviceProto.CellularSetting result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -9548,8 +9805,8 @@ public final class DeviceProto {
       }
 
       @java.lang.Override
-      public io.toit.proto.toit.model.DeviceProto.NBIoTSetting buildPartial() {
-        io.toit.proto.toit.model.DeviceProto.NBIoTSetting result = new io.toit.proto.toit.model.DeviceProto.NBIoTSetting(this);
+      public io.toit.proto.toit.model.DeviceProto.CellularSetting buildPartial() {
+        io.toit.proto.toit.model.DeviceProto.CellularSetting result = new io.toit.proto.toit.model.DeviceProto.CellularSetting(this);
         int from_bitField0_ = bitField0_;
         result.apn_ = apn_;
         if (((bitField0_ & 0x00000001) != 0)) {
@@ -9559,6 +9816,11 @@ public final class DeviceProto {
         result.bands_ = bands_;
         result.operator_ = operator_;
         result.pin_ = pin_;
+        if (((bitField0_ & 0x00000002) != 0)) {
+          rats_ = java.util.Collections.unmodifiableList(rats_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.rats_ = rats_;
         onBuilt();
         return result;
       }
@@ -9597,16 +9859,16 @@ public final class DeviceProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof io.toit.proto.toit.model.DeviceProto.NBIoTSetting) {
-          return mergeFrom((io.toit.proto.toit.model.DeviceProto.NBIoTSetting)other);
+        if (other instanceof io.toit.proto.toit.model.DeviceProto.CellularSetting) {
+          return mergeFrom((io.toit.proto.toit.model.DeviceProto.CellularSetting)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(io.toit.proto.toit.model.DeviceProto.NBIoTSetting other) {
-        if (other == io.toit.proto.toit.model.DeviceProto.NBIoTSetting.getDefaultInstance()) return this;
+      public Builder mergeFrom(io.toit.proto.toit.model.DeviceProto.CellularSetting other) {
+        if (other == io.toit.proto.toit.model.DeviceProto.CellularSetting.getDefaultInstance()) return this;
         if (!other.getApn().isEmpty()) {
           apn_ = other.apn_;
           onChanged();
@@ -9629,6 +9891,16 @@ public final class DeviceProto {
           pin_ = other.pin_;
           onChanged();
         }
+        if (!other.rats_.isEmpty()) {
+          if (rats_.isEmpty()) {
+            rats_ = other.rats_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureRatsIsMutable();
+            rats_.addAll(other.rats_);
+          }
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -9644,11 +9916,11 @@ public final class DeviceProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        io.toit.proto.toit.model.DeviceProto.NBIoTSetting parsedMessage = null;
+        io.toit.proto.toit.model.DeviceProto.CellularSetting parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (io.toit.proto.toit.model.DeviceProto.NBIoTSetting) e.getUnfinishedMessage();
+          parsedMessage = (io.toit.proto.toit.model.DeviceProto.CellularSetting) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -9965,6 +10237,146 @@ public final class DeviceProto {
         onChanged();
         return this;
       }
+
+      private java.util.List<java.lang.Integer> rats_ =
+        java.util.Collections.emptyList();
+      private void ensureRatsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          rats_ = new java.util.ArrayList<java.lang.Integer>(rats_);
+          bitField0_ |= 0x00000002;
+        }
+      }
+      /**
+       * <code>repeated .toit.model.CellularSetting.Rat rats = 5;</code>
+       * @return A list containing the rats.
+       */
+      public java.util.List<io.toit.proto.toit.model.DeviceProto.CellularSetting.Rat> getRatsList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, io.toit.proto.toit.model.DeviceProto.CellularSetting.Rat>(rats_, rats_converter_);
+      }
+      /**
+       * <code>repeated .toit.model.CellularSetting.Rat rats = 5;</code>
+       * @return The count of rats.
+       */
+      public int getRatsCount() {
+        return rats_.size();
+      }
+      /**
+       * <code>repeated .toit.model.CellularSetting.Rat rats = 5;</code>
+       * @param index The index of the element to return.
+       * @return The rats at the given index.
+       */
+      public io.toit.proto.toit.model.DeviceProto.CellularSetting.Rat getRats(int index) {
+        return rats_converter_.convert(rats_.get(index));
+      }
+      /**
+       * <code>repeated .toit.model.CellularSetting.Rat rats = 5;</code>
+       * @param index The index to set the value at.
+       * @param value The rats to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRats(
+          int index, io.toit.proto.toit.model.DeviceProto.CellularSetting.Rat value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureRatsIsMutable();
+        rats_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .toit.model.CellularSetting.Rat rats = 5;</code>
+       * @param value The rats to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRats(io.toit.proto.toit.model.DeviceProto.CellularSetting.Rat value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureRatsIsMutable();
+        rats_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .toit.model.CellularSetting.Rat rats = 5;</code>
+       * @param values The rats to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllRats(
+          java.lang.Iterable<? extends io.toit.proto.toit.model.DeviceProto.CellularSetting.Rat> values) {
+        ensureRatsIsMutable();
+        for (io.toit.proto.toit.model.DeviceProto.CellularSetting.Rat value : values) {
+          rats_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .toit.model.CellularSetting.Rat rats = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRats() {
+        rats_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .toit.model.CellularSetting.Rat rats = 5;</code>
+       * @return A list containing the enum numeric values on the wire for rats.
+       */
+      public java.util.List<java.lang.Integer>
+      getRatsValueList() {
+        return java.util.Collections.unmodifiableList(rats_);
+      }
+      /**
+       * <code>repeated .toit.model.CellularSetting.Rat rats = 5;</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of rats at the given index.
+       */
+      public int getRatsValue(int index) {
+        return rats_.get(index);
+      }
+      /**
+       * <code>repeated .toit.model.CellularSetting.Rat rats = 5;</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of rats at the given index.
+       * @return This builder for chaining.
+       */
+      public Builder setRatsValue(
+          int index, int value) {
+        ensureRatsIsMutable();
+        rats_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .toit.model.CellularSetting.Rat rats = 5;</code>
+       * @param value The enum numeric value on the wire for rats to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRatsValue(int value) {
+        ensureRatsIsMutable();
+        rats_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .toit.model.CellularSetting.Rat rats = 5;</code>
+       * @param values The enum numeric values on the wire for rats to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllRatsValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensureRatsIsMutable();
+        for (int value : values) {
+          rats_.add(value);
+        }
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -9978,41 +10390,41 @@ public final class DeviceProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:toit.model.NBIoTSetting)
+      // @@protoc_insertion_point(builder_scope:toit.model.CellularSetting)
     }
 
-    // @@protoc_insertion_point(class_scope:toit.model.NBIoTSetting)
-    private static final io.toit.proto.toit.model.DeviceProto.NBIoTSetting DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:toit.model.CellularSetting)
+    private static final io.toit.proto.toit.model.DeviceProto.CellularSetting DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new io.toit.proto.toit.model.DeviceProto.NBIoTSetting();
+      DEFAULT_INSTANCE = new io.toit.proto.toit.model.DeviceProto.CellularSetting();
     }
 
-    public static io.toit.proto.toit.model.DeviceProto.NBIoTSetting getDefaultInstance() {
+    public static io.toit.proto.toit.model.DeviceProto.CellularSetting getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<NBIoTSetting>
-        PARSER = new com.google.protobuf.AbstractParser<NBIoTSetting>() {
+    private static final com.google.protobuf.Parser<CellularSetting>
+        PARSER = new com.google.protobuf.AbstractParser<CellularSetting>() {
       @java.lang.Override
-      public NBIoTSetting parsePartialFrom(
+      public CellularSetting parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new NBIoTSetting(input, extensionRegistry);
+        return new CellularSetting(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<NBIoTSetting> parser() {
+    public static com.google.protobuf.Parser<CellularSetting> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<NBIoTSetting> getParserForType() {
+    public com.google.protobuf.Parser<CellularSetting> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public io.toit.proto.toit.model.DeviceProto.NBIoTSetting getDefaultInstanceForType() {
+    public io.toit.proto.toit.model.DeviceProto.CellularSetting getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -34487,10 +34899,10 @@ public final class DeviceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_toit_model_EthernetSetting_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_toit_model_NBIoTSetting_descriptor;
+    internal_static_toit_model_CellularSetting_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_toit_model_NBIoTSetting_fieldAccessorTable;
+      internal_static_toit_model_CellularSetting_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_toit_model_DeviceBrokerSettings_descriptor;
   private static final 
@@ -34672,129 +35084,132 @@ public final class DeviceProto {
       "ctionSettings\022.\n\013max_offline\030\001 \001(\0132\031.goo" +
       "gle.protobuf.Duration\0222\n\013connections\030\002 \003" +
       "(\0132\035.toit.model.ConnectionSetting\022\035\n\025eve" +
-      "nt_queue_threshold\030\003 \001(\r\"\222\001\n\021ConnectionS" +
+      "nt_queue_threshold\030\003 \001(\r\"\225\001\n\021ConnectionS" +
       "etting\022%\n\004wifi\030\001 \001(\0132\027.toit.model.WifiSe" +
-      "tting\022\'\n\005nbiot\030\002 \001(\0132\030.toit.model.NBIoTS" +
-      "etting\022-\n\010ethernet\030\003 \001(\0132\033.toit.model.Et" +
-      "hernetSetting\"-\n\013WifiSetting\022\014\n\004ssid\030\001 \001" +
-      "(\t\022\020\n\010password\030\002 \001(\t\"\021\n\017EthernetSetting\"" +
-      "I\n\014NBIoTSetting\022\013\n\003apn\030\001 \001(\t\022\r\n\005bands\030\002 " +
-      "\003(\003\022\020\n\010operator\030\003 \001(\t\022\013\n\003pin\030\004 \001(\t\"T\n\024De" +
-      "viceBrokerSettings\022\014\n\004host\030\001 \001(\t\022\014\n\004port" +
-      "\030\002 \001(\003\022\n\n\002cn\030\003 \001(\t\022\024\n\010protocol\030\004 \001(\tB\002\030\001" +
-      "\"\252\003\n\014DeviceStatus\022\024\n\010revision\030\001 \001(\003B\002\030\001\022" +
-      "\r\n\005epoch\030\006 \001(\014\022\026\n\016state_revision\030\005 \001(\003\022+" +
-      "\n\007updated\030\002 \001(\0132\032.google.protobuf.Timest" +
-      "amp\022\027\n\017config_revision\030\003 \001(\003\022\013\n\003sdk\030\004 \001(" +
-      "\t\022\r\n\005model\030\007 \001(\t\022(\n\006config\030\010 \001(\0132\030.toit." +
-      "model.DeviceConfig\022\021\n\tconnected\030\t \001(\010\022*\n" +
-      "\004boot\030\n \001(\0132\034.toit.model.DeviceBootStatu" +
-      "s\022(\n\006health\030\013 \001(\0132\030.toit.model.DeviceHea" +
-      "lth\0226\n\nconnection\030\014 \001(\0132\".toit.model.Dev" +
-      "iceConnectionStatus\0220\n\007modules\030\r \001(\0132\037.t" +
-      "oit.model.DeviceModulesStatus\"s\n\023DeviceM" +
-      "odulesStatus\0220\n\014last_updated\030\001 \001(\0132\032.goo" +
-      "gle.protobuf.Timestamp\022*\n\007modules\030\002 \001(\0132" +
-      "\031.toit.model.DeviceModules\";\n\rDeviceModu" +
-      "les\022*\n\010cellular\030\001 \001(\0132\030.toit.model.Devic" +
-      "eModule\".\n\014DeviceModule\022\r\n\005model\030\001 \001(\t\022\017" +
-      "\n\007version\030\002 \001(\t\"W\n\026DeviceConnectionStatu" +
-      "s\022\r\n\005index\030\001 \001(\003\022.\n\004type\030\002 \001(\0162 .toit.mo" +
-      "del.DeviceConnectionType\"\214\001\n\020DeviceBootS" +
-      "tatus\022-\n\tlast_boot\030\001 \001(\0132\032.google.protob" +
-      "uf.Timestamp\022\022\n\nin_factory\030\002 \001(\010\0225\n\021last" +
-      "_factory_boot\030\003 \001(\0132\032.google.protobuf.Ti" +
-      "mestamp\"\373\004\n\014DeviceHealth\022-\n\005power\030\001 \001(\0132" +
-      "\036.toit.model.DeviceHealth.Power\022<\n\rbatte" +
-      "ry_curve\030\002 \001(\0132%.toit.model.DeviceHealth" +
-      ".BatteryCurve\022;\n\014connectivity\030\003 \001(\0132%.to" +
-      "it.model.DeviceHealth.Connectivity\032\300\001\n\005P" +
-      "ower\0223\n\005value\030\001 \001(\0132$.toit.model.DeviceH" +
-      "ealth.Power.Value\0220\n\014last_updated\030\002 \001(\0132" +
-      "\032.google.protobuf.Timestamp\032P\n\005Value\022\021\n\007" +
-      "battery\030\001 \001(\001H\000\022+\n\tpluggedin\030\002 \001(\0132\026.goo" +
-      "gle.protobuf.EmptyH\000B\007\n\005power\032O\n\014Battery" +
-      "Curve\022\r\n\005slope\030\001 \001(\001\0220\n\014last_updated\030\002 \001" +
-      "(\0132\032.google.protobuf.Timestamp\032\254\001\n\014Conne" +
-      "ctivity\022-\n\tlast_seen\030\001 \001(\0132\032.google.prot" +
-      "obuf.Timestamp\022\021\n\tconnected\030\002 \001(\010\022?\n\010che" +
-      "ckins\030\003 \003(\0132-.toit.model.DeviceHealth.Co" +
-      "nnectivity.Checkin\032\031\n\007Checkin\022\016\n\006missed\030" +
-      "\001 \001(\010\"y\n\020HardwareIdentity\022\023\n\013hardware_id" +
-      "\030\001 \001(\014\022\027\n\017sequence_number\030\002 \001(\003\022\r\n\005batch" +
-      "\030\003 \001(\t\022\023\n\013private_key\030\004 \001(\014\022\023\n\013certifica" +
-      "te\030\005 \001(\014\"\205\001\n\024HardwareIdentityInfo\022\033\n\023fac" +
-      "tory_sdk_version\030\001 \001(\t\022\022\n\nflashed_by\030\002 \001" +
-      "(\014\022\r\n\005iccid\030\003 \001(\t\022\017\n\007chip_id\030\004 \001(\t\022\034\n\024fa" +
-      "ctory_device_model\030\005 \001(\t\"S\n\014HardwareInfo" +
-      "\022\023\n\013hardware_id\030\001 \001(\014\022\025\n\rhardware_fqdn\030\002" +
-      " \001(\t\022\027\n\017organization_id\030\004 \001(\014\"\226\001\n\024Hardwa" +
-      "reToDeviceInfo\022\023\n\013hardware_id\030\001 \001(\014\022\021\n\td" +
-      "evice_id\030\002 \001(\014\022)\n\005bound\030\003 \001(\0132\032.google.p" +
-      "rotobuf.Timestamp\022+\n\007unbound\030\004 \001(\0132\032.goo" +
-      "gle.protobuf.Timestamp\"\325\t\n\013DeviceEvent\022\021" +
-      "\n\tdevice_id\030\001 \001(\014\022\020\n\010event_id\030\002 \001(\014\022+\n\007c" +
-      "reated\030\003 \001(\0132\032.google.protobuf.Timestamp" +
-      "\022*\n\004type\030\004 \001(\0162\034.toit.model.DeviceEvent." +
-      "Type\022\013\n\003msg\030\005 \001(\t\022\014\n\004data\030\006 \001(\014\0224\n\tiniti" +
-      "ater\030\007 \001(\0132!.toit.model.DeviceEvent.Init" +
-      "iater\0221\n\013information\030\010 \003(\0132\034.toit.model." +
-      "DeviceEvent.Info\032\213\002\n\tInitiater\022:\n\006device" +
-      "\030\001 \001(\0132(.toit.model.DeviceEvent.Initiate" +
-      "r.DeviceH\000\022<\n\007console\030\002 \001(\0132).toit.model" +
-      ".DeviceEvent.Initiater.ConsoleH\000\0226\n\004user" +
-      "\030\003 \001(\0132&.toit.model.DeviceEvent.Initiate" +
-      "r.UserH\000\032\033\n\006Device\022\021\n\tdevice_id\030\001 \001(\014\032\t\n" +
-      "\007Console\032\027\n\004User\022\017\n\007user_id\030\001 \001(\014B\013\n\tini" +
-      "tiater\032\257\004\n\004Info\022\013\n\003key\030\001 \001(\t\0221\n\005value\030\002 " +
-      "\001(\0132\".toit.model.DeviceEvent.Info.Value\032" +
-      "\346\003\n\005Value\022A\n\tprimitive\030\001 \001(\0132,.toit.mode" +
-      "l.DeviceEvent.Info.Value.PrimitiveH\000\0227\n\004" +
-      "diff\030\002 \001(\0132\'.toit.model.DeviceEvent.Info" +
-      ".Value.DiffH\000\0229\n\005error\030\003 \001(\0132(.toit.mode" +
-      "l.DeviceEvent.Info.Value.ErrorH\000\032\206\001\n\tPri" +
-      "mitive\022?\n\004type\030\001 \001(\01621.toit.model.Device" +
-      "Event.Info.Value.Primitive.Type\022\r\n\005value" +
-      "\030\002 \001(\014\")\n\004Type\022\013\n\007INVALID\020\000\022\010\n\004JSON\020\001\022\n\n" +
-      "\006STRING\020\002\032|\n\004Diff\022:\n\004from\030\001 \001(\0132,.toit.m" +
-      "odel.DeviceEvent.Info.Value.Primitive\0228\n" +
-      "\002to\030\002 \001(\0132,.toit.model.DeviceEvent.Info." +
-      "Value.Primitive\032\026\n\005Error\022\r\n\005error\030\001 \001(\tB" +
-      "\007\n\005value\"\203\001\n\004Type\022\013\n\007UNKNOWN\020\000\022\021\n\rCONFIG" +
-      "_CHANGE\020\001\022\021\n\rSTATUS_CHANGE\020\002\022\017\n\013NEXT_ACT" +
-      "ION\020\003\022\021\n\rDEVICE_ACTION\020\004\022\022\n\016QUEUE_OVERFL" +
-      "OW\020\005\022\020\n\014REQUEST_FILE\020\006\"\215\001\n\023DeviceModelSe" +
-      "ttings\022C\n\nparameters\030\001 \003(\0132/.toit.model." +
-      "DeviceModelSettings.ParametersEntry\0321\n\017P" +
-      "arametersEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\005:\0028\001*\301\001\n\024DeviceConnectionType\022\"\n\036DEVIC" +
-      "E_CONNECTION_TYPE_UNKNOWN\020\000\022\037\n\033DEVICE_CO" +
-      "NNECTION_TYPE_WIFI\020\001\022 \n\034DEVICE_CONNECTIO" +
-      "N_TYPE_NBIOT\020\002\022\035\n\031DEVICE_CONNECTION_TYPE" +
-      "_OS\020\003\022#\n\037DEVICE_CONNECTION_TYPE_ETHERNET" +
-      "\020\004*\332\001\n\020DeviceChangeType\022\031\n\025DEVICE_CHANGE" +
-      "_UNKNOWN\020\000\022\027\n\023DEVICE_CHANGE_ADDED\020\001\022\031\n\025D" +
-      "EVICE_CHANGE_DELETED\020\002\022\031\n\025DEVICE_CHANGE_" +
-      "CHANGED\020\003\022\037\n\027DEVICE_CHANGE_HEARTBEAT\020\004\032\002" +
-      "\010\001\022\033\n\027DEVICE_CHANGE_CONNECTED\020\005\022\036\n\032DEVIC" +
-      "E_CHANGE_DISCONNECTED\020\006*L\n\027DeviceSession" +
-      "ChangeType\022\020\n\014UNKNOWN_TYPE\020\000\022\r\n\tCONNECTE" +
-      "D\020\001\022\020\n\014DISCONNECTED\020\002*\264\003\n\014DeviceAction\022\031" +
-      "\n\025DEVICE_ACTION_UNKNOWN\020\000\022\025\n\021DEVICE_ACTI" +
-      "ON_NOP\020\001\022\030\n\024DEVICE_ACTION_REBOOT\020\002\022\033\n\027DE" +
-      "VICE_ACTION_NEW_EPOCH\020\003\022\037\n\033DEVICE_ACTION" +
-      "_REPORT_CONFIG\020\004\022!\n\035DEVICE_ACTION_FACTOR" +
-      "Y_PROMOTE\020\005\022\037\n\033DEVICE_ACTION_UPDATE_CONF" +
-      "IG\020\006\022!\n\035DEVICE_ACTION_UPDATE_FIRMWARE\020\007\022" +
-      "\037\n\033DEVICE_ACTION_FACTORY_RESET\020\010\022\033\n\027DEVI" +
-      "CE_ACTION_RECONCILE\020\t\022)\n%DEVICE_ACTION_U" +
-      "PDATE_PARTIAL_FIRMWARE\020\n\022 \n\034DEVICE_ACTIO" +
-      "N_REPORT_MODULES\020\013\022(\n$DEVICE_ACTION_UPDA" +
-      "TE_MODULE_CELLULAR\020\014*-\n\020DeviceModuleType" +
-      "\022\013\n\007Unknown\020\000\022\014\n\010Cellular\020\001Be\n\030io.toit.p" +
-      "roto.toit.modelB\013DeviceProtoZ)github.com" +
-      "/toitware/api/golang/toit/model\252\002\020Toit.P" +
-      "roto.Modelb\006proto3"
+      "tting\022*\n\005nbiot\030\002 \001(\0132\033.toit.model.Cellul" +
+      "arSetting\022-\n\010ethernet\030\003 \001(\0132\033.toit.model" +
+      ".EthernetSetting\"-\n\013WifiSetting\022\014\n\004ssid\030" +
+      "\001 \001(\t\022\020\n\010password\030\002 \001(\t\"\021\n\017EthernetSetti" +
+      "ng\"\277\001\n\017CellularSetting\022\013\n\003apn\030\001 \001(\t\022\r\n\005b" +
+      "ands\030\002 \003(\003\022\020\n\010operator\030\003 \001(\t\022\013\n\003pin\030\004 \001(" +
+      "\t\022-\n\004rats\030\005 \003(\0162\037.toit.model.CellularSet" +
+      "ting.Rat\"B\n\003Rat\022\017\n\013RAT_UNKNOWN\020\000\022\r\n\tRAT_" +
+      "LTE_M\020\001\022\016\n\nRAT_NB_IOT\020\002\022\013\n\007RAT_GSM\020\003\"T\n\024" +
+      "DeviceBrokerSettings\022\014\n\004host\030\001 \001(\t\022\014\n\004po" +
+      "rt\030\002 \001(\003\022\n\n\002cn\030\003 \001(\t\022\024\n\010protocol\030\004 \001(\tB\002" +
+      "\030\001\"\252\003\n\014DeviceStatus\022\024\n\010revision\030\001 \001(\003B\002\030" +
+      "\001\022\r\n\005epoch\030\006 \001(\014\022\026\n\016state_revision\030\005 \001(\003" +
+      "\022+\n\007updated\030\002 \001(\0132\032.google.protobuf.Time" +
+      "stamp\022\027\n\017config_revision\030\003 \001(\003\022\013\n\003sdk\030\004 " +
+      "\001(\t\022\r\n\005model\030\007 \001(\t\022(\n\006config\030\010 \001(\0132\030.toi" +
+      "t.model.DeviceConfig\022\021\n\tconnected\030\t \001(\010\022" +
+      "*\n\004boot\030\n \001(\0132\034.toit.model.DeviceBootSta" +
+      "tus\022(\n\006health\030\013 \001(\0132\030.toit.model.DeviceH" +
+      "ealth\0226\n\nconnection\030\014 \001(\0132\".toit.model.D" +
+      "eviceConnectionStatus\0220\n\007modules\030\r \001(\0132\037" +
+      ".toit.model.DeviceModulesStatus\"s\n\023Devic" +
+      "eModulesStatus\0220\n\014last_updated\030\001 \001(\0132\032.g" +
+      "oogle.protobuf.Timestamp\022*\n\007modules\030\002 \001(" +
+      "\0132\031.toit.model.DeviceModules\";\n\rDeviceMo" +
+      "dules\022*\n\010cellular\030\001 \001(\0132\030.toit.model.Dev" +
+      "iceModule\".\n\014DeviceModule\022\r\n\005model\030\001 \001(\t" +
+      "\022\017\n\007version\030\002 \001(\t\"W\n\026DeviceConnectionSta" +
+      "tus\022\r\n\005index\030\001 \001(\003\022.\n\004type\030\002 \001(\0162 .toit." +
+      "model.DeviceConnectionType\"\214\001\n\020DeviceBoo" +
+      "tStatus\022-\n\tlast_boot\030\001 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\022\022\n\nin_factory\030\002 \001(\010\0225\n\021la" +
+      "st_factory_boot\030\003 \001(\0132\032.google.protobuf." +
+      "Timestamp\"\373\004\n\014DeviceHealth\022-\n\005power\030\001 \001(" +
+      "\0132\036.toit.model.DeviceHealth.Power\022<\n\rbat" +
+      "tery_curve\030\002 \001(\0132%.toit.model.DeviceHeal" +
+      "th.BatteryCurve\022;\n\014connectivity\030\003 \001(\0132%." +
+      "toit.model.DeviceHealth.Connectivity\032\300\001\n" +
+      "\005Power\0223\n\005value\030\001 \001(\0132$.toit.model.Devic" +
+      "eHealth.Power.Value\0220\n\014last_updated\030\002 \001(" +
+      "\0132\032.google.protobuf.Timestamp\032P\n\005Value\022\021" +
+      "\n\007battery\030\001 \001(\001H\000\022+\n\tpluggedin\030\002 \001(\0132\026.g" +
+      "oogle.protobuf.EmptyH\000B\007\n\005power\032O\n\014Batte" +
+      "ryCurve\022\r\n\005slope\030\001 \001(\001\0220\n\014last_updated\030\002" +
+      " \001(\0132\032.google.protobuf.Timestamp\032\254\001\n\014Con" +
+      "nectivity\022-\n\tlast_seen\030\001 \001(\0132\032.google.pr" +
+      "otobuf.Timestamp\022\021\n\tconnected\030\002 \001(\010\022?\n\010c" +
+      "heckins\030\003 \003(\0132-.toit.model.DeviceHealth." +
+      "Connectivity.Checkin\032\031\n\007Checkin\022\016\n\006misse" +
+      "d\030\001 \001(\010\"y\n\020HardwareIdentity\022\023\n\013hardware_" +
+      "id\030\001 \001(\014\022\027\n\017sequence_number\030\002 \001(\003\022\r\n\005bat" +
+      "ch\030\003 \001(\t\022\023\n\013private_key\030\004 \001(\014\022\023\n\013certifi" +
+      "cate\030\005 \001(\014\"\205\001\n\024HardwareIdentityInfo\022\033\n\023f" +
+      "actory_sdk_version\030\001 \001(\t\022\022\n\nflashed_by\030\002" +
+      " \001(\014\022\r\n\005iccid\030\003 \001(\t\022\017\n\007chip_id\030\004 \001(\t\022\034\n\024" +
+      "factory_device_model\030\005 \001(\t\"S\n\014HardwareIn" +
+      "fo\022\023\n\013hardware_id\030\001 \001(\014\022\025\n\rhardware_fqdn" +
+      "\030\002 \001(\t\022\027\n\017organization_id\030\004 \001(\014\"\226\001\n\024Hard" +
+      "wareToDeviceInfo\022\023\n\013hardware_id\030\001 \001(\014\022\021\n" +
+      "\tdevice_id\030\002 \001(\014\022)\n\005bound\030\003 \001(\0132\032.google" +
+      ".protobuf.Timestamp\022+\n\007unbound\030\004 \001(\0132\032.g" +
+      "oogle.protobuf.Timestamp\"\325\t\n\013DeviceEvent" +
+      "\022\021\n\tdevice_id\030\001 \001(\014\022\020\n\010event_id\030\002 \001(\014\022+\n" +
+      "\007created\030\003 \001(\0132\032.google.protobuf.Timesta" +
+      "mp\022*\n\004type\030\004 \001(\0162\034.toit.model.DeviceEven" +
+      "t.Type\022\013\n\003msg\030\005 \001(\t\022\014\n\004data\030\006 \001(\014\0224\n\tini" +
+      "tiater\030\007 \001(\0132!.toit.model.DeviceEvent.In" +
+      "itiater\0221\n\013information\030\010 \003(\0132\034.toit.mode" +
+      "l.DeviceEvent.Info\032\213\002\n\tInitiater\022:\n\006devi" +
+      "ce\030\001 \001(\0132(.toit.model.DeviceEvent.Initia" +
+      "ter.DeviceH\000\022<\n\007console\030\002 \001(\0132).toit.mod" +
+      "el.DeviceEvent.Initiater.ConsoleH\000\0226\n\004us" +
+      "er\030\003 \001(\0132&.toit.model.DeviceEvent.Initia" +
+      "ter.UserH\000\032\033\n\006Device\022\021\n\tdevice_id\030\001 \001(\014\032" +
+      "\t\n\007Console\032\027\n\004User\022\017\n\007user_id\030\001 \001(\014B\013\n\ti" +
+      "nitiater\032\257\004\n\004Info\022\013\n\003key\030\001 \001(\t\0221\n\005value\030" +
+      "\002 \001(\0132\".toit.model.DeviceEvent.Info.Valu" +
+      "e\032\346\003\n\005Value\022A\n\tprimitive\030\001 \001(\0132,.toit.mo" +
+      "del.DeviceEvent.Info.Value.PrimitiveH\000\0227" +
+      "\n\004diff\030\002 \001(\0132\'.toit.model.DeviceEvent.In" +
+      "fo.Value.DiffH\000\0229\n\005error\030\003 \001(\0132(.toit.mo" +
+      "del.DeviceEvent.Info.Value.ErrorH\000\032\206\001\n\tP" +
+      "rimitive\022?\n\004type\030\001 \001(\01621.toit.model.Devi" +
+      "ceEvent.Info.Value.Primitive.Type\022\r\n\005val" +
+      "ue\030\002 \001(\014\")\n\004Type\022\013\n\007INVALID\020\000\022\010\n\004JSON\020\001\022" +
+      "\n\n\006STRING\020\002\032|\n\004Diff\022:\n\004from\030\001 \001(\0132,.toit" +
+      ".model.DeviceEvent.Info.Value.Primitive\022" +
+      "8\n\002to\030\002 \001(\0132,.toit.model.DeviceEvent.Inf" +
+      "o.Value.Primitive\032\026\n\005Error\022\r\n\005error\030\001 \001(" +
+      "\tB\007\n\005value\"\203\001\n\004Type\022\013\n\007UNKNOWN\020\000\022\021\n\rCONF" +
+      "IG_CHANGE\020\001\022\021\n\rSTATUS_CHANGE\020\002\022\017\n\013NEXT_A" +
+      "CTION\020\003\022\021\n\rDEVICE_ACTION\020\004\022\022\n\016QUEUE_OVER" +
+      "FLOW\020\005\022\020\n\014REQUEST_FILE\020\006\"\215\001\n\023DeviceModel" +
+      "Settings\022C\n\nparameters\030\001 \003(\0132/.toit.mode" +
+      "l.DeviceModelSettings.ParametersEntry\0321\n" +
+      "\017ParametersEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\005:\0028\001*\301\001\n\024DeviceConnectionType\022\"\n\036DEV" +
+      "ICE_CONNECTION_TYPE_UNKNOWN\020\000\022\037\n\033DEVICE_" +
+      "CONNECTION_TYPE_WIFI\020\001\022 \n\034DEVICE_CONNECT" +
+      "ION_TYPE_NBIOT\020\002\022\035\n\031DEVICE_CONNECTION_TY" +
+      "PE_OS\020\003\022#\n\037DEVICE_CONNECTION_TYPE_ETHERN" +
+      "ET\020\004*\332\001\n\020DeviceChangeType\022\031\n\025DEVICE_CHAN" +
+      "GE_UNKNOWN\020\000\022\027\n\023DEVICE_CHANGE_ADDED\020\001\022\031\n" +
+      "\025DEVICE_CHANGE_DELETED\020\002\022\031\n\025DEVICE_CHANG" +
+      "E_CHANGED\020\003\022\037\n\027DEVICE_CHANGE_HEARTBEAT\020\004" +
+      "\032\002\010\001\022\033\n\027DEVICE_CHANGE_CONNECTED\020\005\022\036\n\032DEV" +
+      "ICE_CHANGE_DISCONNECTED\020\006*L\n\027DeviceSessi" +
+      "onChangeType\022\020\n\014UNKNOWN_TYPE\020\000\022\r\n\tCONNEC" +
+      "TED\020\001\022\020\n\014DISCONNECTED\020\002*\264\003\n\014DeviceAction" +
+      "\022\031\n\025DEVICE_ACTION_UNKNOWN\020\000\022\025\n\021DEVICE_AC" +
+      "TION_NOP\020\001\022\030\n\024DEVICE_ACTION_REBOOT\020\002\022\033\n\027" +
+      "DEVICE_ACTION_NEW_EPOCH\020\003\022\037\n\033DEVICE_ACTI" +
+      "ON_REPORT_CONFIG\020\004\022!\n\035DEVICE_ACTION_FACT" +
+      "ORY_PROMOTE\020\005\022\037\n\033DEVICE_ACTION_UPDATE_CO" +
+      "NFIG\020\006\022!\n\035DEVICE_ACTION_UPDATE_FIRMWARE\020" +
+      "\007\022\037\n\033DEVICE_ACTION_FACTORY_RESET\020\010\022\033\n\027DE" +
+      "VICE_ACTION_RECONCILE\020\t\022)\n%DEVICE_ACTION" +
+      "_UPDATE_PARTIAL_FIRMWARE\020\n\022 \n\034DEVICE_ACT" +
+      "ION_REPORT_MODULES\020\013\022(\n$DEVICE_ACTION_UP" +
+      "DATE_MODULE_CELLULAR\020\014*-\n\020DeviceModuleTy" +
+      "pe\022\013\n\007Unknown\020\000\022\014\n\010Cellular\020\001Be\n\030io.toit" +
+      ".proto.toit.modelB\013DeviceProtoZ)github.c" +
+      "om/toitware/api/golang/toit/model\252\002\020Toit" +
+      ".Proto.Modelb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -34858,12 +35273,12 @@ public final class DeviceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_EthernetSetting_descriptor,
         new java.lang.String[] { });
-    internal_static_toit_model_NBIoTSetting_descriptor =
+    internal_static_toit_model_CellularSetting_descriptor =
       getDescriptor().getMessageTypes().get(9);
-    internal_static_toit_model_NBIoTSetting_fieldAccessorTable = new
+    internal_static_toit_model_CellularSetting_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_toit_model_NBIoTSetting_descriptor,
-        new java.lang.String[] { "Apn", "Bands", "Operator", "Pin", });
+        internal_static_toit_model_CellularSetting_descriptor,
+        new java.lang.String[] { "Apn", "Bands", "Operator", "Pin", "Rats", });
     internal_static_toit_model_DeviceBrokerSettings_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_toit_model_DeviceBrokerSettings_fieldAccessorTable = new
