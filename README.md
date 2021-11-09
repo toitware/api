@@ -7,4 +7,4 @@ You are in full control of your devices and the data your devices emits. Everyth
 
 It is easy to integrate our platform into your IoT products and provide full serviceability for your device fleet.
 
-Browse through the [relevant documentation](https://docs.toit.io/apis/api/) for more details, and see examples of usage in the [demo repository](https://github.com/toitware/demos/tree/master/api).
+Browse through the [relevant documentation](https://docs.toit.io/apis) for more details, and see examples of usage in the [demo repository](https://github.com/toitware/demos/tree/master/api).
