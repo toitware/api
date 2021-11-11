@@ -46,6 +46,7 @@ message User {
     message State {
         google.protobuf.Timestamp cli_installed_at = 1;
         google.protobuf.Timestamp vscode_ext_installed_at = 2;
+        google.protobuf.Timestamp questionnaire_answered_at = 3;
     }
     bytes id = 1;
     bytes organization_id = 2;
