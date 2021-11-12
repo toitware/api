@@ -5,6 +5,7 @@ package toit.api;
 import "toit/model/organization.proto";
 import "toit/api/organization.proto";
 import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
 
 option go_package = "github.com/toitware/api/golang/toit/api";
 option java_package = "io.toit.proto.toit.api";
