@@ -37,30 +37,31 @@ namespace Toit.Proto.Model {
             "cGUSEgoKaHdpZF9xdW90YRgQIAEoBCKSAQoOUGF5bWVudERldGFpbHMSDQoF",
             "bGFzdDQYASABKAkSDgoGZXhwaXJ5GAIgASgJEhQKDGV4cGlyeV9tb250aBgD",
             "IAEoCRITCgtleHBpcnlfeWVhchgEIAEoCRINCgVicmFuZBgFIAEoCRIUCgxj",
-            "b3VudHJ5X2NvZGUYBiABKAkSEQoJY3ZjX2NoZWNrGAcgASgJIt4CCgRVc2Vy",
+            "b3VudHJ5X2NvZGUYBiABKAkSEQoJY3ZjX2NoZWNrGAcgASgJIp4DCgRVc2Vy",
             "EgoKAmlkGAEgASgMEhcKD29yZ2FuaXphdGlvbl9pZBgCIAEoDBINCgVlbWFp",
             "bBgDIAEoCRIMCgRuYW1lGAQgASgJEisKCHNldHRpbmdzGAUgASgLMhkudG9p",
             "dC5tb2RlbC5Vc2VyLlNldHRpbmdzEgwKBHJvbGUYBiABKAkSJQoFc3RhdGUY",
             "ByABKAsyFi50b2l0Lm1vZGVsLlVzZXIuU3RhdGUaNgoIU2V0dGluZ3MSFgoO",
-            "d2VsY29tZV9jbG9zZWQYASABKAgSEgoKbmV3c2xldHRlchgCIAEoCBp6CgVT",
-            "dGF0ZRI0ChBjbGlfaW5zdGFsbGVkX2F0GAEgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcBI7Chd2c2NvZGVfZXh0X2luc3RhbGxlZF9hdBgCIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiawoGQVBJS2V5EgoKAmlk",
-            "GAEgASgMEhcKD29yZ2FuaXphdGlvbl9pZBgCIAEoDBIMCgRuYW1lGAMgASgJ",
-            "Ei4KCmNyZWF0ZWRfYXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wIi8KBFRpZXIiJwoEVHlwZRILCgdVTktOT1dOEAASCAoERlJFRRABEggK",
-            "BFBBSUQQAiI9CghDdXN0b21lciIxCgRUeXBlEgsKB1VOS05PV04QABIKCgZQ",
-            "RVJTT04QARIQCgxPUkdBTklaQVRJT04QAkJrChhpby50b2l0LnByb3RvLnRv",
-            "aXQubW9kZWxCEU9yZ2FuaXphdGlvblByb3RvWilnaXRodWIuY29tL3RvaXR3",
-            "YXJlL2FwaS9nb2xhbmcvdG9pdC9tb2RlbKoCEFRvaXQuUHJvdG8uTW9kZWxi",
-            "BnByb3RvMw=="));
+            "d2VsY29tZV9jbG9zZWQYASABKAgSEgoKbmV3c2xldHRlchgCIAEoCBq5AQoF",
+            "U3RhdGUSNAoQY2xpX2luc3RhbGxlZF9hdBgBIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXASOwoXdnNjb2RlX2V4dF9pbnN0YWxsZWRfYXQYAiAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEj0KGXF1ZXN0aW9ubmFp",
+            "cmVfYW5zd2VyZWRfYXQYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wImsKBkFQSUtleRIKCgJpZBgBIAEoDBIXCg9vcmdhbml6YXRpb25faWQY",
+            "AiABKAwSDAoEbmFtZRgDIAEoCRIuCgpjcmVhdGVkX2F0GAQgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcCIvCgRUaWVyIicKBFR5cGUSCwoHVU5L",
+            "Tk9XThAAEggKBEZSRUUQARIICgRQQUlEEAIiPQoIQ3VzdG9tZXIiMQoEVHlw",
+            "ZRILCgdVTktOT1dOEAASCgoGUEVSU09OEAESEAoMT1JHQU5JWkFUSU9OEAJC",
+            "awoYaW8udG9pdC5wcm90by50b2l0Lm1vZGVsQhFPcmdhbml6YXRpb25Qcm90",
+            "b1opZ2l0aHViLmNvbS90b2l0d2FyZS9hcGkvZ29sYW5nL3RvaXQvbW9kZWyq",
+            "AhBUb2l0LlByb3RvLk1vZGVsYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.Organization), global::Toit.Proto.Model.Organization.Parser, new[]{ "Id", "Name", "DefaultSdk", "Email", "City", "Country", "PhoneNumber", "CvrNumber", "Tier", "PaymentDetails", "AddressLine", "PostalCode", "VatNumber", "VatCountryCode", "Customer", "HwidQuota" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.PaymentDetails), global::Toit.Proto.Model.PaymentDetails.Parser, new[]{ "Last4", "Expiry", "ExpiryMonth", "ExpiryYear", "Brand", "CountryCode", "CvcCheck" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.User), global::Toit.Proto.Model.User.Parser, new[]{ "Id", "OrganizationId", "Email", "Name", "Settings", "Role", "State" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.User.Types.Settings), global::Toit.Proto.Model.User.Types.Settings.Parser, new[]{ "WelcomeClosed", "Newsletter" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.User.Types.State), global::Toit.Proto.Model.User.Types.State.Parser, new[]{ "CliInstalledAt", "VscodeExtInstalledAt" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.User.Types.State), global::Toit.Proto.Model.User.Types.State.Parser, new[]{ "CliInstalledAt", "VscodeExtInstalledAt", "QuestionnaireAnsweredAt" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.APIKey), global::Toit.Proto.Model.APIKey.Parser, new[]{ "Id", "OrganizationId", "Name", "CreatedAt" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.Tier), global::Toit.Proto.Model.Tier.Parser, null, null, new[]{ typeof(global::Toit.Proto.Model.Tier.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.Customer), global::Toit.Proto.Model.Customer.Parser, null, null, new[]{ typeof(global::Toit.Proto.Model.Customer.Types.Type) }, null, null)
@@ -1934,6 +1935,7 @@ namespace Toit.Proto.Model {
         public State(State other) : this() {
           cliInstalledAt_ = other.cliInstalledAt_ != null ? other.cliInstalledAt_.Clone() : null;
           vscodeExtInstalledAt_ = other.vscodeExtInstalledAt_ != null ? other.vscodeExtInstalledAt_.Clone() : null;
+          questionnaireAnsweredAt_ = other.questionnaireAnsweredAt_ != null ? other.questionnaireAnsweredAt_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1967,6 +1969,18 @@ namespace Toit.Proto.Model {
           }
         }
 
+        /// <summary>Field number for the "questionnaire_answered_at" field.</summary>
+        public const int QuestionnaireAnsweredAtFieldNumber = 3;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp questionnaireAnsweredAt_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp QuestionnaireAnsweredAt {
+          get { return questionnaireAnsweredAt_; }
+          set {
+            questionnaireAnsweredAt_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -1984,6 +1998,7 @@ namespace Toit.Proto.Model {
           }
           if (!object.Equals(CliInstalledAt, other.CliInstalledAt)) return false;
           if (!object.Equals(VscodeExtInstalledAt, other.VscodeExtInstalledAt)) return false;
+          if (!object.Equals(QuestionnaireAnsweredAt, other.QuestionnaireAnsweredAt)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1993,6 +2008,7 @@ namespace Toit.Proto.Model {
           int hash = 1;
           if (cliInstalledAt_ != null) hash ^= CliInstalledAt.GetHashCode();
           if (vscodeExtInstalledAt_ != null) hash ^= VscodeExtInstalledAt.GetHashCode();
+          if (questionnaireAnsweredAt_ != null) hash ^= QuestionnaireAnsweredAt.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -2019,6 +2035,10 @@ namespace Toit.Proto.Model {
             output.WriteRawTag(18);
             output.WriteMessage(VscodeExtInstalledAt);
           }
+          if (questionnaireAnsweredAt_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(QuestionnaireAnsweredAt);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -2037,6 +2057,10 @@ namespace Toit.Proto.Model {
             output.WriteRawTag(18);
             output.WriteMessage(VscodeExtInstalledAt);
           }
+          if (questionnaireAnsweredAt_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(QuestionnaireAnsweredAt);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -2052,6 +2076,9 @@ namespace Toit.Proto.Model {
           }
           if (vscodeExtInstalledAt_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(VscodeExtInstalledAt);
+          }
+          if (questionnaireAnsweredAt_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(QuestionnaireAnsweredAt);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -2076,6 +2103,12 @@ namespace Toit.Proto.Model {
               VscodeExtInstalledAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             VscodeExtInstalledAt.MergeFrom(other.VscodeExtInstalledAt);
+          }
+          if (other.questionnaireAnsweredAt_ != null) {
+            if (questionnaireAnsweredAt_ == null) {
+              QuestionnaireAnsweredAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            QuestionnaireAnsweredAt.MergeFrom(other.QuestionnaireAnsweredAt);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -2106,6 +2139,13 @@ namespace Toit.Proto.Model {
                 input.ReadMessage(VscodeExtInstalledAt);
                 break;
               }
+              case 26: {
+                if (questionnaireAnsweredAt_ == null) {
+                  QuestionnaireAnsweredAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(QuestionnaireAnsweredAt);
+                break;
+              }
             }
           }
         #endif
@@ -2133,6 +2173,13 @@ namespace Toit.Proto.Model {
                   VscodeExtInstalledAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
                 }
                 input.ReadMessage(VscodeExtInstalledAt);
+                break;
+              }
+              case 26: {
+                if (questionnaireAnsweredAt_ == null) {
+                  QuestionnaireAnsweredAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(QuestionnaireAnsweredAt);
                 break;
               }
             }
