@@ -1508,7 +1508,8 @@ proto.toit.model.User.State.prototype.toObject = function(opt_includeInstance) {
 proto.toit.model.User.State.toObject = function(includeInstance, msg) {
   var f, obj = {
     cliInstalledAt: (f = msg.getCliInstalledAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
-    vscodeExtInstalledAt: (f = msg.getVscodeExtInstalledAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f)
+    vscodeExtInstalledAt: (f = msg.getVscodeExtInstalledAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
+    questionnaireAnsweredAt: (f = msg.getQuestionnaireAnsweredAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1555,6 +1556,11 @@ proto.toit.model.User.State.deserializeBinaryFromReader = function(msg, reader) 
       reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
       msg.setVscodeExtInstalledAt(value);
       break;
+    case 3:
+      var value = new google_protobuf_timestamp_pb.Timestamp;
+      reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
+      msg.setQuestionnaireAnsweredAt(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -1596,6 +1602,14 @@ proto.toit.model.User.State.serializeBinaryToWriter = function(message, writer) 
   if (f != null) {
     writer.writeMessage(
       2,
+      f,
+      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
+    );
+  }
+  f = message.getQuestionnaireAnsweredAt();
+  if (f != null) {
+    writer.writeMessage(
+      3,
       f,
       google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
     );
@@ -1674,6 +1688,43 @@ proto.toit.model.User.State.prototype.clearVscodeExtInstalledAt = function() {
  */
 proto.toit.model.User.State.prototype.hasVscodeExtInstalledAt = function() {
   return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional google.protobuf.Timestamp questionnaire_answered_at = 3;
+ * @return {?proto.google.protobuf.Timestamp}
+ */
+proto.toit.model.User.State.prototype.getQuestionnaireAnsweredAt = function() {
+  return /** @type{?proto.google.protobuf.Timestamp} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 3));
+};
+
+
+/**
+ * @param {?proto.google.protobuf.Timestamp|undefined} value
+ * @return {!proto.toit.model.User.State} returns this
+*/
+proto.toit.model.User.State.prototype.setQuestionnaireAnsweredAt = function(value) {
+  return jspb.Message.setWrapperField(this, 3, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.toit.model.User.State} returns this
+ */
+proto.toit.model.User.State.prototype.clearQuestionnaireAnsweredAt = function() {
+  return this.setQuestionnaireAnsweredAt(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.toit.model.User.State.prototype.hasQuestionnaireAnsweredAt = function() {
+  return jspb.Message.getField(this, 3) != null;
 };
 
 

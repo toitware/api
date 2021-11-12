@@ -6,6 +6,7 @@ var toit_api_user_pb = require('../../toit/api/user_pb.js');
 var toit_model_organization_pb = require('../../toit/model/organization_pb.js');
 var toit_api_organization_pb = require('../../toit/api/organization_pb.js');
 var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
+var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js');
 
 function serialize_toit_api_CancelPaymentSubscriptionRequest(arg) {
   if (!(arg instanceof toit_api_user_pb.CancelPaymentSubscriptionRequest)) {

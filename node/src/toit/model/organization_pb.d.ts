@@ -218,6 +218,11 @@ export namespace User {
     getVscodeExtInstalledAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
     setVscodeExtInstalledAt(value?: google_protobuf_timestamp_pb.Timestamp): void;
 
+    hasQuestionnaireAnsweredAt(): boolean;
+    clearQuestionnaireAnsweredAt(): void;
+    getQuestionnaireAnsweredAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
+    setQuestionnaireAnsweredAt(value?: google_protobuf_timestamp_pb.Timestamp): void;
+
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): State.AsObject;
     static toObject(includeInstance: boolean, msg: State): State.AsObject;
@@ -232,6 +237,7 @@ export namespace User {
     export type AsObject = {
       cliInstalledAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
       vscodeExtInstalledAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+      questionnaireAnsweredAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
     }
   }
 }

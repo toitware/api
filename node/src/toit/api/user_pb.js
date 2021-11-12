@@ -18,6 +18,8 @@ var toit_api_organization_pb = require('../../toit/api/organization_pb.js');
 goog.object.extend(proto, toit_api_organization_pb);
 var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
 goog.object.extend(proto, google_protobuf_timestamp_pb);
+var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js');
+goog.object.extend(proto, google_protobuf_empty_pb);
 goog.exportSymbol('proto.toit.api.CancelPaymentSubscriptionRequest', null, global);
 goog.exportSymbol('proto.toit.api.CancelPaymentSubscriptionResponse', null, global);
 goog.exportSymbol('proto.toit.api.ChangePasswordWithRPTokenRequest', null, global);
@@ -3685,7 +3687,7 @@ proto.toit.api.CancelPaymentSubscriptionResponse.serializeBinaryToWriter = funct
  * @private {!Array<!Array<number>>}
  * @const
  */
-proto.toit.api.UserChange.oneofGroups_ = [[1,2,3,4]];
+proto.toit.api.UserChange.oneofGroups_ = [[1,2,3,4,5]];
 
 /**
  * @enum {number}
@@ -3695,7 +3697,8 @@ proto.toit.api.UserChange.ChangeCase = {
   SET_SETTINGS_WELCOME_CLOSED: 1,
   SET_SETTINGS_NEWSLETTER: 2,
   ROLE: 3,
-  NAME: 4
+  NAME: 4,
+  QUESTIONNAIRE_ANSWERED_AT: 5
 };
 
 /**
@@ -3739,7 +3742,8 @@ proto.toit.api.UserChange.toObject = function(includeInstance, msg) {
     setSettingsWelcomeClosed: jspb.Message.getBooleanFieldWithDefault(msg, 1, false),
     setSettingsNewsletter: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
     role: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    name: jspb.Message.getFieldWithDefault(msg, 4, "")
+    name: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    questionnaireAnsweredAt: (f = msg.getQuestionnaireAnsweredAt()) && google_protobuf_empty_pb.Empty.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -3791,6 +3795,11 @@ proto.toit.api.UserChange.deserializeBinaryFromReader = function(msg, reader) {
     case 4:
       var value = /** @type {string} */ (reader.readString());
       msg.setName(value);
+      break;
+    case 5:
+      var value = new google_protobuf_empty_pb.Empty;
+      reader.readMessage(value,google_protobuf_empty_pb.Empty.deserializeBinaryFromReader);
+      msg.setQuestionnaireAnsweredAt(value);
       break;
     default:
       reader.skipField();
@@ -3847,6 +3856,14 @@ proto.toit.api.UserChange.serializeBinaryToWriter = function(message, writer) {
     writer.writeString(
       4,
       f
+    );
+  }
+  f = message.getQuestionnaireAnsweredAt();
+  if (f != null) {
+    writer.writeMessage(
+      5,
+      f,
+      google_protobuf_empty_pb.Empty.serializeBinaryToWriter
     );
   }
 };
@@ -3993,6 +4010,43 @@ proto.toit.api.UserChange.prototype.clearName = function() {
  */
 proto.toit.api.UserChange.prototype.hasName = function() {
   return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional google.protobuf.Empty questionnaire_answered_at = 5;
+ * @return {?proto.google.protobuf.Empty}
+ */
+proto.toit.api.UserChange.prototype.getQuestionnaireAnsweredAt = function() {
+  return /** @type{?proto.google.protobuf.Empty} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_empty_pb.Empty, 5));
+};
+
+
+/**
+ * @param {?proto.google.protobuf.Empty|undefined} value
+ * @return {!proto.toit.api.UserChange} returns this
+*/
+proto.toit.api.UserChange.prototype.setQuestionnaireAnsweredAt = function(value) {
+  return jspb.Message.setOneofWrapperField(this, 5, proto.toit.api.UserChange.oneofGroups_[0], value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.toit.api.UserChange} returns this
+ */
+proto.toit.api.UserChange.prototype.clearQuestionnaireAnsweredAt = function() {
+  return this.setQuestionnaireAnsweredAt(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.toit.api.UserChange.prototype.hasQuestionnaireAnsweredAt = function() {
+  return jspb.Message.getField(this, 5) != null;
 };
 
 

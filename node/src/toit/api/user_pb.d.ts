@@ -5,6 +5,7 @@ import * as jspb from "google-protobuf";
 import * as toit_model_organization_pb from "../../toit/model/organization_pb";
 import * as toit_api_organization_pb from "../../toit/api/organization_pb";
 import * as google_protobuf_timestamp_pb from "google-protobuf/google/protobuf/timestamp_pb";
+import * as google_protobuf_empty_pb from "google-protobuf/google/protobuf/empty_pb";
 
 export class SetPasswordRequest extends jspb.Message {
   getOldPassword(): string;
@@ -487,6 +488,11 @@ export class UserChange extends jspb.Message {
   getName(): string;
   setName(value: string): void;
 
+  hasQuestionnaireAnsweredAt(): boolean;
+  clearQuestionnaireAnsweredAt(): void;
+  getQuestionnaireAnsweredAt(): google_protobuf_empty_pb.Empty | undefined;
+  setQuestionnaireAnsweredAt(value?: google_protobuf_empty_pb.Empty): void;
+
   getChangeCase(): UserChange.ChangeCase;
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UserChange.AsObject;
@@ -504,6 +510,7 @@ export namespace UserChange {
     setSettingsNewsletter: boolean,
     role: string,
     name: string,
+    questionnaireAnsweredAt?: google_protobuf_empty_pb.Empty.AsObject,
   }
 
   export enum ChangeCase {
@@ -512,6 +519,7 @@ export namespace UserChange {
     SET_SETTINGS_NEWSLETTER = 2,
     ROLE = 3,
     NAME = 4,
+    QUESTIONNAIRE_ANSWERED_AT = 5,
   }
 }
 
