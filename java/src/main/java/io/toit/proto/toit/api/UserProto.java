@@ -12455,6 +12455,21 @@ public final class UserProto {
     com.google.protobuf.ByteString
         getNameBytes();
 
+    /**
+     * <code>.google.protobuf.Empty questionnaire_answered_at = 5;</code>
+     * @return Whether the questionnaireAnsweredAt field is set.
+     */
+    boolean hasQuestionnaireAnsweredAt();
+    /**
+     * <code>.google.protobuf.Empty questionnaire_answered_at = 5;</code>
+     * @return The questionnaireAnsweredAt.
+     */
+    com.google.protobuf.Empty getQuestionnaireAnsweredAt();
+    /**
+     * <code>.google.protobuf.Empty questionnaire_answered_at = 5;</code>
+     */
+    com.google.protobuf.EmptyOrBuilder getQuestionnaireAnsweredAtOrBuilder();
+
     public io.toit.proto.toit.api.UserProto.UserChange.ChangeCase getChangeCase();
   }
   /**
@@ -12524,6 +12539,20 @@ public final class UserProto {
               change_ = s;
               break;
             }
+            case 42: {
+              com.google.protobuf.Empty.Builder subBuilder = null;
+              if (changeCase_ == 5) {
+                subBuilder = ((com.google.protobuf.Empty) change_).toBuilder();
+              }
+              change_ =
+                  input.readMessage(com.google.protobuf.Empty.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.google.protobuf.Empty) change_);
+                change_ = subBuilder.buildPartial();
+              }
+              changeCase_ = 5;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -12565,6 +12594,7 @@ public final class UserProto {
       SET_SETTINGS_NEWSLETTER(2),
       ROLE(3),
       NAME(4),
+      QUESTIONNAIRE_ANSWERED_AT(5),
       CHANGE_NOT_SET(0);
       private final int value;
       private ChangeCase(int value) {
@@ -12586,6 +12616,7 @@ public final class UserProto {
           case 2: return SET_SETTINGS_NEWSLETTER;
           case 3: return ROLE;
           case 4: return NAME;
+          case 5: return QUESTIONNAIRE_ANSWERED_AT;
           case 0: return CHANGE_NOT_SET;
           default: return null;
         }
@@ -12715,6 +12746,34 @@ public final class UserProto {
       }
     }
 
+    public static final int QUESTIONNAIRE_ANSWERED_AT_FIELD_NUMBER = 5;
+    /**
+     * <code>.google.protobuf.Empty questionnaire_answered_at = 5;</code>
+     * @return Whether the questionnaireAnsweredAt field is set.
+     */
+    public boolean hasQuestionnaireAnsweredAt() {
+      return changeCase_ == 5;
+    }
+    /**
+     * <code>.google.protobuf.Empty questionnaire_answered_at = 5;</code>
+     * @return The questionnaireAnsweredAt.
+     */
+    public com.google.protobuf.Empty getQuestionnaireAnsweredAt() {
+      if (changeCase_ == 5) {
+         return (com.google.protobuf.Empty) change_;
+      }
+      return com.google.protobuf.Empty.getDefaultInstance();
+    }
+    /**
+     * <code>.google.protobuf.Empty questionnaire_answered_at = 5;</code>
+     */
+    public com.google.protobuf.EmptyOrBuilder getQuestionnaireAnsweredAtOrBuilder() {
+      if (changeCase_ == 5) {
+         return (com.google.protobuf.Empty) change_;
+      }
+      return com.google.protobuf.Empty.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12743,6 +12802,9 @@ public final class UserProto {
       if (changeCase_ == 4) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, change_);
       }
+      if (changeCase_ == 5) {
+        output.writeMessage(5, (com.google.protobuf.Empty) change_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -12767,6 +12829,10 @@ public final class UserProto {
       }
       if (changeCase_ == 4) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, change_);
+      }
+      if (changeCase_ == 5) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, (com.google.protobuf.Empty) change_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -12801,6 +12867,10 @@ public final class UserProto {
           if (!getName()
               .equals(other.getName())) return false;
           break;
+        case 5:
+          if (!getQuestionnaireAnsweredAt()
+              .equals(other.getQuestionnaireAnsweredAt())) return false;
+          break;
         case 0:
         default:
       }
@@ -12833,6 +12903,10 @@ public final class UserProto {
         case 4:
           hash = (37 * hash) + NAME_FIELD_NUMBER;
           hash = (53 * hash) + getName().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + QUESTIONNAIRE_ANSWERED_AT_FIELD_NUMBER;
+          hash = (53 * hash) + getQuestionnaireAnsweredAt().hashCode();
           break;
         case 0:
         default:
@@ -13010,6 +13084,13 @@ public final class UserProto {
         if (changeCase_ == 4) {
           result.change_ = change_;
         }
+        if (changeCase_ == 5) {
+          if (questionnaireAnsweredAtBuilder_ == null) {
+            result.change_ = change_;
+          } else {
+            result.change_ = questionnaireAnsweredAtBuilder_.build();
+          }
+        }
         result.changeCase_ = changeCase_;
         onBuilt();
         return result;
@@ -13078,6 +13159,10 @@ public final class UserProto {
             changeCase_ = 4;
             change_ = other.change_;
             onChanged();
+            break;
+          }
+          case QUESTIONNAIRE_ANSWERED_AT: {
+            mergeQuestionnaireAnsweredAt(other.getQuestionnaireAnsweredAt());
             break;
           }
           case CHANGE_NOT_SET: {
@@ -13368,6 +13453,144 @@ public final class UserProto {
         change_ = value;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Empty, com.google.protobuf.Empty.Builder, com.google.protobuf.EmptyOrBuilder> questionnaireAnsweredAtBuilder_;
+      /**
+       * <code>.google.protobuf.Empty questionnaire_answered_at = 5;</code>
+       * @return Whether the questionnaireAnsweredAt field is set.
+       */
+      public boolean hasQuestionnaireAnsweredAt() {
+        return changeCase_ == 5;
+      }
+      /**
+       * <code>.google.protobuf.Empty questionnaire_answered_at = 5;</code>
+       * @return The questionnaireAnsweredAt.
+       */
+      public com.google.protobuf.Empty getQuestionnaireAnsweredAt() {
+        if (questionnaireAnsweredAtBuilder_ == null) {
+          if (changeCase_ == 5) {
+            return (com.google.protobuf.Empty) change_;
+          }
+          return com.google.protobuf.Empty.getDefaultInstance();
+        } else {
+          if (changeCase_ == 5) {
+            return questionnaireAnsweredAtBuilder_.getMessage();
+          }
+          return com.google.protobuf.Empty.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Empty questionnaire_answered_at = 5;</code>
+       */
+      public Builder setQuestionnaireAnsweredAt(com.google.protobuf.Empty value) {
+        if (questionnaireAnsweredAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          change_ = value;
+          onChanged();
+        } else {
+          questionnaireAnsweredAtBuilder_.setMessage(value);
+        }
+        changeCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Empty questionnaire_answered_at = 5;</code>
+       */
+      public Builder setQuestionnaireAnsweredAt(
+          com.google.protobuf.Empty.Builder builderForValue) {
+        if (questionnaireAnsweredAtBuilder_ == null) {
+          change_ = builderForValue.build();
+          onChanged();
+        } else {
+          questionnaireAnsweredAtBuilder_.setMessage(builderForValue.build());
+        }
+        changeCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Empty questionnaire_answered_at = 5;</code>
+       */
+      public Builder mergeQuestionnaireAnsweredAt(com.google.protobuf.Empty value) {
+        if (questionnaireAnsweredAtBuilder_ == null) {
+          if (changeCase_ == 5 &&
+              change_ != com.google.protobuf.Empty.getDefaultInstance()) {
+            change_ = com.google.protobuf.Empty.newBuilder((com.google.protobuf.Empty) change_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            change_ = value;
+          }
+          onChanged();
+        } else {
+          if (changeCase_ == 5) {
+            questionnaireAnsweredAtBuilder_.mergeFrom(value);
+          }
+          questionnaireAnsweredAtBuilder_.setMessage(value);
+        }
+        changeCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Empty questionnaire_answered_at = 5;</code>
+       */
+      public Builder clearQuestionnaireAnsweredAt() {
+        if (questionnaireAnsweredAtBuilder_ == null) {
+          if (changeCase_ == 5) {
+            changeCase_ = 0;
+            change_ = null;
+            onChanged();
+          }
+        } else {
+          if (changeCase_ == 5) {
+            changeCase_ = 0;
+            change_ = null;
+          }
+          questionnaireAnsweredAtBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Empty questionnaire_answered_at = 5;</code>
+       */
+      public com.google.protobuf.Empty.Builder getQuestionnaireAnsweredAtBuilder() {
+        return getQuestionnaireAnsweredAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Empty questionnaire_answered_at = 5;</code>
+       */
+      public com.google.protobuf.EmptyOrBuilder getQuestionnaireAnsweredAtOrBuilder() {
+        if ((changeCase_ == 5) && (questionnaireAnsweredAtBuilder_ != null)) {
+          return questionnaireAnsweredAtBuilder_.getMessageOrBuilder();
+        } else {
+          if (changeCase_ == 5) {
+            return (com.google.protobuf.Empty) change_;
+          }
+          return com.google.protobuf.Empty.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Empty questionnaire_answered_at = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Empty, com.google.protobuf.Empty.Builder, com.google.protobuf.EmptyOrBuilder> 
+          getQuestionnaireAnsweredAtFieldBuilder() {
+        if (questionnaireAnsweredAtBuilder_ == null) {
+          if (!(changeCase_ == 5)) {
+            change_ = com.google.protobuf.Empty.getDefaultInstance();
+          }
+          questionnaireAnsweredAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Empty, com.google.protobuf.Empty.Builder, com.google.protobuf.EmptyOrBuilder>(
+                  (com.google.protobuf.Empty) change_,
+                  getParentForChildren(),
+                  isClean());
+          change_ = null;
+        }
+        changeCase_ = 5;
+        onChanged();;
+        return questionnaireAnsweredAtBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -14750,78 +14973,80 @@ public final class UserProto {
       "\n\023toit/api/user.proto\022\010toit.api\032\035toit/mo" +
       "del/organization.proto\032\033toit/api/organiz" +
       "ation.proto\032\037google/protobuf/timestamp.p" +
-      "roto\"@\n\022SetPasswordRequest\022\024\n\014old_passwo" +
-      "rd\030\001 \001(\t\022\024\n\014new_password\030\002 \001(\t\"\025\n\023SetPas" +
-      "swordResponse\"-\n\034InitiateResetPasswordRe" +
-      "quest\022\r\n\005email\030\001 \001(\t\"\037\n\035InitiateResetPas" +
-      "swordResponse\"G\n ChangePasswordWithRPTok" +
-      "enRequest\022\r\n\005token\030\001 \001(\t\022\024\n\014new_password" +
-      "\030\002 \001(\t\"#\n!ChangePasswordWithRPTokenRespo" +
-      "nse\"\027\n\025GetCurrentUserRequest\"h\n\026GetCurre" +
-      "ntUserResponse\022\036\n\004user\030\001 \001(\0132\020.toit.mode" +
-      "l.User\022.\n\014organization\030\002 \001(\0132\030.toit.mode" +
-      "l.Organization\"p\n\030ListOrganizationsReque" +
-      "st\022\017\n\007user_id\030\001 \001(\014\022\016\n\006offset\030\002 \001(\014\022\r\n\005l" +
-      "imit\030\003 \001(\003\022\020\n\010order_by\030\004 \001(\t\022\022\n\norder_de" +
-      "sc\030\005 \001(\010\"\\\n\031ListOrganizationsResponse\022/\n" +
-      "\rorganizations\030\001 \003(\0132\030.toit.model.Organi" +
-      "zation\022\016\n\006offset\030\002 \001(\014\"$\n\026GetOrganizatio" +
-      "nRequest\022\n\n\002id\030\001 \001(\014\"I\n\027GetOrganizationR" +
-      "esponse\022.\n\014organization\030\001 \001(\0132\030.toit.mod" +
-      "el.Organization\"\257\001\n CreatePaymentSubscri" +
-      "ptionRequest\022\025\n\rbilling_email\030\001 \001(\t\022\030\n\020c" +
-      "ard_holder_name\030\002 \001(\t\022\020\n\010card_cvc\030\003 \001(\005\022" +
-      "\031\n\021card_expiry_month\030\004 \001(\005\022\030\n\020card_expir" +
-      "y_year\030\005 \001(\005\022\023\n\013card_number\030\006 \001(\004\"#\n!Cre" +
-      "atePaymentSubscriptionResponse\";\n\032ListPa" +
-      "ymentInvoicesRequest\022\r\n\005limit\030\001 \001(\003\022\016\n\006o" +
-      "ffset\030\002 \001(\014\"B\n\033ListPaymentInvoicesRespon" +
-      "se\022#\n\010invoices\030\001 \001(\0132\021.toit.api.Invoice\"" +
-      "\342\001\n\007Invoice\022\022\n\ninvoice_id\030\001 \001(\t\022\026\n\016invoi" +
-      "ce_number\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.go" +
-      "ogle.protobuf.Timestamp\022\017\n\007pdf_url\030\004 \001(\t" +
-      "\022\016\n\006status\030\005 \001(\t\022,\n\010due_date\030\006 \001(\0132\032.goo" +
-      "gle.protobuf.Timestamp\022\027\n\017receipt_pdf_ur" +
-      "l\030\007 \001(\t\022\023\n\013amount_paid\030\010 \001(\003\"\"\n CancelPa" +
-      "ymentSubscriptionRequest\"#\n!CancelPaymen" +
-      "tSubscriptionResponse\"\200\001\n\nUserChange\022%\n\033" +
-      "set_settings_welcome_closed\030\001 \001(\010H\000\022!\n\027s" +
-      "et_settings_newsletter\030\002 \001(\010H\000\022\016\n\004role\030\003" +
-      " \001(\tH\000\022\016\n\004name\030\004 \001(\tH\000B\010\n\006change\":\n\021Upda" +
-      "teUserRequest\022%\n\007changes\030\001 \003(\0132\024.toit.ap" +
-      "i.UserChange\"\024\n\022UpdateUserResponse2\205\t\n\004U" +
-      "ser\022L\n\013SetPassword\022\034.toit.api.SetPasswor" +
-      "dRequest\032\035.toit.api.SetPasswordResponse\"" +
-      "\000\022j\n\025InitiateResetPassword\022&.toit.api.In" +
-      "itiateResetPasswordRequest\032\'.toit.api.In" +
-      "itiateResetPasswordResponse\"\000\022v\n\031ChangeP" +
-      "asswordWithRPToken\022*.toit.api.ChangePass" +
-      "wordWithRPTokenRequest\032+.toit.api.Change" +
-      "PasswordWithRPTokenResponse\"\000\022U\n\016GetCurr" +
-      "entUser\022\037.toit.api.GetCurrentUserRequest" +
-      "\032 .toit.api.GetCurrentUserResponse\"\000\022^\n\021" +
-      "ListOrganizations\022\".toit.api.ListOrganiz" +
-      "ationsRequest\032#.toit.api.ListOrganizatio" +
-      "nsResponse\"\000\022X\n\017GetOrganization\022 .toit.a" +
-      "pi.GetOrganizationRequest\032!.toit.api.Get" +
-      "OrganizationResponse\"\000\022I\n\tListUsers\022\032.to" +
-      "it.api.ListUsersRequest\032\033.toit.api.ListU" +
-      "sersResponse\"\003\210\002\001\022L\n\nCreateUser\022\033.toit.a" +
-      "pi.CreateUserRequest\032\034.toit.api.CreateUs" +
-      "erResponse\"\003\210\002\001\022v\n\031CreatePaymentSubscrip" +
-      "tion\022*.toit.api.CreatePaymentSubscriptio" +
-      "nRequest\032+.toit.api.CreatePaymentSubscri" +
-      "ptionResponse\"\000\022f\n\023ListPaymentInvoices\022$" +
-      ".toit.api.ListPaymentInvoicesRequest\032%.t" +
-      "oit.api.ListPaymentInvoicesResponse\"\0000\001\022" +
-      "v\n\031CancelPaymentSubscription\022*.toit.api." +
-      "CancelPaymentSubscriptionRequest\032+.toit." +
-      "api.CancelPaymentSubscriptionResponse\"\000\022" +
-      "I\n\nUpdateUser\022\033.toit.api.UpdateUserReque" +
-      "st\032\034.toit.api.UpdateUserResponse\"\000B]\n\026io" +
-      ".toit.proto.toit.apiB\tUserProtoZ\'github." +
-      "com/toitware/api/golang/toit/api\252\002\016Toit." +
-      "Proto.APIb\006proto3"
+      "roto\032\033google/protobuf/empty.proto\"@\n\022Set" +
+      "PasswordRequest\022\024\n\014old_password\030\001 \001(\t\022\024\n" +
+      "\014new_password\030\002 \001(\t\"\025\n\023SetPasswordRespon" +
+      "se\"-\n\034InitiateResetPasswordRequest\022\r\n\005em" +
+      "ail\030\001 \001(\t\"\037\n\035InitiateResetPasswordRespon" +
+      "se\"G\n ChangePasswordWithRPTokenRequest\022\r" +
+      "\n\005token\030\001 \001(\t\022\024\n\014new_password\030\002 \001(\t\"#\n!C" +
+      "hangePasswordWithRPTokenResponse\"\027\n\025GetC" +
+      "urrentUserRequest\"h\n\026GetCurrentUserRespo" +
+      "nse\022\036\n\004user\030\001 \001(\0132\020.toit.model.User\022.\n\014o" +
+      "rganization\030\002 \001(\0132\030.toit.model.Organizat" +
+      "ion\"p\n\030ListOrganizationsRequest\022\017\n\007user_" +
+      "id\030\001 \001(\014\022\016\n\006offset\030\002 \001(\014\022\r\n\005limit\030\003 \001(\003\022" +
+      "\020\n\010order_by\030\004 \001(\t\022\022\n\norder_desc\030\005 \001(\010\"\\\n" +
+      "\031ListOrganizationsResponse\022/\n\rorganizati" +
+      "ons\030\001 \003(\0132\030.toit.model.Organization\022\016\n\006o" +
+      "ffset\030\002 \001(\014\"$\n\026GetOrganizationRequest\022\n\n" +
+      "\002id\030\001 \001(\014\"I\n\027GetOrganizationResponse\022.\n\014" +
+      "organization\030\001 \001(\0132\030.toit.model.Organiza" +
+      "tion\"\257\001\n CreatePaymentSubscriptionReques" +
+      "t\022\025\n\rbilling_email\030\001 \001(\t\022\030\n\020card_holder_" +
+      "name\030\002 \001(\t\022\020\n\010card_cvc\030\003 \001(\005\022\031\n\021card_exp" +
+      "iry_month\030\004 \001(\005\022\030\n\020card_expiry_year\030\005 \001(" +
+      "\005\022\023\n\013card_number\030\006 \001(\004\"#\n!CreatePaymentS" +
+      "ubscriptionResponse\";\n\032ListPaymentInvoic" +
+      "esRequest\022\r\n\005limit\030\001 \001(\003\022\016\n\006offset\030\002 \001(\014" +
+      "\"B\n\033ListPaymentInvoicesResponse\022#\n\010invoi" +
+      "ces\030\001 \001(\0132\021.toit.api.Invoice\"\342\001\n\007Invoice" +
+      "\022\022\n\ninvoice_id\030\001 \001(\t\022\026\n\016invoice_number\030\002" +
+      " \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.protob" +
+      "uf.Timestamp\022\017\n\007pdf_url\030\004 \001(\t\022\016\n\006status\030" +
+      "\005 \001(\t\022,\n\010due_date\030\006 \001(\0132\032.google.protobu" +
+      "f.Timestamp\022\027\n\017receipt_pdf_url\030\007 \001(\t\022\023\n\013" +
+      "amount_paid\030\010 \001(\003\"\"\n CancelPaymentSubscr" +
+      "iptionRequest\"#\n!CancelPaymentSubscripti" +
+      "onResponse\"\275\001\n\nUserChange\022%\n\033set_setting" +
+      "s_welcome_closed\030\001 \001(\010H\000\022!\n\027set_settings" +
+      "_newsletter\030\002 \001(\010H\000\022\016\n\004role\030\003 \001(\tH\000\022\016\n\004n" +
+      "ame\030\004 \001(\tH\000\022;\n\031questionnaire_answered_at" +
+      "\030\005 \001(\0132\026.google.protobuf.EmptyH\000B\010\n\006chan" +
+      "ge\":\n\021UpdateUserRequest\022%\n\007changes\030\001 \003(\013" +
+      "2\024.toit.api.UserChange\"\024\n\022UpdateUserResp" +
+      "onse2\205\t\n\004User\022L\n\013SetPassword\022\034.toit.api." +
+      "SetPasswordRequest\032\035.toit.api.SetPasswor" +
+      "dResponse\"\000\022j\n\025InitiateResetPassword\022&.t" +
+      "oit.api.InitiateResetPasswordRequest\032\'.t" +
+      "oit.api.InitiateResetPasswordResponse\"\000\022" +
+      "v\n\031ChangePasswordWithRPToken\022*.toit.api." +
+      "ChangePasswordWithRPTokenRequest\032+.toit." +
+      "api.ChangePasswordWithRPTokenResponse\"\000\022" +
+      "U\n\016GetCurrentUser\022\037.toit.api.GetCurrentU" +
+      "serRequest\032 .toit.api.GetCurrentUserResp" +
+      "onse\"\000\022^\n\021ListOrganizations\022\".toit.api.L" +
+      "istOrganizationsRequest\032#.toit.api.ListO" +
+      "rganizationsResponse\"\000\022X\n\017GetOrganizatio" +
+      "n\022 .toit.api.GetOrganizationRequest\032!.to" +
+      "it.api.GetOrganizationResponse\"\000\022I\n\tList" +
+      "Users\022\032.toit.api.ListUsersRequest\032\033.toit" +
+      ".api.ListUsersResponse\"\003\210\002\001\022L\n\nCreateUse" +
+      "r\022\033.toit.api.CreateUserRequest\032\034.toit.ap" +
+      "i.CreateUserResponse\"\003\210\002\001\022v\n\031CreatePayme" +
+      "ntSubscription\022*.toit.api.CreatePaymentS" +
+      "ubscriptionRequest\032+.toit.api.CreatePaym" +
+      "entSubscriptionResponse\"\000\022f\n\023ListPayment" +
+      "Invoices\022$.toit.api.ListPaymentInvoicesR" +
+      "equest\032%.toit.api.ListPaymentInvoicesRes" +
+      "ponse\"\0000\001\022v\n\031CancelPaymentSubscription\022*" +
+      ".toit.api.CancelPaymentSubscriptionReque" +
+      "st\032+.toit.api.CancelPaymentSubscriptionR" +
+      "esponse\"\000\022I\n\nUpdateUser\022\033.toit.api.Updat" +
+      "eUserRequest\032\034.toit.api.UpdateUserRespon" +
+      "se\"\000B]\n\026io.toit.proto.toit.apiB\tUserProt" +
+      "oZ\'github.com/toitware/api/golang/toit/a" +
+      "pi\252\002\016Toit.Proto.APIb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14829,6 +15054,7 @@ public final class UserProto {
           io.toit.proto.toit.model.OrganizationProto.getDescriptor(),
           io.toit.proto.toit.api.OrgProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
+          com.google.protobuf.EmptyProto.getDescriptor(),
         });
     internal_static_toit_api_SetPasswordRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -14949,7 +15175,7 @@ public final class UserProto {
     internal_static_toit_api_UserChange_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_UserChange_descriptor,
-        new java.lang.String[] { "SetSettingsWelcomeClosed", "SetSettingsNewsletter", "Role", "Name", "Change", });
+        new java.lang.String[] { "SetSettingsWelcomeClosed", "SetSettingsNewsletter", "Role", "Name", "QuestionnaireAnsweredAt", "Change", });
     internal_static_toit_api_UpdateUserRequest_descriptor =
       getDescriptor().getMessageTypes().get(20);
     internal_static_toit_api_UpdateUserRequest_fieldAccessorTable = new
@@ -14965,6 +15191,7 @@ public final class UserProto {
     io.toit.proto.toit.model.OrganizationProto.getDescriptor();
     io.toit.proto.toit.api.OrgProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
+    com.google.protobuf.EmptyProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

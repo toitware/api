@@ -4944,6 +4944,21 @@ public final class OrganizationProto {
        * <code>.google.protobuf.Timestamp vscode_ext_installed_at = 2;</code>
        */
       com.google.protobuf.TimestampOrBuilder getVscodeExtInstalledAtOrBuilder();
+
+      /**
+       * <code>.google.protobuf.Timestamp questionnaire_answered_at = 3;</code>
+       * @return Whether the questionnaireAnsweredAt field is set.
+       */
+      boolean hasQuestionnaireAnsweredAt();
+      /**
+       * <code>.google.protobuf.Timestamp questionnaire_answered_at = 3;</code>
+       * @return The questionnaireAnsweredAt.
+       */
+      com.google.protobuf.Timestamp getQuestionnaireAnsweredAt();
+      /**
+       * <code>.google.protobuf.Timestamp questionnaire_answered_at = 3;</code>
+       */
+      com.google.protobuf.TimestampOrBuilder getQuestionnaireAnsweredAtOrBuilder();
     }
     /**
      * Protobuf type {@code toit.model.User.State}
@@ -5012,6 +5027,19 @@ public final class OrganizationProto {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(vscodeExtInstalledAt_);
                   vscodeExtInstalledAt_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                com.google.protobuf.Timestamp.Builder subBuilder = null;
+                if (questionnaireAnsweredAt_ != null) {
+                  subBuilder = questionnaireAnsweredAt_.toBuilder();
+                }
+                questionnaireAnsweredAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(questionnaireAnsweredAt_);
+                  questionnaireAnsweredAt_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -5094,6 +5122,29 @@ public final class OrganizationProto {
         return getVscodeExtInstalledAt();
       }
 
+      public static final int QUESTIONNAIRE_ANSWERED_AT_FIELD_NUMBER = 3;
+      private com.google.protobuf.Timestamp questionnaireAnsweredAt_;
+      /**
+       * <code>.google.protobuf.Timestamp questionnaire_answered_at = 3;</code>
+       * @return Whether the questionnaireAnsweredAt field is set.
+       */
+      public boolean hasQuestionnaireAnsweredAt() {
+        return questionnaireAnsweredAt_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp questionnaire_answered_at = 3;</code>
+       * @return The questionnaireAnsweredAt.
+       */
+      public com.google.protobuf.Timestamp getQuestionnaireAnsweredAt() {
+        return questionnaireAnsweredAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : questionnaireAnsweredAt_;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp questionnaire_answered_at = 3;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getQuestionnaireAnsweredAtOrBuilder() {
+        return getQuestionnaireAnsweredAt();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -5114,6 +5165,9 @@ public final class OrganizationProto {
         if (vscodeExtInstalledAt_ != null) {
           output.writeMessage(2, getVscodeExtInstalledAt());
         }
+        if (questionnaireAnsweredAt_ != null) {
+          output.writeMessage(3, getQuestionnaireAnsweredAt());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -5130,6 +5184,10 @@ public final class OrganizationProto {
         if (vscodeExtInstalledAt_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, getVscodeExtInstalledAt());
+        }
+        if (questionnaireAnsweredAt_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getQuestionnaireAnsweredAt());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -5156,6 +5214,11 @@ public final class OrganizationProto {
           if (!getVscodeExtInstalledAt()
               .equals(other.getVscodeExtInstalledAt())) return false;
         }
+        if (hasQuestionnaireAnsweredAt() != other.hasQuestionnaireAnsweredAt()) return false;
+        if (hasQuestionnaireAnsweredAt()) {
+          if (!getQuestionnaireAnsweredAt()
+              .equals(other.getQuestionnaireAnsweredAt())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -5174,6 +5237,10 @@ public final class OrganizationProto {
         if (hasVscodeExtInstalledAt()) {
           hash = (37 * hash) + VSCODE_EXT_INSTALLED_AT_FIELD_NUMBER;
           hash = (53 * hash) + getVscodeExtInstalledAt().hashCode();
+        }
+        if (hasQuestionnaireAnsweredAt()) {
+          hash = (37 * hash) + QUESTIONNAIRE_ANSWERED_AT_FIELD_NUMBER;
+          hash = (53 * hash) + getQuestionnaireAnsweredAt().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -5320,6 +5387,12 @@ public final class OrganizationProto {
             vscodeExtInstalledAt_ = null;
             vscodeExtInstalledAtBuilder_ = null;
           }
+          if (questionnaireAnsweredAtBuilder_ == null) {
+            questionnaireAnsweredAt_ = null;
+          } else {
+            questionnaireAnsweredAt_ = null;
+            questionnaireAnsweredAtBuilder_ = null;
+          }
           return this;
         }
 
@@ -5355,6 +5428,11 @@ public final class OrganizationProto {
             result.vscodeExtInstalledAt_ = vscodeExtInstalledAt_;
           } else {
             result.vscodeExtInstalledAt_ = vscodeExtInstalledAtBuilder_.build();
+          }
+          if (questionnaireAnsweredAtBuilder_ == null) {
+            result.questionnaireAnsweredAt_ = questionnaireAnsweredAt_;
+          } else {
+            result.questionnaireAnsweredAt_ = questionnaireAnsweredAtBuilder_.build();
           }
           onBuilt();
           return result;
@@ -5409,6 +5487,9 @@ public final class OrganizationProto {
           }
           if (other.hasVscodeExtInstalledAt()) {
             mergeVscodeExtInstalledAt(other.getVscodeExtInstalledAt());
+          }
+          if (other.hasQuestionnaireAnsweredAt()) {
+            mergeQuestionnaireAnsweredAt(other.getQuestionnaireAnsweredAt());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -5675,6 +5756,125 @@ public final class OrganizationProto {
             vscodeExtInstalledAt_ = null;
           }
           return vscodeExtInstalledAtBuilder_;
+        }
+
+        private com.google.protobuf.Timestamp questionnaireAnsweredAt_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> questionnaireAnsweredAtBuilder_;
+        /**
+         * <code>.google.protobuf.Timestamp questionnaire_answered_at = 3;</code>
+         * @return Whether the questionnaireAnsweredAt field is set.
+         */
+        public boolean hasQuestionnaireAnsweredAt() {
+          return questionnaireAnsweredAtBuilder_ != null || questionnaireAnsweredAt_ != null;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp questionnaire_answered_at = 3;</code>
+         * @return The questionnaireAnsweredAt.
+         */
+        public com.google.protobuf.Timestamp getQuestionnaireAnsweredAt() {
+          if (questionnaireAnsweredAtBuilder_ == null) {
+            return questionnaireAnsweredAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : questionnaireAnsweredAt_;
+          } else {
+            return questionnaireAnsweredAtBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>.google.protobuf.Timestamp questionnaire_answered_at = 3;</code>
+         */
+        public Builder setQuestionnaireAnsweredAt(com.google.protobuf.Timestamp value) {
+          if (questionnaireAnsweredAtBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            questionnaireAnsweredAt_ = value;
+            onChanged();
+          } else {
+            questionnaireAnsweredAtBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp questionnaire_answered_at = 3;</code>
+         */
+        public Builder setQuestionnaireAnsweredAt(
+            com.google.protobuf.Timestamp.Builder builderForValue) {
+          if (questionnaireAnsweredAtBuilder_ == null) {
+            questionnaireAnsweredAt_ = builderForValue.build();
+            onChanged();
+          } else {
+            questionnaireAnsweredAtBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp questionnaire_answered_at = 3;</code>
+         */
+        public Builder mergeQuestionnaireAnsweredAt(com.google.protobuf.Timestamp value) {
+          if (questionnaireAnsweredAtBuilder_ == null) {
+            if (questionnaireAnsweredAt_ != null) {
+              questionnaireAnsweredAt_ =
+                com.google.protobuf.Timestamp.newBuilder(questionnaireAnsweredAt_).mergeFrom(value).buildPartial();
+            } else {
+              questionnaireAnsweredAt_ = value;
+            }
+            onChanged();
+          } else {
+            questionnaireAnsweredAtBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp questionnaire_answered_at = 3;</code>
+         */
+        public Builder clearQuestionnaireAnsweredAt() {
+          if (questionnaireAnsweredAtBuilder_ == null) {
+            questionnaireAnsweredAt_ = null;
+            onChanged();
+          } else {
+            questionnaireAnsweredAt_ = null;
+            questionnaireAnsweredAtBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp questionnaire_answered_at = 3;</code>
+         */
+        public com.google.protobuf.Timestamp.Builder getQuestionnaireAnsweredAtBuilder() {
+          
+          onChanged();
+          return getQuestionnaireAnsweredAtFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.google.protobuf.Timestamp questionnaire_answered_at = 3;</code>
+         */
+        public com.google.protobuf.TimestampOrBuilder getQuestionnaireAnsweredAtOrBuilder() {
+          if (questionnaireAnsweredAtBuilder_ != null) {
+            return questionnaireAnsweredAtBuilder_.getMessageOrBuilder();
+          } else {
+            return questionnaireAnsweredAt_ == null ?
+                com.google.protobuf.Timestamp.getDefaultInstance() : questionnaireAnsweredAt_;
+          }
+        }
+        /**
+         * <code>.google.protobuf.Timestamp questionnaire_answered_at = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+            getQuestionnaireAnsweredAtFieldBuilder() {
+          if (questionnaireAnsweredAtBuilder_ == null) {
+            questionnaireAnsweredAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                    getQuestionnaireAnsweredAt(),
+                    getParentForChildren(),
+                    isClean());
+            questionnaireAnsweredAt_ = null;
+          }
+          return questionnaireAnsweredAtBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -8953,24 +9153,26 @@ public final class OrganizationProto {
       "mentDetails\022\r\n\005last4\030\001 \001(\t\022\016\n\006expiry\030\002 \001" +
       "(\t\022\024\n\014expiry_month\030\003 \001(\t\022\023\n\013expiry_year\030" +
       "\004 \001(\t\022\r\n\005brand\030\005 \001(\t\022\024\n\014country_code\030\006 \001" +
-      "(\t\022\021\n\tcvc_check\030\007 \001(\t\"\336\002\n\004User\022\n\n\002id\030\001 \001" +
+      "(\t\022\021\n\tcvc_check\030\007 \001(\t\"\236\003\n\004User\022\n\n\002id\030\001 \001" +
       "(\014\022\027\n\017organization_id\030\002 \001(\014\022\r\n\005email\030\003 \001" +
       "(\t\022\014\n\004name\030\004 \001(\t\022+\n\010settings\030\005 \001(\0132\031.toi" +
       "t.model.User.Settings\022\014\n\004role\030\006 \001(\t\022%\n\005s" +
       "tate\030\007 \001(\0132\026.toit.model.User.State\0326\n\010Se" +
       "ttings\022\026\n\016welcome_closed\030\001 \001(\010\022\022\n\nnewsle" +
-      "tter\030\002 \001(\010\032z\n\005State\0224\n\020cli_installed_at\030" +
-      "\001 \001(\0132\032.google.protobuf.Timestamp\022;\n\027vsc" +
-      "ode_ext_installed_at\030\002 \001(\0132\032.google.prot" +
-      "obuf.Timestamp\"k\n\006APIKey\022\n\n\002id\030\001 \001(\014\022\027\n\017" +
-      "organization_id\030\002 \001(\014\022\014\n\004name\030\003 \001(\t\022.\n\nc" +
-      "reated_at\030\004 \001(\0132\032.google.protobuf.Timest" +
-      "amp\"/\n\004Tier\"\'\n\004Type\022\013\n\007UNKNOWN\020\000\022\010\n\004FREE" +
-      "\020\001\022\010\n\004PAID\020\002\"=\n\010Customer\"1\n\004Type\022\013\n\007UNKN" +
-      "OWN\020\000\022\n\n\006PERSON\020\001\022\020\n\014ORGANIZATION\020\002Bk\n\030i" +
-      "o.toit.proto.toit.modelB\021OrganizationPro" +
-      "toZ)github.com/toitware/api/golang/toit/" +
-      "model\252\002\020Toit.Proto.Modelb\006proto3"
+      "tter\030\002 \001(\010\032\271\001\n\005State\0224\n\020cli_installed_at" +
+      "\030\001 \001(\0132\032.google.protobuf.Timestamp\022;\n\027vs" +
+      "code_ext_installed_at\030\002 \001(\0132\032.google.pro" +
+      "tobuf.Timestamp\022=\n\031questionnaire_answere" +
+      "d_at\030\003 \001(\0132\032.google.protobuf.Timestamp\"k" +
+      "\n\006APIKey\022\n\n\002id\030\001 \001(\014\022\027\n\017organization_id\030" +
+      "\002 \001(\014\022\014\n\004name\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132" +
+      "\032.google.protobuf.Timestamp\"/\n\004Tier\"\'\n\004T" +
+      "ype\022\013\n\007UNKNOWN\020\000\022\010\n\004FREE\020\001\022\010\n\004PAID\020\002\"=\n\010" +
+      "Customer\"1\n\004Type\022\013\n\007UNKNOWN\020\000\022\n\n\006PERSON\020" +
+      "\001\022\020\n\014ORGANIZATION\020\002Bk\n\030io.toit.proto.toi" +
+      "t.modelB\021OrganizationProtoZ)github.com/t" +
+      "oitware/api/golang/toit/model\252\002\020Toit.Pro" +
+      "to.Modelb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9006,7 +9208,7 @@ public final class OrganizationProto {
     internal_static_toit_model_User_State_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_User_State_descriptor,
-        new java.lang.String[] { "CliInstalledAt", "VscodeExtInstalledAt", });
+        new java.lang.String[] { "CliInstalledAt", "VscodeExtInstalledAt", "QuestionnaireAnsweredAt", });
     internal_static_toit_model_APIKey_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_toit_model_APIKey_fieldAccessorTable = new
