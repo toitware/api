@@ -622,14 +622,13 @@ class User_State extends $pb.GeneratedMessage {
               ? ''
               : 'toit.model'),
       createEmptyInstance: create)
-    ..aOM<$0.Timestamp>(
-        1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cliInstalledAt',
+    ..aOM<$0.Timestamp>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cliInstalledAt',
         subBuilder: $0.Timestamp.create)
     ..aOM<$0.Timestamp>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'vscodeExtInstalledAt',
+        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'vscodeExtInstalledAt',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(
+        3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'questionnaireAnsweredAt',
         subBuilder: $0.Timestamp.create)
     ..hasRequiredFields = false;
 
@@ -637,6 +636,7 @@ class User_State extends $pb.GeneratedMessage {
   factory User_State({
     $0.Timestamp? cliInstalledAt,
     $0.Timestamp? vscodeExtInstalledAt,
+    $0.Timestamp? questionnaireAnsweredAt,
   }) {
     final _result = create();
     if (cliInstalledAt != null) {
@@ -644,6 +644,9 @@ class User_State extends $pb.GeneratedMessage {
     }
     if (vscodeExtInstalledAt != null) {
       _result.vscodeExtInstalledAt = vscodeExtInstalledAt;
+    }
+    if (questionnaireAnsweredAt != null) {
+      _result.questionnaireAnsweredAt = questionnaireAnsweredAt;
     }
     return _result;
   }
@@ -700,6 +703,20 @@ class User_State extends $pb.GeneratedMessage {
   void clearVscodeExtInstalledAt() => clearField(2);
   @$pb.TagNumber(2)
   $0.Timestamp ensureVscodeExtInstalledAt() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $0.Timestamp get questionnaireAnsweredAt => $_getN(2);
+  @$pb.TagNumber(3)
+  set questionnaireAnsweredAt($0.Timestamp v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasQuestionnaireAnsweredAt() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearQuestionnaireAnsweredAt() => clearField(3);
+  @$pb.TagNumber(3)
+  $0.Timestamp ensureQuestionnaireAnsweredAt() => $_ensure(2);
 }
 
 class User extends $pb.GeneratedMessage {

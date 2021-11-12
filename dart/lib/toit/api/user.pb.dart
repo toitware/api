@@ -12,6 +12,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../model/organization.pb.dart' as $3;
 import '../../google/protobuf/timestamp.pb.dart' as $4;
+import '../../google/protobuf/empty.pb.dart' as $5;
 
 class SetPasswordRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -1582,6 +1583,7 @@ enum UserChange_Change {
   setSettingsNewsletter,
   role,
   name,
+  questionnaireAnsweredAt,
   notSet
 }
 
@@ -1592,6 +1594,7 @@ class UserChange extends $pb.GeneratedMessage {
     2: UserChange_Change.setSettingsNewsletter,
     3: UserChange_Change.role,
     4: UserChange_Change.name,
+    5: UserChange_Change.questionnaireAnsweredAt,
     0: UserChange_Change.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -1603,7 +1606,7 @@ class UserChange extends $pb.GeneratedMessage {
               ? ''
               : 'toit.api'),
       createEmptyInstance: create)
-    ..oo(0, [1, 2, 3, 4])
+    ..oo(0, [1, 2, 3, 4, 5])
     ..aOB(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -1619,8 +1622,9 @@ class UserChange extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'role')
-    ..aOS(
-        4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..aOS(4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..aOM<$5.Empty>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'questionnaireAnsweredAt', subBuilder: $5.Empty.create)
     ..hasRequiredFields = false;
 
   UserChange._() : super();
@@ -1629,6 +1633,7 @@ class UserChange extends $pb.GeneratedMessage {
     $core.bool? setSettingsNewsletter,
     $core.String? role,
     $core.String? name,
+    $5.Empty? questionnaireAnsweredAt,
   }) {
     final _result = create();
     if (setSettingsWelcomeClosed != null) {
@@ -1642,6 +1647,9 @@ class UserChange extends $pb.GeneratedMessage {
     }
     if (name != null) {
       _result.name = name;
+    }
+    if (questionnaireAnsweredAt != null) {
+      _result.questionnaireAnsweredAt = questionnaireAnsweredAt;
     }
     return _result;
   }
@@ -1721,6 +1729,20 @@ class UserChange extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(3);
   @$pb.TagNumber(4)
   void clearName() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $5.Empty get questionnaireAnsweredAt => $_getN(4);
+  @$pb.TagNumber(5)
+  set questionnaireAnsweredAt($5.Empty v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasQuestionnaireAnsweredAt() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearQuestionnaireAnsweredAt() => clearField(5);
+  @$pb.TagNumber(5)
+  $5.Empty ensureQuestionnaireAnsweredAt() => $_ensure(4);
 }
 
 class UpdateUserRequest extends $pb.GeneratedMessage {

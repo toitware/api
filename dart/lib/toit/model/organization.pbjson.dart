@@ -149,12 +149,20 @@ const User_State$json = const {
       '6': '.google.protobuf.Timestamp',
       '10': 'vscodeExtInstalledAt'
     },
+    const {
+      '1': 'questionnaire_answered_at',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'questionnaireAnsweredAt'
+    },
   ],
 };
 
 /// Descriptor for `User`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List userDescriptor = $convert.base64Decode(
-    'CgRVc2VyEg4KAmlkGAEgASgMUgJpZBInCg9vcmdhbml6YXRpb25faWQYAiABKAxSDm9yZ2FuaXphdGlvbklkEhQKBWVtYWlsGAMgASgJUgVlbWFpbBISCgRuYW1lGAQgASgJUgRuYW1lEjUKCHNldHRpbmdzGAUgASgLMhkudG9pdC5tb2RlbC5Vc2VyLlNldHRpbmdzUghzZXR0aW5ncxISCgRyb2xlGAYgASgJUgRyb2xlEiwKBXN0YXRlGAcgASgLMhYudG9pdC5tb2RlbC5Vc2VyLlN0YXRlUgVzdGF0ZRpRCghTZXR0aW5ncxIlCg53ZWxjb21lX2Nsb3NlZBgBIAEoCFINd2VsY29tZUNsb3NlZBIeCgpuZXdzbGV0dGVyGAIgASgIUgpuZXdzbGV0dGVyGqABCgVTdGF0ZRJEChBjbGlfaW5zdGFsbGVkX2F0GAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIOY2xpSW5zdGFsbGVkQXQSUQoXdnNjb2RlX2V4dF9pbnN0YWxsZWRfYXQYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUhR2c2NvZGVFeHRJbnN0YWxsZWRBdA==');
+    'CgRVc2VyEg4KAmlkGAEgASgMUgJpZBInCg9vcmdhbml6YXRpb25faWQYAiABKAxSDm9yZ2FuaXphdGlvbklkEhQKBWVtYWlsGAMgASgJUgVlbWFpbBISCgRuYW1lGAQgASgJUgRuYW1lEjUKCHNldHRpbmdzGAUgASgLMhkudG9pdC5tb2RlbC5Vc2VyLlNldHRpbmdzUghzZXR0aW5ncxISCgRyb2xlGAYgASgJUgRyb2xlEiwKBXN0YXRlGAcgASgLMhYudG9pdC5tb2RlbC5Vc2VyLlN0YXRlUgVzdGF0ZRpRCghTZXR0aW5ncxIlCg53ZWxjb21lX2Nsb3NlZBgBIAEoCFINd2VsY29tZUNsb3NlZBIeCgpuZXdzbGV0dGVyGAIgASgIUgpuZXdzbGV0dGVyGvgBCgVTdGF0ZRJEChBjbGlfaW5zdGFsbGVkX2F0GAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIOY2xpSW5zdGFsbGVkQXQSUQoXdnNjb2RlX2V4dF9pbnN0YWxsZWRfYXQYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUhR2c2NvZGVFeHRJbnN0YWxsZWRBdBJWChlxdWVzdGlvbm5haXJlX2Fuc3dlcmVkX2F0GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIXcXVlc3Rpb25uYWlyZUFuc3dlcmVkQXQ=');
 @$core.Deprecated('Use aPIKeyDescriptor instead')
 const APIKey$json = const {
   '1': 'APIKey',
