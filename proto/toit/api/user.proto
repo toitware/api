@@ -5,6 +5,7 @@ package toit.api;
 import "toit/model/organization.proto";
 import "toit/api/organization.proto";
 import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
 
 option go_package = "github.com/toitware/api/golang/toit/api";
 option java_package = "io.toit.proto.toit.api";
@@ -121,7 +122,8 @@ message UserChange {
     bool set_settings_welcome_closed = 1;
     bool set_settings_newsletter = 2;
     string role = 3;
-    string name = 4; 
+    string name = 4;
+    google.protobuf.Empty questionnaire_answered_at = 5;
   }
 }
 
