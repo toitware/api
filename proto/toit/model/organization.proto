@@ -47,6 +47,9 @@ message User {
         google.protobuf.Timestamp cli_installed_at = 1;
         google.protobuf.Timestamp vscode_ext_installed_at = 2;
         google.protobuf.Timestamp questionnaire_answered_at = 3;
+        google.protobuf.Timestamp state_deployed_app_at = 4;
+        google.protobuf.Timestamp state_ran_code_at = 5;
+        google.protobuf.Timestamp state_claimed_device_at = 6;
     }
     bytes id = 1;
     bytes organization_id = 2;
