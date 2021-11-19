@@ -37,31 +37,35 @@ namespace Toit.Proto.Model {
             "cGUSEgoKaHdpZF9xdW90YRgQIAEoBCKSAQoOUGF5bWVudERldGFpbHMSDQoF",
             "bGFzdDQYASABKAkSDgoGZXhwaXJ5GAIgASgJEhQKDGV4cGlyeV9tb250aBgD",
             "IAEoCRITCgtleHBpcnlfeWVhchgEIAEoCRINCgVicmFuZBgFIAEoCRIUCgxj",
-            "b3VudHJ5X2NvZGUYBiABKAkSEQoJY3ZjX2NoZWNrGAcgASgJIp4DCgRVc2Vy",
+            "b3VudHJ5X2NvZGUYBiABKAkSEQoJY3ZjX2NoZWNrGAcgASgJIrsECgRVc2Vy",
             "EgoKAmlkGAEgASgMEhcKD29yZ2FuaXphdGlvbl9pZBgCIAEoDBINCgVlbWFp",
             "bBgDIAEoCRIMCgRuYW1lGAQgASgJEisKCHNldHRpbmdzGAUgASgLMhkudG9p",
             "dC5tb2RlbC5Vc2VyLlNldHRpbmdzEgwKBHJvbGUYBiABKAkSJQoFc3RhdGUY",
             "ByABKAsyFi50b2l0Lm1vZGVsLlVzZXIuU3RhdGUaNgoIU2V0dGluZ3MSFgoO",
-            "d2VsY29tZV9jbG9zZWQYASABKAgSEgoKbmV3c2xldHRlchgCIAEoCBq5AQoF",
+            "d2VsY29tZV9jbG9zZWQYASABKAgSEgoKbmV3c2xldHRlchgCIAEoCBrWAgoF",
             "U3RhdGUSNAoQY2xpX2luc3RhbGxlZF9hdBgBIAEoCzIaLmdvb2dsZS5wcm90",
             "b2J1Zi5UaW1lc3RhbXASOwoXdnNjb2RlX2V4dF9pbnN0YWxsZWRfYXQYAiAB",
             "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEj0KGXF1ZXN0aW9ubmFp",
             "cmVfYW5zd2VyZWRfYXQYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wImsKBkFQSUtleRIKCgJpZBgBIAEoDBIXCg9vcmdhbml6YXRpb25faWQY",
-            "AiABKAwSDAoEbmFtZRgDIAEoCRIuCgpjcmVhdGVkX2F0GAQgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcCIvCgRUaWVyIicKBFR5cGUSCwoHVU5L",
-            "Tk9XThAAEggKBEZSRUUQARIICgRQQUlEEAIiPQoIQ3VzdG9tZXIiMQoEVHlw",
-            "ZRILCgdVTktOT1dOEAASCgoGUEVSU09OEAESEAoMT1JHQU5JWkFUSU9OEAJC",
-            "awoYaW8udG9pdC5wcm90by50b2l0Lm1vZGVsQhFPcmdhbml6YXRpb25Qcm90",
-            "b1opZ2l0aHViLmNvbS90b2l0d2FyZS9hcGkvZ29sYW5nL3RvaXQvbW9kZWyq",
-            "AhBUb2l0LlByb3RvLk1vZGVsYgZwcm90bzM="));
+            "YW1wEjMKD2RlcGxveWVkX2FwcF9hdBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXASLwoLcmFuX2NvZGVfYXQYBSABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wEjUKEWNsYWltZWRfZGV2aWNlX2F0GAYgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCJrCgZBUElLZXkSCgoCaWQYASAB",
+            "KAwSFwoPb3JnYW5pemF0aW9uX2lkGAIgASgMEgwKBG5hbWUYAyABKAkSLgoK",
+            "Y3JlYXRlZF9hdBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAi",
+            "LwoEVGllciInCgRUeXBlEgsKB1VOS05PV04QABIICgRGUkVFEAESCAoEUEFJ",
+            "RBACIj0KCEN1c3RvbWVyIjEKBFR5cGUSCwoHVU5LTk9XThAAEgoKBlBFUlNP",
+            "ThABEhAKDE9SR0FOSVpBVElPThACQmsKGGlvLnRvaXQucHJvdG8udG9pdC5t",
+            "b2RlbEIRT3JnYW5pemF0aW9uUHJvdG9aKWdpdGh1Yi5jb20vdG9pdHdhcmUv",
+            "YXBpL2dvbGFuZy90b2l0L21vZGVsqgIQVG9pdC5Qcm90by5Nb2RlbGIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.Organization), global::Toit.Proto.Model.Organization.Parser, new[]{ "Id", "Name", "DefaultSdk", "Email", "City", "Country", "PhoneNumber", "CvrNumber", "Tier", "PaymentDetails", "AddressLine", "PostalCode", "VatNumber", "VatCountryCode", "Customer", "HwidQuota" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.PaymentDetails), global::Toit.Proto.Model.PaymentDetails.Parser, new[]{ "Last4", "Expiry", "ExpiryMonth", "ExpiryYear", "Brand", "CountryCode", "CvcCheck" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.User), global::Toit.Proto.Model.User.Parser, new[]{ "Id", "OrganizationId", "Email", "Name", "Settings", "Role", "State" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.User.Types.Settings), global::Toit.Proto.Model.User.Types.Settings.Parser, new[]{ "WelcomeClosed", "Newsletter" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.User.Types.State), global::Toit.Proto.Model.User.Types.State.Parser, new[]{ "CliInstalledAt", "VscodeExtInstalledAt", "QuestionnaireAnsweredAt" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.User.Types.State), global::Toit.Proto.Model.User.Types.State.Parser, new[]{ "CliInstalledAt", "VscodeExtInstalledAt", "QuestionnaireAnsweredAt", "DeployedAppAt", "RanCodeAt", "ClaimedDeviceAt" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.APIKey), global::Toit.Proto.Model.APIKey.Parser, new[]{ "Id", "OrganizationId", "Name", "CreatedAt" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.Tier), global::Toit.Proto.Model.Tier.Parser, null, null, new[]{ typeof(global::Toit.Proto.Model.Tier.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.Customer), global::Toit.Proto.Model.Customer.Parser, null, null, new[]{ typeof(global::Toit.Proto.Model.Customer.Types.Type) }, null, null)
@@ -1936,6 +1940,9 @@ namespace Toit.Proto.Model {
           cliInstalledAt_ = other.cliInstalledAt_ != null ? other.cliInstalledAt_.Clone() : null;
           vscodeExtInstalledAt_ = other.vscodeExtInstalledAt_ != null ? other.vscodeExtInstalledAt_.Clone() : null;
           questionnaireAnsweredAt_ = other.questionnaireAnsweredAt_ != null ? other.questionnaireAnsweredAt_.Clone() : null;
+          deployedAppAt_ = other.deployedAppAt_ != null ? other.deployedAppAt_.Clone() : null;
+          ranCodeAt_ = other.ranCodeAt_ != null ? other.ranCodeAt_.Clone() : null;
+          claimedDeviceAt_ = other.claimedDeviceAt_ != null ? other.claimedDeviceAt_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1981,6 +1988,42 @@ namespace Toit.Proto.Model {
           }
         }
 
+        /// <summary>Field number for the "deployed_app_at" field.</summary>
+        public const int DeployedAppAtFieldNumber = 4;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp deployedAppAt_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp DeployedAppAt {
+          get { return deployedAppAt_; }
+          set {
+            deployedAppAt_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "ran_code_at" field.</summary>
+        public const int RanCodeAtFieldNumber = 5;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp ranCodeAt_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp RanCodeAt {
+          get { return ranCodeAt_; }
+          set {
+            ranCodeAt_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "claimed_device_at" field.</summary>
+        public const int ClaimedDeviceAtFieldNumber = 6;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp claimedDeviceAt_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp ClaimedDeviceAt {
+          get { return claimedDeviceAt_; }
+          set {
+            claimedDeviceAt_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -1999,6 +2042,9 @@ namespace Toit.Proto.Model {
           if (!object.Equals(CliInstalledAt, other.CliInstalledAt)) return false;
           if (!object.Equals(VscodeExtInstalledAt, other.VscodeExtInstalledAt)) return false;
           if (!object.Equals(QuestionnaireAnsweredAt, other.QuestionnaireAnsweredAt)) return false;
+          if (!object.Equals(DeployedAppAt, other.DeployedAppAt)) return false;
+          if (!object.Equals(RanCodeAt, other.RanCodeAt)) return false;
+          if (!object.Equals(ClaimedDeviceAt, other.ClaimedDeviceAt)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -2009,6 +2055,9 @@ namespace Toit.Proto.Model {
           if (cliInstalledAt_ != null) hash ^= CliInstalledAt.GetHashCode();
           if (vscodeExtInstalledAt_ != null) hash ^= VscodeExtInstalledAt.GetHashCode();
           if (questionnaireAnsweredAt_ != null) hash ^= QuestionnaireAnsweredAt.GetHashCode();
+          if (deployedAppAt_ != null) hash ^= DeployedAppAt.GetHashCode();
+          if (ranCodeAt_ != null) hash ^= RanCodeAt.GetHashCode();
+          if (claimedDeviceAt_ != null) hash ^= ClaimedDeviceAt.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -2039,6 +2088,18 @@ namespace Toit.Proto.Model {
             output.WriteRawTag(26);
             output.WriteMessage(QuestionnaireAnsweredAt);
           }
+          if (deployedAppAt_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(DeployedAppAt);
+          }
+          if (ranCodeAt_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(RanCodeAt);
+          }
+          if (claimedDeviceAt_ != null) {
+            output.WriteRawTag(50);
+            output.WriteMessage(ClaimedDeviceAt);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -2061,6 +2122,18 @@ namespace Toit.Proto.Model {
             output.WriteRawTag(26);
             output.WriteMessage(QuestionnaireAnsweredAt);
           }
+          if (deployedAppAt_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(DeployedAppAt);
+          }
+          if (ranCodeAt_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(RanCodeAt);
+          }
+          if (claimedDeviceAt_ != null) {
+            output.WriteRawTag(50);
+            output.WriteMessage(ClaimedDeviceAt);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -2079,6 +2152,15 @@ namespace Toit.Proto.Model {
           }
           if (questionnaireAnsweredAt_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(QuestionnaireAnsweredAt);
+          }
+          if (deployedAppAt_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeployedAppAt);
+          }
+          if (ranCodeAt_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(RanCodeAt);
+          }
+          if (claimedDeviceAt_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ClaimedDeviceAt);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -2109,6 +2191,24 @@ namespace Toit.Proto.Model {
               QuestionnaireAnsweredAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             QuestionnaireAnsweredAt.MergeFrom(other.QuestionnaireAnsweredAt);
+          }
+          if (other.deployedAppAt_ != null) {
+            if (deployedAppAt_ == null) {
+              DeployedAppAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            DeployedAppAt.MergeFrom(other.DeployedAppAt);
+          }
+          if (other.ranCodeAt_ != null) {
+            if (ranCodeAt_ == null) {
+              RanCodeAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            RanCodeAt.MergeFrom(other.RanCodeAt);
+          }
+          if (other.claimedDeviceAt_ != null) {
+            if (claimedDeviceAt_ == null) {
+              ClaimedDeviceAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            ClaimedDeviceAt.MergeFrom(other.ClaimedDeviceAt);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -2146,6 +2246,27 @@ namespace Toit.Proto.Model {
                 input.ReadMessage(QuestionnaireAnsweredAt);
                 break;
               }
+              case 34: {
+                if (deployedAppAt_ == null) {
+                  DeployedAppAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(DeployedAppAt);
+                break;
+              }
+              case 42: {
+                if (ranCodeAt_ == null) {
+                  RanCodeAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(RanCodeAt);
+                break;
+              }
+              case 50: {
+                if (claimedDeviceAt_ == null) {
+                  ClaimedDeviceAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(ClaimedDeviceAt);
+                break;
+              }
             }
           }
         #endif
@@ -2180,6 +2301,27 @@ namespace Toit.Proto.Model {
                   QuestionnaireAnsweredAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
                 }
                 input.ReadMessage(QuestionnaireAnsweredAt);
+                break;
+              }
+              case 34: {
+                if (deployedAppAt_ == null) {
+                  DeployedAppAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(DeployedAppAt);
+                break;
+              }
+              case 42: {
+                if (ranCodeAt_ == null) {
+                  RanCodeAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(RanCodeAt);
+                break;
+              }
+              case 50: {
+                if (claimedDeviceAt_ == null) {
+                  ClaimedDeviceAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(ClaimedDeviceAt);
                 break;
               }
             }
