@@ -4959,6 +4959,51 @@ public final class OrganizationProto {
        * <code>.google.protobuf.Timestamp questionnaire_answered_at = 3;</code>
        */
       com.google.protobuf.TimestampOrBuilder getQuestionnaireAnsweredAtOrBuilder();
+
+      /**
+       * <code>.google.protobuf.Timestamp deployed_app_at = 4;</code>
+       * @return Whether the deployedAppAt field is set.
+       */
+      boolean hasDeployedAppAt();
+      /**
+       * <code>.google.protobuf.Timestamp deployed_app_at = 4;</code>
+       * @return The deployedAppAt.
+       */
+      com.google.protobuf.Timestamp getDeployedAppAt();
+      /**
+       * <code>.google.protobuf.Timestamp deployed_app_at = 4;</code>
+       */
+      com.google.protobuf.TimestampOrBuilder getDeployedAppAtOrBuilder();
+
+      /**
+       * <code>.google.protobuf.Timestamp ran_code_at = 5;</code>
+       * @return Whether the ranCodeAt field is set.
+       */
+      boolean hasRanCodeAt();
+      /**
+       * <code>.google.protobuf.Timestamp ran_code_at = 5;</code>
+       * @return The ranCodeAt.
+       */
+      com.google.protobuf.Timestamp getRanCodeAt();
+      /**
+       * <code>.google.protobuf.Timestamp ran_code_at = 5;</code>
+       */
+      com.google.protobuf.TimestampOrBuilder getRanCodeAtOrBuilder();
+
+      /**
+       * <code>.google.protobuf.Timestamp claimed_device_at = 6;</code>
+       * @return Whether the claimedDeviceAt field is set.
+       */
+      boolean hasClaimedDeviceAt();
+      /**
+       * <code>.google.protobuf.Timestamp claimed_device_at = 6;</code>
+       * @return The claimedDeviceAt.
+       */
+      com.google.protobuf.Timestamp getClaimedDeviceAt();
+      /**
+       * <code>.google.protobuf.Timestamp claimed_device_at = 6;</code>
+       */
+      com.google.protobuf.TimestampOrBuilder getClaimedDeviceAtOrBuilder();
     }
     /**
      * Protobuf type {@code toit.model.User.State}
@@ -5040,6 +5085,45 @@ public final class OrganizationProto {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(questionnaireAnsweredAt_);
                   questionnaireAnsweredAt_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 34: {
+                com.google.protobuf.Timestamp.Builder subBuilder = null;
+                if (deployedAppAt_ != null) {
+                  subBuilder = deployedAppAt_.toBuilder();
+                }
+                deployedAppAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(deployedAppAt_);
+                  deployedAppAt_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 42: {
+                com.google.protobuf.Timestamp.Builder subBuilder = null;
+                if (ranCodeAt_ != null) {
+                  subBuilder = ranCodeAt_.toBuilder();
+                }
+                ranCodeAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(ranCodeAt_);
+                  ranCodeAt_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 50: {
+                com.google.protobuf.Timestamp.Builder subBuilder = null;
+                if (claimedDeviceAt_ != null) {
+                  subBuilder = claimedDeviceAt_.toBuilder();
+                }
+                claimedDeviceAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(claimedDeviceAt_);
+                  claimedDeviceAt_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -5145,6 +5229,75 @@ public final class OrganizationProto {
         return getQuestionnaireAnsweredAt();
       }
 
+      public static final int DEPLOYED_APP_AT_FIELD_NUMBER = 4;
+      private com.google.protobuf.Timestamp deployedAppAt_;
+      /**
+       * <code>.google.protobuf.Timestamp deployed_app_at = 4;</code>
+       * @return Whether the deployedAppAt field is set.
+       */
+      public boolean hasDeployedAppAt() {
+        return deployedAppAt_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp deployed_app_at = 4;</code>
+       * @return The deployedAppAt.
+       */
+      public com.google.protobuf.Timestamp getDeployedAppAt() {
+        return deployedAppAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deployedAppAt_;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp deployed_app_at = 4;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getDeployedAppAtOrBuilder() {
+        return getDeployedAppAt();
+      }
+
+      public static final int RAN_CODE_AT_FIELD_NUMBER = 5;
+      private com.google.protobuf.Timestamp ranCodeAt_;
+      /**
+       * <code>.google.protobuf.Timestamp ran_code_at = 5;</code>
+       * @return Whether the ranCodeAt field is set.
+       */
+      public boolean hasRanCodeAt() {
+        return ranCodeAt_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp ran_code_at = 5;</code>
+       * @return The ranCodeAt.
+       */
+      public com.google.protobuf.Timestamp getRanCodeAt() {
+        return ranCodeAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : ranCodeAt_;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp ran_code_at = 5;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getRanCodeAtOrBuilder() {
+        return getRanCodeAt();
+      }
+
+      public static final int CLAIMED_DEVICE_AT_FIELD_NUMBER = 6;
+      private com.google.protobuf.Timestamp claimedDeviceAt_;
+      /**
+       * <code>.google.protobuf.Timestamp claimed_device_at = 6;</code>
+       * @return Whether the claimedDeviceAt field is set.
+       */
+      public boolean hasClaimedDeviceAt() {
+        return claimedDeviceAt_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp claimed_device_at = 6;</code>
+       * @return The claimedDeviceAt.
+       */
+      public com.google.protobuf.Timestamp getClaimedDeviceAt() {
+        return claimedDeviceAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : claimedDeviceAt_;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp claimed_device_at = 6;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getClaimedDeviceAtOrBuilder() {
+        return getClaimedDeviceAt();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -5168,6 +5321,15 @@ public final class OrganizationProto {
         if (questionnaireAnsweredAt_ != null) {
           output.writeMessage(3, getQuestionnaireAnsweredAt());
         }
+        if (deployedAppAt_ != null) {
+          output.writeMessage(4, getDeployedAppAt());
+        }
+        if (ranCodeAt_ != null) {
+          output.writeMessage(5, getRanCodeAt());
+        }
+        if (claimedDeviceAt_ != null) {
+          output.writeMessage(6, getClaimedDeviceAt());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -5188,6 +5350,18 @@ public final class OrganizationProto {
         if (questionnaireAnsweredAt_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(3, getQuestionnaireAnsweredAt());
+        }
+        if (deployedAppAt_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, getDeployedAppAt());
+        }
+        if (ranCodeAt_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(5, getRanCodeAt());
+        }
+        if (claimedDeviceAt_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(6, getClaimedDeviceAt());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -5219,6 +5393,21 @@ public final class OrganizationProto {
           if (!getQuestionnaireAnsweredAt()
               .equals(other.getQuestionnaireAnsweredAt())) return false;
         }
+        if (hasDeployedAppAt() != other.hasDeployedAppAt()) return false;
+        if (hasDeployedAppAt()) {
+          if (!getDeployedAppAt()
+              .equals(other.getDeployedAppAt())) return false;
+        }
+        if (hasRanCodeAt() != other.hasRanCodeAt()) return false;
+        if (hasRanCodeAt()) {
+          if (!getRanCodeAt()
+              .equals(other.getRanCodeAt())) return false;
+        }
+        if (hasClaimedDeviceAt() != other.hasClaimedDeviceAt()) return false;
+        if (hasClaimedDeviceAt()) {
+          if (!getClaimedDeviceAt()
+              .equals(other.getClaimedDeviceAt())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -5241,6 +5430,18 @@ public final class OrganizationProto {
         if (hasQuestionnaireAnsweredAt()) {
           hash = (37 * hash) + QUESTIONNAIRE_ANSWERED_AT_FIELD_NUMBER;
           hash = (53 * hash) + getQuestionnaireAnsweredAt().hashCode();
+        }
+        if (hasDeployedAppAt()) {
+          hash = (37 * hash) + DEPLOYED_APP_AT_FIELD_NUMBER;
+          hash = (53 * hash) + getDeployedAppAt().hashCode();
+        }
+        if (hasRanCodeAt()) {
+          hash = (37 * hash) + RAN_CODE_AT_FIELD_NUMBER;
+          hash = (53 * hash) + getRanCodeAt().hashCode();
+        }
+        if (hasClaimedDeviceAt()) {
+          hash = (37 * hash) + CLAIMED_DEVICE_AT_FIELD_NUMBER;
+          hash = (53 * hash) + getClaimedDeviceAt().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -5393,6 +5594,24 @@ public final class OrganizationProto {
             questionnaireAnsweredAt_ = null;
             questionnaireAnsweredAtBuilder_ = null;
           }
+          if (deployedAppAtBuilder_ == null) {
+            deployedAppAt_ = null;
+          } else {
+            deployedAppAt_ = null;
+            deployedAppAtBuilder_ = null;
+          }
+          if (ranCodeAtBuilder_ == null) {
+            ranCodeAt_ = null;
+          } else {
+            ranCodeAt_ = null;
+            ranCodeAtBuilder_ = null;
+          }
+          if (claimedDeviceAtBuilder_ == null) {
+            claimedDeviceAt_ = null;
+          } else {
+            claimedDeviceAt_ = null;
+            claimedDeviceAtBuilder_ = null;
+          }
           return this;
         }
 
@@ -5433,6 +5652,21 @@ public final class OrganizationProto {
             result.questionnaireAnsweredAt_ = questionnaireAnsweredAt_;
           } else {
             result.questionnaireAnsweredAt_ = questionnaireAnsweredAtBuilder_.build();
+          }
+          if (deployedAppAtBuilder_ == null) {
+            result.deployedAppAt_ = deployedAppAt_;
+          } else {
+            result.deployedAppAt_ = deployedAppAtBuilder_.build();
+          }
+          if (ranCodeAtBuilder_ == null) {
+            result.ranCodeAt_ = ranCodeAt_;
+          } else {
+            result.ranCodeAt_ = ranCodeAtBuilder_.build();
+          }
+          if (claimedDeviceAtBuilder_ == null) {
+            result.claimedDeviceAt_ = claimedDeviceAt_;
+          } else {
+            result.claimedDeviceAt_ = claimedDeviceAtBuilder_.build();
           }
           onBuilt();
           return result;
@@ -5490,6 +5724,15 @@ public final class OrganizationProto {
           }
           if (other.hasQuestionnaireAnsweredAt()) {
             mergeQuestionnaireAnsweredAt(other.getQuestionnaireAnsweredAt());
+          }
+          if (other.hasDeployedAppAt()) {
+            mergeDeployedAppAt(other.getDeployedAppAt());
+          }
+          if (other.hasRanCodeAt()) {
+            mergeRanCodeAt(other.getRanCodeAt());
+          }
+          if (other.hasClaimedDeviceAt()) {
+            mergeClaimedDeviceAt(other.getClaimedDeviceAt());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -5875,6 +6118,363 @@ public final class OrganizationProto {
             questionnaireAnsweredAt_ = null;
           }
           return questionnaireAnsweredAtBuilder_;
+        }
+
+        private com.google.protobuf.Timestamp deployedAppAt_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> deployedAppAtBuilder_;
+        /**
+         * <code>.google.protobuf.Timestamp deployed_app_at = 4;</code>
+         * @return Whether the deployedAppAt field is set.
+         */
+        public boolean hasDeployedAppAt() {
+          return deployedAppAtBuilder_ != null || deployedAppAt_ != null;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp deployed_app_at = 4;</code>
+         * @return The deployedAppAt.
+         */
+        public com.google.protobuf.Timestamp getDeployedAppAt() {
+          if (deployedAppAtBuilder_ == null) {
+            return deployedAppAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deployedAppAt_;
+          } else {
+            return deployedAppAtBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>.google.protobuf.Timestamp deployed_app_at = 4;</code>
+         */
+        public Builder setDeployedAppAt(com.google.protobuf.Timestamp value) {
+          if (deployedAppAtBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            deployedAppAt_ = value;
+            onChanged();
+          } else {
+            deployedAppAtBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp deployed_app_at = 4;</code>
+         */
+        public Builder setDeployedAppAt(
+            com.google.protobuf.Timestamp.Builder builderForValue) {
+          if (deployedAppAtBuilder_ == null) {
+            deployedAppAt_ = builderForValue.build();
+            onChanged();
+          } else {
+            deployedAppAtBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp deployed_app_at = 4;</code>
+         */
+        public Builder mergeDeployedAppAt(com.google.protobuf.Timestamp value) {
+          if (deployedAppAtBuilder_ == null) {
+            if (deployedAppAt_ != null) {
+              deployedAppAt_ =
+                com.google.protobuf.Timestamp.newBuilder(deployedAppAt_).mergeFrom(value).buildPartial();
+            } else {
+              deployedAppAt_ = value;
+            }
+            onChanged();
+          } else {
+            deployedAppAtBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp deployed_app_at = 4;</code>
+         */
+        public Builder clearDeployedAppAt() {
+          if (deployedAppAtBuilder_ == null) {
+            deployedAppAt_ = null;
+            onChanged();
+          } else {
+            deployedAppAt_ = null;
+            deployedAppAtBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp deployed_app_at = 4;</code>
+         */
+        public com.google.protobuf.Timestamp.Builder getDeployedAppAtBuilder() {
+          
+          onChanged();
+          return getDeployedAppAtFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.google.protobuf.Timestamp deployed_app_at = 4;</code>
+         */
+        public com.google.protobuf.TimestampOrBuilder getDeployedAppAtOrBuilder() {
+          if (deployedAppAtBuilder_ != null) {
+            return deployedAppAtBuilder_.getMessageOrBuilder();
+          } else {
+            return deployedAppAt_ == null ?
+                com.google.protobuf.Timestamp.getDefaultInstance() : deployedAppAt_;
+          }
+        }
+        /**
+         * <code>.google.protobuf.Timestamp deployed_app_at = 4;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+            getDeployedAppAtFieldBuilder() {
+          if (deployedAppAtBuilder_ == null) {
+            deployedAppAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                    getDeployedAppAt(),
+                    getParentForChildren(),
+                    isClean());
+            deployedAppAt_ = null;
+          }
+          return deployedAppAtBuilder_;
+        }
+
+        private com.google.protobuf.Timestamp ranCodeAt_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> ranCodeAtBuilder_;
+        /**
+         * <code>.google.protobuf.Timestamp ran_code_at = 5;</code>
+         * @return Whether the ranCodeAt field is set.
+         */
+        public boolean hasRanCodeAt() {
+          return ranCodeAtBuilder_ != null || ranCodeAt_ != null;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp ran_code_at = 5;</code>
+         * @return The ranCodeAt.
+         */
+        public com.google.protobuf.Timestamp getRanCodeAt() {
+          if (ranCodeAtBuilder_ == null) {
+            return ranCodeAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : ranCodeAt_;
+          } else {
+            return ranCodeAtBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>.google.protobuf.Timestamp ran_code_at = 5;</code>
+         */
+        public Builder setRanCodeAt(com.google.protobuf.Timestamp value) {
+          if (ranCodeAtBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ranCodeAt_ = value;
+            onChanged();
+          } else {
+            ranCodeAtBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp ran_code_at = 5;</code>
+         */
+        public Builder setRanCodeAt(
+            com.google.protobuf.Timestamp.Builder builderForValue) {
+          if (ranCodeAtBuilder_ == null) {
+            ranCodeAt_ = builderForValue.build();
+            onChanged();
+          } else {
+            ranCodeAtBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp ran_code_at = 5;</code>
+         */
+        public Builder mergeRanCodeAt(com.google.protobuf.Timestamp value) {
+          if (ranCodeAtBuilder_ == null) {
+            if (ranCodeAt_ != null) {
+              ranCodeAt_ =
+                com.google.protobuf.Timestamp.newBuilder(ranCodeAt_).mergeFrom(value).buildPartial();
+            } else {
+              ranCodeAt_ = value;
+            }
+            onChanged();
+          } else {
+            ranCodeAtBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp ran_code_at = 5;</code>
+         */
+        public Builder clearRanCodeAt() {
+          if (ranCodeAtBuilder_ == null) {
+            ranCodeAt_ = null;
+            onChanged();
+          } else {
+            ranCodeAt_ = null;
+            ranCodeAtBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp ran_code_at = 5;</code>
+         */
+        public com.google.protobuf.Timestamp.Builder getRanCodeAtBuilder() {
+          
+          onChanged();
+          return getRanCodeAtFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.google.protobuf.Timestamp ran_code_at = 5;</code>
+         */
+        public com.google.protobuf.TimestampOrBuilder getRanCodeAtOrBuilder() {
+          if (ranCodeAtBuilder_ != null) {
+            return ranCodeAtBuilder_.getMessageOrBuilder();
+          } else {
+            return ranCodeAt_ == null ?
+                com.google.protobuf.Timestamp.getDefaultInstance() : ranCodeAt_;
+          }
+        }
+        /**
+         * <code>.google.protobuf.Timestamp ran_code_at = 5;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+            getRanCodeAtFieldBuilder() {
+          if (ranCodeAtBuilder_ == null) {
+            ranCodeAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                    getRanCodeAt(),
+                    getParentForChildren(),
+                    isClean());
+            ranCodeAt_ = null;
+          }
+          return ranCodeAtBuilder_;
+        }
+
+        private com.google.protobuf.Timestamp claimedDeviceAt_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> claimedDeviceAtBuilder_;
+        /**
+         * <code>.google.protobuf.Timestamp claimed_device_at = 6;</code>
+         * @return Whether the claimedDeviceAt field is set.
+         */
+        public boolean hasClaimedDeviceAt() {
+          return claimedDeviceAtBuilder_ != null || claimedDeviceAt_ != null;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp claimed_device_at = 6;</code>
+         * @return The claimedDeviceAt.
+         */
+        public com.google.protobuf.Timestamp getClaimedDeviceAt() {
+          if (claimedDeviceAtBuilder_ == null) {
+            return claimedDeviceAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : claimedDeviceAt_;
+          } else {
+            return claimedDeviceAtBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>.google.protobuf.Timestamp claimed_device_at = 6;</code>
+         */
+        public Builder setClaimedDeviceAt(com.google.protobuf.Timestamp value) {
+          if (claimedDeviceAtBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            claimedDeviceAt_ = value;
+            onChanged();
+          } else {
+            claimedDeviceAtBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp claimed_device_at = 6;</code>
+         */
+        public Builder setClaimedDeviceAt(
+            com.google.protobuf.Timestamp.Builder builderForValue) {
+          if (claimedDeviceAtBuilder_ == null) {
+            claimedDeviceAt_ = builderForValue.build();
+            onChanged();
+          } else {
+            claimedDeviceAtBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp claimed_device_at = 6;</code>
+         */
+        public Builder mergeClaimedDeviceAt(com.google.protobuf.Timestamp value) {
+          if (claimedDeviceAtBuilder_ == null) {
+            if (claimedDeviceAt_ != null) {
+              claimedDeviceAt_ =
+                com.google.protobuf.Timestamp.newBuilder(claimedDeviceAt_).mergeFrom(value).buildPartial();
+            } else {
+              claimedDeviceAt_ = value;
+            }
+            onChanged();
+          } else {
+            claimedDeviceAtBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp claimed_device_at = 6;</code>
+         */
+        public Builder clearClaimedDeviceAt() {
+          if (claimedDeviceAtBuilder_ == null) {
+            claimedDeviceAt_ = null;
+            onChanged();
+          } else {
+            claimedDeviceAt_ = null;
+            claimedDeviceAtBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp claimed_device_at = 6;</code>
+         */
+        public com.google.protobuf.Timestamp.Builder getClaimedDeviceAtBuilder() {
+          
+          onChanged();
+          return getClaimedDeviceAtFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.google.protobuf.Timestamp claimed_device_at = 6;</code>
+         */
+        public com.google.protobuf.TimestampOrBuilder getClaimedDeviceAtOrBuilder() {
+          if (claimedDeviceAtBuilder_ != null) {
+            return claimedDeviceAtBuilder_.getMessageOrBuilder();
+          } else {
+            return claimedDeviceAt_ == null ?
+                com.google.protobuf.Timestamp.getDefaultInstance() : claimedDeviceAt_;
+          }
+        }
+        /**
+         * <code>.google.protobuf.Timestamp claimed_device_at = 6;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+            getClaimedDeviceAtFieldBuilder() {
+          if (claimedDeviceAtBuilder_ == null) {
+            claimedDeviceAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                    getClaimedDeviceAt(),
+                    getParentForChildren(),
+                    isClean());
+            claimedDeviceAt_ = null;
+          }
+          return claimedDeviceAtBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -9153,26 +9753,30 @@ public final class OrganizationProto {
       "mentDetails\022\r\n\005last4\030\001 \001(\t\022\016\n\006expiry\030\002 \001" +
       "(\t\022\024\n\014expiry_month\030\003 \001(\t\022\023\n\013expiry_year\030" +
       "\004 \001(\t\022\r\n\005brand\030\005 \001(\t\022\024\n\014country_code\030\006 \001" +
-      "(\t\022\021\n\tcvc_check\030\007 \001(\t\"\236\003\n\004User\022\n\n\002id\030\001 \001" +
+      "(\t\022\021\n\tcvc_check\030\007 \001(\t\"\273\004\n\004User\022\n\n\002id\030\001 \001" +
       "(\014\022\027\n\017organization_id\030\002 \001(\014\022\r\n\005email\030\003 \001" +
       "(\t\022\014\n\004name\030\004 \001(\t\022+\n\010settings\030\005 \001(\0132\031.toi" +
       "t.model.User.Settings\022\014\n\004role\030\006 \001(\t\022%\n\005s" +
       "tate\030\007 \001(\0132\026.toit.model.User.State\0326\n\010Se" +
       "ttings\022\026\n\016welcome_closed\030\001 \001(\010\022\022\n\nnewsle" +
-      "tter\030\002 \001(\010\032\271\001\n\005State\0224\n\020cli_installed_at" +
+      "tter\030\002 \001(\010\032\326\002\n\005State\0224\n\020cli_installed_at" +
       "\030\001 \001(\0132\032.google.protobuf.Timestamp\022;\n\027vs" +
       "code_ext_installed_at\030\002 \001(\0132\032.google.pro" +
       "tobuf.Timestamp\022=\n\031questionnaire_answere" +
-      "d_at\030\003 \001(\0132\032.google.protobuf.Timestamp\"k" +
-      "\n\006APIKey\022\n\n\002id\030\001 \001(\014\022\027\n\017organization_id\030" +
-      "\002 \001(\014\022\014\n\004name\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132" +
-      "\032.google.protobuf.Timestamp\"/\n\004Tier\"\'\n\004T" +
-      "ype\022\013\n\007UNKNOWN\020\000\022\010\n\004FREE\020\001\022\010\n\004PAID\020\002\"=\n\010" +
-      "Customer\"1\n\004Type\022\013\n\007UNKNOWN\020\000\022\n\n\006PERSON\020" +
-      "\001\022\020\n\014ORGANIZATION\020\002Bk\n\030io.toit.proto.toi" +
-      "t.modelB\021OrganizationProtoZ)github.com/t" +
-      "oitware/api/golang/toit/model\252\002\020Toit.Pro" +
-      "to.Modelb\006proto3"
+      "d_at\030\003 \001(\0132\032.google.protobuf.Timestamp\0223" +
+      "\n\017deployed_app_at\030\004 \001(\0132\032.google.protobu" +
+      "f.Timestamp\022/\n\013ran_code_at\030\005 \001(\0132\032.googl" +
+      "e.protobuf.Timestamp\0225\n\021claimed_device_a" +
+      "t\030\006 \001(\0132\032.google.protobuf.Timestamp\"k\n\006A" +
+      "PIKey\022\n\n\002id\030\001 \001(\014\022\027\n\017organization_id\030\002 \001" +
+      "(\014\022\014\n\004name\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132\032.g" +
+      "oogle.protobuf.Timestamp\"/\n\004Tier\"\'\n\004Type" +
+      "\022\013\n\007UNKNOWN\020\000\022\010\n\004FREE\020\001\022\010\n\004PAID\020\002\"=\n\010Cus" +
+      "tomer\"1\n\004Type\022\013\n\007UNKNOWN\020\000\022\n\n\006PERSON\020\001\022\020" +
+      "\n\014ORGANIZATION\020\002Bk\n\030io.toit.proto.toit.m" +
+      "odelB\021OrganizationProtoZ)github.com/toit" +
+      "ware/api/golang/toit/model\252\002\020Toit.Proto." +
+      "Modelb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9208,7 +9812,7 @@ public final class OrganizationProto {
     internal_static_toit_model_User_State_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_User_State_descriptor,
-        new java.lang.String[] { "CliInstalledAt", "VscodeExtInstalledAt", "QuestionnaireAnsweredAt", });
+        new java.lang.String[] { "CliInstalledAt", "VscodeExtInstalledAt", "QuestionnaireAnsweredAt", "DeployedAppAt", "RanCodeAt", "ClaimedDeviceAt", });
     internal_static_toit_model_APIKey_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_toit_model_APIKey_fieldAccessorTable = new
