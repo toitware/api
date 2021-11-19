@@ -613,16 +613,14 @@ class User_Settings extends $pb.GeneratedMessage {
 }
 
 class User_State extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'User.State',
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'User.State',
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
               : 'toit.model'),
       createEmptyInstance: create)
-    ..aOM<$0.Timestamp>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cliInstalledAt',
+    ..aOM<$0.Timestamp>(
+        1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cliInstalledAt',
         subBuilder: $0.Timestamp.create)
     ..aOM<$0.Timestamp>(
         2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'vscodeExtInstalledAt',
@@ -630,6 +628,11 @@ class User_State extends $pb.GeneratedMessage {
     ..aOM<$0.Timestamp>(
         3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'questionnaireAnsweredAt',
         subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(
+        4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'deployedAppAt',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ranCodeAt', subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'claimedDeviceAt', subBuilder: $0.Timestamp.create)
     ..hasRequiredFields = false;
 
   User_State._() : super();
@@ -637,6 +640,9 @@ class User_State extends $pb.GeneratedMessage {
     $0.Timestamp? cliInstalledAt,
     $0.Timestamp? vscodeExtInstalledAt,
     $0.Timestamp? questionnaireAnsweredAt,
+    $0.Timestamp? deployedAppAt,
+    $0.Timestamp? ranCodeAt,
+    $0.Timestamp? claimedDeviceAt,
   }) {
     final _result = create();
     if (cliInstalledAt != null) {
@@ -647,6 +653,15 @@ class User_State extends $pb.GeneratedMessage {
     }
     if (questionnaireAnsweredAt != null) {
       _result.questionnaireAnsweredAt = questionnaireAnsweredAt;
+    }
+    if (deployedAppAt != null) {
+      _result.deployedAppAt = deployedAppAt;
+    }
+    if (ranCodeAt != null) {
+      _result.ranCodeAt = ranCodeAt;
+    }
+    if (claimedDeviceAt != null) {
+      _result.claimedDeviceAt = claimedDeviceAt;
     }
     return _result;
   }
@@ -717,6 +732,48 @@ class User_State extends $pb.GeneratedMessage {
   void clearQuestionnaireAnsweredAt() => clearField(3);
   @$pb.TagNumber(3)
   $0.Timestamp ensureQuestionnaireAnsweredAt() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $0.Timestamp get deployedAppAt => $_getN(3);
+  @$pb.TagNumber(4)
+  set deployedAppAt($0.Timestamp v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasDeployedAppAt() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearDeployedAppAt() => clearField(4);
+  @$pb.TagNumber(4)
+  $0.Timestamp ensureDeployedAppAt() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  $0.Timestamp get ranCodeAt => $_getN(4);
+  @$pb.TagNumber(5)
+  set ranCodeAt($0.Timestamp v) {
+    setField(5, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasRanCodeAt() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearRanCodeAt() => clearField(5);
+  @$pb.TagNumber(5)
+  $0.Timestamp ensureRanCodeAt() => $_ensure(4);
+
+  @$pb.TagNumber(6)
+  $0.Timestamp get claimedDeviceAt => $_getN(5);
+  @$pb.TagNumber(6)
+  set claimedDeviceAt($0.Timestamp v) {
+    setField(6, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasClaimedDeviceAt() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearClaimedDeviceAt() => clearField(6);
+  @$pb.TagNumber(6)
+  $0.Timestamp ensureClaimedDeviceAt() => $_ensure(5);
 }
 
 class User extends $pb.GeneratedMessage {
