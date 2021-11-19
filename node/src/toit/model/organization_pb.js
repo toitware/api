@@ -1509,7 +1509,10 @@ proto.toit.model.User.State.toObject = function(includeInstance, msg) {
   var f, obj = {
     cliInstalledAt: (f = msg.getCliInstalledAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
     vscodeExtInstalledAt: (f = msg.getVscodeExtInstalledAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
-    questionnaireAnsweredAt: (f = msg.getQuestionnaireAnsweredAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f)
+    questionnaireAnsweredAt: (f = msg.getQuestionnaireAnsweredAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
+    deployedAppAt: (f = msg.getDeployedAppAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
+    ranCodeAt: (f = msg.getRanCodeAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
+    claimedDeviceAt: (f = msg.getClaimedDeviceAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1561,6 +1564,21 @@ proto.toit.model.User.State.deserializeBinaryFromReader = function(msg, reader) 
       reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
       msg.setQuestionnaireAnsweredAt(value);
       break;
+    case 4:
+      var value = new google_protobuf_timestamp_pb.Timestamp;
+      reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
+      msg.setDeployedAppAt(value);
+      break;
+    case 5:
+      var value = new google_protobuf_timestamp_pb.Timestamp;
+      reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
+      msg.setRanCodeAt(value);
+      break;
+    case 6:
+      var value = new google_protobuf_timestamp_pb.Timestamp;
+      reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
+      msg.setClaimedDeviceAt(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -1610,6 +1628,30 @@ proto.toit.model.User.State.serializeBinaryToWriter = function(message, writer) 
   if (f != null) {
     writer.writeMessage(
       3,
+      f,
+      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
+    );
+  }
+  f = message.getDeployedAppAt();
+  if (f != null) {
+    writer.writeMessage(
+      4,
+      f,
+      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
+    );
+  }
+  f = message.getRanCodeAt();
+  if (f != null) {
+    writer.writeMessage(
+      5,
+      f,
+      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
+    );
+  }
+  f = message.getClaimedDeviceAt();
+  if (f != null) {
+    writer.writeMessage(
+      6,
       f,
       google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
     );
@@ -1725,6 +1767,117 @@ proto.toit.model.User.State.prototype.clearQuestionnaireAnsweredAt = function() 
  */
 proto.toit.model.User.State.prototype.hasQuestionnaireAnsweredAt = function() {
   return jspb.Message.getField(this, 3) != null;
+};
+
+
+/**
+ * optional google.protobuf.Timestamp deployed_app_at = 4;
+ * @return {?proto.google.protobuf.Timestamp}
+ */
+proto.toit.model.User.State.prototype.getDeployedAppAt = function() {
+  return /** @type{?proto.google.protobuf.Timestamp} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 4));
+};
+
+
+/**
+ * @param {?proto.google.protobuf.Timestamp|undefined} value
+ * @return {!proto.toit.model.User.State} returns this
+*/
+proto.toit.model.User.State.prototype.setDeployedAppAt = function(value) {
+  return jspb.Message.setWrapperField(this, 4, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.toit.model.User.State} returns this
+ */
+proto.toit.model.User.State.prototype.clearDeployedAppAt = function() {
+  return this.setDeployedAppAt(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.toit.model.User.State.prototype.hasDeployedAppAt = function() {
+  return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional google.protobuf.Timestamp ran_code_at = 5;
+ * @return {?proto.google.protobuf.Timestamp}
+ */
+proto.toit.model.User.State.prototype.getRanCodeAt = function() {
+  return /** @type{?proto.google.protobuf.Timestamp} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 5));
+};
+
+
+/**
+ * @param {?proto.google.protobuf.Timestamp|undefined} value
+ * @return {!proto.toit.model.User.State} returns this
+*/
+proto.toit.model.User.State.prototype.setRanCodeAt = function(value) {
+  return jspb.Message.setWrapperField(this, 5, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.toit.model.User.State} returns this
+ */
+proto.toit.model.User.State.prototype.clearRanCodeAt = function() {
+  return this.setRanCodeAt(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.toit.model.User.State.prototype.hasRanCodeAt = function() {
+  return jspb.Message.getField(this, 5) != null;
+};
+
+
+/**
+ * optional google.protobuf.Timestamp claimed_device_at = 6;
+ * @return {?proto.google.protobuf.Timestamp}
+ */
+proto.toit.model.User.State.prototype.getClaimedDeviceAt = function() {
+  return /** @type{?proto.google.protobuf.Timestamp} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 6));
+};
+
+
+/**
+ * @param {?proto.google.protobuf.Timestamp|undefined} value
+ * @return {!proto.toit.model.User.State} returns this
+*/
+proto.toit.model.User.State.prototype.setClaimedDeviceAt = function(value) {
+  return jspb.Message.setWrapperField(this, 6, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.toit.model.User.State} returns this
+ */
+proto.toit.model.User.State.prototype.clearClaimedDeviceAt = function() {
+  return this.setClaimedDeviceAt(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.toit.model.User.State.prototype.hasClaimedDeviceAt = function() {
+  return jspb.Message.getField(this, 6) != null;
 };
 
 

@@ -223,6 +223,21 @@ export namespace User {
     getQuestionnaireAnsweredAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
     setQuestionnaireAnsweredAt(value?: google_protobuf_timestamp_pb.Timestamp): void;
 
+    hasDeployedAppAt(): boolean;
+    clearDeployedAppAt(): void;
+    getDeployedAppAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
+    setDeployedAppAt(value?: google_protobuf_timestamp_pb.Timestamp): void;
+
+    hasRanCodeAt(): boolean;
+    clearRanCodeAt(): void;
+    getRanCodeAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
+    setRanCodeAt(value?: google_protobuf_timestamp_pb.Timestamp): void;
+
+    hasClaimedDeviceAt(): boolean;
+    clearClaimedDeviceAt(): void;
+    getClaimedDeviceAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
+    setClaimedDeviceAt(value?: google_protobuf_timestamp_pb.Timestamp): void;
+
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): State.AsObject;
     static toObject(includeInstance: boolean, msg: State): State.AsObject;
@@ -238,6 +253,9 @@ export namespace User {
       cliInstalledAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
       vscodeExtInstalledAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
       questionnaireAnsweredAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+      deployedAppAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+      ranCodeAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+      claimedDeviceAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
     }
   }
 }
