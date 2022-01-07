@@ -53,6 +53,7 @@ message CompileRequest {
   map<string, bytes> sources = 4 [ deprecated = true ];
   repeated string args = 5;
   ProgramSource source = 6;
+  string firmware_model = 7;
 }
 
 message CompileResponse { toit.model.Compilation compilation = 1; }
