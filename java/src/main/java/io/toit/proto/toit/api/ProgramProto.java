@@ -2428,6 +2428,18 @@ public final class ProgramProto {
      * <code>.toit.api.ProgramSource source = 6;</code>
      */
     io.toit.proto.toit.api.ProgramProto.ProgramSourceOrBuilder getSourceOrBuilder();
+
+    /**
+     * <code>string firmware_model = 7;</code>
+     * @return The firmwareModel.
+     */
+    java.lang.String getFirmwareModel();
+    /**
+     * <code>string firmware_model = 7;</code>
+     * @return The bytes for firmwareModel.
+     */
+    com.google.protobuf.ByteString
+        getFirmwareModelBytes();
   }
   /**
    * Protobuf type {@code toit.api.CompileRequest}
@@ -2446,6 +2458,7 @@ public final class ProgramProto {
       sdkName_ = "";
       entryFilename_ = "";
       args_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      firmwareModel_ = "";
     }
 
     @java.lang.Override
@@ -2530,6 +2543,12 @@ public final class ProgramProto {
                 source_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              firmwareModel_ = s;
               break;
             }
             default: {
@@ -2821,6 +2840,42 @@ public final class ProgramProto {
       return getSource();
     }
 
+    public static final int FIRMWARE_MODEL_FIELD_NUMBER = 7;
+    private volatile java.lang.Object firmwareModel_;
+    /**
+     * <code>string firmware_model = 7;</code>
+     * @return The firmwareModel.
+     */
+    public java.lang.String getFirmwareModel() {
+      java.lang.Object ref = firmwareModel_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        firmwareModel_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string firmware_model = 7;</code>
+     * @return The bytes for firmwareModel.
+     */
+    public com.google.protobuf.ByteString
+        getFirmwareModelBytes() {
+      java.lang.Object ref = firmwareModel_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        firmwareModel_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2855,6 +2910,9 @@ public final class ProgramProto {
       }
       if (source_ != null) {
         output.writeMessage(6, getSource());
+      }
+      if (!getFirmwareModelBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, firmwareModel_);
       }
       unknownFields.writeTo(output);
     }
@@ -2896,6 +2954,9 @@ public final class ProgramProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getSource());
       }
+      if (!getFirmwareModelBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, firmwareModel_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2926,6 +2987,8 @@ public final class ProgramProto {
         if (!getSource()
             .equals(other.getSource())) return false;
       }
+      if (!getFirmwareModel()
+          .equals(other.getFirmwareModel())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2955,6 +3018,8 @@ public final class ProgramProto {
         hash = (37 * hash) + SOURCE_FIELD_NUMBER;
         hash = (53 * hash) + getSource().hashCode();
       }
+      hash = (37 * hash) + FIRMWARE_MODEL_FIELD_NUMBER;
+      hash = (53 * hash) + getFirmwareModel().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3125,6 +3190,8 @@ public final class ProgramProto {
           source_ = null;
           sourceBuilder_ = null;
         }
+        firmwareModel_ = "";
+
         return this;
       }
 
@@ -3167,6 +3234,7 @@ public final class ProgramProto {
         } else {
           result.source_ = sourceBuilder_.build();
         }
+        result.firmwareModel_ = firmwareModel_;
         onBuilt();
         return result;
       }
@@ -3241,6 +3309,10 @@ public final class ProgramProto {
         }
         if (other.hasSource()) {
           mergeSource(other.getSource());
+        }
+        if (!other.getFirmwareModel().isEmpty()) {
+          firmwareModel_ = other.firmwareModel_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3850,6 +3922,82 @@ public final class ProgramProto {
           source_ = null;
         }
         return sourceBuilder_;
+      }
+
+      private java.lang.Object firmwareModel_ = "";
+      /**
+       * <code>string firmware_model = 7;</code>
+       * @return The firmwareModel.
+       */
+      public java.lang.String getFirmwareModel() {
+        java.lang.Object ref = firmwareModel_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          firmwareModel_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string firmware_model = 7;</code>
+       * @return The bytes for firmwareModel.
+       */
+      public com.google.protobuf.ByteString
+          getFirmwareModelBytes() {
+        java.lang.Object ref = firmwareModel_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          firmwareModel_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string firmware_model = 7;</code>
+       * @param value The firmwareModel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFirmwareModel(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        firmwareModel_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string firmware_model = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFirmwareModel() {
+        
+        firmwareModel_ = getDefaultInstance().getFirmwareModel();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string firmware_model = 7;</code>
+       * @param value The bytes for firmwareModel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFirmwareModelBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        firmwareModel_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -21467,89 +21615,89 @@ public final class ProgramProto {
       "name\030\001 \001(\t\0227\n\005files\030\002 \003(\0132(.toit.api.Pro" +
       "gramSource.Files.FilesEntry\032,\n\nFilesEntr" +
       "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\014:\0028\001\032\030\n\006Bun" +
-      "dle\022\016\n\006bundle\030\001 \001(\014B\010\n\006source\"\367\001\n\016Compil" +
+      "dle\022\016\n\006bundle\030\001 \001(\014B\010\n\006source\"\217\002\n\016Compil" +
       "eRequest\022\024\n\014program_name\030\001 \001(\t\022\020\n\010sdk_na" +
       "me\030\002 \001(\t\022\032\n\016entry_filename\030\003 \001(\tB\002\030\001\022:\n\007" +
       "sources\030\004 \003(\0132%.toit.api.CompileRequest." +
       "SourcesEntryB\002\030\001\022\014\n\004args\030\005 \003(\t\022\'\n\006source" +
-      "\030\006 \001(\0132\027.toit.api.ProgramSource\032.\n\014Sourc" +
-      "esEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\014:\0028\001\"" +
-      "?\n\017CompileResponse\022,\n\013compilation\030\001 \001(\0132" +
-      "\027.toit.model.Compilation\"\252\001\n\024SyntaxAnaly" +
-      "zeRequest\022\022\n\nentry_file\030\001 \001(\t\022\020\n\010sdk_nam" +
-      "e\030\002 \001(\t\022<\n\007sources\030\003 \003(\0132+.toit.api.Synt" +
-      "axAnalyzeRequest.SourcesEntry\032.\n\014Sources" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\014:\0028\001\")\n" +
-      "\025SyntaxAnalyzeResponse\022\020\n\010response\030\001 \001(\014" +
-      "\"\232\002\n\016AnalyzeRequest\0221\n\006source\030\001 \001(\0132\037.to" +
-      "it.api.AnalyzeRequest.SourceH\000\022\030\n\016compil" +
-      "ation_id\030\002 \001(\014H\000\032\257\001\n\006Source\022\020\n\010sdk_name\030" +
-      "\001 \001(\t\022\026\n\016entry_filename\030\002 \001(\t\022=\n\007sources" +
-      "\030\003 \003(\0132,.toit.api.AnalyzeRequest.Source." +
-      "SourcesEntry\022\014\n\004args\030\004 \003(\t\032.\n\014SourcesEnt" +
-      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\014:\0028\001B\t\n\007pr" +
-      "ogram\"\216\001\n\017AnalyzeResponse\022\016\n\006stderr\030\001 \001(" +
-      "\014\0224\n\010features\030\002 \001(\0132\".toit.api.AnalyzeRe" +
-      "sponse.Features\0325\n\010Features\022\013\n\003gps\030\001 \001(\010" +
-      "\022\034\n\024pubsub_subscriptions\030\002 \003(\t\"\'\n\021GetPro" +
-      "gramRequest\022\022\n\nprogram_id\030\001 \001(\014\":\n\022GetPr" +
-      "ogramResponse\022$\n\007program\030\001 \001(\0132\023.toit.mo" +
-      "del.Program\"/\n\025GetCompilationRequest\022\026\n\016" +
-      "compilation_id\030\001 \001(\014\"F\n\026GetCompilationRe" +
-      "sponse\022,\n\013compilation\030\001 \001(\0132\027.toit.model" +
-      ".Compilation\"-\n\025LookupProgramsRequest\022\024\n" +
-      "\014program_name\030\001 \001(\t\"-\n\026LookupProgramsRes" +
-      "ponse\022\023\n\013program_ids\030\001 \003(\014\"a\n\nRunRequest" +
-      "\022#\n\005start\030\001 \001(\0132\022.toit.api.RunStartH\000\022#\n" +
-      "\005input\030\002 \001(\0132\022.toit.api.RunInputH\000B\t\n\007pa" +
-      "yload\"\325\001\n\010RunStart\022\020\n\010sdk_name\030\001 \001(\t\022\032\n\016" +
-      "entry_filename\030\002 \001(\tB\002\030\001\0224\n\007sources\030\003 \003(" +
-      "\0132\037.toit.api.RunStart.SourcesEntryB\002\030\001\022\014" +
-      "\n\004args\030\004 \003(\t\022\'\n\006source\030\005 \001(\0132\027.toit.api." +
-      "ProgramSource\032.\n\014SourcesEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\014:\0028\001\"\031\n\010RunInput\022\r\n\005inp" +
-      "ut\030\001 \001(\014\"\343\001\n\017RunStartRequest\022\020\n\010sdk_name" +
-      "\030\001 \001(\t\022\032\n\016entry_filename\030\002 \001(\tB\002\030\001\022;\n\007so" +
-      "urces\030\003 \003(\0132&.toit.api.RunStartRequest.S" +
-      "ourcesEntryB\002\030\001\022\014\n\004args\030\004 \003(\t\022\'\n\006source\030" +
-      "\005 \001(\0132\027.toit.api.ProgramSource\032.\n\014Source" +
-      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\014:\0028\001\"G" +
-      "\n\013RunResponse\022\r\n\003out\030\001 \001(\014H\000\022\r\n\003err\030\002 \001(" +
-      "\014H\000\022\016\n\004exit\030\003 \001(\003H\000B\n\n\010response\"\373\001\n\020Devi" +
-      "ceRunRequest\022\021\n\tdevice_id\030\001 \001(\014\022\032\n\016entry" +
-      "_filename\030\003 \001(\tB\002\030\001\022<\n\007sources\030\004 \003(\0132\'.t" +
-      "oit.api.DeviceRunRequest.SourcesEntryB\002\030" +
-      "\001\022\014\n\004args\030\005 \003(\t\022\023\n\007install\030\006 \001(\010B\002\030\001\022\'\n\006" +
-      "source\030\007 \001(\0132\027.toit.api.ProgramSource\032.\n" +
+      "\030\006 \001(\0132\027.toit.api.ProgramSource\022\026\n\016firmw" +
+      "are_model\030\007 \001(\t\032.\n\014SourcesEntry\022\013\n\003key\030\001" +
+      " \001(\t\022\r\n\005value\030\002 \001(\014:\0028\001\"?\n\017CompileRespon" +
+      "se\022,\n\013compilation\030\001 \001(\0132\027.toit.model.Com" +
+      "pilation\"\252\001\n\024SyntaxAnalyzeRequest\022\022\n\nent" +
+      "ry_file\030\001 \001(\t\022\020\n\010sdk_name\030\002 \001(\t\022<\n\007sourc" +
+      "es\030\003 \003(\0132+.toit.api.SyntaxAnalyzeRequest" +
+      ".SourcesEntry\032.\n\014SourcesEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\014:\0028\001\")\n\025SyntaxAnalyzeRe" +
+      "sponse\022\020\n\010response\030\001 \001(\014\"\232\002\n\016AnalyzeRequ" +
+      "est\0221\n\006source\030\001 \001(\0132\037.toit.api.AnalyzeRe" +
+      "quest.SourceH\000\022\030\n\016compilation_id\030\002 \001(\014H\000" +
+      "\032\257\001\n\006Source\022\020\n\010sdk_name\030\001 \001(\t\022\026\n\016entry_f" +
+      "ilename\030\002 \001(\t\022=\n\007sources\030\003 \003(\0132,.toit.ap" +
+      "i.AnalyzeRequest.Source.SourcesEntry\022\014\n\004" +
+      "args\030\004 \003(\t\032.\n\014SourcesEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "\r\n\005value\030\002 \001(\014:\0028\001B\t\n\007program\"\216\001\n\017Analyz" +
+      "eResponse\022\016\n\006stderr\030\001 \001(\014\0224\n\010features\030\002 " +
+      "\001(\0132\".toit.api.AnalyzeResponse.Features\032" +
+      "5\n\010Features\022\013\n\003gps\030\001 \001(\010\022\034\n\024pubsub_subsc" +
+      "riptions\030\002 \003(\t\"\'\n\021GetProgramRequest\022\022\n\np" +
+      "rogram_id\030\001 \001(\014\":\n\022GetProgramResponse\022$\n" +
+      "\007program\030\001 \001(\0132\023.toit.model.Program\"/\n\025G" +
+      "etCompilationRequest\022\026\n\016compilation_id\030\001" +
+      " \001(\014\"F\n\026GetCompilationResponse\022,\n\013compil" +
+      "ation\030\001 \001(\0132\027.toit.model.Compilation\"-\n\025" +
+      "LookupProgramsRequest\022\024\n\014program_name\030\001 " +
+      "\001(\t\"-\n\026LookupProgramsResponse\022\023\n\013program" +
+      "_ids\030\001 \003(\014\"a\n\nRunRequest\022#\n\005start\030\001 \001(\0132" +
+      "\022.toit.api.RunStartH\000\022#\n\005input\030\002 \001(\0132\022.t" +
+      "oit.api.RunInputH\000B\t\n\007payload\"\325\001\n\010RunSta" +
+      "rt\022\020\n\010sdk_name\030\001 \001(\t\022\032\n\016entry_filename\030\002" +
+      " \001(\tB\002\030\001\0224\n\007sources\030\003 \003(\0132\037.toit.api.Run" +
+      "Start.SourcesEntryB\002\030\001\022\014\n\004args\030\004 \003(\t\022\'\n\006" +
+      "source\030\005 \001(\0132\027.toit.api.ProgramSource\032.\n" +
       "\014SourcesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\014:\0028\001\"M\n\021DeviceRunResponse\022\r\n\003out\030\001 \001(\014H" +
-      "\000\022\r\n\003err\030\002 \001(\014H\000\022\016\n\004exit\030\003 \001(\003H\000B\n\n\010resp" +
-      "onse\"@\n\032DecodeSystemMessageRequest\022\017\n\007me" +
-      "ssage\030\001 \001(\014\022\021\n\005model\030\002 \001(\tB\002\030\001\".\n\033Decode" +
-      "SystemMessageResponse\022\017\n\007message\030\001 \001(\t2\215" +
-      "\006\n\016ProgramService\0228\n\003Run\022\024.toit.api.RunR" +
-      "equest\032\025.toit.api.RunResponse\"\000(\0010\001\022@\n\010R" +
-      "unStart\022\031.toit.api.RunStartRequest\032\025.toi" +
-      "t.api.RunResponse\"\0000\001\022@\n\007Compile\022\030.toit." +
-      "api.CompileRequest\032\031.toit.api.CompileRes" +
-      "ponse\"\000\022@\n\007Analyze\022\030.toit.api.AnalyzeReq" +
-      "uest\032\031.toit.api.AnalyzeResponse\"\000\022R\n\rSyn" +
-      "taxAnalyze\022\036.toit.api.SyntaxAnalyzeReque" +
-      "st\032\037.toit.api.SyntaxAnalyzeResponse\"\000\022I\n" +
-      "\nGetProgram\022\033.toit.api.GetProgramRequest" +
-      "\032\034.toit.api.GetProgramResponse\"\000\022U\n\016GetC" +
-      "ompilation\022\037.toit.api.GetCompilationRequ" +
-      "est\032 .toit.api.GetCompilationResponse\"\000\022" +
-      "U\n\016LookupPrograms\022\037.toit.api.LookupProgr" +
-      "amsRequest\032 .toit.api.LookupProgramsResp" +
-      "onse\"\000\022H\n\tDeviceRun\022\032.toit.api.DeviceRun" +
-      "Request\032\033.toit.api.DeviceRunResponse\"\0000\001" +
-      "\022d\n\023DecodeSystemMessage\022$.toit.api.Decod" +
-      "eSystemMessageRequest\032%.toit.api.DecodeS" +
-      "ystemMessageResponse\"\000B`\n\026io.toit.proto." +
-      "toit.apiB\014ProgramProtoZ\'github.com/toitw" +
-      "are/api/golang/toit/api\252\002\016Toit.Proto.API" +
-      "b\006proto3"
+      "\014:\0028\001\"\031\n\010RunInput\022\r\n\005input\030\001 \001(\014\"\343\001\n\017Run" +
+      "StartRequest\022\020\n\010sdk_name\030\001 \001(\t\022\032\n\016entry_" +
+      "filename\030\002 \001(\tB\002\030\001\022;\n\007sources\030\003 \003(\0132&.to" +
+      "it.api.RunStartRequest.SourcesEntryB\002\030\001\022" +
+      "\014\n\004args\030\004 \003(\t\022\'\n\006source\030\005 \001(\0132\027.toit.api" +
+      ".ProgramSource\032.\n\014SourcesEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\014:\0028\001\"G\n\013RunResponse\022\r\n" +
+      "\003out\030\001 \001(\014H\000\022\r\n\003err\030\002 \001(\014H\000\022\016\n\004exit\030\003 \001(" +
+      "\003H\000B\n\n\010response\"\373\001\n\020DeviceRunRequest\022\021\n\t" +
+      "device_id\030\001 \001(\014\022\032\n\016entry_filename\030\003 \001(\tB" +
+      "\002\030\001\022<\n\007sources\030\004 \003(\0132\'.toit.api.DeviceRu" +
+      "nRequest.SourcesEntryB\002\030\001\022\014\n\004args\030\005 \003(\t\022" +
+      "\023\n\007install\030\006 \001(\010B\002\030\001\022\'\n\006source\030\007 \001(\0132\027.t" +
+      "oit.api.ProgramSource\032.\n\014SourcesEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\014:\0028\001\"M\n\021DeviceR" +
+      "unResponse\022\r\n\003out\030\001 \001(\014H\000\022\r\n\003err\030\002 \001(\014H\000" +
+      "\022\016\n\004exit\030\003 \001(\003H\000B\n\n\010response\"@\n\032DecodeSy" +
+      "stemMessageRequest\022\017\n\007message\030\001 \001(\014\022\021\n\005m" +
+      "odel\030\002 \001(\tB\002\030\001\".\n\033DecodeSystemMessageRes" +
+      "ponse\022\017\n\007message\030\001 \001(\t2\215\006\n\016ProgramServic" +
+      "e\0228\n\003Run\022\024.toit.api.RunRequest\032\025.toit.ap" +
+      "i.RunResponse\"\000(\0010\001\022@\n\010RunStart\022\031.toit.a" +
+      "pi.RunStartRequest\032\025.toit.api.RunRespons" +
+      "e\"\0000\001\022@\n\007Compile\022\030.toit.api.CompileReque" +
+      "st\032\031.toit.api.CompileResponse\"\000\022@\n\007Analy" +
+      "ze\022\030.toit.api.AnalyzeRequest\032\031.toit.api." +
+      "AnalyzeResponse\"\000\022R\n\rSyntaxAnalyze\022\036.toi" +
+      "t.api.SyntaxAnalyzeRequest\032\037.toit.api.Sy" +
+      "ntaxAnalyzeResponse\"\000\022I\n\nGetProgram\022\033.to" +
+      "it.api.GetProgramRequest\032\034.toit.api.GetP" +
+      "rogramResponse\"\000\022U\n\016GetCompilation\022\037.toi" +
+      "t.api.GetCompilationRequest\032 .toit.api.G" +
+      "etCompilationResponse\"\000\022U\n\016LookupProgram" +
+      "s\022\037.toit.api.LookupProgramsRequest\032 .toi" +
+      "t.api.LookupProgramsResponse\"\000\022H\n\tDevice" +
+      "Run\022\032.toit.api.DeviceRunRequest\032\033.toit.a" +
+      "pi.DeviceRunResponse\"\0000\001\022d\n\023DecodeSystem" +
+      "Message\022$.toit.api.DecodeSystemMessageRe" +
+      "quest\032%.toit.api.DecodeSystemMessageResp" +
+      "onse\"\000B`\n\026io.toit.proto.toit.apiB\014Progra" +
+      "mProtoZ\'github.com/toitware/api/golang/t" +
+      "oit/api\252\002\016Toit.Proto.APIb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21585,7 +21733,7 @@ public final class ProgramProto {
     internal_static_toit_api_CompileRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_CompileRequest_descriptor,
-        new java.lang.String[] { "ProgramName", "SdkName", "EntryFilename", "Sources", "Args", "Source", });
+        new java.lang.String[] { "ProgramName", "SdkName", "EntryFilename", "Sources", "Args", "Source", "FirmwareModel", });
     internal_static_toit_api_CompileRequest_SourcesEntry_descriptor =
       internal_static_toit_api_CompileRequest_descriptor.getNestedTypes().get(0);
     internal_static_toit_api_CompileRequest_SourcesEntry_fieldAccessorTable = new
