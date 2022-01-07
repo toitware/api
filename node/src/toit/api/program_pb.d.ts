@@ -106,6 +106,9 @@ export class CompileRequest extends jspb.Message {
   getSource(): ProgramSource | undefined;
   setSource(value?: ProgramSource): void;
 
+  getFirmwareModel(): string;
+  setFirmwareModel(value: string): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CompileRequest.AsObject;
   static toObject(includeInstance: boolean, msg: CompileRequest): CompileRequest.AsObject;
@@ -124,6 +127,7 @@ export namespace CompileRequest {
     sourcesMap: Array<[string, Uint8Array | string]>,
     argsList: Array<string>,
     source?: ProgramSource.AsObject,
+    firmwareModel: string,
   }
 }
 

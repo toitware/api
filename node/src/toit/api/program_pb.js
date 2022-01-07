@@ -1180,7 +1180,8 @@ proto.toit.api.CompileRequest.toObject = function(includeInstance, msg) {
     entryFilename: jspb.Message.getFieldWithDefault(msg, 3, ""),
     sourcesMap: (f = msg.getSourcesMap()) ? f.toObject(includeInstance, undefined) : [],
     argsList: (f = jspb.Message.getRepeatedField(msg, 5)) == null ? undefined : f,
-    source: (f = msg.getSource()) && proto.toit.api.ProgramSource.toObject(includeInstance, f)
+    source: (f = msg.getSource()) && proto.toit.api.ProgramSource.toObject(includeInstance, f),
+    firmwareModel: jspb.Message.getFieldWithDefault(msg, 7, "")
   };
 
   if (includeInstance) {
@@ -1243,6 +1244,10 @@ proto.toit.api.CompileRequest.deserializeBinaryFromReader = function(msg, reader
       var value = new proto.toit.api.ProgramSource;
       reader.readMessage(value,proto.toit.api.ProgramSource.deserializeBinaryFromReader);
       msg.setSource(value);
+      break;
+    case 7:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setFirmwareModel(value);
       break;
     default:
       reader.skipField();
@@ -1311,6 +1316,13 @@ proto.toit.api.CompileRequest.serializeBinaryToWriter = function(message, writer
       6,
       f,
       proto.toit.api.ProgramSource.serializeBinaryToWriter
+    );
+  }
+  f = message.getFirmwareModel();
+  if (f.length > 0) {
+    writer.writeString(
+      7,
+      f
     );
   }
 };
@@ -1463,6 +1475,24 @@ proto.toit.api.CompileRequest.prototype.clearSource = function() {
  */
 proto.toit.api.CompileRequest.prototype.hasSource = function() {
   return jspb.Message.getField(this, 6) != null;
+};
+
+
+/**
+ * optional string firmware_model = 7;
+ * @return {string}
+ */
+proto.toit.api.CompileRequest.prototype.getFirmwareModel = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.toit.api.CompileRequest} returns this
+ */
+proto.toit.api.CompileRequest.prototype.setFirmwareModel = function(value) {
+  return jspb.Message.setProto3StringField(this, 7, value);
 };
 
 
