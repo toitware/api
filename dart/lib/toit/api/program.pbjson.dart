@@ -114,6 +114,13 @@ const CompileRequest$json = const {
       '6': '.toit.api.ProgramSource',
       '10': 'source'
     },
+    const {
+      '1': 'firmware_model',
+      '3': 7,
+      '4': 1,
+      '5': 9,
+      '10': 'firmwareModel'
+    },
   ],
   '3': const [CompileRequest_SourcesEntry$json],
 };
@@ -130,7 +137,7 @@ const CompileRequest_SourcesEntry$json = const {
 
 /// Descriptor for `CompileRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List compileRequestDescriptor = $convert.base64Decode(
-    'Cg5Db21waWxlUmVxdWVzdBIhCgxwcm9ncmFtX25hbWUYASABKAlSC3Byb2dyYW1OYW1lEhkKCHNka19uYW1lGAIgASgJUgdzZGtOYW1lEikKDmVudHJ5X2ZpbGVuYW1lGAMgASgJQgIYAVINZW50cnlGaWxlbmFtZRJDCgdzb3VyY2VzGAQgAygLMiUudG9pdC5hcGkuQ29tcGlsZVJlcXVlc3QuU291cmNlc0VudHJ5QgIYAVIHc291cmNlcxISCgRhcmdzGAUgAygJUgRhcmdzEi8KBnNvdXJjZRgGIAEoCzIXLnRvaXQuYXBpLlByb2dyYW1Tb3VyY2VSBnNvdXJjZRo6CgxTb3VyY2VzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAiABKAxSBXZhbHVlOgI4AQ==');
+    'Cg5Db21waWxlUmVxdWVzdBIhCgxwcm9ncmFtX25hbWUYASABKAlSC3Byb2dyYW1OYW1lEhkKCHNka19uYW1lGAIgASgJUgdzZGtOYW1lEikKDmVudHJ5X2ZpbGVuYW1lGAMgASgJQgIYAVINZW50cnlGaWxlbmFtZRJDCgdzb3VyY2VzGAQgAygLMiUudG9pdC5hcGkuQ29tcGlsZVJlcXVlc3QuU291cmNlc0VudHJ5QgIYAVIHc291cmNlcxISCgRhcmdzGAUgAygJUgRhcmdzEi8KBnNvdXJjZRgGIAEoCzIXLnRvaXQuYXBpLlByb2dyYW1Tb3VyY2VSBnNvdXJjZRIlCg5maXJtd2FyZV9tb2RlbBgHIAEoCVINZmlybXdhcmVNb2RlbBo6CgxTb3VyY2VzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAiABKAxSBXZhbHVlOgI4AQ==');
 @$core.Deprecated('Use compileResponseDescriptor instead')
 const CompileResponse$json = const {
   '1': 'CompileResponse',

@@ -301,6 +301,7 @@ class CompileRequest extends $pb.GeneratedMessage {
         packageName: const $pb.PackageName('toit.api'))
     ..pPS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'args')
     ..aOM<ProgramSource>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'source', subBuilder: ProgramSource.create)
+    ..aOS(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'firmwareModel')
     ..hasRequiredFields = false;
 
   CompileRequest._() : super();
@@ -312,6 +313,7 @@ class CompileRequest extends $pb.GeneratedMessage {
         $core.Map<$core.String, $core.List<$core.int>>? sources,
     $core.Iterable<$core.String>? args,
     ProgramSource? source,
+    $core.String? firmwareModel,
   }) {
     final _result = create();
     if (programName != null) {
@@ -333,6 +335,9 @@ class CompileRequest extends $pb.GeneratedMessage {
     }
     if (source != null) {
       _result.source = source;
+    }
+    if (firmwareModel != null) {
+      _result.firmwareModel = firmwareModel;
     }
     return _result;
   }
@@ -423,6 +428,18 @@ class CompileRequest extends $pb.GeneratedMessage {
   void clearSource() => clearField(6);
   @$pb.TagNumber(6)
   ProgramSource ensureSource() => $_ensure(5);
+
+  @$pb.TagNumber(7)
+  $core.String get firmwareModel => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set firmwareModel($core.String v) {
+    $_setString(6, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasFirmwareModel() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearFirmwareModel() => clearField(7);
 }
 
 class CompileResponse extends $pb.GeneratedMessage {
