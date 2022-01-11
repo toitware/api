@@ -27,61 +27,61 @@ namespace Toit.Proto.API {
             "Chd0b2l0L2FwaS9oYXJkd2FyZS5wcm90bxIIdG9pdC5hcGkaF3RvaXQvbW9k",
             "ZWwvZGV2aWNlLnByb3RvGhV0b2l0L21vZGVsL2RhdGEucHJvdG8aH3RvaXQv",
             "bW9kZWwvcHVic3ViL21lc3NhZ2UucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90",
-            "aW1lc3RhbXAucHJvdG8iVgoMQ2xhaW1SZXF1ZXN0EhMKC2hhcmR3YXJlX2lk",
+            "aW1lc3RhbXAucHJvdG8iegoMQ2xhaW1SZXF1ZXN0EhMKC2hhcmR3YXJlX2lk",
             "GAEgASgMEhgKEGluaXRfZGV2aWNlX25hbWUYAiABKAkSFwoPb3JnYW5pemF0",
-            "aW9uX2lkGAMgASgMIoEBCg1DbGFpbVJlc3BvbnNlEi8KDWhhcmR3YXJlX2lu",
-            "Zm8YASABKAsyGC50b2l0Lm1vZGVsLkhhcmR3YXJlSW5mbxIRCglkZXZpY2Vf",
-            "aWQYAiABKAwSEwoLZGV2aWNlX25hbWUYAyABKAkSFwoPb3JnYW5pemF0aW9u",
-            "X2lkGAQgASgMInIKDlJlcGxhY2VSZXF1ZXN0EhcKD25ld19oYXJkd2FyZV9p",
-            "ZBgBIAEoDBIbChNjdXJyZW50X2hhcmR3YXJlX2lkGAIgASgMEhEKCWRldmlj",
-            "ZV9pZBgDIAEoDBIXCg9vcmdhbml6YXRpb25faWQYBCABKAwiWwoPUmVwbGFj",
-            "ZVJlc3BvbnNlEi8KDWhhcmR3YXJlX2luZm8YASABKAsyGC50b2l0Lm1vZGVs",
-            "LkhhcmR3YXJlSW5mbxIXCg9vcmdhbml6YXRpb25faWQYAiABKAwiLwoYR2V0",
-            "QWN0aXZlRGV2aWNlSURSZXF1ZXN0EhMKC2hhcmR3YXJlX2lkGAEgASgMIi4K",
-            "GUdldEFjdGl2ZURldmljZUlEUmVzcG9uc2USEQoJZGV2aWNlX2lkGAEgASgM",
-            "IrcDCg1IYXJkd2FyZUV2ZW50EhMKC2hhcmR3YXJlX2lkGAEgASgMEhAKCGV2",
-            "ZW50X2lkGAIgASgMEioKBHR5cGUYAyABKA4yHC50b2l0LmFwaS5IYXJkd2Fy",
-            "ZUV2ZW50LlR5cGUSDgoGam9iX2lkGAQgASgMEiwKCHJlY2VpdmVkGAUgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIrCgdjcmVhdGVkGAYgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIRCglkZXZpY2VfaWQYByAB",
-            "KAwSFwoPb3JnYW5pemF0aW9uX2lkGAggASgMEiIKA2xvZxgJIAEoCzITLnRv",
-            "aXQubW9kZWwuTG9nRGF0YUgAEioKB21ldHJpY3MYCiABKAsyFy50b2l0Lm1v",
-            "ZGVsLk1ldHJpY3NEYXRhSAASLAoGcHVic3ViGAsgASgLMhoudG9pdC5tb2Rl",
-            "bC5wdWJzdWIuTWVzc2FnZUgAIjYKBFR5cGUSCwoHVU5LTk9XThAAEggKBExP",
-            "R1MQARILCgdNRVRSSUNTEAISCgoGUFVCU1VCEANCBgoEZGF0YSLKAQoVSGFy",
-            "ZHdhcmVFdmVudHNSZXF1ZXN0EhMKC2hhcmR3YXJlX2lkGAEgASgMEg4KBmpv",
-            "Yl9pZBgCIAEoDBIqCgR0eXBlGAMgASgOMhwudG9pdC5hcGkuSGFyZHdhcmVF",
-            "dmVudC5UeXBlEg0KBWxpbWl0GAQgASgEEg8KB3JldmVyc2UYBSABKAgSDAoC",
-            "aWQYBiABKAxIABIoCgJ0cxgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXBIAEIICgZvZmZzZXQiQAoWSGFyZHdhcmVFdmVudHNSZXNwb25zZRIm",
-            "CgVldmVudBgBIAEoCzIXLnRvaXQuYXBpLkhhcmR3YXJlRXZlbnQiPAocQ2xh",
-            "aW1IYXJkd2FyZUlkZW50aXR5UmVxdWVzdBIcChRmbGFzaF9zdGF0aW9uX3Nl",
-            "Y3JldBgBIAEoCSJYCh1DbGFpbUhhcmR3YXJlSWRlbnRpdHlSZXNwb25zZRI3",
-            "ChFoYXJkd2FyZV9pZGVudGl0eRgBIAEoCzIcLnRvaXQubW9kZWwuSGFyZHdh",
-            "cmVJZGVudGl0eSKDAQoeU2V0SGFyZHdhcmVJZGVudGl0eUluZm9SZXF1ZXN0",
-            "EhwKFGZsYXNoX3N0YXRpb25fc2VjcmV0GAEgASgJEhMKC2hhcmR3YXJlX2lk",
-            "GAIgASgMEi4KBGluZm8YAyABKAsyIC50b2l0Lm1vZGVsLkhhcmR3YXJlSWRl",
-            "bnRpdHlJbmZvIiEKH1NldEhhcmR3YXJlSWRlbnRpdHlJbmZvUmVzcG9uc2Uy",
-            "yAIKD0hhcmR3YXJlU2VydmljZRI6CgVDbGFpbRIWLnRvaXQuYXBpLkNsYWlt",
-            "UmVxdWVzdBoXLnRvaXQuYXBpLkNsYWltUmVzcG9uc2UiABJACgdSZXBsYWNl",
-            "EhgudG9pdC5hcGkuUmVwbGFjZVJlcXVlc3QaGS50b2l0LmFwaS5SZXBsYWNl",
-            "UmVzcG9uc2UiABJeChFHZXRBY3RpdmVEZXZpY2VJRBIiLnRvaXQuYXBpLkdl",
-            "dEFjdGl2ZURldmljZUlEUmVxdWVzdBojLnRvaXQuYXBpLkdldEFjdGl2ZURl",
-            "dmljZUlEUmVzcG9uc2UiABJXCg5IYXJkd2FyZUV2ZW50cxIfLnRvaXQuYXBp",
-            "LkhhcmR3YXJlRXZlbnRzUmVxdWVzdBogLnRvaXQuYXBpLkhhcmR3YXJlRXZl",
-            "bnRzUmVzcG9uc2UiADABMuwBCgxGbGFzaFN0YXRpb24SagoVQ2xhaW1IYXJk",
-            "d2FyZUlkZW50aXR5EiYudG9pdC5hcGkuQ2xhaW1IYXJkd2FyZUlkZW50aXR5",
-            "UmVxdWVzdBonLnRvaXQuYXBpLkNsYWltSGFyZHdhcmVJZGVudGl0eVJlc3Bv",
-            "bnNlIgAScAoXU2V0SGFyZHdhcmVJZGVudGl0eUluZm8SKC50b2l0LmFwaS5T",
-            "ZXRIYXJkd2FyZUlkZW50aXR5SW5mb1JlcXVlc3QaKS50b2l0LmFwaS5TZXRI",
-            "YXJkd2FyZUlkZW50aXR5SW5mb1Jlc3BvbnNlIgBCYQoWaW8udG9pdC5wcm90",
-            "by50b2l0LmFwaUINSGFyZHdhcmVQcm90b1onZ2l0aHViLmNvbS90b2l0d2Fy",
-            "ZS9hcGkvZ29sYW5nL3RvaXQvYXBpqgIOVG9pdC5Qcm90by5BUEliBnByb3Rv",
-            "Mw=="));
+            "aW9uX2lkGAMgASgMEiIKGnNraXBfaGFyZHdhcmVfb25saW5lX2NoZWNrGAQg",
+            "ASgIIoEBCg1DbGFpbVJlc3BvbnNlEi8KDWhhcmR3YXJlX2luZm8YASABKAsy",
+            "GC50b2l0Lm1vZGVsLkhhcmR3YXJlSW5mbxIRCglkZXZpY2VfaWQYAiABKAwS",
+            "EwoLZGV2aWNlX25hbWUYAyABKAkSFwoPb3JnYW5pemF0aW9uX2lkGAQgASgM",
+            "InIKDlJlcGxhY2VSZXF1ZXN0EhcKD25ld19oYXJkd2FyZV9pZBgBIAEoDBIb",
+            "ChNjdXJyZW50X2hhcmR3YXJlX2lkGAIgASgMEhEKCWRldmljZV9pZBgDIAEo",
+            "DBIXCg9vcmdhbml6YXRpb25faWQYBCABKAwiWwoPUmVwbGFjZVJlc3BvbnNl",
+            "Ei8KDWhhcmR3YXJlX2luZm8YASABKAsyGC50b2l0Lm1vZGVsLkhhcmR3YXJl",
+            "SW5mbxIXCg9vcmdhbml6YXRpb25faWQYAiABKAwiLwoYR2V0QWN0aXZlRGV2",
+            "aWNlSURSZXF1ZXN0EhMKC2hhcmR3YXJlX2lkGAEgASgMIi4KGUdldEFjdGl2",
+            "ZURldmljZUlEUmVzcG9uc2USEQoJZGV2aWNlX2lkGAEgASgMIrcDCg1IYXJk",
+            "d2FyZUV2ZW50EhMKC2hhcmR3YXJlX2lkGAEgASgMEhAKCGV2ZW50X2lkGAIg",
+            "ASgMEioKBHR5cGUYAyABKA4yHC50b2l0LmFwaS5IYXJkd2FyZUV2ZW50LlR5",
+            "cGUSDgoGam9iX2lkGAQgASgMEiwKCHJlY2VpdmVkGAUgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcBIrCgdjcmVhdGVkGAYgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcBIRCglkZXZpY2VfaWQYByABKAwSFwoPb3Jn",
+            "YW5pemF0aW9uX2lkGAggASgMEiIKA2xvZxgJIAEoCzITLnRvaXQubW9kZWwu",
+            "TG9nRGF0YUgAEioKB21ldHJpY3MYCiABKAsyFy50b2l0Lm1vZGVsLk1ldHJp",
+            "Y3NEYXRhSAASLAoGcHVic3ViGAsgASgLMhoudG9pdC5tb2RlbC5wdWJzdWIu",
+            "TWVzc2FnZUgAIjYKBFR5cGUSCwoHVU5LTk9XThAAEggKBExPR1MQARILCgdN",
+            "RVRSSUNTEAISCgoGUFVCU1VCEANCBgoEZGF0YSLKAQoVSGFyZHdhcmVFdmVu",
+            "dHNSZXF1ZXN0EhMKC2hhcmR3YXJlX2lkGAEgASgMEg4KBmpvYl9pZBgCIAEo",
+            "DBIqCgR0eXBlGAMgASgOMhwudG9pdC5hcGkuSGFyZHdhcmVFdmVudC5UeXBl",
+            "Eg0KBWxpbWl0GAQgASgEEg8KB3JldmVyc2UYBSABKAgSDAoCaWQYBiABKAxI",
+            "ABIoCgJ0cxgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAEII",
+            "CgZvZmZzZXQiQAoWSGFyZHdhcmVFdmVudHNSZXNwb25zZRImCgVldmVudBgB",
+            "IAEoCzIXLnRvaXQuYXBpLkhhcmR3YXJlRXZlbnQiPAocQ2xhaW1IYXJkd2Fy",
+            "ZUlkZW50aXR5UmVxdWVzdBIcChRmbGFzaF9zdGF0aW9uX3NlY3JldBgBIAEo",
+            "CSJYCh1DbGFpbUhhcmR3YXJlSWRlbnRpdHlSZXNwb25zZRI3ChFoYXJkd2Fy",
+            "ZV9pZGVudGl0eRgBIAEoCzIcLnRvaXQubW9kZWwuSGFyZHdhcmVJZGVudGl0",
+            "eSKDAQoeU2V0SGFyZHdhcmVJZGVudGl0eUluZm9SZXF1ZXN0EhwKFGZsYXNo",
+            "X3N0YXRpb25fc2VjcmV0GAEgASgJEhMKC2hhcmR3YXJlX2lkGAIgASgMEi4K",
+            "BGluZm8YAyABKAsyIC50b2l0Lm1vZGVsLkhhcmR3YXJlSWRlbnRpdHlJbmZv",
+            "IiEKH1NldEhhcmR3YXJlSWRlbnRpdHlJbmZvUmVzcG9uc2UyyAIKD0hhcmR3",
+            "YXJlU2VydmljZRI6CgVDbGFpbRIWLnRvaXQuYXBpLkNsYWltUmVxdWVzdBoX",
+            "LnRvaXQuYXBpLkNsYWltUmVzcG9uc2UiABJACgdSZXBsYWNlEhgudG9pdC5h",
+            "cGkuUmVwbGFjZVJlcXVlc3QaGS50b2l0LmFwaS5SZXBsYWNlUmVzcG9uc2Ui",
+            "ABJeChFHZXRBY3RpdmVEZXZpY2VJRBIiLnRvaXQuYXBpLkdldEFjdGl2ZURl",
+            "dmljZUlEUmVxdWVzdBojLnRvaXQuYXBpLkdldEFjdGl2ZURldmljZUlEUmVz",
+            "cG9uc2UiABJXCg5IYXJkd2FyZUV2ZW50cxIfLnRvaXQuYXBpLkhhcmR3YXJl",
+            "RXZlbnRzUmVxdWVzdBogLnRvaXQuYXBpLkhhcmR3YXJlRXZlbnRzUmVzcG9u",
+            "c2UiADABMuwBCgxGbGFzaFN0YXRpb24SagoVQ2xhaW1IYXJkd2FyZUlkZW50",
+            "aXR5EiYudG9pdC5hcGkuQ2xhaW1IYXJkd2FyZUlkZW50aXR5UmVxdWVzdBon",
+            "LnRvaXQuYXBpLkNsYWltSGFyZHdhcmVJZGVudGl0eVJlc3BvbnNlIgAScAoX",
+            "U2V0SGFyZHdhcmVJZGVudGl0eUluZm8SKC50b2l0LmFwaS5TZXRIYXJkd2Fy",
+            "ZUlkZW50aXR5SW5mb1JlcXVlc3QaKS50b2l0LmFwaS5TZXRIYXJkd2FyZUlk",
+            "ZW50aXR5SW5mb1Jlc3BvbnNlIgBCYQoWaW8udG9pdC5wcm90by50b2l0LmFw",
+            "aUINSGFyZHdhcmVQcm90b1onZ2l0aHViLmNvbS90b2l0d2FyZS9hcGkvZ29s",
+            "YW5nL3RvaXQvYXBpqgIOVG9pdC5Qcm90by5BUEliBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Toit.Proto.Model.DeviceReflection.Descriptor, global::Toit.Proto.Model.DataReflection.Descriptor, global::Toit.Proto.Model.PubSub.MessageReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.ClaimRequest), global::Toit.Proto.API.ClaimRequest.Parser, new[]{ "HardwareId", "InitDeviceName", "OrganizationId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.ClaimRequest), global::Toit.Proto.API.ClaimRequest.Parser, new[]{ "HardwareId", "InitDeviceName", "OrganizationId", "SkipHardwareOnlineCheck" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.ClaimResponse), global::Toit.Proto.API.ClaimResponse.Parser, new[]{ "HardwareInfo", "DeviceId", "DeviceName", "OrganizationId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.ReplaceRequest), global::Toit.Proto.API.ReplaceRequest.Parser, new[]{ "NewHardwareId", "CurrentHardwareId", "DeviceId", "OrganizationId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.API.ReplaceResponse), global::Toit.Proto.API.ReplaceResponse.Parser, new[]{ "HardwareInfo", "OrganizationId" }, null, null, null, null),
@@ -137,6 +137,7 @@ namespace Toit.Proto.API {
       hardwareId_ = other.hardwareId_;
       initDeviceName_ = other.initDeviceName_;
       organizationId_ = other.organizationId_;
+      skipHardwareOnlineCheck_ = other.skipHardwareOnlineCheck_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -185,6 +186,18 @@ namespace Toit.Proto.API {
       }
     }
 
+    /// <summary>Field number for the "skip_hardware_online_check" field.</summary>
+    public const int SkipHardwareOnlineCheckFieldNumber = 4;
+    private bool skipHardwareOnlineCheck_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SkipHardwareOnlineCheck {
+      get { return skipHardwareOnlineCheck_; }
+      set {
+        skipHardwareOnlineCheck_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -203,6 +216,7 @@ namespace Toit.Proto.API {
       if (HardwareId != other.HardwareId) return false;
       if (InitDeviceName != other.InitDeviceName) return false;
       if (OrganizationId != other.OrganizationId) return false;
+      if (SkipHardwareOnlineCheck != other.SkipHardwareOnlineCheck) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -213,6 +227,7 @@ namespace Toit.Proto.API {
       if (HardwareId.Length != 0) hash ^= HardwareId.GetHashCode();
       if (InitDeviceName.Length != 0) hash ^= InitDeviceName.GetHashCode();
       if (OrganizationId.Length != 0) hash ^= OrganizationId.GetHashCode();
+      if (SkipHardwareOnlineCheck != false) hash ^= SkipHardwareOnlineCheck.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -243,6 +258,10 @@ namespace Toit.Proto.API {
         output.WriteRawTag(26);
         output.WriteBytes(OrganizationId);
       }
+      if (SkipHardwareOnlineCheck != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(SkipHardwareOnlineCheck);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -265,6 +284,10 @@ namespace Toit.Proto.API {
         output.WriteRawTag(26);
         output.WriteBytes(OrganizationId);
       }
+      if (SkipHardwareOnlineCheck != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(SkipHardwareOnlineCheck);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -283,6 +306,9 @@ namespace Toit.Proto.API {
       }
       if (OrganizationId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(OrganizationId);
+      }
+      if (SkipHardwareOnlineCheck != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -304,6 +330,9 @@ namespace Toit.Proto.API {
       }
       if (other.OrganizationId.Length != 0) {
         OrganizationId = other.OrganizationId;
+      }
+      if (other.SkipHardwareOnlineCheck != false) {
+        SkipHardwareOnlineCheck = other.SkipHardwareOnlineCheck;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -332,6 +361,10 @@ namespace Toit.Proto.API {
             OrganizationId = input.ReadBytes();
             break;
           }
+          case 32: {
+            SkipHardwareOnlineCheck = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -357,6 +390,10 @@ namespace Toit.Proto.API {
           }
           case 26: {
             OrganizationId = input.ReadBytes();
+            break;
+          }
+          case 32: {
+            SkipHardwareOnlineCheck = input.ReadBool();
             break;
           }
         }
