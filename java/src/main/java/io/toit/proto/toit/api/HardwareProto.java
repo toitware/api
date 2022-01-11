@@ -45,6 +45,12 @@ public final class HardwareProto {
      * @return The organizationId.
      */
     com.google.protobuf.ByteString getOrganizationId();
+
+    /**
+     * <code>bool skip_hardware_online_check = 4;</code>
+     * @return The skipHardwareOnlineCheck.
+     */
+    boolean getSkipHardwareOnlineCheck();
   }
   /**
    * Protobuf type {@code toit.api.ClaimRequest}
@@ -108,6 +114,11 @@ public final class HardwareProto {
             case 26: {
 
               organizationId_ = input.readBytes();
+              break;
+            }
+            case 32: {
+
+              skipHardwareOnlineCheck_ = input.readBool();
               break;
             }
             default: {
@@ -202,6 +213,16 @@ public final class HardwareProto {
       return organizationId_;
     }
 
+    public static final int SKIP_HARDWARE_ONLINE_CHECK_FIELD_NUMBER = 4;
+    private boolean skipHardwareOnlineCheck_;
+    /**
+     * <code>bool skip_hardware_online_check = 4;</code>
+     * @return The skipHardwareOnlineCheck.
+     */
+    public boolean getSkipHardwareOnlineCheck() {
+      return skipHardwareOnlineCheck_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -225,6 +246,9 @@ public final class HardwareProto {
       if (!organizationId_.isEmpty()) {
         output.writeBytes(3, organizationId_);
       }
+      if (skipHardwareOnlineCheck_ != false) {
+        output.writeBool(4, skipHardwareOnlineCheck_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -244,6 +268,10 @@ public final class HardwareProto {
       if (!organizationId_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(3, organizationId_);
+      }
+      if (skipHardwareOnlineCheck_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, skipHardwareOnlineCheck_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -266,6 +294,8 @@ public final class HardwareProto {
           .equals(other.getInitDeviceName())) return false;
       if (!getOrganizationId()
           .equals(other.getOrganizationId())) return false;
+      if (getSkipHardwareOnlineCheck()
+          != other.getSkipHardwareOnlineCheck()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -283,6 +313,9 @@ public final class HardwareProto {
       hash = (53 * hash) + getInitDeviceName().hashCode();
       hash = (37 * hash) + ORGANIZATION_ID_FIELD_NUMBER;
       hash = (53 * hash) + getOrganizationId().hashCode();
+      hash = (37 * hash) + SKIP_HARDWARE_ONLINE_CHECK_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSkipHardwareOnlineCheck());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -422,6 +455,8 @@ public final class HardwareProto {
 
         organizationId_ = com.google.protobuf.ByteString.EMPTY;
 
+        skipHardwareOnlineCheck_ = false;
+
         return this;
       }
 
@@ -451,6 +486,7 @@ public final class HardwareProto {
         result.hardwareId_ = hardwareId_;
         result.initDeviceName_ = initDeviceName_;
         result.organizationId_ = organizationId_;
+        result.skipHardwareOnlineCheck_ = skipHardwareOnlineCheck_;
         onBuilt();
         return result;
       }
@@ -508,6 +544,9 @@ public final class HardwareProto {
         }
         if (other.getOrganizationId() != com.google.protobuf.ByteString.EMPTY) {
           setOrganizationId(other.getOrganizationId());
+        }
+        if (other.getSkipHardwareOnlineCheck() != false) {
+          setSkipHardwareOnlineCheck(other.getSkipHardwareOnlineCheck());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -688,6 +727,36 @@ public final class HardwareProto {
       public Builder clearOrganizationId() {
         
         organizationId_ = getDefaultInstance().getOrganizationId();
+        onChanged();
+        return this;
+      }
+
+      private boolean skipHardwareOnlineCheck_ ;
+      /**
+       * <code>bool skip_hardware_online_check = 4;</code>
+       * @return The skipHardwareOnlineCheck.
+       */
+      public boolean getSkipHardwareOnlineCheck() {
+        return skipHardwareOnlineCheck_;
+      }
+      /**
+       * <code>bool skip_hardware_online_check = 4;</code>
+       * @param value The skipHardwareOnlineCheck to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSkipHardwareOnlineCheck(boolean value) {
+        
+        skipHardwareOnlineCheck_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool skip_hardware_online_check = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSkipHardwareOnlineCheck() {
+        
+        skipHardwareOnlineCheck_ = false;
         onChanged();
         return this;
       }
@@ -10535,63 +10604,64 @@ public final class HardwareProto {
       "\n\027toit/api/hardware.proto\022\010toit.api\032\027toi" +
       "t/model/device.proto\032\025toit/model/data.pr" +
       "oto\032\037toit/model/pubsub/message.proto\032\037go" +
-      "ogle/protobuf/timestamp.proto\"V\n\014ClaimRe" +
+      "ogle/protobuf/timestamp.proto\"z\n\014ClaimRe" +
       "quest\022\023\n\013hardware_id\030\001 \001(\014\022\030\n\020init_devic" +
-      "e_name\030\002 \001(\t\022\027\n\017organization_id\030\003 \001(\014\"\201\001" +
-      "\n\rClaimResponse\022/\n\rhardware_info\030\001 \001(\0132\030" +
-      ".toit.model.HardwareInfo\022\021\n\tdevice_id\030\002 " +
-      "\001(\014\022\023\n\013device_name\030\003 \001(\t\022\027\n\017organization" +
-      "_id\030\004 \001(\014\"r\n\016ReplaceRequest\022\027\n\017new_hardw" +
-      "are_id\030\001 \001(\014\022\033\n\023current_hardware_id\030\002 \001(" +
-      "\014\022\021\n\tdevice_id\030\003 \001(\014\022\027\n\017organization_id\030" +
-      "\004 \001(\014\"[\n\017ReplaceResponse\022/\n\rhardware_inf" +
-      "o\030\001 \001(\0132\030.toit.model.HardwareInfo\022\027\n\017org" +
-      "anization_id\030\002 \001(\014\"/\n\030GetActiveDeviceIDR" +
-      "equest\022\023\n\013hardware_id\030\001 \001(\014\".\n\031GetActive" +
-      "DeviceIDResponse\022\021\n\tdevice_id\030\001 \001(\014\"\267\003\n\r" +
-      "HardwareEvent\022\023\n\013hardware_id\030\001 \001(\014\022\020\n\010ev" +
-      "ent_id\030\002 \001(\014\022*\n\004type\030\003 \001(\0162\034.toit.api.Ha" +
-      "rdwareEvent.Type\022\016\n\006job_id\030\004 \001(\014\022,\n\010rece" +
-      "ived\030\005 \001(\0132\032.google.protobuf.Timestamp\022+" +
-      "\n\007created\030\006 \001(\0132\032.google.protobuf.Timest" +
-      "amp\022\021\n\tdevice_id\030\007 \001(\014\022\027\n\017organization_i" +
-      "d\030\010 \001(\014\022\"\n\003log\030\t \001(\0132\023.toit.model.LogDat" +
-      "aH\000\022*\n\007metrics\030\n \001(\0132\027.toit.model.Metric" +
-      "sDataH\000\022,\n\006pubsub\030\013 \001(\0132\032.toit.model.pub" +
-      "sub.MessageH\000\"6\n\004Type\022\013\n\007UNKNOWN\020\000\022\010\n\004LO" +
-      "GS\020\001\022\013\n\007METRICS\020\002\022\n\n\006PUBSUB\020\003B\006\n\004data\"\312\001" +
-      "\n\025HardwareEventsRequest\022\023\n\013hardware_id\030\001" +
-      " \001(\014\022\016\n\006job_id\030\002 \001(\014\022*\n\004type\030\003 \001(\0162\034.toi" +
-      "t.api.HardwareEvent.Type\022\r\n\005limit\030\004 \001(\004\022" +
-      "\017\n\007reverse\030\005 \001(\010\022\014\n\002id\030\006 \001(\014H\000\022(\n\002ts\030\007 \001" +
-      "(\0132\032.google.protobuf.TimestampH\000B\010\n\006offs" +
-      "et\"@\n\026HardwareEventsResponse\022&\n\005event\030\001 " +
-      "\001(\0132\027.toit.api.HardwareEvent\"<\n\034ClaimHar" +
-      "dwareIdentityRequest\022\034\n\024flash_station_se" +
-      "cret\030\001 \001(\t\"X\n\035ClaimHardwareIdentityRespo" +
-      "nse\0227\n\021hardware_identity\030\001 \001(\0132\034.toit.mo" +
-      "del.HardwareIdentity\"\203\001\n\036SetHardwareIden" +
-      "tityInfoRequest\022\034\n\024flash_station_secret\030" +
-      "\001 \001(\t\022\023\n\013hardware_id\030\002 \001(\014\022.\n\004info\030\003 \001(\013" +
-      "2 .toit.model.HardwareIdentityInfo\"!\n\037Se" +
-      "tHardwareIdentityInfoResponse2\310\002\n\017Hardwa" +
-      "reService\022:\n\005Claim\022\026.toit.api.ClaimReque" +
-      "st\032\027.toit.api.ClaimResponse\"\000\022@\n\007Replace" +
-      "\022\030.toit.api.ReplaceRequest\032\031.toit.api.Re" +
-      "placeResponse\"\000\022^\n\021GetActiveDeviceID\022\".t" +
-      "oit.api.GetActiveDeviceIDRequest\032#.toit." +
-      "api.GetActiveDeviceIDResponse\"\000\022W\n\016Hardw" +
-      "areEvents\022\037.toit.api.HardwareEventsReque" +
-      "st\032 .toit.api.HardwareEventsResponse\"\0000\001" +
-      "2\354\001\n\014FlashStation\022j\n\025ClaimHardwareIdenti" +
-      "ty\022&.toit.api.ClaimHardwareIdentityReque" +
-      "st\032\'.toit.api.ClaimHardwareIdentityRespo" +
-      "nse\"\000\022p\n\027SetHardwareIdentityInfo\022(.toit." +
-      "api.SetHardwareIdentityInfoRequest\032).toi" +
-      "t.api.SetHardwareIdentityInfoResponse\"\000B" +
-      "a\n\026io.toit.proto.toit.apiB\rHardwareProto" +
-      "Z\'github.com/toitware/api/golang/toit/ap" +
-      "i\252\002\016Toit.Proto.APIb\006proto3"
+      "e_name\030\002 \001(\t\022\027\n\017organization_id\030\003 \001(\014\022\"\n" +
+      "\032skip_hardware_online_check\030\004 \001(\010\"\201\001\n\rCl" +
+      "aimResponse\022/\n\rhardware_info\030\001 \001(\0132\030.toi" +
+      "t.model.HardwareInfo\022\021\n\tdevice_id\030\002 \001(\014\022" +
+      "\023\n\013device_name\030\003 \001(\t\022\027\n\017organization_id\030" +
+      "\004 \001(\014\"r\n\016ReplaceRequest\022\027\n\017new_hardware_" +
+      "id\030\001 \001(\014\022\033\n\023current_hardware_id\030\002 \001(\014\022\021\n" +
+      "\tdevice_id\030\003 \001(\014\022\027\n\017organization_id\030\004 \001(" +
+      "\014\"[\n\017ReplaceResponse\022/\n\rhardware_info\030\001 " +
+      "\001(\0132\030.toit.model.HardwareInfo\022\027\n\017organiz" +
+      "ation_id\030\002 \001(\014\"/\n\030GetActiveDeviceIDReque" +
+      "st\022\023\n\013hardware_id\030\001 \001(\014\".\n\031GetActiveDevi" +
+      "ceIDResponse\022\021\n\tdevice_id\030\001 \001(\014\"\267\003\n\rHard" +
+      "wareEvent\022\023\n\013hardware_id\030\001 \001(\014\022\020\n\010event_" +
+      "id\030\002 \001(\014\022*\n\004type\030\003 \001(\0162\034.toit.api.Hardwa" +
+      "reEvent.Type\022\016\n\006job_id\030\004 \001(\014\022,\n\010received" +
+      "\030\005 \001(\0132\032.google.protobuf.Timestamp\022+\n\007cr" +
+      "eated\030\006 \001(\0132\032.google.protobuf.Timestamp\022" +
+      "\021\n\tdevice_id\030\007 \001(\014\022\027\n\017organization_id\030\010 " +
+      "\001(\014\022\"\n\003log\030\t \001(\0132\023.toit.model.LogDataH\000\022" +
+      "*\n\007metrics\030\n \001(\0132\027.toit.model.MetricsDat" +
+      "aH\000\022,\n\006pubsub\030\013 \001(\0132\032.toit.model.pubsub." +
+      "MessageH\000\"6\n\004Type\022\013\n\007UNKNOWN\020\000\022\010\n\004LOGS\020\001" +
+      "\022\013\n\007METRICS\020\002\022\n\n\006PUBSUB\020\003B\006\n\004data\"\312\001\n\025Ha" +
+      "rdwareEventsRequest\022\023\n\013hardware_id\030\001 \001(\014" +
+      "\022\016\n\006job_id\030\002 \001(\014\022*\n\004type\030\003 \001(\0162\034.toit.ap" +
+      "i.HardwareEvent.Type\022\r\n\005limit\030\004 \001(\004\022\017\n\007r" +
+      "everse\030\005 \001(\010\022\014\n\002id\030\006 \001(\014H\000\022(\n\002ts\030\007 \001(\0132\032" +
+      ".google.protobuf.TimestampH\000B\010\n\006offset\"@" +
+      "\n\026HardwareEventsResponse\022&\n\005event\030\001 \001(\0132" +
+      "\027.toit.api.HardwareEvent\"<\n\034ClaimHardwar" +
+      "eIdentityRequest\022\034\n\024flash_station_secret" +
+      "\030\001 \001(\t\"X\n\035ClaimHardwareIdentityResponse\022" +
+      "7\n\021hardware_identity\030\001 \001(\0132\034.toit.model." +
+      "HardwareIdentity\"\203\001\n\036SetHardwareIdentity" +
+      "InfoRequest\022\034\n\024flash_station_secret\030\001 \001(" +
+      "\t\022\023\n\013hardware_id\030\002 \001(\014\022.\n\004info\030\003 \001(\0132 .t" +
+      "oit.model.HardwareIdentityInfo\"!\n\037SetHar" +
+      "dwareIdentityInfoResponse2\310\002\n\017HardwareSe" +
+      "rvice\022:\n\005Claim\022\026.toit.api.ClaimRequest\032\027" +
+      ".toit.api.ClaimResponse\"\000\022@\n\007Replace\022\030.t" +
+      "oit.api.ReplaceRequest\032\031.toit.api.Replac" +
+      "eResponse\"\000\022^\n\021GetActiveDeviceID\022\".toit." +
+      "api.GetActiveDeviceIDRequest\032#.toit.api." +
+      "GetActiveDeviceIDResponse\"\000\022W\n\016HardwareE" +
+      "vents\022\037.toit.api.HardwareEventsRequest\032 " +
+      ".toit.api.HardwareEventsResponse\"\0000\0012\354\001\n" +
+      "\014FlashStation\022j\n\025ClaimHardwareIdentity\022&" +
+      ".toit.api.ClaimHardwareIdentityRequest\032\'" +
+      ".toit.api.ClaimHardwareIdentityResponse\"" +
+      "\000\022p\n\027SetHardwareIdentityInfo\022(.toit.api." +
+      "SetHardwareIdentityInfoRequest\032).toit.ap" +
+      "i.SetHardwareIdentityInfoResponse\"\000Ba\n\026i" +
+      "o.toit.proto.toit.apiB\rHardwareProtoZ\'gi" +
+      "thub.com/toitware/api/golang/toit/api\252\002\016" +
+      "Toit.Proto.APIb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10606,7 +10676,7 @@ public final class HardwareProto {
     internal_static_toit_api_ClaimRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_ClaimRequest_descriptor,
-        new java.lang.String[] { "HardwareId", "InitDeviceName", "OrganizationId", });
+        new java.lang.String[] { "HardwareId", "InitDeviceName", "OrganizationId", "SkipHardwareOnlineCheck", });
     internal_static_toit_api_ClaimResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_toit_api_ClaimResponse_fieldAccessorTable = new
