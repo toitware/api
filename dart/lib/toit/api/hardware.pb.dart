@@ -44,6 +44,7 @@ class ClaimRequest extends $pb.GeneratedMessage {
                 ? ''
                 : 'organizationId',
             $pb.PbFieldType.OY)
+        ..aOB(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'skipHardwareOnlineCheck')
         ..hasRequiredFields = false;
 
   ClaimRequest._() : super();
@@ -51,6 +52,7 @@ class ClaimRequest extends $pb.GeneratedMessage {
     $core.List<$core.int>? hardwareId,
     $core.String? initDeviceName,
     $core.List<$core.int>? organizationId,
+    $core.bool? skipHardwareOnlineCheck,
   }) {
     final _result = create();
     if (hardwareId != null) {
@@ -61,6 +63,9 @@ class ClaimRequest extends $pb.GeneratedMessage {
     }
     if (organizationId != null) {
       _result.organizationId = organizationId;
+    }
+    if (skipHardwareOnlineCheck != null) {
+      _result.skipHardwareOnlineCheck = skipHardwareOnlineCheck;
     }
     return _result;
   }
@@ -126,6 +131,18 @@ class ClaimRequest extends $pb.GeneratedMessage {
   $core.bool hasOrganizationId() => $_has(2);
   @$pb.TagNumber(3)
   void clearOrganizationId() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.bool get skipHardwareOnlineCheck => $_getBF(3);
+  @$pb.TagNumber(4)
+  set skipHardwareOnlineCheck($core.bool v) {
+    $_setBool(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasSkipHardwareOnlineCheck() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearSkipHardwareOnlineCheck() => clearField(4);
 }
 
 class ClaimResponse extends $pb.GeneratedMessage {

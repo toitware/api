@@ -28,12 +28,19 @@ const ClaimRequest$json = const {
       '5': 12,
       '10': 'organizationId'
     },
+    const {
+      '1': 'skip_hardware_online_check',
+      '3': 4,
+      '4': 1,
+      '5': 8,
+      '10': 'skipHardwareOnlineCheck'
+    },
   ],
 };
 
 /// Descriptor for `ClaimRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List claimRequestDescriptor = $convert.base64Decode(
-    'CgxDbGFpbVJlcXVlc3QSHwoLaGFyZHdhcmVfaWQYASABKAxSCmhhcmR3YXJlSWQSKAoQaW5pdF9kZXZpY2VfbmFtZRgCIAEoCVIOaW5pdERldmljZU5hbWUSJwoPb3JnYW5pemF0aW9uX2lkGAMgASgMUg5vcmdhbml6YXRpb25JZA==');
+    'CgxDbGFpbVJlcXVlc3QSHwoLaGFyZHdhcmVfaWQYASABKAxSCmhhcmR3YXJlSWQSKAoQaW5pdF9kZXZpY2VfbmFtZRgCIAEoCVIOaW5pdERldmljZU5hbWUSJwoPb3JnYW5pemF0aW9uX2lkGAMgASgMUg5vcmdhbml6YXRpb25JZBI7Chpza2lwX2hhcmR3YXJlX29ubGluZV9jaGVjaxgEIAEoCFIXc2tpcEhhcmR3YXJlT25saW5lQ2hlY2s=');
 @$core.Deprecated('Use claimResponseDescriptor instead')
 const ClaimResponse$json = const {
   '1': 'ClaimResponse',
