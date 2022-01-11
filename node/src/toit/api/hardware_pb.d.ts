@@ -21,6 +21,9 @@ export class ClaimRequest extends jspb.Message {
   getOrganizationId_asB64(): string;
   setOrganizationId(value: Uint8Array | string): void;
 
+  getSkipHardwareOnlineCheck(): boolean;
+  setSkipHardwareOnlineCheck(value: boolean): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ClaimRequest.AsObject;
   static toObject(includeInstance: boolean, msg: ClaimRequest): ClaimRequest.AsObject;
@@ -36,6 +39,7 @@ export namespace ClaimRequest {
     hardwareId: Uint8Array | string,
     initDeviceName: string,
     organizationId: Uint8Array | string,
+    skipHardwareOnlineCheck: boolean,
   }
 }
 

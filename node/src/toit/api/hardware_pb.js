@@ -343,7 +343,8 @@ proto.toit.api.ClaimRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     hardwareId: msg.getHardwareId_asB64(),
     initDeviceName: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    organizationId: msg.getOrganizationId_asB64()
+    organizationId: msg.getOrganizationId_asB64(),
+    skipHardwareOnlineCheck: jspb.Message.getBooleanFieldWithDefault(msg, 4, false)
   };
 
   if (includeInstance) {
@@ -392,6 +393,10 @@ proto.toit.api.ClaimRequest.deserializeBinaryFromReader = function(msg, reader) 
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
       msg.setOrganizationId(value);
       break;
+    case 4:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setSkipHardwareOnlineCheck(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -439,6 +444,13 @@ proto.toit.api.ClaimRequest.serializeBinaryToWriter = function(message, writer) 
   if (f.length > 0) {
     writer.writeBytes(
       3,
+      f
+    );
+  }
+  f = message.getSkipHardwareOnlineCheck();
+  if (f) {
+    writer.writeBool(
+      4,
       f
     );
   }
@@ -544,6 +556,24 @@ proto.toit.api.ClaimRequest.prototype.getOrganizationId_asU8 = function() {
  */
 proto.toit.api.ClaimRequest.prototype.setOrganizationId = function(value) {
   return jspb.Message.setProto3BytesField(this, 3, value);
+};
+
+
+/**
+ * optional bool skip_hardware_online_check = 4;
+ * @return {boolean}
+ */
+proto.toit.api.ClaimRequest.prototype.getSkipHardwareOnlineCheck = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 4, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.toit.api.ClaimRequest} returns this
+ */
+proto.toit.api.ClaimRequest.prototype.setSkipHardwareOnlineCheck = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 4, value);
 };
 
 
