@@ -2869,6 +2869,1106 @@ public final class JobProto {
 
   }
 
+  public interface PubSubStatusOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.model.PubSubStatus)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes job_id = 1;</code>
+     * @return The jobId.
+     */
+    com.google.protobuf.ByteString getJobId();
+
+    /**
+     * <code>bytes subscription_id = 2;</code>
+     * @return The subscriptionId.
+     */
+    com.google.protobuf.ByteString getSubscriptionId();
+
+    /**
+     * <code>uint64 last_message_received_id = 3;</code>
+     * @return The lastMessageReceivedId.
+     */
+    long getLastMessageReceivedId();
+
+    /**
+     * <code>.google.protobuf.Timestamp last_message_received_created_at = 4;</code>
+     * @return Whether the lastMessageReceivedCreatedAt field is set.
+     */
+    boolean hasLastMessageReceivedCreatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp last_message_received_created_at = 4;</code>
+     * @return The lastMessageReceivedCreatedAt.
+     */
+    com.google.protobuf.Timestamp getLastMessageReceivedCreatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp last_message_received_created_at = 4;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getLastMessageReceivedCreatedAtOrBuilder();
+
+    /**
+     * <code>uint64 unacknowledged_messages = 5;</code>
+     * @return The unacknowledgedMessages.
+     */
+    long getUnacknowledgedMessages();
+
+    /**
+     * <code>.google.protobuf.Timestamp latest_message_in_topic_created_at = 6;</code>
+     * @return Whether the latestMessageInTopicCreatedAt field is set.
+     */
+    boolean hasLatestMessageInTopicCreatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp latest_message_in_topic_created_at = 6;</code>
+     * @return The latestMessageInTopicCreatedAt.
+     */
+    com.google.protobuf.Timestamp getLatestMessageInTopicCreatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp latest_message_in_topic_created_at = 6;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getLatestMessageInTopicCreatedAtOrBuilder();
+  }
+  /**
+   * Protobuf type {@code toit.model.PubSubStatus}
+   */
+  public  static final class PubSubStatus extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.model.PubSubStatus)
+      PubSubStatusOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PubSubStatus.newBuilder() to construct.
+    private PubSubStatus(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PubSubStatus() {
+      jobId_ = com.google.protobuf.ByteString.EMPTY;
+      subscriptionId_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PubSubStatus();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PubSubStatus(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+
+              jobId_ = input.readBytes();
+              break;
+            }
+            case 18: {
+
+              subscriptionId_ = input.readBytes();
+              break;
+            }
+            case 24: {
+
+              lastMessageReceivedId_ = input.readUInt64();
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (lastMessageReceivedCreatedAt_ != null) {
+                subBuilder = lastMessageReceivedCreatedAt_.toBuilder();
+              }
+              lastMessageReceivedCreatedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(lastMessageReceivedCreatedAt_);
+                lastMessageReceivedCreatedAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 40: {
+
+              unacknowledgedMessages_ = input.readUInt64();
+              break;
+            }
+            case 50: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (latestMessageInTopicCreatedAt_ != null) {
+                subBuilder = latestMessageInTopicCreatedAt_.toBuilder();
+              }
+              latestMessageInTopicCreatedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(latestMessageInTopicCreatedAt_);
+                latestMessageInTopicCreatedAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.model.JobProto.internal_static_toit_model_PubSubStatus_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.model.JobProto.internal_static_toit_model_PubSubStatus_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.model.JobProto.PubSubStatus.class, io.toit.proto.toit.model.JobProto.PubSubStatus.Builder.class);
+    }
+
+    public static final int JOB_ID_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString jobId_;
+    /**
+     * <code>bytes job_id = 1;</code>
+     * @return The jobId.
+     */
+    public com.google.protobuf.ByteString getJobId() {
+      return jobId_;
+    }
+
+    public static final int SUBSCRIPTION_ID_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString subscriptionId_;
+    /**
+     * <code>bytes subscription_id = 2;</code>
+     * @return The subscriptionId.
+     */
+    public com.google.protobuf.ByteString getSubscriptionId() {
+      return subscriptionId_;
+    }
+
+    public static final int LAST_MESSAGE_RECEIVED_ID_FIELD_NUMBER = 3;
+    private long lastMessageReceivedId_;
+    /**
+     * <code>uint64 last_message_received_id = 3;</code>
+     * @return The lastMessageReceivedId.
+     */
+    public long getLastMessageReceivedId() {
+      return lastMessageReceivedId_;
+    }
+
+    public static final int LAST_MESSAGE_RECEIVED_CREATED_AT_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp lastMessageReceivedCreatedAt_;
+    /**
+     * <code>.google.protobuf.Timestamp last_message_received_created_at = 4;</code>
+     * @return Whether the lastMessageReceivedCreatedAt field is set.
+     */
+    public boolean hasLastMessageReceivedCreatedAt() {
+      return lastMessageReceivedCreatedAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp last_message_received_created_at = 4;</code>
+     * @return The lastMessageReceivedCreatedAt.
+     */
+    public com.google.protobuf.Timestamp getLastMessageReceivedCreatedAt() {
+      return lastMessageReceivedCreatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastMessageReceivedCreatedAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp last_message_received_created_at = 4;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getLastMessageReceivedCreatedAtOrBuilder() {
+      return getLastMessageReceivedCreatedAt();
+    }
+
+    public static final int UNACKNOWLEDGED_MESSAGES_FIELD_NUMBER = 5;
+    private long unacknowledgedMessages_;
+    /**
+     * <code>uint64 unacknowledged_messages = 5;</code>
+     * @return The unacknowledgedMessages.
+     */
+    public long getUnacknowledgedMessages() {
+      return unacknowledgedMessages_;
+    }
+
+    public static final int LATEST_MESSAGE_IN_TOPIC_CREATED_AT_FIELD_NUMBER = 6;
+    private com.google.protobuf.Timestamp latestMessageInTopicCreatedAt_;
+    /**
+     * <code>.google.protobuf.Timestamp latest_message_in_topic_created_at = 6;</code>
+     * @return Whether the latestMessageInTopicCreatedAt field is set.
+     */
+    public boolean hasLatestMessageInTopicCreatedAt() {
+      return latestMessageInTopicCreatedAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp latest_message_in_topic_created_at = 6;</code>
+     * @return The latestMessageInTopicCreatedAt.
+     */
+    public com.google.protobuf.Timestamp getLatestMessageInTopicCreatedAt() {
+      return latestMessageInTopicCreatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : latestMessageInTopicCreatedAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp latest_message_in_topic_created_at = 6;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getLatestMessageInTopicCreatedAtOrBuilder() {
+      return getLatestMessageInTopicCreatedAt();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!jobId_.isEmpty()) {
+        output.writeBytes(1, jobId_);
+      }
+      if (!subscriptionId_.isEmpty()) {
+        output.writeBytes(2, subscriptionId_);
+      }
+      if (lastMessageReceivedId_ != 0L) {
+        output.writeUInt64(3, lastMessageReceivedId_);
+      }
+      if (lastMessageReceivedCreatedAt_ != null) {
+        output.writeMessage(4, getLastMessageReceivedCreatedAt());
+      }
+      if (unacknowledgedMessages_ != 0L) {
+        output.writeUInt64(5, unacknowledgedMessages_);
+      }
+      if (latestMessageInTopicCreatedAt_ != null) {
+        output.writeMessage(6, getLatestMessageInTopicCreatedAt());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!jobId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, jobId_);
+      }
+      if (!subscriptionId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, subscriptionId_);
+      }
+      if (lastMessageReceivedId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, lastMessageReceivedId_);
+      }
+      if (lastMessageReceivedCreatedAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getLastMessageReceivedCreatedAt());
+      }
+      if (unacknowledgedMessages_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(5, unacknowledgedMessages_);
+      }
+      if (latestMessageInTopicCreatedAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getLatestMessageInTopicCreatedAt());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.model.JobProto.PubSubStatus)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.model.JobProto.PubSubStatus other = (io.toit.proto.toit.model.JobProto.PubSubStatus) obj;
+
+      if (!getJobId()
+          .equals(other.getJobId())) return false;
+      if (!getSubscriptionId()
+          .equals(other.getSubscriptionId())) return false;
+      if (getLastMessageReceivedId()
+          != other.getLastMessageReceivedId()) return false;
+      if (hasLastMessageReceivedCreatedAt() != other.hasLastMessageReceivedCreatedAt()) return false;
+      if (hasLastMessageReceivedCreatedAt()) {
+        if (!getLastMessageReceivedCreatedAt()
+            .equals(other.getLastMessageReceivedCreatedAt())) return false;
+      }
+      if (getUnacknowledgedMessages()
+          != other.getUnacknowledgedMessages()) return false;
+      if (hasLatestMessageInTopicCreatedAt() != other.hasLatestMessageInTopicCreatedAt()) return false;
+      if (hasLatestMessageInTopicCreatedAt()) {
+        if (!getLatestMessageInTopicCreatedAt()
+            .equals(other.getLatestMessageInTopicCreatedAt())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + JOB_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getJobId().hashCode();
+      hash = (37 * hash) + SUBSCRIPTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubscriptionId().hashCode();
+      hash = (37 * hash) + LAST_MESSAGE_RECEIVED_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLastMessageReceivedId());
+      if (hasLastMessageReceivedCreatedAt()) {
+        hash = (37 * hash) + LAST_MESSAGE_RECEIVED_CREATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getLastMessageReceivedCreatedAt().hashCode();
+      }
+      hash = (37 * hash) + UNACKNOWLEDGED_MESSAGES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getUnacknowledgedMessages());
+      if (hasLatestMessageInTopicCreatedAt()) {
+        hash = (37 * hash) + LATEST_MESSAGE_IN_TOPIC_CREATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getLatestMessageInTopicCreatedAt().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.model.JobProto.PubSubStatus parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.model.JobProto.PubSubStatus parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.model.JobProto.PubSubStatus parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.model.JobProto.PubSubStatus parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.model.JobProto.PubSubStatus parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.model.JobProto.PubSubStatus parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.model.JobProto.PubSubStatus parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.model.JobProto.PubSubStatus parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.model.JobProto.PubSubStatus parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.model.JobProto.PubSubStatus parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.model.JobProto.PubSubStatus parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.model.JobProto.PubSubStatus parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.model.JobProto.PubSubStatus prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.model.PubSubStatus}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.model.PubSubStatus)
+        io.toit.proto.toit.model.JobProto.PubSubStatusOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.model.JobProto.internal_static_toit_model_PubSubStatus_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.model.JobProto.internal_static_toit_model_PubSubStatus_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.model.JobProto.PubSubStatus.class, io.toit.proto.toit.model.JobProto.PubSubStatus.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.model.JobProto.PubSubStatus.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        jobId_ = com.google.protobuf.ByteString.EMPTY;
+
+        subscriptionId_ = com.google.protobuf.ByteString.EMPTY;
+
+        lastMessageReceivedId_ = 0L;
+
+        if (lastMessageReceivedCreatedAtBuilder_ == null) {
+          lastMessageReceivedCreatedAt_ = null;
+        } else {
+          lastMessageReceivedCreatedAt_ = null;
+          lastMessageReceivedCreatedAtBuilder_ = null;
+        }
+        unacknowledgedMessages_ = 0L;
+
+        if (latestMessageInTopicCreatedAtBuilder_ == null) {
+          latestMessageInTopicCreatedAt_ = null;
+        } else {
+          latestMessageInTopicCreatedAt_ = null;
+          latestMessageInTopicCreatedAtBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.model.JobProto.internal_static_toit_model_PubSubStatus_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.model.JobProto.PubSubStatus getDefaultInstanceForType() {
+        return io.toit.proto.toit.model.JobProto.PubSubStatus.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.model.JobProto.PubSubStatus build() {
+        io.toit.proto.toit.model.JobProto.PubSubStatus result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.model.JobProto.PubSubStatus buildPartial() {
+        io.toit.proto.toit.model.JobProto.PubSubStatus result = new io.toit.proto.toit.model.JobProto.PubSubStatus(this);
+        result.jobId_ = jobId_;
+        result.subscriptionId_ = subscriptionId_;
+        result.lastMessageReceivedId_ = lastMessageReceivedId_;
+        if (lastMessageReceivedCreatedAtBuilder_ == null) {
+          result.lastMessageReceivedCreatedAt_ = lastMessageReceivedCreatedAt_;
+        } else {
+          result.lastMessageReceivedCreatedAt_ = lastMessageReceivedCreatedAtBuilder_.build();
+        }
+        result.unacknowledgedMessages_ = unacknowledgedMessages_;
+        if (latestMessageInTopicCreatedAtBuilder_ == null) {
+          result.latestMessageInTopicCreatedAt_ = latestMessageInTopicCreatedAt_;
+        } else {
+          result.latestMessageInTopicCreatedAt_ = latestMessageInTopicCreatedAtBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.model.JobProto.PubSubStatus) {
+          return mergeFrom((io.toit.proto.toit.model.JobProto.PubSubStatus)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.model.JobProto.PubSubStatus other) {
+        if (other == io.toit.proto.toit.model.JobProto.PubSubStatus.getDefaultInstance()) return this;
+        if (other.getJobId() != com.google.protobuf.ByteString.EMPTY) {
+          setJobId(other.getJobId());
+        }
+        if (other.getSubscriptionId() != com.google.protobuf.ByteString.EMPTY) {
+          setSubscriptionId(other.getSubscriptionId());
+        }
+        if (other.getLastMessageReceivedId() != 0L) {
+          setLastMessageReceivedId(other.getLastMessageReceivedId());
+        }
+        if (other.hasLastMessageReceivedCreatedAt()) {
+          mergeLastMessageReceivedCreatedAt(other.getLastMessageReceivedCreatedAt());
+        }
+        if (other.getUnacknowledgedMessages() != 0L) {
+          setUnacknowledgedMessages(other.getUnacknowledgedMessages());
+        }
+        if (other.hasLatestMessageInTopicCreatedAt()) {
+          mergeLatestMessageInTopicCreatedAt(other.getLatestMessageInTopicCreatedAt());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.model.JobProto.PubSubStatus parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.model.JobProto.PubSubStatus) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.ByteString jobId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes job_id = 1;</code>
+       * @return The jobId.
+       */
+      public com.google.protobuf.ByteString getJobId() {
+        return jobId_;
+      }
+      /**
+       * <code>bytes job_id = 1;</code>
+       * @param value The jobId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJobId(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        jobId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes job_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJobId() {
+        
+        jobId_ = getDefaultInstance().getJobId();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString subscriptionId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes subscription_id = 2;</code>
+       * @return The subscriptionId.
+       */
+      public com.google.protobuf.ByteString getSubscriptionId() {
+        return subscriptionId_;
+      }
+      /**
+       * <code>bytes subscription_id = 2;</code>
+       * @param value The subscriptionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriptionId(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subscriptionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes subscription_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubscriptionId() {
+        
+        subscriptionId_ = getDefaultInstance().getSubscriptionId();
+        onChanged();
+        return this;
+      }
+
+      private long lastMessageReceivedId_ ;
+      /**
+       * <code>uint64 last_message_received_id = 3;</code>
+       * @return The lastMessageReceivedId.
+       */
+      public long getLastMessageReceivedId() {
+        return lastMessageReceivedId_;
+      }
+      /**
+       * <code>uint64 last_message_received_id = 3;</code>
+       * @param value The lastMessageReceivedId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastMessageReceivedId(long value) {
+        
+        lastMessageReceivedId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 last_message_received_id = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastMessageReceivedId() {
+        
+        lastMessageReceivedId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp lastMessageReceivedCreatedAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastMessageReceivedCreatedAtBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp last_message_received_created_at = 4;</code>
+       * @return Whether the lastMessageReceivedCreatedAt field is set.
+       */
+      public boolean hasLastMessageReceivedCreatedAt() {
+        return lastMessageReceivedCreatedAtBuilder_ != null || lastMessageReceivedCreatedAt_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_message_received_created_at = 4;</code>
+       * @return The lastMessageReceivedCreatedAt.
+       */
+      public com.google.protobuf.Timestamp getLastMessageReceivedCreatedAt() {
+        if (lastMessageReceivedCreatedAtBuilder_ == null) {
+          return lastMessageReceivedCreatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastMessageReceivedCreatedAt_;
+        } else {
+          return lastMessageReceivedCreatedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_message_received_created_at = 4;</code>
+       */
+      public Builder setLastMessageReceivedCreatedAt(com.google.protobuf.Timestamp value) {
+        if (lastMessageReceivedCreatedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lastMessageReceivedCreatedAt_ = value;
+          onChanged();
+        } else {
+          lastMessageReceivedCreatedAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_message_received_created_at = 4;</code>
+       */
+      public Builder setLastMessageReceivedCreatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (lastMessageReceivedCreatedAtBuilder_ == null) {
+          lastMessageReceivedCreatedAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          lastMessageReceivedCreatedAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_message_received_created_at = 4;</code>
+       */
+      public Builder mergeLastMessageReceivedCreatedAt(com.google.protobuf.Timestamp value) {
+        if (lastMessageReceivedCreatedAtBuilder_ == null) {
+          if (lastMessageReceivedCreatedAt_ != null) {
+            lastMessageReceivedCreatedAt_ =
+              com.google.protobuf.Timestamp.newBuilder(lastMessageReceivedCreatedAt_).mergeFrom(value).buildPartial();
+          } else {
+            lastMessageReceivedCreatedAt_ = value;
+          }
+          onChanged();
+        } else {
+          lastMessageReceivedCreatedAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_message_received_created_at = 4;</code>
+       */
+      public Builder clearLastMessageReceivedCreatedAt() {
+        if (lastMessageReceivedCreatedAtBuilder_ == null) {
+          lastMessageReceivedCreatedAt_ = null;
+          onChanged();
+        } else {
+          lastMessageReceivedCreatedAt_ = null;
+          lastMessageReceivedCreatedAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_message_received_created_at = 4;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getLastMessageReceivedCreatedAtBuilder() {
+        
+        onChanged();
+        return getLastMessageReceivedCreatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_message_received_created_at = 4;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getLastMessageReceivedCreatedAtOrBuilder() {
+        if (lastMessageReceivedCreatedAtBuilder_ != null) {
+          return lastMessageReceivedCreatedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return lastMessageReceivedCreatedAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : lastMessageReceivedCreatedAt_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_message_received_created_at = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getLastMessageReceivedCreatedAtFieldBuilder() {
+        if (lastMessageReceivedCreatedAtBuilder_ == null) {
+          lastMessageReceivedCreatedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getLastMessageReceivedCreatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          lastMessageReceivedCreatedAt_ = null;
+        }
+        return lastMessageReceivedCreatedAtBuilder_;
+      }
+
+      private long unacknowledgedMessages_ ;
+      /**
+       * <code>uint64 unacknowledged_messages = 5;</code>
+       * @return The unacknowledgedMessages.
+       */
+      public long getUnacknowledgedMessages() {
+        return unacknowledgedMessages_;
+      }
+      /**
+       * <code>uint64 unacknowledged_messages = 5;</code>
+       * @param value The unacknowledgedMessages to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnacknowledgedMessages(long value) {
+        
+        unacknowledgedMessages_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 unacknowledged_messages = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUnacknowledgedMessages() {
+        
+        unacknowledgedMessages_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp latestMessageInTopicCreatedAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> latestMessageInTopicCreatedAtBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp latest_message_in_topic_created_at = 6;</code>
+       * @return Whether the latestMessageInTopicCreatedAt field is set.
+       */
+      public boolean hasLatestMessageInTopicCreatedAt() {
+        return latestMessageInTopicCreatedAtBuilder_ != null || latestMessageInTopicCreatedAt_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp latest_message_in_topic_created_at = 6;</code>
+       * @return The latestMessageInTopicCreatedAt.
+       */
+      public com.google.protobuf.Timestamp getLatestMessageInTopicCreatedAt() {
+        if (latestMessageInTopicCreatedAtBuilder_ == null) {
+          return latestMessageInTopicCreatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : latestMessageInTopicCreatedAt_;
+        } else {
+          return latestMessageInTopicCreatedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp latest_message_in_topic_created_at = 6;</code>
+       */
+      public Builder setLatestMessageInTopicCreatedAt(com.google.protobuf.Timestamp value) {
+        if (latestMessageInTopicCreatedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          latestMessageInTopicCreatedAt_ = value;
+          onChanged();
+        } else {
+          latestMessageInTopicCreatedAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp latest_message_in_topic_created_at = 6;</code>
+       */
+      public Builder setLatestMessageInTopicCreatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (latestMessageInTopicCreatedAtBuilder_ == null) {
+          latestMessageInTopicCreatedAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          latestMessageInTopicCreatedAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp latest_message_in_topic_created_at = 6;</code>
+       */
+      public Builder mergeLatestMessageInTopicCreatedAt(com.google.protobuf.Timestamp value) {
+        if (latestMessageInTopicCreatedAtBuilder_ == null) {
+          if (latestMessageInTopicCreatedAt_ != null) {
+            latestMessageInTopicCreatedAt_ =
+              com.google.protobuf.Timestamp.newBuilder(latestMessageInTopicCreatedAt_).mergeFrom(value).buildPartial();
+          } else {
+            latestMessageInTopicCreatedAt_ = value;
+          }
+          onChanged();
+        } else {
+          latestMessageInTopicCreatedAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp latest_message_in_topic_created_at = 6;</code>
+       */
+      public Builder clearLatestMessageInTopicCreatedAt() {
+        if (latestMessageInTopicCreatedAtBuilder_ == null) {
+          latestMessageInTopicCreatedAt_ = null;
+          onChanged();
+        } else {
+          latestMessageInTopicCreatedAt_ = null;
+          latestMessageInTopicCreatedAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp latest_message_in_topic_created_at = 6;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getLatestMessageInTopicCreatedAtBuilder() {
+        
+        onChanged();
+        return getLatestMessageInTopicCreatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp latest_message_in_topic_created_at = 6;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getLatestMessageInTopicCreatedAtOrBuilder() {
+        if (latestMessageInTopicCreatedAtBuilder_ != null) {
+          return latestMessageInTopicCreatedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return latestMessageInTopicCreatedAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : latestMessageInTopicCreatedAt_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp latest_message_in_topic_created_at = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getLatestMessageInTopicCreatedAtFieldBuilder() {
+        if (latestMessageInTopicCreatedAtBuilder_ == null) {
+          latestMessageInTopicCreatedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getLatestMessageInTopicCreatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          latestMessageInTopicCreatedAt_ = null;
+        }
+        return latestMessageInTopicCreatedAtBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.model.PubSubStatus)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.model.PubSubStatus)
+    private static final io.toit.proto.toit.model.JobProto.PubSubStatus DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.model.JobProto.PubSubStatus();
+    }
+
+    public static io.toit.proto.toit.model.JobProto.PubSubStatus getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PubSubStatus>
+        PARSER = new com.google.protobuf.AbstractParser<PubSubStatus>() {
+      @java.lang.Override
+      public PubSubStatus parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PubSubStatus(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PubSubStatus> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PubSubStatus> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.model.JobProto.PubSubStatus getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CompilationInfoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:toit.model.CompilationInfo)
       com.google.protobuf.MessageOrBuilder {
@@ -20406,6 +21506,11 @@ public final class JobProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_toit_model_JobConfig_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_model_PubSubStatus_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_model_PubSubStatus_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_toit_model_CompilationInfo_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -20542,68 +21647,75 @@ public final class JobProto {
       "gle.protobuf.Timestamp\0225\n\020compilation_in" +
       "fo\030\n \001(\0132\033.toit.model.CompilationInfo\022%\n" +
       "\006pubsub\030\013 \001(\0132\025.toit.model.JobPubSub\022\"\n\005" +
-      "files\030\014 \003(\0132\023.toit.model.JobFile\"F\n\017Comp" +
-      "ilationInfo\022\022\n\nprogram_id\030\001 \001(\014\022\013\n\003sdk\030\002" +
-      " \001(\t\022\022\n\ncreator_id\030\003 \001(\014\"e\n\014JobResources" +
-      "\022*\n\006memory\030\001 \001(\0132\032.toit.model.MemoryReso" +
-      "urce\022)\n\010features\030\002 \001(\0132\027.toit.model.JobF" +
-      "eatures\"2\n\013JobFeatures\022#\n\003gps\030\001 \001(\0132\026.to" +
-      "it.model.GPSFeature\">\n\007JobFile\022%\n\004type\030\001" +
-      " \001(\0162\027.toit.model.JobFileType\022\014\n\004path\030\002 " +
-      "\001(\t\"\035\n\nGPSFeature\022\017\n\007enabled\030\001 \001(\010\" \n\016Me" +
-      "moryResource\022\016\n\006memory\030\001 \001(\003\"\242\003\n\013JobTrig" +
-      "gers\0220\n\non_install\030\001 \001(\0132\034.toit.model.On" +
-      "InstallTrigger\022*\n\007on_boot\030\002 \001(\0132\031.toit.m" +
-      "odel.OnBootTrigger\022-\n\010interval\030\003 \001(\0132\033.t" +
-      "oit.model.IntervalTrigger\022%\n\004cron\030\004 \001(\0132" +
-      "\027.toit.model.CronTrigger\0221\n\010movement\030\005 \001" +
-      "(\0132\033.toit.model.MovementTriggerB\002\030\001\022-\n\006b" +
-      "utton\030\006 \001(\0132\031.toit.model.ButtonTriggerB\002" +
-      "\030\001\022+\n\007network\030\007 \001(\0132\032.toit.model.Network" +
-      "Trigger\022)\n\006pubsub\030\010 \001(\0132\031.toit.model.Pub" +
-      "SubTrigger\022%\n\004gpio\030\t \001(\0132\027.toit.model.GP" +
-      "IOTrigger\"\232\001\n\013GPIOTrigger\022)\n\004pins\030\001 \003(\0132" +
-      "\033.toit.model.GPIOTrigger.Pin\032`\n\003Pin\0220\n\005l" +
-      "evel\030\001 \001(\0162!.toit.model.GPIOTrigger.Pin." +
-      "Level\022\013\n\003num\030\002 \001(\r\"\032\n\005Level\022\010\n\004HIGH\020\000\022\007\n" +
-      "\003LOW\020\001\"#\n\020OnInstallTrigger\022\017\n\007enabled\030\001 " +
-      "\001(\010\" \n\rOnBootTrigger\022\017\n\007enabled\030\001 \001(\010\">\n" +
-      "\017IntervalTrigger\022+\n\010interval\030\001 \001(\0132\031.goo" +
-      "gle.protobuf.Duration\"2\n\013CronTrigger\022#\n\005" +
-      "specs\030\001 \003(\0132\024.toit.model.CronSpec\"!\n\017Mov" +
-      "ementTrigger\022\016\n\006shaken\030\001 \001(\010\" \n\rButtonTr" +
-      "igger\022\017\n\007buttons\030\001 \003(\t\"#\n\016NetworkTrigger" +
-      "\022\021\n\tconnected\030\001 \001(\010\"9\n\rPubSubTrigger\022(\n\006" +
-      "topics\030\001 \003(\0132\030.toit.model.pubsub.Topic\"L" +
-      "\n\010CronSpec\022\023\n\013cron_string\030\001 \001(\t\022+\n\tsched" +
-      "ules\030\002 \003(\0132\030.toit.model.CronSchedule\"\324\001\n" +
-      "\014CronSchedule\022\016\n\006second\030\001 \001(\020\022\016\n\006minute\030" +
-      "\002 \001(\020\022\014\n\004hour\030\003 \001(\020\022\024\n\014day_of_month\030\004 \001(" +
-      "\020\022\r\n\005month\030\005 \001(\020\022\023\n\013day_of_week\030\006 \001(\020\022.\n" +
-      "\nvalid_from\030\007 \001(\0132\032.google.protobuf.Time" +
-      "stamp\022,\n\010valid_to\030\010 \001(\0132\032.google.protobu" +
-      "f.Timestamp\"\213\001\n\tJobPubSub\0229\n\rsubscriptio" +
-      "ns\030\001 \003(\0132\".toit.model.JobPubSub.Subscrip" +
-      "tion\032C\n\014Subscription\022\'\n\005topic\030\001 \001(\0132\030.to" +
-      "it.model.pubsub.Topic\022\n\n\002id\030\002 \001(\014\"m\n\tJob" +
-      "Status\022\016\n\006job_id\030\003 \001(\014\022#\n\005state\030\001 \001(\0162\024." +
-      "toit.model.JobState\022+\n\007updated\030\002 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\"W\n\007JobInfo\022%\n\006c" +
-      "onfig\030\001 \001(\0132\025.toit.model.JobConfig\022%\n\006st" +
-      "atus\030\002 \001(\0132\025.toit.model.JobStatus*d\n\014Job" +
-      "GoalState\022\032\n\026JOB_GOAL_STATE_UNKNOWN\020\000\022\032\n" +
-      "\026JOB_GOAL_STATE_INSTALL\020\001\022\034\n\030JOB_GOAL_ST" +
-      "ATE_UNINSTALL\020\002*B\n\013JobFileType\022\031\n\025JOB_FI" +
-      "LE_TYPE_UNKNOWN\020\000\022\030\n\024JOB_FILE_TYPE_SYSTE" +
-      "M\020\001*\205\001\n\010JobState\022\025\n\021JOB_STATE_UNKNOWN\020\000\022" +
-      "\031\n\025JOB_STATE_UNINSTALLED\020\001\022\030\n\024JOB_STATE_" +
-      "INSTALLING\020\002\022\027\n\023JOB_STATE_INSTALLED\020\003\022\024\n" +
-      "\020JOB_STATE_FAILED\020\004*m\n\rJobChangeType\022\026\n\022" +
-      "JOB_CHANGE_UNKNOWN\020\000\022\024\n\020JOB_CHANGE_ADDED" +
-      "\020\001\022\026\n\022JOB_CHANGE_DELETED\020\002\022\026\n\022JOB_CHANGE" +
-      "_CHANGED\020\003Bb\n\030io.toit.proto.toit.modelB\010" +
-      "JobProtoZ)github.com/toitware/api/golang" +
-      "/toit/model\252\002\020Toit.Proto.Modelb\006proto3"
+      "files\030\014 \003(\0132\023.toit.model.JobFile\"\210\002\n\014Pub" +
+      "SubStatus\022\016\n\006job_id\030\001 \001(\014\022\027\n\017subscriptio" +
+      "n_id\030\002 \001(\014\022 \n\030last_message_received_id\030\003" +
+      " \001(\004\022D\n last_message_received_created_at" +
+      "\030\004 \001(\0132\032.google.protobuf.Timestamp\022\037\n\027un" +
+      "acknowledged_messages\030\005 \001(\004\022F\n\"latest_me" +
+      "ssage_in_topic_created_at\030\006 \001(\0132\032.google" +
+      ".protobuf.Timestamp\"F\n\017CompilationInfo\022\022" +
+      "\n\nprogram_id\030\001 \001(\014\022\013\n\003sdk\030\002 \001(\t\022\022\n\ncreat" +
+      "or_id\030\003 \001(\014\"e\n\014JobResources\022*\n\006memory\030\001 " +
+      "\001(\0132\032.toit.model.MemoryResource\022)\n\010featu" +
+      "res\030\002 \001(\0132\027.toit.model.JobFeatures\"2\n\013Jo" +
+      "bFeatures\022#\n\003gps\030\001 \001(\0132\026.toit.model.GPSF" +
+      "eature\">\n\007JobFile\022%\n\004type\030\001 \001(\0162\027.toit.m" +
+      "odel.JobFileType\022\014\n\004path\030\002 \001(\t\"\035\n\nGPSFea" +
+      "ture\022\017\n\007enabled\030\001 \001(\010\" \n\016MemoryResource\022" +
+      "\016\n\006memory\030\001 \001(\003\"\242\003\n\013JobTriggers\0220\n\non_in" +
+      "stall\030\001 \001(\0132\034.toit.model.OnInstallTrigge" +
+      "r\022*\n\007on_boot\030\002 \001(\0132\031.toit.model.OnBootTr" +
+      "igger\022-\n\010interval\030\003 \001(\0132\033.toit.model.Int" +
+      "ervalTrigger\022%\n\004cron\030\004 \001(\0132\027.toit.model." +
+      "CronTrigger\0221\n\010movement\030\005 \001(\0132\033.toit.mod" +
+      "el.MovementTriggerB\002\030\001\022-\n\006button\030\006 \001(\0132\031" +
+      ".toit.model.ButtonTriggerB\002\030\001\022+\n\007network" +
+      "\030\007 \001(\0132\032.toit.model.NetworkTrigger\022)\n\006pu" +
+      "bsub\030\010 \001(\0132\031.toit.model.PubSubTrigger\022%\n" +
+      "\004gpio\030\t \001(\0132\027.toit.model.GPIOTrigger\"\232\001\n" +
+      "\013GPIOTrigger\022)\n\004pins\030\001 \003(\0132\033.toit.model." +
+      "GPIOTrigger.Pin\032`\n\003Pin\0220\n\005level\030\001 \001(\0162!." +
+      "toit.model.GPIOTrigger.Pin.Level\022\013\n\003num\030" +
+      "\002 \001(\r\"\032\n\005Level\022\010\n\004HIGH\020\000\022\007\n\003LOW\020\001\"#\n\020OnI" +
+      "nstallTrigger\022\017\n\007enabled\030\001 \001(\010\" \n\rOnBoot" +
+      "Trigger\022\017\n\007enabled\030\001 \001(\010\">\n\017IntervalTrig" +
+      "ger\022+\n\010interval\030\001 \001(\0132\031.google.protobuf." +
+      "Duration\"2\n\013CronTrigger\022#\n\005specs\030\001 \003(\0132\024" +
+      ".toit.model.CronSpec\"!\n\017MovementTrigger\022" +
+      "\016\n\006shaken\030\001 \001(\010\" \n\rButtonTrigger\022\017\n\007butt" +
+      "ons\030\001 \003(\t\"#\n\016NetworkTrigger\022\021\n\tconnected" +
+      "\030\001 \001(\010\"9\n\rPubSubTrigger\022(\n\006topics\030\001 \003(\0132" +
+      "\030.toit.model.pubsub.Topic\"L\n\010CronSpec\022\023\n" +
+      "\013cron_string\030\001 \001(\t\022+\n\tschedules\030\002 \003(\0132\030." +
+      "toit.model.CronSchedule\"\324\001\n\014CronSchedule" +
+      "\022\016\n\006second\030\001 \001(\020\022\016\n\006minute\030\002 \001(\020\022\014\n\004hour" +
+      "\030\003 \001(\020\022\024\n\014day_of_month\030\004 \001(\020\022\r\n\005month\030\005 " +
+      "\001(\020\022\023\n\013day_of_week\030\006 \001(\020\022.\n\nvalid_from\030\007" +
+      " \001(\0132\032.google.protobuf.Timestamp\022,\n\010vali" +
+      "d_to\030\010 \001(\0132\032.google.protobuf.Timestamp\"\213" +
+      "\001\n\tJobPubSub\0229\n\rsubscriptions\030\001 \003(\0132\".to" +
+      "it.model.JobPubSub.Subscription\032C\n\014Subsc" +
+      "ription\022\'\n\005topic\030\001 \001(\0132\030.toit.model.pubs" +
+      "ub.Topic\022\n\n\002id\030\002 \001(\014\"m\n\tJobStatus\022\016\n\006job" +
+      "_id\030\003 \001(\014\022#\n\005state\030\001 \001(\0162\024.toit.model.Jo" +
+      "bState\022+\n\007updated\030\002 \001(\0132\032.google.protobu" +
+      "f.Timestamp\"W\n\007JobInfo\022%\n\006config\030\001 \001(\0132\025" +
+      ".toit.model.JobConfig\022%\n\006status\030\002 \001(\0132\025." +
+      "toit.model.JobStatus*d\n\014JobGoalState\022\032\n\026" +
+      "JOB_GOAL_STATE_UNKNOWN\020\000\022\032\n\026JOB_GOAL_STA" +
+      "TE_INSTALL\020\001\022\034\n\030JOB_GOAL_STATE_UNINSTALL" +
+      "\020\002*B\n\013JobFileType\022\031\n\025JOB_FILE_TYPE_UNKNO" +
+      "WN\020\000\022\030\n\024JOB_FILE_TYPE_SYSTEM\020\001*\205\001\n\010JobSt" +
+      "ate\022\025\n\021JOB_STATE_UNKNOWN\020\000\022\031\n\025JOB_STATE_" +
+      "UNINSTALLED\020\001\022\030\n\024JOB_STATE_INSTALLING\020\002\022" +
+      "\027\n\023JOB_STATE_INSTALLED\020\003\022\024\n\020JOB_STATE_FA" +
+      "ILED\020\004*m\n\rJobChangeType\022\026\n\022JOB_CHANGE_UN" +
+      "KNOWN\020\000\022\024\n\020JOB_CHANGE_ADDED\020\001\022\026\n\022JOB_CHA" +
+      "NGE_DELETED\020\002\022\026\n\022JOB_CHANGE_CHANGED\020\003Bb\n" +
+      "\030io.toit.proto.toit.modelB\010JobProtoZ)git" +
+      "hub.com/toitware/api/golang/toit/model\252\002" +
+      "\020Toit.Proto.Modelb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -20618,50 +21730,56 @@ public final class JobProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_JobConfig_descriptor,
         new java.lang.String[] { "JobId", "Name", "CompilationId", "GoalState", "Resources", "Triggers", "Created", "Updated", "CompilationInfo", "Pubsub", "Files", });
-    internal_static_toit_model_CompilationInfo_descriptor =
+    internal_static_toit_model_PubSubStatus_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_toit_model_PubSubStatus_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_model_PubSubStatus_descriptor,
+        new java.lang.String[] { "JobId", "SubscriptionId", "LastMessageReceivedId", "LastMessageReceivedCreatedAt", "UnacknowledgedMessages", "LatestMessageInTopicCreatedAt", });
+    internal_static_toit_model_CompilationInfo_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_toit_model_CompilationInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_CompilationInfo_descriptor,
         new java.lang.String[] { "ProgramId", "Sdk", "CreatorId", });
     internal_static_toit_model_JobResources_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_toit_model_JobResources_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_JobResources_descriptor,
         new java.lang.String[] { "Memory", "Features", });
     internal_static_toit_model_JobFeatures_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_toit_model_JobFeatures_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_JobFeatures_descriptor,
         new java.lang.String[] { "Gps", });
     internal_static_toit_model_JobFile_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_toit_model_JobFile_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_JobFile_descriptor,
         new java.lang.String[] { "Type", "Path", });
     internal_static_toit_model_GPSFeature_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_toit_model_GPSFeature_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_GPSFeature_descriptor,
         new java.lang.String[] { "Enabled", });
     internal_static_toit_model_MemoryResource_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_toit_model_MemoryResource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_MemoryResource_descriptor,
         new java.lang.String[] { "Memory", });
     internal_static_toit_model_JobTriggers_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_toit_model_JobTriggers_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_JobTriggers_descriptor,
         new java.lang.String[] { "OnInstall", "OnBoot", "Interval", "Cron", "Movement", "Button", "Network", "Pubsub", "Gpio", });
     internal_static_toit_model_GPIOTrigger_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_toit_model_GPIOTrigger_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_GPIOTrigger_descriptor,
@@ -20673,67 +21791,67 @@ public final class JobProto {
         internal_static_toit_model_GPIOTrigger_Pin_descriptor,
         new java.lang.String[] { "Level", "Num", });
     internal_static_toit_model_OnInstallTrigger_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_toit_model_OnInstallTrigger_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_OnInstallTrigger_descriptor,
         new java.lang.String[] { "Enabled", });
     internal_static_toit_model_OnBootTrigger_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_toit_model_OnBootTrigger_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_OnBootTrigger_descriptor,
         new java.lang.String[] { "Enabled", });
     internal_static_toit_model_IntervalTrigger_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_toit_model_IntervalTrigger_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_IntervalTrigger_descriptor,
         new java.lang.String[] { "Interval", });
     internal_static_toit_model_CronTrigger_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_toit_model_CronTrigger_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_CronTrigger_descriptor,
         new java.lang.String[] { "Specs", });
     internal_static_toit_model_MovementTrigger_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_toit_model_MovementTrigger_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_MovementTrigger_descriptor,
         new java.lang.String[] { "Shaken", });
     internal_static_toit_model_ButtonTrigger_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_toit_model_ButtonTrigger_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_ButtonTrigger_descriptor,
         new java.lang.String[] { "Buttons", });
     internal_static_toit_model_NetworkTrigger_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_toit_model_NetworkTrigger_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_NetworkTrigger_descriptor,
         new java.lang.String[] { "Connected", });
     internal_static_toit_model_PubSubTrigger_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_toit_model_PubSubTrigger_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_PubSubTrigger_descriptor,
         new java.lang.String[] { "Topics", });
     internal_static_toit_model_CronSpec_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_toit_model_CronSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_CronSpec_descriptor,
         new java.lang.String[] { "CronString", "Schedules", });
     internal_static_toit_model_CronSchedule_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_toit_model_CronSchedule_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_CronSchedule_descriptor,
         new java.lang.String[] { "Second", "Minute", "Hour", "DayOfMonth", "Month", "DayOfWeek", "ValidFrom", "ValidTo", });
     internal_static_toit_model_JobPubSub_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_toit_model_JobPubSub_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_JobPubSub_descriptor,
@@ -20745,13 +21863,13 @@ public final class JobProto {
         internal_static_toit_model_JobPubSub_Subscription_descriptor,
         new java.lang.String[] { "Topic", "Id", });
     internal_static_toit_model_JobStatus_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_toit_model_JobStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_JobStatus_descriptor,
         new java.lang.String[] { "JobId", "State", "Updated", });
     internal_static_toit_model_JobInfo_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_toit_model_JobInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_JobInfo_descriptor,

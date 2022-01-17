@@ -25093,6 +25093,1186 @@ public final class DeviceProto {
 
   }
 
+  public interface ListPubSubStatusRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.ListPubSubStatusRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes device_id = 1;</code>
+     * @return The deviceId.
+     */
+    com.google.protobuf.ByteString getDeviceId();
+
+    /**
+     * <code>bytes job_id = 2;</code>
+     * @return The jobId.
+     */
+    com.google.protobuf.ByteString getJobId();
+  }
+  /**
+   * Protobuf type {@code toit.api.ListPubSubStatusRequest}
+   */
+  public  static final class ListPubSubStatusRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.api.ListPubSubStatusRequest)
+      ListPubSubStatusRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListPubSubStatusRequest.newBuilder() to construct.
+    private ListPubSubStatusRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListPubSubStatusRequest() {
+      deviceId_ = com.google.protobuf.ByteString.EMPTY;
+      jobId_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListPubSubStatusRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListPubSubStatusRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+
+              deviceId_ = input.readBytes();
+              break;
+            }
+            case 18: {
+
+              jobId_ = input.readBytes();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.api.DeviceProto.internal_static_toit_api_ListPubSubStatusRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.api.DeviceProto.internal_static_toit_api_ListPubSubStatusRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest.class, io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest.Builder.class);
+    }
+
+    public static final int DEVICE_ID_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString deviceId_;
+    /**
+     * <code>bytes device_id = 1;</code>
+     * @return The deviceId.
+     */
+    public com.google.protobuf.ByteString getDeviceId() {
+      return deviceId_;
+    }
+
+    public static final int JOB_ID_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString jobId_;
+    /**
+     * <code>bytes job_id = 2;</code>
+     * @return The jobId.
+     */
+    public com.google.protobuf.ByteString getJobId() {
+      return jobId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!deviceId_.isEmpty()) {
+        output.writeBytes(1, deviceId_);
+      }
+      if (!jobId_.isEmpty()) {
+        output.writeBytes(2, jobId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!deviceId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, deviceId_);
+      }
+      if (!jobId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, jobId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest other = (io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest) obj;
+
+      if (!getDeviceId()
+          .equals(other.getDeviceId())) return false;
+      if (!getJobId()
+          .equals(other.getJobId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DEVICE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDeviceId().hashCode();
+      hash = (37 * hash) + JOB_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getJobId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.api.ListPubSubStatusRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.api.ListPubSubStatusRequest)
+        io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.DeviceProto.internal_static_toit_api_ListPubSubStatusRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.DeviceProto.internal_static_toit_api_ListPubSubStatusRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest.class, io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        deviceId_ = com.google.protobuf.ByteString.EMPTY;
+
+        jobId_ = com.google.protobuf.ByteString.EMPTY;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.api.DeviceProto.internal_static_toit_api_ListPubSubStatusRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest getDefaultInstanceForType() {
+        return io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest build() {
+        io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest buildPartial() {
+        io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest result = new io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest(this);
+        result.deviceId_ = deviceId_;
+        result.jobId_ = jobId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest) {
+          return mergeFrom((io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest other) {
+        if (other == io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest.getDefaultInstance()) return this;
+        if (other.getDeviceId() != com.google.protobuf.ByteString.EMPTY) {
+          setDeviceId(other.getDeviceId());
+        }
+        if (other.getJobId() != com.google.protobuf.ByteString.EMPTY) {
+          setJobId(other.getJobId());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.ByteString deviceId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes device_id = 1;</code>
+       * @return The deviceId.
+       */
+      public com.google.protobuf.ByteString getDeviceId() {
+        return deviceId_;
+      }
+      /**
+       * <code>bytes device_id = 1;</code>
+       * @param value The deviceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeviceId(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        deviceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes device_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeviceId() {
+        
+        deviceId_ = getDefaultInstance().getDeviceId();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString jobId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes job_id = 2;</code>
+       * @return The jobId.
+       */
+      public com.google.protobuf.ByteString getJobId() {
+        return jobId_;
+      }
+      /**
+       * <code>bytes job_id = 2;</code>
+       * @param value The jobId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJobId(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        jobId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes job_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJobId() {
+        
+        jobId_ = getDefaultInstance().getJobId();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.api.ListPubSubStatusRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.api.ListPubSubStatusRequest)
+    private static final io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest();
+    }
+
+    public static io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListPubSubStatusRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListPubSubStatusRequest>() {
+      @java.lang.Override
+      public ListPubSubStatusRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListPubSubStatusRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListPubSubStatusRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListPubSubStatusRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListPubSubStatusResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:toit.api.ListPubSubStatusResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.toit.model.PubSubStatus status = 1;</code>
+     * @return Whether the status field is set.
+     */
+    boolean hasStatus();
+    /**
+     * <code>.toit.model.PubSubStatus status = 1;</code>
+     * @return The status.
+     */
+    io.toit.proto.toit.model.JobProto.PubSubStatus getStatus();
+    /**
+     * <code>.toit.model.PubSubStatus status = 1;</code>
+     */
+    io.toit.proto.toit.model.JobProto.PubSubStatusOrBuilder getStatusOrBuilder();
+  }
+  /**
+   * Protobuf type {@code toit.api.ListPubSubStatusResponse}
+   */
+  public  static final class ListPubSubStatusResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:toit.api.ListPubSubStatusResponse)
+      ListPubSubStatusResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListPubSubStatusResponse.newBuilder() to construct.
+    private ListPubSubStatusResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListPubSubStatusResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListPubSubStatusResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListPubSubStatusResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              io.toit.proto.toit.model.JobProto.PubSubStatus.Builder subBuilder = null;
+              if (status_ != null) {
+                subBuilder = status_.toBuilder();
+              }
+              status_ = input.readMessage(io.toit.proto.toit.model.JobProto.PubSubStatus.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(status_);
+                status_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.toit.proto.toit.api.DeviceProto.internal_static_toit_api_ListPubSubStatusResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.toit.proto.toit.api.DeviceProto.internal_static_toit_api_ListPubSubStatusResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse.class, io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse.Builder.class);
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 1;
+    private io.toit.proto.toit.model.JobProto.PubSubStatus status_;
+    /**
+     * <code>.toit.model.PubSubStatus status = 1;</code>
+     * @return Whether the status field is set.
+     */
+    public boolean hasStatus() {
+      return status_ != null;
+    }
+    /**
+     * <code>.toit.model.PubSubStatus status = 1;</code>
+     * @return The status.
+     */
+    public io.toit.proto.toit.model.JobProto.PubSubStatus getStatus() {
+      return status_ == null ? io.toit.proto.toit.model.JobProto.PubSubStatus.getDefaultInstance() : status_;
+    }
+    /**
+     * <code>.toit.model.PubSubStatus status = 1;</code>
+     */
+    public io.toit.proto.toit.model.JobProto.PubSubStatusOrBuilder getStatusOrBuilder() {
+      return getStatus();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (status_ != null) {
+        output.writeMessage(1, getStatus());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (status_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getStatus());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse)) {
+        return super.equals(obj);
+      }
+      io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse other = (io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse) obj;
+
+      if (hasStatus() != other.hasStatus()) return false;
+      if (hasStatus()) {
+        if (!getStatus()
+            .equals(other.getStatus())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasStatus()) {
+        hash = (37 * hash) + STATUS_FIELD_NUMBER;
+        hash = (53 * hash) + getStatus().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code toit.api.ListPubSubStatusResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:toit.api.ListPubSubStatusResponse)
+        io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.toit.proto.toit.api.DeviceProto.internal_static_toit_api_ListPubSubStatusResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.toit.proto.toit.api.DeviceProto.internal_static_toit_api_ListPubSubStatusResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse.class, io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse.Builder.class);
+      }
+
+      // Construct using io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (statusBuilder_ == null) {
+          status_ = null;
+        } else {
+          status_ = null;
+          statusBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.toit.proto.toit.api.DeviceProto.internal_static_toit_api_ListPubSubStatusResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse getDefaultInstanceForType() {
+        return io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse build() {
+        io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse buildPartial() {
+        io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse result = new io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse(this);
+        if (statusBuilder_ == null) {
+          result.status_ = status_;
+        } else {
+          result.status_ = statusBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse) {
+          return mergeFrom((io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse other) {
+        if (other == io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse.getDefaultInstance()) return this;
+        if (other.hasStatus()) {
+          mergeStatus(other.getStatus());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private io.toit.proto.toit.model.JobProto.PubSubStatus status_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.model.JobProto.PubSubStatus, io.toit.proto.toit.model.JobProto.PubSubStatus.Builder, io.toit.proto.toit.model.JobProto.PubSubStatusOrBuilder> statusBuilder_;
+      /**
+       * <code>.toit.model.PubSubStatus status = 1;</code>
+       * @return Whether the status field is set.
+       */
+      public boolean hasStatus() {
+        return statusBuilder_ != null || status_ != null;
+      }
+      /**
+       * <code>.toit.model.PubSubStatus status = 1;</code>
+       * @return The status.
+       */
+      public io.toit.proto.toit.model.JobProto.PubSubStatus getStatus() {
+        if (statusBuilder_ == null) {
+          return status_ == null ? io.toit.proto.toit.model.JobProto.PubSubStatus.getDefaultInstance() : status_;
+        } else {
+          return statusBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.toit.model.PubSubStatus status = 1;</code>
+       */
+      public Builder setStatus(io.toit.proto.toit.model.JobProto.PubSubStatus value) {
+        if (statusBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          status_ = value;
+          onChanged();
+        } else {
+          statusBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.PubSubStatus status = 1;</code>
+       */
+      public Builder setStatus(
+          io.toit.proto.toit.model.JobProto.PubSubStatus.Builder builderForValue) {
+        if (statusBuilder_ == null) {
+          status_ = builderForValue.build();
+          onChanged();
+        } else {
+          statusBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.PubSubStatus status = 1;</code>
+       */
+      public Builder mergeStatus(io.toit.proto.toit.model.JobProto.PubSubStatus value) {
+        if (statusBuilder_ == null) {
+          if (status_ != null) {
+            status_ =
+              io.toit.proto.toit.model.JobProto.PubSubStatus.newBuilder(status_).mergeFrom(value).buildPartial();
+          } else {
+            status_ = value;
+          }
+          onChanged();
+        } else {
+          statusBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.PubSubStatus status = 1;</code>
+       */
+      public Builder clearStatus() {
+        if (statusBuilder_ == null) {
+          status_ = null;
+          onChanged();
+        } else {
+          status_ = null;
+          statusBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.toit.model.PubSubStatus status = 1;</code>
+       */
+      public io.toit.proto.toit.model.JobProto.PubSubStatus.Builder getStatusBuilder() {
+        
+        onChanged();
+        return getStatusFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.toit.model.PubSubStatus status = 1;</code>
+       */
+      public io.toit.proto.toit.model.JobProto.PubSubStatusOrBuilder getStatusOrBuilder() {
+        if (statusBuilder_ != null) {
+          return statusBuilder_.getMessageOrBuilder();
+        } else {
+          return status_ == null ?
+              io.toit.proto.toit.model.JobProto.PubSubStatus.getDefaultInstance() : status_;
+        }
+      }
+      /**
+       * <code>.toit.model.PubSubStatus status = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.toit.proto.toit.model.JobProto.PubSubStatus, io.toit.proto.toit.model.JobProto.PubSubStatus.Builder, io.toit.proto.toit.model.JobProto.PubSubStatusOrBuilder> 
+          getStatusFieldBuilder() {
+        if (statusBuilder_ == null) {
+          statusBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.toit.proto.toit.model.JobProto.PubSubStatus, io.toit.proto.toit.model.JobProto.PubSubStatus.Builder, io.toit.proto.toit.model.JobProto.PubSubStatusOrBuilder>(
+                  getStatus(),
+                  getParentForChildren(),
+                  isClean());
+          status_ = null;
+        }
+        return statusBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:toit.api.ListPubSubStatusResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:toit.api.ListPubSubStatusResponse)
+    private static final io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse();
+    }
+
+    public static io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListPubSubStatusResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListPubSubStatusResponse>() {
+      @java.lang.Override
+      public ListPubSubStatusResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListPubSubStatusResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListPubSubStatusResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListPubSubStatusResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface InstallJobRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:toit.api.InstallJobRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -41574,6 +42754,16 @@ public final class DeviceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_toit_api_ListJobsResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_ListPubSubStatusRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_ListPubSubStatusRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_toit_api_ListPubSubStatusResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_toit_api_ListPubSubStatusResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_toit_api_InstallJobRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -41783,105 +42973,111 @@ public final class DeviceProto {
       ".model.JobState\022,\n\ngoalstates\030\003 \003(\0162\030.to" +
       "it.model.JobGoalState\022\016\n\006job_id\030\004 \001(\014\"?\n" +
       "\020ListJobsResponse\022\033\n\004jobs\030\001 \003(\0132\r.toit.a" +
-      "pi.Job\022\016\n\006offset\030\002 \001(\014\"M\n\021InstallJobRequ" +
-      "est\022\021\n\tdevice_id\030\001 \001(\014\022%\n\006config\030\002 \001(\0132\025" +
-      ".toit.model.JobConfig\"$\n\022InstallJobRespo" +
-      "nse\022\016\n\006job_id\030\001 \001(\014\"f\n\023ConfigureJobReque" +
-      "st\022\021\n\tdevice_id\030\001 \001(\014\022\016\n\006job_id\030\002 \001(\014\022,\n" +
-      "\ngoal_state\030\003 \001(\0162\030.toit.model.JobGoalSt" +
-      "ate\"\026\n\024ConfigureJobResponse\"(\n\023RebootDev" +
-      "iceRequest\022\021\n\tdevice_id\030\001 \001(\014\"\026\n\024RebootD" +
-      "eviceResponse\"\244\001\n\025ReadDeviceLogsRequest\022" +
-      "\021\n\tdevice_id\030\001 \001(\014\022\014\n\002id\030\002 \001(\014H\000\022(\n\002ts\030\003" +
-      " \001(\0132\032.google.protobuf.TimestampH\000\022\r\n\005li" +
-      "mit\030\004 \001(\004\022\017\n\007reverse\030\005 \001(\010\022\026\n\016filter_job" +
-      "_ids\030\006 \003(\014B\010\n\006offset\";\n\026ReadDeviceLogsRe" +
-      "sponse\022!\n\004logs\030\001 \003(\0132\023.toit.api.DeviceLo" +
-      "g\"\216\001\n\027ReadDeviceEventsRequest\022\021\n\tdevice_" +
-      "id\030\001 \001(\014\022\014\n\002id\030\002 \001(\014H\000\022(\n\002ts\030\003 \001(\0132\032.goo" +
-      "gle.protobuf.TimestampH\000\022\r\n\005limit\030\004 \001(\004\022" +
-      "\017\n\007reverse\030\005 \001(\010B\010\n\006offset\"C\n\030ReadDevice" +
-      "EventsResponse\022\'\n\006events\030\001 \003(\0132\027.toit.mo" +
-      "del.DeviceEvent\"\373\002\n\032GetDevicePartitionsR" +
-      "equest\022\020\n\010sdk_name\030\001 \001(\t\0227\n\004mode\030\002 \001(\0162)" +
-      ".toit.api.GetDevicePartitionsRequest.Mod" +
-      "e\022H\n\nproperties\030\003 \003(\01324.toit.api.GetDevi" +
-      "cePartitionsRequest.PropertiesEntry\0227\n\021h" +
-      "ardware_identity\030\004 \001(\0132\034.toit.model.Hard" +
-      "wareIdentity\022\r\n\005model\030\005 \001(\t\022\016\n\006qrcode\030\006 " +
-      "\001(\014\0321\n\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001\"=\n\004Mode\022\013\n\007UNKNOWN\020\000\022\n\n\006S" +
-      "YSTEM\020\002\022\013\n\007INITIAL\020\003\022\017\n\013REPARTITION\020\004\"\256\001" +
-      "\n\033GetDevicePartitionsResponse\022C\n\npartiti" +
-      "ons\030\001 \003(\0132/.toit.api.GetDevicePartitions" +
-      "Response.Partition\022\021\n\tdevice_id\030\002 \001(\014\0327\n" +
-      "\tPartition\022\014\n\004name\030\001 \001(\t\022\016\n\006offset\030\002 \001(\003" +
-      "\022\014\n\004data\030\003 \001(\014\"F\n\031WatchDeviceChangesRequ" +
-      "est\022\021\n\tdevice_id\030\001 \001(\014\022\026\n\016watch_revision" +
-      "\030\002 \001(\003\"\247\001\n\032WatchDeviceChangesResponse\022*\n" +
-      "\004type\030\001 \001(\0162\034.toit.model.DeviceChangeTyp" +
-      "e\022\021\n\tdevice_id\030\002 \001(\014\022\026\n\016watch_revision\030\003" +
-      " \001(\003\0222\n\016last_connected\030\004 \001(\0132\032.google.pr" +
-      "otobuf.Timestamp\"S\n\026WatchJobChangesReque" +
-      "st\022\021\n\tdevice_id\030\001 \001(\014\022\016\n\006job_id\030\002 \001(\014\022\026\n" +
-      "\016watch_revision\030\003 \001(\003\"}\n\027WatchJobChanges" +
-      "Response\022\'\n\004type\030\001 \001(\0162\031.toit.model.JobC" +
-      "hangeType\022\016\n\006job_id\030\002 \001(\014\022\026\n\016watch_revis" +
-      "ion\030\003 \001(\003\022\021\n\tdevice_id\030\004 \001(\014\"G\n\032WatchSes" +
-      "sionChangesRequest\022\021\n\tdevice_id\030\001 \001(\014\022\026\n" +
-      "\016watch_revision\030\002 \001(\003\"\257\001\n\033WatchSessionCh" +
-      "angesResponse\0221\n\004type\030\001 \001(\0162#.toit.model" +
-      ".DeviceSessionChangeType\022\021\n\tdevice_id\030\002 " +
-      "\001(\014\022\026\n\016watch_revision\030\003 \001(\003\0222\n\016last_conn" +
-      "ected\030\004 \001(\0132\032.google.protobuf.Timestamp\"" +
-      "\027\n\025GetCurrentTimeRequest\"J\n\026GetCurrentTi" +
-      "meResponse\0220\n\014current_time\030\001 \001(\0132\032.googl" +
-      "e.protobuf.Timestamp\")\n\024UnclaimDeviceReq" +
-      "uest\022\021\n\tdevice_id\030\001 \001(\014\"\027\n\025UnclaimDevice" +
-      "Response*f\n\rProcessStatus\022\032\n\026PROCESS_STA" +
-      "TUS_UNKNOWN\020\000\022\032\n\026PROCESS_STATUS_RUNNING\020" +
-      "\001\022\035\n\031PROCESS_STATUS_TERMINATED\020\002*y\n\021Proc" +
-      "essGoalStatus\022\037\n\033PROCESS_GOAL_STATUS_UNK" +
-      "NOWN\020\000\022\037\n\033PROCESS_GOAL_STATUS_RUNNING\020\001\022" +
-      "\"\n\036PROCESS_GOAL_STATUS_TERMINATED\020\0022\366\n\n\r" +
-      "DeviceService\022F\n\tGetDevice\022\032.toit.api.Ge" +
-      "tDeviceRequest\032\033.toit.api.GetDeviceRespo" +
-      "nse\"\000\022X\n\017ConfigureDevice\022 .toit.api.Conf" +
-      "igureDeviceRequest\032!.toit.api.ConfigureD" +
-      "eviceResponse\"\000\022R\n\rLookupDevices\022\036.toit." +
-      "api.LookupDevicesRequest\032\037.toit.api.Look" +
-      "upDevicesResponse\"\000\022L\n\013ListDevices\022\034.toi" +
-      "t.api.ListDevicesRequest\032\035.toit.api.List" +
-      "DevicesResponse\"\000\022C\n\010ListJobs\022\031.toit.api" +
-      ".ListJobsRequest\032\032.toit.api.ListJobsResp" +
-      "onse\"\000\022I\n\nInstallJob\022\033.toit.api.InstallJ" +
-      "obRequest\032\034.toit.api.InstallJobResponse\"" +
-      "\000\022O\n\014ConfigureJob\022\035.toit.api.ConfigureJo" +
-      "bRequest\032\036.toit.api.ConfigureJobResponse" +
-      "\"\000\022R\n\014RebootDevice\022\035.toit.api.RebootDevi" +
-      "ceRequest\032\036.toit.api.RebootDeviceRespons" +
-      "e\"\003\210\002\001\022U\n\016ReadDeviceLogs\022\037.toit.api.Read" +
-      "DeviceLogsRequest\032 .toit.api.ReadDeviceL" +
-      "ogsResponse\"\000\022[\n\020ReadDeviceEvents\022!.toit" +
-      ".api.ReadDeviceEventsRequest\032\".toit.api." +
-      "ReadDeviceEventsResponse\"\000\022d\n\023GetDeviceP" +
-      "artitions\022$.toit.api.GetDevicePartitions" +
-      "Request\032%.toit.api.GetDevicePartitionsRe" +
-      "sponse\"\000\022c\n\022WatchDeviceChanges\022#.toit.ap" +
-      "i.WatchDeviceChangesRequest\032$.toit.api.W" +
-      "atchDeviceChangesResponse\"\0000\001\022Z\n\017WatchJo" +
-      "bChanges\022 .toit.api.WatchJobChangesReque" +
-      "st\032!.toit.api.WatchJobChangesResponse\"\0000" +
-      "\001\022f\n\023WatchSessionChanges\022$.toit.api.Watc" +
-      "hSessionChangesRequest\032%.toit.api.WatchS" +
-      "essionChangesResponse\"\0000\001\022U\n\016GetCurrentT" +
-      "ime\022\037.toit.api.GetCurrentTimeRequest\032 .t" +
-      "oit.api.GetCurrentTimeResponse\"\000\022R\n\rUncl" +
-      "aimDevice\022\036.toit.api.UnclaimDeviceReques" +
-      "t\032\037.toit.api.UnclaimDeviceResponse\"\000B_\n\026" +
-      "io.toit.proto.toit.apiB\013DeviceProtoZ\'git" +
-      "hub.com/toitware/api/golang/toit/api\252\002\016T" +
-      "oit.Proto.APIb\006proto3"
+      "pi.Job\022\016\n\006offset\030\002 \001(\014\"<\n\027ListPubSubStat" +
+      "usRequest\022\021\n\tdevice_id\030\001 \001(\014\022\016\n\006job_id\030\002" +
+      " \001(\014\"D\n\030ListPubSubStatusResponse\022(\n\006stat" +
+      "us\030\001 \001(\0132\030.toit.model.PubSubStatus\"M\n\021In" +
+      "stallJobRequest\022\021\n\tdevice_id\030\001 \001(\014\022%\n\006co" +
+      "nfig\030\002 \001(\0132\025.toit.model.JobConfig\"$\n\022Ins" +
+      "tallJobResponse\022\016\n\006job_id\030\001 \001(\014\"f\n\023Confi" +
+      "gureJobRequest\022\021\n\tdevice_id\030\001 \001(\014\022\016\n\006job" +
+      "_id\030\002 \001(\014\022,\n\ngoal_state\030\003 \001(\0162\030.toit.mod" +
+      "el.JobGoalState\"\026\n\024ConfigureJobResponse\"" +
+      "(\n\023RebootDeviceRequest\022\021\n\tdevice_id\030\001 \001(" +
+      "\014\"\026\n\024RebootDeviceResponse\"\244\001\n\025ReadDevice" +
+      "LogsRequest\022\021\n\tdevice_id\030\001 \001(\014\022\014\n\002id\030\002 \001" +
+      "(\014H\000\022(\n\002ts\030\003 \001(\0132\032.google.protobuf.Times" +
+      "tampH\000\022\r\n\005limit\030\004 \001(\004\022\017\n\007reverse\030\005 \001(\010\022\026" +
+      "\n\016filter_job_ids\030\006 \003(\014B\010\n\006offset\";\n\026Read" +
+      "DeviceLogsResponse\022!\n\004logs\030\001 \003(\0132\023.toit." +
+      "api.DeviceLog\"\216\001\n\027ReadDeviceEventsReques" +
+      "t\022\021\n\tdevice_id\030\001 \001(\014\022\014\n\002id\030\002 \001(\014H\000\022(\n\002ts" +
+      "\030\003 \001(\0132\032.google.protobuf.TimestampH\000\022\r\n\005" +
+      "limit\030\004 \001(\004\022\017\n\007reverse\030\005 \001(\010B\010\n\006offset\"C" +
+      "\n\030ReadDeviceEventsResponse\022\'\n\006events\030\001 \003" +
+      "(\0132\027.toit.model.DeviceEvent\"\373\002\n\032GetDevic" +
+      "ePartitionsRequest\022\020\n\010sdk_name\030\001 \001(\t\0227\n\004" +
+      "mode\030\002 \001(\0162).toit.api.GetDevicePartition" +
+      "sRequest.Mode\022H\n\nproperties\030\003 \003(\01324.toit" +
+      ".api.GetDevicePartitionsRequest.Properti" +
+      "esEntry\0227\n\021hardware_identity\030\004 \001(\0132\034.toi" +
+      "t.model.HardwareIdentity\022\r\n\005model\030\005 \001(\t\022" +
+      "\016\n\006qrcode\030\006 \001(\014\0321\n\017PropertiesEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"=\n\004Mode\022\013\n\007UN" +
+      "KNOWN\020\000\022\n\n\006SYSTEM\020\002\022\013\n\007INITIAL\020\003\022\017\n\013REPA" +
+      "RTITION\020\004\"\256\001\n\033GetDevicePartitionsRespons" +
+      "e\022C\n\npartitions\030\001 \003(\0132/.toit.api.GetDevi" +
+      "cePartitionsResponse.Partition\022\021\n\tdevice" +
+      "_id\030\002 \001(\014\0327\n\tPartition\022\014\n\004name\030\001 \001(\t\022\016\n\006" +
+      "offset\030\002 \001(\003\022\014\n\004data\030\003 \001(\014\"F\n\031WatchDevic" +
+      "eChangesRequest\022\021\n\tdevice_id\030\001 \001(\014\022\026\n\016wa" +
+      "tch_revision\030\002 \001(\003\"\247\001\n\032WatchDeviceChange" +
+      "sResponse\022*\n\004type\030\001 \001(\0162\034.toit.model.Dev" +
+      "iceChangeType\022\021\n\tdevice_id\030\002 \001(\014\022\026\n\016watc" +
+      "h_revision\030\003 \001(\003\0222\n\016last_connected\030\004 \001(\013" +
+      "2\032.google.protobuf.Timestamp\"S\n\026WatchJob" +
+      "ChangesRequest\022\021\n\tdevice_id\030\001 \001(\014\022\016\n\006job" +
+      "_id\030\002 \001(\014\022\026\n\016watch_revision\030\003 \001(\003\"}\n\027Wat" +
+      "chJobChangesResponse\022\'\n\004type\030\001 \001(\0162\031.toi" +
+      "t.model.JobChangeType\022\016\n\006job_id\030\002 \001(\014\022\026\n" +
+      "\016watch_revision\030\003 \001(\003\022\021\n\tdevice_id\030\004 \001(\014" +
+      "\"G\n\032WatchSessionChangesRequest\022\021\n\tdevice" +
+      "_id\030\001 \001(\014\022\026\n\016watch_revision\030\002 \001(\003\"\257\001\n\033Wa" +
+      "tchSessionChangesResponse\0221\n\004type\030\001 \001(\0162" +
+      "#.toit.model.DeviceSessionChangeType\022\021\n\t" +
+      "device_id\030\002 \001(\014\022\026\n\016watch_revision\030\003 \001(\003\022" +
+      "2\n\016last_connected\030\004 \001(\0132\032.google.protobu" +
+      "f.Timestamp\"\027\n\025GetCurrentTimeRequest\"J\n\026" +
+      "GetCurrentTimeResponse\0220\n\014current_time\030\001" +
+      " \001(\0132\032.google.protobuf.Timestamp\")\n\024Uncl" +
+      "aimDeviceRequest\022\021\n\tdevice_id\030\001 \001(\014\"\027\n\025U" +
+      "nclaimDeviceResponse*f\n\rProcessStatus\022\032\n" +
+      "\026PROCESS_STATUS_UNKNOWN\020\000\022\032\n\026PROCESS_STA" +
+      "TUS_RUNNING\020\001\022\035\n\031PROCESS_STATUS_TERMINAT" +
+      "ED\020\002*y\n\021ProcessGoalStatus\022\037\n\033PROCESS_GOA" +
+      "L_STATUS_UNKNOWN\020\000\022\037\n\033PROCESS_GOAL_STATU" +
+      "S_RUNNING\020\001\022\"\n\036PROCESS_GOAL_STATUS_TERMI" +
+      "NATED\020\0022\325\013\n\rDeviceService\022F\n\tGetDevice\022\032" +
+      ".toit.api.GetDeviceRequest\032\033.toit.api.Ge" +
+      "tDeviceResponse\"\000\022X\n\017ConfigureDevice\022 .t" +
+      "oit.api.ConfigureDeviceRequest\032!.toit.ap" +
+      "i.ConfigureDeviceResponse\"\000\022R\n\rLookupDev" +
+      "ices\022\036.toit.api.LookupDevicesRequest\032\037.t" +
+      "oit.api.LookupDevicesResponse\"\000\022L\n\013ListD" +
+      "evices\022\034.toit.api.ListDevicesRequest\032\035.t" +
+      "oit.api.ListDevicesResponse\"\000\022C\n\010ListJob" +
+      "s\022\031.toit.api.ListJobsRequest\032\032.toit.api." +
+      "ListJobsResponse\"\000\022]\n\020ListPubSubStatus\022!" +
+      ".toit.api.ListPubSubStatusRequest\032\".toit" +
+      ".api.ListPubSubStatusResponse\"\0000\001\022I\n\nIns" +
+      "tallJob\022\033.toit.api.InstallJobRequest\032\034.t" +
+      "oit.api.InstallJobResponse\"\000\022O\n\014Configur" +
+      "eJob\022\035.toit.api.ConfigureJobRequest\032\036.to" +
+      "it.api.ConfigureJobResponse\"\000\022R\n\014RebootD" +
+      "evice\022\035.toit.api.RebootDeviceRequest\032\036.t" +
+      "oit.api.RebootDeviceResponse\"\003\210\002\001\022U\n\016Rea" +
+      "dDeviceLogs\022\037.toit.api.ReadDeviceLogsReq" +
+      "uest\032 .toit.api.ReadDeviceLogsResponse\"\000" +
+      "\022[\n\020ReadDeviceEvents\022!.toit.api.ReadDevi" +
+      "ceEventsRequest\032\".toit.api.ReadDeviceEve" +
+      "ntsResponse\"\000\022d\n\023GetDevicePartitions\022$.t" +
+      "oit.api.GetDevicePartitionsRequest\032%.toi" +
+      "t.api.GetDevicePartitionsResponse\"\000\022c\n\022W" +
+      "atchDeviceChanges\022#.toit.api.WatchDevice" +
+      "ChangesRequest\032$.toit.api.WatchDeviceCha" +
+      "ngesResponse\"\0000\001\022Z\n\017WatchJobChanges\022 .to" +
+      "it.api.WatchJobChangesRequest\032!.toit.api" +
+      ".WatchJobChangesResponse\"\0000\001\022f\n\023WatchSes" +
+      "sionChanges\022$.toit.api.WatchSessionChang" +
+      "esRequest\032%.toit.api.WatchSessionChanges" +
+      "Response\"\0000\001\022U\n\016GetCurrentTime\022\037.toit.ap" +
+      "i.GetCurrentTimeRequest\032 .toit.api.GetCu" +
+      "rrentTimeResponse\"\000\022R\n\rUnclaimDevice\022\036.t" +
+      "oit.api.UnclaimDeviceRequest\032\037.toit.api." +
+      "UnclaimDeviceResponse\"\000B_\n\026io.toit.proto" +
+      ".toit.apiB\013DeviceProtoZ\'github.com/toitw" +
+      "are/api/golang/toit/api\252\002\016Toit.Proto.API" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -42072,68 +43268,80 @@ public final class DeviceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_ListJobsResponse_descriptor,
         new java.lang.String[] { "Jobs", "Offset", });
-    internal_static_toit_api_InstallJobRequest_descriptor =
+    internal_static_toit_api_ListPubSubStatusRequest_descriptor =
       getDescriptor().getMessageTypes().get(17);
+    internal_static_toit_api_ListPubSubStatusRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_ListPubSubStatusRequest_descriptor,
+        new java.lang.String[] { "DeviceId", "JobId", });
+    internal_static_toit_api_ListPubSubStatusResponse_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_toit_api_ListPubSubStatusResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_toit_api_ListPubSubStatusResponse_descriptor,
+        new java.lang.String[] { "Status", });
+    internal_static_toit_api_InstallJobRequest_descriptor =
+      getDescriptor().getMessageTypes().get(19);
     internal_static_toit_api_InstallJobRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_InstallJobRequest_descriptor,
         new java.lang.String[] { "DeviceId", "Config", });
     internal_static_toit_api_InstallJobResponse_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_toit_api_InstallJobResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_InstallJobResponse_descriptor,
         new java.lang.String[] { "JobId", });
     internal_static_toit_api_ConfigureJobRequest_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_toit_api_ConfigureJobRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_ConfigureJobRequest_descriptor,
         new java.lang.String[] { "DeviceId", "JobId", "GoalState", });
     internal_static_toit_api_ConfigureJobResponse_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_toit_api_ConfigureJobResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_ConfigureJobResponse_descriptor,
         new java.lang.String[] { });
     internal_static_toit_api_RebootDeviceRequest_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_toit_api_RebootDeviceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_RebootDeviceRequest_descriptor,
         new java.lang.String[] { "DeviceId", });
     internal_static_toit_api_RebootDeviceResponse_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_toit_api_RebootDeviceResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_RebootDeviceResponse_descriptor,
         new java.lang.String[] { });
     internal_static_toit_api_ReadDeviceLogsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_toit_api_ReadDeviceLogsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_ReadDeviceLogsRequest_descriptor,
         new java.lang.String[] { "DeviceId", "Id", "Ts", "Limit", "Reverse", "FilterJobIds", "Offset", });
     internal_static_toit_api_ReadDeviceLogsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_toit_api_ReadDeviceLogsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_ReadDeviceLogsResponse_descriptor,
         new java.lang.String[] { "Logs", });
     internal_static_toit_api_ReadDeviceEventsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_toit_api_ReadDeviceEventsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_ReadDeviceEventsRequest_descriptor,
         new java.lang.String[] { "DeviceId", "Id", "Ts", "Limit", "Reverse", "Offset", });
     internal_static_toit_api_ReadDeviceEventsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_toit_api_ReadDeviceEventsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_ReadDeviceEventsResponse_descriptor,
         new java.lang.String[] { "Events", });
     internal_static_toit_api_GetDevicePartitionsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_toit_api_GetDevicePartitionsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_GetDevicePartitionsRequest_descriptor,
@@ -42145,7 +43353,7 @@ public final class DeviceProto {
         internal_static_toit_api_GetDevicePartitionsRequest_PropertiesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_toit_api_GetDevicePartitionsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_toit_api_GetDevicePartitionsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_GetDevicePartitionsResponse_descriptor,
@@ -42157,61 +43365,61 @@ public final class DeviceProto {
         internal_static_toit_api_GetDevicePartitionsResponse_Partition_descriptor,
         new java.lang.String[] { "Name", "Offset", "Data", });
     internal_static_toit_api_WatchDeviceChangesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_toit_api_WatchDeviceChangesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_WatchDeviceChangesRequest_descriptor,
         new java.lang.String[] { "DeviceId", "WatchRevision", });
     internal_static_toit_api_WatchDeviceChangesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_toit_api_WatchDeviceChangesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_WatchDeviceChangesResponse_descriptor,
         new java.lang.String[] { "Type", "DeviceId", "WatchRevision", "LastConnected", });
     internal_static_toit_api_WatchJobChangesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_toit_api_WatchJobChangesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_WatchJobChangesRequest_descriptor,
         new java.lang.String[] { "DeviceId", "JobId", "WatchRevision", });
     internal_static_toit_api_WatchJobChangesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(34);
     internal_static_toit_api_WatchJobChangesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_WatchJobChangesResponse_descriptor,
         new java.lang.String[] { "Type", "JobId", "WatchRevision", "DeviceId", });
     internal_static_toit_api_WatchSessionChangesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_toit_api_WatchSessionChangesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_WatchSessionChangesRequest_descriptor,
         new java.lang.String[] { "DeviceId", "WatchRevision", });
     internal_static_toit_api_WatchSessionChangesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_toit_api_WatchSessionChangesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_WatchSessionChangesResponse_descriptor,
         new java.lang.String[] { "Type", "DeviceId", "WatchRevision", "LastConnected", });
     internal_static_toit_api_GetCurrentTimeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(37);
     internal_static_toit_api_GetCurrentTimeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_GetCurrentTimeRequest_descriptor,
         new java.lang.String[] { });
     internal_static_toit_api_GetCurrentTimeResponse_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_toit_api_GetCurrentTimeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_GetCurrentTimeResponse_descriptor,
         new java.lang.String[] { "CurrentTime", });
     internal_static_toit_api_UnclaimDeviceRequest_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_toit_api_UnclaimDeviceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_UnclaimDeviceRequest_descriptor,
         new java.lang.String[] { "DeviceId", });
     internal_static_toit_api_UnclaimDeviceResponse_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(40);
     internal_static_toit_api_UnclaimDeviceResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_api_UnclaimDeviceResponse_descriptor,

@@ -182,6 +182,37 @@ public final class DeviceServiceGrpc {
     return getListJobsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest,
+      io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse> getListPubSubStatusMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListPubSubStatus",
+      requestType = io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest.class,
+      responseType = io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest,
+      io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse> getListPubSubStatusMethod() {
+    io.grpc.MethodDescriptor<io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest, io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse> getListPubSubStatusMethod;
+    if ((getListPubSubStatusMethod = DeviceServiceGrpc.getListPubSubStatusMethod) == null) {
+      synchronized (DeviceServiceGrpc.class) {
+        if ((getListPubSubStatusMethod = DeviceServiceGrpc.getListPubSubStatusMethod) == null) {
+          DeviceServiceGrpc.getListPubSubStatusMethod = getListPubSubStatusMethod =
+              io.grpc.MethodDescriptor.<io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest, io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListPubSubStatus"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DeviceServiceMethodDescriptorSupplier("ListPubSubStatus"))
+              .build();
+        }
+      }
+    }
+    return getListPubSubStatusMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<io.toit.proto.toit.api.DeviceProto.InstallJobRequest,
       io.toit.proto.toit.api.DeviceProto.InstallJobResponse> getInstallJobMethod;
 
@@ -608,6 +639,13 @@ public final class DeviceServiceGrpc {
 
     /**
      */
+    public void listPubSubStatus(io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest request,
+        io.grpc.stub.StreamObserver<io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getListPubSubStatusMethod(), responseObserver);
+    }
+
+    /**
+     */
     public void installJob(io.toit.proto.toit.api.DeviceProto.InstallJobRequest request,
         io.grpc.stub.StreamObserver<io.toit.proto.toit.api.DeviceProto.InstallJobResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getInstallJobMethod(), responseObserver);
@@ -721,6 +759,13 @@ public final class DeviceServiceGrpc {
                 io.toit.proto.toit.api.DeviceProto.ListJobsRequest,
                 io.toit.proto.toit.api.DeviceProto.ListJobsResponse>(
                   this, METHODID_LIST_JOBS)))
+          .addMethod(
+            getListPubSubStatusMethod(),
+            asyncServerStreamingCall(
+              new MethodHandlers<
+                io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest,
+                io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse>(
+                  this, METHODID_LIST_PUB_SUB_STATUS)))
           .addMethod(
             getInstallJobMethod(),
             asyncUnaryCall(
@@ -854,6 +899,14 @@ public final class DeviceServiceGrpc {
         io.grpc.stub.StreamObserver<io.toit.proto.toit.api.DeviceProto.ListJobsResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getListJobsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void listPubSubStatus(io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest request,
+        io.grpc.stub.StreamObserver<io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse> responseObserver) {
+      asyncServerStreamingCall(
+          getChannel().newCall(getListPubSubStatusMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -993,6 +1046,14 @@ public final class DeviceServiceGrpc {
     public io.toit.proto.toit.api.DeviceProto.ListJobsResponse listJobs(io.toit.proto.toit.api.DeviceProto.ListJobsRequest request) {
       return blockingUnaryCall(
           getChannel(), getListJobsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public java.util.Iterator<io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse> listPubSubStatus(
+        io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest request) {
+      return blockingServerStreamingCall(
+          getChannel(), getListPubSubStatusMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1202,17 +1263,18 @@ public final class DeviceServiceGrpc {
   private static final int METHODID_LOOKUP_DEVICES = 2;
   private static final int METHODID_LIST_DEVICES = 3;
   private static final int METHODID_LIST_JOBS = 4;
-  private static final int METHODID_INSTALL_JOB = 5;
-  private static final int METHODID_CONFIGURE_JOB = 6;
-  private static final int METHODID_REBOOT_DEVICE = 7;
-  private static final int METHODID_READ_DEVICE_LOGS = 8;
-  private static final int METHODID_READ_DEVICE_EVENTS = 9;
-  private static final int METHODID_GET_DEVICE_PARTITIONS = 10;
-  private static final int METHODID_WATCH_DEVICE_CHANGES = 11;
-  private static final int METHODID_WATCH_JOB_CHANGES = 12;
-  private static final int METHODID_WATCH_SESSION_CHANGES = 13;
-  private static final int METHODID_GET_CURRENT_TIME = 14;
-  private static final int METHODID_UNCLAIM_DEVICE = 15;
+  private static final int METHODID_LIST_PUB_SUB_STATUS = 5;
+  private static final int METHODID_INSTALL_JOB = 6;
+  private static final int METHODID_CONFIGURE_JOB = 7;
+  private static final int METHODID_REBOOT_DEVICE = 8;
+  private static final int METHODID_READ_DEVICE_LOGS = 9;
+  private static final int METHODID_READ_DEVICE_EVENTS = 10;
+  private static final int METHODID_GET_DEVICE_PARTITIONS = 11;
+  private static final int METHODID_WATCH_DEVICE_CHANGES = 12;
+  private static final int METHODID_WATCH_JOB_CHANGES = 13;
+  private static final int METHODID_WATCH_SESSION_CHANGES = 14;
+  private static final int METHODID_GET_CURRENT_TIME = 15;
+  private static final int METHODID_UNCLAIM_DEVICE = 16;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1250,6 +1312,10 @@ public final class DeviceServiceGrpc {
         case METHODID_LIST_JOBS:
           serviceImpl.listJobs((io.toit.proto.toit.api.DeviceProto.ListJobsRequest) request,
               (io.grpc.stub.StreamObserver<io.toit.proto.toit.api.DeviceProto.ListJobsResponse>) responseObserver);
+          break;
+        case METHODID_LIST_PUB_SUB_STATUS:
+          serviceImpl.listPubSubStatus((io.toit.proto.toit.api.DeviceProto.ListPubSubStatusRequest) request,
+              (io.grpc.stub.StreamObserver<io.toit.proto.toit.api.DeviceProto.ListPubSubStatusResponse>) responseObserver);
           break;
         case METHODID_INSTALL_JOB:
           serviceImpl.installJob((io.toit.proto.toit.api.DeviceProto.InstallJobRequest) request,
@@ -1361,6 +1427,7 @@ public final class DeviceServiceGrpc {
               .addMethod(getLookupDevicesMethod())
               .addMethod(getListDevicesMethod())
               .addMethod(getListJobsMethod())
+              .addMethod(getListPubSubStatusMethod())
               .addMethod(getInstallJobMethod())
               .addMethod(getConfigureJobMethod())
               .addMethod(getRebootDeviceMethod())
