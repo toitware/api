@@ -44,6 +44,12 @@ class DeviceServiceClient extends $grpc.Client {
           ($0.ListJobsRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $0.ListJobsResponse.fromBuffer(value));
+  static final _$listPubSubStatus = $grpc.ClientMethod<
+          $0.ListPubSubStatusRequest, $0.ListPubSubStatusResponse>(
+      '/toit.api.DeviceService/ListPubSubStatus',
+      ($0.ListPubSubStatusRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.ListPubSubStatusResponse.fromBuffer(value));
   static final _$installJob =
       $grpc.ClientMethod<$0.InstallJobRequest, $0.InstallJobResponse>(
           '/toit.api.DeviceService/InstallJob',
@@ -143,6 +149,14 @@ class DeviceServiceClient extends $grpc.Client {
   $grpc.ResponseFuture<$0.ListJobsResponse> listJobs($0.ListJobsRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listJobs, request, options: options);
+  }
+
+  $grpc.ResponseStream<$0.ListPubSubStatusResponse> listPubSubStatus(
+      $0.ListPubSubStatusRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createStreamingCall(
+        _$listPubSubStatus, $async.Stream.fromIterable([request]),
+        options: options);
   }
 
   $grpc.ResponseFuture<$0.InstallJobResponse> installJob(
@@ -263,6 +277,15 @@ abstract class DeviceServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.ListJobsRequest.fromBuffer(value),
         ($0.ListJobsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListPubSubStatusRequest,
+            $0.ListPubSubStatusResponse>(
+        'ListPubSubStatus',
+        listPubSubStatus_Pre,
+        false,
+        true,
+        ($core.List<$core.int> value) =>
+            $0.ListPubSubStatusRequest.fromBuffer(value),
+        ($0.ListPubSubStatusResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.InstallJobRequest, $0.InstallJobResponse>(
         'InstallJob',
         installJob_Pre,
@@ -389,6 +412,12 @@ abstract class DeviceServiceBase extends $grpc.Service {
     return listJobs(call, await request);
   }
 
+  $async.Stream<$0.ListPubSubStatusResponse> listPubSubStatus_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListPubSubStatusRequest> request) async* {
+    yield* listPubSubStatus(call, await request);
+  }
+
   $async.Future<$0.InstallJobResponse> installJob_Pre($grpc.ServiceCall call,
       $async.Future<$0.InstallJobRequest> request) async {
     return installJob(call, await request);
@@ -464,6 +493,8 @@ abstract class DeviceServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.ListDevicesRequest request);
   $async.Future<$0.ListJobsResponse> listJobs(
       $grpc.ServiceCall call, $0.ListJobsRequest request);
+  $async.Stream<$0.ListPubSubStatusResponse> listPubSubStatus(
+      $grpc.ServiceCall call, $0.ListPubSubStatusRequest request);
   $async.Future<$0.InstallJobResponse> installJob(
       $grpc.ServiceCall call, $0.InstallJobRequest request);
   $async.Future<$0.ConfigureJobResponse> configureJob(

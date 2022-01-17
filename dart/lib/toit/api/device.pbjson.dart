@@ -684,6 +684,38 @@ const ListJobsResponse$json = const {
 /// Descriptor for `ListJobsResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listJobsResponseDescriptor = $convert.base64Decode(
     'ChBMaXN0Sm9ic1Jlc3BvbnNlEiEKBGpvYnMYASADKAsyDS50b2l0LmFwaS5Kb2JSBGpvYnMSFgoGb2Zmc2V0GAIgASgMUgZvZmZzZXQ=');
+@$core.Deprecated('Use listPubSubStatusRequestDescriptor instead')
+const ListPubSubStatusRequest$json = const {
+  '1': 'ListPubSubStatusRequest',
+  '2': const [
+    const {'1': 'device_id', '3': 1, '4': 1, '5': 12, '10': 'deviceId'},
+    const {'1': 'job_id', '3': 2, '4': 1, '5': 12, '10': 'jobId'},
+  ],
+};
+
+/// Descriptor for `ListPubSubStatusRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listPubSubStatusRequestDescriptor =
+    $convert.base64Decode(
+        'ChdMaXN0UHViU3ViU3RhdHVzUmVxdWVzdBIbCglkZXZpY2VfaWQYASABKAxSCGRldmljZUlkEhUKBmpvYl9pZBgCIAEoDFIFam9iSWQ=');
+@$core.Deprecated('Use listPubSubStatusResponseDescriptor instead')
+const ListPubSubStatusResponse$json = const {
+  '1': 'ListPubSubStatusResponse',
+  '2': const [
+    const {
+      '1': 'status',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.toit.model.PubSubStatus',
+      '10': 'status'
+    },
+  ],
+};
+
+/// Descriptor for `ListPubSubStatusResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listPubSubStatusResponseDescriptor =
+    $convert.base64Decode(
+        'ChhMaXN0UHViU3ViU3RhdHVzUmVzcG9uc2USMAoGc3RhdHVzGAEgASgLMhgudG9pdC5tb2RlbC5QdWJTdWJTdGF0dXNSBnN0YXR1cw==');
 @$core.Deprecated('Use installJobRequestDescriptor instead')
 const InstallJobRequest$json = const {
   '1': 'InstallJobRequest',

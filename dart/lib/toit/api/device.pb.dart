@@ -2846,6 +2846,170 @@ class ListJobsResponse extends $pb.GeneratedMessage {
   void clearOffset() => clearField(2);
 }
 
+class ListPubSubStatusRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ListPubSubStatusRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'toit.api'),
+      createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'deviceId',
+        $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'jobId',
+        $pb.PbFieldType.OY)
+    ..hasRequiredFields = false;
+
+  ListPubSubStatusRequest._() : super();
+  factory ListPubSubStatusRequest({
+    $core.List<$core.int>? deviceId,
+    $core.List<$core.int>? jobId,
+  }) {
+    final _result = create();
+    if (deviceId != null) {
+      _result.deviceId = deviceId;
+    }
+    if (jobId != null) {
+      _result.jobId = jobId;
+    }
+    return _result;
+  }
+  factory ListPubSubStatusRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListPubSubStatusRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ListPubSubStatusRequest clone() =>
+      ListPubSubStatusRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ListPubSubStatusRequest copyWith(
+          void Function(ListPubSubStatusRequest) updates) =>
+      super.copyWith((message) => updates(message as ListPubSubStatusRequest))
+          as ListPubSubStatusRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ListPubSubStatusRequest create() => ListPubSubStatusRequest._();
+  ListPubSubStatusRequest createEmptyInstance() => create();
+  static $pb.PbList<ListPubSubStatusRequest> createRepeated() =>
+      $pb.PbList<ListPubSubStatusRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ListPubSubStatusRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListPubSubStatusRequest>(create);
+  static ListPubSubStatusRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.int> get deviceId => $_getN(0);
+  @$pb.TagNumber(1)
+  set deviceId($core.List<$core.int> v) {
+    $_setBytes(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasDeviceId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearDeviceId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<$core.int> get jobId => $_getN(1);
+  @$pb.TagNumber(2)
+  set jobId($core.List<$core.int> v) {
+    $_setBytes(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasJobId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearJobId() => clearField(2);
+}
+
+class ListPubSubStatusResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ListPubSubStatusResponse',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'toit.api'),
+      createEmptyInstance: create)
+    ..aOM<$2.PubSubStatus>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'status',
+        subBuilder: $2.PubSubStatus.create)
+    ..hasRequiredFields = false;
+
+  ListPubSubStatusResponse._() : super();
+  factory ListPubSubStatusResponse({
+    $2.PubSubStatus? status,
+  }) {
+    final _result = create();
+    if (status != null) {
+      _result.status = status;
+    }
+    return _result;
+  }
+  factory ListPubSubStatusResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListPubSubStatusResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ListPubSubStatusResponse clone() =>
+      ListPubSubStatusResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ListPubSubStatusResponse copyWith(
+          void Function(ListPubSubStatusResponse) updates) =>
+      super.copyWith((message) => updates(message as ListPubSubStatusResponse))
+          as ListPubSubStatusResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ListPubSubStatusResponse create() => ListPubSubStatusResponse._();
+  ListPubSubStatusResponse createEmptyInstance() => create();
+  static $pb.PbList<ListPubSubStatusResponse> createRepeated() =>
+      $pb.PbList<ListPubSubStatusResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListPubSubStatusResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListPubSubStatusResponse>(create);
+  static ListPubSubStatusResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $2.PubSubStatus get status => $_getN(0);
+  @$pb.TagNumber(1)
+  set status($2.PubSubStatus v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasStatus() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearStatus() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.PubSubStatus ensureStatus() => $_ensure(0);
+}
+
 class InstallJobRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')

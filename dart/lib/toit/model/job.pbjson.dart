@@ -146,6 +146,54 @@ const JobConfig$json = const {
 /// Descriptor for `JobConfig`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List jobConfigDescriptor = $convert.base64Decode(
     'CglKb2JDb25maWcSFQoGam9iX2lkGAggASgMUgVqb2JJZBISCgRuYW1lGAEgASgJUgRuYW1lEiUKDmNvbXBpbGF0aW9uX2lkGAIgASgMUg1jb21waWxhdGlvbklkEjcKCmdvYWxfc3RhdGUYAyABKA4yGC50b2l0Lm1vZGVsLkpvYkdvYWxTdGF0ZVIJZ29hbFN0YXRlEjYKCXJlc291cmNlcxgEIAEoCzIYLnRvaXQubW9kZWwuSm9iUmVzb3VyY2VzUglyZXNvdXJjZXMSMwoIdHJpZ2dlcnMYBSABKAsyFy50b2l0Lm1vZGVsLkpvYlRyaWdnZXJzUgh0cmlnZ2VycxI0CgdjcmVhdGVkGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIHY3JlYXRlZBI0Cgd1cGRhdGVkGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIHdXBkYXRlZBJGChBjb21waWxhdGlvbl9pbmZvGAogASgLMhsudG9pdC5tb2RlbC5Db21waWxhdGlvbkluZm9SD2NvbXBpbGF0aW9uSW5mbxItCgZwdWJzdWIYCyABKAsyFS50b2l0Lm1vZGVsLkpvYlB1YlN1YlIGcHVic3ViEikKBWZpbGVzGAwgAygLMhMudG9pdC5tb2RlbC5Kb2JGaWxlUgVmaWxlcw==');
+@$core.Deprecated('Use pubSubStatusDescriptor instead')
+const PubSubStatus$json = const {
+  '1': 'PubSubStatus',
+  '2': const [
+    const {'1': 'job_id', '3': 1, '4': 1, '5': 12, '10': 'jobId'},
+    const {
+      '1': 'subscription_id',
+      '3': 2,
+      '4': 1,
+      '5': 12,
+      '10': 'subscriptionId'
+    },
+    const {
+      '1': 'last_message_received_id',
+      '3': 3,
+      '4': 1,
+      '5': 4,
+      '10': 'lastMessageReceivedId'
+    },
+    const {
+      '1': 'last_message_received_created_at',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'lastMessageReceivedCreatedAt'
+    },
+    const {
+      '1': 'unacknowledged_messages',
+      '3': 5,
+      '4': 1,
+      '5': 4,
+      '10': 'unacknowledgedMessages'
+    },
+    const {
+      '1': 'latest_message_in_topic_created_at',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'latestMessageInTopicCreatedAt'
+    },
+  ],
+};
+
+/// Descriptor for `PubSubStatus`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List pubSubStatusDescriptor = $convert.base64Decode(
+    'CgxQdWJTdWJTdGF0dXMSFQoGam9iX2lkGAEgASgMUgVqb2JJZBInCg9zdWJzY3JpcHRpb25faWQYAiABKAxSDnN1YnNjcmlwdGlvbklkEjcKGGxhc3RfbWVzc2FnZV9yZWNlaXZlZF9pZBgDIAEoBFIVbGFzdE1lc3NhZ2VSZWNlaXZlZElkEmIKIGxhc3RfbWVzc2FnZV9yZWNlaXZlZF9jcmVhdGVkX2F0GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIcbGFzdE1lc3NhZ2VSZWNlaXZlZENyZWF0ZWRBdBI3Chd1bmFja25vd2xlZGdlZF9tZXNzYWdlcxgFIAEoBFIWdW5hY2tub3dsZWRnZWRNZXNzYWdlcxJlCiJsYXRlc3RfbWVzc2FnZV9pbl90b3BpY19jcmVhdGVkX2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIdbGF0ZXN0TWVzc2FnZUluVG9waWNDcmVhdGVkQXQ=');
 @$core.Deprecated('Use compilationInfoDescriptor instead')
 const CompilationInfo$json = const {
   '1': 'CompilationInfo',

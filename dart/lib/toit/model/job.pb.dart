@@ -266,6 +266,169 @@ class JobConfig extends $pb.GeneratedMessage {
   $core.List<JobFile> get files => $_getList(10);
 }
 
+class PubSubStatus extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'PubSubStatus',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'toit.model'),
+      createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'jobId',
+        $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'subscriptionId',
+        $pb.PbFieldType.OY)
+    ..a<$fixnum.Int64>(
+        3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lastMessageReceivedId', $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOM<$0.Timestamp>(
+        4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lastMessageReceivedCreatedAt',
+        subBuilder: $0.Timestamp.create)
+    ..a<$fixnum.Int64>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'unacknowledgedMessages', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOM<$0.Timestamp>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'latestMessageInTopicCreatedAt', subBuilder: $0.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  PubSubStatus._() : super();
+  factory PubSubStatus({
+    $core.List<$core.int>? jobId,
+    $core.List<$core.int>? subscriptionId,
+    $fixnum.Int64? lastMessageReceivedId,
+    $0.Timestamp? lastMessageReceivedCreatedAt,
+    $fixnum.Int64? unacknowledgedMessages,
+    $0.Timestamp? latestMessageInTopicCreatedAt,
+  }) {
+    final _result = create();
+    if (jobId != null) {
+      _result.jobId = jobId;
+    }
+    if (subscriptionId != null) {
+      _result.subscriptionId = subscriptionId;
+    }
+    if (lastMessageReceivedId != null) {
+      _result.lastMessageReceivedId = lastMessageReceivedId;
+    }
+    if (lastMessageReceivedCreatedAt != null) {
+      _result.lastMessageReceivedCreatedAt = lastMessageReceivedCreatedAt;
+    }
+    if (unacknowledgedMessages != null) {
+      _result.unacknowledgedMessages = unacknowledgedMessages;
+    }
+    if (latestMessageInTopicCreatedAt != null) {
+      _result.latestMessageInTopicCreatedAt = latestMessageInTopicCreatedAt;
+    }
+    return _result;
+  }
+  factory PubSubStatus.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PubSubStatus.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  PubSubStatus clone() => PubSubStatus()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  PubSubStatus copyWith(void Function(PubSubStatus) updates) =>
+      super.copyWith((message) => updates(message as PubSubStatus))
+          as PubSubStatus; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static PubSubStatus create() => PubSubStatus._();
+  PubSubStatus createEmptyInstance() => create();
+  static $pb.PbList<PubSubStatus> createRepeated() =>
+      $pb.PbList<PubSubStatus>();
+  @$core.pragma('dart2js:noInline')
+  static PubSubStatus getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PubSubStatus>(create);
+  static PubSubStatus? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.int> get jobId => $_getN(0);
+  @$pb.TagNumber(1)
+  set jobId($core.List<$core.int> v) {
+    $_setBytes(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasJobId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearJobId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<$core.int> get subscriptionId => $_getN(1);
+  @$pb.TagNumber(2)
+  set subscriptionId($core.List<$core.int> v) {
+    $_setBytes(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasSubscriptionId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSubscriptionId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $fixnum.Int64 get lastMessageReceivedId => $_getI64(2);
+  @$pb.TagNumber(3)
+  set lastMessageReceivedId($fixnum.Int64 v) {
+    $_setInt64(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasLastMessageReceivedId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearLastMessageReceivedId() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $0.Timestamp get lastMessageReceivedCreatedAt => $_getN(3);
+  @$pb.TagNumber(4)
+  set lastMessageReceivedCreatedAt($0.Timestamp v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasLastMessageReceivedCreatedAt() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearLastMessageReceivedCreatedAt() => clearField(4);
+  @$pb.TagNumber(4)
+  $0.Timestamp ensureLastMessageReceivedCreatedAt() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  $fixnum.Int64 get unacknowledgedMessages => $_getI64(4);
+  @$pb.TagNumber(5)
+  set unacknowledgedMessages($fixnum.Int64 v) {
+    $_setInt64(4, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasUnacknowledgedMessages() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearUnacknowledgedMessages() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $0.Timestamp get latestMessageInTopicCreatedAt => $_getN(5);
+  @$pb.TagNumber(6)
+  set latestMessageInTopicCreatedAt($0.Timestamp v) {
+    setField(6, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasLatestMessageInTopicCreatedAt() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearLatestMessageInTopicCreatedAt() => clearField(6);
+  @$pb.TagNumber(6)
+  $0.Timestamp ensureLatestMessageInTopicCreatedAt() => $_ensure(5);
+}
+
 class CompilationInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
