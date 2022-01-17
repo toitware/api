@@ -12,6 +12,7 @@ interface IDeviceServiceService extends grpc.ServiceDefinition<grpc.UntypedServi
   lookupDevices: grpc.MethodDefinition<toit_api_device_pb.LookupDevicesRequest, toit_api_device_pb.LookupDevicesResponse>;
   listDevices: grpc.MethodDefinition<toit_api_device_pb.ListDevicesRequest, toit_api_device_pb.ListDevicesResponse>;
   listJobs: grpc.MethodDefinition<toit_api_device_pb.ListJobsRequest, toit_api_device_pb.ListJobsResponse>;
+  listPubSubStatus: grpc.MethodDefinition<toit_api_device_pb.ListPubSubStatusRequest, toit_api_device_pb.ListPubSubStatusResponse>;
   installJob: grpc.MethodDefinition<toit_api_device_pb.InstallJobRequest, toit_api_device_pb.InstallJobResponse>;
   configureJob: grpc.MethodDefinition<toit_api_device_pb.ConfigureJobRequest, toit_api_device_pb.ConfigureJobResponse>;
   rebootDevice: grpc.MethodDefinition<toit_api_device_pb.RebootDeviceRequest, toit_api_device_pb.RebootDeviceResponse>;
@@ -44,6 +45,8 @@ export class DeviceServiceClient extends grpc.Client {
   listJobs(argument: toit_api_device_pb.ListJobsRequest, callback: grpc.requestCallback<toit_api_device_pb.ListJobsResponse>): grpc.ClientUnaryCall;
   listJobs(argument: toit_api_device_pb.ListJobsRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_device_pb.ListJobsResponse>): grpc.ClientUnaryCall;
   listJobs(argument: toit_api_device_pb.ListJobsRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_device_pb.ListJobsResponse>): grpc.ClientUnaryCall;
+  listPubSubStatus(argument: toit_api_device_pb.ListPubSubStatusRequest, metadataOrOptions?: grpc.Metadata | grpc.CallOptions | null): grpc.ClientReadableStream<toit_api_device_pb.ListPubSubStatusResponse>;
+  listPubSubStatus(argument: toit_api_device_pb.ListPubSubStatusRequest, metadata?: grpc.Metadata | null, options?: grpc.CallOptions | null): grpc.ClientReadableStream<toit_api_device_pb.ListPubSubStatusResponse>;
   installJob(argument: toit_api_device_pb.InstallJobRequest, callback: grpc.requestCallback<toit_api_device_pb.InstallJobResponse>): grpc.ClientUnaryCall;
   installJob(argument: toit_api_device_pb.InstallJobRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_device_pb.InstallJobResponse>): grpc.ClientUnaryCall;
   installJob(argument: toit_api_device_pb.InstallJobRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<toit_api_device_pb.InstallJobResponse>): grpc.ClientUnaryCall;

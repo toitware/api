@@ -84,6 +84,54 @@ export namespace JobConfig {
   }
 }
 
+export class PubSubStatus extends jspb.Message {
+  getJobId(): Uint8Array | string;
+  getJobId_asU8(): Uint8Array;
+  getJobId_asB64(): string;
+  setJobId(value: Uint8Array | string): void;
+
+  getSubscriptionId(): Uint8Array | string;
+  getSubscriptionId_asU8(): Uint8Array;
+  getSubscriptionId_asB64(): string;
+  setSubscriptionId(value: Uint8Array | string): void;
+
+  getLastMessageReceivedId(): number;
+  setLastMessageReceivedId(value: number): void;
+
+  hasLastMessageReceivedCreatedAt(): boolean;
+  clearLastMessageReceivedCreatedAt(): void;
+  getLastMessageReceivedCreatedAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
+  setLastMessageReceivedCreatedAt(value?: google_protobuf_timestamp_pb.Timestamp): void;
+
+  getUnacknowledgedMessages(): number;
+  setUnacknowledgedMessages(value: number): void;
+
+  hasLatestMessageInTopicCreatedAt(): boolean;
+  clearLatestMessageInTopicCreatedAt(): void;
+  getLatestMessageInTopicCreatedAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
+  setLatestMessageInTopicCreatedAt(value?: google_protobuf_timestamp_pb.Timestamp): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): PubSubStatus.AsObject;
+  static toObject(includeInstance: boolean, msg: PubSubStatus): PubSubStatus.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: PubSubStatus, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): PubSubStatus;
+  static deserializeBinaryFromReader(message: PubSubStatus, reader: jspb.BinaryReader): PubSubStatus;
+}
+
+export namespace PubSubStatus {
+  export type AsObject = {
+    jobId: Uint8Array | string,
+    subscriptionId: Uint8Array | string,
+    lastMessageReceivedId: number,
+    lastMessageReceivedCreatedAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+    unacknowledgedMessages: number,
+    latestMessageInTopicCreatedAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+  }
+}
+
 export class CompilationInfo extends jspb.Message {
   getProgramId(): Uint8Array | string;
   getProgramId_asU8(): Uint8Array;

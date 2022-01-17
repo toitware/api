@@ -185,6 +185,28 @@ function deserialize_toit_api_ListJobsResponse(buffer_arg) {
   return toit_api_device_pb.ListJobsResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_toit_api_ListPubSubStatusRequest(arg) {
+  if (!(arg instanceof toit_api_device_pb.ListPubSubStatusRequest)) {
+    throw new Error('Expected argument of type toit.api.ListPubSubStatusRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_ListPubSubStatusRequest(buffer_arg) {
+  return toit_api_device_pb.ListPubSubStatusRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_toit_api_ListPubSubStatusResponse(arg) {
+  if (!(arg instanceof toit_api_device_pb.ListPubSubStatusResponse)) {
+    throw new Error('Expected argument of type toit.api.ListPubSubStatusResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_toit_api_ListPubSubStatusResponse(buffer_arg) {
+  return toit_api_device_pb.ListPubSubStatusResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_toit_api_LookupDevicesRequest(arg) {
   if (!(arg instanceof toit_api_device_pb.LookupDevicesRequest)) {
     throw new Error('Expected argument of type toit.api.LookupDevicesRequest');
@@ -417,6 +439,17 @@ var DeviceServiceService = exports.DeviceServiceService = {
     requestDeserialize: deserialize_toit_api_ListJobsRequest,
     responseSerialize: serialize_toit_api_ListJobsResponse,
     responseDeserialize: deserialize_toit_api_ListJobsResponse,
+  },
+  listPubSubStatus: {
+    path: '/toit.api.DeviceService/ListPubSubStatus',
+    requestStream: false,
+    responseStream: true,
+    requestType: toit_api_device_pb.ListPubSubStatusRequest,
+    responseType: toit_api_device_pb.ListPubSubStatusResponse,
+    requestSerialize: serialize_toit_api_ListPubSubStatusRequest,
+    requestDeserialize: deserialize_toit_api_ListPubSubStatusRequest,
+    responseSerialize: serialize_toit_api_ListPubSubStatusResponse,
+    responseDeserialize: deserialize_toit_api_ListPubSubStatusResponse,
   },
   installJob: {
     path: '/toit.api.DeviceService/InstallJob',

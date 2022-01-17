@@ -912,6 +912,56 @@ export namespace ListJobsResponse {
   }
 }
 
+export class ListPubSubStatusRequest extends jspb.Message {
+  getDeviceId(): Uint8Array | string;
+  getDeviceId_asU8(): Uint8Array;
+  getDeviceId_asB64(): string;
+  setDeviceId(value: Uint8Array | string): void;
+
+  getJobId(): Uint8Array | string;
+  getJobId_asU8(): Uint8Array;
+  getJobId_asB64(): string;
+  setJobId(value: Uint8Array | string): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): ListPubSubStatusRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: ListPubSubStatusRequest): ListPubSubStatusRequest.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: ListPubSubStatusRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): ListPubSubStatusRequest;
+  static deserializeBinaryFromReader(message: ListPubSubStatusRequest, reader: jspb.BinaryReader): ListPubSubStatusRequest;
+}
+
+export namespace ListPubSubStatusRequest {
+  export type AsObject = {
+    deviceId: Uint8Array | string,
+    jobId: Uint8Array | string,
+  }
+}
+
+export class ListPubSubStatusResponse extends jspb.Message {
+  hasStatus(): boolean;
+  clearStatus(): void;
+  getStatus(): toit_model_job_pb.PubSubStatus | undefined;
+  setStatus(value?: toit_model_job_pb.PubSubStatus): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): ListPubSubStatusResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: ListPubSubStatusResponse): ListPubSubStatusResponse.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: ListPubSubStatusResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): ListPubSubStatusResponse;
+  static deserializeBinaryFromReader(message: ListPubSubStatusResponse, reader: jspb.BinaryReader): ListPubSubStatusResponse;
+}
+
+export namespace ListPubSubStatusResponse {
+  export type AsObject = {
+    status?: toit_model_job_pb.PubSubStatus.AsObject,
+  }
+}
+
 export class InstallJobRequest extends jspb.Message {
   getDeviceId(): Uint8Array | string;
   getDeviceId_asU8(): Uint8Array;
