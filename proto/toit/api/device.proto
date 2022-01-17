@@ -77,6 +77,8 @@ service DeviceService {
 
   rpc ListJobs(ListJobsRequest) returns (ListJobsResponse) {}
 
+  rpc ListPubSubStatus(ListPubSubStatusRequest) returns (stream ListPubSubStatusResponse) {}
+
   rpc InstallJob(InstallJobRequest) returns (InstallJobResponse) {}
 
   rpc ConfigureJob(ConfigureJobRequest) returns (ConfigureJobResponse) {}
@@ -217,6 +219,15 @@ message ListJobsFilter {
 message ListJobsResponse {
   repeated Job jobs = 1;
   bytes offset = 2;
+}
+
+message ListPubSubStatusRequest {
+  bytes device_id = 1;
+  bytes job_id = 2;
+}
+
+message ListPubSubStatusResponse {
+  toit.model.PubSubStatus status = 1;
 }
 
 message InstallJobRequest {

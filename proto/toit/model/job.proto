@@ -37,6 +37,15 @@ message JobConfig {
   repeated JobFile files = 12;
 }
 
+message PubSubStatus {
+  bytes job_id = 1;
+  bytes subscription_id = 2;
+  uint64 last_message_received_id = 3;
+  google.protobuf.Timestamp last_message_received_created_at = 4;
+  uint64 unacknowledged_messages = 5;
+  google.protobuf.Timestamp latest_message_in_topic_created_at = 6;
+}
+
 message CompilationInfo {
   bytes program_id = 1;
   string sdk = 2;
