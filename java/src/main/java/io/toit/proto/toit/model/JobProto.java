@@ -2926,6 +2926,18 @@ public final class JobProto {
      * <code>.google.protobuf.Timestamp latest_message_in_topic_created_at = 6;</code>
      */
     com.google.protobuf.TimestampOrBuilder getLatestMessageInTopicCreatedAtOrBuilder();
+
+    /**
+     * <code>string subscription_topic = 7;</code>
+     * @return The subscriptionTopic.
+     */
+    java.lang.String getSubscriptionTopic();
+    /**
+     * <code>string subscription_topic = 7;</code>
+     * @return The bytes for subscriptionTopic.
+     */
+    com.google.protobuf.ByteString
+        getSubscriptionTopicBytes();
   }
   /**
    * Protobuf type {@code toit.model.PubSubStatus}
@@ -2942,6 +2954,7 @@ public final class JobProto {
     private PubSubStatus() {
       jobId_ = com.google.protobuf.ByteString.EMPTY;
       subscriptionId_ = com.google.protobuf.ByteString.EMPTY;
+      subscriptionTopic_ = "";
     }
 
     @java.lang.Override
@@ -3018,6 +3031,12 @@ public final class JobProto {
                 latestMessageInTopicCreatedAt_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              subscriptionTopic_ = s;
               break;
             }
             default: {
@@ -3138,6 +3157,42 @@ public final class JobProto {
       return getLatestMessageInTopicCreatedAt();
     }
 
+    public static final int SUBSCRIPTION_TOPIC_FIELD_NUMBER = 7;
+    private volatile java.lang.Object subscriptionTopic_;
+    /**
+     * <code>string subscription_topic = 7;</code>
+     * @return The subscriptionTopic.
+     */
+    public java.lang.String getSubscriptionTopic() {
+      java.lang.Object ref = subscriptionTopic_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subscriptionTopic_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string subscription_topic = 7;</code>
+     * @return The bytes for subscriptionTopic.
+     */
+    public com.google.protobuf.ByteString
+        getSubscriptionTopicBytes() {
+      java.lang.Object ref = subscriptionTopic_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subscriptionTopic_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3169,6 +3224,9 @@ public final class JobProto {
       }
       if (latestMessageInTopicCreatedAt_ != null) {
         output.writeMessage(6, getLatestMessageInTopicCreatedAt());
+      }
+      if (!getSubscriptionTopicBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, subscriptionTopic_);
       }
       unknownFields.writeTo(output);
     }
@@ -3203,6 +3261,9 @@ public final class JobProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getLatestMessageInTopicCreatedAt());
       }
+      if (!getSubscriptionTopicBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, subscriptionTopic_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3236,6 +3297,8 @@ public final class JobProto {
         if (!getLatestMessageInTopicCreatedAt()
             .equals(other.getLatestMessageInTopicCreatedAt())) return false;
       }
+      if (!getSubscriptionTopic()
+          .equals(other.getSubscriptionTopic())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3265,6 +3328,8 @@ public final class JobProto {
         hash = (37 * hash) + LATEST_MESSAGE_IN_TOPIC_CREATED_AT_FIELD_NUMBER;
         hash = (53 * hash) + getLatestMessageInTopicCreatedAt().hashCode();
       }
+      hash = (37 * hash) + SUBSCRIPTION_TOPIC_FIELD_NUMBER;
+      hash = (53 * hash) + getSubscriptionTopic().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3418,6 +3483,8 @@ public final class JobProto {
           latestMessageInTopicCreatedAt_ = null;
           latestMessageInTopicCreatedAtBuilder_ = null;
         }
+        subscriptionTopic_ = "";
+
         return this;
       }
 
@@ -3458,6 +3525,7 @@ public final class JobProto {
         } else {
           result.latestMessageInTopicCreatedAt_ = latestMessageInTopicCreatedAtBuilder_.build();
         }
+        result.subscriptionTopic_ = subscriptionTopic_;
         onBuilt();
         return result;
       }
@@ -3523,6 +3591,10 @@ public final class JobProto {
         }
         if (other.hasLatestMessageInTopicCreatedAt()) {
           mergeLatestMessageInTopicCreatedAt(other.getLatestMessageInTopicCreatedAt());
+        }
+        if (!other.getSubscriptionTopic().isEmpty()) {
+          subscriptionTopic_ = other.subscriptionTopic_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3915,6 +3987,82 @@ public final class JobProto {
           latestMessageInTopicCreatedAt_ = null;
         }
         return latestMessageInTopicCreatedAtBuilder_;
+      }
+
+      private java.lang.Object subscriptionTopic_ = "";
+      /**
+       * <code>string subscription_topic = 7;</code>
+       * @return The subscriptionTopic.
+       */
+      public java.lang.String getSubscriptionTopic() {
+        java.lang.Object ref = subscriptionTopic_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subscriptionTopic_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string subscription_topic = 7;</code>
+       * @return The bytes for subscriptionTopic.
+       */
+      public com.google.protobuf.ByteString
+          getSubscriptionTopicBytes() {
+        java.lang.Object ref = subscriptionTopic_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subscriptionTopic_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string subscription_topic = 7;</code>
+       * @param value The subscriptionTopic to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriptionTopic(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subscriptionTopic_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subscription_topic = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubscriptionTopic() {
+        
+        subscriptionTopic_ = getDefaultInstance().getSubscriptionTopic();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subscription_topic = 7;</code>
+       * @param value The bytes for subscriptionTopic to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriptionTopicBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subscriptionTopic_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -21647,75 +21795,76 @@ public final class JobProto {
       "gle.protobuf.Timestamp\0225\n\020compilation_in" +
       "fo\030\n \001(\0132\033.toit.model.CompilationInfo\022%\n" +
       "\006pubsub\030\013 \001(\0132\025.toit.model.JobPubSub\022\"\n\005" +
-      "files\030\014 \003(\0132\023.toit.model.JobFile\"\210\002\n\014Pub" +
+      "files\030\014 \003(\0132\023.toit.model.JobFile\"\244\002\n\014Pub" +
       "SubStatus\022\016\n\006job_id\030\001 \001(\014\022\027\n\017subscriptio" +
       "n_id\030\002 \001(\014\022 \n\030last_message_received_id\030\003" +
       " \001(\004\022D\n last_message_received_created_at" +
       "\030\004 \001(\0132\032.google.protobuf.Timestamp\022\037\n\027un" +
       "acknowledged_messages\030\005 \001(\004\022F\n\"latest_me" +
       "ssage_in_topic_created_at\030\006 \001(\0132\032.google" +
-      ".protobuf.Timestamp\"F\n\017CompilationInfo\022\022" +
-      "\n\nprogram_id\030\001 \001(\014\022\013\n\003sdk\030\002 \001(\t\022\022\n\ncreat" +
-      "or_id\030\003 \001(\014\"e\n\014JobResources\022*\n\006memory\030\001 " +
-      "\001(\0132\032.toit.model.MemoryResource\022)\n\010featu" +
-      "res\030\002 \001(\0132\027.toit.model.JobFeatures\"2\n\013Jo" +
-      "bFeatures\022#\n\003gps\030\001 \001(\0132\026.toit.model.GPSF" +
-      "eature\">\n\007JobFile\022%\n\004type\030\001 \001(\0162\027.toit.m" +
-      "odel.JobFileType\022\014\n\004path\030\002 \001(\t\"\035\n\nGPSFea" +
-      "ture\022\017\n\007enabled\030\001 \001(\010\" \n\016MemoryResource\022" +
-      "\016\n\006memory\030\001 \001(\003\"\242\003\n\013JobTriggers\0220\n\non_in" +
-      "stall\030\001 \001(\0132\034.toit.model.OnInstallTrigge" +
-      "r\022*\n\007on_boot\030\002 \001(\0132\031.toit.model.OnBootTr" +
-      "igger\022-\n\010interval\030\003 \001(\0132\033.toit.model.Int" +
-      "ervalTrigger\022%\n\004cron\030\004 \001(\0132\027.toit.model." +
-      "CronTrigger\0221\n\010movement\030\005 \001(\0132\033.toit.mod" +
-      "el.MovementTriggerB\002\030\001\022-\n\006button\030\006 \001(\0132\031" +
-      ".toit.model.ButtonTriggerB\002\030\001\022+\n\007network" +
-      "\030\007 \001(\0132\032.toit.model.NetworkTrigger\022)\n\006pu" +
-      "bsub\030\010 \001(\0132\031.toit.model.PubSubTrigger\022%\n" +
-      "\004gpio\030\t \001(\0132\027.toit.model.GPIOTrigger\"\232\001\n" +
-      "\013GPIOTrigger\022)\n\004pins\030\001 \003(\0132\033.toit.model." +
-      "GPIOTrigger.Pin\032`\n\003Pin\0220\n\005level\030\001 \001(\0162!." +
-      "toit.model.GPIOTrigger.Pin.Level\022\013\n\003num\030" +
-      "\002 \001(\r\"\032\n\005Level\022\010\n\004HIGH\020\000\022\007\n\003LOW\020\001\"#\n\020OnI" +
-      "nstallTrigger\022\017\n\007enabled\030\001 \001(\010\" \n\rOnBoot" +
-      "Trigger\022\017\n\007enabled\030\001 \001(\010\">\n\017IntervalTrig" +
-      "ger\022+\n\010interval\030\001 \001(\0132\031.google.protobuf." +
-      "Duration\"2\n\013CronTrigger\022#\n\005specs\030\001 \003(\0132\024" +
-      ".toit.model.CronSpec\"!\n\017MovementTrigger\022" +
-      "\016\n\006shaken\030\001 \001(\010\" \n\rButtonTrigger\022\017\n\007butt" +
-      "ons\030\001 \003(\t\"#\n\016NetworkTrigger\022\021\n\tconnected" +
-      "\030\001 \001(\010\"9\n\rPubSubTrigger\022(\n\006topics\030\001 \003(\0132" +
-      "\030.toit.model.pubsub.Topic\"L\n\010CronSpec\022\023\n" +
-      "\013cron_string\030\001 \001(\t\022+\n\tschedules\030\002 \003(\0132\030." +
-      "toit.model.CronSchedule\"\324\001\n\014CronSchedule" +
-      "\022\016\n\006second\030\001 \001(\020\022\016\n\006minute\030\002 \001(\020\022\014\n\004hour" +
-      "\030\003 \001(\020\022\024\n\014day_of_month\030\004 \001(\020\022\r\n\005month\030\005 " +
-      "\001(\020\022\023\n\013day_of_week\030\006 \001(\020\022.\n\nvalid_from\030\007" +
-      " \001(\0132\032.google.protobuf.Timestamp\022,\n\010vali" +
-      "d_to\030\010 \001(\0132\032.google.protobuf.Timestamp\"\213" +
-      "\001\n\tJobPubSub\0229\n\rsubscriptions\030\001 \003(\0132\".to" +
-      "it.model.JobPubSub.Subscription\032C\n\014Subsc" +
-      "ription\022\'\n\005topic\030\001 \001(\0132\030.toit.model.pubs" +
-      "ub.Topic\022\n\n\002id\030\002 \001(\014\"m\n\tJobStatus\022\016\n\006job" +
-      "_id\030\003 \001(\014\022#\n\005state\030\001 \001(\0162\024.toit.model.Jo" +
-      "bState\022+\n\007updated\030\002 \001(\0132\032.google.protobu" +
-      "f.Timestamp\"W\n\007JobInfo\022%\n\006config\030\001 \001(\0132\025" +
-      ".toit.model.JobConfig\022%\n\006status\030\002 \001(\0132\025." +
-      "toit.model.JobStatus*d\n\014JobGoalState\022\032\n\026" +
-      "JOB_GOAL_STATE_UNKNOWN\020\000\022\032\n\026JOB_GOAL_STA" +
-      "TE_INSTALL\020\001\022\034\n\030JOB_GOAL_STATE_UNINSTALL" +
-      "\020\002*B\n\013JobFileType\022\031\n\025JOB_FILE_TYPE_UNKNO" +
-      "WN\020\000\022\030\n\024JOB_FILE_TYPE_SYSTEM\020\001*\205\001\n\010JobSt" +
-      "ate\022\025\n\021JOB_STATE_UNKNOWN\020\000\022\031\n\025JOB_STATE_" +
-      "UNINSTALLED\020\001\022\030\n\024JOB_STATE_INSTALLING\020\002\022" +
-      "\027\n\023JOB_STATE_INSTALLED\020\003\022\024\n\020JOB_STATE_FA" +
-      "ILED\020\004*m\n\rJobChangeType\022\026\n\022JOB_CHANGE_UN" +
-      "KNOWN\020\000\022\024\n\020JOB_CHANGE_ADDED\020\001\022\026\n\022JOB_CHA" +
-      "NGE_DELETED\020\002\022\026\n\022JOB_CHANGE_CHANGED\020\003Bb\n" +
-      "\030io.toit.proto.toit.modelB\010JobProtoZ)git" +
-      "hub.com/toitware/api/golang/toit/model\252\002" +
-      "\020Toit.Proto.Modelb\006proto3"
+      ".protobuf.Timestamp\022\032\n\022subscription_topi" +
+      "c\030\007 \001(\t\"F\n\017CompilationInfo\022\022\n\nprogram_id" +
+      "\030\001 \001(\014\022\013\n\003sdk\030\002 \001(\t\022\022\n\ncreator_id\030\003 \001(\014\"" +
+      "e\n\014JobResources\022*\n\006memory\030\001 \001(\0132\032.toit.m" +
+      "odel.MemoryResource\022)\n\010features\030\002 \001(\0132\027." +
+      "toit.model.JobFeatures\"2\n\013JobFeatures\022#\n" +
+      "\003gps\030\001 \001(\0132\026.toit.model.GPSFeature\">\n\007Jo" +
+      "bFile\022%\n\004type\030\001 \001(\0162\027.toit.model.JobFile" +
+      "Type\022\014\n\004path\030\002 \001(\t\"\035\n\nGPSFeature\022\017\n\007enab" +
+      "led\030\001 \001(\010\" \n\016MemoryResource\022\016\n\006memory\030\001 " +
+      "\001(\003\"\242\003\n\013JobTriggers\0220\n\non_install\030\001 \001(\0132" +
+      "\034.toit.model.OnInstallTrigger\022*\n\007on_boot" +
+      "\030\002 \001(\0132\031.toit.model.OnBootTrigger\022-\n\010int" +
+      "erval\030\003 \001(\0132\033.toit.model.IntervalTrigger" +
+      "\022%\n\004cron\030\004 \001(\0132\027.toit.model.CronTrigger\022" +
+      "1\n\010movement\030\005 \001(\0132\033.toit.model.MovementT" +
+      "riggerB\002\030\001\022-\n\006button\030\006 \001(\0132\031.toit.model." +
+      "ButtonTriggerB\002\030\001\022+\n\007network\030\007 \001(\0132\032.toi" +
+      "t.model.NetworkTrigger\022)\n\006pubsub\030\010 \001(\0132\031" +
+      ".toit.model.PubSubTrigger\022%\n\004gpio\030\t \001(\0132" +
+      "\027.toit.model.GPIOTrigger\"\232\001\n\013GPIOTrigger" +
+      "\022)\n\004pins\030\001 \003(\0132\033.toit.model.GPIOTrigger." +
+      "Pin\032`\n\003Pin\0220\n\005level\030\001 \001(\0162!.toit.model.G" +
+      "PIOTrigger.Pin.Level\022\013\n\003num\030\002 \001(\r\"\032\n\005Lev" +
+      "el\022\010\n\004HIGH\020\000\022\007\n\003LOW\020\001\"#\n\020OnInstallTrigge" +
+      "r\022\017\n\007enabled\030\001 \001(\010\" \n\rOnBootTrigger\022\017\n\007e" +
+      "nabled\030\001 \001(\010\">\n\017IntervalTrigger\022+\n\010inter" +
+      "val\030\001 \001(\0132\031.google.protobuf.Duration\"2\n\013" +
+      "CronTrigger\022#\n\005specs\030\001 \003(\0132\024.toit.model." +
+      "CronSpec\"!\n\017MovementTrigger\022\016\n\006shaken\030\001 " +
+      "\001(\010\" \n\rButtonTrigger\022\017\n\007buttons\030\001 \003(\t\"#\n" +
+      "\016NetworkTrigger\022\021\n\tconnected\030\001 \001(\010\"9\n\rPu" +
+      "bSubTrigger\022(\n\006topics\030\001 \003(\0132\030.toit.model" +
+      ".pubsub.Topic\"L\n\010CronSpec\022\023\n\013cron_string" +
+      "\030\001 \001(\t\022+\n\tschedules\030\002 \003(\0132\030.toit.model.C" +
+      "ronSchedule\"\324\001\n\014CronSchedule\022\016\n\006second\030\001" +
+      " \001(\020\022\016\n\006minute\030\002 \001(\020\022\014\n\004hour\030\003 \001(\020\022\024\n\014da" +
+      "y_of_month\030\004 \001(\020\022\r\n\005month\030\005 \001(\020\022\023\n\013day_o" +
+      "f_week\030\006 \001(\020\022.\n\nvalid_from\030\007 \001(\0132\032.googl" +
+      "e.protobuf.Timestamp\022,\n\010valid_to\030\010 \001(\0132\032" +
+      ".google.protobuf.Timestamp\"\213\001\n\tJobPubSub" +
+      "\0229\n\rsubscriptions\030\001 \003(\0132\".toit.model.Job" +
+      "PubSub.Subscription\032C\n\014Subscription\022\'\n\005t" +
+      "opic\030\001 \001(\0132\030.toit.model.pubsub.Topic\022\n\n\002" +
+      "id\030\002 \001(\014\"m\n\tJobStatus\022\016\n\006job_id\030\003 \001(\014\022#\n" +
+      "\005state\030\001 \001(\0162\024.toit.model.JobState\022+\n\007up" +
+      "dated\030\002 \001(\0132\032.google.protobuf.Timestamp\"" +
+      "W\n\007JobInfo\022%\n\006config\030\001 \001(\0132\025.toit.model." +
+      "JobConfig\022%\n\006status\030\002 \001(\0132\025.toit.model.J" +
+      "obStatus*d\n\014JobGoalState\022\032\n\026JOB_GOAL_STA" +
+      "TE_UNKNOWN\020\000\022\032\n\026JOB_GOAL_STATE_INSTALL\020\001" +
+      "\022\034\n\030JOB_GOAL_STATE_UNINSTALL\020\002*B\n\013JobFil" +
+      "eType\022\031\n\025JOB_FILE_TYPE_UNKNOWN\020\000\022\030\n\024JOB_" +
+      "FILE_TYPE_SYSTEM\020\001*\205\001\n\010JobState\022\025\n\021JOB_S" +
+      "TATE_UNKNOWN\020\000\022\031\n\025JOB_STATE_UNINSTALLED\020" +
+      "\001\022\030\n\024JOB_STATE_INSTALLING\020\002\022\027\n\023JOB_STATE" +
+      "_INSTALLED\020\003\022\024\n\020JOB_STATE_FAILED\020\004*m\n\rJo" +
+      "bChangeType\022\026\n\022JOB_CHANGE_UNKNOWN\020\000\022\024\n\020J" +
+      "OB_CHANGE_ADDED\020\001\022\026\n\022JOB_CHANGE_DELETED\020" +
+      "\002\022\026\n\022JOB_CHANGE_CHANGED\020\003Bb\n\030io.toit.pro" +
+      "to.toit.modelB\010JobProtoZ)github.com/toit" +
+      "ware/api/golang/toit/model\252\002\020Toit.Proto." +
+      "Modelb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21735,7 +21884,7 @@ public final class JobProto {
     internal_static_toit_model_PubSubStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_toit_model_PubSubStatus_descriptor,
-        new java.lang.String[] { "JobId", "SubscriptionId", "LastMessageReceivedId", "LastMessageReceivedCreatedAt", "UnacknowledgedMessages", "LatestMessageInTopicCreatedAt", });
+        new java.lang.String[] { "JobId", "SubscriptionId", "LastMessageReceivedId", "LastMessageReceivedCreatedAt", "UnacknowledgedMessages", "LatestMessageInTopicCreatedAt", "SubscriptionTopic", });
     internal_static_toit_model_CompilationInfo_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_toit_model_CompilationInfo_fieldAccessorTable = new
