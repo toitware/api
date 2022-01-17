@@ -188,12 +188,19 @@ const PubSubStatus$json = const {
       '6': '.google.protobuf.Timestamp',
       '10': 'latestMessageInTopicCreatedAt'
     },
+    const {
+      '1': 'subscription_topic',
+      '3': 7,
+      '4': 1,
+      '5': 9,
+      '10': 'subscriptionTopic'
+    },
   ],
 };
 
 /// Descriptor for `PubSubStatus`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List pubSubStatusDescriptor = $convert.base64Decode(
-    'CgxQdWJTdWJTdGF0dXMSFQoGam9iX2lkGAEgASgMUgVqb2JJZBInCg9zdWJzY3JpcHRpb25faWQYAiABKAxSDnN1YnNjcmlwdGlvbklkEjcKGGxhc3RfbWVzc2FnZV9yZWNlaXZlZF9pZBgDIAEoBFIVbGFzdE1lc3NhZ2VSZWNlaXZlZElkEmIKIGxhc3RfbWVzc2FnZV9yZWNlaXZlZF9jcmVhdGVkX2F0GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIcbGFzdE1lc3NhZ2VSZWNlaXZlZENyZWF0ZWRBdBI3Chd1bmFja25vd2xlZGdlZF9tZXNzYWdlcxgFIAEoBFIWdW5hY2tub3dsZWRnZWRNZXNzYWdlcxJlCiJsYXRlc3RfbWVzc2FnZV9pbl90b3BpY19jcmVhdGVkX2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIdbGF0ZXN0TWVzc2FnZUluVG9waWNDcmVhdGVkQXQ=');
+    'CgxQdWJTdWJTdGF0dXMSFQoGam9iX2lkGAEgASgMUgVqb2JJZBInCg9zdWJzY3JpcHRpb25faWQYAiABKAxSDnN1YnNjcmlwdGlvbklkEjcKGGxhc3RfbWVzc2FnZV9yZWNlaXZlZF9pZBgDIAEoBFIVbGFzdE1lc3NhZ2VSZWNlaXZlZElkEmIKIGxhc3RfbWVzc2FnZV9yZWNlaXZlZF9jcmVhdGVkX2F0GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIcbGFzdE1lc3NhZ2VSZWNlaXZlZENyZWF0ZWRBdBI3Chd1bmFja25vd2xlZGdlZF9tZXNzYWdlcxgFIAEoBFIWdW5hY2tub3dsZWRnZWRNZXNzYWdlcxJlCiJsYXRlc3RfbWVzc2FnZV9pbl90b3BpY19jcmVhdGVkX2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIdbGF0ZXN0TWVzc2FnZUluVG9waWNDcmVhdGVkQXQSLQoSc3Vic2NyaXB0aW9uX3RvcGljGAcgASgJUhFzdWJzY3JpcHRpb25Ub3BpYw==');
 @$core.Deprecated('Use compilationInfoDescriptor instead')
 const CompilationInfo$json = const {
   '1': 'CompilationInfo',

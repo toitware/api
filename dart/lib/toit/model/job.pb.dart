@@ -293,6 +293,7 @@ class PubSubStatus extends $pb.GeneratedMessage {
         subBuilder: $0.Timestamp.create)
     ..a<$fixnum.Int64>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'unacknowledgedMessages', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..aOM<$0.Timestamp>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'latestMessageInTopicCreatedAt', subBuilder: $0.Timestamp.create)
+    ..aOS(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'subscriptionTopic')
     ..hasRequiredFields = false;
 
   PubSubStatus._() : super();
@@ -303,6 +304,7 @@ class PubSubStatus extends $pb.GeneratedMessage {
     $0.Timestamp? lastMessageReceivedCreatedAt,
     $fixnum.Int64? unacknowledgedMessages,
     $0.Timestamp? latestMessageInTopicCreatedAt,
+    $core.String? subscriptionTopic,
   }) {
     final _result = create();
     if (jobId != null) {
@@ -322,6 +324,9 @@ class PubSubStatus extends $pb.GeneratedMessage {
     }
     if (latestMessageInTopicCreatedAt != null) {
       _result.latestMessageInTopicCreatedAt = latestMessageInTopicCreatedAt;
+    }
+    if (subscriptionTopic != null) {
+      _result.subscriptionTopic = subscriptionTopic;
     }
     return _result;
   }
@@ -427,6 +432,18 @@ class PubSubStatus extends $pb.GeneratedMessage {
   void clearLatestMessageInTopicCreatedAt() => clearField(6);
   @$pb.TagNumber(6)
   $0.Timestamp ensureLatestMessageInTopicCreatedAt() => $_ensure(5);
+
+  @$pb.TagNumber(7)
+  $core.String get subscriptionTopic => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set subscriptionTopic($core.String v) {
+    $_setString(6, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasSubscriptionTopic() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearSubscriptionTopic() => clearField(7);
 }
 
 class CompilationInfo extends $pb.GeneratedMessage {
