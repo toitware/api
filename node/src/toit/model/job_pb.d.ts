@@ -111,6 +111,9 @@ export class PubSubStatus extends jspb.Message {
   getLatestMessageInTopicCreatedAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
   setLatestMessageInTopicCreatedAt(value?: google_protobuf_timestamp_pb.Timestamp): void;
 
+  getSubscriptionTopic(): string;
+  setSubscriptionTopic(value: string): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PubSubStatus.AsObject;
   static toObject(includeInstance: boolean, msg: PubSubStatus): PubSubStatus.AsObject;
@@ -129,6 +132,7 @@ export namespace PubSubStatus {
     lastMessageReceivedCreatedAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
     unacknowledgedMessages: number,
     latestMessageInTopicCreatedAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+    subscriptionTopic: string,
   }
 }
 

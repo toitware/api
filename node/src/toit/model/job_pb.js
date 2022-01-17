@@ -1244,7 +1244,8 @@ proto.toit.model.PubSubStatus.toObject = function(includeInstance, msg) {
     lastMessageReceivedId: jspb.Message.getFieldWithDefault(msg, 3, 0),
     lastMessageReceivedCreatedAt: (f = msg.getLastMessageReceivedCreatedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
     unacknowledgedMessages: jspb.Message.getFieldWithDefault(msg, 5, 0),
-    latestMessageInTopicCreatedAt: (f = msg.getLatestMessageInTopicCreatedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f)
+    latestMessageInTopicCreatedAt: (f = msg.getLatestMessageInTopicCreatedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
+    subscriptionTopic: jspb.Message.getFieldWithDefault(msg, 7, "")
   };
 
   if (includeInstance) {
@@ -1306,6 +1307,10 @@ proto.toit.model.PubSubStatus.deserializeBinaryFromReader = function(msg, reader
       var value = new google_protobuf_timestamp_pb.Timestamp;
       reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
       msg.setLatestMessageInTopicCreatedAt(value);
+      break;
+    case 7:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setSubscriptionTopic(value);
       break;
     default:
       reader.skipField();
@@ -1378,6 +1383,13 @@ proto.toit.model.PubSubStatus.serializeBinaryToWriter = function(message, writer
       6,
       f,
       google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
+    );
+  }
+  f = message.getSubscriptionTopic();
+  if (f.length > 0) {
+    writer.writeString(
+      7,
+      f
     );
   }
 };
@@ -1574,6 +1586,24 @@ proto.toit.model.PubSubStatus.prototype.clearLatestMessageInTopicCreatedAt = fun
  */
 proto.toit.model.PubSubStatus.prototype.hasLatestMessageInTopicCreatedAt = function() {
   return jspb.Message.getField(this, 6) != null;
+};
+
+
+/**
+ * optional string subscription_topic = 7;
+ * @return {string}
+ */
+proto.toit.model.PubSubStatus.prototype.getSubscriptionTopic = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.toit.model.PubSubStatus} returns this
+ */
+proto.toit.model.PubSubStatus.prototype.setSubscriptionTopic = function(value) {
+  return jspb.Message.setProto3StringField(this, 7, value);
 };
 
 
