@@ -44,6 +44,7 @@ message PubSubStatus {
   google.protobuf.Timestamp last_message_received_created_at = 4;
   uint64 unacknowledged_messages = 5;
   google.protobuf.Timestamp latest_message_in_topic_created_at = 6;
+  string subscription_topic = 7;
 }
 
 message CompilationInfo {
