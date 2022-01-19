@@ -15,6 +15,12 @@ enum TopicType {
 }
 
 message Topic {
+  message Parameters {
+    bytes device_id = 1;
+    bool only_latest = 2;
+  }
+
   TopicType type = 1;
   string name = 2;
+  Parameters parameters = 3;
 }
