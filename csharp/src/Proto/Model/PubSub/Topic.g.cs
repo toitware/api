@@ -25,17 +25,20 @@ namespace Toit.Proto.Model.PubSub {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch10b2l0L21vZGVsL3B1YnN1Yi90b3BpYy5wcm90bxIRdG9pdC5tb2RlbC5w",
-            "dWJzdWIiQQoFVG9waWMSKgoEdHlwZRgBIAEoDjIcLnRvaXQubW9kZWwucHVi",
-            "c3ViLlRvcGljVHlwZRIMCgRuYW1lGAIgASgJKm4KCVRvcGljVHlwZRIWChJU",
-            "T1BJQ19UWVBFX1VOS05PV04QABIUChBUT1BJQ19UWVBFX0NMT1VEEAESFQoR",
-            "VE9QSUNfVFlQRV9ERVZJQ0UQAhIcChhUT1BJQ19UWVBFX0RFVklDRV9NRU1P",
-            "UlkQA0J5Ch9pby50b2l0LnByb3RvLnRvaXQubW9kZWwucHVic3ViQgpUb3Bp",
-            "Y1Byb3RvWjBnaXRodWIuY29tL3RvaXR3YXJlL2FwaS9nb2xhbmcvdG9pdC9t",
-            "b2RlbC9wdWJzdWKqAhdUb2l0LlByb3RvLk1vZGVsLlB1YlN1YmIGcHJvdG8z"));
+            "dWJzdWIisAEKBVRvcGljEioKBHR5cGUYASABKA4yHC50b2l0Lm1vZGVsLnB1",
+            "YnN1Yi5Ub3BpY1R5cGUSDAoEbmFtZRgCIAEoCRI3CgpwYXJhbWV0ZXJzGAMg",
+            "ASgLMiMudG9pdC5tb2RlbC5wdWJzdWIuVG9waWMuUGFyYW1ldGVycxo0CgpQ",
+            "YXJhbWV0ZXJzEhEKCWRldmljZV9pZBgBIAEoDBITCgtvbmx5X2xhdGVzdBgC",
+            "IAEoCCpuCglUb3BpY1R5cGUSFgoSVE9QSUNfVFlQRV9VTktOT1dOEAASFAoQ",
+            "VE9QSUNfVFlQRV9DTE9VRBABEhUKEVRPUElDX1RZUEVfREVWSUNFEAISHAoY",
+            "VE9QSUNfVFlQRV9ERVZJQ0VfTUVNT1JZEANCeQofaW8udG9pdC5wcm90by50",
+            "b2l0Lm1vZGVsLnB1YnN1YkIKVG9waWNQcm90b1owZ2l0aHViLmNvbS90b2l0",
+            "d2FyZS9hcGkvZ29sYW5nL3RvaXQvbW9kZWwvcHVic3ViqgIXVG9pdC5Qcm90",
+            "by5Nb2RlbC5QdWJTdWJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Toit.Proto.Model.PubSub.TopicType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.PubSub.Topic), global::Toit.Proto.Model.PubSub.Topic.Parser, new[]{ "Type", "Name" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.PubSub.Topic), global::Toit.Proto.Model.PubSub.Topic.Parser, new[]{ "Type", "Name", "Parameters" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Toit.Proto.Model.PubSub.Topic.Types.Parameters), global::Toit.Proto.Model.PubSub.Topic.Types.Parameters.Parser, new[]{ "DeviceId", "OnlyLatest" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -88,6 +91,7 @@ namespace Toit.Proto.Model.PubSub {
     public Topic(Topic other) : this() {
       type_ = other.type_;
       name_ = other.name_;
+      parameters_ = other.parameters_ != null ? other.parameters_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -121,6 +125,18 @@ namespace Toit.Proto.Model.PubSub {
       }
     }
 
+    /// <summary>Field number for the "parameters" field.</summary>
+    public const int ParametersFieldNumber = 3;
+    private global::Toit.Proto.Model.PubSub.Topic.Types.Parameters parameters_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Toit.Proto.Model.PubSub.Topic.Types.Parameters Parameters {
+      get { return parameters_; }
+      set {
+        parameters_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -138,6 +154,7 @@ namespace Toit.Proto.Model.PubSub {
       }
       if (Type != other.Type) return false;
       if (Name != other.Name) return false;
+      if (!object.Equals(Parameters, other.Parameters)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,6 +164,7 @@ namespace Toit.Proto.Model.PubSub {
       int hash = 1;
       if (Type != global::Toit.Proto.Model.PubSub.TopicType.Unknown) hash ^= Type.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (parameters_ != null) hash ^= Parameters.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -173,6 +191,10 @@ namespace Toit.Proto.Model.PubSub {
         output.WriteRawTag(18);
         output.WriteString(Name);
       }
+      if (parameters_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Parameters);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -191,6 +213,10 @@ namespace Toit.Proto.Model.PubSub {
         output.WriteRawTag(18);
         output.WriteString(Name);
       }
+      if (parameters_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Parameters);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -206,6 +232,9 @@ namespace Toit.Proto.Model.PubSub {
       }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (parameters_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Parameters);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -224,6 +253,12 @@ namespace Toit.Proto.Model.PubSub {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.parameters_ != null) {
+        if (parameters_ == null) {
+          Parameters = new global::Toit.Proto.Model.PubSub.Topic.Types.Parameters();
+        }
+        Parameters.MergeFrom(other.Parameters);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -246,6 +281,13 @@ namespace Toit.Proto.Model.PubSub {
           }
           case 18: {
             Name = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (parameters_ == null) {
+              Parameters = new global::Toit.Proto.Model.PubSub.Topic.Types.Parameters();
+            }
+            input.ReadMessage(Parameters);
             break;
           }
         }
@@ -271,10 +313,251 @@ namespace Toit.Proto.Model.PubSub {
             Name = input.ReadString();
             break;
           }
+          case 26: {
+            if (parameters_ == null) {
+              Parameters = new global::Toit.Proto.Model.PubSub.Topic.Types.Parameters();
+            }
+            input.ReadMessage(Parameters);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Topic message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      public sealed partial class Parameters : pb::IMessage<Parameters>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Parameters> _parser = new pb::MessageParser<Parameters>(() => new Parameters());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Parameters> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Toit.Proto.Model.PubSub.Topic.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Parameters() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Parameters(Parameters other) : this() {
+          deviceId_ = other.deviceId_;
+          onlyLatest_ = other.onlyLatest_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Parameters Clone() {
+          return new Parameters(this);
+        }
+
+        /// <summary>Field number for the "device_id" field.</summary>
+        public const int DeviceIdFieldNumber = 1;
+        private pb::ByteString deviceId_ = pb::ByteString.Empty;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pb::ByteString DeviceId {
+          get { return deviceId_; }
+          set {
+            deviceId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "only_latest" field.</summary>
+        public const int OnlyLatestFieldNumber = 2;
+        private bool onlyLatest_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool OnlyLatest {
+          get { return onlyLatest_; }
+          set {
+            onlyLatest_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Parameters);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Parameters other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (DeviceId != other.DeviceId) return false;
+          if (OnlyLatest != other.OnlyLatest) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (DeviceId.Length != 0) hash ^= DeviceId.GetHashCode();
+          if (OnlyLatest != false) hash ^= OnlyLatest.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (DeviceId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteBytes(DeviceId);
+          }
+          if (OnlyLatest != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(OnlyLatest);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (DeviceId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteBytes(DeviceId);
+          }
+          if (OnlyLatest != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(OnlyLatest);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (DeviceId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeBytesSize(DeviceId);
+          }
+          if (OnlyLatest != false) {
+            size += 1 + 1;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Parameters other) {
+          if (other == null) {
+            return;
+          }
+          if (other.DeviceId.Length != 0) {
+            DeviceId = other.DeviceId;
+          }
+          if (other.OnlyLatest != false) {
+            OnlyLatest = other.OnlyLatest;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                DeviceId = input.ReadBytes();
+                break;
+              }
+              case 16: {
+                OnlyLatest = input.ReadBool();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                DeviceId = input.ReadBytes();
+                break;
+              }
+              case 16: {
+                OnlyLatest = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
