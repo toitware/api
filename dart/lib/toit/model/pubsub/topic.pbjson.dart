@@ -36,9 +36,27 @@ const Topic$json = const {
       '10': 'type'
     },
     const {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
+    const {
+      '1': 'parameters',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.toit.model.pubsub.Topic.Parameters',
+      '10': 'parameters'
+    },
+  ],
+  '3': const [Topic_Parameters$json],
+};
+
+@$core.Deprecated('Use topicDescriptor instead')
+const Topic_Parameters$json = const {
+  '1': 'Parameters',
+  '2': const [
+    const {'1': 'device_id', '3': 1, '4': 1, '5': 12, '10': 'deviceId'},
+    const {'1': 'only_latest', '3': 2, '4': 1, '5': 8, '10': 'onlyLatest'},
   ],
 };
 
 /// Descriptor for `Topic`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List topicDescriptor = $convert.base64Decode(
-    'CgVUb3BpYxIwCgR0eXBlGAEgASgOMhwudG9pdC5tb2RlbC5wdWJzdWIuVG9waWNUeXBlUgR0eXBlEhIKBG5hbWUYAiABKAlSBG5hbWU=');
+    'CgVUb3BpYxIwCgR0eXBlGAEgASgOMhwudG9pdC5tb2RlbC5wdWJzdWIuVG9waWNUeXBlUgR0eXBlEhIKBG5hbWUYAiABKAlSBG5hbWUSQwoKcGFyYW1ldGVycxgDIAEoCzIjLnRvaXQubW9kZWwucHVic3ViLlRvcGljLlBhcmFtZXRlcnNSCnBhcmFtZXRlcnMaSgoKUGFyYW1ldGVycxIbCglkZXZpY2VfaWQYASABKAxSCGRldmljZUlkEh8KC29ubHlfbGF0ZXN0GAIgASgIUgpvbmx5TGF0ZXN0');
