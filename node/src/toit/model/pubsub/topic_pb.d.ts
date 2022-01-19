@@ -10,6 +10,11 @@ export class Topic extends jspb.Message {
   getName(): string;
   setName(value: string): void;
 
+  hasParameters(): boolean;
+  clearParameters(): void;
+  getParameters(): Topic.Parameters | undefined;
+  setParameters(value?: Topic.Parameters): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Topic.AsObject;
   static toObject(includeInstance: boolean, msg: Topic): Topic.AsObject;
@@ -24,6 +29,33 @@ export namespace Topic {
   export type AsObject = {
     type: TopicTypeMap[keyof TopicTypeMap],
     name: string,
+    parameters?: Topic.Parameters.AsObject,
+  }
+
+  export class Parameters extends jspb.Message {
+    getDeviceId(): Uint8Array | string;
+    getDeviceId_asU8(): Uint8Array;
+    getDeviceId_asB64(): string;
+    setDeviceId(value: Uint8Array | string): void;
+
+    getOnlyLatest(): boolean;
+    setOnlyLatest(value: boolean): void;
+
+    serializeBinary(): Uint8Array;
+    toObject(includeInstance?: boolean): Parameters.AsObject;
+    static toObject(includeInstance: boolean, msg: Parameters): Parameters.AsObject;
+    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+    static serializeBinaryToWriter(message: Parameters, writer: jspb.BinaryWriter): void;
+    static deserializeBinary(bytes: Uint8Array): Parameters;
+    static deserializeBinaryFromReader(message: Parameters, reader: jspb.BinaryReader): Parameters;
+  }
+
+  export namespace Parameters {
+    export type AsObject = {
+      deviceId: Uint8Array | string,
+      onlyLatest: boolean,
+    }
   }
 }
 
