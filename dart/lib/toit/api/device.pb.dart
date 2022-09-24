@@ -3,7 +3,7 @@
 //  source: toit/api/device.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
@@ -2682,11 +2682,15 @@ class ListJobsFilter extends $pb.GeneratedMessage {
             : 'deviceId',
         $pb.PbFieldType.OY)
     ..pc<$2.JobState>(
-        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'states', $pb.PbFieldType.PE,
-        valueOf: $2.JobState.valueOf, enumValues: $2.JobState.values)
+        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'states', $pb.PbFieldType.KE,
+        valueOf: $2.JobState.valueOf,
+        enumValues: $2.JobState.values,
+        defaultEnumValue: $2.JobState.JOB_STATE_UNKNOWN)
     ..pc<$2.JobGoalState>(
-        3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'goalstates', $pb.PbFieldType.PE,
-        valueOf: $2.JobGoalState.valueOf, enumValues: $2.JobGoalState.values)
+        3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'goalstates', $pb.PbFieldType.KE,
+        valueOf: $2.JobGoalState.valueOf,
+        enumValues: $2.JobGoalState.values,
+        defaultEnumValue: $2.JobGoalState.JOB_GOAL_STATE_UNKNOWN)
     ..a<$core.List<$core.int>>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'jobId', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
