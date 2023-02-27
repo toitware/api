@@ -25,7 +25,7 @@ jobs:
       - name: Setup python
         uses: actions/setup-python@v2
         with:
-          python-version: "3.9.0"
+          python-version: "3.11.2"
 
       - name: Pip install
         working-directory: ./python
